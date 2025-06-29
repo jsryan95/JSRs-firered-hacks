@@ -185,41 +185,9 @@ ViridianCity_EventScript_DreamEaterTutor::
 	goto EventScript_DreamEaterTutor
 	end
 
-ViridianCity_EventScript_RoadBlocked::
-	lockall
-	textcolor NPC_TEXT_COLOR_MALE
-	msgbox ViridianCity_Text_ThisIsPrivateProperty
-	closemessage
-	applymovement LOCALID_PLAYER, ViridianCity_Movement_WalkDown
-	waitmovement 0
-	releaseall
-	end
-
 ViridianCity_Movement_WalkDown::
 	walk_down
 	step_end
-
-ViridianCity_EventScript_TutorialTriggerLeft::
-	lockall
-	textcolor NPC_TEXT_COLOR_MALE
-	applymovement LOCALID_TUTORIAL_MAN, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	call ViridianCity_EventScript_DoTutorialBattle
-	release
-	end
-
-ViridianCity_EventScript_TutorialTriggerRight::
-	lockall
-	textcolor NPC_TEXT_COLOR_MALE
-	applymovement LOCALID_TUTORIAL_MAN, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	call ViridianCity_EventScript_DoTutorialBattle
-	release
-	end
 
 ViridianCity_EventScript_DoTutorialBattle::
 	msgbox ViridianCity_Text_ShowYouHowToCatchMons
