@@ -21,10 +21,6 @@ SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
     .string "Teach CUT to your POKéMON, and\n"
     .string "you can see it CUT anytime!$"
 
-SSAnne_CaptainsOffice_Text_ObtainedHM01FromCaptain::
-    .string "{PLAYER} obtained HM01\n"
-    .string "from the CAPTAIN!$"
-
 SSAnne_CaptainsOffice_Text_ExplainCut::
     .string "Using CUT, you can chop down\n"
     .string "small trees.\p"
