@@ -513,8 +513,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         return;
     }
 
-    if ((heldKeys & B_BUTTON)
-        && !IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior))
+    if (heldKeys & B_BUTTON)
     {
         if (PlayerIsMovingOnRockStairs(direction))
             PlayerRunSlow(direction);
