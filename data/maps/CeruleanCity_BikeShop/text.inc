@@ -4,19 +4,13 @@ CeruleanCity_BikeShop_Text_WelcomeToBikeShop::
     .string "Have we got just the BIKE for\n"
     .string "you!$"
 
-CeruleanCity_BikeShop_Text_SorryYouCantAffordIt::
-    .string "Sorry!\n"
-    .string "You can't afford it!$"
-
 CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo::
-    .string "Oh, that's…\p"
-    .string "A BIKE VOUCHER!\p"
+    .string "You look like you need a bike...\p"
     .string "Okay!\n"
     .string "Here you go!$"
 
 CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle::
-    .string "{PLAYER} exchanged the\n"
-    .string "BIKE VOUCHER for a BICYCLE.$"
+    .string "{PLAYER} got a BICYCLE.$"
 
 CeruleanCity_BikeShop_Text_ThankYouComeAgain::
     .string "Thank you!\n"
@@ -27,10 +21,6 @@ CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle::
     .string "Do you like how it rides?\p"
     .string "You can take it out on CYCLING\n"
     .string "ROAD and even into caves!$"
-
-CeruleanCity_BikeShop_Text_MakeRoomForBicycle::
-    .string "You better make room for your\n"
-    .string "BICYCLE!$"
 
 CeruleanCity_BikeShop_Text_CityBikeGoodEnoughForMe::
     .string "A plain city bike is good enough\n"

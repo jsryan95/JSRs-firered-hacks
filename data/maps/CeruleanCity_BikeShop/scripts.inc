@@ -5,27 +5,7 @@ CeruleanCity_BikeShop_EventScript_Clerk::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_BICYCLE, CeruleanCity_BikeShop_EventScript_AlreadyGotBicycle
-	goto_if_set FLAG_GOT_BIKE_VOUCHER, CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher
-	showmoneybox 0, 0
-	message CeruleanCity_BikeShop_Text_WelcomeToBikeShop
-	waitmessage
-	multichoice 11, 0, MULTICHOICE_BIKE_SHOP, FALSE
-	switch VAR_RESULT
-	case 0, CeruleanCity_BikeShop_EventScript_TryPurchaseBicycle
-	case 1, CeruleanCity_BikeShop_EventScript_ClerkGoodbye
-	case 127, CeruleanCity_BikeShop_EventScript_ClerkGoodbye
-	end
-
-@ The Bicycle price / players money is never actually checked
-CeruleanCity_BikeShop_EventScript_TryPurchaseBicycle::
-	msgbox CeruleanCity_BikeShop_Text_SorryYouCantAffordIt
-	goto CeruleanCity_BikeShop_EventScript_ClerkGoodbye
-	end
-
-CeruleanCity_BikeShop_EventScript_ClerkGoodbye::
-	msgbox CeruleanCity_BikeShop_Text_ThankYouComeAgain
-	hidemoneybox
-	release
+	goto CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher
 	end
 
 CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher::
@@ -33,19 +13,12 @@ CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher::
 	msgreceiveditem CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle, ITEM_BICYCLE, 1, MUS_OBTAIN_KEY_ITEM
 	setflag FLAG_GOT_BICYCLE
 	additem ITEM_BICYCLE
-	removeitem ITEM_BIKE_VOUCHER
 	msgbox CeruleanCity_BikeShop_Text_ThankYouComeAgain
 	release
 	end
 
 CeruleanCity_BikeShop_EventScript_AlreadyGotBicycle::
 	msgbox CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle
-	release
-	end
-
-@ Unused
-CeruleanCity_BikeShop_EventScript_NoRoomForBicycle::
-	msgbox CeruleanCity_BikeShop_Text_MakeRoomForBicycle
 	release
 	end
 
