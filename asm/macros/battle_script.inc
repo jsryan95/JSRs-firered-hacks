@@ -1378,3 +1378,7 @@
 	.macro jumpifnotbattletype flags:req, jumpptr:req
 	jumpifword CMP_NO_COMMON_BITS, gBattleTypeFlags, \flags, \jumpptr
 	.endm
+
+	.macro doubledamagedealtiftargetdamaged
+	.byte 0xF8
+	.endm

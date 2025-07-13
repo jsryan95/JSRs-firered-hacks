@@ -357,7 +357,22 @@
 #define MOVE_DOOM_DESIRE 353
 #define MOVE_PSYCHO_BOOST 354
 
-#define MOVES_COUNT 355
+// gen IV moves
+#define MOVE_U_TURN 355
+#define MOVE_ICE_FANG 356
+#define MOVE_FIRE_FANG 357
+#define MOVE_THUNDER_FANG 358
+#define MOVE_ASSURANCE 359
+#define MOVE_PAYBACK 360
+#define MOVE_AQUA_TAIL 361
+#define MOVE_AIR_SLASH 362
+
+// custom moves
+#define MOVE_MAGNET_SHOCK 497
+#define MOVE_TIDAL_CRASH 498
+#define MOVE_SAND_BLASTER 499
+
+#define MOVES_COUNT 500
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

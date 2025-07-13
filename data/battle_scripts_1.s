@@ -235,6 +235,16 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
+    .4byte BattleScript_EffectHit                    @ EFFECT_ALWAYS_CRIT
+    .4byte BattleScript_EffectHit                    @ EFFECT_MAGNET_SHOCK
+    .4byte BattleScript_EffectTidalCrash             @ EFFECT_TIDAL_CRASH
+    .4byte BattleScript_EffectZapCannon              @ EFFECT_ZAP_CANNON
+    .4byte BattleScript_EffectDynamicPunch           @ EFFECT_DYNAMIC_PUNCH
+    .4byte BattleScript_UTurn                        @ EFFECT_U_TURN
+    .4byte BattleScript_EffectIceFang                @ EFFECT_ICE_FANG
+    .4byte BattleScript_EffectFireFang               @ EFFECT_FIRE_FANG
+    .4byte BattleScript_EffectThunderFang            @ EFFECT_THUNDER_FANG
+    .4byte BattleScript_EffectAssurance              @ EFFECT_ASSURANCE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1110,6 +1120,80 @@ BattleScript_EffectRecharge::
 	setmoveeffect MOVE_EFFECT_RECHARGE | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_HitFromAtkString
 
+BattleScript_EffectZapCannon::
+        setmoveeffect MOVE_EFFECT_PARALYSIS
+        goto BattleScript_EffectAndRechargeHit
+
+BattleScript_EffectDynamicPunch::
+    setmoveeffect MOVE_EFFECT_CONFUSION
+    goto BattleScript_EffectAndRechargeHit
+
+BattleScript_EffectAndRechargeHit::
+    attackcanceler
+    accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+    attackstring
+    ppreduce
+    critcalc
+    damagecalc
+    typecalc
+    adjustnormaldamage
+    attackanimation
+    waitanimation
+    effectivenesssound
+    hitanimation BS_TARGET
+    waitstate
+    healthbarupdate BS_TARGET
+    datahpupdate BS_TARGET
+    critmessage
+    waitmessage B_WAIT_TIME_LONG
+    resultmessage
+    waitmessage B_WAIT_TIME_LONG
+    seteffectwithchance
+    tryfaintmon BS_TARGET
+    setmoveeffect MOVE_EFFECT_RECHARGE | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+    seteffectwithchance
+    moveendall
+    end
+
+BattleScript_EffectIceFang::
+    setmoveeffect MOVE_EFFECT_FREEZE
+    goto BattleScript_EffectElementalFang
+
+BattleScript_EffectFireFang::
+    setmoveeffect MOVE_EFFECT_BURN
+    goto BattleScript_EffectElementalFang
+
+BattleScript_EffectThunderFang::
+    setmoveeffect MOVE_EFFECT_PARALYSIS
+    goto BattleScript_EffectElementalFang
+
+BattleScript_EffectElementalFang::
+    attackcanceler
+    accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+    attackstring
+    ppreduce
+    critcalc
+    damagecalc
+    typecalc
+    adjustnormaldamage
+    attackanimation
+    waitanimation
+    effectivenesssound
+    hitanimation BS_TARGET
+    waitstate
+    healthbarupdate BS_TARGET
+    datahpupdate BS_TARGET
+    critmessage
+    waitmessage B_WAIT_TIME_LONG
+    resultmessage
+    waitmessage B_WAIT_TIME_LONG
+    seteffectwithchance
+    setmoveeffect MOVE_EFFECT_FLINCH
+    seteffectwithchance
+    tryfaintmon BS_TARGET
+    moveendall
+    end
+
 BattleScript_MoveUsedMustRecharge::
 	printstring STRINGID_PKMNMUSTRECHARGE
 	waitmessage B_WAIT_TIME_LONG
@@ -1707,6 +1791,44 @@ BattleScript_EffectBatonPass::
 	waitstate
 	switchineffects BS_ATTACKER
 	goto BattleScript_MoveEnd
+
+BattleScript_UTurn::
+        attackcanceler
+        accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+        attackstring
+        ppreduce
+        critcalc
+        damagecalc
+        typecalc
+        adjustnormaldamage
+        attackanimation
+        waitanimation
+        effectivenesssound
+        hitanimation BS_TARGET
+        waitstate
+        healthbarupdate BS_TARGET
+        datahpupdate BS_TARGET
+        critmessage
+        waitmessage B_WAIT_TIME_LONG
+        resultmessage
+        waitmessage B_WAIT_TIME_LONG
+        jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_UTurn_End
+        openpartyscreen BS_ATTACKER, BattleScript_UTurn_End
+        switchoutabilities BS_ATTACKER
+        waitstate
+        switchhandleorder BS_ATTACKER, 2
+        returntoball BS_ATTACKER
+        getswitchedmondata BS_ATTACKER
+        switchindataupdate BS_ATTACKER
+        hpthresholds BS_ATTACKER
+        printstring STRINGID_SWITCHINMON
+        switchinanim BS_ATTACKER, TRUE
+        waitstate
+        switchineffects BS_ATTACKER
+BattleScript_UTurn_End::
+        tryfaintmon BS_TARGET
+        moveendall
+        end
 
 BattleScript_EffectRapidSpin::
 	setmoveeffect MOVE_EFFECT_RAPIDSPIN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
@@ -2410,6 +2532,10 @@ BattleScript_EffectRevenge::
 	doubledamagedealtifdamaged
 	goto BattleScript_EffectHit
 
+BattleScript_EffectAssurance::
+    doubledamagedealtiftargetdamaged
+    goto BattleScript_EffectHit
+
 BattleScript_EffectBrickBreak::
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
@@ -2640,6 +2766,10 @@ BattleScript_EffectWeatherBall::
 BattleScript_EffectOverheat::
 	setmoveeffect MOVE_EFFECT_SP_ATK_TWO_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
+
+BattleScript_EffectTidalCrash::
+    setmoveeffect MOVE_EFFECT_SPEED_TWO_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+    goto BattleScript_EffectHit
 
 BattleScript_EffectTickle::
 	attackcanceler
@@ -3645,6 +3775,17 @@ BattleScript_SAtkDown2::
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_SAtkDown2End::
 	return
+
+BattleScript_SpdDown2::
+    setbyte sSTAT_ANIM_PLAYED, 0
+    playstatchangeanimation BS_ATTACKER, BIT_SPATK, STAT_CHANGE_NEGATIVE | STAT_CHANGE_BY_TWO | STAT_CHANGE_CANT_PREVENT
+    setstatchanger STAT_SPEED, 2, TRUE
+    statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR | MOVE_EFFECT_CERTAIN, BattleScript_SAtkDown2End
+    jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_SpdDown2End
+    printfromtable gStatDownStringIds
+    waitmessage B_WAIT_TIME_LONG
+BattleScript_SpdDown2End::
+    return
 
 BattleScript_FocusPunchSetUp::
 	printstring STRINGID_EMPTYSTRING3

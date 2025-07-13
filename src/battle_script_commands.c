@@ -275,6 +275,7 @@ static void Cmd_trycopyability(void);
 static void Cmd_trywish(void);
 static void Cmd_trysetroots(void);
 static void Cmd_doubledamagedealtifdamaged(void);
+static void Cmd_doubledamagedealtiftargetdamaged(void);
 static void Cmd_setyawn(void);
 static void Cmd_setdamagetohealthdifference(void);
 static void Cmd_scaledamagebyhealthratio(void);
@@ -559,6 +560,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_removeattackerstatus1,                   //0xF5
     Cmd_finishaction,                            //0xF6
     Cmd_finishturn,                              //0xF7
+    Cmd_doubledamagedealtiftargetdamaged,        //0xF8
 };
 
 struct StatFractions
@@ -1195,7 +1197,7 @@ static void Cmd_critcalc(void)
     if ((gBattleMons[gBattlerTarget].ability != ABILITY_BATTLE_ARMOR && gBattleMons[gBattlerTarget].ability != ABILITY_SHELL_ARMOR)
      && !(gStatuses3[gBattlerAttacker] & STATUS3_CANT_SCORE_A_CRIT)
      && !(gBattleTypeFlags & BATTLE_TYPE_OLD_MAN_TUTORIAL)
-     && !(Random() % sCriticalHitChance[critChance])
+     && (gBattleMoves[gCurrentMove].effect == EFFECT_ALWAYS_CRIT || !(Random() % sCriticalHitChance[critChance]))
      && (!(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE) || BtlCtrl_OakOldMan_TestState2Flag(1))
      && !(gBattleTypeFlags & BATTLE_TYPE_POKEDUDE))
         gCritMultiplier = 2;
@@ -1301,6 +1303,11 @@ static void Cmd_typecalc(void)
     }
     else
     {
+        if (gBattleMoves[gCurrentMove].effect == EFFECT_MAGNET_SHOCK
+                && (gBattleMons[gBattlerTarget].type1 == TYPE_STEEL || gBattleMons[gBattlerTarget].type2 == TYPE_STEEL))
+        {
+            ModulateDmgByType(TYPE_MUL_SUPER_EFFECTIVE);
+        }
         while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
         {
             if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
@@ -2765,6 +2772,11 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_SAtkDown2;
                 break;
+            case MOVE_EFFECT_SPEED_TWO_DOWN: // Tidal Crash
+                BattleScriptPush(gBattlescriptCurrInstr + 1);
+                gBattlescriptCurrInstr = BattleScript_SpdDown2;
+                break;
+
             }
         }
     }
@@ -8948,6 +8960,17 @@ static void Cmd_doubledamagedealtifdamaged(void)
          && gProtectStructs[gBattlerAttacker].physicalBattlerId == gBattlerTarget)
         || (gProtectStructs[gBattlerAttacker].specialDmg != 0
             && gProtectStructs[gBattlerAttacker].specialBattlerId == gBattlerTarget))
+    {
+        gBattleScripting.dmgMultiplier = 2;
+    }
+
+    gBattlescriptCurrInstr++;
+}
+
+static void Cmd_doubledamagedealtiftargetdamaged(void)
+{
+    if (gProtectStructs[gBattlerTarget].physicalDmg != 0
+        || gProtectStructs[gBattlerTarget].specialDmg != 0)
     {
         gBattleScripting.dmgMultiplier = 2;
     }

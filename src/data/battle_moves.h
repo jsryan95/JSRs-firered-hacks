@@ -2498,10 +2498,10 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_ZAP_CANNON] =
     {
-        .effect = EFFECT_PARALYZE_HIT,
-        .power = 100,
+        .effect = EFFECT_ZAP_CANNON,
+        .power = 120,
         .type = TYPE_ELECTRIC,
-        .accuracy = 50,
+        .accuracy = 90,
         .pp = 5,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
@@ -2901,10 +2901,10 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_DYNAMIC_PUNCH] =
     {
-        .effect = EFFECT_CONFUSE_HIT,
-        .power = 100,
+        .effect = EFFECT_DYNAMIC_PUNCH,
+        .power = 120,
         .type = TYPE_FIGHTING,
-        .accuracy = 50,
+        .accuracy = 90,
         .pp = 5,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
@@ -4614,4 +4614,147 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
+
+    [MOVE_SAND_BLASTER] =
+    {
+        .effect = EFFECT_ALWAYS_CRIT,
+        .power = 50,
+        .type = TYPE_GROUND,
+        .accuracy = 90,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_MAGNET_SHOCK] =
+    {
+        .effect = EFFECT_MAGNET_SHOCK,
+        .power = 60,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_TIDAL_CRASH] =
+    {
+        .effect = EFFECT_TIDAL_CRASH,
+        .power = 110,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_MAKES_CONTACT,
+    },
+
+        [MOVE_U_TURN] =
+                {
+                        .effect = EFFECT_U_TURN,
+                        .power = 70,
+                        .type = TYPE_BUG,
+                        .accuracy = 100,
+                        .pp = 20,
+                        .secondaryEffectChance = 0,
+                        .target = MOVE_TARGET_SELECTED,
+                        .priority = 0,
+                        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_MAKES_CONTACT,
+                },
+
+        [MOVE_ICE_FANG] =
+                {
+                        .effect = EFFECT_ICE_FANG,
+                        .power = 65,
+                        .type = TYPE_ICE,
+                        .accuracy = 95,
+                        .pp = 15,
+                        .secondaryEffectChance = 10,
+                        .target = MOVE_TARGET_SELECTED,
+                        .priority = 0,
+                        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT,
+                },
+
+        [MOVE_FIRE_FANG] =
+                {
+                        .effect = EFFECT_FIRE_FANG,
+                        .power = 65,
+                        .type = TYPE_FIRE,
+                        .accuracy = 95,
+                        .pp = 15,
+                        .secondaryEffectChance = 10,
+                        .target = MOVE_TARGET_SELECTED,
+                        .priority = 0,
+                        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT,
+                },
+
+        [MOVE_THUNDER_FANG] =
+                {
+                        .effect = EFFECT_THUNDER_FANG,
+                        .power = 65,
+                        .type = TYPE_ELECTRIC,
+                        .accuracy = 95,
+                        .pp = 15,
+                        .secondaryEffectChance = 10,
+                        .target = MOVE_TARGET_SELECTED,
+                        .priority = 0,
+                        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT,
+                },
+
+        [MOVE_ASSURANCE] =
+                {
+                        .effect = EFFECT_ASSURANCE,
+                        .power = 50,
+                        .type = TYPE_DARK,
+                        .accuracy = 100,
+                        .pp = 10,
+                        .secondaryEffectChance = 0,
+                        .target = MOVE_TARGET_SELECTED,
+                        .priority = 0,
+                        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT | FLAG_KINGS_ROCK_AFFECTED,
+                },
+
+        [MOVE_PAYBACK] =
+                {
+                        .effect = EFFECT_REVENGE,
+                        .power = 50,
+                        .type = TYPE_DARK,
+                        .accuracy = 100,
+                        .pp = 10,
+                        .secondaryEffectChance = 0,
+                        .target = MOVE_TARGET_SELECTED,
+                        .priority = 0,
+                        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT | FLAG_KINGS_ROCK_AFFECTED,
+                },
+
+        [MOVE_AQUA_TAIL] =
+                {
+                        .effect = EFFECT_HIT,
+                        .power = 90,
+                        .type = TYPE_WATER,
+                        .accuracy = 90,
+                        .pp = 10,
+                        .secondaryEffectChance = 0,
+                        .target = MOVE_TARGET_SELECTED,
+                        .priority = 0,
+                        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT | FLAG_KINGS_ROCK_AFFECTED,
+                },
+
+        [MOVE_AIR_SLASH] =
+                {
+                        .effect = EFFECT_FLINCH_HIT,
+                        .power = 75,
+                        .type = TYPE_FLYING,
+                        .accuracy = 95,
+                        .pp = 20,
+                        .secondaryEffectChance = 30,
+                        .target = MOVE_TARGET_SELECTED,
+                        .priority = 0,
+                        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+                },
 };
