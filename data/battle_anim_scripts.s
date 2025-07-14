@@ -383,6 +383,8 @@ gBattleAnims_Moves::
     .4byte Move_PAYBACK
     .4byte Move_AQUA_TAIL
     .4byte Move_AIR_SLASH
+    .4byte Move_MIRROR_SHOT
+    .4byte Move_MUD_BOMB
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -3162,6 +3164,7 @@ SkyAttackUnleash:
 	goto SkyAttackEnd
 
 Move_FLASH:
+Move_MIRROR_SHOT:
 	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_Flash, 2
 	waitforvisualfinish
@@ -5528,6 +5531,7 @@ SandBlasterDirt:
 	return
 
 Move_MUD_SLAP:
+Move_MUD_BOMB:
 	loadspritegfx ANIM_TAG_MUD_SAND
 	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_ATTACKER
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, -10, 0, 0, 3

@@ -364,5 +364,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_ASSURANCE]     = _("ASSURANCE"),
     [MOVE_PAYBACK]       = _("PAYBACK"),
     [MOVE_AQUA_TAIL]     = _("AQUA TAIL"),
-    [MOVE_AIR_SLASH]     = _("AIR SLASH")
+    [MOVE_AIR_SLASH]     = _("AIR SLASH"),
+    [MOVE_MIRROR_SHOT]   = _("MIRROR SHOT"),
+    [MOVE_MUD_BOMB]      = _("MUD BOMB")
 };

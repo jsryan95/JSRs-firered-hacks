@@ -366,6 +366,8 @@ const u8 gMoveDescription_Assurance[] = _("Doubles power if\nthe foe has\nalread
 const u8 gMoveDescription_Payback[] = _("Doubles power if\nthe user can use\nthis attack after\nthe foe attacks.");
 const u8 gMoveDescription_AquaTail[] = _("The user attacks\nby swinging its\ntail as if it were\na vicious wave.");
 const u8 gMoveDescription_AirSlash[] = _("Attacks with a\nblade of air that\nslices the sky. May\nmake the foe flinch.");
+const u8 gMoveDescription_MirrorShot[] = _("Attacks with a\nbright flash of\nenergy. May lower\nthe foe's accuracy.");
+const u8 gMoveDescription_MudBomb[] = _("Launches a hard-\npacked mud ball to\nattack. May lower\nthe foe's accuracy.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -733,4 +735,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_PAYBACK       - 1] = gMoveDescription_Payback,
     [MOVE_AQUA_TAIL     - 1] = gMoveDescription_AquaTail,
     [MOVE_AIR_SLASH     - 1] = gMoveDescription_AirSlash,
+    [MOVE_MIRROR_SHOT   - 1] = gMoveDescription_MirrorShot,
+    [MOVE_MUD_BOMB      - 1] = gMoveDescription_MudBomb,
 };
