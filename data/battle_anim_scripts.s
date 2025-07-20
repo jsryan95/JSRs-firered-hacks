@@ -385,6 +385,9 @@ gBattleAnims_Moves::
     .4byte Move_AIR_SLASH
     .4byte Move_MIRROR_SHOT
     .4byte Move_MUD_BOMB
+    .4byte Move_AQUA_JET
+    .4byte Move_ICE_SHARD
+    .4byte Move_VACUUM_WAVE
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -2335,7 +2338,6 @@ RockSlideRocks:
 
 Move_THIEF:
 Move_ASSURANCE:
-Move_PAYBACK:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	delay 1
@@ -2904,6 +2906,7 @@ Move_AGILITY:
 
 Move_QUICK_ATTACK:
 Move_U_TURN:
+Move_AQUA_JET:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_ATK_PARTNER
 	setalpha 12, 8
@@ -3307,6 +3310,7 @@ Move_SPITE:
 	end
 
 Move_MACH_PUNCH:
+Move_VACUUM_WAVE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	monbg ANIM_ATK_PARTNER
@@ -9133,6 +9137,7 @@ Move_METEOR_MASH:
 	end
 
 Move_REVENGE:
+Move_PAYBACK:
 	loadspritegfx ANIM_TAG_PURPLE_SCRATCH
 	monbg ANIM_TARGET
 	setalpha 12, 8
@@ -10185,6 +10190,7 @@ Move_MAGICAL_LEAF:
 	end
 
 Move_ICE_BALL:
+Move_ICE_SHARD:
 	loadspritegfx ANIM_TAG_ICE_CHUNK
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	createvisualtask AnimTask_GetRolloutCounter, 5, 0

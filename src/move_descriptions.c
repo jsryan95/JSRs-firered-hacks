@@ -368,6 +368,9 @@ const u8 gMoveDescription_AquaTail[] = _("The user attacks\nby swinging its\ntai
 const u8 gMoveDescription_AirSlash[] = _("Attacks with a\nblade of air that\nslices the sky. May\nmake the foe flinch.");
 const u8 gMoveDescription_MirrorShot[] = _("Attacks with a\nbright flash of\nenergy. May lower\nthe foe's accuracy.");
 const u8 gMoveDescription_MudBomb[] = _("Launches a hard-\npacked mud ball to\nattack. May lower\nthe foe's accuracy.");
+const u8 gMoveDescription_AquaJet[] = _("An almost invisibly\nfast attack that\nis certain to strike\nfirst.");
+const u8 gMoveDescription_IceShard[] = _("Flash freezes\nchunks of ice and\nhurls them. Always\ngoes first.");
+const u8 gMoveDescription_VacuumWave[] = _("Sends a wave of\npure vacuum at\nthe foe. Always\ngoes first.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -737,4 +740,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_AIR_SLASH     - 1] = gMoveDescription_AirSlash,
     [MOVE_MIRROR_SHOT   - 1] = gMoveDescription_MirrorShot,
     [MOVE_MUD_BOMB      - 1] = gMoveDescription_MudBomb,
+    [MOVE_AQUA_JET      - 1] = gMoveDescription_AquaJet,
+    [MOVE_ICE_SHARD     - 1] = gMoveDescription_IceShard,
+    [MOVE_VACUUM_WAVE   - 1] = gMoveDescription_VacuumWave,
 };
