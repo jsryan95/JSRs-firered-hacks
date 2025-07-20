@@ -375,5 +375,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_POWER_WHIP]    = _("POWER WHIP"),
     [MOVE_DRAGON_PULSE]  = _("DRAGON PULSE"),
     [MOVE_POWER_GEM]     = _("POWER GEM"),
-    [MOVE_SEED_BOMB]     = _("SEED BOMB")
+    [MOVE_SEED_BOMB]     = _("SEED BOMB"),
+    [MOVE_SHADOW_SNEAK]  = _("SHADOW SNEAK")
 };

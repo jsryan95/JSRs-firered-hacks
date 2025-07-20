@@ -394,6 +394,7 @@ gBattleAnims_Moves::
     .4byte Move_DRAGON_PULSE
     .4byte Move_POWER_GEM
     .4byte Move_SEED_BOMB
+    .4byte Move_SHADOW_SNEAK
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -7686,6 +7687,7 @@ Move_METAL_CLAW:
 	end
 
 Move_NIGHT_SHADE:
+Move_SHADOW_SNEAK:
 	monbg ANIM_ATTACKER
 	splitbgprio ANIM_ATTACKER
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
