@@ -435,6 +435,7 @@ gBattleAnims_Moves::
     .4byte Move_SWITCHEROO
     .4byte Move_WOOD_HAMMER
     .4byte Move_AQUA_RING
+    .4byte Move_BRINE
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -6720,6 +6721,7 @@ Move_CRABHAMMER:
 	end
 
 Move_SURF:
+Move_BRINE:
 	createvisualtask AnimTask_CreateSurfWave, 2, FALSE
 	delay 24
 	panse SE_M_SURF, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0

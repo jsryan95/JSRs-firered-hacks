@@ -1387,3 +1387,7 @@
 	.byte 0xF9
 	.4byte \param0
 	.endm
+
+	.macro doubleDamageDealtIfTargetAtHalfHealth
+	.byte 0xFA
+	.endm

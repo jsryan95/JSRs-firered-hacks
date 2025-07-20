@@ -246,6 +246,7 @@ gBattleScriptsForMoveEffects::
     .4byte BattleScript_EffectThunderFang            @ EFFECT_THUNDER_FANG
     .4byte BattleScript_EffectAssurance              @ EFFECT_ASSURANCE
 	.4byte BattleScript_EffectAquaRing               @ EFFECT_AQUA_RING
+	.4byte BattleScript_EffectBrine                  @ EFFECT_BRINE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -2546,6 +2547,10 @@ BattleScript_EffectRevenge::
 
 BattleScript_EffectAssurance::
     doubledamagedealtiftargetdamaged
+    goto BattleScript_EffectHit
+
+BattleScript_EffectBrine::
+    doubleDamageDealtIfTargetAtHalfHealth
     goto BattleScript_EffectHit
 
 BattleScript_EffectBrickBreak::

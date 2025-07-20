@@ -277,6 +277,7 @@ static void Cmd_trysetroots(void);
 static void Cmd_tryGiveAquaRing(void);
 static void Cmd_doubledamagedealtifdamaged(void);
 static void Cmd_doubledamagedealtiftargetdamaged(void);
+static void Cmd_doubleDamageDealtIfTargetAtHalfHealth(void);
 static void Cmd_setyawn(void);
 static void Cmd_setdamagetohealthdifference(void);
 static void Cmd_scaledamagebyhealthratio(void);
@@ -563,6 +564,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_finishturn,                              //0xF7
     Cmd_doubledamagedealtiftargetdamaged,        //0xF8
     Cmd_tryGiveAquaRing,                         //0xF9
+    Cmd_doubleDamageDealtIfTargetAtHalfHealth,   //0xFA
 };
 
 struct StatFractions
@@ -8987,6 +8989,16 @@ static void Cmd_doubledamagedealtiftargetdamaged(void)
 {
     if (gProtectStructs[gBattlerTarget].physicalDmg != 0
         || gProtectStructs[gBattlerTarget].specialDmg != 0)
+    {
+        gBattleScripting.dmgMultiplier = 2;
+    }
+
+    gBattlescriptCurrInstr++;
+}
+
+static void Cmd_doubleDamageDealtIfTargetAtHalfHealth(void)
+{
+    if ((gBattleMons[gBattlerTarget].hp << 1)<= gBattleMons[gBattlerTarget].maxHP)
     {
         gBattleScripting.dmgMultiplier = 2;
     }
