@@ -395,6 +395,10 @@ const u8 gMoveDescription_GunkShot[] = _("The user shoots\nfilthy garbage at\nth
 const u8 gMoveDescription_LavaPlume[] = _("Lava washes over\nall Pokémon in\nbattle. It may\nalso inflict burns.");
 const u8 gMoveDescription_PoisonJab[] = _("The foe is stabbed\nwith a poisonous\ntentacle or arm.\nMay poison the foe.");
 const u8 gMoveDescription_RockClimb[] = _("A charging attack\nthat may also leave\nthe foe confused.");
+const u8 gMoveDescription_DarkPulse[] = _("Releases a horrible\naura imbued with\ndark thoughts. May\nmake the foe flinch.");
+const u8 gMoveDescription_DragonRush[] = _("A menacing tackle\nthat may make the\nfoe flinch.");
+const u8 gMoveDescription_IronHead[] = _("The user slams the\nfoe with its steel-\nhard head. May\nmake the foe flinch.");
+const u8 gMoveDescription_ZenHeadbutt[] = _("The user focuses\nits willpower and\ncharges. May make\nthe foe flinch.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -792,4 +796,8 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_LAVA_PLUME    - 1] = gMoveDescription_LavaPlume,
     [MOVE_POISON_JAB    - 1] = gMoveDescription_PoisonJab,
     [MOVE_ROCK_CLIMB    - 1] = gMoveDescription_RockClimb,
+    [MOVE_DARK_PULSE    - 1] = gMoveDescription_DarkPulse,
+    [MOVE_DRAGON_RUSH   - 1] = gMoveDescription_DragonRush,
+    [MOVE_IRON_HEAD     - 1] = gMoveDescription_IronHead,
+    [MOVE_ZEN_HEADBUTT  - 1] = gMoveDescription_ZenHeadbutt,
 };

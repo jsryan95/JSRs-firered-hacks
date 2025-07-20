@@ -413,6 +413,10 @@ gBattleAnims_Moves::
     .4byte Move_LAVA_PLUME
     .4byte Move_POISON_JAB
     .4byte Move_ROCK_CLIMB
+    .4byte Move_DARK_PULSE
+    .4byte Move_DRAGON_RUSH
+    .4byte Move_IRON_HEAD
+    .4byte Move_ZEN_HEADBUTT
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -1573,6 +1577,7 @@ SelfDestructExplode:
 	return
 
 Move_SLAM:
+Move_DRAGON_RUSH:
 	loadspritegfx ANIM_TAG_SLAM_HIT
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
@@ -2608,6 +2613,8 @@ Move_ROLLING_KICK:
 	end
 
 Move_HEADBUTT:
+Move_IRON_HEAD:
+Move_ZEN_HEADBUTT:
 	loadspritegfx ANIM_TAG_IMPACT
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 0
 	playsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER
@@ -7721,6 +7728,7 @@ Move_METAL_CLAW:
 
 Move_NIGHT_SHADE:
 Move_SHADOW_SNEAK:
+Move_DARK_PULSE:
 	monbg ANIM_ATTACKER
 	splitbgprio ANIM_ATTACKER
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER

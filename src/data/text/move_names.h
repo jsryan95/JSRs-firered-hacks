@@ -394,5 +394,9 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_GUNK_SHOT]     = _("GUNK SHOT"),
     [MOVE_LAVA_PLUME]    = _("LAVA PLUME"),
     [MOVE_POISON_JAB]    = _("POISON JAB"),
-    [MOVE_ROCK_CLIMB]    = _("ROCK CLIMB")
+    [MOVE_ROCK_CLIMB]    = _("ROCK CLIMB"),
+    [MOVE_DARK_PULSE]    = _("DARK PULSE"),
+    [MOVE_DRAGON_RUSH]   = _("DRAGON RUSH"),
+    [MOVE_IRON_HEAD]     = _("IRON HEAD"),
+    [MOVE_ZEN_HEADBUTT]  = _("ZEN HEADBUTT")
 };
