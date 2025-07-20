@@ -247,6 +247,7 @@ gBattleScriptsForMoveEffects::
     .4byte BattleScript_EffectAssurance              @ EFFECT_ASSURANCE
 	.4byte BattleScript_EffectAquaRing               @ EFFECT_AQUA_RING
 	.4byte BattleScript_EffectBrine                  @ EFFECT_BRINE
+	.4byte BattleScript_EffectCaptivate              @ EFFECT_CAPTIVATE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1735,6 +1736,20 @@ BattleScript_EffectAttract::
 	printstring STRINGID_PKMNFELLINLOVE
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectCaptivate::
+	setstatchanger STAT_SPATK, 2, TRUE
+	attackcanceler
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	tryCaptivating BattleScript_ButItFailed
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_StatDownEnd
+	jumpifbyte CMP_LESS_THAN, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_StatDownDoAnim
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_FELL_EMPTY, BattleScript_StatDownEnd
+	pause B_WAIT_TIME_SHORT
+	goto BattleScript_StatDownPrintString
 
 BattleScript_EffectReturn::
 BattleScript_EffectFrustration::

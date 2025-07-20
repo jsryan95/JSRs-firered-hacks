@@ -1391,3 +1391,8 @@
 	.macro doubleDamageDealtIfTargetAtHalfHealth
 	.byte 0xFA
 	.endm
+
+	.macro tryCaptivating param0:req
+	.byte 0xFB
+	.4byte \param0
+	.endm

@@ -212,6 +212,7 @@ static void Cmd_damagetohalftargethp(void);
 static void Cmd_setsandstorm(void);
 static void Cmd_weatherdamage(void);
 static void Cmd_tryinfatuating(void);
+static void Cmd_tryCaptivating(void);
 static void Cmd_updatestatusicon(void);
 static void Cmd_setmist(void);
 static void Cmd_setfocusenergy(void);
@@ -565,6 +566,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_doubledamagedealtiftargetdamaged,        //0xF8
     Cmd_tryGiveAquaRing,                         //0xF9
     Cmd_doubleDamageDealtIfTargetAtHalfHealth,   //0xFA
+    Cmd_tryCaptivating,                          //0xFB
 };
 
 struct StatFractions
@@ -7327,6 +7329,50 @@ static void Cmd_tryinfatuating(void)
         else
         {
             gBattleMons[gBattlerTarget].status2 |= STATUS2_INFATUATED_WITH(gBattlerAttacker);
+            gBattlescriptCurrInstr += 5;
+        }
+    }
+}
+
+static void Cmd_tryCaptivating(void)
+{
+    struct Pokemon *monAttacker, *monTarget;
+    u16 speciesAttacker, speciesTarget;
+    u32 personalityAttacker, personalityTarget;
+
+    if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
+        monAttacker = &gPlayerParty[gBattlerPartyIndexes[gBattlerAttacker]];
+    else
+        monAttacker = &gEnemyParty[gBattlerPartyIndexes[gBattlerAttacker]];
+
+    if (GetBattlerSide(gBattlerTarget) == B_SIDE_PLAYER)
+        monTarget = &gPlayerParty[gBattlerPartyIndexes[gBattlerTarget]];
+    else
+        monTarget = &gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]];
+
+    speciesAttacker = GetMonData(monAttacker, MON_DATA_SPECIES);
+    personalityAttacker = GetMonData(monAttacker, MON_DATA_PERSONALITY);
+
+    speciesTarget = GetMonData(monTarget, MON_DATA_SPECIES);
+    personalityTarget = GetMonData(monTarget, MON_DATA_PERSONALITY);
+
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_OBLIVIOUS)
+    {
+        gBattlescriptCurrInstr = BattleScript_ObliviousPreventsAttraction;
+        gLastUsedAbility = ABILITY_OBLIVIOUS;
+        RecordAbilityBattle(gBattlerTarget, ABILITY_OBLIVIOUS);
+    }
+    else
+    {
+        if (GetGenderFromSpeciesAndPersonality(speciesAttacker, personalityAttacker) == GetGenderFromSpeciesAndPersonality(speciesTarget, personalityTarget)
+            || gBattleMons[gBattlerTarget].status2 & STATUS2_INFATUATION
+            || GetGenderFromSpeciesAndPersonality(speciesAttacker, personalityAttacker) == MON_GENDERLESS
+            || GetGenderFromSpeciesAndPersonality(speciesTarget, personalityTarget) == MON_GENDERLESS)
+        {
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+        }
+        else
+        {
             gBattlescriptCurrInstr += 5;
         }
     }

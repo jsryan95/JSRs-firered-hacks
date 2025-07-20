@@ -417,5 +417,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_SWITCHEROO]    = _("SWITCHEROO"),
     [MOVE_WOOD_HAMMER]   = _("WOOD HAMMER"),
     [MOVE_AQUA_RING]     = _("AQUA RING"),
-    [MOVE_BRINE]         = _("BRINE")
+    [MOVE_BRINE]         = _("BRINE"),
+    [MOVE_CAPTIVATE]     = _("CAPTIVATE")
 };

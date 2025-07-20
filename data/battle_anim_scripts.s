@@ -436,6 +436,7 @@ gBattleAnims_Moves::
     .4byte Move_WOOD_HAMMER
     .4byte Move_AQUA_RING
     .4byte Move_BRINE
+    .4byte Move_CAPTIVATE
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -3483,6 +3484,7 @@ EndureEffect:
 	return
 
 Move_CHARM:
+Move_CAPTIVATE:
 	loadspritegfx ANIM_TAG_MAGENTA_HEART
 	createvisualtask AnimTask_RockMonBackAndForth, 5, ANIM_ATTACKER, 2, 0
 	createsprite gMagentaHeartSpriteTemplate, ANIM_ATTACKER, 3, 0, 20
