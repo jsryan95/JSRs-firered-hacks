@@ -389,6 +389,11 @@ gBattleAnims_Moves::
     .4byte Move_ICE_SHARD
     .4byte Move_VACUUM_WAVE
     .4byte Move_AVALANCHE
+    .4byte Move_X_SCISSOR
+    .4byte Move_POWER_WHIP
+    .4byte Move_DRAGON_PULSE
+    .4byte Move_POWER_GEM
+    .4byte Move_SEED_BOMB
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -1569,6 +1574,7 @@ Move_SLAM:
 	end
 
 Move_VINE_WHIP:
+Move_POWER_WHIP:
 	loadspritegfx ANIM_TAG_WHIP_HIT
 	playsewithpan SE_M_JUMP_KICK, SOUND_PAN_ATTACKER
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 6
@@ -2007,6 +2013,7 @@ Move_PAIN_SPLIT:
 	end
 
 Move_VICE_GRIP:
+Move_X_SCISSOR:
 	loadspritegfx ANIM_TAG_CUT
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -3087,6 +3094,7 @@ Move_GLARE:
 	end
 
 Move_BARRAGE:
+Move_SEED_BOMB:
 	loadspritegfx ANIM_TAG_RED_BALL
 	createvisualtask AnimTask_BarrageBall, 3
 	playsewithpan SE_M_SWAGGER, SOUND_PAN_ATTACKER
@@ -5205,6 +5213,7 @@ Move_SCRATCH:
 	end
 
 Move_DRAGON_BREATH:
+Move_DRAGON_PULSE:
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
@@ -5989,6 +5998,7 @@ HydroPumpHitSplats	:
 	return
 
 Move_SIGNAL_BEAM:
+Move_POWER_GEM:
 	loadspritegfx ANIM_TAG_GLOWY_RED_ORB
 	loadspritegfx ANIM_TAG_GLOWY_GREEN_ORB
 	loadspritegfx ANIM_TAG_DUCK

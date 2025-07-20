@@ -370,5 +370,10 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_AQUA_JET]      = _("AQUA JET"),
     [MOVE_ICE_SHARD]     = _("ICE SHARD"),
     [MOVE_VACUUM_WAVE]   = _("VACUUM WAVE"),
-    [MOVE_AVALANCHE]     = _("AVALANCHE")
+    [MOVE_AVALANCHE]     = _("AVALANCHE"),
+    [MOVE_X_SCISSOR]     = _("X-SCISSOR"),
+    [MOVE_POWER_WHIP]    = _("POWER WHIP"),
+    [MOVE_DRAGON_PULSE]  = _("DRAGON PULSE"),
+    [MOVE_POWER_GEM]     = _("POWER GEM"),
+    [MOVE_SEED_BOMB]     = _("SEED BOMB")
 };
