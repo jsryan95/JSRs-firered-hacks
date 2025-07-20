@@ -432,6 +432,8 @@ gBattleAnims_Moves::
     .4byte Move_OMINOUS_WIND
     .4byte Move_ROAR_OF_TIME
     .4byte Move_ROCK_POLISH
+    .4byte Move_SWITCHEROO
+    .4byte Move_WOOD_HAMMER
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -861,6 +863,7 @@ Move_TAKE_DOWN:
 Move_DOUBLE_EDGE:
 Move_BRAVE_BIRD:
 Move_GIGA_IMPACT:
+Move_WOOD_HAMMER:
 	loadspritegfx ANIM_TAG_IMPACT
 	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_ATTACKER, 4, 2, RGB_WHITE, 10, RGB_BLACK, 0
@@ -8579,6 +8582,7 @@ Move_ENCORE:
 	end
 
 Move_TRICK:
+Move_SWITCHEROO:
 	loadspritegfx ANIM_TAG_ITEM_BAG
 	loadspritegfx ANIM_TAG_SPEED_DUST
 	createsprite gTrickBagSpriteTemplate, ANIM_ATTACKER, 2, -40, 80

@@ -412,6 +412,8 @@ const u8 gMoveDescription_MagmaStorm[] = _("The foe is trapped\nin a maelstrom o
 const u8 gMoveDescription_OminousWind[] = _("The user creates a\ngust of repulsive wind.\nIt may raise all\nthe user's stats.");
 const u8 gMoveDescription_RoarOfTime[] = _("A blast of power\nthat distorts time.\nThe user must rest\non the next turn.");
 const u8 gMoveDescription_RockPolish[] = _("The user polishes\nits body to reduce\ndrag and sharply\nraise its SPEED.");
+const u8 gMoveDescription_Switcheroo[] = _("The user trades held\nitems with the foe\nfaster than the\neye can follow.");
+const u8 gMoveDescription_WoodHammer[] = _("The user slams its\nrugged body into\nthe foe. They both\ntake serious damage.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -828,4 +830,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_OMINOUS_WIND  - 1] = gMoveDescription_OminousWind,
     [MOVE_ROAR_OF_TIME  - 1] = gMoveDescription_RoarOfTime,
     [MOVE_ROCK_POLISH   - 1] = gMoveDescription_RockPolish,
+    [MOVE_SWITCHEROO    - 1] = gMoveDescription_Switcheroo,
+    [MOVE_WOOD_HAMMER   - 1] = gMoveDescription_WoodHammer,
 };
