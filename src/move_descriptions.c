@@ -389,6 +389,12 @@ const u8 gMoveDescription_EarthPower[] = _("The ground under the\nfoe erupts wit
 const u8 gMoveDescription_EnergyBall[] = _("Draws nature's power\nand fires it at the\nfoe. May lower the\nfoe's SP. DEF.");
 const u8 gMoveDescription_FlashCannon[] = _("The user releases all\nits light energy at\nonce. May lower the\nfoe's SP. DEF.");
 const u8 gMoveDescription_FocusBlast[] = _("The user raises its\nfocus and unleashes\nits power. May lower\nthe foe's SP. DEF.");
+const u8 gMoveDescription_Discharge[] = _("A flare of\nelectricity strikes\nall Pokémon. May\ncause paralysis.");
+const u8 gMoveDescription_ForcePalm[] = _("The foe is attacked\nwith a shock wave.\nIt may also leave\nthe foe paralyzed.");
+const u8 gMoveDescription_GunkShot[] = _("The user shoots\nfilthy garbage at\nthe foe. May\npoison the foe.");
+const u8 gMoveDescription_LavaPlume[] = _("Lava washes over\nall Pokémon in\nbattle. It may\nalso inflict burns.");
+const u8 gMoveDescription_PoisonJab[] = _("The foe is stabbed\nwith a poisonous\ntentacle or arm.\nMay poison the foe.");
+const u8 gMoveDescription_RockClimb[] = _("A charging attack\nthat may also leave\nthe foe confused.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -780,4 +786,10 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_ENERGY_BALL   - 1] = gMoveDescription_EnergyBall,
     [MOVE_FLASH_CANNON  - 1] = gMoveDescription_FlashCannon,
     [MOVE_FOCUS_BLAST   - 1] = gMoveDescription_FocusBlast,
+    [MOVE_DISCHARGE     - 1] = gMoveDescription_Discharge,
+    [MOVE_FORCE_PALM    - 1] = gMoveDescription_ForcePalm,
+    [MOVE_GUNK_SHOT     - 1] = gMoveDescription_GunkShot,
+    [MOVE_LAVA_PLUME    - 1] = gMoveDescription_LavaPlume,
+    [MOVE_POISON_JAB    - 1] = gMoveDescription_PoisonJab,
+    [MOVE_ROCK_CLIMB    - 1] = gMoveDescription_RockClimb,
 };

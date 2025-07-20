@@ -407,6 +407,12 @@ gBattleAnims_Moves::
     .4byte Move_ENERGY_BALL
     .4byte Move_FLASH_CANNON
     .4byte Move_FOCUS_BLAST
+    .4byte Move_DISCHARGE
+    .4byte Move_FORCE_PALM
+    .4byte Move_GUNK_SHOT
+    .4byte Move_LAVA_PLUME
+    .4byte Move_POISON_JAB
+    .4byte Move_ROCK_CLIMB
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -865,6 +871,7 @@ Move_DOUBLE_EDGE:
 	end
 
 Move_POISON_STING:
+Move_POISON_JAB:
 	loadspritegfx ANIM_TAG_NEEDLE
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
@@ -1087,6 +1094,7 @@ CometPunchRight:
 	goto CometPunchContinue
 
 Move_SONIC_BOOM:
+Move_FORCE_PALM:
 	loadspritegfx ANIM_TAG_AIR_WAVE
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -3679,6 +3687,7 @@ Move_UPROAR:
 	end
 
 Move_HEAT_WAVE:
+Move_LAVA_PLUME:
 	loadspritegfx ANIM_TAG_FLYING_DIRT
 	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_FLYING_DIRT, 0, 6, 6, RGB_RED
 	createvisualtask AnimTask_LoadSandstormBackground, 5, TRUE
@@ -4772,6 +4781,7 @@ Move_DRAGON_DANCE:
 	end
 
 Move_SHOCK_WAVE:
+Move_DISCHARGE:
 	loadspritegfx ANIM_TAG_ELECTRIC_ORBS
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
 	loadspritegfx ANIM_TAG_SPARK
@@ -6324,6 +6334,7 @@ Move_SLUDGE:
 	end
 
 Move_SLUDGE_BOMB:
+Move_GUNK_SHOT:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	call SludgeBombProjectile
 	call SludgeBombProjectile
@@ -9397,6 +9408,7 @@ ReturnMedium:
 	goto ReturnContinue
 
 ReturnStrong:
+Move_ROCK_CLIMB:
 	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 6, 1, ANIM_ATTACKER
 	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER
 	waitforvisualfinish

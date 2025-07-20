@@ -388,5 +388,11 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_EARTH_POWER]   = _("EARTH POWER"),
     [MOVE_ENERGY_BALL]   = _("ENERGY BALL"),
     [MOVE_FLASH_CANNON]  = _("FLASH CANNON"),
-    [MOVE_FOCUS_BLAST]   = _("FOCUS BLAST")
+    [MOVE_FOCUS_BLAST]   = _("FOCUS BLAST"),
+    [MOVE_DISCHARGE]     = _("DISCHARGE"),
+    [MOVE_FORCE_PALM]    = _("FORCE PALM"),
+    [MOVE_GUNK_SHOT]     = _("GUNK SHOT"),
+    [MOVE_LAVA_PLUME]    = _("LAVA PLUME"),
+    [MOVE_POISON_JAB]    = _("POISON JAB"),
+    [MOVE_ROCK_CLIMB]    = _("ROCK CLIMB")
 };
