@@ -388,6 +388,7 @@ gBattleAnims_Moves::
     .4byte Move_AQUA_JET
     .4byte Move_ICE_SHARD
     .4byte Move_VACUUM_WAVE
+    .4byte Move_AVALANCHE
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -10191,6 +10192,7 @@ Move_MAGICAL_LEAF:
 
 Move_ICE_BALL:
 Move_ICE_SHARD:
+Move_AVALANCHE:
 	loadspritegfx ANIM_TAG_ICE_CHUNK
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	createvisualtask AnimTask_GetRolloutCounter, 5, 0

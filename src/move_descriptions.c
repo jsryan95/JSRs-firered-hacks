@@ -743,4 +743,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_AQUA_JET      - 1] = gMoveDescription_AquaJet,
     [MOVE_ICE_SHARD     - 1] = gMoveDescription_IceShard,
     [MOVE_VACUUM_WAVE   - 1] = gMoveDescription_VacuumWave,
+    [MOVE_AVALANCHE     - 1] = gMoveDescription_Revenge,
 };

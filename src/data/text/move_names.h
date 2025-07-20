@@ -369,5 +369,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_MUD_BOMB]      = _("MUD BOMB"),
     [MOVE_AQUA_JET]      = _("AQUA JET"),
     [MOVE_ICE_SHARD]     = _("ICE SHARD"),
-    [MOVE_VACUUM_WAVE]   = _("VACUUM WAVE")
+    [MOVE_VACUUM_WAVE]   = _("VACUUM WAVE"),
+    [MOVE_AVALANCHE]     = _("AVALANCHE")
 };

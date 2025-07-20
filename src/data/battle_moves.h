@@ -5193,4 +5193,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 1,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
+
+    [MOVE_AVALANCHE] =
+    {
+        .effect = EFFECT_REVENGE,
+        .power = 60,
+        .type = TYPE_ICE,
+        .category = CATEGORY_PHYSICAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = -4,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
 };
