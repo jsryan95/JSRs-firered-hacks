@@ -1382,3 +1382,8 @@
 	.macro doubledamagedealtiftargetdamaged
 	.byte 0xF8
 	.endm
+
+	.macro tryGiveAquaRing param0:req
+	.byte 0xF9
+	.4byte \param0
+	.endm

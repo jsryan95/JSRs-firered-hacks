@@ -434,6 +434,7 @@ gBattleAnims_Moves::
     .4byte Move_ROCK_POLISH
     .4byte Move_SWITCHEROO
     .4byte Move_WOOD_HAMMER
+    .4byte Move_AQUA_RING
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -481,6 +482,7 @@ gBattleAnims_General::
 	.4byte General_SilphScoped              @ B_ANIM_SILPH_SCOPED
 	.4byte General_SafariRockThrow          @ B_ANIM_ROCK_THROW
 	.4byte General_SafariReaction           @ B_ANIM_SAFARI_REACTION
+	.4byte General_AquaRingHeal             @ B_ANIM_AQUA_RING_HEAL
 
 	.align 2
 gBattleAnims_Special::
@@ -4729,6 +4731,8 @@ Move_VOLT_TACKLE:
 	end
 
 Move_WATER_SPORT:
+Move_AQUA_RING:
+General_AquaRingHeal:
 	loadspritegfx ANIM_TAG_GLOWY_BLUE_ORB
 	createvisualtask AnimTask_WaterSport, 5
 	delay 8

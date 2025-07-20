@@ -414,6 +414,7 @@ const u8 gMoveDescription_RoarOfTime[] = _("A blast of power\nthat distorts time
 const u8 gMoveDescription_RockPolish[] = _("The user polishes\nits body to reduce\ndrag and sharply\nraise its SPEED.");
 const u8 gMoveDescription_Switcheroo[] = _("The user trades held\nitems with the foe\nfaster than the\neye can follow.");
 const u8 gMoveDescription_WoodHammer[] = _("The user slams its\nrugged body into\nthe foe. They both\ntake serious damage.");
+const u8 gMoveDescription_AquaRing[] = _("The user envelops\nitself in a veil of\nwater that restores\nsome HP every turn.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -832,4 +833,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_ROCK_POLISH   - 1] = gMoveDescription_RockPolish,
     [MOVE_SWITCHEROO    - 1] = gMoveDescription_Switcheroo,
     [MOVE_WOOD_HAMMER   - 1] = gMoveDescription_WoodHammer,
+    [MOVE_AQUA_RING     - 1] = gMoveDescription_AquaRing,
 };

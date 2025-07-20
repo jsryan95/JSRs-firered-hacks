@@ -274,6 +274,7 @@ static void Cmd_tryswapitems(void);
 static void Cmd_trycopyability(void);
 static void Cmd_trywish(void);
 static void Cmd_trysetroots(void);
+static void Cmd_tryGiveAquaRing(void);
 static void Cmd_doubledamagedealtifdamaged(void);
 static void Cmd_doubledamagedealtiftargetdamaged(void);
 static void Cmd_setyawn(void);
@@ -561,6 +562,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_finishaction,                            //0xF6
     Cmd_finishturn,                              //0xF7
     Cmd_doubledamagedealtiftargetdamaged,        //0xF8
+    Cmd_tryGiveAquaRing,                         //0xF9
 };
 
 struct StatFractions
@@ -8950,6 +8952,20 @@ static void Cmd_trysetroots(void)
     else
     {
         gStatuses3[gBattlerAttacker] |= STATUS3_ROOTED;
+        gBattlescriptCurrInstr += 5;
+    }
+}
+
+// Aqua Ring
+static void Cmd_tryGiveAquaRing(void)
+{
+    if (gStatuses3[gBattlerAttacker] & STATUS3_AQUA_RING)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+    }
+    else
+    {
+        gStatuses3[gBattlerAttacker] |= STATUS3_AQUA_RING;
         gBattlescriptCurrInstr += 5;
     }
 }
