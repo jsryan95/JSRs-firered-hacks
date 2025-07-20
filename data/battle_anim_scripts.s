@@ -417,6 +417,13 @@ gBattleAnims_Moves::
     .4byte Move_DRAGON_RUSH
     .4byte Move_IRON_HEAD
     .4byte Move_ZEN_HEADBUTT
+    .4byte Move_AURA_SPHERE
+    .4byte Move_BRAVE_BIRD
+    .4byte Move_DARK_VOID
+    .4byte Move_DEFEND_ORDER
+    .4byte Move_DRACO_METEOR
+    .4byte Move_DOUBLE_HIT
+    .4byte Move_DRAIN_PUNCH
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -478,6 +485,7 @@ gBattleAnims_Special::
 Move_NONE:
 Move_MIRROR_MOVE:
 Move_POUND:
+Move_DOUBLE_HIT:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	setalpha 12, 8
@@ -585,6 +593,7 @@ Move_SLEEP_POWDER:
 	end
 
 Move_SWIFT:
+Move_AURA_SPHERE:
 	loadspritegfx ANIM_TAG_YELLOW_STAR
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -842,6 +851,7 @@ Move_TAKE_DOWN:
 	end
 
 Move_DOUBLE_EDGE:
+Move_BRAVE_BIRD:
 	loadspritegfx ANIM_TAG_IMPACT
 	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_ATTACKER, 4, 2, RGB_WHITE, 10, RGB_BLACK, 0
@@ -1001,6 +1011,7 @@ EmberFireHit:
 	return
 
 Move_MEGA_PUNCH:
+Move_DRAIN_PUNCH:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	monbg ANIM_TARGET
@@ -3302,6 +3313,7 @@ Move_SKETCH:
 	end
 
 Move_NIGHTMARE:
+Move_DARK_VOID:
 	fadetobg BG_GHOST
 	waitbgfadein
 	jumpifcontest NightmareInContest
@@ -9518,6 +9530,7 @@ ReturnStrongestHit:
 	return
 
 Move_COSMIC_POWER:
+Move_DEFEND_ORDER:
 	loadspritegfx ANIM_TAG_SPARKLE_2
 	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_COSMIC_POWER, 0
 	playsewithpan SE_M_COSMIC_POWER, 0
@@ -9750,6 +9763,7 @@ Move_ROCK_BLAST:
 	end
 
 Move_OVERHEAT:
+Move_DRACO_METEOR:
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER

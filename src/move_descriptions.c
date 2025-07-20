@@ -399,6 +399,13 @@ const u8 gMoveDescription_DarkPulse[] = _("Releases a horrible\naura imbued with
 const u8 gMoveDescription_DragonRush[] = _("A menacing tackle\nthat may make the\nfoe flinch.");
 const u8 gMoveDescription_IronHead[] = _("The user slams the\nfoe with its steel-\nhard head. May\nmake the foe flinch.");
 const u8 gMoveDescription_ZenHeadbutt[] = _("The user focuses\nits willpower and\ncharges. May make\nthe foe flinch.");
+const u8 gMoveDescription_AuraSphere[] = _("Fires a blast of\naura power from deep\nwithin the user's\nbody. Always hits.");
+const u8 gMoveDescription_BraveBird[] = _("Charges recklessly\nfrom a low altitude.\nThe user also takes\nserious damage.");
+const u8 gMoveDescription_DarkVoid[] = _("The foe is dragged\ninto a world of\ntotal darkness that\nputs it to sleep.");
+const u8 gMoveDescription_DefendOrder[] = _("The user's underlings\n make a living\nshield, raising\nits DEF and SP. DEF.");
+const u8 gMoveDescription_DracoMeteor[] = _("Comets are summoned\nfrom the sky. Sharply\nreduces the user's\nSP. ATK stat.");
+const u8 gMoveDescription_DoubleHit[] = _("The user slams the\nfoe with a tail,\netc. twice in a\nrow.");
+const u8 gMoveDescription_DrainPunch[] = _("An energy-draining\npunch. The user's HP\nis restored by half\nthe damage caused.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -800,4 +807,11 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_DRAGON_RUSH   - 1] = gMoveDescription_DragonRush,
     [MOVE_IRON_HEAD     - 1] = gMoveDescription_IronHead,
     [MOVE_ZEN_HEADBUTT  - 1] = gMoveDescription_ZenHeadbutt,
+    [MOVE_AURA_SPHERE   - 1] = gMoveDescription_AuraSphere,
+    [MOVE_BRAVE_BIRD    - 1] = gMoveDescription_BraveBird,
+    [MOVE_DARK_VOID     - 1] = gMoveDescription_DarkVoid,
+    [MOVE_DEFEND_ORDER  - 1] = gMoveDescription_DefendOrder,
+    [MOVE_DRACO_METEOR  - 1] = gMoveDescription_DracoMeteor,
+    [MOVE_DOUBLE_HIT    - 1] = gMoveDescription_DoubleHit,
+    [MOVE_DRAIN_PUNCH   - 1] = gMoveDescription_DrainPunch,
 };
