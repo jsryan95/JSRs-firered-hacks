@@ -395,6 +395,7 @@ gBattleAnims_Moves::
     .4byte Move_POWER_GEM
     .4byte Move_SEED_BOMB
     .4byte Move_SHADOW_SNEAK
+    .4byte Move_BULLET_PUNCH
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -3321,6 +3322,7 @@ Move_SPITE:
 
 Move_MACH_PUNCH:
 Move_VACUUM_WAVE:
+Move_BULLET_PUNCH:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	monbg ANIM_ATK_PARTNER

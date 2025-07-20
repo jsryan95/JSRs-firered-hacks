@@ -377,6 +377,7 @@ const u8 gMoveDescription_DragonPulse[] = _("The user attacks\nwith a shock wave
 const u8 gMoveDescription_PowerGem[] = _("The user attacks\nwith a ray of\nlight that sparkles\nlike gemstones.");
 const u8 gMoveDescription_SeedBomb[] = _("Slams a barrage of\nhard-shelled seeds\ndown on the foe\nfrom above.");
 const u8 gMoveDescription_ShadowSneak[] = _("The user extends\nits shadow to\nattack from behind.\nAlways goes first.");
+const u8 gMoveDescription_BulletPunch[] = _("The user strikes\nwith a tough punch\nas fast as a bullet.\nAlways goes first.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -756,4 +757,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POWER_GEM     - 1] = gMoveDescription_PowerGem,
     [MOVE_SEED_BOMB     - 1] = gMoveDescription_SeedBomb,
     [MOVE_SHADOW_SNEAK  - 1] = gMoveDescription_ShadowSneak,
+    [MOVE_BULLET_PUNCH  - 1] = gMoveDescription_BulletPunch,
 };
