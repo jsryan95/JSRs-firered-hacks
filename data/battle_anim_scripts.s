@@ -424,6 +424,14 @@ gBattleAnims_Moves::
     .4byte Move_DRACO_METEOR
     .4byte Move_DOUBLE_HIT
     .4byte Move_DRAIN_PUNCH
+    .4byte Move_GIGA_IMPACT
+    .4byte Move_GRASS_KNOT
+    .4byte Move_HEAL_ORDER
+    .4byte Move_LEAF_STORM
+    .4byte Move_MAGMA_STORM
+    .4byte Move_OMINOUS_WIND
+    .4byte Move_ROAR_OF_TIME
+    .4byte Move_ROCK_POLISH
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -852,6 +860,7 @@ Move_TAKE_DOWN:
 
 Move_DOUBLE_EDGE:
 Move_BRAVE_BIRD:
+Move_GIGA_IMPACT:
 	loadspritegfx ANIM_TAG_IMPACT
 	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_ATTACKER, 4, 2, RGB_WHITE, 10, RGB_BLACK, 0
@@ -1486,6 +1495,7 @@ DizzyPunchLunge:
 	return
 
 Move_FIRE_SPIN:
+Move_MAGMA_STORM:
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	playsewithpan SE_M_SACRED_FIRE2, SOUND_PAN_TARGET
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 2, 47, 1
@@ -2807,6 +2817,7 @@ Move_SING:
 	end
 
 Move_LOW_KICK:
+Move_GRASS_KNOT:
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	loadspritegfx ANIM_TAG_IMPACT
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, 20, 0, 0, 4
@@ -2935,6 +2946,7 @@ Move_MEDITATE:
 	end
 
 Move_AGILITY:
+Move_ROCK_POLISH:
 	monbg ANIM_ATK_PARTNER
 	setalpha 12, 8
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 24, 6, 4, 4
@@ -8000,6 +8012,7 @@ Move_DISABLE:
 	end
 
 Move_RECOVER:
+Move_HEAL_ORDER:
 	loadspritegfx ANIM_TAG_ORBS
 	loadspritegfx ANIM_TAG_BLUE_STAR
 	monbg ANIM_ATK_PARTNER
@@ -8810,6 +8823,7 @@ SweetScentEffect:
 
 Move_HYPER_BEAM:
 Move_FOCUS_BLAST:
+Move_ROAR_OF_TIME:
 	loadspritegfx ANIM_TAG_ORBS
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 4, 0, 16, RGB_BLACK
 	waitforvisualfinish
@@ -9633,6 +9647,7 @@ Move_ROCK_TOMB:
 	end
 
 Move_SILVER_WIND:
+Move_OMINOUS_WIND:
 	loadspritegfx ANIM_TAG_SPARKLE_6
 	panse SE_M_GUST, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
 	playsewithpan SE_M_MORNING_SUN, 0
@@ -9764,6 +9779,7 @@ Move_ROCK_BLAST:
 
 Move_OVERHEAT:
 Move_DRACO_METEOR:
+Move_LEAF_STORM:
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER

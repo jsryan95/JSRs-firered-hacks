@@ -406,6 +406,12 @@ const u8 gMoveDescription_DefendOrder[] = _("The user's underlings\n make a livi
 const u8 gMoveDescription_DracoMeteor[] = _("Comets are summoned\nfrom the sky. Sharply\nreduces the user's\nSP. ATK stat.");
 const u8 gMoveDescription_DoubleHit[] = _("The user slams the\nfoe with a tail,\netc. twice in a\nrow.");
 const u8 gMoveDescription_DrainPunch[] = _("An energy-draining\npunch. The user's HP\nis restored by half\nthe damage caused.");
+const u8 gMoveDescription_GrassKnot[] = _("Snares the foe with\ngrass and trips it.\nA heavier foe\ntakes more damage.");
+const u8 gMoveDescription_HealOrder[] = _("The user's underlings\nheal it. The user\nregains up to half\nof its maximum HP.");
+const u8 gMoveDescription_MagmaStorm[] = _("The foe is trapped\nin a maelstrom of\nfire that rages for\ntwo to five turns.");
+const u8 gMoveDescription_OminousWind[] = _("The user creates a\ngust of repulsive wind.\nIt may raise all\nthe user's stats.");
+const u8 gMoveDescription_RoarOfTime[] = _("A blast of power\nthat distorts time.\nThe user must rest\non the next turn.");
+const u8 gMoveDescription_RockPolish[] = _("The user polishes\nits body to reduce\ndrag and sharply\nraise its SPEED.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -814,4 +820,12 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_DRACO_METEOR  - 1] = gMoveDescription_DracoMeteor,
     [MOVE_DOUBLE_HIT    - 1] = gMoveDescription_DoubleHit,
     [MOVE_DRAIN_PUNCH   - 1] = gMoveDescription_DrainPunch,
+    [MOVE_GIGA_IMPACT   - 1] = gMoveDescription_HyperBeam,
+    [MOVE_GRASS_KNOT    - 1] = gMoveDescription_GrassKnot,
+    [MOVE_HEAL_ORDER    - 1] = gMoveDescription_HealOrder,
+    [MOVE_LEAF_STORM    - 1] = gMoveDescription_Overheat,
+    [MOVE_MAGMA_STORM   - 1] = gMoveDescription_MagmaStorm,
+    [MOVE_OMINOUS_WIND  - 1] = gMoveDescription_OminousWind,
+    [MOVE_ROAR_OF_TIME  - 1] = gMoveDescription_RoarOfTime,
+    [MOVE_ROCK_POLISH   - 1] = gMoveDescription_RockPolish,
 };
