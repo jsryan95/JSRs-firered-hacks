@@ -402,6 +402,11 @@ gBattleAnims_Moves::
     .4byte Move_SHADOW_CLAW
     .4byte Move_SPACIAL_REND
     .4byte Move_STONE_EDGE
+    .4byte Move_BUG_BUZZ
+    .4byte Move_EARTH_POWER
+    .4byte Move_ENERGY_BALL
+    .4byte Move_FLASH_CANNON
+    .4byte Move_FOCUS_BLAST
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -686,6 +691,7 @@ SupersonicRing:
 	return
 
 Move_SCREECH:
+Move_BUG_BUZZ:
 	loadspritegfx ANIM_TAG_PURPLE_RING
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 3, 0, 2, 1
 	call ScreechRing
@@ -2866,6 +2872,7 @@ DigSetUp:
 	goto DigEnd
 
 DigUnleash:
+Move_EARTH_POWER:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_DIRT_MOUND
 	createvisualtask AnimTask_DigUpMovement, 2, FALSE
@@ -5830,6 +5837,7 @@ SolarBeamAbsorbEffect:
 	return
 
 SolarBeamUnleash:
+Move_FLASH_CANNON:
 	call SetSolarBeamBg
 	panse SE_M_SOLAR_BEAM, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
 	createvisualtask AnimTask_CreateSmallSolarBeamOrbs, 5
@@ -8770,6 +8778,7 @@ SweetScentEffect:
 	return
 
 Move_HYPER_BEAM:
+Move_FOCUS_BLAST:
 	loadspritegfx ANIM_TAG_ORBS
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 4, 0, 16, RGB_BLACK
 	waitforvisualfinish
@@ -9019,6 +9028,7 @@ Move_MUDDY_WATER:
 	end
 
 Move_BULLET_SEED:
+Move_ENERGY_BALL:
 	loadspritegfx ANIM_TAG_SEED
 	createsprite gBulletSeedSpriteTemplate, ANIM_TARGET, 2, 20, 0
 	delay 5

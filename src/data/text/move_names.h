@@ -383,5 +383,10 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_PSYCHO_CUT]    = _("PSYCHO CUT"),
     [MOVE_SHADOW_CLAW]   = _("SHADOW CLAW"),
     [MOVE_SPACIAL_REND]  = _("SPACIAL REND"),
-    [MOVE_STONE_EDGE]    = _("STONE EDGE")
+    [MOVE_STONE_EDGE]    = _("STONE EDGE"),
+    [MOVE_BUG_BUZZ]      = _("BUG BUZZ"),
+    [MOVE_EARTH_POWER]   = _("EARTH POWER"),
+    [MOVE_ENERGY_BALL]   = _("ENERGY BALL"),
+    [MOVE_FLASH_CANNON]  = _("FLASH CANNON"),
+    [MOVE_FOCUS_BLAST]   = _("FOCUS BLAST")
 };

@@ -384,6 +384,11 @@ const u8 gMoveDescription_PsychoCut[] = _("Tears the foe with\nblades made by ps
 const u8 gMoveDescription_ShadowClaw[] = _("Slashes with a sharp\nclaw made from shadows.\nHas a high critical-\nhit ratio.");
 const u8 gMoveDescription_SpacialRend[] = _("Tears the space\naround the foe. Has\na high critical-hit\nratio.");
 const u8 gMoveDescription_StoneEdge[] = _("The user stabs the\nfoe with a sharpened\nstone. Has a high\ncritical-hit ratio.");
+const u8 gMoveDescription_BugBuzz[] = _("The user's wings\ncreate a damaging\nsound wave. May lower\nthe foe's SP. DEF.");
+const u8 gMoveDescription_EarthPower[] = _("The ground under the\nfoe erupts with power.\nMay lower the foe's\nSP. DEF.");
+const u8 gMoveDescription_EnergyBall[] = _("Draws nature's power\nand fires it at the\nfoe. May lower the\nfoe's SP. DEF.");
+const u8 gMoveDescription_FlashCannon[] = _("The user releases all\nits light energy at\nonce. May lower the\nfoe's SP. DEF.");
+const u8 gMoveDescription_FocusBlast[] = _("The user raises its\nfocus and unleashes\nits power. May lower\nthe foe's SP. DEF.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -770,4 +775,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_SHADOW_CLAW   - 1] = gMoveDescription_ShadowClaw,
     [MOVE_SPACIAL_REND  - 1] = gMoveDescription_SpacialRend,
     [MOVE_STONE_EDGE    - 1] = gMoveDescription_StoneEdge,
+    [MOVE_BUG_BUZZ      - 1] = gMoveDescription_BugBuzz,
+    [MOVE_EARTH_POWER   - 1] = gMoveDescription_EarthPower,
+    [MOVE_ENERGY_BALL   - 1] = gMoveDescription_EnergyBall,
+    [MOVE_FLASH_CANNON  - 1] = gMoveDescription_FlashCannon,
+    [MOVE_FOCUS_BLAST   - 1] = gMoveDescription_FocusBlast,
 };
