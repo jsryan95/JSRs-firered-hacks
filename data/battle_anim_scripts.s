@@ -396,6 +396,12 @@ gBattleAnims_Moves::
     .4byte Move_SEED_BOMB
     .4byte Move_SHADOW_SNEAK
     .4byte Move_BULLET_PUNCH
+    .4byte Move_ATTACK_ORDER
+    .4byte Move_NIGHT_SLASH
+    .4byte Move_PSYCHO_CUT
+    .4byte Move_SHADOW_CLAW
+    .4byte Move_SPACIAL_REND
+    .4byte Move_STONE_EDGE
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -1193,6 +1199,7 @@ Move_THUNDER_WAVE:
 	end
 
 Move_BEAT_UP:
+Move_ATTACK_ORDER:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	monbg ANIM_TARGET
@@ -2646,6 +2653,7 @@ FuryAttackLeft:
 	goto FuryAttackContinue
 
 Move_HORN_DRILL:
+Move_STONE_EDGE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HORN_HIT
 	jumpifcontest HornDrillInContest
@@ -3229,6 +3237,9 @@ Move_SUPER_FANG:
 	end
 
 Move_SLASH:
+Move_NIGHT_SLASH:
+Move_PSYCHO_CUT:
+Move_SHADOW_CLAW:
 	loadspritegfx ANIM_TAG_SLASH
 	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, -8, 0
 	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
@@ -6548,6 +6559,7 @@ Move_PECK:
 	end
 
 Move_AEROBLAST:
+Move_SPACIAL_REND:
 	loadspritegfx ANIM_TAG_AIR_WAVE_2
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER

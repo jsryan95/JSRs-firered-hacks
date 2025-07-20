@@ -378,6 +378,12 @@ const u8 gMoveDescription_PowerGem[] = _("The user attacks\nwith a ray of\nlight
 const u8 gMoveDescription_SeedBomb[] = _("Slams a barrage of\nhard-shelled seeds\ndown on the foe\nfrom above.");
 const u8 gMoveDescription_ShadowSneak[] = _("The user extends\nits shadow to\nattack from behind.\nAlways goes first.");
 const u8 gMoveDescription_BulletPunch[] = _("The user strikes\nwith a tough punch\nas fast as a bullet.\nAlways goes first.");
+const u8 gMoveDescription_AttackOrder[] = _("The user's underlings\n pummel the foe.\nHas a high critical-\nhit ratio.");
+const u8 gMoveDescription_NightSlash[] = _("A decisive slash at\nan opportune\nmoment. Has a high\ncritical-hit ratio.");
+const u8 gMoveDescription_PsychoCut[] = _("Tears the foe with\nblades made by psychic\npower. Has a high\ncritical-hit ratio.");
+const u8 gMoveDescription_ShadowClaw[] = _("Slashes with a sharp\nclaw made from shadows.\nHas a high critical-\nhit ratio.");
+const u8 gMoveDescription_SpacialRend[] = _("Tears the space\naround the foe. Has\na high critical-hit\nratio.");
+const u8 gMoveDescription_StoneEdge[] = _("The user stabs the\nfoe with a sharpened\nstone. Has a high\ncritical-hit ratio.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -758,4 +764,10 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_SEED_BOMB     - 1] = gMoveDescription_SeedBomb,
     [MOVE_SHADOW_SNEAK  - 1] = gMoveDescription_ShadowSneak,
     [MOVE_BULLET_PUNCH  - 1] = gMoveDescription_BulletPunch,
+    [MOVE_ATTACK_ORDER  - 1] = gMoveDescription_AttackOrder,
+    [MOVE_NIGHT_SLASH   - 1] = gMoveDescription_NightSlash,
+    [MOVE_PSYCHO_CUT    - 1] = gMoveDescription_PsychoCut,
+    [MOVE_SHADOW_CLAW   - 1] = gMoveDescription_ShadowClaw,
+    [MOVE_SPACIAL_REND  - 1] = gMoveDescription_SpacialRend,
+    [MOVE_STONE_EDGE    - 1] = gMoveDescription_StoneEdge,
 };
