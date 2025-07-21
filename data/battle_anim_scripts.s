@@ -440,6 +440,8 @@ gBattleAnims_Moves::
     .4byte Move_CHARGE_BEAM
     .4byte Move_CLOSE_COMBAT
     .4byte Move_CROSS_POISON
+    .4byte Move_CRUSH_GRIP
+    .4byte Move_WRING_OUT
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -7566,6 +7568,8 @@ Move_POISON_GAS:
 	end
 
 Move_BIND:
+Move_CRUSH_GRIP:
+Move_WRING_OUT:
 	createvisualtask AnimTask_SwayMon, 5, 0, 6, 3328, 4, ANIM_ATTACKER
 	goto BindWrap
 

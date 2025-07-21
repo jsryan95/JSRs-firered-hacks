@@ -282,6 +282,7 @@ static void Cmd_doubleDamageDealtIfTargetAtHalfHealth(void);
 static void Cmd_setyawn(void);
 static void Cmd_setdamagetohealthdifference(void);
 static void Cmd_scaledamagebyhealthratio(void);
+static void Cmd_scaleDamageByTargetHealthRatio(void);
 static void Cmd_tryswapabilities(void);
 static void Cmd_tryimprison(void);
 static void Cmd_trysetgrudge(void);
@@ -567,6 +568,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_tryGiveAquaRing,                         //0xF9
     Cmd_doubleDamageDealtIfTargetAtHalfHealth,   //0xFA
     Cmd_tryCaptivating,                          //0xFB
+    Cmd_scaleDamageByTargetHealthRatio           //0xFC
 };
 
 struct StatFractions
@@ -9091,6 +9093,16 @@ static void Cmd_scaledamagebyhealthratio(void)
         gDynamicBasePower = gBattleMons[gBattlerAttacker].hp * power / gBattleMons[gBattlerAttacker].maxHP;
         if (gDynamicBasePower == 0)
             gDynamicBasePower = 1;
+    }
+    gBattlescriptCurrInstr++;
+}
+
+static void Cmd_scaleDamageByTargetHealthRatio(void)
+{
+    if (gDynamicBasePower == 0)
+    {
+        u8 power = gBattleMons[gBattlerTarget].hp * 120 / gBattleMons[gBattlerTarget].maxHP;
+        gDynamicBasePower = power + 1;
     }
     gBattlescriptCurrInstr++;
 }

@@ -250,6 +250,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCaptivate              @ EFFECT_CAPTIVATE
 	.4byte BattleScript_EffectSpecialAttackUpHit     @ EFFECT_SPECIAL_ATTACK_UP_HIT
 	.4byte BattleScript_EffectCloseCombat            @ EFFECT_CLOSE_COMBAT
+	.4byte BattleScript_EffectCrushGrip              @ EFFECT_CRUSH_GRIP
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -2655,6 +2656,10 @@ BattleScript_EffectEndeavor::
 
 BattleScript_EffectEruption::
 	scaledamagebyhealthratio
+	goto BattleScript_EffectHit
+
+BattleScript_EffectCrushGrip::
+	scaleDamageByTargetHealthRatio
 	goto BattleScript_EffectHit
 
 BattleScript_EffectSkillSwap::

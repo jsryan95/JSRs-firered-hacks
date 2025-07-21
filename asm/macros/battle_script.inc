@@ -1396,3 +1396,7 @@
 	.byte 0xFB
 	.4byte \param0
 	.endm
+
+	.macro scaleDamageByTargetHealthRatio
+	.byte 0xFC
+	.endm

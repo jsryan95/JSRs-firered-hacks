@@ -420,6 +420,7 @@ const u8 gMoveDescription_Captivate[] = _("Sharply lowers the\nfoe's SP. ATK if 
 const u8 gMoveDescription_ChargeBeam[] = _("Fires a concentrated\nbundle of electricity.\nMay raise the user's\nSP. ATK.");
 const u8 gMoveDescription_CloseCombat[] = _("A powerful attack,\nbut it also lowers\nthe user's DEFENSE\nand SP. DEF stats.");
 const u8 gMoveDescription_CrossPoison[] = _("A slashing attack\nthat may poison the\nfoe. It has a high\ncritical-hit ratio.");
+const u8 gMoveDescription_CrushGrip[] = _("This attack is more\npowerful the more\nHP the foe has\nleft.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -844,4 +845,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_CHARGE_BEAM   - 1] = gMoveDescription_ChargeBeam,
     [MOVE_CLOSE_COMBAT  - 1] = gMoveDescription_CloseCombat,
     [MOVE_CROSS_POISON  - 1] = gMoveDescription_CrossPoison,
+    [MOVE_CRUSH_GRIP    - 1] = gMoveDescription_CrushGrip,
+    [MOVE_WRING_OUT     - 1] = gMoveDescription_CrushGrip,
 };
