@@ -849,4 +849,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_CRUSH_GRIP    - 1] = gMoveDescription_CrushGrip,
     [MOVE_WRING_OUT     - 1] = gMoveDescription_CrushGrip,
     [MOVE_SHADOW_BIND   - 1] = gMoveDescription_ShadowBind,
+    [MOVE_WATER_WHEEL   - 1] = gMoveDescription_RapidSpin,
 };

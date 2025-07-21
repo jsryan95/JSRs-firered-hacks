@@ -573,8 +573,9 @@
 #define MOVE_TIDAL_CRASH 561
 #define MOVE_SAND_BLASTER 562
 #define MOVE_SHADOW_BIND 563
+#define MOVE_WATER_WHEEL 564
 
-#define MOVES_COUNT 564
+#define MOVES_COUNT 565
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

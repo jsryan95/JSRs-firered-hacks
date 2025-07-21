@@ -587,6 +587,7 @@ gBattleAnims_Moves::
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
     .4byte Move_SHADOW_BIND
+    .4byte Move_WATER_WHEEL
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -3755,6 +3756,7 @@ MagnitudeIntense:
 	goto MagnitudeEnd
 
 Move_RAPID_SPIN:
+Move_WATER_WHEEL:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_RAPID_SPIN
 	monbg ANIM_ATTACKER
