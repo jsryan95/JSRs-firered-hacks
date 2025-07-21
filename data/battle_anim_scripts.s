@@ -438,6 +438,7 @@ gBattleAnims_Moves::
     .4byte Move_BRINE
     .4byte Move_CAPTIVATE
     .4byte Move_CHARGE_BEAM
+    .4byte Move_CLOSE_COMBAT
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -3922,6 +3923,7 @@ Move_ASSIST:
 	end
 
 Move_SUPERPOWER:
+Move_CLOSE_COMBAT:
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
 	loadspritegfx ANIM_TAG_METEOR
 	loadspritegfx ANIM_TAG_FLAT_ROCK
