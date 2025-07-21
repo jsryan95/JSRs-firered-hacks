@@ -425,9 +425,9 @@
 #define MOVE_CROSS_POISON 419
 #define MOVE_CRUSH_GRIP 420
 #define MOVE_WRING_OUT 421
+#define MOVE_GYRO_BALL 422
 
 // generation 4 moves (not implemented)
-#define MOVE_FLARE_BLITZ 422
 #define MOVE_ACUPRESSURE 423
 #define MOVE_BUG_BITE 424
 #define MOVE_CHATTER 425
@@ -439,7 +439,7 @@
 #define MOVE_GASTRO_ACID 431
 #define MOVE_GRAVITY 432
 #define MOVE_GUARD_SWAP 433
-#define MOVE_GYRO_BALL 434
+#define MOVE_FLARE_BLITZ 434
 #define MOVE_HAMMER_ARM 435
 #define MOVE_HEAD_SMASH 436
 #define MOVE_HEAL_BLOCK 437

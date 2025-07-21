@@ -442,8 +442,8 @@ gBattleAnims_Moves::
     .4byte Move_CROSS_POISON
     .4byte Move_CRUSH_GRIP
     .4byte Move_WRING_OUT
+    .4byte Move_GYRO_BALL
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -3757,6 +3757,7 @@ MagnitudeIntense:
 
 Move_RAPID_SPIN:
 Move_WATER_WHEEL:
+Move_GYRO_BALL:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_RAPID_SPIN
 	monbg ANIM_ATTACKER

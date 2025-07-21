@@ -1400,3 +1400,7 @@
 	.macro scaleDamageByTargetHealthRatio
 	.byte 0xFC
 	.endm
+
+	.macro scaleGyroBallDamage
+	.byte 0xFD
+	.endm

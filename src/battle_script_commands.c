@@ -59,6 +59,7 @@ static void DrawLevelUpWindow2(void);
 static void PutMonIconOnLvlUpBanner(void);
 static void DrawLevelUpBannerText(void);
 static void SpriteCB_MonIconOnLvlUpBanner(struct Sprite* sprite);
+static u32 getEffectiveSpeed(u8 battler);
 
 static void Cmd_attackcanceler(void);
 static void Cmd_accuracycheck(void);
@@ -283,6 +284,7 @@ static void Cmd_setyawn(void);
 static void Cmd_setdamagetohealthdifference(void);
 static void Cmd_scaledamagebyhealthratio(void);
 static void Cmd_scaleDamageByTargetHealthRatio(void);
+static void Cmd_scaleGyroBallDamage(void);
 static void Cmd_tryswapabilities(void);
 static void Cmd_tryimprison(void);
 static void Cmd_trysetgrudge(void);
@@ -568,7 +570,8 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_tryGiveAquaRing,                         //0xF9
     Cmd_doubleDamageDealtIfTargetAtHalfHealth,   //0xFA
     Cmd_tryCaptivating,                          //0xFB
-    Cmd_scaleDamageByTargetHealthRatio           //0xFC
+    Cmd_scaleDamageByTargetHealthRatio,          //0xFC
+    Cmd_scaleGyroBallDamage,                     //0xFD
 };
 
 struct StatFractions
@@ -9105,6 +9108,64 @@ static void Cmd_scaleDamageByTargetHealthRatio(void)
         gDynamicBasePower = power + 1;
     }
     gBattlescriptCurrInstr++;
+}
+
+static void Cmd_scaleGyroBallDamage(void)
+{
+    u8 power = 0;
+    if (gDynamicBasePower == 0)
+    {
+        u32 attackerSpeed = getEffectiveSpeed(gBattlerAttacker);
+        if (attackerSpeed == 0)
+            attackerSpeed = 1;
+        power = getEffectiveSpeed(gBattlerTarget) * 25 / attackerSpeed;
+        if (++power > 150)
+            power = 150;
+        gDynamicBasePower = power;
+    }
+    gBattlescriptCurrInstr++;
+}
+
+static u32 getEffectiveSpeed(u8 battler)
+{
+    u8 speedMultiplier = 0;
+    u8 holdEffect = 0;
+    u8 holdEffectParam = 0;
+    u32 speed = 0;
+    if (WEATHER_HAS_EFFECT)
+    {
+        if ((gBattleMons[battler].ability == ABILITY_SWIFT_SWIM && gBattleWeather & B_WEATHER_RAIN)
+                    || (gBattleMons[battler].ability == ABILITY_CHLOROPHYLL && gBattleWeather & B_WEATHER_SUN))
+            speedMultiplier = 2;
+        else
+            speedMultiplier = 1;
+    }
+
+    speed = (gBattleMons[battler].speed * speedMultiplier)
+            * (gStatStageRatios[gBattleMons[battler].statStages[STAT_SPEED]][0])
+            / (gStatStageRatios[gBattleMons[battler].statStages[STAT_SPEED]][1]);
+
+    if (gBattleMons[battler].item == ITEM_ENIGMA_BERRY)
+    {
+        holdEffect = gEnigmaBerries[battler].holdEffect;
+        holdEffectParam = gEnigmaBerries[battler].holdEffectParam;
+    }
+    else
+    {
+        holdEffect = ItemId_GetHoldEffect(gBattleMons[battler].item);
+        holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler].item);
+    }
+    // badge boost
+    if (!(gBattleTypeFlags & BATTLE_TYPE_LINK)
+     && FlagGet(FLAG_BADGE03_GET)
+     && GetBattlerSide(battler) == B_SIDE_PLAYER)
+        speed = (speed * 110) / 100;
+    if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
+        speed /= 2;
+    if (gBattleMons[battler].status1 & STATUS1_PARALYSIS)
+        speed /= 4;
+
+    return speed;
 }
 
 // Skill Swap

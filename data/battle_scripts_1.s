@@ -251,6 +251,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectSpecialAttackUpHit     @ EFFECT_SPECIAL_ATTACK_UP_HIT
 	.4byte BattleScript_EffectCloseCombat            @ EFFECT_CLOSE_COMBAT
 	.4byte BattleScript_EffectCrushGrip              @ EFFECT_CRUSH_GRIP
+	.4byte BattleScript_EffectGyroBall               @ EFFECT_GYRO_BALL
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -2660,6 +2661,10 @@ BattleScript_EffectEruption::
 
 BattleScript_EffectCrushGrip::
 	scaleDamageByTargetHealthRatio
+	goto BattleScript_EffectHit
+
+BattleScript_EffectGyroBall::
+	scaleGyroBallDamage
 	goto BattleScript_EffectHit
 
 BattleScript_EffectSkillSwap::
