@@ -420,5 +420,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_BRINE]         = _("BRINE"),
     [MOVE_CAPTIVATE]     = _("CAPTIVATE"),
     [MOVE_CHARGE_BEAM]   = _("CHARGE BEAM"),
-    [MOVE_CLOSE_COMBAT]  = _("CLOSE COMBAT")
+    [MOVE_CLOSE_COMBAT]  = _("CLOSE COMBAT"),
+    [MOVE_CROSS_POISON]  = _("CROSS POISON")
 };

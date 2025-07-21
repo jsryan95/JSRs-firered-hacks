@@ -439,6 +439,7 @@ gBattleAnims_Moves::
     .4byte Move_CAPTIVATE
     .4byte Move_CHARGE_BEAM
     .4byte Move_CLOSE_COMBAT
+    .4byte Move_CROSS_POISON
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -7724,6 +7725,7 @@ Move_IRON_TAIL:
 	end
 
 Move_POISON_TAIL:
+Move_CROSS_POISON:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	loopsewithpan SE_M_HARDEN, SOUND_PAN_ATTACKER, 28, 2
