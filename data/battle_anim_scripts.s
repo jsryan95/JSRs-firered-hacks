@@ -442,6 +442,54 @@ gBattleAnims_Moves::
     .4byte Move_CROSS_POISON
     .4byte Move_CRUSH_GRIP
     .4byte Move_WRING_OUT
+    @ space for generation 4 moves
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	.4byte Move_NONE
+	@ new moves
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
