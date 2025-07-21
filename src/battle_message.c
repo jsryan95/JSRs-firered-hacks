@@ -143,6 +143,7 @@ static const u8 sText_PkmnSprangUp[] = _("{B_ATK_NAME_WITH_PREFIX} sprang up!");
 static const u8 sText_PkmnSqueezedByBind[] = _("{B_DEF_NAME_WITH_PREFIX} was squeezed by\n{B_ATK_NAME_WITH_PREFIX}'s BIND!");
 static const u8 sText_PkmnTrappedInVortex[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped\nin the vortex!");
 static const u8 sText_PkmnTrappedBySandTomb[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped\nby SAND TOMB!");
+static const u8 sText_PkmnTrappedByShadowBind[] = _("{B_DEF_NAME_WITH_PREFIX} was trapped by\n{B_ATK_NAME_WITH_PREFIX}'s SHADOW BIND!");
 static const u8 sText_PkmnWrappedBy[] = _("{B_DEF_NAME_WITH_PREFIX} was WRAPPED by\n{B_ATK_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnClamped[] = _("{B_ATK_NAME_WITH_PREFIX} CLAMPED\n{B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnHurtBy[] = _("{B_ATK_NAME_WITH_PREFIX} is hurt\nby {B_BUFF1}!");
@@ -893,6 +894,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_TRAINER1MON1AND2COMEBACK - BATTLESTRINGS_TABLE_START]      = sText_Trainer1RecallBoth,
     [STRINGID_PKMNVEILOFWATER - BATTLESTRINGS_TABLE_START]               = sText_PkmnVeilOfWater,
     [STRINGID_PKMNAQUARINGHEALED - BATTLESTRINGS_TABLE_START]            = sText_PkmnAquaRingHealed,
+    [STRINGID_PKMNTRAPPEDBYSHADOWBIND - BATTLESTRINGS_TABLE_START]       = sText_PkmnTrappedByShadowBind,
 };
 
 const u16 gMissStringIds[] =
@@ -1050,7 +1052,9 @@ const u16 gWrappedStringIds[] =
     STRINGID_PKMNTRAPPEDINVORTEX,  // MOVE_FIRE_SPIN
     STRINGID_PKMNCLAMPED,          // MOVE_CLAMP
     STRINGID_PKMNTRAPPEDINVORTEX,  // MOVE_WHIRLPOOL
-    STRINGID_PKMNTRAPPEDBYSANDTOMB // MOVE_SAND_TOMB
+    STRINGID_PKMNTRAPPEDBYSANDTOMB, // MOVE_SAND_TOMB
+    STRINGID_PKMNTRAPPEDINVORTEX,   // MAGMA STORM
+    STRINGID_PKMNTRAPPEDBYSHADOWBIND // SHADOW BIND
 };
 
 const u16 gMistUsedStringIds[] =
@@ -1272,6 +1276,8 @@ const u16 gTrappingMoves[NUM_TRAPPING_MOVES + 1] =
     MOVE_CLAMP,
     MOVE_WHIRLPOOL,
     MOVE_SAND_TOMB,
+    MOVE_MAGMA_STORM,
+    MOVE_SHADOW_BIND,
     0xFFFF // Never read
 };
 

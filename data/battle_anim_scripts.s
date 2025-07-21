@@ -445,6 +445,7 @@ gBattleAnims_Moves::
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
+    .4byte Move_SHADOW_BIND
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -2319,6 +2320,8 @@ Move_LOCK_ON:
 	end
 
 Move_MEAN_LOOK:
+Move_SHADOW_BIND:
+Status_ShadowBind:
 	loadspritegfx ANIM_TAG_EYE
 	monbg ANIM_DEF_PARTNER
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
@@ -10941,6 +10944,7 @@ General_TurnTrap:
 	jumpargeq 0, TRAP_ANIM_WHIRLPOOL, Status_Whirlpool
 	jumpargeq 0, TRAP_ANIM_CLAMP,     Status_Clamp
 	jumpargeq 0, TRAP_ANIM_SAND_TOMB, Status_SandTomb
+	jumpargeq 0, TRAP_ANIM_SHADOW_BIND, Status_ShadowBind
 	goto Status_BindWrap
 
 Status_BindWrap:

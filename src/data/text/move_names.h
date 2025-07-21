@@ -423,5 +423,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_CLOSE_COMBAT]  = _("CLOSE COMBAT"),
     [MOVE_CROSS_POISON]  = _("CROSS POISON"),
     [MOVE_CRUSH_GRIP]    = _("CRUSH GRIP"),
-    [MOVE_WRING_OUT]     = _("WRING OUT")
+    [MOVE_WRING_OUT]     = _("WRING OUT"),
+    [MOVE_SHADOW_BIND]   = _("SHADOW BIND")
 };
