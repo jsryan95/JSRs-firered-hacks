@@ -1283,6 +1283,15 @@ static void ModulateDmgByType(u8 multiplier)
     }
 }
 
+static void ModulateDmgForType(s32 typeMatchupRow)
+{
+    if (gBattleMoves[gCurrentMove].effect == EFFECT_MAGNET_SHOCK
+                    && TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_STEEL)
+        ModulateDmgByType(TYPE_MUL_SUPER_EFFECTIVE);
+    else
+        ModulateDmgByType(TYPE_EFFECT_MULTIPLIER(typeMatchupRow));
+}
+
 static void Cmd_typecalc(void)
 {
     s32 i = 0;
@@ -1314,11 +1323,6 @@ static void Cmd_typecalc(void)
     }
     else
     {
-        if (gBattleMoves[gCurrentMove].effect == EFFECT_MAGNET_SHOCK
-                && (gBattleMons[gBattlerTarget].type1 == TYPE_STEEL || gBattleMons[gBattlerTarget].type2 == TYPE_STEEL))
-        {
-            ModulateDmgByType(TYPE_MUL_SUPER_EFFECTIVE);
-        }
         while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
         {
             if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
@@ -1332,11 +1336,10 @@ static void Cmd_typecalc(void)
             {
                 // check type1
                 if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[gBattlerTarget].type1)
-                    ModulateDmgByType(TYPE_EFFECT_MULTIPLIER(i));
+                    ModulateDmgForType(i);
                 // check type2
-                if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[gBattlerTarget].type2 &&
-                    gBattleMons[gBattlerTarget].type1 != gBattleMons[gBattlerTarget].type2)
-                    ModulateDmgByType(TYPE_EFFECT_MULTIPLIER(i));
+                else if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[gBattlerTarget].type2)
+                    ModulateDmgForType(i);
             }
             i += 3;
         }

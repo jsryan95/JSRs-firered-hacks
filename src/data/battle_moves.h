@@ -4988,7 +4988,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_MAGNET_SHOCK,
         .power = 60,
-        .type = TYPE_ELECTRIC,
+        .type = TYPE_STEEL,
         .category = CATEGORY_SPECIAL,
         .accuracy = 100,
         .pp = 10,
