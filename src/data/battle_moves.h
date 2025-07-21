@@ -5879,4 +5879,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
+
+    [MOVE_CHARGE_BEAM] =
+    {
+        .effect = EFFECT_SPECIAL_ATTACK_UP_HIT,
+        .power = 50,
+        .type = TYPE_ELECTRIC,
+        .category = CATEGORY_SPECIAL,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 70,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_KINGS_ROCK_AFFECTED | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+    },
 };

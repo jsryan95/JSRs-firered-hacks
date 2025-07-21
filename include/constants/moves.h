@@ -420,11 +420,12 @@
 #define MOVE_AQUA_RING 414
 #define MOVE_BRINE 415
 #define MOVE_CAPTIVATE 416
+#define MOVE_CHARGE_BEAM 417
 
-// custom moves
-#define MOVE_MAGNET_SHOCK 417
-#define MOVE_TIDAL_CRASH 418
-#define MOVE_SAND_BLASTER 419
+// new moves
+#define MOVE_MAGNET_SHOCK 418
+#define MOVE_TIDAL_CRASH 419
+#define MOVE_SAND_BLASTER 420
 
 #define MOVES_COUNT 500
 

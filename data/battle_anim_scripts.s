@@ -437,6 +437,7 @@ gBattleAnims_Moves::
     .4byte Move_AQUA_RING
     .4byte Move_BRINE
     .4byte Move_CAPTIVATE
+    .4byte Move_CHARGE_BEAM
     .4byte Move_MAGNET_SHOCK
     .4byte Move_TIDAL_CRASH
     .4byte Move_SAND_BLASTER
@@ -4823,6 +4824,7 @@ Move_DRAGON_DANCE:
 
 Move_SHOCK_WAVE:
 Move_DISCHARGE:
+Move_CHARGE_BEAM:
 	loadspritegfx ANIM_TAG_ELECTRIC_ORBS
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
 	loadspritegfx ANIM_TAG_SPARK

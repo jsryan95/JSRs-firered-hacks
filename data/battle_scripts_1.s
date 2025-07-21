@@ -248,6 +248,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectAquaRing               @ EFFECT_AQUA_RING
 	.4byte BattleScript_EffectBrine                  @ EFFECT_BRINE
 	.4byte BattleScript_EffectCaptivate              @ EFFECT_CAPTIVATE
+	.4byte BattleScript_EffectSpecialAttackUpHit     @ EFFECT_SPECIAL_ATTACK_UP_HIT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1902,6 +1903,10 @@ BattleScript_EffectDefenseUpHit::
 
 BattleScript_EffectAttackUpHit::
 	setmoveeffect MOVE_EFFECT_ATK_PLUS_1 | MOVE_EFFECT_AFFECTS_USER
+	goto BattleScript_EffectHit
+
+BattleScript_EffectSpecialAttackUpHit::
+	setmoveeffect MOVE_EFFECT_SP_ATK_PLUS_1 | MOVE_EFFECT_AFFECTS_USER
 	goto BattleScript_EffectHit
 
 BattleScript_EffectAllStatsUpHit::
