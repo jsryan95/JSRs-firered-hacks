@@ -1408,3 +1408,8 @@
 	.macro setMiracleEye
 	.byte 0xFE
 	.endm
+
+	.macro tryApplyGastroAcid param0:req
+	.byte 0xFF
+	.4byte \param0
+	.endm

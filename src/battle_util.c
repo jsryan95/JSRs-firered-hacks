@@ -79,7 +79,7 @@ void PressurePPLose(u8 target, u8 attacker, u16 move)
 {
     int moveIndex;
 
-    if (gBattleMons[target].ability != ABILITY_PRESSURE)
+    if (!hasActiveAbility(target, ABILITY_PRESSURE))
         return;
 
     for (moveIndex = 0; moveIndex < MAX_MON_MOVES; moveIndex++)
@@ -110,7 +110,7 @@ void PressurePPLoseOnUsingImprison(u8 attacker)
 
     for (i = 0; i < gBattlersCount; i++)
     {
-        if (atkSide != GetBattlerSide(i) && gBattleMons[i].ability == ABILITY_PRESSURE)
+        if (atkSide != GetBattlerSide(i) && hasActiveAbility(i, ABILITY_PRESSURE))
         {
             for (j = 0; j < MAX_MON_MOVES; j++)
             {
@@ -141,7 +141,7 @@ void PressurePPLoseOnUsingPerishSong(u8 attacker)
 
     for (i = 0; i < gBattlersCount; i++)
     {
-        if (gBattleMons[i].ability == ABILITY_PRESSURE && i != attacker)
+        if (hasActiveAbility(i, ABILITY_PRESSURE) && i != attacker)
         {
             for (j = 0; j < MAX_MON_MOVES; j++)
             {
@@ -922,7 +922,7 @@ u8 DoBattlerEndTurnEffects(void)
                     for (gBattlerAttacker = 0; gBattlerAttacker < gBattlersCount; gBattlerAttacker++)
                     {
                         if ((gBattleMons[gBattlerAttacker].status1 & STATUS1_SLEEP)
-                         && gBattleMons[gBattlerAttacker].ability != ABILITY_SOUNDPROOF)
+                         && !hasActiveAbility(gBattlerAttacker, ABILITY_SOUNDPROOF))
                         {
                             gBattleMons[gBattlerAttacker].status1 &= ~STATUS1_SLEEP;
                             gBattleMons[gBattlerAttacker].status2 &= ~STATUS2_NIGHTMARE;
@@ -1049,8 +1049,8 @@ u8 DoBattlerEndTurnEffects(void)
                 {
                     gstatuses4[gActiveBattler] -= STATUS4_YAWN_TURN(1);
                     if (!(gstatuses4[gActiveBattler] & STATUS4_YAWN) && !(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
-                     && gBattleMons[gActiveBattler].ability != ABILITY_VITAL_SPIRIT
-                     && gBattleMons[gActiveBattler].ability != ABILITY_INSOMNIA && !UproarWakeUpCheck(gActiveBattler))
+                     && !hasActiveAbility(gBattlerAttacker, ABILITY_VITAL_SPIRIT)
+                     && !hasActiveAbility(gBattlerAttacker, ABILITY_INSOMNIA) && !UproarWakeUpCheck(gActiveBattler))
                     {
                         CancelMultiTurnMoves(gActiveBattler);
                         gBattleMons[gActiveBattler].status1 |= STATUS1_SLEEP_TURN((Random() & 3) + 2); // 2-5 turns of sleep
@@ -1293,7 +1293,7 @@ u8 AtkCanceller_UnableToUseMove(void)
                 else
                 {
                     u8 toSub;
-                    if (gBattleMons[gBattlerAttacker].ability == ABILITY_EARLY_BIRD)
+                    if (hasActiveAbility(gBattlerAttacker, ABILITY_EARLY_BIRD))
                         toSub = 2;
                     else
                         toSub = 1;
@@ -1350,7 +1350,7 @@ u8 AtkCanceller_UnableToUseMove(void)
             gBattleStruct->atkCancellerTracker++;
             break;
         case CANCELLER_TRUANT: // truant
-            if (gBattleMons[gBattlerAttacker].ability == ABILITY_TRUANT && gDisableStructs[gBattlerAttacker].truantCounter)
+            if (hasActiveAbility(gBattlerAttacker, ABILITY_TRUANT) && gDisableStructs[gBattlerAttacker].truantCounter)
             {
                 CancelMultiTurnMoves(gBattlerAttacker);
                 gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
@@ -1626,7 +1626,7 @@ enum
 u8 CastformDataTypeChange(u8 battler)
 {
     u8 formChange = 0;
-    if (gBattleMons[battler].species != SPECIES_CASTFORM || gBattleMons[battler].ability != ABILITY_FORECAST || gBattleMons[battler].hp == 0)
+    if (gBattleMons[battler].species != SPECIES_CASTFORM || !hasActiveAbility(battler, ABILITY_FORECAST) || gBattleMons[battler].hp == 0)
         return CASTFORM_NO_CHANGE;
     if (!WEATHER_HAS_EFFECT && !IS_BATTLER_OF_TYPE(battler, TYPE_NORMAL))
     {
@@ -2085,7 +2085,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && TARGET_TURN_DAMAGED
                  && gBattleMons[gBattlerTarget].hp != 0
                  && (Random() % 3) == 0
-                 && gBattleMons[gBattlerAttacker].ability != ABILITY_OBLIVIOUS
+                 && !hasActiveAbility(gBattlerAttacker, ABILITY_OBLIVIOUS)
                  && GetGenderFromSpeciesAndPersonality(speciesAtk, pidAtk) != GetGenderFromSpeciesAndPersonality(speciesDef, pidDef)
                  && !(gBattleMons[gBattlerAttacker].status2 & STATUS2_INFATUATION)
                  && GetGenderFromSpeciesAndPersonality(speciesAtk, pidAtk) != MON_GENDERLESS
@@ -2184,7 +2184,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         case ABILITYEFFECT_FORECAST: // 6
             for (battler = 0; battler < gBattlersCount; battler++)
             {
-                if (gBattleMons[battler].ability == ABILITY_FORECAST)
+                if (hasActiveAbility(battler, ABILITY_FORECAST))
                 {
                     effect = CastformDataTypeChange(battler);
                     if (effect != 0)
@@ -2232,7 +2232,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         case ABILITYEFFECT_INTIMIDATE1: // 9
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (gBattleMons[i].ability == ABILITY_INTIMIDATE && gstatuses4[i] & STATUS4_INTIMIDATE_POKES)
+                if (hasActiveAbility(i, ABILITY_INTIMIDATE) && gstatuses4[i] & STATUS4_INTIMIDATE_POKES)
                 {
                     gLastUsedAbility = ABILITY_INTIMIDATE;
                     gstatuses4[i] &= ~STATUS4_INTIMIDATE_POKES;
@@ -2246,7 +2246,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         case ABILITYEFFECT_TRACE: // 11
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (gBattleMons[i].ability == ABILITY_TRACE && (gstatuses4[i] & STATUS4_TRACE))
+                if (hasActiveAbility(i, ABILITY_TRACE) && (gstatuses4[i] & STATUS4_TRACE))
                 {
                     u8 target2;
                     side = (GetBattlerPosition(i) ^ BIT_SIDE) & BIT_SIDE; // side of the opposing pokemon
@@ -2303,7 +2303,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         case ABILITYEFFECT_INTIMIDATE2: // 10
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (gBattleMons[i].ability == ABILITY_INTIMIDATE && (gstatuses4[i] & STATUS4_INTIMIDATE_POKES))
+                if (hasActiveAbility(i, ABILITY_INTIMIDATE) && (gstatuses4[i] & STATUS4_INTIMIDATE_POKES))
                 {
                     gLastUsedAbility = ABILITY_INTIMIDATE;
                     gstatuses4[i] &= ~STATUS4_INTIMIDATE_POKES;
@@ -2319,7 +2319,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             side = GetBattlerSide(battler);
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (GetBattlerSide(i) != side && gBattleMons[i].ability == ability)
+                if (GetBattlerSide(i) != side && hasActiveAbility(i, ability))
                 {
                     gLastUsedAbility = ability;
                     effect = i + 1;
@@ -2330,7 +2330,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             side = GetBattlerSide(battler);
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (GetBattlerSide(i) == side && gBattleMons[i].ability == ability)
+                if (GetBattlerSide(i) == side && hasActiveAbility(i, ability))
                 {
                     gLastUsedAbility = ability;
                     effect = i + 1;
@@ -2357,7 +2357,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             default:
                 for (i = 0; i < gBattlersCount; i++)
                 {
-                    if (gBattleMons[i].ability == ability)
+                    if (hasActiveAbility(i, ability))
                     {
                         gLastUsedAbility = ability;
                         effect = i + 1;
@@ -2369,7 +2369,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         case ABILITYEFFECT_CHECK_ON_FIELD: // 19
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (gBattleMons[i].ability == ability && gBattleMons[i].hp != 0)
+                if (hasActiveAbility(i, ability) && gBattleMons[i].hp != 0)
                 {
                     gLastUsedAbility = ability;
                     effect = i + 1;
@@ -2380,7 +2380,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             side = GetBattlerSide(battler);
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (GetBattlerSide(i) != side && gBattleMons[i].ability == ability)
+                if (GetBattlerSide(i) != side && hasActiveAbility(i, ability))
                 {
                     gLastUsedAbility = ability;
                     effect = i + 1;
@@ -2391,7 +2391,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             {
                 for (i = 0; i < gBattlersCount; i++)
                 {
-                    if (gBattleMons[i].ability == ability && GetBattlerSide(i) == side && i != battler)
+                    if (hasActiveAbility(i, ability) && GetBattlerSide(i) == side && i != battler)
                     {
                         gLastUsedAbility = ability;
                         effect = i + 1;
@@ -2403,7 +2403,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             side = GetBattlerSide(battler);
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (GetBattlerSide(i) != side && gBattleMons[i].ability == ability)
+                if (GetBattlerSide(i) != side && hasActiveAbility(i, ability))
                 {
                     gLastUsedAbility = ability;
                     effect++;
@@ -2414,7 +2414,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             side = GetBattlerSide(battler);
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (GetBattlerSide(i) == side && gBattleMons[i].ability == ability)
+                if (GetBattlerSide(i) == side && hasActiveAbility(i, ability))
                 {
                     gLastUsedAbility = ability;
                     effect++;
@@ -2424,7 +2424,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         case ABILITYEFFECT_COUNT_ON_FIELD: // 18
             for (i = 0; i < gBattlersCount; i++)
             {
-                if (gBattleMons[i].ability == ability && i != battler)
+                if (hasActiveAbility(i, ability) && i != battler)
                 {
                     gLastUsedAbility = ability;
                     effect++;
@@ -3092,7 +3092,7 @@ u8 GetMoveTarget(u16 move, u8 setTarget)
             } while (targetBattler == gBattlerAttacker || side == GetBattlerSide(targetBattler) || gAbsentBattlerFlags & gBitTable[targetBattler]);
             if (gBattleMoves[move].type == TYPE_ELECTRIC
                 && AbilityBattleEffects(ABILITYEFFECT_COUNT_OTHER_SIDE, gBattlerAttacker, ABILITY_LIGHTNING_ROD, 0, 0)
-                && gBattleMons[targetBattler].ability != ABILITY_LIGHTNING_ROD)
+                && !hasActiveAbility(targetBattler, ABILITY_LIGHTNING_ROD))
             {
                 targetBattler ^= BIT_FLANK;
                 RecordAbilityBattle(targetBattler, gBattleMons[targetBattler].ability);
@@ -3231,7 +3231,9 @@ u8 IsMonDisobedient(void)
         obedienceLevel = gBattleMons[gBattlerAttacker].level - obedienceLevel;
 
         calc = (Random() & 255);
-        if (calc < obedienceLevel && !(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY) && gBattleMons[gBattlerAttacker].ability != ABILITY_VITAL_SPIRIT && gBattleMons[gBattlerAttacker].ability != ABILITY_INSOMNIA)
+        if (calc < obedienceLevel && !(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY)
+                && !hasActiveAbility(gBattlerAttacker, ABILITY_VITAL_SPIRIT)
+                && !hasActiveAbility(gBattlerAttacker, ABILITY_INSOMNIA))
         {
             // try putting asleep
             int i;
@@ -3264,4 +3266,9 @@ u8 IsMonDisobedient(void)
             return 1;
         }
     }
+}
+
+u8 hasActiveAbility(u8 battler, u8 ability)
+{
+    return gBattleMons[battler].ability == ability && !(gBattleMons[battler].status3 & STATUS3_GASTRO_ACID);
 }

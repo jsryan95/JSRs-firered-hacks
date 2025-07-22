@@ -431,12 +431,12 @@
 #define MOVE_MAGNET_BOMB 425
 #define MOVE_ROCK_WRECKER 426
 #define MOVE_NASTY_PLOT 427
+#define MOVE_GASTRO_ACID 428
 
 // generation 4 moves (not implemented)
-#define MOVE_EMBARGO 428
 #define MOVE_FEINT 429
 #define MOVE_FLING 430
-#define MOVE_GASTRO_ACID 431
+#define MOVE_EMBARGO 431
 #define MOVE_GRAVITY 432
 #define MOVE_GUARD_SWAP 433
 #define MOVE_ACUPRESSURE 434

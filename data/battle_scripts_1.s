@@ -254,6 +254,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectGyroBall               @ EFFECT_GYRO_BALL
 	.4byte BattleScript_EffectFlareBlitz             @ EFFECT_FLARE_BLITZ
 	.4byte BattleScript_EffectMiracleEye             @ EFFECT_MIRACLE_EYE
+	.4byte BattleScript_EffectGastroAcid             @ EFFECT_GASTRO_ACID
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -2690,6 +2691,18 @@ BattleScript_EffectSkillSwap::
 	attackanimation
 	waitanimation
 	printstring STRINGID_PKMNSWAPPEDABILITIES
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectGastroAcid::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	tryApplyGastroAcid BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNABILITYSUPPRESSED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 

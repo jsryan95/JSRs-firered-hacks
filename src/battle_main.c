@@ -3014,13 +3014,13 @@ u8 IsRunningFromBattleImpossible(void)
     gPotentialItemEffectBattler = gActiveBattler;
     if (holdEffect == HOLD_EFFECT_CAN_ALWAYS_RUN
      || (gBattleTypeFlags & BATTLE_TYPE_LINK)
-     || gBattleMons[gActiveBattler].ability == ABILITY_RUN_AWAY)
+     || hasActiveAbility(gActiveBattler, ABILITY_RUN_AWAY))
         return BATTLE_RUN_SUCCESS;
     side = GetBattlerSide(gActiveBattler);
     for (i = 0; i < gBattlersCount; i++)
     {
         if (side != GetBattlerSide(i)
-         && gBattleMons[i].ability == ABILITY_SHADOW_TAG)
+                && hasActiveAbility(i, ABILITY_SHADOW_TAG))
         {
             gBattleScripting.battler = i;
             gLastUsedAbility = gBattleMons[i].ability;
@@ -3028,9 +3028,9 @@ u8 IsRunningFromBattleImpossible(void)
             return BATTLE_RUN_FAILURE;
         }
         if (side != GetBattlerSide(i)
-         && gBattleMons[gActiveBattler].ability != ABILITY_LEVITATE
+         && !hasActiveAbility(gActiveBattler, ABILITY_LEVITATE)
          && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
-         && gBattleMons[i].ability == ABILITY_ARENA_TRAP)
+         && hasActiveAbility(i, ABILITY_ARENA_TRAP))
         {
             gBattleScripting.battler = i;
             gLastUsedAbility = gBattleMons[i].ability;
@@ -3204,7 +3204,7 @@ static void HandleTurnActionSelectionState(void)
                     else if ((i = ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_SHADOW_TAG))
                           || ((i = ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_ARENA_TRAP))
                               && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
-                              && gBattleMons[gActiveBattler].ability != ABILITY_LEVITATE)
+                              && !hasActiveAbility(gActiveBattler, ABILITY_LEVITATE))
                           || ((i = AbilityBattleEffects(ABILITYEFFECT_CHECK_FIELD_EXCEPT_BATTLER, gActiveBattler, ABILITY_MAGNET_PULL, 0, 0))
                               && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL)))
                     {
@@ -3410,13 +3410,13 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
 
     if (WEATHER_HAS_EFFECT)
     {
-        if ((gBattleMons[battler1].ability == ABILITY_SWIFT_SWIM && gBattleWeather & B_WEATHER_RAIN)
-            || (gBattleMons[battler1].ability == ABILITY_CHLOROPHYLL && gBattleWeather & B_WEATHER_SUN))
+        if ((hasActiveAbility(battler1, ABILITY_SWIFT_SWIM) && gBattleWeather & B_WEATHER_RAIN)
+            || (hasActiveAbility(battler1, ABILITY_CHLOROPHYLL) && gBattleWeather & B_WEATHER_SUN))
             speedMultiplierBattler1 = 2;
         else
             speedMultiplierBattler1 = 1;
-        if ((gBattleMons[battler2].ability == ABILITY_SWIFT_SWIM && gBattleWeather & B_WEATHER_RAIN)
-            || (gBattleMons[battler2].ability == ABILITY_CHLOROPHYLL && gBattleWeather & B_WEATHER_SUN))
+        if ((hasActiveAbility(battler2, ABILITY_SWIFT_SWIM) && gBattleWeather & B_WEATHER_RAIN)
+            || (hasActiveAbility(battler2, ABILITY_CHLOROPHYLL) && gBattleWeather & B_WEATHER_SUN))
             speedMultiplierBattler2 = 2;
         else
             speedMultiplierBattler2 = 1;
@@ -4037,14 +4037,15 @@ static void HandleAction_UseMove(void)
           && gSideTimers[side].followmeTimer == 0
           && (gBattleMoves[gCurrentMove].power != 0
              || gBattleMoves[gCurrentMove].target != MOVE_TARGET_USER)
-          && gBattleMons[*(gBattleStruct->moveTarget + gBattlerAttacker)].ability != ABILITY_LIGHTNING_ROD
+             && !hasActiveAbility(*(gBattleStruct->moveTarget + gBattlerAttacker), ABILITY_LIGHTNING_ROD)
+//          && gBattleMons[*(gBattleStruct->moveTarget + gBattlerAttacker)].ability != ABILITY_LIGHTNING_ROD
           && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
     {
         side = GetBattlerSide(gBattlerAttacker);
         for (gActiveBattler = 0; gActiveBattler < gBattlersCount; gActiveBattler++)
             if (side != GetBattlerSide(gActiveBattler)
              && *(gBattleStruct->moveTarget + gBattlerAttacker) != gActiveBattler
-             && gBattleMons[gActiveBattler].ability == ABILITY_LIGHTNING_ROD
+             && hasActiveAbility(gActiveBattler, ABILITY_LIGHTNING_ROD)
              && GetBattlerTurnOrderNum(gActiveBattler) < var)
                 var = GetBattlerTurnOrderNum(gActiveBattler);
         if (var == 4)
@@ -4245,7 +4246,7 @@ bool8 TryRunFromBattle(u8 battler)
         gProtectStructs[battler].fleeType = FLEE_ITEM;
         effect++;
     }
-    else if (gBattleMons[battler].ability == ABILITY_RUN_AWAY)
+    else if (hasActiveAbility(battler, ABILITY_RUN_AWAY))
     {
         gLastUsedAbility = ABILITY_RUN_AWAY;
         gProtectStructs[battler].fleeType = FLEE_ABILITY;

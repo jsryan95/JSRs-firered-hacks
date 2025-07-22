@@ -6117,4 +6117,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_SNATCH_AFFECTED,
     },
+
+    [MOVE_GASTRO_ACID] =
+    {
+        .effect = EFFECT_GASTRO_ACID,
+        .power = 0,
+        .type = TYPE_POISON,
+        .category = CATEGORY_STATUS,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAGIC_COAT_AFFECTED,
+    },
 };

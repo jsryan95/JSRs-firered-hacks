@@ -432,6 +432,7 @@ const u8 gMoveDescription_LowSweep[] = _("The user attacks\nthe foe's legs\nswif
 const u8 gMoveDescription_MagnetBomb[] = _("The user launches a\nsteel bomb that\nsticks to the foe.\nNever misses.");
 const u8 gMoveDescription_RockWrecker[] = _("The user launches a\nhuge boulder to\nattack. It must rest\non the next turn.");
 const u8 gMoveDescription_NastyPlot[] = _("The user stimulates\nits brain by thinking\nbad thoughts, sharply\nraising its SP. ATK.");
+const u8 gMoveDescription_GastroAcid[] = _("The user's stomach\nacids cover the foe,\neliminating the\neffect of its ability.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -870,4 +871,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_MAGNET_BOMB   - 1] = gMoveDescription_MagnetBomb,
     [MOVE_ROCK_WRECKER  - 1] = gMoveDescription_RockWrecker,
     [MOVE_NASTY_PLOT    - 1] = gMoveDescription_NastyPlot,
+    [MOVE_GASTRO_ACID   - 1] = gMoveDescription_GastroAcid
 };

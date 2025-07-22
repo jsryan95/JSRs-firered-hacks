@@ -449,8 +449,8 @@ gBattleAnims_Moves::
     .4byte Move_MAGNET_BOMB
     .4byte Move_ROCK_WRECKER
     .4byte Move_NASTY_PLOT
+    .4byte Move_GASTRO_ACID
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -6583,6 +6583,7 @@ SludgeBombProjectile:
 	return
 
 Move_ACID:
+Move_GASTRO_ACID:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	monbg ANIM_DEF_PARTNER
 	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, 0, 0

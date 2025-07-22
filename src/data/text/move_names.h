@@ -435,5 +435,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_LOW_SWEEP]     = _("LOW SWEEP"),
     [MOVE_MAGNET_BOMB]   = _("MAGNET BOMB"),
     [MOVE_ROCK_WRECKER]  = _("ROCK WRECKER"),
-    [MOVE_NASTY_PLOT]    = _("NASTY PLOT")
+    [MOVE_NASTY_PLOT]    = _("NASTY PLOT"),
+    [MOVE_GASTRO_ACID]   = _("GASTRO ACID")
 };
