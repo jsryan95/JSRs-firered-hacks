@@ -432,5 +432,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_FROST_BREATH]  = _("FROST BREATH"),
     [MOVE_STORM_THROW]   = _("STORM THROW"),
     [MOVE_BULLDOZE]      = _("BULLDOZE"),
-    [MOVE_LOW_SWEEP]     = _("LOW SWEEP")
+    [MOVE_LOW_SWEEP]     = _("LOW SWEEP"),
+    [MOVE_MAGNET_BOMB]   = _("MAGNET BOMB"),
+    [MOVE_ROCK_WRECKER]  = _("ROCK WRECKER")
 };

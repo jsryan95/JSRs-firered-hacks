@@ -428,10 +428,10 @@
 #define MOVE_GYRO_BALL 422
 #define MOVE_FLARE_BLITZ 423
 #define MOVE_MIRACLE_EYE 424
+#define MOVE_MAGNET_BOMB 425
+#define MOVE_ROCK_WRECKER 426
 
 // generation 4 moves (not implemented)
-#define MOVE_CHATTER 425
-#define MOVE_COPYCAT 426
 #define MOVE_DEFOG 427
 #define MOVE_EMBARGO 428
 #define MOVE_FEINT 429
@@ -471,8 +471,8 @@
 #define MOVE_TRUMP_CARD 463
 #define MOVE_WAKE_UP_SLAP 464
 #define MOVE_WORRY_SEED 465
-#define MOVE_MAGNET_BOMB 466
-#define MOVE_ROCK_WRECKER 467
+#define MOVE_CHATTER 466
+#define MOVE_COPYCAT 467
 
 // generation 5 moves
 #define MOVE_FROST_BREATH 468

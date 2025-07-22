@@ -446,9 +446,9 @@ gBattleAnims_Moves::
     .4byte Move_GYRO_BALL
     .4byte Move_FLARE_BLITZ
     .4byte Move_MIRACLE_EYE
+    .4byte Move_MAGNET_BOMB
+    .4byte Move_ROCK_WRECKER
     @ space for generation 4 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -758,6 +758,7 @@ Move_SLEEP_POWDER:
 
 Move_SWIFT:
 Move_AURA_SPHERE:
+Move_MAGNET_BOMB:
 	loadspritegfx ANIM_TAG_YELLOW_STAR
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -9937,6 +9938,7 @@ DiveAttackWaterDroplets:
 	return
 
 Move_ROCK_BLAST:
+Move_ROCK_WRECKER:
 	loadspritegfx ANIM_TAG_ROCKS
 	loadspritegfx ANIM_TAG_IMPACT
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 6

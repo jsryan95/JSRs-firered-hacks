@@ -429,6 +429,8 @@ const u8 gMoveDescription_FrostBreath[] = _("The user blows a\ncold breath on th
 const u8 gMoveDescription_StormThrow[] = _("The user strikes the\nfoe with a fierce\nblow. Always results\nin a critical hit.");
 const u8 gMoveDescription_Bulldoze[] = _("The user stomps and\nshakes the ground.\nThe SPEED of any hit\nPOKéMON is reduced.");
 const u8 gMoveDescription_LowSweep[] = _("The user attacks\nthe foe's legs\nswiftly, reducing\nits SPEED stat.");
+const u8 gMoveDescription_MagnetBomb[] = _("The user launches a\nsteel bomb that\nsticks to the foe.\nNever misses.");
+const u8 gMoveDescription_RockWrecker[] = _("The user launches a\nhuge boulder to\nattack. It must rest\non the next turn.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -864,4 +866,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_STORM_THROW   - 1] = gMoveDescription_StormThrow,
     [MOVE_BULLDOZE      - 1] = gMoveDescription_Bulldoze,
     [MOVE_LOW_SWEEP     - 1] = gMoveDescription_LowSweep,
+    [MOVE_MAGNET_BOMB   - 1] = gMoveDescription_MagnetBomb,
+    [MOVE_ROCK_WRECKER  - 1] = gMoveDescription_RockWrecker,
 };
