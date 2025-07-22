@@ -6005,4 +6005,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
+
+    [MOVE_MIRACLE_EYE] =
+    {
+        .effect = EFFECT_MIRACLE_EYE,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 40,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+    },
 };

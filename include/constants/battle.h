@@ -130,6 +130,8 @@
 #define STATUS2_DEFENSE_CURL          (1 << 30)
 #define STATUS2_TORMENT               (1 << 31)
 
+#define STATUS3_MIRACLE_EYE           (1 << 0)
+
 // Seems like per-battler statuses. Not quite sure how to categorize these
 #define STATUS4_LEECHSEED_BATTLER       (1 << 0 | 1 << 1) // The battler to receive HP from Leech Seed
 #define STATUS4_LEECHSEED               (1 << 2)

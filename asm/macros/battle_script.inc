@@ -1404,3 +1404,7 @@
 	.macro scaleGyroBallDamage
 	.byte 0xFD
 	.endm
+
+	.macro setMiracleEye
+	.byte 0xFE
+	.endm

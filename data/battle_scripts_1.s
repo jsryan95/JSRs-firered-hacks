@@ -253,6 +253,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCrushGrip              @ EFFECT_CRUSH_GRIP
 	.4byte BattleScript_EffectGyroBall               @ EFFECT_GYRO_BALL
 	.4byte BattleScript_EffectFlareBlitz             @ EFFECT_FLARE_BLITZ
+	.4byte BattleScript_EffectMiracleEye             @ EFFECT_MIRACLE_EYE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1646,6 +1647,18 @@ BattleScript_EffectForesight::
 	attackstring
 	ppreduce
 	setforesight
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNIDENTIFIED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectMiracleEye::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	setMiracleEye
 	attackanimation
 	waitanimation
 	printstring STRINGID_PKMNIDENTIFIED

@@ -240,6 +240,7 @@ static void Cmd_healpartystatus(void);
 static void Cmd_cursetarget(void);
 static void Cmd_trysetspikes(void);
 static void Cmd_setforesight(void);
+static void Cmd_setMiracleEye(void);
 static void Cmd_trysetperishsong(void);
 static void Cmd_rolloutdamagecalculation(void);
 static void Cmd_jumpifconfusedandstatmaxed(void);
@@ -572,6 +573,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_tryCaptivating,                          //0xFB
     Cmd_scaleDamageByTargetHealthRatio,          //0xFC
     Cmd_scaleGyroBallDamage,                     //0xFD
+    Cmd_setMiracleEye,                           //0xFE
 };
 
 struct StatFractions
@@ -1003,7 +1005,7 @@ static bool8 AccuracyCalcHelper(u16 move)
     gHitMarker &= ~HITMARKER_IGNORE_UNDERWATER;
 
     if ((WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN) && gBattleMoves[move].effect == EFFECT_THUNDER)
-     || (gBattleMoves[move].effect == EFFECT_ALWAYS_HIT || gBattleMoves[move].effect == EFFECT_VITAL_THROW))
+     || (gBattleMoves[move].effect == EFFECT_ALWAYS_HIT || gBattleMoves[move].effect == EFFECT_VITAL_THROW || gBattleMoves[move].effect == EFFECT_MIRACLE_EYE))
     {
         JumpIfMoveFailed(7, move);
         return TRUE;
@@ -1054,7 +1056,8 @@ static void Cmd_accuracycheck(void)
         if (AccuracyCalcHelper(move))
             return;
 
-        if (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
+        if (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT
+                || gBattleMons[gBattlerTarget].status3 & STATUS3_MIRACLE_EYE)
         {
             u8 acc = gBattleMons[gBattlerAttacker].statStages[STAT_ACC];
             buff = acc;
@@ -1291,6 +1294,10 @@ static void ModulateDmgForType(s32 typeMatchupRow)
     else if (TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_GHOST
                 && TYPE_EFFECT_MULTIPLIER(typeMatchupRow) == 0
                 && gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
+        ModulateDmgByType(TYPE_MUL_NORMAL);
+    else if (TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_DARK
+                && TYPE_EFFECT_MULTIPLIER(typeMatchupRow) == 0
+                && gBattleMons[gBattlerTarget].status3 & STATUS3_MIRACLE_EYE)
         ModulateDmgByType(TYPE_MUL_NORMAL);
     else
         ModulateDmgByType(TYPE_EFFECT_MULTIPLIER(typeMatchupRow));
@@ -4491,6 +4498,7 @@ static void Cmd_switchindataupdate(void)
             gBattleMons[gActiveBattler].statStages[i] = oldData.statStages[i];
         }
         gBattleMons[gActiveBattler].status2 = oldData.status2;
+        gBattleMons[gActiveBattler].status3 = oldData.status3;
     }
 
     SwitchInClearSetData();
@@ -8163,6 +8171,12 @@ static void Cmd_trysetspikes(void)
 static void Cmd_setforesight(void)
 {
     gBattleMons[gBattlerTarget].status2 |= STATUS2_FORESIGHT;
+    gBattlescriptCurrInstr++;
+}
+
+static void Cmd_setMiracleEye(void)
+{
+    gBattleMons[gBattlerTarget].status3 |= STATUS3_MIRACLE_EYE;
     gBattlescriptCurrInstr++;
 }
 

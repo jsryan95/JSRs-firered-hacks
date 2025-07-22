@@ -427,9 +427,9 @@
 #define MOVE_WRING_OUT 421
 #define MOVE_GYRO_BALL 422
 #define MOVE_FLARE_BLITZ 423
+#define MOVE_MIRACLE_EYE 424
 
 // generation 4 moves (not implemented)
-#define MOVE_BUG_BITE 424
 #define MOVE_CHATTER 425
 #define MOVE_COPYCAT 426
 #define MOVE_DEFOG 427
@@ -452,7 +452,7 @@
 #define MOVE_MAGNET_RISE 444
 #define MOVE_ME_FIRST 445
 #define MOVE_METAL_BURST 446
-#define MOVE_MIRACLE_EYE 447
+#define MOVE_BUG_BITE 447
 #define MOVE_NASTY_PLOT 448
 #define MOVE_NATURAL_GIFT 449
 #define MOVE_PLUCK 450

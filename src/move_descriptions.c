@@ -424,6 +424,7 @@ const u8 gMoveDescription_CrushGrip[] = _("This attack is more\npowerful the mor
 const u8 gMoveDescription_ShadowBind[] = _("Ghostly chains lash\nand bind the foe\nfor two to five\nturns.");
 const u8 gMoveDescription_GyroBall[] = _("A high-speed\nspinning tackle.\nPower increases when\nthe user is slower.");
 const u8 gMoveDescription_FlareBlitz[] = _("Charges recklessly\nwhile cloaked in fire.\nThe user also takes\nserious damage.");
+const u8 gMoveDescription_MiracleEye[] = _("Makes a DARK-type\nPOKéMON vulnerable\nto any type of move.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -854,4 +855,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_WATER_WHEEL   - 1] = gMoveDescription_RapidSpin,
     [MOVE_GYRO_BALL     - 1] = gMoveDescription_GyroBall,
     [MOVE_FLARE_BLITZ   - 1] = gMoveDescription_FlareBlitz,
+    [MOVE_MIRACLE_EYE   - 1] = gMoveDescription_MiracleEye,
 };

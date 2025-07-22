@@ -444,8 +444,8 @@ gBattleAnims_Moves::
     .4byte Move_WRING_OUT
     .4byte Move_GYRO_BALL
     .4byte Move_FLARE_BLITZ
+    .4byte Move_MIRACLE_EYE
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -2464,6 +2464,7 @@ Move_LOCK_ON:
 
 Move_MEAN_LOOK:
 Move_SHADOW_BIND:
+Move_MIRACLE_EYE:
 Status_ShadowBind:
 	loadspritegfx ANIM_TAG_EYE
 	monbg ANIM_DEF_PARTNER
