@@ -252,6 +252,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCloseCombat            @ EFFECT_CLOSE_COMBAT
 	.4byte BattleScript_EffectCrushGrip              @ EFFECT_CRUSH_GRIP
 	.4byte BattleScript_EffectGyroBall               @ EFFECT_GYRO_BALL
+	.4byte BattleScript_EffectFlareBlitz             @ EFFECT_FLARE_BLITZ
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1128,8 +1129,8 @@ BattleScript_EffectRecharge::
 	goto BattleScript_HitFromAtkString
 
 BattleScript_EffectZapCannon::
-        setmoveeffect MOVE_EFFECT_PARALYSIS
-        goto BattleScript_EffectAndRechargeHit
+    setmoveeffect MOVE_EFFECT_PARALYSIS
+    goto BattleScript_EffectAndRechargeHit
 
 BattleScript_EffectDynamicPunch::
     setmoveeffect MOVE_EFFECT_CONFUSION
@@ -2740,6 +2741,37 @@ BattleScript_EffectSecretPower::
 BattleScript_EffectDoubleEdge::
 	setmoveeffect MOVE_EFFECT_RECOIL_33 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
+
+BattleScript_EffectFlareBlitz::
+    setmoveeffect MOVE_EFFECT_BURN
+    goto BattleScript_EffectAndRecoil33Hit
+
+BattleScript_EffectAndRecoil33Hit::
+    attackcanceler
+    accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+    attackstring
+    ppreduce
+    critcalc
+    damagecalc
+    typecalc
+    adjustnormaldamage
+    attackanimation
+    waitanimation
+    effectivenesssound
+    hitanimation BS_TARGET
+    waitstate
+    healthbarupdate BS_TARGET
+    datahpupdate BS_TARGET
+    critmessage
+    waitmessage B_WAIT_TIME_LONG
+    resultmessage
+    waitmessage B_WAIT_TIME_LONG
+    seteffectwithchance
+    tryfaintmon BS_TARGET
+    setmoveeffect MOVE_EFFECT_RECOIL_33 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+    seteffectwithchance
+    moveendall
+    end
 
 BattleScript_EffectTeeterDance::
 	attackcanceler

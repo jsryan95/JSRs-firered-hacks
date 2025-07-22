@@ -443,8 +443,8 @@ gBattleAnims_Moves::
     .4byte Move_CRUSH_GRIP
     .4byte Move_WRING_OUT
     .4byte Move_GYRO_BALL
+    .4byte Move_FLARE_BLITZ
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -889,6 +889,7 @@ ScreechRing:
 	return
 
 Move_FLAME_WHEEL:
+Move_FLARE_BLITZ:
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	monbg ANIM_DEF_PARTNER
 	splitbgprio_foes ANIM_TARGET

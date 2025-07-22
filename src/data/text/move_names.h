@@ -426,5 +426,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_WRING_OUT]     = _("WRING OUT"),
     [MOVE_SHADOW_BIND]   = _("SHADOW BIND"),
     [MOVE_WATER_WHEEL]   = _("WATER WHEEL"),
-    [MOVE_GYRO_BALL]     = _("GYRO BALL")
+    [MOVE_GYRO_BALL]     = _("GYRO BALL"),
+    [MOVE_FLARE_BLITZ]   = _("FLARE BLITZ")
 };
