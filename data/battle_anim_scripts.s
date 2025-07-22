@@ -448,8 +448,8 @@ gBattleAnims_Moves::
     .4byte Move_MIRACLE_EYE
     .4byte Move_MAGNET_BOMB
     .4byte Move_ROCK_WRECKER
+    .4byte Move_NASTY_PLOT
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -4325,6 +4325,7 @@ Move_CAMOUFLAGE:
 	end
 
 Move_TAIL_GLOW:
+Move_NASTY_PLOT:
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
 	monbg ANIM_ATTACKER
 	setalpha 12, 8
