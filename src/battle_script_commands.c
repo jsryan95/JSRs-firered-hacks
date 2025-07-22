@@ -1286,8 +1286,12 @@ static void ModulateDmgByType(u8 multiplier)
 static void ModulateDmgForType(s32 typeMatchupRow)
 {
     if (gBattleMoves[gCurrentMove].effect == EFFECT_MAGNET_SHOCK
-                    && TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_STEEL)
+                && TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_STEEL)
         ModulateDmgByType(TYPE_MUL_SUPER_EFFECTIVE);
+    else if (TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_GHOST
+                && TYPE_EFFECT_MULTIPLIER(typeMatchupRow) == 0
+                && gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
+        ModulateDmgByType(TYPE_MUL_NORMAL);
     else
         ModulateDmgByType(TYPE_EFFECT_MULTIPLIER(typeMatchupRow));
 }
@@ -1325,14 +1329,7 @@ static void Cmd_typecalc(void)
     {
         while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
         {
-            if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
-            {
-                if (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
-                    break;
-                i += 3;
-                continue;
-            }
-            else if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
+            if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
             {
                 // check type1
                 if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[gBattlerTarget].type1)
@@ -1383,13 +1380,6 @@ static void CheckWonderGuardAndLevitate(void)
 
     while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
     {
-        if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
-        {
-            if (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
-                break;
-            i += 3;
-            continue;
-        }
         if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
         {
             // check no effect
@@ -1498,15 +1488,7 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
     {
         while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
         {
-            if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
-            {
-                if (gBattleMons[defender].status2 & STATUS2_FORESIGHT)
-                    break;
-                i += 3;
-                continue;
-            }
-
-            else if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
+            if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
             {
                 // check type1
                 if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[defender].type1)
@@ -1550,11 +1532,6 @@ u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
     {
         while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
         {
-            if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
-            {
-                i += 3;
-                continue;
-            }
             if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
             {
                 // check type1
@@ -4390,19 +4367,6 @@ static void Cmd_typecalc2(void)
     {
         while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
         {
-            if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
-            {
-                if (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
-                {
-                    break;
-                }
-                else
-                {
-                    i += 3;
-                    continue;
-                }
-            }
-
             if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
             {
                 // check type1
@@ -7808,7 +7772,6 @@ static void Cmd_settypetorandomresistance(void)
             switch (TYPE_EFFECT_ATK_TYPE(j))
             {
             case TYPE_ENDTABLE:
-            case TYPE_FORESIGHT:
                 break;
             default:
                 if (TYPE_EFFECT_ATK_TYPE(j) == gLastHitByType[gBattlerAttacker]

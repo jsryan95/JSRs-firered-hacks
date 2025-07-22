@@ -38,7 +38,6 @@ struct MultiBattlePokemonTx
 #define TYPE_MUL_SUPER_EFFECTIVE    20
 
 // special type table Ids
-#define TYPE_FORESIGHT  0xFE
 #define TYPE_ENDTABLE   0xFF
 
 // defines for the 'DoBounceEffect' function

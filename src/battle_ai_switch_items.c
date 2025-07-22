@@ -407,12 +407,7 @@ static void ModulateByTypeEffectiveness(u8 atkType, u8 defType1, u8 defType2, u8
 
     while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
     {
-        if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
-        {
-            i += 3;
-            continue;
-        }
-        else if (TYPE_EFFECT_ATK_TYPE(i) == atkType)
+        if (TYPE_EFFECT_ATK_TYPE(i) == atkType)
         {
             // Check type1.
             if (TYPE_EFFECT_DEF_TYPE(i) == defType1)
