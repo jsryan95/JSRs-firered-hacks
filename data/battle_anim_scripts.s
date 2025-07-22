@@ -375,6 +375,7 @@ gBattleAnims_Moves::
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
+	@ generation 4 moves
     .4byte Move_U_TURN
     .4byte Move_ICE_FANG
     .4byte Move_FIRE_FANG
@@ -489,9 +490,10 @@ gBattleAnims_Moves::
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
+	@ generation 5 moves
+	.4byte Move_FROST_BREATH
+	.4byte Move_STORM_THROW
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -2613,6 +2615,7 @@ BulbblebeamCreateBubbles:
 	return
 
 Move_ICY_WIND:
+Move_FROST_BREATH:
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	loadspritegfx ANIM_TAG_ICE_SPIKES
 	monbg ANIM_DEF_PARTNER
@@ -7221,6 +7224,7 @@ Move_COUNTER:
 	end
 
 Move_VITAL_THROW:
+Move_STORM_THROW:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
