@@ -1656,7 +1656,7 @@ BattleScript_EffectForesight::
 
 BattleScript_EffectMiracleEye::
 	attackcanceler
-	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	accuracycheck BattleScript_PrintMoveMissed, NO_ACC_CALC_CHECK_LOCK_ON
 	attackstring
 	ppreduce
 	setMiracleEye
