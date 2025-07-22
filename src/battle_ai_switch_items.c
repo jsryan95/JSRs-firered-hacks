@@ -16,7 +16,7 @@ static bool8 ShouldUseItem(void);
 
 static bool8 ShouldSwitchIfPerishSong(void)
 {
-    if (gStatuses3[gActiveBattler] & STATUS3_PERISH_SONG
+    if (gstatuses4[gActiveBattler] & STATUS4_PERISH_SONG
      && gDisableStructs[gActiveBattler].perishSongTimer == 0)
     {
         *(gBattleStruct->AI_monToSwitchIntoId + (GetBattlerPosition(gActiveBattler) >> 1)) = PARTY_SIZE;
@@ -306,7 +306,7 @@ static bool8 ShouldSwitch(void)
     s32 availableToSwitch;
 
     if ((gBattleMons[gActiveBattler].status2 & (STATUS2_WRAPPED | STATUS2_ESCAPE_PREVENTION))
-     || (gStatuses3[gActiveBattler] & STATUS3_ROOTED)
+     || (gstatuses4[gActiveBattler] & STATUS4_ROOTED)
      || AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, gActiveBattler, ABILITY_SHADOW_TAG, 0, 0)
      || AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, gActiveBattler, ABILITY_ARENA_TRAP, 0, 0))
         return FALSE; // misses the flying or levitate check

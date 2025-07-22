@@ -84,14 +84,14 @@
 	.4byte \ptr
 	.endm
 
-	.macro if_status3 battler:req, status:req, ptr:req
+	.macro if_status4 battler:req, status:req, ptr:req
 	.byte 0x0d
 	.byte \battler
 	.4byte \status
 	.4byte \ptr
 	.endm
 
-	.macro if_not_status3 battler:req, status:req, ptr:req
+	.macro if_not_status4 battler:req, status:req, ptr:req
 	.byte 0x0e
 	.byte \battler
 	.4byte \status

@@ -94,7 +94,7 @@ static void Cmd_jumpifstatus2(void);
 static void Cmd_jumpifability(void);
 static void Cmd_jumpifsideaffecting(void);
 static void Cmd_jumpifstat(void);
-static void Cmd_jumpifstatus3condition(void);
+static void Cmd_jumpifstatus4condition(void);
 static void Cmd_jumpiftype(void);
 static void Cmd_getexp(void);
 static void Cmd_checkteamslost(void);
@@ -351,7 +351,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_jumpifability,                           //0x1E
     Cmd_jumpifsideaffecting,                     //0x1F
     Cmd_jumpifstat,                              //0x20
-    Cmd_jumpifstatus3condition,                  //0x21
+    Cmd_jumpifstatus4condition,                  //0x21
     Cmd_jumpiftype,                              //0x22
     Cmd_getexp,                                  //0x23
     Cmd_checkteamslost,                          //0x24
@@ -969,13 +969,13 @@ static bool8 JumpIfMoveAffectedByProtect(u16 move)
 
 static bool8 AccuracyCalcHelper(u16 move)
 {
-    if (gStatuses3[gBattlerTarget] & STATUS3_ALWAYS_HITS && gDisableStructs[gBattlerTarget].battlerWithSureHit == gBattlerAttacker)
+    if (gstatuses4[gBattlerTarget] & STATUS4_ALWAYS_HITS && gDisableStructs[gBattlerTarget].battlerWithSureHit == gBattlerAttacker)
     {
         JumpIfMoveFailed(7, move);
         return TRUE;
     }
 
-    if (!(gHitMarker & HITMARKER_IGNORE_ON_AIR) && gStatuses3[gBattlerTarget] & STATUS3_ON_AIR)
+    if (!(gHitMarker & HITMARKER_IGNORE_ON_AIR) && gstatuses4[gBattlerTarget] & STATUS4_ON_AIR)
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         JumpIfMoveFailed(7, move);
@@ -984,7 +984,7 @@ static bool8 AccuracyCalcHelper(u16 move)
 
     gHitMarker &= ~HITMARKER_IGNORE_ON_AIR;
 
-    if (!(gHitMarker & HITMARKER_IGNORE_UNDERGROUND) && gStatuses3[gBattlerTarget] & STATUS3_UNDERGROUND)
+    if (!(gHitMarker & HITMARKER_IGNORE_UNDERGROUND) && gstatuses4[gBattlerTarget] & STATUS4_UNDERGROUND)
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         JumpIfMoveFailed(7, move);
@@ -993,7 +993,7 @@ static bool8 AccuracyCalcHelper(u16 move)
 
     gHitMarker &= ~HITMARKER_IGNORE_UNDERGROUND;
 
-    if (!(gHitMarker & HITMARKER_IGNORE_UNDERWATER) && gStatuses3[gBattlerTarget] & STATUS3_UNDERWATER)
+    if (!(gHitMarker & HITMARKER_IGNORE_UNDERWATER) && gstatuses4[gBattlerTarget] & STATUS4_UNDERWATER)
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         JumpIfMoveFailed(7, move);
@@ -1031,9 +1031,9 @@ static void Cmd_accuracycheck(void)
     }
     if (move == NO_ACC_CALC || move == NO_ACC_CALC_CHECK_LOCK_ON)
     {
-        if (gStatuses3[gBattlerTarget] & STATUS3_ALWAYS_HITS && move == NO_ACC_CALC_CHECK_LOCK_ON && gDisableStructs[gBattlerTarget].battlerWithSureHit == gBattlerAttacker)
+        if (gstatuses4[gBattlerTarget] & STATUS4_ALWAYS_HITS && move == NO_ACC_CALC_CHECK_LOCK_ON && gDisableStructs[gBattlerTarget].battlerWithSureHit == gBattlerAttacker)
             gBattlescriptCurrInstr += 7;
-        else if (gStatuses3[gBattlerTarget] & (STATUS3_ON_AIR | STATUS3_UNDERGROUND | STATUS3_UNDERWATER))
+        else if (gstatuses4[gBattlerTarget] & (STATUS4_ON_AIR | STATUS4_UNDERGROUND | STATUS4_UNDERWATER))
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         else if (!JumpIfMoveAffectedByProtect(0))
             gBattlescriptCurrInstr += 7;
@@ -1206,7 +1206,7 @@ static void Cmd_critcalc(void)
         critChance = ARRAY_COUNT(sCriticalHitChance) - 1;
 
     if ((gBattleMons[gBattlerTarget].ability != ABILITY_BATTLE_ARMOR && gBattleMons[gBattlerTarget].ability != ABILITY_SHELL_ARMOR)
-     && !(gStatuses3[gBattlerAttacker] & STATUS3_CANT_SCORE_A_CRIT)
+     && !(gstatuses4[gBattlerAttacker] & STATUS4_CANT_SCORE_A_CRIT)
      && !(gBattleTypeFlags & BATTLE_TYPE_OLD_MAN_TUTORIAL)
      && (gBattleMoves[gCurrentMove].effect == EFFECT_ALWAYS_CRIT || !(Random() % sCriticalHitChance[critChance]))
      && (!(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE) || BtlCtrl_OakOldMan_TestState2Flag(1))
@@ -1226,7 +1226,7 @@ static void Cmd_damagecalc(void)
                                             gBattleStruct->dynamicMoveType, gBattlerAttacker, gBattlerTarget);
     gBattleMoveDamage = gBattleMoveDamage * gCritMultiplier * gBattleScripting.dmgMultiplier;
 
-    if (gStatuses3[gBattlerAttacker] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
+    if (gstatuses4[gBattlerAttacker] & STATUS4_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
         gBattleMoveDamage *= 2;
     if (gProtectStructs[gBattlerAttacker].helpingHand)
         gBattleMoveDamage = gBattleMoveDamage * 15 / 10;
@@ -1243,7 +1243,7 @@ void AI_CalcDmg(u8 attacker, u8 defender)
     gDynamicBasePower = 0;
     gBattleMoveDamage = gBattleMoveDamage * gCritMultiplier * gBattleScripting.dmgMultiplier;
 
-    if (gStatuses3[attacker] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
+    if (gstatuses4[attacker] & STATUS4_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
         gBattleMoveDamage *= 2;
     if (gProtectStructs[attacker].helpingHand)
         gBattleMoveDamage = gBattleMoveDamage * 15 / 10;
@@ -2897,7 +2897,7 @@ static void Cmd_tryfaintmon(void)
                 gBattleMoveDamage = gBattleMons[battlerId].hp;
                 gBattlescriptCurrInstr = BattleScript_DestinyBondTakesLife;
             }
-            if ((gStatuses3[gBattlerTarget] & STATUS3_GRUDGE)
+            if ((gstatuses4[gBattlerTarget] & STATUS4_GRUDGE)
              && !(gHitMarker & HITMARKER_GRUDGE)
              && GetBattlerSide(gBattlerAttacker) != GetBattlerSide(gBattlerTarget)
              && gBattleMons[gBattlerAttacker].hp != 0
@@ -3079,7 +3079,7 @@ static void Cmd_jumpifstat(void)
         gBattlescriptCurrInstr += 9;
 }
 
-static void Cmd_jumpifstatus3condition(void)
+static void Cmd_jumpifstatus4condition(void)
 {
     u32 status;
     const u8 *jumpPtr;
@@ -3090,14 +3090,14 @@ static void Cmd_jumpifstatus3condition(void)
 
     if (gBattlescriptCurrInstr[6])
     {
-        if ((gStatuses3[gActiveBattler] & status) != 0)
+        if ((gstatuses4[gActiveBattler] & status) != 0)
             gBattlescriptCurrInstr += 11;
         else
             gBattlescriptCurrInstr = jumpPtr;
     }
     else
     {
-        if ((gStatuses3[gActiveBattler] & status) != 0)
+        if ((gstatuses4[gActiveBattler] & status) != 0)
             gBattlescriptCurrInstr = jumpPtr;
         else
             gBattlescriptCurrInstr += 11;
@@ -3882,7 +3882,7 @@ static void Cmd_playanimation(void)
         MarkBattlerForControllerExec(gActiveBattler);
         gBattlescriptCurrInstr += 7;
     }
-    else if (gStatuses3[gActiveBattler] & STATUS3_SEMI_INVULNERABLE)
+    else if (gstatuses4[gActiveBattler] & STATUS4_SEMI_INVULNERABLE)
     {
         gBattlescriptCurrInstr += 7;
     }
@@ -3925,7 +3925,7 @@ static void Cmd_playanimation_var(void)
         MarkBattlerForControllerExec(gActiveBattler);
         gBattlescriptCurrInstr += 10;
     }
-    else if (gStatuses3[gActiveBattler] & STATUS3_SEMI_INVULNERABLE)
+    else if (gstatuses4[gActiveBattler] & STATUS4_SEMI_INVULNERABLE)
     {
         gBattlescriptCurrInstr += 10;
     }
@@ -4191,7 +4191,7 @@ static void Cmd_moveend(void)
             gBattleScripting.moveendState++;
             break;
         case MOVEEND_ATTACKER_INVISIBLE: // make attacker sprite invisible
-            if (gStatuses3[gBattlerAttacker] & (STATUS3_SEMI_INVULNERABLE)
+            if (gstatuses4[gBattlerAttacker] & (STATUS4_SEMI_INVULNERABLE)
                 && gHitMarker & HITMARKER_NO_ANIMATIONS)
             {
                 gActiveBattler = gBattlerAttacker;
@@ -4204,13 +4204,13 @@ static void Cmd_moveend(void)
             break;
         case MOVEEND_ATTACKER_VISIBLE: // make attacker sprite visible
             if (gMoveResultFlags & MOVE_RESULT_NO_EFFECT
-                || !(gStatuses3[gBattlerAttacker] & (STATUS3_SEMI_INVULNERABLE))
+                || !(gstatuses4[gBattlerAttacker] & (STATUS4_SEMI_INVULNERABLE))
                 || WasUnableToUseMove(gBattlerAttacker))
             {
                 gActiveBattler = gBattlerAttacker;
                 BtlController_EmitSpriteInvisibility(BUFFER_A, FALSE);
                 MarkBattlerForControllerExec(gActiveBattler);
-                gStatuses3[gBattlerAttacker] &= ~STATUS3_SEMI_INVULNERABLE;
+                gstatuses4[gBattlerAttacker] &= ~STATUS4_SEMI_INVULNERABLE;
                 gSpecialStatuses[gBattlerAttacker].restoredBattlerSprite = 1;
                 gBattleScripting.moveendState++;
                 return;
@@ -4219,12 +4219,12 @@ static void Cmd_moveend(void)
             break;
         case MOVEEND_TARGET_VISIBLE: // make target sprite visible
             if (!gSpecialStatuses[gBattlerTarget].restoredBattlerSprite && gBattlerTarget < gBattlersCount
-                && !(gStatuses3[gBattlerTarget] & STATUS3_SEMI_INVULNERABLE))
+                && !(gstatuses4[gBattlerTarget] & STATUS4_SEMI_INVULNERABLE))
             {
                 gActiveBattler = gBattlerTarget;
                 BtlController_EmitSpriteInvisibility(BUFFER_A, FALSE);
                 MarkBattlerForControllerExec(gActiveBattler);
-                gStatuses3[gBattlerTarget] &= ~STATUS3_SEMI_INVULNERABLE;
+                gstatuses4[gBattlerTarget] &= ~STATUS4_SEMI_INVULNERABLE;
                 gBattleScripting.moveendState++;
                 return;
             }
@@ -4535,7 +4535,7 @@ static void Cmd_jumpifcantswitch(void)
     gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1] & ~SWITCH_IGNORE_ESCAPE_PREVENTION);
     if (!(gBattlescriptCurrInstr[1] & SWITCH_IGNORE_ESCAPE_PREVENTION)
         && ((gBattleMons[gActiveBattler].status2 & (STATUS2_WRAPPED | STATUS2_ESCAPE_PREVENTION))
-            || (gStatuses3[gActiveBattler] & STATUS3_ROOTED)))
+            || (gstatuses4[gActiveBattler] & STATUS4_ROOTED)))
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 2);
     }
@@ -5489,7 +5489,7 @@ static void Cmd_statusanimation(void)
     if (gBattleControllerExecFlags == 0)
     {
         gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
-        if (!(gStatuses3[gActiveBattler] & STATUS3_SEMI_INVULNERABLE)
+        if (!(gstatuses4[gActiveBattler] & STATUS4_SEMI_INVULNERABLE)
             && gDisableStructs[gActiveBattler].substituteHP == 0
             && !(gHitMarker & HITMARKER_NO_ANIMATIONS))
         {
@@ -5508,7 +5508,7 @@ static void Cmd_status2animation(void)
     {
         gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
         wantedToAnimate = T1_READ_32(gBattlescriptCurrInstr + 2);
-        if (!(gStatuses3[gActiveBattler] & STATUS3_SEMI_INVULNERABLE)
+        if (!(gstatuses4[gActiveBattler] & STATUS4_SEMI_INVULNERABLE)
             && gDisableStructs[gActiveBattler].substituteHP == 0
             && !(gHitMarker & HITMARKER_NO_ANIMATIONS))
         {
@@ -5527,7 +5527,7 @@ static void Cmd_chosenstatusanimation(void)
     {
         gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
         wantedStatus = T1_READ_32(gBattlescriptCurrInstr + 3);
-        if (!(gStatuses3[gActiveBattler] & STATUS3_SEMI_INVULNERABLE)
+        if (!(gstatuses4[gActiveBattler] & STATUS4_SEMI_INVULNERABLE)
             && gDisableStructs[gActiveBattler].substituteHP == 0
             && !(gHitMarker & HITMARKER_NO_ANIMATIONS))
         {
@@ -6428,7 +6428,7 @@ static void Cmd_setreflect(void)
 
 static void Cmd_setseeded(void)
 {
-    if (gMoveResultFlags & MOVE_RESULT_NO_EFFECT || gStatuses3[gBattlerTarget] & STATUS3_LEECHSEED)
+    if (gMoveResultFlags & MOVE_RESULT_NO_EFFECT || gstatuses4[gBattlerTarget] & STATUS4_LEECHSEED)
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_LEECH_SEED_MISS;
@@ -6440,8 +6440,8 @@ static void Cmd_setseeded(void)
     }
     else
     {
-        gStatuses3[gBattlerTarget] |= gBattlerAttacker;
-        gStatuses3[gBattlerTarget] |= STATUS3_LEECHSEED;
+        gstatuses4[gBattlerTarget] |= gBattlerAttacker;
+        gstatuses4[gBattlerTarget] |= STATUS4_LEECHSEED;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_LEECH_SEED_SET;
     }
 
@@ -7127,7 +7127,7 @@ static void Cmd_tryKO(void)
     else
     {
         u16 chance;
-        if (!(gStatuses3[gBattlerTarget] & STATUS3_ALWAYS_HITS))
+        if (!(gstatuses4[gBattlerTarget] & STATUS4_ALWAYS_HITS))
         {
             chance = gBattleMoves[gCurrentMove].accuracy + (gBattleMons[gBattlerAttacker].level - gBattleMons[gBattlerTarget].level);
             if (Random() % 100 + 1 < chance && gBattleMons[gBattlerAttacker].level >= gBattleMons[gBattlerTarget].level)
@@ -7226,8 +7226,8 @@ static void Cmd_weatherdamage(void)
                 && gBattleMons[gBattlerAttacker].type2 != TYPE_STEEL
                 && gBattleMons[gBattlerAttacker].type2 != TYPE_GROUND
                 && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_VEIL
-                && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
-                && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
+                && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERGROUND)
+                && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERWATER))
             {
                 gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 16;
                 if (gBattleMoveDamage == 0)
@@ -7241,8 +7241,8 @@ static void Cmd_weatherdamage(void)
         if (gBattleWeather & B_WEATHER_HAIL)
         {
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
-                && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
-                && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
+                && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERGROUND)
+                && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERWATER))
             {
                 gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 16;
                 if (gBattleMoveDamage == 0)
@@ -7437,7 +7437,7 @@ static void Cmd_transformdataexecution(void)
     gChosenMove = MOVE_UNAVAILABLE;
     gBattlescriptCurrInstr++;
     if (gBattleMons[gBattlerTarget].status2 & STATUS2_TRANSFORMED
-        || gStatuses3[gBattlerTarget] & STATUS3_SEMI_INVULNERABLE)
+        || gstatuses4[gBattlerTarget] & STATUS4_SEMI_INVULNERABLE)
     {
         gMoveResultFlags |= MOVE_RESULT_FAILED;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TRANSFORM_FAILED;
@@ -7794,8 +7794,8 @@ static void Cmd_settypetorandomresistance(void)
 
 static void Cmd_setalwayshitflag(void)
 {
-    gStatuses3[gBattlerTarget] &= ~STATUS3_ALWAYS_HITS;
-    gStatuses3[gBattlerTarget] |= STATUS3_ALWAYS_HITS_TURN(2);
+    gstatuses4[gBattlerTarget] &= ~STATUS4_ALWAYS_HITS;
+    gstatuses4[gBattlerTarget] |= STATUS4_ALWAYS_HITS_TURN(2);
     gDisableStructs[gBattlerTarget].battlerWithSureHit = gBattlerAttacker;
     gBattlescriptCurrInstr++;
 }
@@ -8173,14 +8173,14 @@ static void Cmd_trysetperishsong(void)
 
     for (i = 0; i < gBattlersCount; i++)
     {
-        if (gStatuses3[i] & STATUS3_PERISH_SONG
+        if (gstatuses4[i] & STATUS4_PERISH_SONG
             || gBattleMons[i].ability == ABILITY_SOUNDPROOF)
         {
             notAffectedCount++;
         }
         else
         {
-            gStatuses3[i] |= STATUS3_PERISH_SONG;
+            gstatuses4[i] |= STATUS4_PERISH_SONG;
             gDisableStructs[i].perishSongTimer = 3;
             gDisableStructs[i].perishSongTimerStartValue = 3;
         }
@@ -8485,10 +8485,10 @@ static void Cmd_rapidspinfree(void)
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_WrapFree;
     }
-    else if (gStatuses3[gBattlerAttacker] & STATUS3_LEECHSEED)
+    else if (gstatuses4[gBattlerAttacker] & STATUS4_LEECHSEED)
     {
-        gStatuses3[gBattlerAttacker] &= ~STATUS3_LEECHSEED;
-        gStatuses3[gBattlerAttacker] &= ~STATUS3_LEECHSEED_BATTLER;
+        gstatuses4[gBattlerAttacker] &= ~STATUS4_LEECHSEED;
+        gstatuses4[gBattlerAttacker] &= ~STATUS4_LEECHSEED_BATTLER;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_LeechSeedFree;
     }
@@ -8657,13 +8657,13 @@ static void Cmd_setsemiinvulnerablebit(void)
     {
     case MOVE_FLY:
     case MOVE_BOUNCE:
-        gStatuses3[gBattlerAttacker] |= STATUS3_ON_AIR;
+        gstatuses4[gBattlerAttacker] |= STATUS4_ON_AIR;
         break;
     case MOVE_DIG:
-        gStatuses3[gBattlerAttacker] |= STATUS3_UNDERGROUND;
+        gstatuses4[gBattlerAttacker] |= STATUS4_UNDERGROUND;
         break;
     case MOVE_DIVE:
-        gStatuses3[gBattlerAttacker] |= STATUS3_UNDERWATER;
+        gstatuses4[gBattlerAttacker] |= STATUS4_UNDERWATER;
         break;
     }
 
@@ -8676,13 +8676,13 @@ static void Cmd_clearsemiinvulnerablebit(void)
     {
     case MOVE_FLY:
     case MOVE_BOUNCE:
-        gStatuses3[gBattlerAttacker] &= ~STATUS3_ON_AIR;
+        gstatuses4[gBattlerAttacker] &= ~STATUS4_ON_AIR;
         break;
     case MOVE_DIG:
-        gStatuses3[gBattlerAttacker] &= ~STATUS3_UNDERGROUND;
+        gstatuses4[gBattlerAttacker] &= ~STATUS4_UNDERGROUND;
         break;
     case MOVE_DIVE:
-        gStatuses3[gBattlerAttacker] &= ~STATUS3_UNDERWATER;
+        gstatuses4[gBattlerAttacker] &= ~STATUS4_UNDERWATER;
         break;
     }
 
@@ -8692,7 +8692,7 @@ static void Cmd_clearsemiinvulnerablebit(void)
 static void Cmd_setminimize(void)
 {
     if (gHitMarker & HITMARKER_OBEYS)
-        gStatuses3[gBattlerAttacker] |= STATUS3_MINIMIZED;
+        gstatuses4[gBattlerAttacker] |= STATUS4_MINIMIZED;
 
     gBattlescriptCurrInstr++;
 }
@@ -8744,7 +8744,7 @@ static void Cmd_setforcedtarget(void)
 
 static void Cmd_setcharge(void)
 {
-    gStatuses3[gBattlerAttacker] |= STATUS3_CHARGED_UP;
+    gstatuses4[gBattlerAttacker] |= STATUS4_CHARGED_UP;
     gDisableStructs[gBattlerAttacker].chargeTimer = 2;
     gDisableStructs[gBattlerAttacker].chargeTimerStartValue = 2;
     gBattlescriptCurrInstr++;
@@ -8968,13 +8968,13 @@ static void Cmd_trywish(void)
 // Ingrain
 static void Cmd_trysetroots(void)
 {
-    if (gStatuses3[gBattlerAttacker] & STATUS3_ROOTED)
+    if (gstatuses4[gBattlerAttacker] & STATUS4_ROOTED)
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
     else
     {
-        gStatuses3[gBattlerAttacker] |= STATUS3_ROOTED;
+        gstatuses4[gBattlerAttacker] |= STATUS4_ROOTED;
         gBattlescriptCurrInstr += 5;
     }
 }
@@ -8982,13 +8982,13 @@ static void Cmd_trysetroots(void)
 // Aqua Ring
 static void Cmd_tryGiveAquaRing(void)
 {
-    if (gStatuses3[gBattlerAttacker] & STATUS3_AQUA_RING)
+    if (gstatuses4[gBattlerAttacker] & STATUS4_AQUA_RING)
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
     else
     {
-        gStatuses3[gBattlerAttacker] |= STATUS3_AQUA_RING;
+        gstatuses4[gBattlerAttacker] |= STATUS4_AQUA_RING;
         gBattlescriptCurrInstr += 5;
     }
 }
@@ -9029,14 +9029,14 @@ static void Cmd_doubleDamageDealtIfTargetAtHalfHealth(void)
 
 static void Cmd_setyawn(void)
 {
-    if (gStatuses3[gBattlerTarget] & STATUS3_YAWN
+    if (gstatuses4[gBattlerTarget] & STATUS4_YAWN
         || gBattleMons[gBattlerTarget].status1 & STATUS1_ANY)
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
     else
     {
-        gStatuses3[gBattlerTarget] |= STATUS3_YAWN_TURN(2);
+        gstatuses4[gBattlerTarget] |= STATUS4_YAWN_TURN(2);
         gBattlescriptCurrInstr += 5;
     }
 }
@@ -9157,7 +9157,7 @@ static void Cmd_tryswapabilities(void)
 
 static void Cmd_tryimprison(void)
 {
-    if ((gStatuses3[gBattlerAttacker] & STATUS3_IMPRISONED_OTHERS))
+    if ((gstatuses4[gBattlerAttacker] & STATUS4_IMPRISONED_OTHERS))
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
@@ -9186,7 +9186,7 @@ static void Cmd_tryimprison(void)
                 }
                 if (attackerMoveId != MAX_MON_MOVES)
                 {
-                    gStatuses3[gBattlerAttacker] |= STATUS3_IMPRISONED_OTHERS;
+                    gstatuses4[gBattlerAttacker] |= STATUS4_IMPRISONED_OTHERS;
                     gBattlescriptCurrInstr += 5;
                     break;
                 }
@@ -9199,13 +9199,13 @@ static void Cmd_tryimprison(void)
 
 static void Cmd_trysetgrudge(void)
 {
-    if (gStatuses3[gBattlerAttacker] & STATUS3_GRUDGE)
+    if (gstatuses4[gBattlerAttacker] & STATUS4_GRUDGE)
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
     else
     {
-        gStatuses3[gBattlerAttacker] |= STATUS3_GRUDGE;
+        gstatuses4[gBattlerAttacker] |= STATUS4_GRUDGE;
         gBattlescriptCurrInstr += 5;
     }
 }
@@ -9458,18 +9458,18 @@ static void Cmd_settypebasedhalvers(void)
 
     if (gBattleMoves[gCurrentMove].effect == EFFECT_MUD_SPORT)
     {
-        if (!(gStatuses3[gBattlerAttacker] & STATUS3_MUDSPORT))
+        if (!(gstatuses4[gBattlerAttacker] & STATUS4_MUDSPORT))
         {
-            gStatuses3[gBattlerAttacker] |= STATUS3_MUDSPORT;
+            gstatuses4[gBattlerAttacker] |= STATUS4_MUDSPORT;
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_WEAKEN_ELECTRIC;
             worked = TRUE;
         }
     }
     else // Water Sport
     {
-        if (!(gStatuses3[gBattlerAttacker] & STATUS3_WATERSPORT))
+        if (!(gstatuses4[gBattlerAttacker] & STATUS4_WATERSPORT))
         {
-            gStatuses3[gBattlerAttacker] |= STATUS3_WATERSPORT;
+            gstatuses4[gBattlerAttacker] |= STATUS4_WATERSPORT;
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_WEAKEN_FIRE;
             worked = TRUE;
         }

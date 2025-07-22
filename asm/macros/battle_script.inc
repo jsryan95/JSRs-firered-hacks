@@ -170,10 +170,10 @@
 	.4byte \ptr
 	.endm
 
-	.macro jumpifstatus3condition battler:req, status3:req, param2:req, ptr:req
+	.macro jumpifstatus4condition battler:req, status4:req, param2:req, ptr:req
 	.byte 0x21
 	.byte \battler
-	.4byte \status3
+	.4byte \status4
 	.byte \param2
 	.4byte \ptr
 	.endm
@@ -1359,12 +1359,12 @@
 	jumpifhalfword CMP_NOT_EQUAL, gCurrentMove, \move, \jumpptr
 	.endm
 
-	.macro jumpifstatus3 battler:req, status:req, jumpptr:req
-	jumpifstatus3condition \battler, \status, 0x0, \jumpptr
+	.macro jumpifstatus4 battler:req, status:req, jumpptr:req
+	jumpifstatus4condition \battler, \status, 0x0, \jumpptr
 	.endm
 
-	.macro jumpifnostatus3 battler:req, status:req, jumpptr:req
-	jumpifstatus3condition \battler, \status, 0x1, \jumpptr
+	.macro jumpifnostatus4 battler:req, status:req, jumpptr:req
+	jumpifstatus4condition \battler, \status, 0x1, \jumpptr
 	.endm
 
 	.macro jumpifmovehadnoeffect jumpptr:req
