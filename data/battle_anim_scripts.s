@@ -493,9 +493,9 @@ gBattleAnims_Moves::
 	@ generation 5 moves
 	.4byte Move_FROST_BREATH
 	.4byte Move_STORM_THROW
+	.4byte Move_BULLDOZE
+	.4byte Move_LOW_SWEEP
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -2980,6 +2980,7 @@ Move_SING:
 
 Move_LOW_KICK:
 Move_GRASS_KNOT:
+Move_LOW_SWEEP:
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	loadspritegfx ANIM_TAG_IMPACT
 	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, 20, 0, 0, 4
@@ -2993,6 +2994,7 @@ Move_GRASS_KNOT:
 	end
 
 Move_EARTHQUAKE:
+Move_BULLDOZE:
 	createvisualtask AnimTask_HorizontalShake, 5, (MAX_BATTLERS_COUNT + 1), 10, 50
 	createvisualtask AnimTask_HorizontalShake, 5, MAX_BATTLERS_COUNT, 10, 50
 	playsewithpan SE_M_EARTHQUAKE, 0
