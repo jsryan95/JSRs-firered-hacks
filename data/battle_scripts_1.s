@@ -4073,6 +4073,12 @@ BattleScript_NightmareTurnDmg::
 	status2animation BS_ATTACKER, STATUS2_NIGHTMARE
 	goto BattleScript_DoTurnDmg
 
+BattleScript_BadDreamsTurnDmg::
+	printstring STRINGID_PKMNBADDREAMS
+	waitmessage B_WAIT_TIME_LONG
+	status2animation BS_ATTACKER, STATUS2_NIGHTMARE
+	goto BattleScript_DoTurnDmg
+
 BattleScript_CurseTurnDmg::
 	printstring STRINGID_PKMNAFFLICTEDBYCURSE
 	waitmessage B_WAIT_TIME_LONG

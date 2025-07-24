@@ -738,6 +738,7 @@ enum
     ENDTURN_CHARGE,
     ENDTURN_TAUNT,
     ENDTURN_YAWN,
+    ENDTURN_BAD_DREAMS,
     ENDTURN_ITEMS2,
     ENDTURN_BATTLER_COUNT
 };
@@ -1064,6 +1065,19 @@ u8 DoBattlerEndTurnEffects(void)
                         BattleScriptExecute(BattleScript_YawnMakesAsleep);
                         effect++;
                     }
+                }
+                gBattleStruct->turnEffectsTracker++;
+                break;
+            case ENDTURN_BAD_DREAMS:
+                if (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP
+                        && gBattleMons[gActiveBattler].hp != 0
+                        && ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_BAD_DREAMS))
+                {
+                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    BattleScriptExecute(BattleScript_BadDreamsTurnDmg);
+                    effect++;
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;

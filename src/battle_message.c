@@ -198,6 +198,7 @@ static const u8 sText_PkmnStoleItem[] = _("{B_ATK_NAME_WITH_PREFIX} stole\n{B_DE
 static const u8 sText_TargetCantEscapeNow[] = _("{B_DEF_NAME_WITH_PREFIX} can't\nescape now!");
 static const u8 sText_PkmnFellIntoNightmare[] = _("{B_DEF_NAME_WITH_PREFIX} fell into\na NIGHTMARE!");
 static const u8 sText_PkmnLockedInNightmare[] = _("{B_ATK_NAME_WITH_PREFIX} is locked\nin a NIGHTMARE!");
+static const u8 sText_PkmnBadDreams[] = _("{B_ATK_NAME_WITH_PREFIX} is suffering\nwith BAD DREAMS!");
 static const u8 sText_PkmnLaidCurse[] = _("{B_ATK_NAME_WITH_PREFIX} cut its own HP and\nlaid a CURSE on {B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnAfflictedByCurse[] = _("{B_ATK_NAME_WITH_PREFIX} is afflicted\nby the CURSE!");
 static const u8 sText_SpikesScattered[] = _("SPIKES were scattered all around\nthe opponent's side!");
@@ -901,6 +902,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNABILITYSUPPRESSED - BATTLESTRINGS_TABLE_START]         = sText_PkmnAbilitySuppressed,
     [STRINGID_PKMNSXCAUSEDHAIL - BATTLESTRINGS_TABLE_START]              = sText_PkmnsXCausedHail,
     [STRINGID_PKMNABILITYBECAMEMUMMY - BATTLESTRINGS_TABLE_START]        = sText_PkmnAbilityBecameMummy,
+    [STRINGID_PKMNBADDREAMS - BATTLESTRINGS_TABLE_START]                 = sText_PkmnBadDreams,
 };
 
 const u16 gMissStringIds[] =
