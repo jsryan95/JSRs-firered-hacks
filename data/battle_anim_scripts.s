@@ -590,6 +590,8 @@ gBattleAnims_Moves::
     .4byte Move_SAND_BLASTER
     .4byte Move_SHADOW_BIND
     .4byte Move_WATER_WHEEL
+    .4byte Move_ARC_DRAIN
+    .4byte Move_SOUL_STEALER
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -6391,6 +6393,8 @@ MegaDrainAbsorbEffect:
 	return
 
 Move_GIGA_DRAIN:
+Move_ARC_DRAIN:
+Move_SOUL_STEALER:
 	loadspritegfx ANIM_TAG_ORBS
 	loadspritegfx ANIM_TAG_BLUE_STAR
 	loadspritegfx ANIM_TAG_IMPACT

@@ -871,5 +871,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_MAGNET_BOMB   - 1] = gMoveDescription_MagnetBomb,
     [MOVE_ROCK_WRECKER  - 1] = gMoveDescription_RockWrecker,
     [MOVE_NASTY_PLOT    - 1] = gMoveDescription_NastyPlot,
-    [MOVE_GASTRO_ACID   - 1] = gMoveDescription_GastroAcid
+    [MOVE_GASTRO_ACID   - 1] = gMoveDescription_GastroAcid,
+    [MOVE_ARC_DRAIN     - 1] = gMoveDescription_GigaDrain,
+    [MOVE_SOUL_STEALER  - 1] = gMoveDescription_GigaDrain
 };

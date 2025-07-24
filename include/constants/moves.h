@@ -576,8 +576,10 @@
 #define MOVE_SAND_BLASTER 562
 #define MOVE_SHADOW_BIND 563
 #define MOVE_WATER_WHEEL 564
+#define MOVE_ARC_DRAIN 565
+#define MOVE_SOUL_STEALER 566
 
-#define MOVES_COUNT 565
+#define MOVES_COUNT 567
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
