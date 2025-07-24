@@ -2478,9 +2478,22 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
         attack *= 2;
     if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
-        spAttack /= 2;
+        gBattleMovePower /= 2;
+    if (defender->ability == ABILITY_HEATPROOF && (type = TYPE_FIRE))
+        gBattleMovePower /= 2;
+    if (defender->ability == ABILITY_MULTISCALE && (defender->hp == defender->maxHP))
+        gBattleMovePower /= 2;
+    if (attacker->ability == ABILITY_DEFEATIST && attacker->hp <= (attacker->maxHP / 2))
+    {
+        attack /= 2;
+        spAttack /=2;
+    }
     if (attacker->ability == ABILITY_HUSTLE)
         attack = (150 * attack) / 100;
+    if (attacker->ability == ABILITY_TOXIC_BOOST && attacker->status1 & STATUS1_PSN_ANY)
+        attack = (150 * attack) / 100;
+    if (attacker->ability == ABILITY_FLARE_BOOST && attacker->status1 & STATUS1_BURN)
+        spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_PLUS && ABILITY_ON_FIELD2(ABILITY_MINUS))
         spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_MINUS && ABILITY_ON_FIELD2(ABILITY_PLUS))
@@ -2500,6 +2513,19 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (type == TYPE_WATER && attacker->ability == ABILITY_TORRENT && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
+        gBattleMovePower = (150 * gBattleMovePower) / 100;
+    if (attacker->ability == ABILITY_RECKLESS
+            && (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL
+                    || gBattleMoves[gCurrentMove].effect == EFFECT_DOUBLE_EDGE
+                    || gBattleMoves[gCurrentMove].effect == EFFECT_FLARE_BLITZ
+                    || gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_IF_MISS))
+        gBattleMovePower = (12 * gBattleMovePower) / 10;
+    if (WEATHER_HAS_EFFECT
+            && gBattleWeather & B_WEATHER_SANDSTORM
+            && attacker->ability == ABILITY_SAND_FORCE
+            && (type == TYPE_ROCK || type == TYPE_GROUND || type == TYPE_STEEL))
+        gBattleMovePower = (130 * gBattleMovePower) / 100;
+    if (attacker->ability == ABILITY_TECHNICIAN && gBattleMoves[gCurrentMove].power <= 60)
         gBattleMovePower = (150 * gBattleMovePower) / 100;
 
     // Self-destruct / Explosion cut defense in half

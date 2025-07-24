@@ -879,10 +879,10 @@ static void Cmd_attackcanceler(void)
 
     gHitMarker |= HITMARKER_OBEYS;
 
-    if (gProtectStructs[gBattlerTarget].bounceMove && gBattleMoves[gCurrentMove].flags & FLAG_MAGIC_COAT_AFFECTED)
+    if ((gProtectStructs[gBattlerTarget].bounceMove || hasActiveAbility(gBattlerTarget, ABILITY_MAGIC_BOUNCE))
+            && gBattleMoves[gCurrentMove].flags & FLAG_MAGIC_COAT_AFFECTED)
     {
         PressurePPLose(gBattlerAttacker, gBattlerTarget, MOVE_MAGIC_COAT);
-        gProtectStructs[gBattlerTarget].bounceMove = FALSE;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
         return;
@@ -1087,6 +1087,8 @@ static void Cmd_accuracycheck(void)
             calc = (calc * 130) / 100; // 1.3 compound eyes boost
         if (WEATHER_HAS_EFFECT && hasActiveAbility(gBattlerTarget, ABILITY_SAND_VEIL) && gBattleWeather & B_WEATHER_SANDSTORM)
             calc = (calc * 80) / 100; // 1.2 sand veil loss
+        if (WEATHER_HAS_EFFECT && hasActiveAbility(gBattlerTarget, ABILITY_SNOW_CLOAK) && gBattleWeather & B_WEATHER_HAIL)
+            calc = (calc * 80) / 100;
         if (hasActiveAbility(gBattlerAttacker, ABILITY_HUSTLE) && IS_MOVE_PHYSICAL(move))
             calc = (calc * 80) / 100; // 1.2 hustle loss
 
@@ -1295,7 +1297,8 @@ static void ModulateDmgForType(s32 typeMatchupRow)
         ModulateDmgByType(TYPE_MUL_SUPER_EFFECTIVE);
     else if (TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_GHOST
                 && TYPE_EFFECT_MULTIPLIER(typeMatchupRow) == 0
-                && gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
+                && (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT
+                        || hasActiveAbility(gBattlerAttacker, ABILITY_SCRAPPY)))
         ModulateDmgByType(TYPE_MUL_NORMAL);
     else if (TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_DARK
                 && TYPE_EFFECT_MULTIPLIER(typeMatchupRow) == 0
@@ -1321,7 +1324,10 @@ static void Cmd_typecalc(void)
     // check stab
     if (IS_BATTLER_OF_TYPE(gBattlerAttacker, moveType))
     {
-        gBattleMoveDamage = gBattleMoveDamage * 15;
+        if (hasActiveAbility(gBattlerAttacker, ABILITY_ADAPTABILITY))
+            gBattleMoveDamage = gBattleMoveDamage * 20;
+        else
+            gBattleMoveDamage = gBattleMoveDamage * 15;
         gBattleMoveDamage = gBattleMoveDamage / 10;
     }
 
@@ -1364,6 +1370,17 @@ static void Cmd_typecalc(void)
     }
     if (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)
         gProtectStructs[gBattlerAttacker].targetNotAffected = 1;
+
+    if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE
+            && (hasActiveAbility(gBattlerTarget, ABILITY_FILTER) || hasActiveAbility(gBattlerTarget, ABILITY_SOLID_ROCK)))
+    {
+        gBattleMoveDamage *= 3;
+        gBattleMoveDamage /= 4;
+    }
+
+    if (gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE
+            && hasActiveAbility(gBattlerAttacker, ABILITY_TINTED_LENS))
+        gBattleMoveDamage *= 2;
 
     gBattlescriptCurrInstr++;
 }
@@ -4003,7 +4020,8 @@ static void Cmd_playstatchangeanimation(void)
                         && !hasActiveAbility(gActiveBattler, ABILITY_CLEAR_BODY)
                         && !hasActiveAbility(gActiveBattler, ABILITY_WHITE_SMOKE)
                         && !(hasActiveAbility(gActiveBattler, ABILITY_KEEN_EYE) && currStat == STAT_ACC)
-                        && !(hasActiveAbility(gActiveBattler, ABILITY_HYPER_CUTTER) && currStat == STAT_ATK))
+                        && !(hasActiveAbility(gActiveBattler, ABILITY_HYPER_CUTTER) && currStat == STAT_ATK)
+                        && !(hasActiveAbility(gActiveBattler, ABILITY_BIG_PECKS) && currStat == STAT_DEF))
                 {
                     if (gBattleMons[gActiveBattler].statStages[currStat] > MIN_STAT_STAGE)
                     {
@@ -6753,6 +6771,19 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             }
             return STAT_CHANGE_DIDNT_WORK;
         }
+        else if (hasActiveAbility(gActiveBattler, ABILITY_BIG_PECKS)
+                 && !certain && statId == STAT_DEF)
+        {
+            if (flags == STAT_CHANGE_ALLOW_PTR)
+            {
+                BattleScriptPush(BS_ptr);
+                gBattleScripting.battler = gActiveBattler;
+                gBattlescriptCurrInstr = BattleScript_AbilityNoSpecificStatLoss;
+                gLastUsedAbility = gBattleMons[gActiveBattler].ability;
+                RecordAbilityBattle(gActiveBattler, gLastUsedAbility);
+            }
+            return STAT_CHANGE_DIDNT_WORK;
+        }
         else if (hasActiveAbility(gActiveBattler, ABILITY_SHIELD_DUST) && flags == 0)
         {
             return STAT_CHANGE_DIDNT_WORK;
@@ -6863,6 +6894,8 @@ static void Cmd_setmultihitcounter(void)
     {
         gMultiHitCounter = gBattlescriptCurrInstr[1];
     }
+    else if (hasActiveAbility(gBattlerAttacker, ABILITY_SKILL_LINK))
+        gMultiHitCounter = 5;
     else
     {
         gMultiHitCounter = Random() & 3;
@@ -7236,6 +7269,8 @@ static void Cmd_weatherdamage(void)
                 && gBattleMons[gBattlerAttacker].type2 != TYPE_STEEL
                 && gBattleMons[gBattlerAttacker].type2 != TYPE_GROUND
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_SAND_VEIL)
+                && !hasActiveAbility(gBattlerAttacker, ABILITY_OVERCOAT)
+                && !hasActiveAbility(gBattlerAttacker, ABILITY_SAND_FORCE)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERGROUND)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERWATER))
             {
@@ -7251,6 +7286,8 @@ static void Cmd_weatherdamage(void)
         if (gBattleWeather & B_WEATHER_HAIL)
         {
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
+                && !hasActiveAbility(gBattlerAttacker, ABILITY_SNOW_CLOAK)
+                && !hasActiveAbility(gBattlerAttacker, ABILITY_OVERCOAT)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERGROUND)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERWATER))
             {
@@ -9117,7 +9154,8 @@ static u32 getEffectiveSpeed(u8 battler)
     if (WEATHER_HAS_EFFECT)
     {
         if ((hasActiveAbility(battler, ABILITY_SWIFT_SWIM) && gBattleWeather & B_WEATHER_RAIN)
-                    || (hasActiveAbility(battler, ABILITY_CHLOROPHYLL) && gBattleWeather & B_WEATHER_SUN))
+                || (hasActiveAbility(battler, ABILITY_CHLOROPHYLL) && gBattleWeather & B_WEATHER_SUN)
+                || (hasActiveAbility(battler, ABILITY_SAND_RUSH) && gBattleWeather & B_WEATHER_SANDSTORM))
             speedMultiplier = 2;
         else
             speedMultiplier = 1;

@@ -4214,6 +4214,8 @@ BattleScript_TraceActivates::
 	waitmessage B_WAIT_TIME_LONG
 	end3
 
+BattleScript_PoisonHealActivates::
+BattleScript_IceBodyActivates::
 BattleScript_RainDishActivates::
 	printstring STRINGID_PKMNSXRESTOREDHPALITTLE2
 	waitmessage B_WAIT_TIME_LONG
@@ -4230,7 +4232,16 @@ BattleScript_SandstreamActivates::
 	call BattleScript_WeatherFormChanges
 	end3
 
+BattleScript_SnowWarningActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNSXCAUSEDHAIL
+	waitstate
+	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES
+	call BattleScript_WeatherFormChanges
+	end3
+
 BattleScript_ShedSkinActivates::
+BattleScript_HydrationActivates::
 	printstring STRINGID_PKMNSXCUREDYPROBLEM
 	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_ATTACKER
@@ -4430,6 +4441,11 @@ BattleScript_RoughSkinActivates::
 	printstring STRINGID_PKMNHURTSWITH
 	waitmessage B_WAIT_TIME_LONG
 	tryfaintmon BS_ATTACKER
+	return
+
+BattleScript_MummyActivates::
+	printstring STRINGID_PKMNABILITYBECAMEMUMMY
+	waitmessage B_WAIT_TIME_LONG
 	return
 
 BattleScript_CuteCharmActivates::
