@@ -511,15 +511,15 @@ gBattleAnims_Moves::
 	.4byte Move_NIGHT_DAZE
 	.4byte Move_RAGE_POWDER
 	.4byte Move_RAZOR_SHELL
+	.4byte Move_SEARING_SHOT
+	.4byte Move_SLUDGE_WAVE
+	.4byte Move_SNARL
+	.4byte Move_STEAMROLLER
+	.4byte Move_STRUGGLE_BUG
+	.4byte Move_TAIL_SLAP
+	.4byte Move_VOLT_SWITCH
+	.4byte Move_WILD_CHARGE
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -1443,6 +1443,7 @@ BeatUpRight:
 Move_STOMP:
 Move_HEART_STAMP:
 Move_ICICLE_CRASH:
+Move_STEAMROLLER:
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
@@ -1767,6 +1768,7 @@ SelfDestructExplode:
 
 Move_SLAM:
 Move_DRAGON_RUSH:
+Move_TAIL_SLAP:
 	loadspritegfx ANIM_TAG_SLAM_HIT
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
@@ -2338,6 +2340,8 @@ OutrageFlames:
 	return
 
 Move_SPARK:
+Move_VOLT_SWITCH:
+Move_WILD_CHARGE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_SPARK_2
 	delay 0
@@ -3949,6 +3953,7 @@ Move_UPROAR:
 
 Move_HEAT_WAVE:
 Move_LAVA_PLUME:
+Move_SEARING_SHOT:
 	loadspritegfx ANIM_TAG_FLYING_DIRT
 	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_FLYING_DIRT, 0, 6, 6, RGB_RED
 	createvisualtask AnimTask_LoadSandstormBackground, 5, TRUE
@@ -5577,6 +5582,8 @@ RoarEffect:
 	return
 
 Move_GROWL:
+Move_SNARL:
+Move_STRUGGLE_BUG:
 	loadspritegfx ANIM_TAG_NOISE_LINE
 	createvisualtask SoundTask_PlayDoubleCry, 2, ANIM_ATTACKER, DOUBLE_CRY_GROWL
 	call RoarEffect
@@ -9340,6 +9347,7 @@ ArmThrustLeft:
 	goto ArmThrustContinue
 
 Move_MUDDY_WATER:
+Move_SLUDGE_WAVE:
 	panse SE_M_WHIRLPOOL, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
 	createvisualtask AnimTask_CreateSurfWave, 2, TRUE
 	waitforvisualfinish

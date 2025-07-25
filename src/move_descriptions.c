@@ -450,6 +450,13 @@ const u8 gMoveDescription_LeafTornado[] = _("Attacks by encircling\nthe foe in s
 const u8 gMoveDescription_NightDaze[] = _("Lets loose a pitch-\nblack shock wave at\nthe foe. May lower\nthe foe's accuracy.");
 const u8 gMoveDescription_RagePowder[] = _("The user scatters\nan irritating powder,\nmaking foes attack\nonly the user.");
 const u8 gMoveDescription_RazorShell[] = _("The user cuts the\nfoe with sharp\nshells. May lower\nthe foe's DEFENSE.");
+const u8 gMoveDescription_SearingShot[] = _("Scarlet flames torch\neverything around\nthe user. It may\nburn the victims.");
+const u8 gMoveDescription_SludgeWave[] = _("Swamps all other\nPOKéMON with a giant\nsludge wave. May\npoison those hit.");
+const u8 gMoveDescription_Snarl[] = _("A fierce yell that\nreduces the foes'\nSP. ATK.");
+const u8 gMoveDescription_Steamroller[] = _("The user crushes the\nfoe with its rolled-\nup body. May make\nthe foe flinch.");
+const u8 gMoveDescription_StruggleBug[] = _("A desperate attack\nthat reduces the\nfoes' SP. ATK.");
+const u8 gMoveDescription_TailSlap[] = _("The user strikes\nthe target with its\nhard tail. It hits\ntwo to five times.");
+const u8 gMoveDescription_WildCharge[] = _("An electrically\ncharged tackle that\nalso damages the\nuser a little.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -910,4 +917,11 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_NIGHT_DAZE - 1] = gMoveDescription_NightDaze,
     [MOVE_RAGE_POWDER - 1] = gMoveDescription_RagePowder,
     [MOVE_RAZOR_SHELL - 1] = gMoveDescription_RazorShell,
+    [MOVE_SEARING_SHOT - 1] = gMoveDescription_SearingShot,
+    [MOVE_SLUDGE_WAVE - 1] = gMoveDescription_SludgeWave,
+    [MOVE_SNARL - 1] = gMoveDescription_Snarl,
+    [MOVE_STEAMROLLER - 1] = gMoveDescription_Steamroller,
+    [MOVE_STRUGGLE_BUG - 1] = gMoveDescription_StruggleBug,
+    [MOVE_TAIL_SLAP - 1] = gMoveDescription_TailSlap,
+    [MOVE_VOLT_SWITCH - 1] = gMoveDescription_UTurn,
 };
