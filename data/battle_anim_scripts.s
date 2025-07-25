@@ -503,15 +503,15 @@ gBattleAnims_Moves::
 	.4byte Move_FIERY_DANCE
 	.4byte Move_GEAR_GRIND
 	.4byte Move_HEAD_CHARGE
+	.4byte Move_HEART_STAMP
+	.4byte Move_HORN_LEECH
+	.4byte Move_ICICLE_CRASH
+	.4byte Move_INFERNO
+	.4byte Move_LEAF_TORNADO
+	.4byte Move_NIGHT_DAZE
+	.4byte Move_RAGE_POWDER
+	.4byte Move_RAZOR_SHELL
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -1441,6 +1441,8 @@ BeatUpRight:
 	goto BeatUpContinue
 
 Move_STOMP:
+Move_HEART_STAMP:
+Move_ICICLE_CRASH:
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
@@ -4042,6 +4044,7 @@ Move_SMELLING_SALT:
 	end
 
 Move_FOLLOW_ME:
+Move_RAGE_POWDER:
 	loadspritegfx ANIM_TAG_FINGER
 	createsprite gFollowMeFingerSpriteTemplate, ANIM_ATTACKER, 2, 0
 	playsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER
@@ -4607,6 +4610,7 @@ Move_SLACK_OFF:
 	end
 
 Move_CRUSH_CLAW:
+Move_RAZOR_SHELL:
 	loadspritegfx ANIM_TAG_BLUE_LIGHT_WALL
 	loadspritegfx ANIM_TAG_CLAW_SLASH
 	loadspritegfx ANIM_TAG_TORN_METAL
@@ -6454,6 +6458,7 @@ MegaDrainAbsorbEffect:
 
 Move_GIGA_DRAIN:
 Move_ARC_DRAIN:
+Move_HORN_LEECH:
 	loadspritegfx ANIM_TAG_ORBS
 	loadspritegfx ANIM_TAG_BLUE_STAR
 	loadspritegfx ANIM_TAG_IMPACT
@@ -7581,6 +7586,7 @@ Move_ANCIENT_POWER:
 	end
 
 Move_OCTAZOOKA:
+Move_LEAF_TORNADO:
 	loadspritegfx ANIM_TAG_GRAY_SMOKE
 	loadspritegfx ANIM_TAG_BLACK_BALL
 	playsewithpan SE_M_MEGA_KICK2, SOUND_PAN_ATTACKER
@@ -8018,6 +8024,7 @@ Move_METAL_CLAW:
 Move_NIGHT_SHADE:
 Move_SHADOW_SNEAK:
 Move_DARK_PULSE:
+Move_NIGHT_DAZE:
 	monbg ANIM_ATTACKER
 	splitbgprio ANIM_ATTACKER
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
@@ -9836,6 +9843,7 @@ Move_DEFEND_ORDER:
 	end
 
 Move_BLAST_BURN:
+Move_INFERNO:
 	loadspritegfx ANIM_TAG_FIRE_PLUME
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER

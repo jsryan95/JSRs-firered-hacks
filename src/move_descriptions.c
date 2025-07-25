@@ -442,6 +442,14 @@ const u8 gMoveDescription_Electroweb[] = _("Attacks all foes\nwith an electric\n
 const u8 gMoveDescription_FieryDance[] = _("A flame-cloaked\ndancing attack.\nMay raise the\nuser's SP. ATK.");
 const u8 gMoveDescription_GearGrind[] = _("The user attacks\nby throwing two\nsteel gears at\nits target.");
 const u8 gMoveDescription_HeadCharge[] = _("A reckless head-\nfirst charge that\nalso hurts the user\na little.");
+const u8 gMoveDescription_HeartStamp[] = _("Puts the foe off\nguard with a cute\nact, then strikes. May\nmake the foe flinch.");
+const u8 gMoveDescription_HornLeech[] = _("A draining attack using\nhorns. The user's HP is\nrestored by half\nthe damage inflicted.");
+const u8 gMoveDescription_IcicleCrash[] = _("Drops an icicle\nonto the foe. May\nmake the foe flinch.");
+const u8 gMoveDescription_Inferno[] = _("Engulfs the foe in\nan intense fire,\nleaving it with a\nburn.");
+const u8 gMoveDescription_LeafTornado[] = _("Attacks by encircling\nthe foe in sharp\nleaves. May lower\nthe foe's accuracy.");
+const u8 gMoveDescription_NightDaze[] = _("Lets loose a pitch-\nblack shock wave at\nthe foe. May lower\nthe foe's accuracy.");
+const u8 gMoveDescription_RagePowder[] = _("The user scatters\nan irritating powder,\nmaking foes attack\nonly the user.");
+const u8 gMoveDescription_RazorShell[] = _("The user cuts the\nfoe with sharp\nshells. May lower\nthe foe's DEFENSE.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -894,4 +902,12 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_FIERY_DANCE - 1] = gMoveDescription_FieryDance,
     [MOVE_GEAR_GRIND - 1] = gMoveDescription_GearGrind,
     [MOVE_HEAD_CHARGE - 1] = gMoveDescription_HeadCharge,
+    [MOVE_HEART_STAMP - 1] = gMoveDescription_HeartStamp,
+    [MOVE_HORN_LEECH - 1] = gMoveDescription_HornLeech,
+    [MOVE_ICICLE_CRASH - 1] = gMoveDescription_IcicleCrash,
+    [MOVE_INFERNO - 1] = gMoveDescription_Inferno,
+    [MOVE_LEAF_TORNADO - 1] = gMoveDescription_LeafTornado,
+    [MOVE_NIGHT_DAZE - 1] = gMoveDescription_NightDaze,
+    [MOVE_RAGE_POWDER - 1] = gMoveDescription_RagePowder,
+    [MOVE_RAZOR_SHELL - 1] = gMoveDescription_RazorShell,
 };
