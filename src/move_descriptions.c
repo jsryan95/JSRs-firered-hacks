@@ -434,6 +434,14 @@ const u8 gMoveDescription_RockWrecker[] = _("The user launches a\nhuge boulder t
 const u8 gMoveDescription_NastyPlot[] = _("The user stimulates\nits brain by thinking\nbad thoughts, sharply\nraising its SP. ATK.");
 const u8 gMoveDescription_GastroAcid[] = _("The user's stomach\nacids cover the foe,\neliminating the\neffect of its ability.");
 const u8 gMoveDescription_HammerArm[] = _("An attack made\nwith a heavy fist\nthat also reduces\nthe user's SPEED.");
+const u8 gMoveDescription_BlueFlare[] = _("Engulfs the foe in\nan intense, yet\nbeautiful, blue flame.\nIt may burn the foe.");
+const u8 gMoveDescription_BoltStrike[] = _("Charges while\nsurrounded by\nelectricity. It may\nparalyze the foe.");
+const u8 gMoveDescription_DrillRun[] = _("Crashes into the foe\nwhile rotating like\na drill. Has a high\ncritical-hit rate.");
+const u8 gMoveDescription_DualChop[] = _("The user attacks\nby hitting the foe\nwith brutal strikes.\nHits twice in a row.");
+const u8 gMoveDescription_Electroweb[] = _("Attacks all foes\nwith an electric\nnet. Lowers the\nfoes' SPEED.");
+const u8 gMoveDescription_FieryDance[] = _("A flame-cloaked\ndancing attack.\nMay raise the\nuser's SP. ATK.");
+const u8 gMoveDescription_GearGrind[] = _("The user attacks\nby throwing two\nsteel gears at\nits target.");
+const u8 gMoveDescription_HeadCharge[] = _("A reckless head-\nfirst charge that\nalso hurts the user\na little.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -878,4 +886,12 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_HAMMER_ARM    - 1] = gMoveDescription_HammerArm,
     [MOVE_TECTONIC_CRASH - 1] = gMoveDescription_TidalCrash,
     [MOVE_GLACIAL_TACKLE - 1] = gMoveDescription_TidalCrash,
+    [MOVE_BLUE_FLARE - 1] = gMoveDescription_BlueFlare,
+    [MOVE_BOLT_STRIKE - 1] = gMoveDescription_BoltStrike,
+    [MOVE_DRILL_RUN - 1] = gMoveDescription_DrillRun,
+    [MOVE_DUAL_CHOP - 1] = gMoveDescription_DualChop,
+    [MOVE_ELECTROWEB - 1] = gMoveDescription_Electroweb,
+    [MOVE_FIERY_DANCE - 1] = gMoveDescription_FieryDance,
+    [MOVE_GEAR_GRIND - 1] = gMoveDescription_GearGrind,
+    [MOVE_HEAD_CHARGE - 1] = gMoveDescription_HeadCharge,
 };

@@ -495,15 +495,15 @@ gBattleAnims_Moves::
 	.4byte Move_STORM_THROW
 	.4byte Move_BULLDOZE
 	.4byte Move_LOW_SWEEP
+	.4byte Move_BLUE_FLARE
+	.4byte Move_BOLT_STRIKE
+	.4byte Move_DRILL_RUN
+	.4byte Move_DUAL_CHOP
+	.4byte Move_ELECTROWEB
+	.4byte Move_FIERY_DANCE
+	.4byte Move_GEAR_GRIND
+	.4byte Move_HEAD_CHARGE
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -654,6 +654,7 @@ Move_NONE:
 Move_MIRROR_MOVE:
 Move_POUND:
 Move_DOUBLE_HIT:
+Move_DUAL_CHOP:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	setalpha 12, 8
@@ -1098,6 +1099,8 @@ Move_TWINEEDLE:
 	end
 
 Move_FIRE_BLAST:
+Move_BLUE_FLARE:
+Move_FIERY_DANCE:
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	createsoundtask SoundTask_FireBlast, SE_M_FLAME_WHEEL, SE_M_FLAME_WHEEL2
 	call FireBlastRing
@@ -2623,6 +2626,7 @@ BulbblebeamCreateBubbles:
 
 Move_ICY_WIND:
 Move_FROST_BREATH:
+Move_ELECTROWEB:
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	loadspritegfx ANIM_TAG_ICE_SPIKES
 	monbg ANIM_DEF_PARTNER
@@ -2805,6 +2809,7 @@ Move_ROLLING_KICK:
 Move_HEADBUTT:
 Move_IRON_HEAD:
 Move_ZEN_HEADBUTT:
+Move_HEAD_CHARGE:
 	loadspritegfx ANIM_TAG_IMPACT
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 0
 	playsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER
@@ -2865,6 +2870,7 @@ FuryAttackLeft:
 
 Move_HORN_DRILL:
 Move_STONE_EDGE:
+Move_DRILL_RUN:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HORN_HIT
 	jumpifcontest HornDrillInContest
@@ -4904,6 +4910,7 @@ Move_COVET:
 	end
 
 Move_VOLT_TACKLE:
+Move_BOLT_STRIKE:
 	loadspritegfx ANIM_TAG_SPARK
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
 	loadspritegfx ANIM_TAG_ELECTRICITY
@@ -7946,6 +7953,7 @@ Move_STEEL_WING:
 	end
 
 Move_IRON_TAIL:
+Move_GEAR_GRIND:
 	loadspritegfx ANIM_TAG_IMPACT
 	loopsewithpan SE_M_HARDEN, SOUND_PAN_ATTACKER, 28, 2
 	createvisualtask AnimTask_MetallicShine, 5, 1, 0, 0
