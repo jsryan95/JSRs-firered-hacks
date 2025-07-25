@@ -450,8 +450,8 @@ gBattleAnims_Moves::
     .4byte Move_ROCK_WRECKER
     .4byte Move_NASTY_PLOT
     .4byte Move_GASTRO_ACID
+    .4byte Move_HAMMER_ARM
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -4132,6 +4132,7 @@ Move_ASSIST:
 
 Move_SUPERPOWER:
 Move_CLOSE_COMBAT:
+Move_HAMMER_ARM:
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
 	loadspritegfx ANIM_TAG_METEOR
 	loadspritegfx ANIM_TAG_FLAT_ROCK

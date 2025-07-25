@@ -433,6 +433,7 @@ const u8 gMoveDescription_MagnetBomb[] = _("The user launches a\nsteel bomb that
 const u8 gMoveDescription_RockWrecker[] = _("The user launches a\nhuge boulder to\nattack. It must rest\non the next turn.");
 const u8 gMoveDescription_NastyPlot[] = _("The user stimulates\nits brain by thinking\nbad thoughts, sharply\nraising its SP. ATK.");
 const u8 gMoveDescription_GastroAcid[] = _("The user's stomach\nacids cover the foe,\neliminating the\neffect of its ability.");
+const u8 gMoveDescription_HammerArm[] = _("An attack made\nwith a heavy fist\nthat also reduces\nthe user's SPEED.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -873,5 +874,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_NASTY_PLOT    - 1] = gMoveDescription_NastyPlot,
     [MOVE_GASTRO_ACID   - 1] = gMoveDescription_GastroAcid,
     [MOVE_ARC_DRAIN     - 1] = gMoveDescription_GigaDrain,
-    [MOVE_SOUL_STEALER  - 1] = gMoveDescription_GigaDrain
+    [MOVE_SOUL_STEALER  - 1] = gMoveDescription_GigaDrain,
+    [MOVE_HAMMER_ARM    - 1] = gMoveDescription_HammerArm,
 };

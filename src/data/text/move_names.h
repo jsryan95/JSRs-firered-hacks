@@ -438,5 +438,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_NASTY_PLOT]    = _("NASTY PLOT"),
     [MOVE_GASTRO_ACID]   = _("GASTRO ACID"),
     [MOVE_ARC_DRAIN]     = _("ARC DRAIN"),
-    [MOVE_SOUL_STEALER]  = _("SOUL STEALER")
+    [MOVE_SOUL_STEALER]  = _("SOUL STEALER"),
+    [MOVE_HAMMER_ARM]    = _("HAMMER ARM"),
 };

@@ -432,15 +432,15 @@
 #define MOVE_ROCK_WRECKER 426
 #define MOVE_NASTY_PLOT 427
 #define MOVE_GASTRO_ACID 428
+#define MOVE_HAMMER_ARM 429
 
 // generation 4 moves (not implemented)
-#define MOVE_FEINT 429
 #define MOVE_FLING 430
 #define MOVE_EMBARGO 431
 #define MOVE_GRAVITY 432
 #define MOVE_GUARD_SWAP 433
 #define MOVE_ACUPRESSURE 434
-#define MOVE_HAMMER_ARM 435
+#define MOVE_FEINT 435
 #define MOVE_HEAD_SMASH 436
 #define MOVE_HEAL_BLOCK 437
 #define MOVE_HEALING_WISH 438

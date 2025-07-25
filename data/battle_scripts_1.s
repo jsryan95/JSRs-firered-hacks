@@ -255,6 +255,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFlareBlitz             @ EFFECT_FLARE_BLITZ
 	.4byte BattleScript_EffectMiracleEye             @ EFFECT_MIRACLE_EYE
 	.4byte BattleScript_EffectGastroAcid             @ EFFECT_GASTRO_ACID
+	.4byte BattleScript_EffectHammerArm              @ EFFECT_HAMMER_ARM
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -2881,6 +2882,10 @@ BattleScript_EffectTidalCrash::
     setmoveeffect MOVE_EFFECT_SPEED_TWO_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
     goto BattleScript_EffectHit
 
+BattleScript_EffectHammerArm::
+    setmoveeffect MOVE_EFFECT_SPEED_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+    goto BattleScript_EffectHit
+
 BattleScript_EffectTickle::
 	attackcanceler
 	attackstring
@@ -3918,11 +3923,22 @@ BattleScript_SpdDown2::
     setbyte sSTAT_ANIM_PLAYED, 0
     playstatchangeanimation BS_ATTACKER, BIT_SPATK, STAT_CHANGE_NEGATIVE | STAT_CHANGE_BY_TWO | STAT_CHANGE_CANT_PREVENT
     setstatchanger STAT_SPEED, 2, TRUE
-    statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR | MOVE_EFFECT_CERTAIN, BattleScript_SAtkDown2End
+    statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR | MOVE_EFFECT_CERTAIN, BattleScript_SpdDown2End
     jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_SpdDown2End
     printfromtable gStatDownStringIds
     waitmessage B_WAIT_TIME_LONG
 BattleScript_SpdDown2End::
+    return
+
+BattleScript_SpdDown::
+    setbyte sSTAT_ANIM_PLAYED, 0
+    playstatchangeanimation BS_ATTACKER, BIT_SPATK, STAT_CHANGE_NEGATIVE | STAT_CHANGE_CANT_PREVENT
+    setstatchanger STAT_SPEED, 1, TRUE
+    statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR | MOVE_EFFECT_CERTAIN, BattleScript_SpdDownEnd
+    jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 2, BattleScript_SpdDownEnd
+    printfromtable gStatDownStringIds
+    waitmessage B_WAIT_TIME_LONG
+BattleScript_SpdDownEnd::
     return
 
 BattleScript_FocusPunchSetUp::

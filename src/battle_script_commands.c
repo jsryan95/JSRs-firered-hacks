@@ -2797,6 +2797,10 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_SpdDown2;
                 break;
+            case MOVE_EFFECT_SPEED_DOWN: // Hammer Arm
+                BattleScriptPush(gBattlescriptCurrInstr + 1);
+                gBattlescriptCurrInstr = BattleScript_SpdDown;
+                break;
 
             }
         }

@@ -100,6 +100,7 @@ extern const u8 BattleScript_EnduredMsg[];
 extern const u8 BattleScript_OneHitKOMsg[];
 extern const u8 BattleScript_SAtkDown2[];
 extern const u8 BattleScript_SpdDown2[];
+extern const u8 BattleScript_SpdDown[];
 extern const u8 BattleScript_FocusPunchSetUp[];
 extern const u8 BattleScript_MoveUsedIsAsleep[];
 extern const u8 BattleScript_MoveUsedWokeUp[];
