@@ -256,6 +256,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectMiracleEye             @ EFFECT_MIRACLE_EYE
 	.4byte BattleScript_EffectGastroAcid             @ EFFECT_GASTRO_ACID
 	.4byte BattleScript_EffectHammerArm              @ EFFECT_HAMMER_ARM
+	.4byte BattleScript_EffectSpecialDefenseDown2Hit @ EFFECT_SPECIAL_DEFENSE_DOWN_2_HIT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1073,6 +1074,10 @@ BattleScript_EffectSpecialAttackDownHit::
 
 BattleScript_EffectSpecialDefenseDownHit::
 	setmoveeffect MOVE_EFFECT_SP_DEF_MINUS_1
+	goto BattleScript_EffectHit
+
+BattleScript_EffectSpecialDefenseDown2Hit::
+    setmoveeffect MOVE_EFFECT_SP_DEF_MINUS_2
 	goto BattleScript_EffectHit
 
 BattleScript_EffectAccuracyDownHit::

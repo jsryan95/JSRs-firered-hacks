@@ -457,6 +457,8 @@ const u8 gMoveDescription_Steamroller[] = _("The user crushes the\nfoe with its 
 const u8 gMoveDescription_StruggleBug[] = _("A desperate attack\nthat reduces the\nfoes' SP. ATK.");
 const u8 gMoveDescription_TailSlap[] = _("The user strikes\nthe target with its\nhard tail. It hits\ntwo to five times.");
 const u8 gMoveDescription_WildCharge[] = _("An electrically\ncharged tackle that\nalso damages the\nuser a little.");
+const u8 gMoveDescription_SeedFlare[] = _("The user looses a\nshock wave from\nwithin its body. May\nlower the foe's SP. DEF.");
+const u8 gMoveDescription_AcidSpray[] = _("Spits fluid to melt\nthe target. It\nharshly reduces the\nfoe's SP. DEF.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -924,4 +926,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_STRUGGLE_BUG - 1] = gMoveDescription_StruggleBug,
     [MOVE_TAIL_SLAP - 1] = gMoveDescription_TailSlap,
     [MOVE_VOLT_SWITCH - 1] = gMoveDescription_UTurn,
+    [MOVE_WILD_CHARGE - 1] = gMoveDescription_WildCharge,
+    [MOVE_SEED_FLARE - 1] = gMoveDescription_SeedFlare,
+    [MOVE_ACID_SPRAY - 1] = gMoveDescription_AcidSpray,
 };

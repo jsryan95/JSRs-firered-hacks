@@ -451,8 +451,8 @@ gBattleAnims_Moves::
     .4byte Move_NASTY_PLOT
     .4byte Move_GASTRO_ACID
     .4byte Move_HAMMER_ARM
+    .4byte Move_SEED_FLARE
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -519,8 +519,8 @@ gBattleAnims_Moves::
 	.4byte Move_TAIL_SLAP
 	.4byte Move_VOLT_SWITCH
 	.4byte Move_WILD_CHARGE
+	.4byte Move_ACID_SPRAY
 	@ space for generation 5 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -6125,6 +6125,7 @@ SolarBeamAbsorbEffect:
 
 SolarBeamUnleash:
 Move_FLASH_CANNON:
+Move_SEED_FLARE:
 	call SetSolarBeamBg
 	panse SE_M_SOLAR_BEAM, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
 	createvisualtask AnimTask_CreateSmallSolarBeamOrbs, 5
@@ -6681,6 +6682,7 @@ SludgeBombProjectile:
 
 Move_ACID:
 Move_GASTRO_ACID:
+Move_ACID_SPRAY:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	monbg ANIM_DEF_PARTNER
 	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, 0, 0

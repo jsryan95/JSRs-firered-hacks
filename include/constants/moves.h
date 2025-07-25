@@ -433,9 +433,9 @@
 #define MOVE_NASTY_PLOT 427
 #define MOVE_GASTRO_ACID 428
 #define MOVE_HAMMER_ARM 429
+#define MOVE_SEED_FLARE 430
 
 // generation 4 moves (not implemented)
-#define MOVE_FLING 430
 #define MOVE_EMBARGO 431
 #define MOVE_GRAVITY 432
 #define MOVE_GUARD_SWAP 433
@@ -461,7 +461,7 @@
 #define MOVE_PSYCHO_SHIFT 453
 #define MOVE_PUNISHMENT 454
 #define MOVE_ROOST 455
-#define MOVE_SEED_FLARE 456
+#define MOVE_FLING 456
 #define MOVE_SHADOW_FORCE 457
 #define MOVE_STEALTH_ROCK 458
 #define MOVE_SUCKER_PUNCH 459
@@ -503,9 +503,9 @@
 #define MOVE_TAIL_SLAP 493
 #define MOVE_VOLT_SWITCH 494
 #define MOVE_WILD_CHARGE 495
+#define MOVE_ACID_SPRAY 496
 
 // generation 5 moves (not implemented)
-#define MOVE_ACID_SPRAY 496
 #define MOVE_FUSION_BOLT 497
 #define MOVE_FUSION_FLARE 498
 #define MOVE_CIRCLE_THROW 499
