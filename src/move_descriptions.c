@@ -876,4 +876,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_ARC_DRAIN     - 1] = gMoveDescription_GigaDrain,
     [MOVE_SOUL_STEALER  - 1] = gMoveDescription_GigaDrain,
     [MOVE_HAMMER_ARM    - 1] = gMoveDescription_HammerArm,
+    [MOVE_TECTONIC_CRASH - 1] = gMoveDescription_TidalCrash,
+    [MOVE_GLACIAL_TACKLE - 1] = gMoveDescription_TidalCrash,
 };

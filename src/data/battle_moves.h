@@ -5001,7 +5001,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_TIDAL_CRASH] =
     {
         .effect = EFFECT_TIDAL_CRASH,
-        .power = 110,
+        .power = 120,
         .type = TYPE_WATER,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 100,
@@ -6168,6 +6168,34 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .category = CATEGORY_PHYSICAL,
         .accuracy = 90,
         .pp = 10,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_MAKES_CONTACT,
+    },
+
+    [MOVE_TECTONIC_CRASH] =
+    {
+        .effect = EFFECT_TIDAL_CRASH,
+        .power = 120,
+        .type = TYPE_GROUND,
+        .category = CATEGORY_PHYSICAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED | FLAG_MAKES_CONTACT,
+    },
+
+    [MOVE_GLACIAL_TACKLE] =
+    {
+        .effect = EFFECT_TIDAL_CRASH,
+        .power = 120,
+        .type = TYPE_ICE,
+        .category = CATEGORY_PHYSICAL,
+        .accuracy = 100,
+        .pp = 5,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,

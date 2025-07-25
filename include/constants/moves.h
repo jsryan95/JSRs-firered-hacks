@@ -578,8 +578,10 @@
 #define MOVE_WATER_WHEEL 564
 #define MOVE_ARC_DRAIN 565
 #define MOVE_SOUL_STEALER 566
+#define MOVE_TECTONIC_CRASH 567
+#define MOVE_GLACIAL_TACKLE 568
 
-#define MOVES_COUNT 567
+#define MOVES_COUNT 569
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

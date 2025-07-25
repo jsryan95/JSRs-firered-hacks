@@ -592,6 +592,8 @@ gBattleAnims_Moves::
     .4byte Move_WATER_WHEEL
     .4byte Move_ARC_DRAIN
     .4byte Move_SOUL_STEALER
+    .4byte Move_TECTONIC_CRASH
+    .4byte Move_GLACIAL_TACKLE
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -1856,6 +1858,8 @@ Move_WATERFALL:
 	end
 
 Move_TIDAL_CRASH:
+Move_TECTONIC_CRASH:
+Move_GLACIAL_TACKLE:
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	loadspritegfx ANIM_TAG_WATER_IMPACT
