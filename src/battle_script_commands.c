@@ -7291,6 +7291,7 @@ static void Cmd_weatherdamage(void)
         {
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_SNOW_CLOAK)
+                && !hasActiveAbility(gBattlerAttacker, ABILITY_ICE_BODY)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_OVERCOAT)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERGROUND)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERWATER))
