@@ -524,12 +524,12 @@ gBattleAnims_Moves::
 	.4byte Move_GLACIATE
 	.4byte Move_COIL
 	.4byte Move_HEAL_PULSE
+	.4byte Move_SCALD
+	.4byte Move_HONE_CLAWS
+	.4byte Move_SHIFT_GEAR
+	.4byte Move_QUIVER_DANCE
+	.4byte Move_WORK_UP
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -1608,6 +1608,7 @@ Move_SWORDS_DANCE:
 	end
 
 Move_PSYCH_UP:
+Move_WORK_UP:
 	loadspritegfx ANIM_TAG_SPIRAL
 	monbg ANIM_ATK_PARTNER
 	createvisualtask AnimTask_BlendColorCycleExclude, 2, 1, 2, 6, 1, 11, RGB_BLACK
@@ -4985,6 +4986,7 @@ General_AquaRingHeal:
 	end
 
 Move_CALM_MIND:
+Move_QUIVER_DANCE:
 	loadspritegfx ANIM_TAG_THIN_RING
 	monbg ANIM_ATK_PARTNER
 	createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, ANIM_ATTACKER, 0, 0, 16, RGB_BLACK
@@ -5034,6 +5036,7 @@ Move_LEAF_BLADE:
 	end
 
 Move_DRAGON_DANCE:
+Move_SHIFT_GEAR:
 	loadspritegfx ANIM_TAG_HOLLOW_ORB
 	monbg ANIM_ATTACKER
 	splitbgprio ANIM_ATTACKER
@@ -6928,6 +6931,7 @@ AeroblastBeam:
 	return
 
 Move_WATER_GUN:
+Move_SCALD:
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
 	loadspritegfx ANIM_TAG_WATER_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -8553,6 +8557,7 @@ Move_LOVELY_KISS:
 	end
 
 Move_FURY_SWIPES:
+Move_HONE_CLAWS:
 	loadspritegfx ANIM_TAG_SWIPE
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 5, 5
 	delay 4

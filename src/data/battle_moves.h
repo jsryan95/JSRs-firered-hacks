@@ -6621,4 +6621,74 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED,
     },
+
+    [MOVE_SCALD] =
+    {
+        .effect = EFFECT_THAW_HIT,
+        .power = 80,
+        .type = TYPE_WATER,
+        .category = CATEGORY_SPECIAL,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_HONE_CLAWS] =
+    {
+        .effect = EFFECT_HONE_CLAWS,
+        .power = 0,
+        .type = TYPE_DARK,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .flags = FLAG_SNATCH_AFFECTED,
+    },
+
+    [MOVE_SHIFT_GEAR] =
+    {
+        .effect = EFFECT_SHIFT_GEAR,
+        .power = 0,
+        .type = TYPE_STEEL,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .flags = FLAG_SNATCH_AFFECTED,
+    },
+
+    [MOVE_QUIVER_DANCE] =
+    {
+        .effect = EFFECT_QUIVER_DANCE,
+        .power = 0,
+        .type = TYPE_BUG,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .flags = FLAG_SNATCH_AFFECTED,
+    },
+
+    [MOVE_WORK_UP] =
+    {
+        .effect = EFFECT_WORK_UP,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .flags = FLAG_SNATCH_AFFECTED,
+    },
 };

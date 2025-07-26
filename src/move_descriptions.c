@@ -461,8 +461,13 @@ const u8 gMoveDescription_SeedFlare[] = _("The user looses a\nshock wave from\nw
 const u8 gMoveDescription_AcidSpray[] = _("Spits fluid to melt\nthe target. It\nharshly reduces the\nfoe's SP. DEF.");
 const u8 gMoveDescription_FlameCharge[] = _("The user cloaks\nitself with flame\nand attacks. Raises\nthe user's SPEED.");
 const u8 gMoveDescription_Glaciate[] = _("Attacks by blowing\nfreezing cold air.\nLowers the foes'\nSPEED stat.");
-const u8 gMoveDescription_Coil[] = _("The user coils up\nand concentrates to\nraise its ATTACK,\nDEFENSE and accuracy.");
+const u8 gMoveDescription_Coil[] = _("Raises the user's\nATTACK and DEFENSE\nstats, as well as\nits accuracy.");
 const u8 gMoveDescription_HealPulse[] = _("Emits a pulse that\nrestores the\ntarget's HP by up to\nhalf of its max HP.");
+const u8 gMoveDescription_Scald[] = _("Shoots boiling\nhot water at the\nfoe. May cause\na burn.");
+const u8 gMoveDescription_HoneClaws[] = _("The user sharpens\nits claws to boost\nits ATTACK stat\nand accuracy.");
+const u8 gMoveDescription_ShiftGear[] = _("Raises the user's\nATTACK and sharply\nraises its SPEED.");
+const u8 gMoveDescription_QuiverDance[] = _("A beautiful, mystic\ndance that raises\nthe user's SP. ATK,\nSP. DEF and SPEED.");
+const u8 gMoveDescription_WorkUp[] = _("The user is roused,\nand its ATTACK\nand SP. ATK stats\nincrease.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -937,4 +942,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_GLACIATE - 1] = gMoveDescription_Glaciate,
     [MOVE_COIL - 1] = gMoveDescription_Coil,
     [MOVE_HEAL_PULSE - 1] = gMoveDescription_HealPulse,
+    [MOVE_SCALD - 1] = gMoveDescription_Scald,
+    [MOVE_HONE_CLAWS - 1] = gMoveDescription_HoneClaws,
+    [MOVE_SHIFT_GEAR - 1] = gMoveDescription_ShiftGear,
+    [MOVE_QUIVER_DANCE - 1] = gMoveDescription_QuiverDance,
+    [MOVE_WORK_UP - 1] = gMoveDescription_WorkUp,
 };

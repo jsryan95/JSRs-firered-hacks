@@ -472,4 +472,9 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_GLACIATE] = _("GLACIATE"),
     [MOVE_COIL] = _("COIL"),
     [MOVE_HEAL_PULSE] = _("HEAL PULSE"),
+    [MOVE_SCALD] = _("SCALD"),
+    [MOVE_HONE_CLAWS] = _("HONE CLAWS"),
+    [MOVE_SHIFT_GEAR] = _("SHIFT GEAR"),
+    [MOVE_QUIVER_DANCE] = _("QUIVER DANCE"),
+    [MOVE_WORK_UP] = _("WORK UP"),
 };
