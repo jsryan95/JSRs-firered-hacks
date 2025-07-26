@@ -257,6 +257,9 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectGastroAcid             @ EFFECT_GASTRO_ACID
 	.4byte BattleScript_EffectHammerArm              @ EFFECT_HAMMER_ARM
 	.4byte BattleScript_EffectSpecialDefenseDown2Hit @ EFFECT_SPECIAL_DEFENSE_DOWN_2_HIT
+	.4byte BattleScript_EffectSpeedUpHit             @ EFFECT_SPEED_UP_HIT
+	.4byte BattleScript_EffectCoil                   @ EFFECT_COIL
+	.4byte BattleScript_EffectHealPulse              @ EFFECT_HEAL_PULSE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1929,6 +1932,10 @@ BattleScript_EffectAttackUpHit::
 	setmoveeffect MOVE_EFFECT_ATK_PLUS_1 | MOVE_EFFECT_AFFECTS_USER
 	goto BattleScript_EffectHit
 
+BattleScript_EffectSpeedUpHit::
+	setmoveeffect MOVE_EFFECT_SPD_PLUS_1 | MOVE_EFFECT_AFFECTS_USER
+	goto BattleScript_EffectHit
+
 BattleScript_EffectSpecialAttackUpHit::
 	setmoveeffect MOVE_EFFECT_SP_ATK_PLUS_1 | MOVE_EFFECT_AFFECTS_USER
 	goto BattleScript_EffectHit
@@ -2202,6 +2209,15 @@ BattleScript_PresentHealTarget::
 	printstring STRINGID_PKMNREGAINEDHEALTH
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectHealPulse::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	tryhealhalfhealth BattleScript_AlreadyAtFullHp, BS_TARGET
+    goto BattleScript_PresentHealTarget
 
 BattleScript_AlreadyAtFullHp::
 	pause B_WAIT_TIME_SHORT
@@ -2978,6 +2994,38 @@ BattleScript_BulkUpTryDef::
 	printfromtable gStatUpStringIds
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_BulkUpEnd::
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectCoil::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, MAX_STAT_STAGE, BattleScript_CoilDoMoveAnim
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_DEF, MAX_STAT_STAGE, BattleScript_CoilDoMoveAnim
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_ACC, MAX_STAT_STAGE, BattleScript_CantRaiseMultipleStats
+BattleScript_CoilDoMoveAnim::
+	attackanimation
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_DEF | BIT_ACC, 0
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_CoilTryDef
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_CoilTryDef
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_CoilTryDef::
+	setstatchanger STAT_DEF, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_CoilTryAcc
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_CoilTryAcc
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_CoilTryAcc::
+	setstatchanger STAT_ACC, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_CoilTryAcc
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_CoilTryAcc
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_CoilEnd::
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectCalmMind::

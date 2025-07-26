@@ -459,6 +459,10 @@ const u8 gMoveDescription_TailSlap[] = _("The user strikes\nthe target with its\
 const u8 gMoveDescription_WildCharge[] = _("An electrically\ncharged tackle that\nalso damages the\nuser a little.");
 const u8 gMoveDescription_SeedFlare[] = _("The user looses a\nshock wave from\nwithin its body. May\nlower the foe's SP. DEF.");
 const u8 gMoveDescription_AcidSpray[] = _("Spits fluid to melt\nthe target. It\nharshly reduces the\nfoe's SP. DEF.");
+const u8 gMoveDescription_FlameCharge[] = _("The user cloaks\nitself with flame\nand attacks. Raises\nthe user's SPEED.");
+const u8 gMoveDescription_Glaciate[] = _("Attacks by blowing\nfreezing cold air.\nLowers the foes'\nSPEED stat.");
+const u8 gMoveDescription_Coil[] = _("The user coils up\nand concentrates to\nraise its ATTACK,\nDEFENSE and accuracy.");
+const u8 gMoveDescription_HealPulse[] = _("Emits a pulse that\nrestores the\ntarget's HP by up to\nhalf of its max HP.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -929,4 +933,8 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_WILD_CHARGE - 1] = gMoveDescription_WildCharge,
     [MOVE_SEED_FLARE - 1] = gMoveDescription_SeedFlare,
     [MOVE_ACID_SPRAY - 1] = gMoveDescription_AcidSpray,
+    [MOVE_FLAME_CHARGE - 1] = gMoveDescription_FlameCharge,
+    [MOVE_GLACIATE - 1] = gMoveDescription_Glaciate,
+    [MOVE_COIL - 1] = gMoveDescription_Coil,
+    [MOVE_HEAL_PULSE - 1] = gMoveDescription_HealPulse,
 };

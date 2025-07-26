@@ -520,11 +520,11 @@ gBattleAnims_Moves::
 	.4byte Move_VOLT_SWITCH
 	.4byte Move_WILD_CHARGE
 	.4byte Move_ACID_SPRAY
+	.4byte Move_FLAME_CHARGE
+	.4byte Move_GLACIATE
+	.4byte Move_COIL
+	.4byte Move_HEAL_PULSE
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -898,6 +898,7 @@ ScreechRing:
 
 Move_FLAME_WHEEL:
 Move_FLARE_BLITZ:
+Move_FLAME_CHARGE:
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	monbg ANIM_DEF_PARTNER
 	splitbgprio_foes ANIM_TARGET
@@ -2633,6 +2634,7 @@ BulbblebeamCreateBubbles:
 Move_ICY_WIND:
 Move_FROST_BREATH:
 Move_ELECTROWEB:
+Move_GLACIATE:
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	loadspritegfx ANIM_TAG_ICE_SPIKES
 	monbg ANIM_DEF_PARTNER
@@ -4892,6 +4894,7 @@ Move_HOWL:
 	end
 
 Move_BULK_UP:
+Move_COIL:
 	loadspritegfx ANIM_TAG_BREATH
 	createvisualtask AnimTask_GrowAndShrink, 2
 	playsewithpan SE_M_SWAGGER, SOUND_PAN_ATTACKER
@@ -9106,6 +9109,7 @@ SweetScentEffect:
 Move_HYPER_BEAM:
 Move_FOCUS_BLAST:
 Move_ROAR_OF_TIME:
+Move_HEAL_PULSE:
 	loadspritegfx ANIM_TAG_ORBS
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 4, 0, 16, RGB_BLACK
 	waitforvisualfinish

@@ -6565,4 +6565,60 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
+
+    [MOVE_FLAME_CHARGE] =
+    {
+        .effect = EFFECT_SPEED_UP_HIT,
+        .power = 50,
+        .type = TYPE_FIRE,
+        .category = CATEGORY_PHYSICAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_GLACIATE] =
+    {
+        .effect = EFFECT_SPEED_DOWN_HIT,
+        .power = 65,
+        .type = TYPE_ICE,
+        .category = CATEGORY_SPECIAL,
+        .accuracy = 95,
+        .pp = 10,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_COIL] =
+    {
+        .effect = EFFECT_COIL,
+        .power = 0,
+        .type = TYPE_POISON,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .flags = FLAG_SNATCH_AFFECTED,
+    },
+
+    [MOVE_HEAL_PULSE] =
+    {
+        .effect = EFFECT_HEAL_PULSE,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED,
+    },
 };
