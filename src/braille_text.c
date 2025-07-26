@@ -24,7 +24,7 @@ u16 FontFunc_Braille(struct TextPrinter *textPrinter)
     switch (textPrinter->state)
     {
     case RENDER_STATE_HANDLE_CHAR:
-        if (JOY_HELD(A_BUTTON | B_BUTTON) && sub->hasPrintBeenSpedUp)
+        if (sub->hasPrintBeenSpedUp)
         {
             textPrinter->delayCounter = 0;
         }
