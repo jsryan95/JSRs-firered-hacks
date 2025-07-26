@@ -1423,3 +1423,21 @@
 	callnative BS_tryGiveInsomnia
 	.4byte \onFail
 	.endm
+
+	.macro tryMakeWaterType onFail:req
+	callnative BS_tryMakeWaterType
+	.4byte \onFail
+	.endm
+
+	.macro doubleDamageDealtIfTargetStatus
+    callnative BS_doubleDamageDealtIfTargetStatus
+    .endm
+
+	.macro doubleDamageDealtIfNoItem
+    callnative BS_doubleDamageDealtIfNoItem
+    .endm
+
+	.macro tryGiveAbility onFail:req
+	callnative BS_tryGiveAbility
+	.4byte \onFail
+	.endm

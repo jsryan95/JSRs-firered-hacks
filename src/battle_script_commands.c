@@ -1006,7 +1006,8 @@ static bool8 AccuracyCalcHelper(u16 move)
 
     gHitMarker &= ~HITMARKER_IGNORE_UNDERWATER;
 
-    if ((WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN) && gBattleMoves[move].effect == EFFECT_THUNDER)
+    if ((WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN)
+            && (gBattleMoves[move].effect == EFFECT_THUNDER || gBattleMoves[move].effect == EFFECT_HURRICANE))
      || (gBattleMoves[move].effect == EFFECT_ALWAYS_HIT || gBattleMoves[move].effect == EFFECT_VITAL_THROW))
     {
         JumpIfMoveFailed(7, move);
@@ -1077,7 +1078,8 @@ static void Cmd_accuracycheck(void)
 
         moveAcc = gBattleMoves[move].accuracy;
         // check Thunder on sunny weather
-        if (WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_SUN && gBattleMoves[move].effect == EFFECT_THUNDER)
+        if (WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_SUN
+                && (gBattleMoves[move].effect == EFFECT_THUNDER || gBattleMoves[move].effect == EFFECT_HURRICANE))
             moveAcc = 50;
 
         calc = sAccuracyStageRatios[buff].dividend * moveAcc;
@@ -9214,41 +9216,6 @@ static void Cmd_tryswapabilities(void)
     }
 }
 
-static void Cmd_callnative(void)
-{
-    void (*func)() = (void *)T1_READ_PTR(gBattlescriptCurrInstr + 1);
-    func();
-}
-
-void BS_tryApplyGastroAcid(void)
-{
-    if (gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-     {
-         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
-     }
-    else
-    {
-        gBattleMons[gBattlerTarget].status3 |= STATUS3_GASTRO_ACID;
-
-        gBattlescriptCurrInstr += 9;
-    }
-}
-
-void BS_tryGiveInsomnia(void)
-{
-    if (gBattleMons[gBattlerTarget].ability == ABILITY_TRUANT
-            || gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-    {
-        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
-    }
-    else
-    {
-        gBattleMons[gBattlerTarget].ability = ABILITY_INSOMNIA;
-
-        gBattlescriptCurrInstr += 9;
-    }
-}
-
 static void Cmd_tryimprison(void)
 {
     if ((gstatuses4[gBattlerAttacker] & STATUS4_IMPRISONED_OTHERS))
@@ -10099,4 +10066,91 @@ static void Cmd_finishturn(void)
 {
     gCurrentActionFuncId = B_ACTION_FINISHED;
     gCurrentTurnActionNumber = gBattlersCount;
+}
+
+static void Cmd_callnative(void)
+{
+    void (*func)() = (void *)T1_READ_PTR(gBattlescriptCurrInstr + 1);
+    func();
+}
+
+void BS_tryApplyGastroAcid(void)
+{
+    if (gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+     {
+         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+     }
+    else
+    {
+        gBattleMons[gBattlerTarget].status3 |= STATUS3_GASTRO_ACID;
+
+        gBattlescriptCurrInstr += 9;
+    }
+}
+
+void BS_tryGiveInsomnia(void)
+{
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_TRUANT
+            || gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gBattleMons[gBattlerTarget].ability = ABILITY_INSOMNIA;
+
+        gBattlescriptCurrInstr += 9;
+    }
+}
+
+void BS_tryMakeWaterType(void)
+{
+    if (!(gBattleMons[gBattlerTarget].type1 == TYPE_WATER && gBattleMons[gBattlerTarget].type2 == TYPE_WATER))
+    {
+        SET_BATTLER_TYPE(gBattlerTarget, TYPE_WATER);
+        PREPARE_TYPE_BUFFER(gBattleTextBuff1, TYPE_WATER);
+
+        gBattlescriptCurrInstr += 9;
+    }
+    else
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+}
+
+void BS_doubleDamageDealtIfTargetStatus(void)
+{
+    if (gBattleMons[gBattlerTarget].status1)
+    {
+        gBattleScripting.dmgMultiplier = 2;
+    }
+
+    gBattlescriptCurrInstr+=5;
+}
+
+void BS_doubleDamageDealtIfNoItem(void)
+{
+    if (gBattleMons[gBattlerTarget].item == ITEM_NONE)
+    {
+        gBattleScripting.dmgMultiplier = 2;
+    }
+
+    gBattlescriptCurrInstr+=5;
+}
+
+void BS_tryGiveAbility(void)
+{
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_TRUANT
+            || gBattleMons[gBattlerAttacker].ability == ABILITY_TRACE
+            || gBattleMons[gBattlerAttacker].ability == ABILITY_FORECAST
+            || gBattleMons[gBattlerTarget].ability == gBattleMons[gBattlerAttacker].ability)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gBattleMons[gBattlerTarget].ability = gBattleMons[gBattlerAttacker].ability;
+        gLastUsedAbility = gBattleMons[gBattlerAttacker].ability;
+        gBattlescriptCurrInstr += 9;
+    }
 }

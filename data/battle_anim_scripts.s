@@ -529,12 +529,12 @@ gBattleAnims_Moves::
 	.4byte Move_SHIFT_GEAR
 	.4byte Move_QUIVER_DANCE
 	.4byte Move_WORK_UP
+	.4byte Move_SOAK
+	.4byte Move_HURRICANE
+	.4byte Move_HEX
+	.4byte Move_ACROBATICS
+	.4byte Move_ENTRAINMENT
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -3882,6 +3882,7 @@ Move_MOONLIGHT:
 	end
 
 Move_EXTREME_SPEED:
+Move_ACROBATICS:
 	loadspritegfx ANIM_TAG_SPEED_DUST
 	loadspritegfx ANIM_TAG_IMPACT
 	createvisualtask AnimTask_GetAttackerSide, 2
@@ -5344,6 +5345,7 @@ UnusedFutureSightHit:
 	goto FutureSightContinue
 
 Move_THUNDER:
+Move_HURRICANE:
 	loadspritegfx ANIM_TAG_LIGHTNING
 	fadetobg BG_THUNDER
 	waitbgfadeout
@@ -6933,6 +6935,7 @@ AeroblastBeam:
 
 Move_WATER_GUN:
 Move_SCALD:
+Move_SOAK:
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
 	loadspritegfx ANIM_TAG_WATER_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -8375,6 +8378,7 @@ Move_CURSE:
 	choosetwoturnanim CurseGhost, CurseStats
 
 CurseGhost:
+Move_HEX:
 	loadspritegfx ANIM_TAG_NAIL
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
 	monbg ANIM_ATK_PARTNER
@@ -9167,6 +9171,7 @@ HyperBeamOrbs:
 	return
 
 Move_FLATTER:
+Move_ENTRAINMENT:
 	loadspritegfx ANIM_TAG_SPOTLIGHT
 	loadspritegfx ANIM_TAG_CONFETTI
 	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_ENCORE2, SOUND_PAN_TARGET

@@ -469,6 +469,11 @@ const u8 gMoveDescription_ShiftGear[] = _("Raises the user's\nATTACK and sharply
 const u8 gMoveDescription_QuiverDance[] = _("A beautiful, mystic\ndance that raises\nthe user's SP. ATK,\nSP. DEF and SPEED.");
 const u8 gMoveDescription_WorkUp[] = _("The user is roused,\nand its ATTACK\nand SP. ATK stats\nincrease.");
 const u8 gMoveDescription_WorrySeed[] = _("A seed that causes\nworry is planted on\nthe foe, changing its\nability to Insomnia.");
+const u8 gMoveDescription_Soak[] = _("Shoots a torrent\nof water at the\nfoe and changes\nits type to WATER.");
+const u8 gMoveDescription_Hurricane[] = _("The user attacks\nby wrapping the foe\nin a fierce wind.\nMay confuse the foe.");
+const u8 gMoveDescription_Hex[] = _("Power doubles if\nthe foe is\naffected by a\nstatus problem.");
+const u8 gMoveDescription_Acrobatics[] = _("Power doubles if\nthe user is not\nholding an item.");
+const u8 gMoveDescription_Entrainment[] = _("Changes the\ntarget's ability\nto match the\nuser's.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -949,4 +954,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_QUIVER_DANCE - 1] = gMoveDescription_QuiverDance,
     [MOVE_WORK_UP - 1] = gMoveDescription_WorkUp,
     [MOVE_WORRY_SEED - 1] = gMoveDescription_WorrySeed,
+    [MOVE_SOAK - 1] = gMoveDescription_Soak,
+    [MOVE_HURRICANE - 1] = gMoveDescription_Hurricane,
+    [MOVE_HEX - 1] = gMoveDescription_Hex,
+    [MOVE_ACROBATICS - 1] = gMoveDescription_Acrobatics,
+    [MOVE_ENTRAINMENT - 1] = gMoveDescription_Entrainment,
 };

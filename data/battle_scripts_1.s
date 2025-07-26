@@ -267,6 +267,11 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectQuiverDance            @ EFFECT_QUIVER_DANCE
 	.4byte BattleScript_EffectWorkUp                 @ EFFECT_WORK_UP
 	.4byte BattleScript_EffectWorrySeed              @ EFFECT_WORRY_SEED
+	.4byte BattleScript_EffectSoak                   @ EFFECT_SOAK
+	.4byte BattleScript_EffectHurricane              @ EFFECT_HURRICANE
+	.4byte BattleScript_EffectHex                    @ EFFECT_HEX
+	.4byte BattleScript_EffectAcrobatics             @ EFFECT_ACROBATICS
+	.4byte BattleScript_EffectEntrainment            @ EFFECT_ENTRAINMENT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -4877,5 +4882,42 @@ BattleScript_EffectWorrySeed::
 	attackanimation
 	waitanimation
 	printstring STRINGID_PKMNGOTINSOMNIA
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectSoak::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	tryMakeWaterType BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNCHANGEDTYPE
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectHurricane::
+	setmoveeffect MOVE_EFFECT_CONFUSION
+	orword gHitMarker, HITMARKER_IGNORE_ON_AIR
+	goto BattleScript_EffectHit
+
+BattleScript_EffectHex::
+	doubleDamageDealtIfTargetStatus
+	goto BattleScript_EffectHit
+
+BattleScript_EffectAcrobatics::
+	doubleDamageDealtIfNoItem
+	goto BattleScript_EffectHit
+
+BattleScript_EffectEntrainment::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	tryGiveAbility BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNGAVEABILITY
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
