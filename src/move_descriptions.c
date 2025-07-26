@@ -468,6 +468,7 @@ const u8 gMoveDescription_HoneClaws[] = _("The user sharpens\nits claws to boost
 const u8 gMoveDescription_ShiftGear[] = _("Raises the user's\nATTACK and sharply\nraises its SPEED.");
 const u8 gMoveDescription_QuiverDance[] = _("A beautiful, mystic\ndance that raises\nthe user's SP. ATK,\nSP. DEF and SPEED.");
 const u8 gMoveDescription_WorkUp[] = _("The user is roused,\nand its ATTACK\nand SP. ATK stats\nincrease.");
+const u8 gMoveDescription_WorrySeed[] = _("A seed that causes\nworry is planted on\nthe foe, changing its\nability to Insomnia.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -947,4 +948,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_SHIFT_GEAR - 1] = gMoveDescription_ShiftGear,
     [MOVE_QUIVER_DANCE - 1] = gMoveDescription_QuiverDance,
     [MOVE_WORK_UP - 1] = gMoveDescription_WorkUp,
+    [MOVE_WORRY_SEED - 1] = gMoveDescription_WorrySeed,
 };

@@ -434,9 +434,9 @@
 #define MOVE_GASTRO_ACID 428
 #define MOVE_HAMMER_ARM 429
 #define MOVE_SEED_FLARE 430
+#define MOVE_WORRY_SEED 431
 
 // generation 4 moves (not implemented)
-#define MOVE_EMBARGO 431
 #define MOVE_GRAVITY 432
 #define MOVE_GUARD_SWAP 433
 #define MOVE_ACUPRESSURE 434
@@ -470,7 +470,7 @@
 #define MOVE_TRICK_ROOM 462
 #define MOVE_TRUMP_CARD 463
 #define MOVE_WAKE_UP_SLAP 464
-#define MOVE_WORRY_SEED 465
+#define MOVE_EMBARGO 465
 #define MOVE_CHATTER 466
 #define MOVE_COPYCAT 467
 

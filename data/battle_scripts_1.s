@@ -266,6 +266,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectShiftGear              @ EFFECT_SHIFT_GEAR
 	.4byte BattleScript_EffectQuiverDance            @ EFFECT_QUIVER_DANCE
 	.4byte BattleScript_EffectWorkUp                 @ EFFECT_WORK_UP
+	.4byte BattleScript_EffectWorrySeed              @ EFFECT_WORRY_SEED
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -4866,3 +4867,15 @@ BattleScript_ActionSelectionItemsCantBeUsed::
 BattleScript_FlushMessageBox::
 	printstring STRINGID_EMPTYSTRING3
 	return
+
+BattleScript_EffectWorrySeed::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	tryGiveInsomnia BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNGOTINSOMNIA
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

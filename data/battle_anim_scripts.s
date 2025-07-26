@@ -452,8 +452,8 @@ gBattleAnims_Moves::
     .4byte Move_GASTRO_ACID
     .4byte Move_HAMMER_ARM
     .4byte Move_SEED_FLARE
+    .4byte Move_WORRY_SEED
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -1152,6 +1152,7 @@ FireBlastCross:
 	return
 
 Move_LEECH_SEED:
+Move_WORRY_SEED:
 	loadspritegfx ANIM_TAG_SEED
 	playsewithpan SE_M_POISON_POWDER, SOUND_PAN_ATTACKER
 	createsprite gLeechSeedSpriteTemplate, ANIM_TARGET, 2, 15, 0, 0, 24, 35, -32

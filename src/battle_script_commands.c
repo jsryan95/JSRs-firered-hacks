@@ -9234,6 +9234,21 @@ void BS_tryApplyGastroAcid(void)
     }
 }
 
+void BS_tryGiveInsomnia(void)
+{
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_TRUANT
+            || gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gBattleMons[gBattlerTarget].ability = ABILITY_INSOMNIA;
+
+        gBattlescriptCurrInstr += 9;
+    }
+}
+
 static void Cmd_tryimprison(void)
 {
     if ((gstatuses4[gBattlerAttacker] & STATUS4_IMPRISONED_OTHERS))

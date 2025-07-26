@@ -477,4 +477,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_SHIFT_GEAR] = _("SHIFT GEAR"),
     [MOVE_QUIVER_DANCE] = _("QUIVER DANCE"),
     [MOVE_WORK_UP] = _("WORK UP"),
+    [MOVE_WORRY_SEED] = _("WORRY SEED"),
 };

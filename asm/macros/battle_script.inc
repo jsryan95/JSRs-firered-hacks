@@ -1418,3 +1418,8 @@
 	callnative BS_tryApplyGastroAcid
 	.4byte \onFail
 	.endm
+
+	.macro tryGiveInsomnia onFail:req
+	callnative BS_tryGiveInsomnia
+	.4byte \onFail
+	.endm
