@@ -287,7 +287,6 @@ static void Cmd_scaledamagebyhealthratio(void);
 static void Cmd_scaleDamageByTargetHealthRatio(void);
 static void Cmd_scaleGyroBallDamage(void);
 static void Cmd_tryswapabilities(void);
-static void Cmd_tryApplyGastroAcid(void);
 static void Cmd_tryimprison(void);
 static void Cmd_trysetgrudge(void);
 static void Cmd_weightdamagecalculation(void);
@@ -317,6 +316,7 @@ static void Cmd_subattackerhpbydmg(void);
 static void Cmd_removeattackerstatus1(void);
 static void Cmd_finishaction(void);
 static void Cmd_finishturn(void);
+static void Cmd_callnative(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -575,7 +575,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_scaleDamageByTargetHealthRatio,          //0xFC
     Cmd_scaleGyroBallDamage,                     //0xFD
     Cmd_setMiracleEye,                           //0xFE
-    Cmd_tryApplyGastroAcid                       //0xFF
+    Cmd_callnative                               //0xFF
 };
 
 struct StatFractions
@@ -9214,17 +9214,23 @@ static void Cmd_tryswapabilities(void)
     }
 }
 
-static void Cmd_tryApplyGastroAcid(void)
+static void Cmd_callnative(void)
+{
+    void (*func)() = (void *)T1_READ_PTR(gBattlescriptCurrInstr + 1);
+    func();
+}
+
+void BS_tryApplyGastroAcid(void)
 {
     if (gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
      {
-         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
      }
     else
     {
         gBattleMons[gBattlerTarget].status3 |= STATUS3_GASTRO_ACID;
 
-        gBattlescriptCurrInstr += 5;
+        gBattlescriptCurrInstr += 9;
     }
 }
 

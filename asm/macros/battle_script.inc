@@ -1409,7 +1409,12 @@
 	.byte 0xFE
 	.endm
 
-	.macro tryApplyGastroAcid param0:req
-	.byte 0xFF
-	.4byte \param0
+	.macro callnative func:req
+	.byte 0xff
+	.4byte \func
+	.endm
+
+	.macro tryApplyGastroAcid onFail:req
+	callnative BS_tryApplyGastroAcid
+	.4byte \onFail
 	.endm
