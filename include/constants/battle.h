@@ -286,7 +286,8 @@
 #define MOVE_EFFECT_SPEED_TWO_DOWN      60
 #define MOVE_EFFECT_DEF_SP_DEF_DOWN     61
 #define MOVE_EFFECT_SPEED_DOWN          62
-#define NUM_MOVE_EFFECTS                63
+#define MOVE_EFFECT_RECOIL_50           63
+#define NUM_MOVE_EFFECTS                64
 
 #define MOVE_EFFECT_AFFECTS_USER        (1 << 6) // 64
 #define MOVE_EFFECT_CERTAIN             (1 << 7) // 128

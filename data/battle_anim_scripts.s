@@ -453,8 +453,8 @@ gBattleAnims_Moves::
     .4byte Move_HAMMER_ARM
     .4byte Move_SEED_FLARE
     .4byte Move_WORRY_SEED
+    .4byte Move_HEAD_SMASH
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -534,12 +534,12 @@ gBattleAnims_Moves::
 	.4byte Move_HEX
 	.4byte Move_ACROBATICS
 	.4byte Move_ENTRAINMENT
+	.4byte Move_ELECTRO_BALL
+	.4byte Move_HEAVY_SLAM
+	.4byte Move_HEAT_CRASH
+	.4byte Move_VENOSHOCK
+	.4byte Move_SHELL_SMASH
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -833,6 +833,8 @@ Move_TACKLE:
 	end
 
 Move_BODY_SLAM:
+Move_HEAVY_SLAM:
+Move_HEAT_CRASH:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8
@@ -1028,6 +1030,7 @@ Move_DOUBLE_EDGE:
 Move_BRAVE_BIRD:
 Move_GIGA_IMPACT:
 Move_WOOD_HAMMER:
+Move_HEAD_SMASH:
 	loadspritegfx ANIM_TAG_IMPACT
 	playsewithpan SE_M_SWIFT, SOUND_PAN_ATTACKER
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_ATTACKER, 4, 2, RGB_WHITE, 10, RGB_BLACK, 0
@@ -1337,6 +1340,7 @@ Move_THUNDER_SHOCK:
 	end
 
 Move_THUNDERBOLT:
+Move_ELECTRO_BALL:
 	loadspritegfx ANIM_TAG_SPARK
 	loadspritegfx ANIM_TAG_SHOCK_3
 	loadspritegfx ANIM_TAG_SPARK_2
@@ -5057,6 +5061,7 @@ Move_LEAF_BLADE:
 
 Move_DRAGON_DANCE:
 Move_SHIFT_GEAR:
+Move_SHELL_SMASH:
 	loadspritegfx ANIM_TAG_HOLLOW_ORB
 	monbg ANIM_ATTACKER
 	splitbgprio ANIM_ATTACKER
@@ -6710,6 +6715,7 @@ SludgeBombProjectile:
 Move_ACID:
 Move_GASTRO_ACID:
 Move_ACID_SPRAY:
+Move_VENOSHOCK:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	monbg ANIM_DEF_PARTNER
 	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, 0, 0

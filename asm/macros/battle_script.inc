@@ -1441,3 +1441,15 @@
 	callnative BS_tryGiveAbility
 	.4byte \onFail
 	.endm
+
+	.macro setElectroBallDamage
+    callnative BS_setElectroBallDamage
+    .endm
+
+	.macro setHeavySlamDamage
+    callnative BS_setHeavySlamDamage
+    .endm
+
+	.macro doubleDamageDealtIfTargetPoisoned
+    callnative BS_doubleDamageDealtIfTargetPoisoned
+    .endm

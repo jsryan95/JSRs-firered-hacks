@@ -664,6 +664,7 @@ static const u8 *const sMoveEffectBS_Ptrs[] =
     [MOVE_EFFECT_REMOVE_PARALYSIS] = BattleScript_MoveEffectSleep,
     [MOVE_EFFECT_ATK_DEF_DOWN]     = BattleScript_MoveEffectSleep,
     [MOVE_EFFECT_RECOIL_33]        = BattleScript_MoveEffectRecoil,
+    [MOVE_EFFECT_RECOIL_50]        = BattleScript_MoveEffectRecoil,
 };
 
 static const struct WindowTemplate sUnusedWinTemplate =
@@ -2739,6 +2740,14 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 break;
             case MOVE_EFFECT_RECOIL_33: // Double Edge
                 gBattleMoveDamage = gHpDealt / 3;
+                if (gBattleMoveDamage == 0)
+                    gBattleMoveDamage = 1;
+
+                BattleScriptPush(gBattlescriptCurrInstr + 1);
+                gBattlescriptCurrInstr = sMoveEffectBS_Ptrs[gBattleCommunication[MOVE_EFFECT_BYTE]];
+                break;
+            case MOVE_EFFECT_RECOIL_50: // Head Smash
+                gBattleMoveDamage = gHpDealt / 2;
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;
 
@@ -10068,6 +10077,24 @@ static void Cmd_finishturn(void)
     gCurrentTurnActionNumber = gBattlersCount;
 }
 
+static void BSHelper_tryGiveAbility(u8 abilityToGive)
+{
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_TRUANT
+            || gBattleMons[gBattlerTarget].ability == abilityToGive
+            || abilityToGive == ABILITY_TRACE
+            || abilityToGive == ABILITY_FORECAST
+            || gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gBattleMons[gBattlerTarget].ability = abilityToGive;
+        gLastUsedAbility = abilityToGive;
+        gBattlescriptCurrInstr += 9;
+    }
+}
+
 static void Cmd_callnative(void)
 {
     void (*func)() = (void *)T1_READ_PTR(gBattlescriptCurrInstr + 1);
@@ -10090,17 +10117,7 @@ void BS_tryApplyGastroAcid(void)
 
 void BS_tryGiveInsomnia(void)
 {
-    if (gBattleMons[gBattlerTarget].ability == ABILITY_TRUANT
-            || gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-    {
-        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
-    }
-    else
-    {
-        gBattleMons[gBattlerTarget].ability = ABILITY_INSOMNIA;
-
-        gBattlescriptCurrInstr += 9;
-    }
+    BSHelper_tryGiveAbility(ABILITY_INSOMNIA);
 }
 
 void BS_tryMakeWaterType(void)
@@ -10120,7 +10137,7 @@ void BS_tryMakeWaterType(void)
 
 void BS_doubleDamageDealtIfTargetStatus(void)
 {
-    if (gBattleMons[gBattlerTarget].status1)
+    if (gBattleMons[gBattlerTarget].status1 & STATUS1_ANY)
     {
         gBattleScripting.dmgMultiplier = 2;
     }
@@ -10140,17 +10157,51 @@ void BS_doubleDamageDealtIfNoItem(void)
 
 void BS_tryGiveAbility(void)
 {
-    if (gBattleMons[gBattlerTarget].ability == ABILITY_TRUANT
-            || gBattleMons[gBattlerAttacker].ability == ABILITY_TRACE
-            || gBattleMons[gBattlerAttacker].ability == ABILITY_FORECAST
-            || gBattleMons[gBattlerTarget].ability == gBattleMons[gBattlerAttacker].ability)
-    {
-        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
-    }
+    BSHelper_tryGiveAbility(gBattleMons[gBattlerAttacker].ability);
+}
+
+void BS_setElectroBallDamage(void)
+{
+    u32 attackerSpeed = getEffectiveSpeed(gBattlerAttacker);
+    u32 targetSpeed = getEffectiveSpeed(gBattlerTarget);
+
+    if (targetSpeed > attackerSpeed)
+        gDynamicBasePower = 40;
+    else if (targetSpeed * 2 > attackerSpeed)
+        gDynamicBasePower = 60;
+    else if (targetSpeed * 3 > attackerSpeed)
+        gDynamicBasePower = 80;
+    else if (targetSpeed * 4 > attackerSpeed)
+        gDynamicBasePower = 120;
     else
+        gDynamicBasePower = 150;
+    gBattlescriptCurrInstr += 5;
+}
+
+void BS_setHeavySlamDamage(void)
+{
+    u16 attackerWeight = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBattlerAttacker].species), 1);
+    u16 targetWeight = GetPokedexHeightWeight(SpeciesToNationalPokedexNum(gBattleMons[gBattlerTarget].species), 1);
+
+    if (targetWeight * 2 > attackerWeight)
+        gDynamicBasePower = 40;
+    else if (targetWeight * 3 > attackerWeight)
+        gDynamicBasePower = 60;
+    else if (targetWeight * 4 > attackerWeight)
+        gDynamicBasePower = 80;
+    else if (targetWeight * 5 > attackerWeight)
+        gDynamicBasePower = 100;
+    else
+        gDynamicBasePower = 120;
+    gBattlescriptCurrInstr += 5;
+}
+
+void BS_doubleDamageDealtIfTargetPoisoned(void)
+{
+    if (gBattleMons[gBattlerTarget].status1 & STATUS1_PSN_ANY)
     {
-        gBattleMons[gBattlerTarget].ability = gBattleMons[gBattlerAttacker].ability;
-        gLastUsedAbility = gBattleMons[gBattlerAttacker].ability;
-        gBattlescriptCurrInstr += 9;
+        gBattleScripting.dmgMultiplier = 2;
     }
+
+    gBattlescriptCurrInstr+=5;
 }

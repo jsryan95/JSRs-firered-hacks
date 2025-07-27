@@ -474,6 +474,11 @@ const u8 gMoveDescription_Hurricane[] = _("The user attacks\nby wrapping the foe
 const u8 gMoveDescription_Hex[] = _("Power doubles if\nthe foe is\naffected by a\nstatus problem.");
 const u8 gMoveDescription_Acrobatics[] = _("Power doubles if\nthe user is not\nholding an item.");
 const u8 gMoveDescription_Entrainment[] = _("Changes the\ntarget's ability\nto match the\nuser's.");
+const u8 gMoveDescription_HeadSmash[] = _("A life-endangering\nheadbutt at full\npower. The user\ntakes terrible damage.");
+const u8 gMoveDescription_ElectroBall[] = _("Hurls an electric\norb at the target.\nPower increases when\nthe user is faster.");
+const u8 gMoveDescription_HeavySlam[] = _("The more the user\noutweighs the\ntarget, the\ngreater the damage.");
+const u8 gMoveDescription_Venoshock[] = _("Drenches the foe in\na special liquid.\nPower doubles if\nthe foe is poisoned.");
+const u8 gMoveDescription_ShellSmash[] = _("Lowers DEFENSE and\nSP. DEF but sharply\nraises ATTACK,\nSP. ATK and SPEED.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -961,4 +966,10 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_ENTRAINMENT - 1] = gMoveDescription_Entrainment,
     [MOVE_PSYCHO_BREAK - 1] = gMoveDescription_BrickBreak,
     [MOVE_STORM_BREAK - 1] = gMoveDescription_BrickBreak,
+    [MOVE_HEAD_SMASH - 1] = gMoveDescription_HeadSmash,
+    [MOVE_ELECTRO_BALL - 1] = gMoveDescription_ElectroBall,
+    [MOVE_HEAVY_SLAM - 1] = gMoveDescription_HeavySlam,
+    [MOVE_HEAT_CRASH - 1] = gMoveDescription_HeavySlam,
+    [MOVE_VENOSHOCK - 1] = gMoveDescription_Venoshock,
+    [MOVE_SHELL_SMASH - 1] = gMoveDescription_ShellSmash,
 };
