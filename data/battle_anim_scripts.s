@@ -594,6 +594,8 @@ gBattleAnims_Moves::
     .4byte Move_SOUL_STEALER
     .4byte Move_TECTONIC_CRASH
     .4byte Move_GLACIAL_TACKLE
+    .4byte Move_PSYCHO_BREAK
+    .4byte Move_STORM_BREAK
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -4206,6 +4208,8 @@ Move_RECYCLE:
 	end
 
 Move_BRICK_BREAK:
+Move_PSYCHO_BREAK:
+Move_STORM_BREAK:
 	loadspritegfx ANIM_TAG_BLUE_LIGHT_WALL
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET

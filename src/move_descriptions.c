@@ -959,4 +959,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_HEX - 1] = gMoveDescription_Hex,
     [MOVE_ACROBATICS - 1] = gMoveDescription_Acrobatics,
     [MOVE_ENTRAINMENT - 1] = gMoveDescription_Entrainment,
+    [MOVE_PSYCHO_BREAK - 1] = gMoveDescription_BrickBreak,
+    [MOVE_STORM_BREAK - 1] = gMoveDescription_BrickBreak,
 };
