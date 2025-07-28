@@ -1348,7 +1348,8 @@ static void Cmd_typecalc(void)
     {
         while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
         {
-            if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
+            if (TYPE_EFFECT_ATK_TYPE(i) == moveType
+                    || (gBattleMoves[gCurrentMove].effect == EFFECT_SPIRIT_FLARE && TYPE_EFFECT_ATK_TYPE(i) == TYPE_GHOST))
             {
                 // check type1
                 if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[gBattlerTarget].type1)

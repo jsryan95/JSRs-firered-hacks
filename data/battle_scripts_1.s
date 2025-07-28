@@ -287,6 +287,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectTailwind               @ EFFECT_TAILWIND
 	.4byte BattleScript_EffectTrailblazer            @ EFFECT_TRAILBLAZER
 	.4byte BattleScript_EffectFlashFreeze            @ EFFECT_FLASH_FREEZE
+	.4byte BattleScript_EffectBurnHit                @ EFFECT_SPIRIT_FLARE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler

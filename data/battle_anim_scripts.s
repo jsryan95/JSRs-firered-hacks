@@ -598,6 +598,7 @@ gBattleAnims_Moves::
     .4byte Move_STORM_BREAK
     .4byte Move_TRAILBLAZER
     .4byte Move_FLASH_FREEZE
+    .4byte Move_SPIRIT_FLARE
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -8865,6 +8866,7 @@ Move_TRI_ATTACK:
 	end
 
 Move_WILL_O_WISP:
+Move_SPIRIT_FLARE:
 	loadspritegfx ANIM_TAG_WISP_FIRE
 	loadspritegfx ANIM_TAG_WISP_ORB
 	monbg ANIM_DEF_PARTNER
