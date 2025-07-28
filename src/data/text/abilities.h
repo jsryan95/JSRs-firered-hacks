@@ -100,6 +100,7 @@ static const u8 sSkillLinkDescription[] = _("Multi-hit attacks hit more times.")
 static const u8 sPoisonHealDescription[] = _("Recovers HP while poisoned.");
 static const u8 sTechnicianDescription[] = _("Powers up weaker moves.");
 static const u8 sBadDreamsDescription[] = _("Gradually hurts sleeping foes.");
+static const u8 sMotorDriveDescription[] = _("Absorbs electricity to raise SPEED.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -207,6 +208,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_POISON_HEAL] = sPoisonHealDescription,
     [ABILITY_TECHNICIAN] = sTechnicianDescription,
     [ABILITY_BAD_DREAMS] = sBadDreamsDescription,
+    [ABILITY_MOTOR_DRIVE] = sMotorDriveDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -315,4 +317,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_POISON_HEAL] = _("POISON HEAL"),
     [ABILITY_TECHNICIAN] = _("TECHNICIAN"),
     [ABILITY_BAD_DREAMS] = _("BAD DREAMS"),
+    [ABILITY_MOTOR_DRIVE] = _("MOTOR DRIVE"),
 };

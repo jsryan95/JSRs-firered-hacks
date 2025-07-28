@@ -273,6 +273,7 @@ static const u8 sText_PkmnRaisedSpeed[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {
 static const u8 sText_PkmnProtectedBy[] = _("{B_DEF_NAME_WITH_PREFIX} was protected\nby {B_DEF_ABILITY}!");
 static const u8 sText_PkmnPreventsUsage[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents {B_ATK_NAME_WITH_PREFIX}\lfrom using {B_CURRENT_MOVE}!");
 static const u8 sText_PkmnRestoredHPUsing[] = _("{B_DEF_NAME_WITH_PREFIX} restored HP\nusing its {B_DEF_ABILITY}!");
+static const u8 sText_PkmnRaisedSpeedUsing[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nraised its SPEED!");
 static const u8 sText_PkmnsXMadeYUseless[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade {B_CURRENT_MOVE} useless!");
 static const u8 sText_PkmnChangedTypeWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade it the {B_BUFF1} type!");
 static const u8 sText_PkmnPreventsParalysisWith[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents paralysis!");
@@ -911,6 +912,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNGAVEABILITY - BATTLESTRINGS_TABLE_START]            = sText_PkmnGaveAbility,
     [STRINGID_PKMNWASWOKENUP - BATTLESTRINGS_TABLE_START]                = sText_PkmnWasWokenUp,
     [STRINGID_PKMNCOPIEDTYPE - BATTLESTRINGS_TABLE_START]                = sText_PkmnCopiedType,
+    [STRINGID_PKMNRAISEDSPEEDUSING - BATTLESTRINGS_TABLE_START]          = sText_PkmnRaisedSpeedUsing,
 };
 
 const u16 gMissStringIds[] =

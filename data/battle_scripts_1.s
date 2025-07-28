@@ -4552,6 +4552,22 @@ BattleScript_MoveHPDrain::
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd
 
+BattleScript_MotorDriveBoost_PPLoss::
+	ppreduce
+BattleScript_MotorDriveBoost::
+    jumpifstat BS_TARGET, CMP_EQUAL, STAT_SPEED, MAX_STAT_STAGE, BattleScript_MonMadeMoveUseless
+	attackstring
+	pause B_WAIT_TIME_SHORT
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	playstatchangeanimation BS_TARGET, BIT_SPEED, 0
+	setstatchanger STAT_SPEED, 1, FALSE
+	statbuffchange MOVE_EFFECT_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printstring STRINGID_PKMNRAISEDSPEEDUSING
+	waitmessage B_WAIT_TIME_LONG
+	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
+	goto BattleScript_MoveEnd
+
 BattleScript_MonMadeMoveUseless_PPLoss::
 	ppreduce
 BattleScript_MonMadeMoveUseless::
