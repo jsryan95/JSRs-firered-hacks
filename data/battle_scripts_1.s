@@ -285,6 +285,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCottonSpore            @ EFFECT_COTTON_SPORE
 	.4byte BattleScript_EffectKinesis                @ EFFECT_KINESIS
 	.4byte BattleScript_EffectTailwind               @ EFFECT_TAILWIND
+	.4byte BattleScript_EffectTrailblazer            @ EFFECT_TRAILBLAZER
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5255,3 +5256,31 @@ BattleScript_EffectTailwind::
 	printstring STRINGID_PKMNTAILWINDSTARTED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectTrailblazer::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	trySetTailwind BattleScript_TrailblazerEnd
+	printstring STRINGID_PKMNTAILWINDSTARTED
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_TrailblazerEnd::
+	tryfaintmon BS_TARGET
+	moveendall
+	end

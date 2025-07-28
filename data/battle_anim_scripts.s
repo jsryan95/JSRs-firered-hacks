@@ -596,6 +596,7 @@ gBattleAnims_Moves::
     .4byte Move_GLACIAL_TACKLE
     .4byte Move_PSYCHO_BREAK
     .4byte Move_STORM_BREAK
+    .4byte Move_TRAILBLAZER
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -904,6 +905,7 @@ ScreechRing:
 Move_FLAME_WHEEL:
 Move_FLARE_BLITZ:
 Move_FLAME_CHARGE:
+Move_TRAILBLAZER:
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	monbg ANIM_DEF_PARTNER
 	splitbgprio_foes ANIM_TARGET
@@ -6959,17 +6961,16 @@ AeroblastBeam:
 	delay 3
 	return
 
-
 Move_TAILWIND:
 	monbg ANIM_DEF_PARTNER
 	call SetSkyBg
 	splitbgprio ANIM_TARGET
 	setalpha 12, 8
 	playsewithpan SE_M_GUST, SOUND_PAN_ATTACKER
-	delay 120
+	delay 90
+	stopsound
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
-	delay 0
 	call UnsetSkyBg
 	end
 
