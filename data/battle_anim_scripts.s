@@ -454,9 +454,9 @@ gBattleAnims_Moves::
     .4byte Move_SEED_FLARE
     .4byte Move_WORRY_SEED
     .4byte Move_HEAD_SMASH
+    .4byte Move_WAKE_UP_SLAP
+    .4byte Move_PUNISHMENT
     @ space for generation 4 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -669,6 +669,7 @@ Move_DUAL_CHOP:
 	end
 
 Move_DOUBLE_SLAP:
+Move_WAKE_UP_SLAP:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	setalpha 12, 8
@@ -10381,6 +10382,7 @@ Move_PSYCHO_BOOST:
 	end
 
 Move_KNOCK_OFF:
+Move_PUNISHMENT:
 	loadspritegfx ANIM_TAG_SLAM_HIT_2
 	loadspritegfx ANIM_TAG_IMPACT
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 6

@@ -277,6 +277,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHeavySlam              @ EFFECT_HEAVY_SLAM
 	.4byte BattleScript_EffectVenoshock              @ EFFECT_VENOSHOCK
 	.4byte BattleScript_EffectShellSmash             @ EFFECT_SHELL_SMASH
+	.4byte BattleScript_EffectWakeUpSlap             @ EFFECT_WAKE_UP_SLAP
+	.4byte BattleScript_EffectPunishment             @ EFFECT_PUNISHMENT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -4287,6 +4289,12 @@ BattleScript_TargetPRLZHeal::
 	updatestatusicon BS_TARGET
 	return
 
+BattleScript_TargetSleepHeal::
+	printstring STRINGID_PKMNWASWOKENUP
+	waitmessage B_WAIT_TIME_LONG
+	updatestatusicon BS_TARGET
+	return
+
 BattleScript_TooScaredToMove::
 	printstring STRINGID_MONTOOSCAREDTOMOVE
 	waitmessage B_WAIT_TIME_LONG
@@ -4990,3 +4998,13 @@ BattleScript_ShellSmashTrySpd::
 	printfromtable gStatUpStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectWakeUpSlap::
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_EffectHit
+	setmoveeffect MOVE_EFFECT_REMOVE_SLEEP | MOVE_EFFECT_CERTAIN
+	jumpifstatus BS_TARGET, STATUS1_SLEEP, BattleScript_SmellingsaltDoubleDmg
+	goto BattleScript_EffectHit
+
+BattleScript_EffectPunishment::
+	setPunishmentDamage
+	goto BattleScript_EffectHit

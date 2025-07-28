@@ -1453,3 +1453,7 @@
 	.macro doubleDamageDealtIfTargetPoisoned
     callnative BS_doubleDamageDealtIfTargetPoisoned
     .endm
+
+	.macro setPunishmentDamage
+    callnative BS_setPunishmentDamage
+    .endm

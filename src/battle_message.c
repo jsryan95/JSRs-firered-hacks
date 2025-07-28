@@ -162,6 +162,7 @@ static const u8 sText_PkmnEvadedAttack[] = _("{B_DEF_NAME_WITH_PREFIX} evaded\nt
 static const u8 sText_PkmnSappedByLeechSeed[] = _("{B_ATK_NAME_WITH_PREFIX}'s health is\nsapped by LEECH SEED!");
 static const u8 sText_PkmnFastAsleep[] = _("{B_ATK_NAME_WITH_PREFIX} is fast\nasleep.");
 static const u8 sText_PkmnWokeUp[] = _("{B_ATK_NAME_WITH_PREFIX} woke up!");
+static const u8 sText_PkmnWasWokenUp[] = _("{B_DEF_NAME_WITH_PREFIX} was\nwoken up!");
 static const u8 sText_PkmnUproarKeptAwake[] = _("But {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s UPROAR\nkept it awake!");
 static const u8 sText_PkmnWokeUpInUproar[] = _("{B_ATK_NAME_WITH_PREFIX} woke up\nin the UPROAR!");
 static const u8 sText_PkmnCausedUproar[] = _("{B_ATK_NAME_WITH_PREFIX} caused\nan UPROAR!");
@@ -907,6 +908,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNBADDREAMS - BATTLESTRINGS_TABLE_START]                 = sText_PkmnBadDreams,
     [STRINGID_PKMNGOTINSOMNIA - BATTLESTRINGS_TABLE_START]               = sText_PkmnGotInsomnia,
     [STRINGID_PKMNGAVEABILITY - BATTLESTRINGS_TABLE_START]            = sText_PkmnGaveAbility,
+    [STRINGID_PKMNWASWOKENUP - BATTLESTRINGS_TABLE_START]                = sText_PkmnWasWokenUp,
 };
 
 const u16 gMissStringIds[] =

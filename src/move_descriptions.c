@@ -479,6 +479,8 @@ const u8 gMoveDescription_ElectroBall[] = _("Hurls an electric\norb at the targe
 const u8 gMoveDescription_HeavySlam[] = _("The more the user\noutweighs the\ntarget, the\ngreater the damage.");
 const u8 gMoveDescription_Venoshock[] = _("Drenches the foe in\na special liquid.\nPower doubles if\nthe foe is poisoned.");
 const u8 gMoveDescription_ShellSmash[] = _("Lowers DEFENSE and\nSP. DEF but sharply\nraises ATTACK,\nSP. ATK and SPEED.");
+const u8 gMoveDescription_WakeUpSlap[] = _("Inflicts high\ndamage on a\nsleeping foe, but\nalso wakes it up.");
+const u8 gMoveDescription_Punishment[] = _("This attack's power\nincreases the more\nthe foe has\nraised its stats.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -972,4 +974,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_HEAT_CRASH - 1] = gMoveDescription_HeavySlam,
     [MOVE_VENOSHOCK - 1] = gMoveDescription_Venoshock,
     [MOVE_SHELL_SMASH - 1] = gMoveDescription_ShellSmash,
+    [MOVE_WAKE_UP_SLAP - 1] = gMoveDescription_WakeUpSlap,
+    [MOVE_PUNISHMENT - 1] = gMoveDescription_Punishment,
 };

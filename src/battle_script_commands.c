@@ -2730,6 +2730,23 @@ void SetMoveEffect(bool8 primary, u8 certain)
                     gBattlescriptCurrInstr = BattleScript_TargetPRLZHeal;
                 }
                 break;
+            case MOVE_EFFECT_REMOVE_SLEEP: // Wake-up Slap
+                if (!(gBattleMons[gBattlerTarget].status1 & STATUS1_SLEEP))
+                {
+                    gBattlescriptCurrInstr++;
+                }
+                else
+                {
+                    gBattleMons[gBattlerTarget].status1 &= ~STATUS1_SLEEP;
+
+                    gActiveBattler = gBattlerTarget;
+                    BtlController_EmitSetMonData(BUFFER_A, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[gActiveBattler].status1), &gBattleMons[gActiveBattler].status1);
+                    MarkBattlerForControllerExec(gActiveBattler);
+
+                    BattleScriptPush(gBattlescriptCurrInstr + 1);
+                    gBattlescriptCurrInstr = BattleScript_TargetSleepHeal;
+                }
+                break;
             case MOVE_EFFECT_ATK_DEF_DOWN: // SuperPower
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_AtkDefDown;
@@ -10204,4 +10221,21 @@ void BS_doubleDamageDealtIfTargetPoisoned(void)
     }
 
     gBattlescriptCurrInstr+=5;
+}
+
+void BS_setPunishmentDamage(void)
+{
+    u8 i;
+    gDynamicBasePower = 60;
+
+    for (i = 0; i < NUM_BATTLE_STATS; i++)
+    {
+        if (gBattleMons[gBattlerTarget].statStages[i] > 0)
+            gDynamicBasePower += (20 * gBattleMons[gBattlerTarget].statStages[i]);
+    }
+
+    if (gDynamicBasePower > 200)
+        gDynamicBasePower = 200;
+
+    gBattlescriptCurrInstr += 5;
 }
