@@ -1346,12 +1346,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_MEDITATE] =
     {
-        .effect = EFFECT_ATTACK_UP,
+        .effect = EFFECT_MEDITATE,
         .power = 0,
         .type = TYPE_PSYCHIC,
         .category = CATEGORY_STATUS,
         .accuracy = 0,
-        .pp = 40,
+        .pp = 20,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
         .priority = 0,
@@ -1878,12 +1878,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_KINESIS] =
     {
-        .effect = EFFECT_ACCURACY_DOWN,
+        .effect = EFFECT_KINESIS,
         .power = 0,
         .type = TYPE_PSYCHIC,
         .category = CATEGORY_STATUS,
-        .accuracy = 80,
-        .pp = 15,
+        .accuracy = 100,
+        .pp = 20,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -2494,12 +2494,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_COTTON_SPORE] =
     {
-        .effect = EFFECT_SPEED_DOWN_2,
+        .effect = EFFECT_COTTON_SPORE,
         .power = 0,
         .type = TYPE_GRASS,
         .category = CATEGORY_STATUS,
-        .accuracy = 85,
-        .pp = 40,
+        .accuracy = 100,
+        .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -4160,7 +4160,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_FEATHER_DANCE] =
     {
-        .effect = EFFECT_ATTACK_DOWN_2,
+        .effect = EFFECT_FEATHER_DANCE,
         .power = 0,
         .type = TYPE_FLYING,
         .category = CATEGORY_STATUS,
