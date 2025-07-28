@@ -1094,6 +1094,8 @@ static void Cmd_accuracycheck(void)
             calc = (calc * 80) / 100;
         if (hasActiveAbility(gBattlerAttacker, ABILITY_HUSTLE) && IS_MOVE_PHYSICAL(move))
             calc = (calc * 80) / 100; // 1.2 hustle loss
+        if (hasActiveAbility(gBattlerTarget, ABILITY_TANGLED_FEET) && (gBattleMons[gBattlerTarget].status2 & STATUS2_CONFUSION))
+            calc /= 2;
 
         if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)
         {
