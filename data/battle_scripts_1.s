@@ -2616,8 +2616,32 @@ BattleScript_EffectSuperpower::
 	goto BattleScript_EffectHit
 
 BattleScript_EffectCloseCombat::
-	setmoveeffect MOVE_EFFECT_DEF_SP_DEF_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
-	goto BattleScript_EffectHit
+    attackcanceler
+    accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+    attackstring
+    ppreduce
+    critcalc
+    damagecalc
+    typecalc
+    adjustnormaldamage
+    attackanimation
+    waitanimation
+    effectivenesssound
+    hitanimation BS_TARGET
+    waitstate
+    healthbarupdate BS_TARGET
+    datahpupdate BS_TARGET
+    critmessage
+    waitmessage B_WAIT_TIME_LONG
+    resultmessage
+    waitmessage B_WAIT_TIME_LONG
+    setmoveeffect MOVE_EFFECT_DEF_MINUS_1
+    seteffectwithchance
+    tryfaintmon BS_TARGET
+    setmoveeffect MOVE_EFFECT_DEF_MINUS_1 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+    seteffectwithchance
+    moveendall
+    end
 
 BattleScript_EffectMagicCoat::
 	attackcanceler
