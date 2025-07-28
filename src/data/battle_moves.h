@@ -6929,4 +6929,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED,
     },
+
+    [MOVE_INCINERATE] =
+    {
+        .effect = EFFECT_KNOCK_OFF,
+        .power = 20,
+        .type = TYPE_FIRE,
+        .category = CATEGORY_SPECIAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+    },
 };

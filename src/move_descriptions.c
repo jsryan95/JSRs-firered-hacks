@@ -482,6 +482,7 @@ const u8 gMoveDescription_ShellSmash[] = _("Lowers DEFENSE and\nSP. DEF but shar
 const u8 gMoveDescription_WakeUpSlap[] = _("Inflicts high\ndamage on a\nsleeping foe, but\nalso wakes it up.");
 const u8 gMoveDescription_Punishment[] = _("This attack's power\nincreases the more\nthe foe has\nraised its stats.");
 const u8 gMoveDescription_ReflectType[] = _("The user changes\nits type to match\nthe target.");
+const u8 gMoveDescription_Incinerate[] = _("Scorches the\nfoe's held item to\nprevent its use\nduring the battle.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -978,4 +979,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_WAKE_UP_SLAP - 1] = gMoveDescription_WakeUpSlap,
     [MOVE_PUNISHMENT - 1] = gMoveDescription_Punishment,
     [MOVE_REFLECT_TYPE - 1] = gMoveDescription_ReflectType,
+    [MOVE_INCINERATE - 1] = gMoveDescription_Incinerate,
 };

@@ -540,8 +540,8 @@ gBattleAnims_Moves::
 	.4byte Move_VENOSHOCK
 	.4byte Move_SHELL_SMASH
 	.4byte Move_REFLECT_TYPE
+	.4byte Move_INCINERATE
 	@ space for generation 5 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -1174,6 +1174,7 @@ Move_WORRY_SEED:
 	end
 
 Move_EMBER:
+Move_INCINERATE:
 	loadspritegfx ANIM_TAG_SMALL_EMBER
 	loopsewithpan SE_M_EMBER, SOUND_PAN_ATTACKER, 5, 2
 	createsprite gEmberSpriteTemplate, ANIM_TARGET, 2, 20, 0, -16, 24, 20, 1
