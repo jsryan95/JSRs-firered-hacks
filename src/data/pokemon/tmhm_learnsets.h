@@ -18,7 +18,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -36,7 +36,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -59,7 +59,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -83,7 +83,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -107,7 +107,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -134,7 +134,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM47_STEEL_WING)
@@ -160,7 +160,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -185,7 +185,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -213,7 +213,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -242,7 +242,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -267,7 +267,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -284,7 +284,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -301,7 +301,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -319,7 +319,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -344,7 +344,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -371,7 +371,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -389,7 +389,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -407,7 +407,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -429,7 +429,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -452,7 +452,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -475,7 +475,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -499,7 +499,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -523,7 +523,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -548,7 +548,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -575,7 +575,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -602,7 +602,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -641,7 +641,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -668,7 +668,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -694,7 +694,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -732,7 +732,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -769,7 +769,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM49_SNATCH)
@@ -805,7 +805,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM49_SNATCH)
@@ -826,7 +826,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)),
@@ -846,7 +846,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)),
@@ -877,7 +877,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM49_SNATCH)
@@ -911,7 +911,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM49_SNATCH)
@@ -933,7 +933,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -956,7 +956,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -975,7 +975,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -993,7 +993,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -1012,7 +1012,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -1032,7 +1032,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1055,7 +1055,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1075,7 +1075,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1096,7 +1096,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1116,7 +1116,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1137,7 +1137,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1163,7 +1163,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1192,7 +1192,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1218,7 +1218,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -1247,7 +1247,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -1277,7 +1277,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1306,7 +1306,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1328,7 +1328,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1351,7 +1351,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1373,7 +1373,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1398,7 +1398,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1428,7 +1428,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1458,7 +1458,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1486,7 +1486,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1515,7 +1515,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1540,7 +1540,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1564,7 +1564,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1589,7 +1589,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1608,7 +1608,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1627,7 +1627,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1647,7 +1647,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1668,7 +1668,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1692,7 +1692,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1717,7 +1717,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -1739,7 +1739,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -1763,7 +1763,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -1781,7 +1781,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -1800,7 +1800,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -1828,7 +1828,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM48_SKILL_SWAP)
@@ -1862,7 +1862,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM48_SKILL_SWAP)
@@ -1885,7 +1885,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM05_FLASH)),
 
@@ -1903,7 +1903,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM05_FLASH)),
 
@@ -1917,7 +1917,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1934,7 +1934,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1953,7 +1953,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1973,7 +1973,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -1995,7 +1995,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2023,7 +2023,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)),
@@ -2051,7 +2051,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2070,7 +2070,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -2090,7 +2090,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -2112,7 +2112,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2135,7 +2135,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2162,7 +2162,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2187,7 +2187,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -2212,7 +2212,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2240,7 +2240,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2262,7 +2262,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2287,7 +2287,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2311,7 +2311,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
@@ -2331,7 +2331,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
@@ -2351,7 +2351,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2375,7 +2375,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2403,7 +2403,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2431,7 +2431,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2452,7 +2452,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2473,7 +2473,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2507,7 +2507,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2534,7 +2534,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2559,7 +2559,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2587,7 +2587,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2619,7 +2619,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2659,7 +2659,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM48_SKILL_SWAP)
@@ -2681,7 +2681,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2719,7 +2719,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2740,7 +2740,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -2760,7 +2760,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -2779,7 +2779,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -2799,7 +2799,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -2823,7 +2823,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)
@@ -2848,7 +2848,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM03_SURF)
@@ -2880,7 +2880,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2899,7 +2899,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2929,7 +2929,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2953,7 +2953,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2976,7 +2976,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -2999,7 +2999,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3030,7 +3030,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -3061,7 +3061,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -3090,7 +3090,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -3113,7 +3113,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         ),
 
@@ -3135,7 +3135,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -3159,7 +3159,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -3180,7 +3180,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)),
@@ -3205,7 +3205,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
@@ -3224,7 +3224,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3248,7 +3248,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3274,7 +3274,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3301,7 +3301,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3332,7 +3332,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3367,7 +3367,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -3391,7 +3391,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
@@ -3414,7 +3414,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
@@ -3437,7 +3437,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM50_OVERHEAT)
@@ -3465,7 +3465,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -3492,7 +3492,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -3527,7 +3527,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM47_STEEL_WING)
@@ -3575,7 +3575,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -3625,7 +3625,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3657,7 +3657,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -3678,7 +3678,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -3703,7 +3703,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -3723,7 +3723,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -3744,7 +3744,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -3769,7 +3769,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -3794,7 +3794,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -3820,7 +3820,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -3851,7 +3851,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -3881,7 +3881,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3911,7 +3911,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3933,7 +3933,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3955,7 +3955,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -3980,7 +3980,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4004,7 +4004,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4023,7 +4023,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4043,7 +4043,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4065,7 +4065,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4088,7 +4088,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -4112,7 +4112,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -4133,7 +4133,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -4159,7 +4159,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -4184,7 +4184,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -4208,7 +4208,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)
@@ -4237,7 +4237,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM47_STEEL_WING)
@@ -4262,7 +4262,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4288,7 +4288,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4310,7 +4310,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -4330,7 +4330,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -4353,7 +4353,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -4374,7 +4374,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -4396,7 +4396,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -4422,7 +4422,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -4447,7 +4447,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4472,7 +4472,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4494,7 +4494,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -4511,7 +4511,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -4529,7 +4529,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -4555,7 +4555,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4578,7 +4578,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -4599,7 +4599,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -4618,7 +4618,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4642,7 +4642,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -4672,7 +4672,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -4699,7 +4699,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM48_SKILL_SWAP)
@@ -4722,7 +4722,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM49_SNATCH)
@@ -4743,7 +4743,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4776,7 +4776,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM48_SKILL_SWAP)
@@ -4804,7 +4804,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4835,7 +4835,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4859,7 +4859,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -4881,7 +4881,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -4911,7 +4911,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4934,7 +4934,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -4960,7 +4960,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -4993,7 +4993,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5030,7 +5030,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5053,7 +5053,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -5072,7 +5072,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5095,7 +5095,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -5118,7 +5118,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5147,7 +5147,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5175,7 +5175,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5203,7 +5203,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5223,7 +5223,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -5245,7 +5245,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -5270,7 +5270,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -5295,7 +5295,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -5324,7 +5324,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -5347,7 +5347,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5373,7 +5373,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5395,7 +5395,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5415,7 +5415,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -5435,7 +5435,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5461,7 +5461,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5487,7 +5487,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5509,7 +5509,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -5529,7 +5529,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -5549,7 +5549,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -5575,7 +5575,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
@@ -5601,7 +5601,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5622,7 +5622,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5643,7 +5643,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5667,7 +5667,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5689,7 +5689,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5710,7 +5710,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -5740,7 +5740,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -5778,7 +5778,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM48_SKILL_SWAP)
@@ -5806,7 +5806,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -5832,7 +5832,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -5859,7 +5859,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -5883,7 +5883,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -5904,7 +5904,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -5939,7 +5939,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -5976,7 +5976,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM48_SKILL_SWAP)
@@ -6014,7 +6014,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM50_OVERHEAT)
@@ -6045,7 +6045,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM01_CUT)
@@ -6119,7 +6119,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -6145,7 +6145,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -6175,7 +6175,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -6196,7 +6196,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -6220,7 +6220,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -6247,7 +6247,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -6270,7 +6270,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -6295,7 +6295,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -6324,7 +6324,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -6348,7 +6348,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6371,7 +6371,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6397,7 +6397,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6425,7 +6425,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6453,7 +6453,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6477,7 +6477,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6499,7 +6499,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6523,7 +6523,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6553,7 +6553,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6577,7 +6577,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)
@@ -6600,7 +6600,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6627,7 +6627,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6650,7 +6650,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
@@ -6670,7 +6670,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6692,7 +6692,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
@@ -6708,7 +6708,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6726,7 +6726,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6746,7 +6746,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM49_SNATCH)
@@ -6770,7 +6770,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM49_SNATCH)
@@ -6798,7 +6798,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6822,7 +6822,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6844,7 +6844,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6867,7 +6867,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6890,7 +6890,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -6911,7 +6911,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -6936,7 +6936,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -6966,7 +6966,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -6993,7 +6993,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -7025,7 +7025,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -7055,7 +7055,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
@@ -7080,7 +7080,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM04_STRENGTH)
@@ -7103,7 +7103,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -7121,7 +7121,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -7149,7 +7149,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -7173,7 +7173,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7196,7 +7196,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7218,7 +7218,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7243,7 +7243,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -7271,7 +7271,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -7293,7 +7293,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7315,7 +7315,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7336,7 +7336,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -7362,7 +7362,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -7387,7 +7387,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -7408,7 +7408,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM47_STEEL_WING)
@@ -7435,7 +7435,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM47_STEEL_WING)
@@ -7458,7 +7458,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7481,7 +7481,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7501,7 +7501,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -7522,7 +7522,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -7543,7 +7543,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -7566,7 +7566,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -7588,7 +7588,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7613,7 +7613,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7639,7 +7639,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7661,7 +7661,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -7681,7 +7681,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -7703,7 +7703,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -7727,7 +7727,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -7751,7 +7751,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
@@ -7777,7 +7777,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM50_OVERHEAT)
@@ -7796,7 +7796,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -7820,7 +7820,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -7848,7 +7848,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -7869,7 +7869,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -7887,7 +7887,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM05_FLASH)),
@@ -7913,7 +7913,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -7937,7 +7937,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -7963,7 +7963,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -7983,7 +7983,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8010,7 +8010,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8036,7 +8036,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8064,7 +8064,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8087,7 +8087,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8116,7 +8116,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8149,7 +8149,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8183,7 +8183,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8207,7 +8207,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM49_SNATCH)
@@ -8232,7 +8232,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM49_SNATCH)
@@ -8255,7 +8255,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM47_STEEL_WING)
@@ -8283,7 +8283,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         ),
 
@@ -8309,7 +8309,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -8339,7 +8339,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM50_OVERHEAT)
@@ -8358,7 +8358,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -8379,7 +8379,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM49_SNATCH)
@@ -8403,7 +8403,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -8436,7 +8436,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8463,7 +8463,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8489,7 +8489,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8513,7 +8513,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8548,7 +8548,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8573,7 +8573,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM03_SURF)
@@ -8599,7 +8599,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8624,7 +8624,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8661,7 +8661,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8690,7 +8690,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8716,7 +8716,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8742,7 +8742,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8761,7 +8761,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         ),
 
@@ -8781,7 +8781,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM04_STRENGTH)
@@ -8801,7 +8801,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8824,7 +8824,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8850,7 +8850,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8877,7 +8877,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8905,7 +8905,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM46_THIEF)
@@ -8929,7 +8929,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8952,7 +8952,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(HM01_CUT)
@@ -8978,7 +8978,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM47_STEEL_WING)
@@ -9009,7 +9009,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -9036,7 +9036,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -9062,7 +9062,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -9086,7 +9086,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -9111,7 +9111,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -9138,7 +9138,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -9172,7 +9172,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)
@@ -9206,7 +9206,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM02_FLY)
@@ -9243,7 +9243,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM47_STEEL_WING)
@@ -9281,7 +9281,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM47_STEEL_WING)
@@ -9314,7 +9314,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
@@ -9347,7 +9347,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -9374,7 +9374,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
+                                        
                                         | TMHM(TM44_REST)
                                         
                                         | TMHM(TM48_SKILL_SWAP)
