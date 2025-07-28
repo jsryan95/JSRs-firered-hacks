@@ -1457,3 +1457,7 @@
 	.macro setPunishmentDamage
     callnative BS_setPunishmentDamage
     .endm
+
+	.macro copyType
+	callnative BS_copyType
+	.endm

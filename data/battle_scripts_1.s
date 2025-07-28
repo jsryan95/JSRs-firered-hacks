@@ -279,6 +279,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectShellSmash             @ EFFECT_SHELL_SMASH
 	.4byte BattleScript_EffectWakeUpSlap             @ EFFECT_WAKE_UP_SLAP
 	.4byte BattleScript_EffectPunishment             @ EFFECT_PUNISHMENT
+	.4byte BattleScript_EffectReflectType            @ EFFECT_REFLECT_TYPE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5008,3 +5009,15 @@ BattleScript_EffectWakeUpSlap::
 BattleScript_EffectPunishment::
 	setPunishmentDamage
 	goto BattleScript_EffectHit
+
+BattleScript_EffectReflectType::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	copyType
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNCOPIEDTYPE
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

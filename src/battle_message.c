@@ -307,6 +307,7 @@ static const u8 sText_PkmnsXPreventsFlinching[] = _("{B_EFF_NAME_WITH_PREFIX}'s 
 static const u8 sText_PkmnsXPreventsYsZ[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\nprevents {B_DEF_NAME_WITH_PREFIX}'s\l{B_DEF_ABILITY} from working!");
 static const u8 sText_PkmnsXCuredItsYProblem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncured its {B_BUFF1} problem!");
 static const u8 sText_PkmnsXHadNoEffectOnY[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nhad no effect on {B_EFF_NAME_WITH_PREFIX}!");
+static const u8 sText_PkmnCopiedType[] = _("{B_ATK_NAME_WITH_PREFIX} changed its type\nto match {B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_TooScaredToMove[] = _("{B_ATK_NAME_WITH_PREFIX} is too scared to move!");
 static const u8 sText_GetOutGetOut[] = _("GHOST: Get out…… Get out……");
 static const u8 sText_StatSharply[] = _("sharply ");
@@ -909,6 +910,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNGOTINSOMNIA - BATTLESTRINGS_TABLE_START]               = sText_PkmnGotInsomnia,
     [STRINGID_PKMNGAVEABILITY - BATTLESTRINGS_TABLE_START]            = sText_PkmnGaveAbility,
     [STRINGID_PKMNWASWOKENUP - BATTLESTRINGS_TABLE_START]                = sText_PkmnWasWokenUp,
+    [STRINGID_PKMNCOPIEDTYPE - BATTLESTRINGS_TABLE_START]                = sText_PkmnCopiedType,
 };
 
 const u16 gMissStringIds[] =

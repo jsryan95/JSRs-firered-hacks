@@ -10239,3 +10239,11 @@ void BS_setPunishmentDamage(void)
 
     gBattlescriptCurrInstr += 5;
 }
+
+void BS_copyType(void)
+{
+    gBattleMons[gBattlerAttacker].type1 = gBattleMons[gBattlerTarget].type1;
+    gBattleMons[gBattlerAttacker].type2 = gBattleMons[gBattlerTarget].type2;
+
+    gBattlescriptCurrInstr += 5;
+}

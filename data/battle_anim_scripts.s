@@ -539,8 +539,8 @@ gBattleAnims_Moves::
 	.4byte Move_HEAT_CRASH
 	.4byte Move_VENOSHOCK
 	.4byte Move_SHELL_SMASH
+	.4byte Move_REFLECT_TYPE
 	@ space for generation 5 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -9243,6 +9243,7 @@ CreateFlatterConfetti:
 	return
 
 Move_ROLE_PLAY:
+Move_REFLECT_TYPE:
 	monbg ANIM_ATK_PARTNER
 	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 0, 16, RGB_WHITE
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 2, 0, 10, RGB_BLACK
