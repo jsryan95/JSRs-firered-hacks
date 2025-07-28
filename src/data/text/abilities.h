@@ -110,6 +110,7 @@ static const u8 sIronFistDescription[] = _("Powers up punching attacks.");
 static const u8 sLeafGuardDescription[] = _("Protects status in sunshine.");
 static const u8 sTangledFeetDescription[] = _("Raises evasion when confused.");
 static const u8 sNoGuardDescription[] = _("Prevents protection moves.");
+static const u8 sSniperDescription[] = _("Powers up critical hits.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -227,6 +228,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_LEAF_GUARD] = sLeafGuardDescription,
     [ABILITY_TANGLED_FEET] = sTangledFeetDescription,
     [ABILITY_NO_GUARD] = sNoGuardDescription,
+    [ABILITY_SNIPER] = sSniperDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -345,4 +347,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_LEAF_GUARD] = _("LEAF GUARD"),
     [ABILITY_TANGLED_FEET] = _("TANGLED FEET"),
     [ABILITY_NO_GUARD] = _("NO GUARD"),
+    [ABILITY_SNIPER] = _("SNIPER"),
 };

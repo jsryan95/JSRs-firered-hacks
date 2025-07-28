@@ -1226,6 +1226,9 @@ static void Cmd_critcalc(void)
     else
         gCritMultiplier = 1;
 
+    if (gCritMultiplier > 1 && hasActiveAbility(gBattlerAttacker, ABILITY_SNIPER))
+        gCritMultiplier = 3;
+
     gBattlescriptCurrInstr++;
 }
 
