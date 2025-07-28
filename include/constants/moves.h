@@ -583,8 +583,9 @@
 #define MOVE_PSYCHO_BREAK 569
 #define MOVE_STORM_BREAK 570
 #define MOVE_TRAILBLAZER 571
+#define MOVE_FLASH_FREEZE 572
 
-#define MOVES_COUNT 572
+#define MOVES_COUNT 573
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

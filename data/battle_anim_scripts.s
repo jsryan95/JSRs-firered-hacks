@@ -597,6 +597,7 @@ gBattleAnims_Moves::
     .4byte Move_PSYCHO_BREAK
     .4byte Move_STORM_BREAK
     .4byte Move_TRAILBLAZER
+    .4byte Move_FLASH_FREEZE
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -8346,6 +8347,7 @@ Move_DISABLE:
 
 Move_RECOVER:
 Move_HEAL_ORDER:
+Move_FLASH_FREEZE:
 	loadspritegfx ANIM_TAG_ORBS
 	loadspritegfx ANIM_TAG_BLUE_STAR
 	monbg ANIM_ATK_PARTNER

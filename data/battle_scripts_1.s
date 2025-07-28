@@ -286,6 +286,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectKinesis                @ EFFECT_KINESIS
 	.4byte BattleScript_EffectTailwind               @ EFFECT_TAILWIND
 	.4byte BattleScript_EffectTrailblazer            @ EFFECT_TRAILBLAZER
+	.4byte BattleScript_EffectFlashFreeze            @ EFFECT_FLASH_FREEZE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5284,3 +5285,25 @@ BattleScript_TrailblazerEnd::
 	tryfaintmon BS_TARGET
 	moveendall
 	end
+
+BattleScript_EffectFlashFreeze::
+	attackcanceler
+	attackstring
+	ppreduce
+	tryhealhalfhealth BattleScript_AlreadyAtFullHp, BS_ATTACKER
+	attackanimation
+	waitanimation
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+    jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_DEF, MAX_STAT_STAGE, BattleScript_MoveEnd
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_DEF, 0
+	setstatchanger STAT_DEF, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

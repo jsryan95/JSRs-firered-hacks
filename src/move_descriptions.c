@@ -485,6 +485,7 @@ const u8 gMoveDescription_ReflectType[] = _("The user changes\nits type to match
 const u8 gMoveDescription_Incinerate[] = _("Scorches the\nfoe's held item to\nprevent its use\nduring the battle.");
 const u8 gMoveDescription_Tailwind[] = _("A turbulent wind\nups the Speed of\nall party Pokémon\nfor four turns.");
 const u8 gMoveDescription_Trailblazer[] = _("A rapid, blazing\nattack that also\ncreates a tailwind\nbehind the team.");
+const u8 gMoveDescription_FlashFreeze[] = _("Freezes moisture\nout of the air to\nrepair its body and\nraise its DEFENSE.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -984,4 +985,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_INCINERATE - 1] = gMoveDescription_Incinerate,
     [MOVE_TAILWIND - 1] = gMoveDescription_Tailwind,
     [MOVE_TRAILBLAZER - 1] = gMoveDescription_Trailblazer,
+    [MOVE_FLASH_FREEZE - 1] = gMoveDescription_FlashFreeze,
 };
