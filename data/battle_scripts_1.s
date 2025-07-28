@@ -734,6 +734,7 @@ BattleScript_EffectToxic::
 	attackstring
 	ppreduce
 	jumpifability BS_TARGET, ABILITY_IMMUNITY, BattleScript_ImmunityProtected
+	jumpIfLeafGuardProtected BattleScript_ImmunityProtected
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifstatus BS_TARGET, STATUS1_POISON, BattleScript_AlreadyPoisoned
 	jumpifstatus BS_TARGET, STATUS1_TOXIC_POISON, BattleScript_AlreadyPoisoned
@@ -1031,6 +1032,7 @@ BattleScript_EffectPoison::
 	attackstring
 	ppreduce
 	jumpifability BS_TARGET, ABILITY_IMMUNITY, BattleScript_ImmunityProtected
+	jumpIfLeafGuardProtected BattleScript_ImmunityProtected
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifstatus BS_TARGET, STATUS1_POISON, BattleScript_AlreadyPoisoned
 	jumpifstatus BS_TARGET, STATUS1_TOXIC_POISON, BattleScript_AlreadyPoisoned
@@ -1052,6 +1054,7 @@ BattleScript_EffectParalyze::
 	attackstring
 	ppreduce
 	jumpifability BS_TARGET, ABILITY_LIMBER, BattleScript_LimberProtected
+	jumpIfLeafGuardProtected BattleScript_LimberProtected
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	typecalc
 	jumpifmovehadnoeffect BattleScript_ButItFailed
@@ -2379,6 +2382,7 @@ BattleScript_EffectWillOWisp::
 	jumpifstatus BS_TARGET, STATUS1_BURN, BattleScript_AlreadyBurned
 	jumpiftype BS_TARGET, TYPE_FIRE, BattleScript_NotAffected
 	jumpifability BS_TARGET, ABILITY_WATER_VEIL, BattleScript_WaterVeilPrevents
+	jumpIfLeafGuardProtected BattleScript_WaterVeilPrevents
 	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
 	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected
@@ -4568,6 +4572,22 @@ BattleScript_MotorDriveBoost::
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd
 
+BattleScript_SapSipperBoost_PPLoss::
+	ppreduce
+BattleScript_SapSipperBoost::
+    jumpifstat BS_TARGET, CMP_EQUAL, STAT_ATK, MAX_STAT_STAGE, BattleScript_MonMadeMoveUseless
+	attackstring
+	pause B_WAIT_TIME_SHORT
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	playstatchangeanimation BS_TARGET, BIT_ATK, 0
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printstring STRINGID_PKMNRAISEDATKUSING
+	waitmessage B_WAIT_TIME_LONG
+	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
+	goto BattleScript_MoveEnd
+
 BattleScript_MonMadeMoveUseless_PPLoss::
 	ppreduce
 BattleScript_MonMadeMoveUseless::
@@ -4617,6 +4637,12 @@ BattleScript_PSNPrevention::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_SLPPrevention::
+	pause B_WAIT_TIME_SHORT
+	printfromtable gSLPPreventionStringIds
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_ObliviousPreventsAttraction::
 	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNPREVENTSROMANCEWITH
@@ -4660,6 +4686,37 @@ BattleScript_ColorChangeActivates::
 	printstring STRINGID_PKMNCHANGEDTYPEWITH
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_WeakArmorActivates::
+    jumpifstat BS_TARGET, CMP_EQUAL, STAT_DEF, MIN_STAT_STAGE, BattleScript_WeakArmorTrySpeed
+    playstatchangeanimation BS_TARGET, BIT_DEF, STAT_CHANGE_NEGATIVE
+    setstatchanger STAT_DEF, 1, TRUE
+    statbuffchange MOVE_EFFECT_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_WeakArmorTrySpeed
+    jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_WeakArmorTrySpeed
+	printstring STRINGID_PKMNDEFFELLBECAUSEOF
+	waitmessage B_WAIT_TIME_SHORT
+BattleScript_WeakArmorTrySpeed::
+BattleScript_RattledActivates::
+    jumpifstat BS_TARGET, CMP_EQUAL, STAT_SPEED, MAX_STAT_STAGE, BattleScript_WeakArmorEnd
+    playstatchangeanimation BS_TARGET, BIT_SPEED, 0
+    setstatchanger STAT_SPEED, 1, FALSE
+    statbuffchange MOVE_EFFECT_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_WeakArmorEnd
+    jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_WeakArmorEnd
+	printstring STRINGID_PKMNRAISEDSPEEDUSING
+	waitmessage B_WAIT_TIME_SHORT
+BattleScript_WeakArmorEnd::
+    return
+
+BattleScript_JustifiedActivates::
+    jumpifstat BS_TARGET, CMP_EQUAL, STAT_ATK, MAX_STAT_STAGE, BattleScript_JustifiedEnd
+    playstatchangeanimation BS_TARGET, BIT_ATK, 0
+    setstatchanger STAT_ATK, 1, FALSE
+    statbuffchange MOVE_EFFECT_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_JustifiedEnd
+    jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_JustifiedEnd
+	printstring STRINGID_PKMNRAISEDATKUSING
+	waitmessage B_WAIT_TIME_SHORT
+BattleScript_JustifiedEnd::
+    return
 
 BattleScript_RoughSkinActivates::
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE

@@ -3479,6 +3479,12 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         speedBattler2 /= 4;
     if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
         speedBattler2 = UINT_MAX;
+
+    if (hasActiveAbility(battler1, ABILITY_STALL) && !hasActiveAbility(battler2, ABILITY_STALL))
+        speedBattler1 = 0;
+    else if (hasActiveAbility(battler2, ABILITY_STALL) && !hasActiveAbility(battler1, ABILITY_STALL))
+        speedBattler2 = 0;
+
     if (ignoreChosenMoves)
     {
         moveBattler1 = MOVE_NONE;

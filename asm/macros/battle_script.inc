@@ -1461,3 +1461,8 @@
 	.macro copyType
 	callnative BS_copyType
 	.endm
+
+	.macro jumpIfLeafGuardProtected ptr:req
+	callnative BS_jumpIfLeafGuardProtected
+	.4byte \ptr
+	.endm

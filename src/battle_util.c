@@ -35,6 +35,15 @@ static const u16 sSoundMovesTable[] =
     MOVE_SNARL, SOUND_MOVES_END
 };
 
+#define PUNCHING_MOVES_END 0xFFFF
+
+static const u16 sPunchingMoves[] =
+{
+    MOVE_BULLET_PUNCH, MOVE_COMET_PUNCH, MOVE_DIZZY_PUNCH, MOVE_DRAIN_PUNCH, MOVE_DYNAMIC_PUNCH, MOVE_FIRE_PUNCH,
+    MOVE_FOCUS_PUNCH, MOVE_HAMMER_ARM, MOVE_ICE_PUNCH, MOVE_MACH_PUNCH, MOVE_MEGA_PUNCH, MOVE_SHADOW_PUNCH,
+    MOVE_SKY_UPPERCUT, MOVE_THUNDER_PUNCH, MOVE_METEOR_MASH, PUNCHING_MOVES_END
+};
+
 u8 GetBattlerForBattleScript(u8 caseId)
 {
     u8 ret = 0;
@@ -1719,6 +1728,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 
         if (special)
             gLastUsedAbility = special;
+        else if (gBattleMons[battler].status3 & STATUS3_GASTRO_ACID)
+            gLastUsedAbility = ABILITY_NONE;
         else
             gLastUsedAbility = gBattleMons[battler].ability;
 
@@ -2006,6 +2017,17 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect = 2;
                     }
                     break;
+                case ABILITY_SAP_SIPPER:
+                    if (moveType == TYPE_GRASS)
+                    {
+                        if (gProtectStructs[gBattlerAttacker].notFirstStrike)
+                            gBattlescriptCurrInstr = BattleScript_SapSipperBoost;
+                        else
+                            gBattlescriptCurrInstr = BattleScript_SapSipperBoost_PPLoss;
+
+                        effect = 2;
+                    }
+                    break;
                 case ABILITY_WATER_ABSORB:
                     if (moveType == TYPE_WATER && gBattleMoves[move].power != 0)
                     {
@@ -2078,6 +2100,42 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_ColorChangeActivates;
+                    effect++;
+                }
+                break;
+            case ABILITY_WEAK_ARMOR:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && TARGET_TURN_DAMAGED
+                 && gBattleMons[battler].hp != 0
+                 && gBattleMoves[move].category == CATEGORY_PHYSICAL)
+                {
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_WeakArmorActivates;
+                    effect++;
+                }
+                break;
+            case ABILITY_RATTLED:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && TARGET_TURN_DAMAGED
+                 && gBattleMons[battler].hp != 0
+                 && (gBattleMoves[move].type == TYPE_GHOST || gBattleMoves[move].type == TYPE_BUG || gBattleMoves[move].type == TYPE_DARK))
+                {
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_RattledActivates;
+                    effect++;
+                }
+                break;
+            case ABILITY_JUSTIFIED:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && TARGET_TURN_DAMAGED
+                 && gBattleMons[battler].hp != 0
+                 && gBattleMoves[move].type == TYPE_DARK)
+                {
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_JustifiedActivates;
                     effect++;
                 }
                 break;
@@ -3373,4 +3431,15 @@ u8 IsMonDisobedient(void)
 u8 hasActiveAbility(u8 battler, u8 ability)
 {
     return gBattleMons[battler].ability == ability && !(gBattleMons[battler].status3 & STATUS3_GASTRO_ACID);
+}
+
+u8 isPunchingMove(u16 move)
+{
+    u8 i;
+    for (i = 0; sPunchingMoves[i] != PUNCHING_MOVES_END; i++)
+    {
+        if (move == sPunchingMoves[i])
+            return 1;
+    }
+    return 0;
 }

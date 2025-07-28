@@ -396,8 +396,10 @@
 #define STRINGID_PKMNWASWOKENUP 395
 #define STRINGID_PKMNCOPIEDTYPE 396
 #define STRINGID_PKMNRAISEDSPEEDUSING 397
+#define STRINGID_PKMNRAISEDATKUSING 398
+#define STRINGID_PKMNDEFFELLBECAUSEOF 399
 
-#define BATTLESTRINGS_COUNT     398
+#define BATTLESTRINGS_COUNT     400
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

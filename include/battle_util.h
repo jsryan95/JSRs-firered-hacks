@@ -94,5 +94,6 @@ void HandleAction_RunBattleScript(void);
 u8 GetMoveTarget(u16 move, u8 setTarget);
 u8 IsMonDisobedient(void);
 u8 hasActiveAbility(u8 battler, u8 ability);
+u8 isPunchingMove(u16 move);
 
 #endif // GUARD_BATTLE_UTIL_H

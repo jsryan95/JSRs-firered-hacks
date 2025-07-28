@@ -2195,16 +2195,21 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 break;
             if (hasActiveAbility(gEffectBattler, ABILITY_INSOMNIA))
                 break;
+            if (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                    && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN))
+                break;
 
             CancelMultiTurnMoves(gEffectBattler);
             statusChanged = TRUE;
             break;
         case STATUS1_POISON:
-            if (hasActiveAbility(gEffectBattler, ABILITY_IMMUNITY)
-                && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
+            if ((hasActiveAbility(gEffectBattler, ABILITY_IMMUNITY)
+                    || (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                               && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN)))
+                    && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
             {
-                gLastUsedAbility = ABILITY_IMMUNITY;
-                RecordAbilityBattle(gEffectBattler, ABILITY_IMMUNITY);
+                gLastUsedAbility = gBattleMons[gEffectBattler].ability;
+                RecordAbilityBattle(gEffectBattler, gBattleMons[gEffectBattler].ability);
 
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_PSNPrevention;
@@ -2238,15 +2243,20 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 break;
             if (hasActiveAbility(gEffectBattler, ABILITY_IMMUNITY))
                 break;
+            if (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                    && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN))
+                break;
 
             statusChanged = TRUE;
             break;
         case STATUS1_BURN:
-            if (hasActiveAbility(gEffectBattler, ABILITY_WATER_VEIL)
+            if ((hasActiveAbility(gEffectBattler, ABILITY_WATER_VEIL)
+                    || (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                               && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN)))
                 && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
             {
-                gLastUsedAbility = ABILITY_WATER_VEIL;
-                RecordAbilityBattle(gEffectBattler, ABILITY_WATER_VEIL);
+                gLastUsedAbility = gBattleMons[gEffectBattler].ability;
+                RecordAbilityBattle(gEffectBattler, gBattleMons[gEffectBattler].ability);
 
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_BRNPrevention;
@@ -2277,6 +2287,9 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 break;
             if (gBattleMons[gEffectBattler].status1)
                 break;
+            if (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                    && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN))
+                break;
 
             statusChanged = TRUE;
             break;
@@ -2291,17 +2304,22 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 break;
             if (hasActiveAbility(gEffectBattler, ABILITY_MAGMA_ARMOR))
                 break;
+            if (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                    && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN))
+                break;
 
             CancelMultiTurnMoves(gEffectBattler);
             statusChanged = TRUE;
             break;
         case STATUS1_PARALYSIS:
-            if (hasActiveAbility(gEffectBattler, ABILITY_LIMBER))
+            if (hasActiveAbility(gEffectBattler, ABILITY_LIMBER)
+                    || (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                               && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN)))
             {
                 if (primary == TRUE || certain == MOVE_EFFECT_CERTAIN)
                 {
-                    gLastUsedAbility = ABILITY_LIMBER;
-                    RecordAbilityBattle(gEffectBattler, ABILITY_LIMBER);
+                    gLastUsedAbility = gBattleMons[gEffectBattler].ability;
+                    RecordAbilityBattle(gEffectBattler, gBattleMons[gEffectBattler].ability);
 
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = BattleScript_PRLZPrevention;
@@ -2322,14 +2340,20 @@ void SetMoveEffect(bool8 primary, u8 certain)
             }
             if (gBattleMons[gEffectBattler].status1)
                 break;
+            if (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                    && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN))
+                break;
 
             statusChanged = TRUE;
             break;
         case STATUS1_TOXIC_POISON:
-            if (hasActiveAbility(gEffectBattler, ABILITY_IMMUNITY) && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
+            if ((hasActiveAbility(gEffectBattler, ABILITY_IMMUNITY)
+                    || (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                               && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN)))
+                    && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
             {
-                gLastUsedAbility = ABILITY_IMMUNITY;
-                RecordAbilityBattle(gEffectBattler, ABILITY_IMMUNITY);
+                gLastUsedAbility = gBattleMons[gEffectBattler].ability;
+                RecordAbilityBattle(gEffectBattler, gBattleMons[gEffectBattler].ability);
 
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_PSNPrevention;
@@ -2360,6 +2384,9 @@ void SetMoveEffect(bool8 primary, u8 certain)
             if (!IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_POISON) && !IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_STEEL))
             {
                 if (hasActiveAbility(gEffectBattler, ABILITY_IMMUNITY))
+                    break;
+                if (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                        && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN))
                     break;
 
                 // It's redundant, because at this point we know the status1 value is 0.
@@ -6605,7 +6632,9 @@ static void Cmd_jumpifcantmakeasleep(void)
         gBattlescriptCurrInstr = jumpPtr;
     }
     else if (hasActiveAbility(gBattlerTarget, ABILITY_INSOMNIA)
-            || hasActiveAbility(gBattlerTarget, ABILITY_VITAL_SPIRIT))
+            || hasActiveAbility(gBattlerTarget, ABILITY_VITAL_SPIRIT)
+            || (hasActiveAbility(gBattlerTarget, ABILITY_LEAF_GUARD)
+                    && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN)))
     {
         gLastUsedAbility = gBattleMons[gBattlerTarget].ability;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STAYED_AWAKE_USING;
@@ -10246,4 +10275,13 @@ void BS_copyType(void)
     gBattleMons[gBattlerAttacker].type2 = gBattleMons[gBattlerTarget].type2;
 
     gBattlescriptCurrInstr += 5;
+}
+
+void BS_jumpIfLeafGuardProtected(void)
+{
+    if (hasActiveAbility(gBattlerTarget, ABILITY_LEAF_GUARD)
+            && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN))
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    else
+        gBattlescriptCurrInstr += 9;
 }

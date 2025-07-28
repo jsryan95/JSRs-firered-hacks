@@ -101,6 +101,13 @@ static const u8 sPoisonHealDescription[] = _("Recovers HP while poisoned.");
 static const u8 sTechnicianDescription[] = _("Powers up weaker moves.");
 static const u8 sBadDreamsDescription[] = _("Gradually hurts sleeping foes.");
 static const u8 sMotorDriveDescription[] = _("Absorbs electricity to raise SPEED.");
+static const u8 sSapSipperDescription[] = _("Absorbs GRASS attacks to raise ATTACK.");
+static const u8 sWeakArmorDescription[] = _("Lose DEFENSE and gain SPEED when struck.");
+static const u8 sRattledDescription[] = _("Raises SPEED when scared.");
+static const u8 sJustifiedDescription[] = _("DARK attacks raise ATTACK.");
+static const u8 sStallDescription[] = _("Moves after slower POKéMON.");
+static const u8 sIronFistDescription[] = _("Powers up punching attacks.");
+static const u8 sLeafGuardDescription[] = _("Protects status in sunshine.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -209,6 +216,13 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_TECHNICIAN] = sTechnicianDescription,
     [ABILITY_BAD_DREAMS] = sBadDreamsDescription,
     [ABILITY_MOTOR_DRIVE] = sMotorDriveDescription,
+    [ABILITY_SAP_SIPPER] = sSapSipperDescription,
+    [ABILITY_WEAK_ARMOR] = sWeakArmorDescription,
+    [ABILITY_RATTLED] = sRattledDescription,
+    [ABILITY_JUSTIFIED] = sJustifiedDescription,
+    [ABILITY_STALL] = sStallDescription,
+    [ABILITY_IRON_FIST] = sIronFistDescription,
+    [ABILITY_LEAF_GUARD] = sLeafGuardDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -318,4 +332,11 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_TECHNICIAN] = _("TECHNICIAN"),
     [ABILITY_BAD_DREAMS] = _("BAD DREAMS"),
     [ABILITY_MOTOR_DRIVE] = _("MOTOR DRIVE"),
+    [ABILITY_SAP_SIPPER] = _("SAP SIPPER"),
+    [ABILITY_WEAK_ARMOR] = _("WEAK ARMOR"),
+    [ABILITY_RATTLED] = _("RATTLED"),
+    [ABILITY_JUSTIFIED] = _("JUSTIFIED"),
+    [ABILITY_STALL] = _("STALL"),
+    [ABILITY_IRON_FIST] = _("IRON FIST"),
+    [ABILITY_LEAF_GUARD] = _("LEAF GUARD"),
 };

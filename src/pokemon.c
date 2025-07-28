@@ -2381,6 +2381,11 @@ static void DeleteFirstMoveAndGiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 mo
 #define ShouldGetStatBadgeBoost(flag, battler)\
     (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_EREADER_TRAINER)) && FlagGet(flag) && GetBattlerSide(battler) == B_SIDE_PLAYER)
 
+u8 hasActiveAbility2(struct BattlePokemon *battler, u8 ability)
+{
+    return battler->ability == ability && !(battler->status3 & STATUS3_GASTRO_ACID);
+}
+
 
 s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u16 sideStatus, u16 powerOverride, u8 typeOverride, u8 battlerIdAtk, u8 battlerIdDef)
 {
@@ -2434,7 +2439,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defenderHoldEffectParam = ItemId_GetHoldEffectParam(defender->item);
     }
 
-    if (attacker->ability == ABILITY_HUGE_POWER || attacker->ability == ABILITY_PURE_POWER)
+    if (hasActiveAbility2(attacker, ABILITY_HUGE_POWER) || hasActiveAbility2(attacker, ABILITY_PURE_POWER))
         attack *= 2;
 
     if (ShouldGetStatBadgeBoost(FLAG_BADGE01_GET, battlerIdAtk))
@@ -2477,56 +2482,59 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense *= 2;
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
         attack *= 2;
-    if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
+    if (hasActiveAbility2(defender, ABILITY_THICK_FAT) && (type == TYPE_FIRE || type == TYPE_ICE))
         gBattleMovePower /= 2;
-    if (defender->ability == ABILITY_HEATPROOF && (type = TYPE_FIRE))
+    if (hasActiveAbility2(defender, ABILITY_HEATPROOF) && (type = TYPE_FIRE))
         gBattleMovePower /= 2;
-    if (defender->ability == ABILITY_MULTISCALE && (defender->hp == defender->maxHP))
+    if (hasActiveAbility2(defender, ABILITY_MULTISCALE) && (defender->hp == defender->maxHP))
         gBattleMovePower /= 2;
-    if (attacker->ability == ABILITY_DEFEATIST && attacker->hp <= (attacker->maxHP / 2))
+    if (hasActiveAbility2(attacker, ABILITY_DEFEATIST) && attacker->hp <= (attacker->maxHP / 2))
     {
         attack /= 2;
         spAttack /=2;
     }
-    if (attacker->ability == ABILITY_HUSTLE)
+    if (hasActiveAbility2(attacker, ABILITY_HUSTLE))
         attack = (150 * attack) / 100;
-    if (attacker->ability == ABILITY_TOXIC_BOOST && attacker->status1 & STATUS1_PSN_ANY)
+    if (hasActiveAbility2(attacker, ABILITY_TOXIC_BOOST) && attacker->status1 & STATUS1_PSN_ANY)
         attack = (150 * attack) / 100;
-    if (attacker->ability == ABILITY_FLARE_BOOST && attacker->status1 & STATUS1_BURN)
+    if (hasActiveAbility2(attacker, ABILITY_FLARE_BOOST) && attacker->status1 & STATUS1_BURN)
         spAttack = (150 * spAttack) / 100;
-    if (attacker->ability == ABILITY_PLUS && ABILITY_ON_FIELD2(ABILITY_MINUS))
+    if (hasActiveAbility2(attacker, ABILITY_PLUS) && ABILITY_ON_FIELD2(ABILITY_MINUS))
         spAttack = (150 * spAttack) / 100;
-    if (attacker->ability == ABILITY_MINUS && ABILITY_ON_FIELD2(ABILITY_PLUS))
+    if (hasActiveAbility2(attacker, ABILITY_MINUS) && ABILITY_ON_FIELD2(ABILITY_PLUS))
         spAttack = (150 * spAttack) / 100;
-    if (attacker->ability == ABILITY_GUTS && attacker->status1)
+    if (hasActiveAbility2(attacker, ABILITY_GUTS) && attacker->status1)
         attack = (150 * attack) / 100;
-    if (defender->ability == ABILITY_MARVEL_SCALE && defender->status1)
+    if (hasActiveAbility2(defender, ABILITY_MARVEL_SCALE) && defender->status1)
         defense = (150 * defense) / 100;
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_MUD_SPORT, 0))
         gBattleMovePower /= 2;
     if (type == TYPE_FIRE && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_WATER_SPORT, 0))
         gBattleMovePower /= 2;
-    if (type == TYPE_GRASS && attacker->ability == ABILITY_OVERGROW && attacker->hp <= (attacker->maxHP / 3))
+    if (type == TYPE_GRASS && hasActiveAbility2(attacker, ABILITY_OVERGROW) && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (type == TYPE_FIRE && attacker->ability == ABILITY_BLAZE && attacker->hp <= (attacker->maxHP / 3))
+    if (type == TYPE_FIRE && hasActiveAbility2(attacker, ABILITY_BLAZE) && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (type == TYPE_WATER && attacker->ability == ABILITY_TORRENT && attacker->hp <= (attacker->maxHP / 3))
+    if (type == TYPE_WATER && hasActiveAbility2(attacker, ABILITY_TORRENT) && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
+    if (type == TYPE_BUG && hasActiveAbility2(attacker, ABILITY_SWARM) && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (attacker->ability == ABILITY_RECKLESS
+    if (hasActiveAbility2(attacker, ABILITY_RECKLESS)
             && (gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL
                     || gBattleMoves[gCurrentMove].effect == EFFECT_DOUBLE_EDGE
                     || gBattleMoves[gCurrentMove].effect == EFFECT_FLARE_BLITZ
-                    || gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_IF_MISS))
+                    || gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_IF_MISS
+                    || gBattleMoves[gCurrentMove].effect == EFFECT_HEAD_SMASH))
         gBattleMovePower = (12 * gBattleMovePower) / 10;
     if (WEATHER_HAS_EFFECT
             && gBattleWeather & B_WEATHER_SANDSTORM
-            && attacker->ability == ABILITY_SAND_FORCE
+            && hasActiveAbility2(attacker, ABILITY_SAND_FORCE)
             && (type == TYPE_ROCK || type == TYPE_GROUND || type == TYPE_STEEL))
         gBattleMovePower = (130 * gBattleMovePower) / 100;
-    if (attacker->ability == ABILITY_TECHNICIAN && gBattleMoves[gCurrentMove].power <= 60)
+    if (hasActiveAbility2(attacker, ABILITY_TECHNICIAN) && gBattleMoves[gCurrentMove].power <= 60)
         gBattleMovePower = (150 * gBattleMovePower) / 100;
+    if (hasActiveAbility2(attacker, ABILITY_IRON_FIST) && isPunchingMove(gCurrentMove))
+        gBattleMovePower = (12 * gBattleMovePower) / 10;
 
     // Self-destruct / Explosion cut defense in half
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
@@ -2563,7 +2571,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         damage /= 50;
 
         // Burn cuts attack in half
-        if ((attacker->status1 & STATUS1_BURN) && attacker->ability != ABILITY_GUTS)
+        if ((attacker->status1 & STATUS1_BURN) && !hasActiveAbility2(attacker, ABILITY_GUTS))
             damage /= 2;
 
         // Apply Reflect
