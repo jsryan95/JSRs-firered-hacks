@@ -1656,10 +1656,16 @@ BattleScript_EffectEndure::
 	attackcanceler
 	attackstring
 	ppreduce
+	jumpifabilitypresent ABILITY_NO_GUARD, BattleScript_NoGuardPrevents
 	setprotectlike
 	attackanimation
 	waitanimation
 	printfromtable gProtectLikeUsedStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_NoGuardPrevents::
+	printstring STRINGID_PKMNSXPREVENTSPROTECT
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 

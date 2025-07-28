@@ -109,6 +109,7 @@ static const u8 sStallDescription[] = _("Moves after slower POKéMON.");
 static const u8 sIronFistDescription[] = _("Powers up punching attacks.");
 static const u8 sLeafGuardDescription[] = _("Protects status in sunshine.");
 static const u8 sTangledFeetDescription[] = _("Raises evasion when confused.");
+static const u8 sNoGuardDescription[] = _("Prevents protection moves.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -225,6 +226,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_IRON_FIST] = sIronFistDescription,
     [ABILITY_LEAF_GUARD] = sLeafGuardDescription,
     [ABILITY_TANGLED_FEET] = sTangledFeetDescription,
+    [ABILITY_NO_GUARD] = sNoGuardDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -342,4 +344,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_IRON_FIST] = _("IRON FIST"),
     [ABILITY_LEAF_GUARD] = _("LEAF GUARD"),
     [ABILITY_TANGLED_FEET] = _("TANGLED FEET"),
+    [ABILITY_NO_GUARD] = _("NO GUARD"),
 };
