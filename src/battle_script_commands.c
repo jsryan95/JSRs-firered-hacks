@@ -9247,6 +9247,8 @@ static u32 getEffectiveSpeed(u8 battler)
         speed /= 2;
     if (gBattleMons[battler].status1 & STATUS1_PARALYSIS)
         speed /= 4;
+    if (gSideStatuses[GET_BATTLER_SIDE(battler)] & SIDE_STATUS_TAILWIND)
+        speed *= 2;
 
     return speed;
 }
@@ -10285,4 +10287,19 @@ void BS_jumpIfLeafGuardProtected(void)
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
     else
         gBattlescriptCurrInstr += 9;
+}
+
+void BS_trySetTailwind(void)
+{
+    if (gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] & SIDE_STATUS_TAILWIND)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] |= SIDE_STATUS_TAILWIND;
+        gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].tailwindTimer = 4;
+        gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].tailwindBattlerId = gBattlerAttacker;
+        gBattlescriptCurrInstr += 9;
+    }
 }

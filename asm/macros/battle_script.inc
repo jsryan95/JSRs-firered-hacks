@@ -1466,3 +1466,8 @@
 	callnative BS_jumpIfLeafGuardProtected
 	.4byte \ptr
 	.endm
+
+	.macro trySetTailwind onFail:req
+	callnative BS_trySetTailwind
+	.4byte \onFail
+	.endm

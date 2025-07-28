@@ -456,8 +456,8 @@ gBattleAnims_Moves::
     .4byte Move_HEAD_SMASH
     .4byte Move_WAKE_UP_SLAP
     .4byte Move_PUNISHMENT
+    .4byte Move_TAILWIND
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -6958,6 +6958,20 @@ AeroblastBeam:
 	createsprite gAirWaveCrescentSpriteTemplate, ANIM_ATTACKER, 2, 26, 8, 12, 8, 15, 3, 0
 	delay 3
 	return
+
+
+Move_TAILWIND:
+	monbg ANIM_DEF_PARTNER
+	call SetSkyBg
+	splitbgprio ANIM_TARGET
+	setalpha 12, 8
+	playsewithpan SE_M_GUST, SOUND_PAN_ATTACKER
+	delay 120
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	delay 0
+	call UnsetSkyBg
+	end
 
 Move_WATER_GUN:
 Move_SCALD:

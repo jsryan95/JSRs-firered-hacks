@@ -50,6 +50,7 @@ extern const u8 BattleScript_OverworldWeatherStarts[];
 extern const u8 BattleScript_SideStatusWoreOff[];
 extern const u8 BattleScript_SafeguardProtected[];
 extern const u8 BattleScript_SafeguardEnds[];
+extern const u8 BattleScript_TailwindEnds[];
 extern const u8 BattleScript_LeechSeedTurnDrain[];
 extern const u8 BattleScript_BideStoringEnergy[];
 extern const u8 BattleScript_BideAttack[];

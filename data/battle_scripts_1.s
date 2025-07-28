@@ -284,6 +284,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFeatherDance           @ EFFECT_FEATHER_DANCE
 	.4byte BattleScript_EffectCottonSpore            @ EFFECT_COTTON_SPORE
 	.4byte BattleScript_EffectKinesis                @ EFFECT_KINESIS
+	.4byte BattleScript_EffectTailwind               @ EFFECT_TAILWIND
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -3692,6 +3693,12 @@ BattleScript_SafeguardEnds::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
+BattleScript_TailwindEnds::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNTAILWINDEXPIRED
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
 BattleScript_LeechSeedTurnDrain::
 	playanimation BS_ATTACKER, B_ANIM_LEECH_SEED_DRAIN, sB_ANIM_ARG1
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
@@ -5236,4 +5243,15 @@ BattleScript_KinesisTryLowerSpDef::
 	printfromtable gStatDownStringIds
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_KinesisEnd::
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectTailwind::
+	attackcanceler
+	attackstring
+	ppreduce
+	trySetTailwind BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNTAILWINDSTARTED
+	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
