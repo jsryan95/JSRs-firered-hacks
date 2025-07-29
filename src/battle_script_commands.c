@@ -1548,14 +1548,10 @@ static void Cmd_typecalc(void)
     GET_MOVE_TYPE(gCurrentMove, moveType);
 
     // check stab
-    if (IS_BATTLER_OF_TYPE(gBattlerAttacker, moveType))
-    {
-        if (hasActiveAbility(gBattlerAttacker, ABILITY_ADAPTABILITY))
-            gBattleMoveDamage = gBattleMoveDamage * 20;
-        else
-            gBattleMoveDamage = gBattleMoveDamage * 15;
-        gBattleMoveDamage = gBattleMoveDamage / 10;
-    }
+    if (hasActiveAbility(gBattlerAttacker, ABILITY_ADAPTABILITY))
+        gBattleMoveDamage = (125 * gBattleMoveDamage) / 100;
+    else if (IS_BATTLER_OF_TYPE(gBattlerAttacker, moveType))
+        gBattleMoveDamage = (150 * gBattleMoveDamage) / 100;
 
     if (hasActiveAbility(gBattlerTarget, ABILITY_LEVITATE) && moveType == TYPE_GROUND)
     {
