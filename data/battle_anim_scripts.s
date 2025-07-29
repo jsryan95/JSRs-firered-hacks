@@ -599,6 +599,8 @@ gBattleAnims_Moves::
     .4byte Move_TRAILBLAZER
     .4byte Move_FLASH_FREEZE
     .4byte Move_SPIRIT_FLARE
+    .4byte Move_SKY_BURST
+    .4byte Move_DRAGON_SHOUT
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -6871,6 +6873,8 @@ MegahornInContest:
 	goto MegahornContinue
 
 Move_GUST:
+Move_SKY_BURST:
+Move_DRAGON_SHOUT:
 	loadspritegfx ANIM_TAG_GUST
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER

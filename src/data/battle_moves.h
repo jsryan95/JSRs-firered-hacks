@@ -6999,4 +6999,32 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
+
+    [MOVE_SKY_BURST] =
+    {
+        .effect = EFFECT_SKY_BURST,
+        .power = 80,
+        .type = TYPE_FLYING,
+        .category = CATEGORY_SPECIAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_DRAGON_SHOUT] =
+    {
+        .effect = EFFECT_SKY_BURST,
+        .power = 80,
+        .type = TYPE_DRAGON,
+        .category = CATEGORY_SPECIAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
 };

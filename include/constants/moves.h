@@ -585,8 +585,10 @@
 #define MOVE_TRAILBLAZER 571
 #define MOVE_FLASH_FREEZE 572
 #define MOVE_SPIRIT_FLARE 573
+#define MOVE_SKY_BURST 574
+#define MOVE_DRAGON_SHOUT 575
 
-#define MOVES_COUNT 574
+#define MOVES_COUNT 576
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

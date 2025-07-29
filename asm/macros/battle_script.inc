@@ -1471,3 +1471,7 @@
 	callnative BS_trySetTailwind
 	.4byte \onFail
 	.endm
+
+	.macro endWeather
+	callnative BS_endWeather
+	.endm

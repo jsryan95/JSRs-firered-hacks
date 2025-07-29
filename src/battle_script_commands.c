@@ -10302,3 +10302,11 @@ void BS_trySetTailwind(void)
         gBattlescriptCurrInstr += 9;
     }
 }
+
+void BS_endWeather(void)
+{
+    gBattleWeather = 0;
+    gWishFutureKnock.weatherDuration = 0;
+
+    gBattlescriptCurrInstr += 5;
+}

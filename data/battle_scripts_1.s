@@ -288,6 +288,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectTrailblazer            @ EFFECT_TRAILBLAZER
 	.4byte BattleScript_EffectFlashFreeze            @ EFFECT_FLASH_FREEZE
 	.4byte BattleScript_EffectBurnHit                @ EFFECT_SPIRIT_FLARE
+	.4byte BattleScript_EffectSkyBurst               @ EFFECT_SKY_BURST
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5313,3 +5314,30 @@ BattleScript_EffectFlashFreeze::
 	printfromtable gStatUpStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectSkyBurst::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	endWeather
+	printstring STRINGID_WEATHERCLEARED
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_TARGET
+	moveendall
+	end

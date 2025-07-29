@@ -368,6 +368,7 @@ static const u8 sText_SunlightFaded[] = _("The sunlight faded.");
 static const u8 sText_StartedHail[] = _("It started to hail!");
 static const u8 sText_HailContinues[] = _("Hail continues to fall.");
 static const u8 sText_HailStopped[] = _("The hail stopped.");
+static const u8 sText_WeatherCleared[] = _("The weather cleared up!");
 static const u8 sText_FailedToSpitUp[] = _("But it failed to SPIT UP\na thing!");
 static const u8 sText_FailedToSwallow[] = _("But it failed to SWALLOW\na thing!");
 static const u8 sText_WindBecameHeatWave[] = _("The wind turned into a\nHEAT WAVE!");
@@ -925,6 +926,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNTAILWINDSTARTED - BATTLESTRINGS_TABLE_START]           = sText_PkmnTailwindStarted,
     [STRINGID_PKMNTAILWINDEXPIRED - BATTLESTRINGS_TABLE_START]           = sText_PkmnTailwindExpired,
     [STRINGID_PKMNXLOWERSATTACK - BATTLESTRINGS_TABLE_START]             = sText_PkmnXLowersAttack,
+    [STRINGID_WEATHERCLEARED - BATTLESTRINGS_TABLE_START]                = sText_WeatherCleared,
 };
 
 const u16 gMissStringIds[] =

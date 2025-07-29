@@ -487,6 +487,8 @@ const u8 gMoveDescription_Tailwind[] = _("A turbulent wind\nups the Speed of\nal
 const u8 gMoveDescription_Trailblazer[] = _("A rapid, blazing\nattack that also\ncreates a tailwind\nbehind the team.");
 const u8 gMoveDescription_FlashFreeze[] = _("Freezes moisture\nout of the air to\nrepair its body and\nraise its DEFENSE.");
 const u8 gMoveDescription_SpiritFlare[] = _("This move is FIRE-\nand GHOST-type\nsimultaneously. May\nburn the foe.");
+const u8 gMoveDescription_SkyBurst[] = _("A shockwave created\nby powerful wings\nstills the air and\nclears any weather.");
+const u8 gMoveDescription_DragonShout[] = _("A forceful shout\nstills the air and\nclears any weather.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -988,4 +990,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_TRAILBLAZER - 1] = gMoveDescription_Trailblazer,
     [MOVE_FLASH_FREEZE - 1] = gMoveDescription_FlashFreeze,
     [MOVE_SPIRIT_FLARE - 1] = gMoveDescription_SpiritFlare,
+    [MOVE_SKY_BURST - 1] = gMoveDescription_SkyBurst,
+    [MOVE_DRAGON_SHOUT - 1] = gMoveDescription_DragonShout,
 };
