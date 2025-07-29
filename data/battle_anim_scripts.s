@@ -647,6 +647,7 @@ gBattleAnims_General::
 	.4byte General_SafariRockThrow          @ B_ANIM_ROCK_THROW
 	.4byte General_SafariReaction           @ B_ANIM_SAFARI_REACTION
 	.4byte General_AquaRingHeal             @ B_ANIM_AQUA_RING_HEAL
+	.4byte Move_HAZE                        @ B_ANIM_BLACK_SMOKE
 
 	.align 2
 gBattleAnims_Special::

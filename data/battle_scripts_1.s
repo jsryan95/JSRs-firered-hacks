@@ -4575,6 +4575,14 @@ BattleScript_DroughtActivates::
 	call BattleScript_WeatherFormChanges
 	end3
 
+BattleScript_BlackSmokeActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNSXCLEAREDSTATCHANGES
+	waitstate
+	playanimation BS_BATTLER_0, B_ANIM_BLACK_SMOKE
+	waitstate
+	end3
+
 BattleScript_TookAttack::
 	attackstring
 	pause B_WAIT_TIME_SHORT

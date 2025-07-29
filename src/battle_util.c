@@ -1746,7 +1746,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
     if (!(gBattleTypeFlags & BATTLE_TYPE_SAFARI)) // Why isn't that check done at the beginning?
     {
         u8 moveType;
-        s32 i;
+        s32 i, j;
         u16 move;
         u8 side;
         u8 target1;
@@ -1888,6 +1888,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                             break;
                         }
                     }
+                }
+                break;
+            case ABILITY_BLACK_SMOKE:
+                if (!gSpecialStatuses[battler].blackSmoked)
+                {
+                    for (i = 0; i < gBattlersCount; i++)
+                        {
+                            for (j = 0; j < NUM_BATTLE_STATS; j++)
+                                gBattleMons[i].statStages[j] = DEFAULT_STAT_STAGE;
+                        }
+                    gSpecialStatuses[battler].blackSmoked = 1;
+                    BattleScriptPushCursorAndCallback(BattleScript_BlackSmokeActivates);
+                    gBattleScripting.battler = battler;
+                    effect++;
                 }
                 break;
             }
