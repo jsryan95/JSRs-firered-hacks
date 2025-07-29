@@ -587,8 +587,9 @@
 #define MOVE_SPIRIT_FLARE 573
 #define MOVE_SKY_BURST 574
 #define MOVE_DRAGON_SHOUT 575
+#define MOVE_STAR_SHOOTER 576
 
-#define MOVES_COUNT 576
+#define MOVES_COUNT 577
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

@@ -601,6 +601,7 @@ gBattleAnims_Moves::
     .4byte Move_SPIRIT_FLARE
     .4byte Move_SKY_BURST
     .4byte Move_DRAGON_SHOUT
+    .4byte Move_STAR_SHOOTER
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -7620,6 +7621,7 @@ Move_NATURE_POWER:
 	@ No actual animation, uses the animation of a move from sNaturePowerMoves instead
 
 Move_ANCIENT_POWER:
+Move_STAR_SHOOTER:
 	loadspritegfx ANIM_TAG_ROCKS
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER

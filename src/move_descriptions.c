@@ -489,6 +489,7 @@ const u8 gMoveDescription_FlashFreeze[] = _("Freezes moisture\nout of the air to
 const u8 gMoveDescription_SpiritFlare[] = _("This move is FIRE-\nand GHOST-type\nsimultaneously. May\nburn the foe.");
 const u8 gMoveDescription_SkyBurst[] = _("A shockwave created\nby powerful wings\nstills the air and\nclears any weather.");
 const u8 gMoveDescription_DragonShout[] = _("A forceful shout\nstills the air and\nclears any weather.");
+const u8 gMoveDescription_StarShooter[] = _("Drops a comet on\nthe foe, lowering\nboth combatants'\nSP. DEF.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -992,4 +993,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_SPIRIT_FLARE - 1] = gMoveDescription_SpiritFlare,
     [MOVE_SKY_BURST - 1] = gMoveDescription_SkyBurst,
     [MOVE_DRAGON_SHOUT - 1] = gMoveDescription_DragonShout,
+    [MOVE_STAR_SHOOTER - 1] = gMoveDescription_StarShooter,
 };

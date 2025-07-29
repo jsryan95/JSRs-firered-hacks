@@ -289,6 +289,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFlashFreeze            @ EFFECT_FLASH_FREEZE
 	.4byte BattleScript_EffectBurnHit                @ EFFECT_SPIRIT_FLARE
 	.4byte BattleScript_EffectSkyBurst               @ EFFECT_SKY_BURST
+	.4byte BattleScript_EffectStarShooter            @ EFFECT_STAR_SHOOTER
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5341,3 +5342,31 @@ BattleScript_EffectSkyBurst::
 	tryfaintmon BS_TARGET
 	moveendall
 	end
+
+BattleScript_EffectStarShooter::
+    attackcanceler
+    accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+    attackstring
+    ppreduce
+    critcalc
+    damagecalc
+    typecalc
+    adjustnormaldamage
+    attackanimation
+    waitanimation
+    effectivenesssound
+    hitanimation BS_TARGET
+    waitstate
+    healthbarupdate BS_TARGET
+    datahpupdate BS_TARGET
+    critmessage
+    waitmessage B_WAIT_TIME_LONG
+    resultmessage
+    waitmessage B_WAIT_TIME_LONG
+    setmoveeffect MOVE_EFFECT_SP_DEF_MINUS_1
+    seteffectwithchance
+    tryfaintmon BS_TARGET
+    setmoveeffect MOVE_EFFECT_SP_DEF_MINUS_1 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+    seteffectwithchance
+    moveendall
+    end
