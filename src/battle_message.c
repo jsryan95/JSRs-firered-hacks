@@ -520,6 +520,7 @@ static const u8 sText_PkmnsItemRestoredStatus[] = _("{B_SCR_ACTIVE_NAME_WITH_PRE
 static const u8 sText_PkmnsItemRestoredHPALittle[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nrestored its HP a little!");
 static const u8 sText_ItemAllowsOnlyYMove[] = _("{B_LAST_ITEM}'s effect allows only\n{B_CURRENT_MOVE} to be used!\p");
 static const u8 sText_PkmnHungOnWithX[] = _("{B_DEF_NAME_WITH_PREFIX} hung on\nusing its {B_LAST_ITEM}!");
+static const u8 sText_PkmnHungOnWithXAbility[] = _("{B_DEF_NAME_WITH_PREFIX} hung on\ndue to {B_LAST_ABILITY}!");
 const u8 gText_EmptyString3[] = _("");
 static const u8 sText_PlayedFluteCatchyTune[] = _("{B_PLAYER_NAME} played the {B_LAST_ITEM}.\pNow, that's a catchy tune!");
 static const u8 sText_PlayedThe[] = _("{B_PLAYER_NAME} played the\n{B_LAST_ITEM}.");
@@ -931,6 +932,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_WEATHERCLEARED - BATTLESTRINGS_TABLE_START]                = sText_WeatherCleared,
     [STRINGID_PKMNSXCLEAREDSTATCHANGES - BATTLESTRINGS_TABLE_START]      = sText_PkmnsXClearedStatChanges,
     [STRINGID_PKMNCUTSSPECIALATTACKWITH - BATTLESTRINGS_TABLE_START]     = sText_PkmnCutsSpecialAttackWith,
+    [STRINGID_PKMNSHUNGONWITHXABILITY - BATTLESTRINGS_TABLE_START]       = sText_PkmnHungOnWithXAbility,
 };
 
 const u16 gMissStringIds[] =

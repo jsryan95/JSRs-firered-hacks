@@ -230,7 +230,8 @@ struct SpecialStatus
     u8 specialBattlerId;
     u8 blackSmoked:1;
     u8 interferedMon:1;
-    u8 field12:6;
+    u8 sturdied:1;
+    u8 field12:5;
     u8 field13;
 };
 
@@ -700,7 +701,7 @@ extern u8 gBattleCommunication[BATTLE_COMMUNICATION_ENTRIES_COUNT];
 extern u16 gSideStatuses[2];
 extern u32 gHitMarker;
 extern u16 gChosenMoveByBattler[MAX_BATTLERS_COUNT];
-extern u8 gMoveResultFlags;
+extern u16 gMoveResultFlags;
 extern s32 gTakenDmg[MAX_BATTLERS_COUNT];
 extern u8 gTakenDmgByBattler[MAX_BATTLERS_COUNT];
 extern u8 gCurrentActionFuncId;
