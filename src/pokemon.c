@@ -2525,7 +2525,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                     || gBattleMoves[gCurrentMove].effect == EFFECT_FLARE_BLITZ
                     || gBattleMoves[gCurrentMove].effect == EFFECT_RECOIL_IF_MISS
                     || gBattleMoves[gCurrentMove].effect == EFFECT_HEAD_SMASH))
-        gBattleMovePower = (12 * gBattleMovePower) / 10;
+        gBattleMovePower = (120 * gBattleMovePower) / 100;
     if (WEATHER_HAS_EFFECT
             && gBattleWeather & B_WEATHER_SANDSTORM
             && hasActiveAbility2(attacker, ABILITY_SAND_FORCE)
@@ -2534,7 +2534,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (hasActiveAbility2(attacker, ABILITY_TECHNICIAN) && gBattleMoves[gCurrentMove].power <= 60)
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (hasActiveAbility2(attacker, ABILITY_IRON_FIST) && isPunchingMove(gCurrentMove))
-        gBattleMovePower = (12 * gBattleMovePower) / 10;
+        gBattleMovePower = (120 * gBattleMovePower) / 100;
+    if (hasActiveAbility2(attacker, ABILITY_RIVALRY)
+            && (attacker->type1 == defender->type1
+                    || attacker->type1 == defender->type2
+                    || attacker->type2 == defender->type1
+                    || attacker->type2 == defender->type2))
+        gBattleMovePower = (120 * gBattleMovePower) / 100;
 
     // Self-destruct / Explosion cut defense in half
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
