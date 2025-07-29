@@ -105,6 +105,7 @@
 #define ABILITY_TANGLED_FEET 120
 #define ABILITY_TECHNICIAN 121
 #define ABILITY_TINTED_LENS 122
+#define ABILITY_UNAWARE 123
 
 // generation 4 abilities (not implemented)
 #define ABILITY_DOWNLOAD 83
@@ -128,7 +129,6 @@
 #define ABILITY_SOLAR_POWER 114
 #define ABILITY_STEADFAST 117
 #define ABILITY_STORM_DRAIN 118
-#define ABILITY_UNAWARE 123
 #define ABILITY_UNBURDEN 124
 
 // generation 5 abilities

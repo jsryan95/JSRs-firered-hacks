@@ -1278,16 +1278,16 @@ static void Cmd_accuracycheck(void)
         if (AccuracyCalcHelper(move))
             return;
 
-        if (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT
-                || gBattleMons[gBattlerTarget].status3 & STATUS3_MIRACLE_EYE)
         {
-            u8 acc = gBattleMons[gBattlerAttacker].statStages[STAT_ACC];
+            u8 acc = DEFAULT_STAT_STAGE;
+            if (!hasActiveAbility(gBattlerTarget, ABILITY_UNAWARE))
+                acc += gBattleMons[gBattlerAttacker].statStages[STAT_ACC];
+
+            if (!(gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
+                    && !(gBattleMons[gBattlerTarget].status3 & STATUS3_MIRACLE_EYE)
+                    && !hasActiveAbility(gBattlerAttacker, ABILITY_UNAWARE))
+                acc += DEFAULT_STAT_STAGE - gBattleMons[gBattlerTarget].statStages[STAT_EVASION];
             buff = acc;
-        }
-        else
-        {
-            u8 acc = gBattleMons[gBattlerAttacker].statStages[STAT_ACC];
-            buff = acc + DEFAULT_STAT_STAGE - gBattleMons[gBattlerTarget].statStages[STAT_EVASION];
         }
 
         if (buff < MIN_STAT_STAGE)

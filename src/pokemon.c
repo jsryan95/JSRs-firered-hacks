@@ -2551,13 +2551,14 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (gCritMultiplier == 2)
         {
             // Critical hit, if attacker has lost attack stat stages then ignore stat drop
-            if (attacker->statStages[STAT_ATK] > DEFAULT_STAT_STAGE)
+            if ((attacker->statStages[STAT_ATK] > DEFAULT_STAT_STAGE) && !hasActiveAbility2(defender, ABILITY_UNAWARE))
                 APPLY_STAT_MOD(damage, attacker, attack, STAT_ATK)
             else
                 damage = attack;
         }
-        else
+        else if (!hasActiveAbility2(defender, ABILITY_UNAWARE))
             APPLY_STAT_MOD(damage, attacker, attack, STAT_ATK)
+        else damage = attack;
 
         damage = damage * gBattleMovePower;
         damage *= (2 * attacker->level / 5 + 2);
@@ -2565,13 +2566,15 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (gCritMultiplier == 2)
         {
             // Critical hit, if defender has gained defense stat stages then ignore stat increase
-            if (defender->statStages[STAT_DEF] < DEFAULT_STAT_STAGE)
+            if ((defender->statStages[STAT_DEF] < DEFAULT_STAT_STAGE) && !hasActiveAbility2(attacker, ABILITY_UNAWARE))
                 APPLY_STAT_MOD(damageHelper, defender, defense, STAT_DEF)
             else
                 damageHelper = defense;
         }
-        else
+        else if (!hasActiveAbility2(attacker, ABILITY_UNAWARE))
             APPLY_STAT_MOD(damageHelper, defender, defense, STAT_DEF)
+        else
+            damageHelper = defense;
 
         damage = damage / damageHelper;
         damage /= 50;
@@ -2606,13 +2609,15 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (gCritMultiplier == 2)
         {
             // Critical hit, if attacker has lost sp. attack stat stages then ignore stat drop
-            if (attacker->statStages[STAT_SPATK] > DEFAULT_STAT_STAGE)
+            if ((attacker->statStages[STAT_SPATK] > DEFAULT_STAT_STAGE) && !hasActiveAbility2(defender, ABILITY_UNAWARE))
                 APPLY_STAT_MOD(damage, attacker, spAttack, STAT_SPATK)
             else
                 damage = spAttack;
         }
-        else
+        else if (!hasActiveAbility2(defender, ABILITY_UNAWARE))
             APPLY_STAT_MOD(damage, attacker, spAttack, STAT_SPATK)
+        else
+            damage = spAttack;
 
         damage = damage * gBattleMovePower;
         damage *= (2 * attacker->level / 5 + 2);
@@ -2620,13 +2625,15 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (gCritMultiplier == 2)
         {
             // Critical hit, if defender has gained sp. defense stat stages then ignore stat increase
-            if (defender->statStages[STAT_SPDEF] < DEFAULT_STAT_STAGE)
+            if (defender->statStages[STAT_SPDEF] < DEFAULT_STAT_STAGE && !hasActiveAbility2(attacker, ABILITY_UNAWARE))
                 APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_SPDEF)
             else
                 damageHelper = spDefense;
         }
-        else
+        else if (!hasActiveAbility2(attacker, ABILITY_UNAWARE))
             APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_SPDEF)
+        else
+            damageHelper = spDefense;
 
         damage = (damage / damageHelper);
         damage /= 50;
