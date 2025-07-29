@@ -112,6 +112,7 @@ static const u8 sTangledFeetDescription[] = _("Raises evasion when confused.");
 static const u8 sNoGuardDescription[] = _("Prevents protection moves.");
 static const u8 sSniperDescription[] = _("Powers up critical hits.");
 static const u8 sRivalryDescription[] = _("Does more damage to a same-type foe.");
+static const u8 sSuperLuckDescription[] = _("Gets critical hits more often.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -231,6 +232,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_NO_GUARD] = sNoGuardDescription,
     [ABILITY_SNIPER] = sSniperDescription,
     [ABILITY_RIVALRY] = sRivalryDescription,
+    [ABILITY_SUPER_LUCK] = sSuperLuckDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -351,4 +353,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_NO_GUARD] = _("NO GUARD"),
     [ABILITY_SNIPER] = _("SNIPER"),
     [ABILITY_RIVALRY] = _("RIVALRY"),
+    [ABILITY_SUPER_LUCK] = _("SUPER LUCK"),
 };
