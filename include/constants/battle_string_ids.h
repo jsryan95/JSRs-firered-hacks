@@ -401,8 +401,9 @@
 #define STRINGID_PKMNSXPREVENTSPROTECT 400
 #define STRINGID_PKMNTAILWINDSTARTED 401
 #define STRINGID_PKMNTAILWINDEXPIRED 402
+#define STRINGID_PKMNXLOWERSATTACK 403
 
-#define BATTLESTRINGS_COUNT     403
+#define BATTLESTRINGS_COUNT     404
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

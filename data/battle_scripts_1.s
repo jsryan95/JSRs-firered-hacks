@@ -4783,10 +4783,15 @@ BattleScript_MummyActivates::
 	return
 
 BattleScript_CuteCharmActivates::
-	status2animation BS_ATTACKER, STATUS2_INFATUATION
-	printstring STRINGID_PKMNSXINFATUATEDY
-	waitmessage B_WAIT_TIME_LONG
-	return
+    jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_ATK, MIN_STAT_STAGE, BattleScript_CuteCharmEnd
+    playstatchangeanimation BS_ATTACKER, BIT_ATK, STAT_CHANGE_NEGATIVE
+    setstatchanger STAT_ATK, 1, TRUE
+    statbuffchange MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_CuteCharmEnd
+    jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_CuteCharmEnd
+	printstring STRINGID_PKMNXLOWERSATTACK
+	waitmessage B_WAIT_TIME_SHORT
+BattleScript_CuteCharmEnd::
+    return
 
 BattleScript_ApplySecondaryEffect::
 	waitstate
