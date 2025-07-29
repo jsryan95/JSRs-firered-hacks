@@ -4567,6 +4567,39 @@ BattleScript_IntimidateAbilityFail::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_IntimidateFail
 
+BattleScript_InterferenceActivatesEnd3::
+	call BattleScript_DoInterferenceActivationAnim
+	end3
+
+BattleScript_DoInterferenceActivationAnim::
+	pause B_WAIT_TIME_SHORT
+BattleScript_InterferenceActivates::
+	setbyte gBattlerTarget, 0
+	setstatchanger STAT_SPATK, 1, TRUE
+BattleScript_InterferenceActivationAnimLoop::
+	tryGetInterferenceTarget BattleScript_InterferenceEnd
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_InterferenceFail
+	jumpifability BS_TARGET, ABILITY_CLEAR_BODY, BattleScript_InterferenceAbilityFail
+	jumpifability BS_TARGET, ABILITY_WHITE_SMOKE, BattleScript_InterferenceAbilityFail
+	statbuffchange STAT_CHANGE_ALLOW_PTR | STAT_CHANGE_NOT_PROTECT_AFFECTED, BattleScript_InterferenceFail
+	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, 1, BattleScript_InterferenceFail
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNCUTSSPECIALATTACKWITH
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_InterferenceFail::
+	addbyte gBattlerTarget, 1
+	goto BattleScript_InterferenceActivationAnimLoop
+
+BattleScript_InterferenceEnd::
+	return
+
+BattleScript_InterferenceAbilityFail::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PREVENTEDFROMWORKING
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_InterferenceFail
+
 BattleScript_DroughtActivates::
 	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNSXINTENSIFIEDSUN

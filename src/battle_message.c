@@ -288,6 +288,7 @@ static const u8 sText_PkmnPreventsConfusionWith[] = _("{B_DEF_NAME_WITH_PREFIX}'
 static const u8 sText_PkmnRaisedFirePowerWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nraised its FIRE power!");
 static const u8 sText_PkmnAnchorsItselfWith[] = _("{B_DEF_NAME_WITH_PREFIX} anchors\nitself with {B_DEF_ABILITY}!");
 static const u8 sText_PkmnCutsAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncuts {B_DEF_NAME_WITH_PREFIX}'s ATTACK!");
+static const u8 sText_PkmnCutsSpecialAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncuts {B_DEF_NAME_WITH_PREFIX}'s SP. ATK!");
 static const u8 sText_PkmnPreventsStatLossWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nprevents stat loss!");
 static const u8 sText_PkmnHurtsWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nhurt {B_ATK_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnAbilityBecameMummy[] = _("{B_ATK_NAME_WITH_PREFIX}'s ability\nbecame MUMMY!");
@@ -929,6 +930,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNXLOWERSATTACK - BATTLESTRINGS_TABLE_START]             = sText_PkmnXLowersAttack,
     [STRINGID_WEATHERCLEARED - BATTLESTRINGS_TABLE_START]                = sText_WeatherCleared,
     [STRINGID_PKMNSXCLEAREDSTATCHANGES - BATTLESTRINGS_TABLE_START]      = sText_PkmnsXClearedStatChanges,
+    [STRINGID_PKMNCUTSSPECIALATTACKWITH - BATTLESTRINGS_TABLE_START]     = sText_PkmnCutsSpecialAttackWith,
 };
 
 const u16 gMissStringIds[] =

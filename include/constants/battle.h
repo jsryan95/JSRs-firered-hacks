@@ -155,6 +155,7 @@
 #define STATUS4_INTIMIDATE_POKES        (1 << 19)
 #define STATUS4_TRACE                   (1 << 20)
 #define STATUS4_AQUA_RING               (1 << 21)
+#define STATUS4_INTERFERENCE_POKES      (1 << 22)
 #define STATUS4_SEMI_INVULNERABLE       (STATUS4_UNDERGROUND | STATUS4_ON_AIR | STATUS4_UNDERWATER)
 
 // Not really sure what a "hitmarker" is.

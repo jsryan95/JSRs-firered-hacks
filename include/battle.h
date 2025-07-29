@@ -229,7 +229,8 @@ struct SpecialStatus
     u8 physicalBattlerId;
     u8 specialBattlerId;
     u8 blackSmoked:1;
-    u8 field12:7;
+    u8 interferedMon:1;
+    u8 field12:6;
     u8 field13;
 };
 
@@ -443,6 +444,7 @@ struct BattleStruct
     u16 choicedMove[MAX_BATTLERS_COUNT];
     u16 changedItems[MAX_BATTLERS_COUNT];
     u8 intimidateBattler;
+    u8 interferenceBattler;
     u8 switchInItemsCounter;
     u8 field_DA; // battle tower related
     u8 turnSideTracker;

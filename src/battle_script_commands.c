@@ -6179,6 +6179,7 @@ static void Cmd_various(void)
     case VARIOUS_RESET_INTIMIDATE_TRACE_BITS:
         gSpecialStatuses[gActiveBattler].intimidatedMon = 0;
         gSpecialStatuses[gActiveBattler].traced = 0;
+        gSpecialStatuses[gActiveBattler].interferedMon = 0;
         break;
     case VARIOUS_UPDATE_CHOICE_MOVE_ON_LVL_UP:
         if (gBattlerPartyIndexes[0] == gBattleStruct->expGetterMonId || gBattlerPartyIndexes[2] == gBattleStruct->expGetterMonId)
@@ -10309,4 +10310,27 @@ void BS_endWeather(void)
     gWishFutureKnock.weatherDuration = 0;
 
     gBattlescriptCurrInstr += 5;
+}
+
+void BS_tryGetInterferenceTarget(void)
+{
+    u8 side;
+
+    gBattleScripting.battler = gBattleStruct->interferenceBattler;
+    side = GetBattlerSide(gBattleScripting.battler);
+
+    PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gBattleMons[gBattleScripting.battler].ability)
+
+    for (;gBattlerTarget < gBattlersCount; gBattlerTarget++)
+    {
+        if (GetBattlerSide(gBattlerTarget) == side)
+            continue;
+        if (!(gAbsentBattlerFlags & gBitTable[gBattlerTarget]))
+            break;
+    }
+
+    if (gBattlerTarget >= gBattlersCount)
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    else
+        gBattlescriptCurrInstr += 9;
 }

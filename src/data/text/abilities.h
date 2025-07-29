@@ -114,6 +114,7 @@ static const u8 sSniperDescription[] = _("Powers up critical hits.");
 static const u8 sRivalryDescription[] = _("Does more damage to a same-type foe.");
 static const u8 sSuperLuckDescription[] = _("Gets critical hits more often.");
 static const u8 sBlackSmokeDescription[] = _("Resets stat changes on entry.");
+static const u8 sInterferenceDescription[] = _("Lowers the foe's SP. ATK.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -235,6 +236,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_RIVALRY] = sRivalryDescription,
     [ABILITY_SUPER_LUCK] = sSuperLuckDescription,
     [ABILITY_BLACK_SMOKE] = sBlackSmokeDescription,
+    [ABILITY_INTERFERENCE] = sInterferenceDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -357,4 +359,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_RIVALRY] = _("RIVALRY"),
     [ABILITY_SUPER_LUCK] = _("SUPER LUCK"),
     [ABILITY_BLACK_SMOKE] = _("BLACK SMOKE"),
+    [ABILITY_INTERFERENCE] = _("INTERFERENCE"),
 };

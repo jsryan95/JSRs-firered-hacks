@@ -1475,3 +1475,8 @@
 	.macro endWeather
 	callnative BS_endWeather
 	.endm
+
+	.macro tryGetInterferenceTarget param0:req
+	callnative BS_tryGetInterferenceTarget
+	.4byte \param0
+	.endm
