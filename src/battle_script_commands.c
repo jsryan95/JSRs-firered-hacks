@@ -1285,7 +1285,8 @@ static void Cmd_accuracycheck(void)
 
             if (!(gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
                     && !(gBattleMons[gBattlerTarget].status3 & STATUS3_MIRACLE_EYE)
-                    && !hasActiveAbility(gBattlerAttacker, ABILITY_UNAWARE))
+                    && !hasActiveAbility(gBattlerAttacker, ABILITY_UNAWARE)
+                    && gBattleMoves[move].effect != EFFECT_SACRED_SWORD)
                 acc += DEFAULT_STAT_STAGE - gBattleMons[gBattlerTarget].statStages[STAT_EVASION];
             buff = acc;
         }

@@ -2566,12 +2566,15 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (gCritMultiplier == 2)
         {
             // Critical hit, if defender has gained defense stat stages then ignore stat increase
-            if ((defender->statStages[STAT_DEF] < DEFAULT_STAT_STAGE) && !hasActiveAbility2(attacker, ABILITY_UNAWARE))
+            if ((defender->statStages[STAT_DEF] < DEFAULT_STAT_STAGE)
+                    && !hasActiveAbility2(attacker, ABILITY_UNAWARE)
+                    && gBattleMoves[gCurrentMove].effect != EFFECT_SACRED_SWORD)
                 APPLY_STAT_MOD(damageHelper, defender, defense, STAT_DEF)
             else
                 damageHelper = defense;
         }
-        else if (!hasActiveAbility2(attacker, ABILITY_UNAWARE))
+        else if (!hasActiveAbility2(attacker, ABILITY_UNAWARE)
+                && gBattleMoves[gCurrentMove].effect != EFFECT_SACRED_SWORD)
             APPLY_STAT_MOD(damageHelper, defender, defense, STAT_DEF)
         else
             damageHelper = defense;
@@ -2625,12 +2628,15 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (gCritMultiplier == 2)
         {
             // Critical hit, if defender has gained sp. defense stat stages then ignore stat increase
-            if (defender->statStages[STAT_SPDEF] < DEFAULT_STAT_STAGE && !hasActiveAbility2(attacker, ABILITY_UNAWARE))
+            if (defender->statStages[STAT_SPDEF] < DEFAULT_STAT_STAGE
+                    && !hasActiveAbility2(attacker, ABILITY_UNAWARE)
+                    && gBattleMoves[gCurrentMove].effect != EFFECT_SACRED_SWORD)
                 APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_SPDEF)
             else
                 damageHelper = spDefense;
         }
-        else if (!hasActiveAbility2(attacker, ABILITY_UNAWARE))
+        else if (!hasActiveAbility2(attacker, ABILITY_UNAWARE)
+                && gBattleMoves[gCurrentMove].effect != EFFECT_SACRED_SWORD)
             APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_SPDEF)
         else
             damageHelper = spDefense;

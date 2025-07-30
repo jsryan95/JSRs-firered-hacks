@@ -541,9 +541,9 @@ gBattleAnims_Moves::
 	.4byte Move_SHELL_SMASH
 	.4byte Move_REFLECT_TYPE
 	.4byte Move_INCINERATE
+	.4byte Move_SACRED_SWORD
+	.4byte Move_CHIP_AWAY
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -9792,8 +9792,13 @@ ReturnMedium:
 	createvisualtask SoundTask_PlaySE1WithPanning, 5, SE_M_MEGA_KICK2, SOUND_PAN_TARGET
 	goto ReturnContinue
 
-ReturnStrong:
 Move_ROCK_CLIMB:
+Move_CHIP_AWAY:
+Move_SACRED_SWORD:
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+ReturnStrong:
 	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 6, 1, ANIM_ATTACKER
 	createvisualtask SoundTask_PlaySE2WithPanning, 5, SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER
 	waitforvisualfinish
