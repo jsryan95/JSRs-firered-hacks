@@ -543,10 +543,10 @@ gBattleAnims_Moves::
 	.4byte Move_INCINERATE
 	.4byte Move_SACRED_SWORD
 	.4byte Move_CHIP_AWAY
+	.4byte Move_PSYSHOCK
+	.4byte Move_PSYSTRIKE
+	.4byte Move_SECRET_SWORD
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -7956,6 +7956,9 @@ HypnosisRings:
 	return
 
 Move_PSYWAVE:
+Move_PSYSHOCK:
+Move_PSYSTRIKE:
+Move_SECRET_SWORD:
 	loadspritegfx ANIM_TAG_BLUE_RING
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
 	call SetPsychicBackground

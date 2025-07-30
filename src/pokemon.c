@@ -2603,12 +2603,24 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         damage = damage * gBattleMovePower;
         damage *= (2 * attacker->level / 5 + 2);
 
-        if ((gCritMultiplier > 1 && defender->statStages[STAT_SPDEF] > DEFAULT_STAT_STAGE)
-                || hasActiveAbility2(attacker, ABILITY_UNAWARE)
-                || gBattleMoves[gCurrentMove].effect == EFFECT_SACRED_SWORD)
-            damageHelper = spDefense;
+        if (gBattleMoves[gCurrentMove].effect == EFFECT_PSYSHOCK)
+        {
+            if ((gCritMultiplier > 1 && defender->statStages[STAT_DEF] > DEFAULT_STAT_STAGE)
+                    || hasActiveAbility2(attacker, ABILITY_UNAWARE)
+                    || gBattleMoves[gCurrentMove].effect == EFFECT_SACRED_SWORD)
+                damageHelper = defense;
+            else
+                APPLY_STAT_MOD(damageHelper, defender, defense, STAT_DEF)
+        }
         else
-            APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_SPDEF)
+        {
+            if ((gCritMultiplier > 1 && defender->statStages[STAT_SPDEF] > DEFAULT_STAT_STAGE)
+                    || hasActiveAbility2(attacker, ABILITY_UNAWARE)
+                    || gBattleMoves[gCurrentMove].effect == EFFECT_SACRED_SWORD)
+                damageHelper = spDefense;
+            else
+                APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_SPDEF)
+        }
 
         damage = (damage / damageHelper);
         damage /= 50;

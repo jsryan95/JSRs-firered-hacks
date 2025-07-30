@@ -491,6 +491,8 @@ const u8 gMoveDescription_SkyBurst[] = _("A shockwave created\nby powerful wings
 const u8 gMoveDescription_DragonShout[] = _("A forceful shout\nstills the air and\nclears any weather.");
 const u8 gMoveDescription_StarShooter[] = _("Drops a comet on\nthe foe, lowering\nboth combatants'\nSP. DEF.");
 const u8 gMoveDescription_SacredSword[] = _("The target's stat\nchanges don't\naffect this attack's\ndamage.");
+const u8 gMoveDescription_Psyshock[] = _("Materializes an odd\npsychic wave to\nattack. Attacks the\nfoe's DEFENSE.");
+const u8 gMoveDescription_SecretSword[] = _("Attacks with the\nodd power in its\nhorn. Attacks the\nfoe's DEFENSE.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -997,4 +999,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_STAR_SHOOTER - 1] = gMoveDescription_StarShooter,
     [MOVE_SACRED_SWORD - 1] = gMoveDescription_SacredSword,
     [MOVE_CHIP_AWAY - 1] = gMoveDescription_SacredSword,
+    [MOVE_PSYSHOCK - 1] = gMoveDescription_Psyshock,
+    [MOVE_PSYSTRIKE - 1] = gMoveDescription_Psyshock,
+    [MOVE_SECRET_SWORD - 1] = gMoveDescription_SecretSword,
 };

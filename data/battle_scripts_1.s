@@ -291,6 +291,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectSkyBurst               @ EFFECT_SKY_BURST
 	.4byte BattleScript_EffectStarShooter            @ EFFECT_STAR_SHOOTER
 	.4byte BattleScript_EffectHit                    @ EFFECT_SACRED_SWORD
+	.4byte BattleScript_EffectHit                    @ EFFECT_PSYSHOCK
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
