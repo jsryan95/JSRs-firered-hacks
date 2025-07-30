@@ -1057,6 +1057,17 @@ const struct SpriteTemplate gPinkHeartSpriteTemplate =
     .callback = AnimPinkHeart,
 };
 
+const struct SpriteTemplate gPinkHeart2SpriteTemplate =
+{
+    .tileTag = ANIM_TAG_PINK_HEART,
+    .paletteTag = ANIM_TAG_PINK_HEART,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimMagentaHeart,
+};
+
 static const union AnimCmd sDevilAnimCmds1[] =
 {
     ANIMCMD_FRAME(0, 3),
@@ -3862,4 +3873,36 @@ void AnimTask_GetFuryCutterHitCount(u8 taskId)
 {
     gBattleAnimArgs[ARG_RET_ID] = gAnimDisableStructPtr->furyCutterCounter;
     DestroyAnimVisualTask(taskId);
+}
+
+static void AnimSeedProjectile(struct Sprite *sprite);
+static void AnimSeedProjectile_Step(struct Sprite *sprite);
+
+const struct SpriteTemplate gSeedProjectileSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SEED,
+    .paletteTag = ANIM_TAG_SEED,
+    .oam = &gOamData_AffineNormal_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = sBulletSeedAffineAnimTable,
+    .callback = AnimSeedProjectile,
+};
+
+
+static void AnimSeedProjectile(struct Sprite *sprite)
+{
+    InitSpritePosToAnimAttacker(sprite, 1);
+    sprite->data[0] = gBattleAnimArgs[2];
+    sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2) + gBattleAnimArgs[5];
+    sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET) + gBattleAnimArgs[6];
+    sprite->data[5] = gBattleAnimArgs[4];
+    InitAnimArcTranslation(sprite);
+    sprite->callback = AnimSeedProjectile_Step;
+}
+
+static void AnimSeedProjectile_Step(struct Sprite *sprite)
+{
+    if (TranslateAnimHorizontalArc(sprite))
+        DestroyAnimSprite(sprite);
 }

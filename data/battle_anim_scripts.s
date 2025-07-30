@@ -1236,7 +1236,7 @@ Move_DRAIN_PUNCH:
 	splitbgprio_foes ANIM_TARGET
 	setalpha 12, 8
 	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
-	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 3, 0, 0, 8, 1, 0
+	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 3, 0, 0, 30, 1, 0
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, ANIM_TARGET, 1
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 1, 0, 12, RGB(31, 22, 12)
 	delay 5
@@ -3435,7 +3435,6 @@ Move_GLARE:
 	end
 
 Move_BARRAGE:
-Move_SEED_BOMB:
 	loadspritegfx ANIM_TAG_RED_BALL
 	createvisualtask AnimTask_BarrageBall, 3
 	playsewithpan SE_M_SWAGGER, SOUND_PAN_ATTACKER
@@ -3802,7 +3801,6 @@ EndureEffect:
 	return
 
 Move_CHARM:
-Move_CAPTIVATE:
 	loadspritegfx ANIM_TAG_MAGENTA_HEART
 	createvisualtask AnimTask_RockMonBackAndForth, 5, ANIM_ATTACKER, 2, 0
 	createsprite gMagentaHeartSpriteTemplate, ANIM_ATTACKER, 3, 0, 20
@@ -3812,6 +3810,20 @@ Move_CAPTIVATE:
 	playsewithpan SE_M_CHARM, SOUND_PAN_ATTACKER
 	delay 15
 	createsprite gMagentaHeartSpriteTemplate, ANIM_ATTACKER, 3, 20, 20
+	playsewithpan SE_M_CHARM, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+	end
+
+Move_CAPTIVATE:
+	loadspritegfx ANIM_TAG_PINK_HEART
+	createvisualtask AnimTask_RockMonBackAndForth, 5, ANIM_ATTACKER, 2, 0
+	createsprite gPinkHeart2SpriteTemplate, ANIM_ATTACKER, 3, 0, 20
+	playsewithpan SE_M_CHARM, SOUND_PAN_ATTACKER
+	delay 15
+	createsprite gPinkHeart2SpriteTemplate, ANIM_ATTACKER, 3, -20, 20
+	playsewithpan SE_M_CHARM, SOUND_PAN_ATTACKER
+	delay 15
+	createsprite gPinkHeart2SpriteTemplate, ANIM_ATTACKER, 3, 20, 20
 	playsewithpan SE_M_CHARM, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	end
@@ -8172,7 +8184,6 @@ Move_GEAR_GRIND:
 	end
 
 Move_POISON_TAIL:
-Move_CROSS_POISON:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	loopsewithpan SE_M_HARDEN, SOUND_PAN_ATTACKER, 28, 2
@@ -8189,6 +8200,20 @@ Move_CROSS_POISON:
 	createvisualtask AnimTask_SetGrayscaleOrOriginalPal, 5, ANIM_ATTACKER, 1
 	clearmonbg ANIM_TARGET
 	blendoff
+	call PoisonBubblesEffect
+	waitforvisualfinish
+	end
+
+Move_CROSS_POISON:
+	loadspritegfx ANIM_TAG_POISON_BUBBLE
+	loadspritegfx ANIM_TAG_CUT
+	playsewithpan SE_M_CUT, SOUND_PAN_TARGET
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
+	delay 5
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_TARGET, 0, 4, 0, 12, RGB(26, 0, 26)
+	delay 10
 	call PoisonBubblesEffect
 	waitforvisualfinish
 	end
@@ -9569,6 +9594,37 @@ Move_ENERGY_BALL:
 	createsprite gBulletSeedSpriteTemplate, ANIM_TARGET, 2, 20, 0
 	delay 5
 	createsprite gBulletSeedSpriteTemplate, ANIM_TARGET, 2, 20, 0
+	waitforvisualfinish
+	end
+
+Move_SEED_BOMB:
+	loadspritegfx ANIM_TAG_SEED
+	loadspritegfx ANIM_TAG_EXPLOSION
+	playsewithpan SE_M_VITAL_THROW, SOUND_PAN_ATTACKER
+	createsprite gSeedProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 30, 0, -40, 0, 5
+	delay 10
+	playsewithpan SE_M_VITAL_THROW, SOUND_PAN_ATTACKER
+	createsprite gSeedProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 30, 0, -60, 10, -5
+	delay 10
+	playsewithpan SE_M_VITAL_THROW, SOUND_PAN_ATTACKER
+	createsprite gSeedProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 30, 0, -20, -10, -5
+	delay 10
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 16, 1
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 6, 5, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, -16, -15, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 16, -5, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, -12, 18, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	delay 3
+	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 4, 0, 5, 1, 0
+	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
+	delay 3
 	waitforvisualfinish
 	end
 
