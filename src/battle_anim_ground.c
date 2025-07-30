@@ -25,6 +25,8 @@ static void AnimTask_ShakeTerrain(u8 taskId);
 static void AnimTask_ShakeBattlers(u8 taskId);
 static void SetBattlersXOffsetForShake(struct Task *task);
 static void WaitForFissureCompletion(u8 taskId);
+static void AnimMudProjectile(struct Sprite *sprite);
+static void AnimMudProjectile_Step(struct Sprite *sprite);
 
 static const union AffineAnimCmd sAffineAnim_Bonemerang[] =
 {
@@ -101,6 +103,17 @@ const struct SpriteTemplate gMudSlapMudSpriteTemplate =
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimDirtScatter,
+};
+
+const struct SpriteTemplate gMudProjectileSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_MUD_SAND,
+    .paletteTag = ANIM_TAG_MUD_SAND,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = sAnims_MudSlapMud,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimMudProjectile,
 };
 
 const struct SpriteTemplate gMudsportMudSpriteTemplate =
@@ -749,4 +762,21 @@ static void WaitForFissureCompletion(u8 taskId)
         gBattle_BG3_X = task->data[1];
         gBattle_BG3_Y = task->data[2];
     }
+}
+
+static void AnimMudProjectile(struct Sprite *sprite)
+{
+    InitSpritePosToAnimAttacker(sprite, 1);
+    sprite->data[0] = gBattleAnimArgs[2];
+    sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
+    sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
+    sprite->data[5] = -30;
+    InitAnimArcTranslation(sprite);
+    sprite->callback = AnimMudProjectile_Step;
+}
+
+static void AnimMudProjectile_Step(struct Sprite *sprite)
+{
+    if (TranslateAnimHorizontalArc(sprite))
+        DestroyAnimSprite(sprite);
 }
