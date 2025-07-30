@@ -2548,36 +2548,21 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 
     if (IS_MOVE_PHYSICAL(move))
     {
-        if (gCritMultiplier == 2)
-        {
-            // Critical hit, if attacker has lost attack stat stages then ignore stat drop
-            if ((attacker->statStages[STAT_ATK] > DEFAULT_STAT_STAGE) && !hasActiveAbility2(defender, ABILITY_UNAWARE))
-                APPLY_STAT_MOD(damage, attacker, attack, STAT_ATK)
-            else
-                damage = attack;
-        }
-        else if (!hasActiveAbility2(defender, ABILITY_UNAWARE))
+        if ((gCritMultiplier > 1 && attacker->statStages[STAT_ATK] < DEFAULT_STAT_STAGE)
+                || hasActiveAbility2(defender, ABILITY_UNAWARE))
+            damage = attack;
+        else
             APPLY_STAT_MOD(damage, attacker, attack, STAT_ATK)
-        else damage = attack;
 
         damage = damage * gBattleMovePower;
         damage *= (2 * attacker->level / 5 + 2);
 
-        if (gCritMultiplier == 2)
-        {
-            // Critical hit, if defender has gained defense stat stages then ignore stat increase
-            if ((defender->statStages[STAT_DEF] < DEFAULT_STAT_STAGE)
-                    && !hasActiveAbility2(attacker, ABILITY_UNAWARE)
-                    && gBattleMoves[gCurrentMove].effect != EFFECT_SACRED_SWORD)
-                APPLY_STAT_MOD(damageHelper, defender, defense, STAT_DEF)
-            else
-                damageHelper = defense;
-        }
-        else if (!hasActiveAbility2(attacker, ABILITY_UNAWARE)
-                && gBattleMoves[gCurrentMove].effect != EFFECT_SACRED_SWORD)
-            APPLY_STAT_MOD(damageHelper, defender, defense, STAT_DEF)
-        else
+        if ((gCritMultiplier > 1 && defender->statStages[STAT_DEF] > DEFAULT_STAT_STAGE)
+                || hasActiveAbility2(attacker, ABILITY_UNAWARE)
+                || gBattleMoves[gCurrentMove].effect == EFFECT_SACRED_SWORD)
             damageHelper = defense;
+        else
+            APPLY_STAT_MOD(damageHelper, defender, defense, STAT_DEF)
 
         damage = damage / damageHelper;
         damage /= 50;
@@ -2609,37 +2594,21 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 
     if (IS_MOVE_SPECIAL(move))
     {
-        if (gCritMultiplier == 2)
-        {
-            // Critical hit, if attacker has lost sp. attack stat stages then ignore stat drop
-            if ((attacker->statStages[STAT_SPATK] > DEFAULT_STAT_STAGE) && !hasActiveAbility2(defender, ABILITY_UNAWARE))
-                APPLY_STAT_MOD(damage, attacker, spAttack, STAT_SPATK)
-            else
-                damage = spAttack;
-        }
-        else if (!hasActiveAbility2(defender, ABILITY_UNAWARE))
-            APPLY_STAT_MOD(damage, attacker, spAttack, STAT_SPATK)
-        else
+        if ((gCritMultiplier > 1 && attacker->statStages[STAT_SPATK] < DEFAULT_STAT_STAGE)
+                || hasActiveAbility2(defender, ABILITY_UNAWARE))
             damage = spAttack;
+        else
+            APPLY_STAT_MOD(damage, attacker, spAttack, STAT_SPATK)
 
         damage = damage * gBattleMovePower;
         damage *= (2 * attacker->level / 5 + 2);
 
-        if (gCritMultiplier == 2)
-        {
-            // Critical hit, if defender has gained sp. defense stat stages then ignore stat increase
-            if (defender->statStages[STAT_SPDEF] < DEFAULT_STAT_STAGE
-                    && !hasActiveAbility2(attacker, ABILITY_UNAWARE)
-                    && gBattleMoves[gCurrentMove].effect != EFFECT_SACRED_SWORD)
-                APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_SPDEF)
-            else
-                damageHelper = spDefense;
-        }
-        else if (!hasActiveAbility2(attacker, ABILITY_UNAWARE)
-                && gBattleMoves[gCurrentMove].effect != EFFECT_SACRED_SWORD)
-            APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_SPDEF)
-        else
+        if ((gCritMultiplier > 1 && defender->statStages[STAT_SPDEF] > DEFAULT_STAT_STAGE)
+                || hasActiveAbility2(attacker, ABILITY_UNAWARE)
+                || gBattleMoves[gCurrentMove].effect == EFFECT_SACRED_SWORD)
             damageHelper = spDefense;
+        else
+            APPLY_STAT_MOD(damageHelper, defender, spDefense, STAT_SPDEF)
 
         damage = (damage / damageHelper);
         damage /= 50;
