@@ -1661,12 +1661,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     [SPECIES_PRIMEAPE] =
     {
-        .baseHP = 65,
-        .baseAttack = 105,
+        .baseHP = 75,
+        .baseAttack = 118,
         .baseDefense = 60,
-        .baseSpeed = 95,
+        .baseSpeed = 108,
         .baseSpAttack = 60,
-        .baseSpDefense = 70,
+        .baseSpDefense = 45,
         .types = {TYPE_FIGHTING, TYPE_FIGHTING},
         .catchRate = 75,
         .expYield = 149,
@@ -2561,10 +2561,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_GRIMER] =
     {
         .baseHP = 80,
-        .baseAttack = 80,
+        .baseAttack = 40,
         .baseDefense = 50,
         .baseSpeed = 25,
-        .baseSpAttack = 40,
+        .baseSpAttack = 80,
         .baseSpDefense = 50,
         .types = {TYPE_POISON, TYPE_POISON},
         .catchRate = 190,
@@ -2590,10 +2590,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_MUK] =
     {
         .baseHP = 105,
-        .baseAttack = 105,
+        .baseAttack = 65,
         .baseDefense = 75,
         .baseSpeed = 50,
-        .baseSpAttack = 65,
+        .baseSpAttack = 105,
         .baseSpDefense = 100,
         .types = {TYPE_POISON, TYPE_POISON},
         .catchRate = 75,
@@ -2763,8 +2763,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     [SPECIES_ONIX] =
     {
-        .baseHP = 35,
-        .baseAttack = 45,
+        .baseHP = 55,
+        .baseAttack = 55,
         .baseDefense = 160,
         .baseSpeed = 70,
         .baseSpAttack = 30,
@@ -7342,10 +7342,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_TREECKO] =
     {
         .baseHP = 40,
-        .baseAttack = 45,
+        .baseAttack = 55,
         .baseDefense = 35,
         .baseSpeed = 70,
-        .baseSpAttack = 65,
+        .baseSpAttack = 55,
         .baseSpDefense = 55,
         .types = {TYPE_GRASS, TYPE_GRASS},
         .catchRate = 45,
@@ -7371,10 +7371,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_GROVYLE] =
     {
         .baseHP = 50,
-        .baseAttack = 65,
+        .baseAttack = 80,
         .baseDefense = 45,
         .baseSpeed = 95,
-        .baseSpAttack = 85,
+        .baseSpAttack = 70,
         .baseSpDefense = 65,
         .types = {TYPE_GRASS, TYPE_GRASS},
         .catchRate = 45,
@@ -7400,10 +7400,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_SCEPTILE] =
     {
         .baseHP = 70,
-        .baseAttack = 85,
+        .baseAttack = 105,
         .baseDefense = 65,
         .baseSpeed = 120,
-        .baseSpAttack = 105,
+        .baseSpAttack = 85,
         .baseSpDefense = 85,
         .types = {TYPE_GRASS, TYPE_GRASS},
         .catchRate = 45,
