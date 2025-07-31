@@ -76,14 +76,14 @@ Route3_Text_CalvinPostBattle::
     .string "I always wear shorts, even in\n"
     .string "winter. That's my policy.$"
 
-Route3_Text_JamesIntro::
-    .string "I'll battle you with the POKéMON\n"
-    .string "I just caught.$"
+Route3_Text_JamieIntro::
+    .string "I'll battle you with two POKéMON\n"
+    .string "at once.$"
 
-Route3_Text_JamesDefeat::
-    .string "Done like dinner!$"
+Route3_Text_JamieDefeat::
+    .string "Oh dear...$"
 
-Route3_Text_JamesPostBattle::
+Route3_Text_JamiePostBattle::
     .string "Trained POKéMON are stronger than\n"
     .string "the wild ones.$"
 

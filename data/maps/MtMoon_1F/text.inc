@@ -63,7 +63,7 @@ MtMoon_1F_Text_KentIntro::
     .string "What about you?$"
 
 MtMoon_1F_Text_KentDefeat::
-    .string "You got me!$"
+    .string "Yes, you are also in the cave.$"
 
 MtMoon_1F_Text_KentPostBattle::
     .string "I saw them!\n"

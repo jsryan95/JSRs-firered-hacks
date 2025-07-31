@@ -46,16 +46,16 @@ Route3_EventScript_GregRematch::
 	msgbox Route3_Text_GregPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route3_EventScript_James::
-	trainerbattle_single TRAINER_BUG_CATCHER_JAMES, Route3_Text_JamesIntro, Route3_Text_JamesDefeat
+Route3_EventScript_Jamie::
+	trainerbattle_single TRAINER_BEAUTY_JAMIE, Route3_Text_JamieIntro, Route3_Text_JamieDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route3_EventScript_JamesRematch
-	msgbox Route3_Text_JamesPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, Route3_EventScript_JamieRematch
+	msgbox Route3_Text_JamiePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route3_EventScript_JamesRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_JAMES, Route3_Text_JamesRematchIntro, Route3_Text_JamesDefeat
-	msgbox Route3_Text_JamesPostBattle, MSGBOX_AUTOCLOSE
+Route3_EventScript_JamieRematch::
+	trainerbattle_rematch TRAINER_BEAUTY_JAMIE, Route3_Text_JamieRematchIntro, Route3_Text_JamieDefeat
+	msgbox Route3_Text_JamiePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route3_EventScript_Janice::

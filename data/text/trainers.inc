@@ -38,9 +38,9 @@ Route3_Text_CalvinRematchIntro::
 	.string "Hey! What's wrong with you?\n"
 	.string "You're still not wearing shorts!$"
 
-Route3_Text_JamesRematchIntro::
-	.string "I'll battle you with the POKéMON\n"
-	.string "I started raising.$"
+Route3_Text_JamieRematchIntro::
+	.string "I'll battle you with two POKéMON\n"
+	.string "at once.$"
 
 Route3_Text_RobinRematchIntro::
 	.string "Eek!\n"
