@@ -724,6 +724,7 @@ Move_POISON_POWDER:
 	end
 
 Move_STUN_SPORE:
+Move_RAGE_POWDER:
 	loadspritegfx ANIM_TAG_STUN_SPORE
 	loopsewithpan SE_M_POISON_POWDER, SOUND_PAN_TARGET, 10, 6
 	createsprite gStunSporeParticleSpriteTemplate, ANIM_TARGET, 2, -30, -22, 117, 80, 5, 1
@@ -4261,7 +4262,6 @@ Move_SMELLING_SALT:
 	end
 
 Move_FOLLOW_ME:
-Move_RAGE_POWDER:
 	loadspritegfx ANIM_TAG_FINGER
 	createsprite gFollowMeFingerSpriteTemplate, ANIM_ATTACKER, 2, 0
 	playsewithpan SE_M_TAIL_WHIP, SOUND_PAN_ATTACKER
@@ -4413,7 +4413,6 @@ Move_RECYCLE:
 
 Move_BRICK_BREAK:
 Move_PSYCHO_BREAK:
-Move_STORM_BREAK:
 	loadspritegfx ANIM_TAG_BLUE_LIGHT_WALL
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
@@ -4481,6 +4480,75 @@ BrickBreakShatteredWall:
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 2, 6, 0, RGB_BLACK
 	waitforvisualfinish
 	clearmonbg ANIM_TARGET
+	end
+
+Move_STORM_BREAK:
+	loadspritegfx ANIM_TAG_BLUE_LIGHT_WALL
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_SMALL_BUBBLES
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS
+	loadspritegfx ANIM_TAG_WATER_IMPACT
+	loadspritegfx ANIM_TAG_TORN_METAL
+	choosetwoturnanim StormBreakNormal, StormBreakShatteredWall
+
+StormBreakNormal:
+	fadetobg BG_THUNDER
+	waitbgfadeout
+	createvisualtask AnimTask_StartSlidingBg, 5, -256, 0, 1, -1
+	waitbgfadein
+	delay 8
+	createvisualtask AnimTask_FlailMovement, 2, ANIM_ATTACKER
+	loopsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER, 8, 2
+	waitforvisualfinish
+    createvisualtask AnimTask_ShakeMonInPlace, 5, ANIM_TARGET, 8, 0, 16, 1
+    playsewithpan SE_M_WATERFALL, SOUND_PAN_TARGET
+    createsprite gWaterHitSplatSpriteTemplate, ANIM_ATTACKER, 5, 0, 0, ANIM_TARGET, 1
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    delay 6
+    createsprite gWaterHitSplatSpriteTemplate, ANIM_ATTACKER, 5, 0, 0, ANIM_TARGET, 1
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    createsprite gSmallDriftingBubblesSpriteTemplate, ANIM_ATTACKER, 4, 0, 0
+    waitforvisualfinish
+	restorebg
+	waitbgfadeout
+	setarg 7, 0xFFFF
+	waitbgfadein
+	end
+
+StormBreakShatteredWall:
+	fadetobg BG_THUNDER
+	waitbgfadeout
+	createvisualtask AnimTask_StartSlidingBg, 5, -256, 0, 1, -1
+	waitbgfadein
+	delay 8
+	createsprite gBrickBreakWallSpriteTemplate, ANIM_ATTACKER, 3, ANIM_TARGET, 0, 0, 45, 10
+	delay 1
+	createvisualtask AnimTask_FlailMovement, 2, ANIM_ATTACKER
+    loopsewithpan SE_M_HEADBUTT, SOUND_PAN_ATTACKER, 8, 2
+    waitforvisualfinish
+    createvisualtask AnimTask_ShakeMonInPlace, 5, ANIM_TARGET, 8, 0, 16, 1
+    playsewithpan SE_M_WATERFALL, SOUND_PAN_TARGET
+    createsprite gWaterHitSplatSpriteTemplate, ANIM_ATTACKER, 5, 0, 0, ANIM_TARGET, 1
+    delay 5
+	createsprite gBrickBreakWallShardSpriteTemplate, ANIM_ATTACKER, 2, ANIM_TARGET, 0, -8, -12
+	createsprite gBrickBreakWallShardSpriteTemplate, ANIM_ATTACKER, 2, ANIM_TARGET, 1, 8, -12
+	createsprite gBrickBreakWallShardSpriteTemplate, ANIM_ATTACKER, 2, ANIM_TARGET, 2, -8, 12
+	createsprite gBrickBreakWallShardSpriteTemplate, ANIM_ATTACKER, 2, ANIM_TARGET, 3, 8, 12
+	playsewithpan SE_M_BRICK_BREAK, SOUND_PAN_TARGET
+    waitforvisualfinish
+	restorebg
+	waitbgfadeout
+	setarg 7, 0xFFFF
+	waitbgfadein
 	end
 
 Move_YAWN:
@@ -6682,7 +6750,6 @@ MegaDrainAbsorbEffect:
 	return
 
 Move_GIGA_DRAIN:
-Move_ARC_DRAIN:
 Move_HORN_LEECH:
 	loadspritegfx ANIM_TAG_ORBS
 	loadspritegfx ANIM_TAG_BLUE_STAR
@@ -8591,6 +8658,52 @@ RecoverAbsorbEffect:
 	delay 3
 	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 5, -40, 13
 	delay 3
+	return
+
+Move_ARC_DRAIN:
+	loadspritegfx ANIM_TAG_SPARK
+	loadspritegfx ANIM_TAG_SPARK_2
+	loadspritegfx ANIM_TAG_ORBS
+	loadspritegfx ANIM_TAG_BLUE_STAR
+	monbg ANIM_ATK_PARTNER
+	setalpha 12, 8
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 1, 0, 7, RGB_BLACK
+	loopsewithpan SE_M_THUNDERBOLT2, SOUND_PAN_ATTACKER, 13, 5
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_ATTACKER, 0, 6, 0, 11, RGB(31, 31, 0)
+	call ArcDrainAbsorbEffect
+	call ArcDrainAbsorbEffect
+	call ArcDrainAbsorbEffect
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 0, 7, 0, RGB_BLACK
+	clearmonbg ANIM_ATK_PARTNER
+	blendoff
+	delay 1
+	call HealingEffect
+	waitforvisualfinish
+	end
+
+ArcDrainAbsorbEffect:
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 120, -30, 13
+	createsprite gElectricitySpriteTemplate, ANIM_TARGET, 2, 5, 0, 5, 0
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, -105, -30, 13
+	createsprite gElectricitySpriteTemplate, ANIM_TARGET, 2, -5, 10, 5, 1
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 45, -120, 13
+	createsprite gElectricitySpriteTemplate, ANIM_TARGET, 2, 15, 20, 5, 2
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, -30, -96, 13
+	createsprite gElectricitySpriteTemplate, ANIM_TARGET, 2, -15, -10, 5, 0
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 75, -60, 13
+	createsprite gElectricitySpriteTemplate, ANIM_TARGET, 2, 25, 0, 5, 1
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, -120, -60, 13
+	createsprite gElectricitySpriteTemplate, ANIM_TARGET, 2, -8, 8, 5, 2
+	delay 2
+	createsprite gPowerAbsorptionOrbSpriteTemplate, ANIM_ATTACKER, 2, 15, -120, 13
+	createsprite gElectricitySpriteTemplate, ANIM_TARGET, 2, 2, -8, 5, 0
+	delay 2
 	return
 
 Move_MIMIC:
