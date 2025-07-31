@@ -5611,18 +5611,21 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock[] = {
         .lvl = 12,
         .species = SPECIES_GEODUDE,
         .moves = {MOVE_SELF_DESTRUCT, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+        .ability = 1,
     },
     {
         .iv = 0,
         .lvl = 13,
         .species = SPECIES_NOSEPASS,
         .moves = {MOVE_ROCK_TOMB, MOVE_BLOCK, MOVE_SHOCK_WAVE, MOVE_SANDSTORM},
+        .ability = 0,
     },
     {
         .iv = 0,
         .lvl = 14,
         .species = SPECIES_ONIX,
         .moves = {MOVE_ROCK_TOMB, MOVE_BIND, MOVE_SANDSTORM, MOVE_NONE},
+        .ability = 0,
     },
 };
 
