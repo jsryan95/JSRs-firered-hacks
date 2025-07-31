@@ -3222,14 +3222,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_SWEET_SCENT] =
     {
-        .effect = EFFECT_EVASION_DOWN,
+        .effect = EFFECT_ATTACK_DOWN,
         .power = 0,
         .type = TYPE_NORMAL,
         .category = CATEGORY_STATUS,
         .accuracy = 100,
-        .pp = 20,
+        .pp = 30,
         .secondaryEffectChance = 0,
-        .target = MOVE_TARGET_BOTH,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
     },
