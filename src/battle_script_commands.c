@@ -1424,7 +1424,7 @@ static void Cmd_critcalc(void)
 
     gPotentialItemEffectBattler = gBattlerAttacker;
 
-    critChance  = 2 * ((gBattleMons[gBattlerAttacker].status2 & STATUS2_FOCUS_ENERGY) != 0)
+    critChance  = 3 * ((gBattleMons[gBattlerAttacker].status2 & STATUS2_FOCUS_ENERGY) != 0)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_HIGH_CRITICAL)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_BLAZE_KICK)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_POISON_TAIL)
