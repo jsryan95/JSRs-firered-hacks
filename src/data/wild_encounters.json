@@ -605,8 +605,8 @@
               },
               {
                 "min_level": 3,
-                "max_level": 7,
-                "species": "SPECIES_PIDGEY"
+                "max_level": 4,
+                "species": "SPECIES_JIGGLYPUFF"
               },
               {
                 "min_level": 3,
