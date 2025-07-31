@@ -106,8 +106,8 @@
 #define TRAINER_YOUNGSTER_DAVE                   100
 #define TRAINER_YOUNGSTER_BEN_2                  101
 #define TRAINER_BUG_CATCHER_RICK                 102
-#define TRAINER_BUG_CATCHER_DOUG                 103
-#define TRAINER_BUG_CATCHER_SAMMY                104
+#define TRAINER_LASS_DONNA                 103
+#define TRAINER_YOUNGSTER_SAMMY                104
 #define TRAINER_BUG_CATCHER_COLTON               105
 #define TRAINER_BUG_CATCHER_GREG                 106
 #define TRAINER_BUG_CATCHER_JAMES                107

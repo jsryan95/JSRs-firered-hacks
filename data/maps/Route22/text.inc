@@ -14,12 +14,11 @@ Route22_Text_EarlyRivalDefeat::
 	.string "You just lucked out!$"
 
 Route22_Text_EarlyRivalPostBattle::
-	.string "I heard the POKéMON LEAGUE is\n"
-	.string "crawling with tough TRAINERS.\p"
-	.string "I have to figure out how to get\n"
-	.string "past them.\p"
-	.string "You should quit dawdling and get a\n"
-	.string "move on!$"
+	.string "You know, I found this, but...\p"
+	.string "The kind of trainer I'm going\n"
+	.string "to be doesn't need it.\p"
+	.string "I reckon it's more your speed.\n"
+	.string "Here you go.$"
 
 @ Translated in RB as "{RIVAL}: What? Why do I have 2 POKéMON? You should catch some more too!"
 Route22_Text_RivalShouldCatchSomeMons::

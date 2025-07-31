@@ -16,22 +16,21 @@ ViridianForest_Text_RickPostBattle::
     .string "Ssh! You'll scare the bugs away.\n"
     .string "Another time, okay?$"
 
-ViridianForest_Text_DougIntro::
-    .string "Yo!\n"
-    .string "You can't jam out if you're a\l"
-    .string "POKéMON TRAINER!$"
+ViridianForest_Text_DonnaIntro::
+    .string "Hey! Check out these cool POKéMON\n"
+    .string "I found in the forest!$"
 
-ViridianForest_Text_DougDefeat::
+ViridianForest_Text_DonnaDefeat::
     .string "Huh?\n"
     .string "I ran out of POKéMON!$"
 
-ViridianForest_Text_DougPostBattle::
+ViridianForest_Text_DonnaPostBattle::
     .string "That totally stinks! I'm going to\n"
     .string "catch some stronger ones!$"
 
 ViridianForest_Text_SammyIntro::
-    .string "Hey, wait up!\n"
-    .string "What's the hurry? Why the rush?$"
+    .string "Hey, do you know about\n"
+    .string "double battles?$"
 
 ViridianForest_Text_SammyDefeat::
     .string "I give!\n"

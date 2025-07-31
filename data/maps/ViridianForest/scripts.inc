@@ -43,13 +43,13 @@ ViridianForest_EventScript_Rick::
 	msgbox ViridianForest_Text_RickPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-ViridianForest_EventScript_Doug::
-	trainerbattle_single TRAINER_BUG_CATCHER_DOUG, ViridianForest_Text_DougIntro, ViridianForest_Text_DougDefeat
-	msgbox ViridianForest_Text_DougPostBattle, MSGBOX_AUTOCLOSE
+ViridianForest_EventScript_Donna::
+	trainerbattle_single TRAINER_LASS_DONNA, ViridianForest_Text_DonnaIntro, ViridianForest_Text_DonnaDefeat
+	msgbox ViridianForest_Text_DonnaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 ViridianForest_EventScript_Sammy::
-	trainerbattle_single TRAINER_BUG_CATCHER_SAMMY, ViridianForest_Text_SammyIntro, ViridianForest_Text_SammyDefeat
+	trainerbattle_single TRAINER_YOUNGSTER_SAMMY, ViridianForest_Text_SammyIntro, ViridianForest_Text_SammyDefeat
 	msgbox ViridianForest_Text_SammyPostBattle, MSGBOX_AUTOCLOSE
 	end
 

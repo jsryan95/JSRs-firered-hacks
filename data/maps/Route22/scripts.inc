@@ -34,6 +34,7 @@ Route22_EventScript_EarlyRival::
 	call_if_eq VAR_STARTER_MON, 1, Route22_EventScript_EarlyRivalBulbasaur
 	call_if_eq VAR_STARTER_MON, 0, Route22_EventScript_EarlyRivalCharmander
 	msgbox Route22_Text_EarlyRivalPostBattle
+	giveitem ITEM_TM44, 1
 	closemessage
 	delay 10
 	playbgm MUS_RIVAL_EXIT, 0
