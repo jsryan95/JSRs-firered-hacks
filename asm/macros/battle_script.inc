@@ -1492,3 +1492,7 @@
 	.macro determineNaturalGift
 	callnative BS_determineNaturalGift
 	.endm
+
+	.macro setStoredPowerDamage
+	callnative BS_setStoredPowerDamage
+	.endm

@@ -546,8 +546,8 @@ gBattleAnims_Moves::
 	.4byte Move_PSYSHOCK
 	.4byte Move_PSYSTRIKE
 	.4byte Move_SECRET_SWORD
+	.4byte Move_STORED_POWER
 	@ space for generation 5 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -1539,6 +1539,7 @@ Move_X_SCISSOR:
 
 Move_HIDDEN_POWER:
 Move_NATURAL_GIFT:
+Move_STORED_POWER:
 	loadspritegfx ANIM_TAG_RED_ORB
 	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0

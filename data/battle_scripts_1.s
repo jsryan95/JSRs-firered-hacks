@@ -295,6 +295,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectRoost                  @ EFFECT_ROOST
 	.4byte BattleScript_EffectMagnetRise             @ EFFECT_MAGNET_RISE
 	.4byte BattleScript_EffectNaturalGift            @ EFFECT_NATURAL_GIFT
+	.4byte BattleScript_EffectStoredPower            @ EFFECT_STORED_POWER
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5453,3 +5454,7 @@ BattleScript_EffectNaturalGift::
 	attackcanceler
 	determineNaturalGift
 	goto BattleScript_HitFromAccCheck
+
+BattleScript_EffectStoredPower::
+	setStoredPowerDamage
+	goto BattleScript_EffectHit

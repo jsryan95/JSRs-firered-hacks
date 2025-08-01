@@ -496,6 +496,7 @@ const u8 gMoveDescription_SecretSword[] = _("Attacks with the\nodd power in its\
 const u8 gMoveDescription_Roost[] = _("The user lands and\nrests, restoring its\nHP by up to half\nof its max HP.");
 const u8 gMoveDescription_MagnetRise[] = _("The user levitates\nusing electrically-\ngenerated magnetism\nfor five turns.");
 const u8 gMoveDescription_NaturalGift[] = _("This attack's type\nand power change\ndepending on the\nheld berry.");
+const u8 gMoveDescription_StoredPower[] = _("The more the user's\nstats are raised,\nthe greater the\ndamage.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1008,4 +1009,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_ROOST - 1] = gMoveDescription_Roost,
     [MOVE_MAGNET_RISE - 1] = gMoveDescription_MagnetRise,
     [MOVE_NATURAL_GIFT - 1] = gMoveDescription_NaturalGift,
+    [MOVE_STORED_POWER - 1] = gMoveDescription_StoredPower,
 };
