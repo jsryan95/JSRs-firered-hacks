@@ -292,6 +292,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectStarShooter            @ EFFECT_STAR_SHOOTER
 	.4byte BattleScript_EffectHit                    @ EFFECT_SACRED_SWORD
 	.4byte BattleScript_EffectHit                    @ EFFECT_PSYSHOCK
+	.4byte BattleScript_EffectRoost                  @ EFFECT_ROOST
+	.4byte BattleScript_EffectMagnetRise             @ EFFECT_MAGNET_RISE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5418,3 +5420,30 @@ BattleScript_EffectStarShooter::
     seteffectwithchance
     moveendall
     end
+
+BattleScript_EffectRoost::
+	attackcanceler
+	attackstring
+	ppreduce
+	tryhealhalfhealth BattleScript_AlreadyAtFullHp, BS_ATTACKER
+	setRoosted
+	attackanimation
+	waitanimation
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectMagnetRise::
+    attackcanceler
+    attackstring
+    ppreduce
+    jumpifstatus4 BS_TARGET, STATUS4_ROOTED, BattleScript_ButItFailed
+    setMagnetRise
+    attackanimation
+    waitanimation
+    printstring STRINGID_PKMNMAGNETRISE
+    waitmessage B_WAIT_TIME_LONG
+    goto BattleScript_MoveEnd

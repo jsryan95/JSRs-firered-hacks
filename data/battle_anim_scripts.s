@@ -457,9 +457,9 @@ gBattleAnims_Moves::
     .4byte Move_WAKE_UP_SLAP
     .4byte Move_PUNISHMENT
     .4byte Move_TAILWIND
+    .4byte Move_ROOST
+    .4byte Move_MAGNET_RISE
     @ space for generation 4 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -4332,6 +4332,7 @@ Move_FOLLOW_ME:
 	end
 
 Move_CHARGE:
+Move_MAGNET_RISE:
 	loadspritegfx ANIM_TAG_ELECTRIC_ORBS
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
 	loadspritegfx ANIM_TAG_ELECTRICITY
@@ -4815,6 +4816,7 @@ Move_MIST_BALL:
 	end
 
 Move_FEATHER_DANCE:
+Move_ROOST:
 	loadspritegfx ANIM_TAG_WHITE_FEATHER
 	monbg ANIM_DEF_PARTNER
 	splitbgprio_all

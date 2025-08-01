@@ -1480,3 +1480,11 @@
 	callnative BS_tryGetInterferenceTarget
 	.4byte \param0
 	.endm
+
+	.macro setRoosted
+	callnative BS_setRoosted
+	.endm
+
+	.macro setMagnetRise
+	callnative BS_setMagnetRise
+	.endm

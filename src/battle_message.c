@@ -239,6 +239,7 @@ static const u8 sText_PkmnMadeWish[] = _("{B_ATK_NAME_WITH_PREFIX} made a WISH!"
 static const u8 sText_PkmnWishCameTrue[] = _("{B_BUFF1}'s WISH\ncame true!");
 static const u8 sText_PkmnPlantedRoots[] = _("{B_ATK_NAME_WITH_PREFIX} planted its roots!");
 static const u8 sText_PkmnVeilOfWater[] = _("{B_ATK_NAME_WITH_PREFIX} surrounded itself\nwith a veil of water!");
+static const u8 sText_PkmnMagnetRise[] = _("{B_ATK_NAME_WITH_PREFIX} levitated\nusing electromagnetism!");
 static const u8 sText_PkmnAquaRingHealed[] = _("{B_ATK_NAME_WITH_PREFIX}'s AQUA RING\nrestored its health!");
 static const u8 sText_PkmnAbsorbedNutrients[] = _("{B_ATK_NAME_WITH_PREFIX} absorbed\nnutrients with its roots!");
 static const u8 sText_PkmnAnchoredItself[] = _("{B_DEF_NAME_WITH_PREFIX} anchored\nitself with its roots!");
@@ -933,6 +934,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNSXCLEAREDSTATCHANGES - BATTLESTRINGS_TABLE_START]      = sText_PkmnsXClearedStatChanges,
     [STRINGID_PKMNCUTSSPECIALATTACKWITH - BATTLESTRINGS_TABLE_START]     = sText_PkmnCutsSpecialAttackWith,
     [STRINGID_PKMNSHUNGONWITHXABILITY - BATTLESTRINGS_TABLE_START]       = sText_PkmnHungOnWithXAbility,
+    [STRINGID_PKMNMAGNETRISE - BATTLESTRINGS_TABLE_START]               = sText_PkmnMagnetRise,
 };
 
 const u16 gMissStringIds[] =

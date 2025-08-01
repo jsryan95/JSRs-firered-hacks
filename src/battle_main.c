@@ -3033,6 +3033,7 @@ u8 IsRunningFromBattleImpossible(void)
         }
         if (side != GetBattlerSide(i)
          && !hasActiveAbility(gActiveBattler, ABILITY_LEVITATE)
+         && !(gBattleMons[gActiveBattler].status3 & STATUS3_MAGNET_RISE)
          && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
          && hasActiveAbility(i, ABILITY_ARENA_TRAP))
         {
@@ -3208,7 +3209,8 @@ static void HandleTurnActionSelectionState(void)
                     else if ((i = ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_SHADOW_TAG))
                           || ((i = ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_ARENA_TRAP))
                               && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
-                              && !hasActiveAbility(gActiveBattler, ABILITY_LEVITATE))
+                              && !hasActiveAbility(gActiveBattler, ABILITY_LEVITATE)
+                              && !(gBattleMons[gActiveBattler].status3 & STATUS3_MAGNET_RISE))
                           || ((i = AbilityBattleEffects(ABILITYEFFECT_CHECK_FIELD_EXCEPT_BATTLER, gActiveBattler, ABILITY_MAGNET_PULL, 0, 0))
                               && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL)))
                     {
@@ -3667,6 +3669,8 @@ static void TurnValuesCleanUp(bool8 var0)
 
         if (gDisableStructs[gActiveBattler].substituteHP == 0)
             gBattleMons[gActiveBattler].status2 &= ~(STATUS2_SUBSTITUTE);
+
+        gBattleMons[gActiveBattler].status3 &= ~(STATUS3_ROOSTED);
     }
     gSideTimers[0].followmeTimer = 0;
     gSideTimers[1].followmeTimer = 0;

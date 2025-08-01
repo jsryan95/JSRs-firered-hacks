@@ -493,6 +493,8 @@ const u8 gMoveDescription_StarShooter[] = _("Drops a comet on\nthe foe, lowering
 const u8 gMoveDescription_SacredSword[] = _("The target's stat\nchanges don't\naffect this attack's\ndamage.");
 const u8 gMoveDescription_Psyshock[] = _("Materializes an odd\npsychic wave to\nattack. Attacks the\nfoe's DEFENSE.");
 const u8 gMoveDescription_SecretSword[] = _("Attacks with the\nodd power in its\nhorn. Attacks the\nfoe's DEFENSE.");
+const u8 gMoveDescription_Roost[] = _("The user lands and\nrests, restoring its\nHP by up to half\nof its max HP.");
+const u8 gMoveDescription_MagnetRise[] = _("The user levitates\nusing electrically-\ngenerated magnetism\nfor five turns.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1002,4 +1004,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_PSYSHOCK - 1] = gMoveDescription_Psyshock,
     [MOVE_PSYSTRIKE - 1] = gMoveDescription_Psyshock,
     [MOVE_SECRET_SWORD - 1] = gMoveDescription_SecretSword,
+    [MOVE_ROOST - 1] = gMoveDescription_Roost,
+    [MOVE_MAGNET_RISE - 1] = gMoveDescription_MagnetRise,
 };
