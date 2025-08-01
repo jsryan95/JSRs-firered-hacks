@@ -1010,4 +1010,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_MAGNET_RISE - 1] = gMoveDescription_MagnetRise,
     [MOVE_NATURAL_GIFT - 1] = gMoveDescription_NaturalGift,
     [MOVE_STORED_POWER - 1] = gMoveDescription_StoredPower,
+    [MOVE_KO_PUNCH - 1] = gMoveDescription_Brine,
 };

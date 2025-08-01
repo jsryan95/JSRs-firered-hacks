@@ -602,6 +602,7 @@ gBattleAnims_Moves::
     .4byte Move_SKY_BURST
     .4byte Move_DRAGON_SHOUT
     .4byte Move_STAR_SHOOTER
+    .4byte Move_KO_PUNCH
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -1202,6 +1203,7 @@ EmberFireHit:
 	return
 
 Move_MEGA_PUNCH:
+Move_KO_PUNCH:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	monbg ANIM_TARGET
