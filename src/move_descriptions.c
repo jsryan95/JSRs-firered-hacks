@@ -498,6 +498,7 @@ const u8 gMoveDescription_MagnetRise[] = _("The user levitates\nusing electrical
 const u8 gMoveDescription_NaturalGift[] = _("This attack's type\nand power change\ndepending on the\nheld berry.");
 const u8 gMoveDescription_StoredPower[] = _("The more the user's\nstats are raised,\nthe greater the\ndamage.");
 const u8 gMoveDescription_SimpleBeam[] = _("A mysterious\npsychic wave\nchanges the foe's\nability to SIMPLE.");
+const u8 gMoveDescription_Synchronoise[] = _("Power doubles\nagainst a POKéMON\nof the same type\nas the user.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1013,4 +1014,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_STORED_POWER - 1] = gMoveDescription_StoredPower,
     [MOVE_KO_PUNCH - 1] = gMoveDescription_Brine,
     [MOVE_SIMPLE_BEAM - 1] = gMoveDescription_SimpleBeam,
+    [MOVE_SYNCHRONOISE - 1] = gMoveDescription_Synchronoise,
 };

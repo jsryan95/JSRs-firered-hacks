@@ -1501,3 +1501,7 @@
 	callnative BS_tryGiveSimple
 	.4byte \onFail
 	.endm
+
+	.macro doubleDamageIfTargetSameType
+	callnative BS_doubleDamageIfTargetSameType
+	.endm

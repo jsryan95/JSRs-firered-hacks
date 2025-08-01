@@ -10753,3 +10753,14 @@ void BS_tryGiveSimple(void)
 {
     BSHelper_tryGiveAbility(ABILITY_SIMPLE);
 }
+
+void BS_doubleDamageIfTargetSameType(void)
+{
+    if (gBattleMons[gBattlerAttacker].type1 == gBattleMons[gBattlerTarget].type1
+            || gBattleMons[gBattlerAttacker].type1 == gBattleMons[gBattlerTarget].type2
+            || gBattleMons[gBattlerAttacker].type2 == gBattleMons[gBattlerTarget].type1
+            || gBattleMons[gBattlerAttacker].type2 == gBattleMons[gBattlerTarget].type2)
+        gBattleScripting.dmgMultiplier = 2;
+
+    gBattlescriptCurrInstr += 5;
+}

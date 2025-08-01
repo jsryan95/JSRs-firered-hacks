@@ -548,8 +548,8 @@ gBattleAnims_Moves::
 	.4byte Move_SECRET_SWORD
 	.4byte Move_STORED_POWER
 	.4byte Move_SIMPLE_BEAM
+	.4byte Move_SYNCHRONOISE
 	@ space for generation 5 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -3239,6 +3239,7 @@ Move_LOW_SWEEP:
 	end
 
 Move_EARTHQUAKE:
+Move_SYNCHRONOISE:
 	createvisualtask AnimTask_HorizontalShake, 5, (MAX_BATTLERS_COUNT + 1), 10, 50
 	createvisualtask AnimTask_HorizontalShake, 5, MAX_BATTLERS_COUNT, 10, 50
 	playsewithpan SE_M_EARTHQUAKE, 0

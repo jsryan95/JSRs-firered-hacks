@@ -297,6 +297,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectNaturalGift            @ EFFECT_NATURAL_GIFT
 	.4byte BattleScript_EffectStoredPower            @ EFFECT_STORED_POWER
 	.4byte BattleScript_EffectSimpleBeam             @ EFFECT_SIMPLE_BEAM
+	.4byte BattleScript_EffectSynchronoise           @ EFFECT_SYNCHRONOISE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5471,3 +5472,7 @@ BattleScript_EffectSimpleBeam::
 	printstring STRINGID_PKMNGOTSIMPLE
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectSynchronoise::
+	doubleDamageIfTargetSameType
+	goto BattleScript_EffectHit
