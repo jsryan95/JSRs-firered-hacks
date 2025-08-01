@@ -321,8 +321,10 @@ static const u8 sText_PkmnCopiedType[] = _("{B_ATK_NAME_WITH_PREFIX} changed its
 static const u8 sText_TooScaredToMove[] = _("{B_ATK_NAME_WITH_PREFIX} is too scared to move!");
 static const u8 sText_GetOutGetOut[] = _("GHOST: Get out…… Get out……");
 static const u8 sText_StatSharply[] = _("sharply ");
+static const u8 sText_StatDrastically[] = _("drastically ");
 const u8 gBattleText_Rose[] = _("rose!");
 static const u8 sText_StatHarshly[] = _("harshly ");
+static const u8 sText_StatSeverely[] = _("severely ");
 static const u8 sText_StatFell[] = _("fell!");
 static const u8 sText_AttackersStatRose[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2}");
 const u8 gText_DefendersStatRose[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2}");
@@ -935,6 +937,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNCUTSSPECIALATTACKWITH - BATTLESTRINGS_TABLE_START]     = sText_PkmnCutsSpecialAttackWith,
     [STRINGID_PKMNSHUNGONWITHXABILITY - BATTLESTRINGS_TABLE_START]       = sText_PkmnHungOnWithXAbility,
     [STRINGID_PKMNMAGNETRISE - BATTLESTRINGS_TABLE_START]               = sText_PkmnMagnetRise,
+    [STRINGID_STATDRASTICALLY - BATTLESTRINGS_TABLE_START]                   = sText_StatDrastically,
+    [STRINGID_STATSEVERELY - BATTLESTRINGS_TABLE_START]                   = sText_StatSeverely,
 };
 
 const u16 gMissStringIds[] =

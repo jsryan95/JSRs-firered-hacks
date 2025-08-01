@@ -407,8 +407,10 @@
 #define STRINGID_PKMNCUTSSPECIALATTACKWITH 406
 #define STRINGID_PKMNSHUNGONWITHXABILITY 407
 #define STRINGID_PKMNMAGNETRISE 408
+#define STRINGID_STATDRASTICALLY 409
+#define STRINGID_STATSEVERELY 410
 
-#define BATTLESTRINGS_COUNT     409
+#define BATTLESTRINGS_COUNT     411
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
