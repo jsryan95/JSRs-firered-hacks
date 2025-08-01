@@ -2297,6 +2297,21 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+            case ABILITY_AFTERMATH:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && gBattleMons[gBattlerAttacker].hp != 0
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && TARGET_TURN_DAMAGED
+                 && gBattleMons[battler].hp == 0)
+                {
+                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 4;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
+                    effect++;
+                }
+                break;
             }
             break;
         case ABILITYEFFECT_IMMUNITY: // 5
