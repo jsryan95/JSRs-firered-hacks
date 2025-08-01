@@ -360,8 +360,8 @@
 #define FLAG_HIDE_ROUTE2_ETHER                                  0x154
 #define FLAG_HIDE_ROUTE2_PARALYZE_HEAL                          0x155
 #define FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL                     0x156
-#define FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE                      0x157
-#define FLAG_HIDE_VIRIDIAN_FOREST_POTION                        0x158
+#define FLAG_HIDE_VIRIDIAN_FOREST_PECHA_BERRY                      0x157
+#define FLAG_HIDE_VIRIDIAN_FOREST_ORAN_BERRY                        0x158
 #define FLAG_HIDE_MT_MOON_1F_PARALYZE_HEAL                      0x159
 #define FLAG_HIDE_MT_MOON_1F_TM09                               0x15A
 #define FLAG_HIDE_MT_MOON_1F_POTION                             0x15B
@@ -463,7 +463,7 @@
 #define FLAG_HIDE_THREE_ISLAND_ZINC                             0x1BB
 #define FLAG_0x1BC                                              0x1BC
 #define FLAG_0x1BD                                              0x1BD
-#define FLAG_HIDE_VIRIDIAN_FOREST_POTION_2                      0x1BE
+#define FLAG_HIDE_VIRIDIAN_FOREST_ORAN_BERRY_2                      0x1BE
 #define FLAG_HIDE_MT_MOON_B2F_REVIVE                            0x1BF
 #define FLAG_HIDE_MT_MOON_B2F_ANTIDOTE                          0x1C0
 #define FLAG_HIDE_ROUTE11_X_DEFEND                              0x1C1
@@ -1029,8 +1029,8 @@
 
 #define FLAG_HIDDEN_ITEMS_START 1000 // 0x3E8
 
-#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION                            (FLAG_HIDDEN_ITEMS_START +   0)
-#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE                          (FLAG_HIDDEN_ITEMS_START +   1)
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ORAN_BERRY                            (FLAG_HIDDEN_ITEMS_START +   0)
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_CHERI_BERRY                          (FLAG_HIDDEN_ITEMS_START +   1)
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE                            (FLAG_HIDDEN_ITEMS_START +   2)
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER                                 (FLAG_HIDDEN_ITEMS_START +   3)
 #define FLAG_HIDDEN_ITEM_ROUTE25_ELIXIR                                    (FLAG_HIDDEN_ITEMS_START +   4)
@@ -1222,7 +1222,7 @@
 #define FLAG_HIDDEN_ITEM_SSANNE_EXTERIOR_LAVA_COOKIE                       (FLAG_HIDDEN_ITEMS_START + 190)
 
 // Unused hidden item flags
-#define FLAG_UNUSED_0x4A7               0x4A7 // Unused Flag
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_SILVER_POWDER               0x4A7
 #define FLAG_UNUSED_0x4A8               0x4A8 // Unused Flag
 #define FLAG_UNUSED_0x4A9               0x4A9 // Unused Flag
 #define FLAG_UNUSED_0x4AA               0x4AA // Unused Flag

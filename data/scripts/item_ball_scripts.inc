@@ -10,12 +10,12 @@ ViridianForest_EventScript_ItemPokeBall::
 	finditem ITEM_POKE_BALL
 	end
 
-ViridianForest_EventScript_ItemAntidote::
-	finditem ITEM_ANTIDOTE
+ViridianForest_EventScript_ItemPechaBerry::
+	finditem ITEM_PECHA_BERRY
 	end
 
-ViridianForest_EventScript_ItemPotion::
-	finditem ITEM_POTION
+ViridianForest_EventScript_ItemOranBerry::
+	finditem ITEM_ORAN_BERRY
 	end
 
 MtMoon_1F_EventScript_ItemParalyzeHeal::
@@ -410,8 +410,8 @@ ThreeIsland_EventScript_ItemZinc::
 	finditem ITEM_ZINC
 	end
 
-ViridianForest_EventScript_ItemPotion2::
-	finditem ITEM_POTION
+ViridianForest_EventScript_ItemOranBerry2::
+	finditem ITEM_ORAN_BERRY
 	end
 
 MtMoon_B2F_EventScript_ItemRevive::

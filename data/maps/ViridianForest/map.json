@@ -110,8 +110,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ViridianForest_EventScript_ItemAntidote",
-      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE"
+      "script": "ViridianForest_EventScript_ItemPechaBerry",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_PECHA_BERRY"
     },
     {
       "type": "object",
@@ -124,8 +124,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ViridianForest_EventScript_ItemPotion",
-      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_POTION"
+      "script": "ViridianForest_EventScript_ItemOranBerry",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_ORAN_BERRY"
     },
     {
       "type": "object",
@@ -166,8 +166,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ViridianForest_EventScript_ItemPotion2",
-      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_POTION_2"
+      "script": "ViridianForest_EventScript_ItemOranBerry2",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_ORAN_BERRY_2"
     }
   ],
   "warp_events": [
@@ -269,8 +269,8 @@
       "x": 3,
       "y": 22,
       "elevation": 3,
-      "item": "ITEM_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION",
+      "item": "ITEM_ORAN_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ORAN_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -279,8 +279,18 @@
       "x": 28,
       "y": 57,
       "elevation": 0,
-      "item": "ITEM_ANTIDOTE",
-      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE",
+      "item": "ITEM_CHERI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_CHERI_BERRY",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 49,
+      "y": 5,
+      "elevation": 0,
+      "item": "ITEM_SILVER_POWDER",
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_SILVER_POWDER",
       "quantity": 1,
       "underfoot": false
     }
