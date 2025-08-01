@@ -148,6 +148,7 @@ extern const u8 BattleScript_SpeedBoostActivates[];
 extern const u8 BattleScript_TraceActivates[];
 extern const u8 BattleScript_RainDishActivates[];
 extern const u8 BattleScript_IceBodyActivates[];
+extern const u8 BattleScript_SolarPowerActivates[];
 extern const u8 BattleScript_PoisonHealActivates[];
 extern const u8 BattleScript_SandstreamActivates[];
 extern const u8 BattleScript_SnowWarningActivates[];

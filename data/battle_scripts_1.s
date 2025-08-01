@@ -5476,3 +5476,11 @@ BattleScript_EffectSimpleBeam::
 BattleScript_EffectSynchronoise::
 	doubleDamageIfTargetSameType
 	goto BattleScript_EffectHit
+
+BattleScript_SolarPowerActivates::
+	printstring STRINGID_PKMNSXHURTIT
+	waitmessage B_WAIT_TIME_LONG
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	end3

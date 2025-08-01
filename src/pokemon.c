@@ -2482,6 +2482,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense *= 2;
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
         attack *= 2;
+
     if (hasActiveAbility2(defender, ABILITY_THICK_FAT) && (type == TYPE_FIRE || type == TYPE_ICE))
         gBattleMovePower /= 2;
     if (hasActiveAbility2(defender, ABILITY_HEATPROOF) && (type = TYPE_FIRE))
@@ -2505,6 +2506,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         spAttack = (150 * spAttack) / 100;
     if (hasActiveAbility2(attacker, ABILITY_GUTS) && attacker->status1)
         attack = (150 * attack) / 100;
+    if(WEATHER_HAS_EFFECT
+            && gBattleWeather & B_WEATHER_SUN
+            && hasActiveAbility2(attacker, ABILITY_SOLAR_POWER))
+        spAttack = (150 * spAttack) / 100;
     if (hasActiveAbility2(defender, ABILITY_MARVEL_SCALE) && defender->status1)
         defense = (150 * defense) / 100;
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_MUD_SPORT, 0))
