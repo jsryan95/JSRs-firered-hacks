@@ -2219,12 +2219,29 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
-                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT
-                 && gBattleMons[gBattlerAttacker].ability != ABILITY_MUMMY))
+                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                 && gBattleMons[gBattlerAttacker].ability != ABILITY_MUMMY)
                 {
                     gBattleMons[gBattlerAttacker].ability = ABILITY_MUMMY;
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_MummyActivates;
+                    effect++;
+                }
+                break;
+            case ABILITY_CURSED_BODY:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                        && gBattleMons[gBattlerAttacker].hp != 0
+                        && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                        && TARGET_TURN_DAMAGED
+                        && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                        && gBattleMons[gBattlerAttacker].pp[gChosenMovePos] != 0
+                        && gDisableStructs[gBattlerTarget].disabledMove == MOVE_NONE)
+                {
+                    gDisableStructs[gBattlerAttacker].disabledMove = gChosenMove;
+                    gDisableStructs[gBattlerAttacker].disableTimer = 4;
+                    PREPARE_MOVE_BUFFER(gBattleTextBuff1, gChosenMove);
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_CursedBodyActivates;
                     effect++;
                 }
                 break;

@@ -5484,3 +5484,8 @@ BattleScript_SolarPowerActivates::
 	healthbarupdate BS_ATTACKER
 	datahpupdate BS_ATTACKER
 	end3
+
+BattleScript_CursedBodyActivates::
+	printstring STRINGID_PKMNSXDISABLEDY
+	waitmessage B_WAIT_TIME_LONG
+	return

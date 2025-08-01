@@ -189,6 +189,7 @@ extern const u8 BattleScript_RattledActivates[];
 extern const u8 BattleScript_JustifiedActivates[];
 extern const u8 BattleScript_RoughSkinActivates[];
 extern const u8 BattleScript_MummyActivates[];
+extern const u8 BattleScript_CursedBodyActivates[];
 extern const u8 BattleScript_CuteCharmActivates[];
 extern const u8 BattleScript_ApplySecondaryEffect[];
 extern const u8 BattleScript_SynchronizeActivates[];
