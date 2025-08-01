@@ -296,6 +296,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectMagnetRise             @ EFFECT_MAGNET_RISE
 	.4byte BattleScript_EffectNaturalGift            @ EFFECT_NATURAL_GIFT
 	.4byte BattleScript_EffectStoredPower            @ EFFECT_STORED_POWER
+	.4byte BattleScript_EffectSimpleBeam             @ EFFECT_SIMPLE_BEAM
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5458,3 +5459,15 @@ BattleScript_EffectNaturalGift::
 BattleScript_EffectStoredPower::
 	setStoredPowerDamage
 	goto BattleScript_EffectHit
+
+BattleScript_EffectSimpleBeam::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	tryGiveSimple BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNGOTSIMPLE
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

@@ -10748,3 +10748,8 @@ void BS_setStoredPowerDamage(void)
 
     gBattlescriptCurrInstr += 5;
 }
+
+void BS_tryGiveSimple(void)
+{
+    BSHelper_tryGiveAbility(ABILITY_SIMPLE);
+}

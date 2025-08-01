@@ -248,6 +248,7 @@ static const u8 sText_PkmnKnockedOff[] = _("{B_ATK_NAME_WITH_PREFIX} knocked off
 static const u8 sText_PkmnSwappedAbilities[] = _("{B_ATK_NAME_WITH_PREFIX} swapped abilities\nwith its opponent!");
 static const u8 sText_PkmnAbilitySuppressed[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nwas suppressed!");
 static const u8 sText_PkmnGotInsomnia[] = _("{B_DEF_NAME_WITH_PREFIX} got\nINSOMNIA!");
+static const u8 sText_PkmnGotSimple[] = _("{B_DEF_NAME_WITH_PREFIX} got\nSIMPLE!");
 static const u8 sText_PkmnSealedOpponentMove[] = _("{B_ATK_NAME_WITH_PREFIX} sealed the\nopponent's move(s)!");
 static const u8 sText_PkmnWantsGrudge[] = _("{B_ATK_NAME_WITH_PREFIX} wants the\nopponent to bear a GRUDGE!");
 static const u8 sText_PkmnLostPPGrudge[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1} lost\nall its PP due to the GRUDGE!");
@@ -939,6 +940,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNMAGNETRISE - BATTLESTRINGS_TABLE_START]               = sText_PkmnMagnetRise,
     [STRINGID_STATDRASTICALLY - BATTLESTRINGS_TABLE_START]                   = sText_StatDrastically,
     [STRINGID_STATSEVERELY - BATTLESTRINGS_TABLE_START]                   = sText_StatSeverely,
+    [STRINGID_PKMNGOTSIMPLE - BATTLESTRINGS_TABLE_START]                  = sText_PkmnGotSimple,
 };
 
 const u16 gMissStringIds[] =

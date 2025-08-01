@@ -547,8 +547,8 @@ gBattleAnims_Moves::
 	.4byte Move_PSYSTRIKE
 	.4byte Move_SECRET_SWORD
 	.4byte Move_STORED_POWER
+	.4byte Move_SIMPLE_BEAM
 	@ space for generation 5 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -8229,6 +8229,7 @@ Move_WRAP:
 	goto BindWrap
 
 Move_PSYBEAM:
+Move_SIMPLE_BEAM:
 	loadspritegfx ANIM_TAG_GOLD_RING
 	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
 	call SetPsychicBackground

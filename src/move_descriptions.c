@@ -468,7 +468,7 @@ const u8 gMoveDescription_HoneClaws[] = _("The user sharpens\nits claws to boost
 const u8 gMoveDescription_ShiftGear[] = _("Raises the user's\nATTACK and sharply\nraises its SPEED.");
 const u8 gMoveDescription_QuiverDance[] = _("A beautiful, mystic\ndance that raises\nthe user's SP. ATK,\nSP. DEF and SPEED.");
 const u8 gMoveDescription_WorkUp[] = _("The user is roused,\nand its ATTACK\nand SP. ATK stats\nincrease.");
-const u8 gMoveDescription_WorrySeed[] = _("A seed that causes\nworry is planted on\nthe foe, changing its\nability to Insomnia.");
+const u8 gMoveDescription_WorrySeed[] = _("A worry-inducing\nseed is planted on\nthe foe, changing its\nability to Insomnia.");
 const u8 gMoveDescription_Soak[] = _("Shoots a torrent\nof water at the\nfoe and changes\nits type to WATER.");
 const u8 gMoveDescription_Hurricane[] = _("The user attacks\nby wrapping the foe\nin a fierce wind.\nMay confuse the foe.");
 const u8 gMoveDescription_Hex[] = _("Power doubles if\nthe foe is\naffected by a\nstatus problem.");
@@ -497,6 +497,7 @@ const u8 gMoveDescription_Roost[] = _("The user lands and\nrests, restoring its\
 const u8 gMoveDescription_MagnetRise[] = _("The user levitates\nusing electrically-\ngenerated magnetism\nfor five turns.");
 const u8 gMoveDescription_NaturalGift[] = _("This attack's type\nand power change\ndepending on the\nheld berry.");
 const u8 gMoveDescription_StoredPower[] = _("The more the user's\nstats are raised,\nthe greater the\ndamage.");
+const u8 gMoveDescription_SimpleBeam[] = _("A mysterious\npsychic wave\nchanges the foe's\nability to SIMPLE.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1011,4 +1012,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_NATURAL_GIFT - 1] = gMoveDescription_NaturalGift,
     [MOVE_STORED_POWER - 1] = gMoveDescription_StoredPower,
     [MOVE_KO_PUNCH - 1] = gMoveDescription_Brine,
+    [MOVE_SIMPLE_BEAM - 1] = gMoveDescription_SimpleBeam,
 };

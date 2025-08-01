@@ -1496,3 +1496,8 @@
 	.macro setStoredPowerDamage
 	callnative BS_setStoredPowerDamage
 	.endm
+
+	.macro tryGiveSimple onFail:req
+	callnative BS_tryGiveSimple
+	.4byte \onFail
+	.endm
