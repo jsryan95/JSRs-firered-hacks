@@ -503,6 +503,7 @@ const u8 gMoveDescription_FinalGambit[] = _("The user faints\nbut does damage\ne
 const u8 gMoveDescription_HeartSwap[] = _("The user employs\nits psychic power to\nswitch stat changes\nwith the foe.");
 const u8 gMoveDescription_PowerSwap[] = _("The user switches\nATTACK and SP. ATK\nstat changes with\nthe foe.");
 const u8 gMoveDescription_GuardSwap[] = _("The user switches\nDEFENSE and SP. DEF\nstat changes with\nthe foe.");
+const u8 gMoveDescription_LuckyChant[] = _("Protects the user's\nteam from critical\nhits for five\nturns.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1023,4 +1024,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_HEART_SWAP - 1] = gMoveDescription_HeartSwap,
     [MOVE_POWER_SWAP - 1] = gMoveDescription_PowerSwap,
     [MOVE_GUARD_SWAP - 1] = gMoveDescription_GuardSwap,
+    [MOVE_LUCKY_CHANT - 1] = gMoveDescription_LuckyChant,
 };

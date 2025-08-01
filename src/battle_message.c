@@ -130,6 +130,8 @@ static const u8 sText_PkmnRaisedDefALittle[] = _("{B_ATK_PREFIX2}'s {B_CURRENT_M
 static const u8 sText_PkmnCoveredByVeil[] = _("{B_ATK_PREFIX2}'s party is covered\nby a veil!");
 static const u8 sText_PkmnTailwindStarted[] = _("A tailwind blows from\nbehind {B_ATK_NAME_WITH_PREFIX}'s party!");
 static const u8 sText_PkmnTailwindExpired[] = _("{B_ATK_PREFIX3}'s party's\ntailwind died down!");
+static const u8 sText_LuckyChantStarted[] = _("{B_ATK_NAME_WITH_PREFIX}'s party is protected\nfrom critical hits!");
+static const u8 sText_LuckyChantEnded[] = _("{B_ATK_PREFIX3}'s party's\nLUCKY CHANT ended!");
 static const u8 sText_PkmnUsedSafeguard[] = _("{B_DEF_NAME_WITH_PREFIX}'s party is protected\nby SAFEGUARD!");
 static const u8 sText_PkmnSafeguardExpired[] = _("{B_ATK_PREFIX3}'s party is no longer\nprotected by SAFEGUARD!");
 static const u8 sText_PkmnWentToSleep[] = _("{B_ATK_NAME_WITH_PREFIX} went\nto sleep!");
@@ -947,6 +949,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNSXHURTIT - BATTLESTRINGS_TABLE_START]                   = sText_PkmnsXHurtIt,
     [STRINGID_PKMNSXDISABLEDY - BATTLESTRINGS_TABLE_START]                = sText_PkmnsXDisabledY,
     [STRINGID_PKMNSWAPPEDSTATCHANGES - BATTLESTRINGS_TABLE_START]         = sText_PkmnSwappedStatChanges,
+    [STRINGID_LUCKYCHANTSTARTED - BATTLESTRINGS_TABLE_START]              = sText_LuckyChantStarted,
+    [STRINGID_LUCKYCHANTENDED - BATTLESTRINGS_TABLE_START]                = sText_LuckyChantEnded,
 };
 
 const u16 gMissStringIds[] =

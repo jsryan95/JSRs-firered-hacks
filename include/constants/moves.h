@@ -445,9 +445,9 @@
 #define MOVE_HEART_SWAP 439
 #define MOVE_POWER_SWAP 440
 #define MOVE_GUARD_SWAP 441
+#define MOVE_LUCKY_CHANT 442
 
 // generation 4 moves (not implemented)
-#define MOVE_LUCKY_CHANT 442
 #define MOVE_LUNAR_DANCE 443
 #define MOVE_HEAL_BLOCK 444
 #define MOVE_ME_FIRST 445

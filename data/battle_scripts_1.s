@@ -302,6 +302,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHeartSwap              @ EFFECT_HEART_SWAP
 	.4byte BattleScript_EffectPowerSwap              @ EFFECT_POWER_SWAP
 	.4byte BattleScript_EffectGuardSwap              @ EFFECT_GUARD_SWAP
+	.4byte BattleScript_EffectLuckyChant             @ EFFECT_LUCKY_CHANT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -3716,6 +3717,12 @@ BattleScript_TailwindEnds::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
+BattleScript_LuckyChantEnds::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_LUCKYCHANTENDED
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
 BattleScript_LeechSeedTurnDrain::
 	playanimation BS_ATTACKER, B_ANIM_LEECH_SEED_DRAIN, sB_ANIM_ARG1
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
@@ -5549,5 +5556,16 @@ BattleScript_EffectGuardSwap::
 	attackanimation
 	waitanimation
 	printstring STRINGID_PKMNSWAPPEDSTATCHANGES
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectLuckyChant::
+	attackcanceler
+	attackstring
+	ppreduce
+	trySetLuckyChant BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_LUCKYCHANTSTARTED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd

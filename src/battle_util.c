@@ -466,6 +466,7 @@ enum
     ENDTURN_MIST,
     ENDTURN_SAFEGUARD,
     ENDTURN_TAILWIND,
+    ENDTURN_LUCKY_CHANT,
     ENDTURN_WISH,
     ENDTURN_RAIN,
     ENDTURN_SANDSTORM,
@@ -622,6 +623,30 @@ u8 DoFieldEndTurnEffects(void)
                     {
                         gSideStatuses[side] &= ~SIDE_STATUS_TAILWIND;
                         BattleScriptExecute(BattleScript_TailwindEnds);
+                        effect++;
+                    }
+                }
+                gBattleStruct->turnSideTracker++;
+                if (effect != 0)
+                    break;
+            }
+            if (effect == 0)
+            {
+                gBattleStruct->turnCountersTracker++;
+                gBattleStruct->turnSideTracker = 0;
+            }
+            break;
+        case ENDTURN_LUCKY_CHANT:
+            while (gBattleStruct->turnSideTracker < 2)
+            {
+                side = gBattleStruct->turnSideTracker;
+                gActiveBattler = gBattlerAttacker = gSideTimers[side].luckyChantBattlerId;
+                if (gSideStatuses[side] & SIDE_STATUS_LUCKY_CHANT)
+                {
+                    if (--gSideTimers[side].luckyChantTimer == 0)
+                    {
+                        gSideStatuses[side] &= ~SIDE_STATUS_LUCKY_CHANT;
+                        BattleScriptExecute(BattleScript_LuckyChantEnds);
                         effect++;
                     }
                 }

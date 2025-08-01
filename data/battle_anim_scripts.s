@@ -463,8 +463,8 @@ gBattleAnims_Moves::
     .4byte Move_HEART_SWAP
     .4byte Move_POWER_SWAP
     .4byte Move_GUARD_SWAP
+    .4byte Move_LUCKY_CHANT
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -2324,6 +2324,7 @@ Frustration_Weak:
 	goto Frustration_Continue
 
 Move_SAFEGUARD:
+Move_LUCKY_CHANT:
 	loadspritegfx ANIM_TAG_GUARD_RING
 	monbg ANIM_ATK_PARTNER
 	setalpha 8, 8

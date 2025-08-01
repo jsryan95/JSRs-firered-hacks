@@ -1521,3 +1521,8 @@
 	.macro swapDefStatChanges
 	callnative BS_swapDefStatChanges
 	.endm
+
+	.macro trySetLuckyChant onFail:req
+	callnative BS_trySetLuckyChant
+	.4byte \onFail
+	.endm

@@ -413,8 +413,10 @@
 #define STRINGID_PKMNSXHURTIT 412
 #define STRINGID_PKMNSXDISABLEDY 413
 #define STRINGID_PKMNSWAPPEDSTATCHANGES 414
+#define STRINGID_LUCKYCHANTSTARTED 415
+#define STRINGID_LUCKYCHANTENDED 416
 
-#define BATTLESTRINGS_COUNT     415
+#define BATTLESTRINGS_COUNT     417
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

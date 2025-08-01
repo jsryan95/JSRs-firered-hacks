@@ -241,20 +241,22 @@ extern struct SpecialStatus gSpecialStatuses[MAX_BATTLERS_COUNT];
 
 struct SideTimer
 {
-    /*0x00*/ u8 reflectTimer;
-    /*0x01*/ u8 reflectBattlerId;
-    /*0x02*/ u8 lightscreenTimer;
-    /*0x03*/ u8 lightscreenBattlerId;
-    /*0x04*/ u8 mistTimer;
-    /*0x05*/ u8 mistBattlerId;
-    /*0x06*/ u8 safeguardTimer;
-    /*0x07*/ u8 safeguardBattlerId;
-    /*0x08*/ u8 followmeTimer;
-    /*0x09*/ u8 followmeTarget;
-    /*0x0A*/ u8 spikesAmount;
-    /*0x0B*/ u8 fieldB;
-    /*0x0C*/ u8 tailwindTimer;
-    /*0x0D*/ u8 tailwindBattlerId;
+    u8 reflectTimer;
+    u8 reflectBattlerId;
+    u8 lightscreenTimer;
+    u8 lightscreenBattlerId;
+    u8 mistTimer;
+    u8 mistBattlerId;
+    u8 safeguardTimer;
+    u8 safeguardBattlerId;
+    u8 followmeTimer;
+    u8 followmeTarget;
+    u8 spikesAmount;
+    u8 fieldB;
+    u8 tailwindTimer;
+    u8 tailwindBattlerId;
+    u8 luckyChantTimer;
+    u8 luckyChantBattlerId;
 };
 
 extern struct SideTimer gSideTimers[];

@@ -1491,6 +1491,7 @@ static void Cmd_critcalc(void)
         critChance = ARRAY_COUNT(sCriticalHitChance) - 1;
 
     if ((!hasActiveAbility(gBattlerTarget, ABILITY_BATTLE_ARMOR) && !hasActiveAbility(gBattlerTarget, ABILITY_SHELL_ARMOR))
+     && !(gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)] & SIDE_STATUS_LUCKY_CHANT)
      && !(gstatuses4[gBattlerAttacker] & STATUS4_CANT_SCORE_A_CRIT)
      && !(gBattleTypeFlags & BATTLE_TYPE_OLD_MAN_TUTORIAL)
      && (gBattleMoves[gCurrentMove].effect == EFFECT_ALWAYS_CRIT || !(Random() % sCriticalHitChance[critChance]))
@@ -10820,4 +10821,19 @@ void BS_swapDefStatChanges(void)
     gBattleMons[gBattlerTarget].statStages[STAT_SPDEF] = attackerStat;
 
     gBattlescriptCurrInstr += 5;
+}
+
+void BS_trySetLuckyChant(void)
+{
+    if (gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] & SIDE_STATUS_LUCKY_CHANT)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] |= SIDE_STATUS_LUCKY_CHANT;
+        gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].luckyChantTimer = 5;
+        gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].luckyChantBattlerId = gBattlerAttacker;
+        gBattlescriptCurrInstr += 9;
+    }
 }
