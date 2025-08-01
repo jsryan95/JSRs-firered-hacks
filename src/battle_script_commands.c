@@ -10764,3 +10764,12 @@ void BS_doubleDamageIfTargetSameType(void)
 
     gBattlescriptCurrInstr += 5;
 }
+
+void BS_finalGambit(void)
+{
+    gActiveBattler = gBattlerAttacker;
+    gBattleMoveDamage = gBattleMons[gActiveBattler].hp;
+    BtlController_EmitHealthBarUpdate(BUFFER_A, INSTANT_HP_BAR_DROP);
+    MarkBattlerForControllerExec(gActiveBattler);
+    gBattlescriptCurrInstr += 5;
+}

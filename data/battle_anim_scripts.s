@@ -549,8 +549,8 @@ gBattleAnims_Moves::
 	.4byte Move_STORED_POWER
 	.4byte Move_SIMPLE_BEAM
 	.4byte Move_SYNCHRONOISE
+	.4byte Move_FINAL_GAMBIT
 	@ space for generation 5 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -3155,6 +3155,7 @@ Move_THRASH:
 	end
 
 Move_CLOSE_COMBAT:
+Move_FINAL_GAMBIT:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	monbg ANIM_DEF_PARTNER

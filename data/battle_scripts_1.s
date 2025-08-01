@@ -298,6 +298,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectStoredPower            @ EFFECT_STORED_POWER
 	.4byte BattleScript_EffectSimpleBeam             @ EFFECT_SIMPLE_BEAM
 	.4byte BattleScript_EffectSynchronoise           @ EFFECT_SYNCHRONOISE
+	.4byte BattleScript_EffectFinalGambit            @ EFFECT_FINAL_GAMBIT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5489,3 +5490,25 @@ BattleScript_CursedBodyActivates::
 	printstring STRINGID_PKMNSXDISABLEDY
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+BattleScript_EffectFinalGambit::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_MoveMissed, ACC_CURR_MOVE
+	finalGambit
+	setatkhptozero
+	waitstate
+	attackanimation
+	waitanimation
+	adjustsetdamage
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	waitmessage B_WAIT_TIME_LONG
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_TARGET
+	tryfaintmon BS_ATTACKER
+	end

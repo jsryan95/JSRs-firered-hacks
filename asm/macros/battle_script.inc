@@ -1505,3 +1505,7 @@
 	.macro doubleDamageIfTargetSameType
 	callnative BS_doubleDamageIfTargetSameType
 	.endm
+
+	.macro finalGambit
+	callnative BS_finalGambit
+	.endm
