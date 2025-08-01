@@ -7118,6 +7118,9 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
 
     PREPARE_STAT_BUFFER(gBattleTextBuff1, statId)
 
+    if (hasActiveAbility(gActiveBattler, ABILITY_SIMPLE))
+        statValue *= 2;
+
     if (statValue <= -1) // Stat decrease.
     {
         if (gSideTimers[GET_BATTLER_SIDE(gActiveBattler)].mistTimer
