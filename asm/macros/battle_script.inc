@@ -1488,3 +1488,7 @@
 	.macro setMagnetRise
 	callnative BS_setMagnetRise
 	.endm
+
+	.macro determineNaturalGift
+	callnative BS_determineNaturalGift
+	.endm

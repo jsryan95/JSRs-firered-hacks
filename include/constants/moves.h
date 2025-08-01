@@ -441,9 +441,9 @@
 #define MOVE_TAILWIND 435
 #define MOVE_ROOST 436
 #define MOVE_MAGNET_RISE 437
+#define MOVE_NATURAL_GIFT 438
 
 // generation 4 moves (not implemented)
-#define MOVE_HEALING_WISH 438
 #define MOVE_HEART_SWAP 439
 #define MOVE_JUDGMENT 440
 #define MOVE_LAST_RESORT 441
@@ -454,7 +454,7 @@
 #define MOVE_METAL_BURST 446
 #define MOVE_BUG_BITE 447
 #define MOVE_DEFOG 448
-#define MOVE_NATURAL_GIFT 449
+#define MOVE_HEALING_WISH 449
 #define MOVE_PLUCK 450
 #define MOVE_POWER_SWAP 451
 #define MOVE_POWER_TRICK 452

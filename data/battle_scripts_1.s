@@ -294,6 +294,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHit                    @ EFFECT_PSYSHOCK
 	.4byte BattleScript_EffectRoost                  @ EFFECT_ROOST
 	.4byte BattleScript_EffectMagnetRise             @ EFFECT_MAGNET_RISE
+	.4byte BattleScript_EffectNaturalGift            @ EFFECT_NATURAL_GIFT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5447,3 +5448,8 @@ BattleScript_EffectMagnetRise::
     printstring STRINGID_PKMNMAGNETRISE
     waitmessage B_WAIT_TIME_LONG
     goto BattleScript_MoveEnd
+
+BattleScript_EffectNaturalGift::
+	attackcanceler
+	determineNaturalGift
+	goto BattleScript_HitFromAccCheck

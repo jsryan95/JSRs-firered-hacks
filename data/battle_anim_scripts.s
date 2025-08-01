@@ -459,8 +459,8 @@ gBattleAnims_Moves::
     .4byte Move_TAILWIND
     .4byte Move_ROOST
     .4byte Move_MAGNET_RISE
+    .4byte Move_NATURAL_GIFT
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -1538,6 +1538,7 @@ Move_X_SCISSOR:
 	end
 
 Move_HIDDEN_POWER:
+Move_NATURAL_GIFT:
 	loadspritegfx ANIM_TAG_RED_ORB
 	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_ScaleMonAndRestore, 5, -7, -7, 11, ANIM_ATTACKER, 0

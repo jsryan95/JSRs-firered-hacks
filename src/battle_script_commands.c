@@ -1025,6 +1025,60 @@ static const struct PickupItem sPickupItems[] =
 
 };
 
+struct NaturalGiftItem
+{
+    u16 item;
+    u8 type;
+};
+
+static const struct NaturalGiftItem sNaturalGiftItems[] =
+{
+    {ITEM_CHERI_BERRY, TYPE_FIRE},
+    {ITEM_CHESTO_BERRY, TYPE_WATER},
+    {ITEM_PECHA_BERRY, TYPE_ELECTRIC},
+    {ITEM_RAWST_BERRY, TYPE_GRASS},
+    {ITEM_ASPEAR_BERRY, TYPE_ICE},
+    {ITEM_LEPPA_BERRY, TYPE_FIGHTING},
+    {ITEM_ORAN_BERRY, TYPE_POISON},
+    {ITEM_PERSIM_BERRY, TYPE_GROUND},
+    {ITEM_LUM_BERRY, TYPE_FLYING},
+    {ITEM_SITRUS_BERRY, TYPE_PSYCHIC},
+    {ITEM_FIGY_BERRY, TYPE_BUG},
+    {ITEM_WIKI_BERRY, TYPE_ROCK},
+    {ITEM_MAGO_BERRY, TYPE_GHOST},
+    {ITEM_AGUAV_BERRY, TYPE_DRAGON},
+    {ITEM_IAPAPA_BERRY, TYPE_DARK},
+    {ITEM_RAZZ_BERRY, TYPE_STEEL},
+    {ITEM_BLUK_BERRY, TYPE_FIRE},
+    {ITEM_NANAB_BERRY, TYPE_WATER},
+    {ITEM_WEPEAR_BERRY, TYPE_ELECTRIC},
+    {ITEM_PINAP_BERRY, TYPE_GRASS},
+    {ITEM_POMEG_BERRY, TYPE_ICE},
+    {ITEM_KELPSY_BERRY, TYPE_FIGHTING},
+    {ITEM_QUALOT_BERRY, TYPE_POISON},
+    {ITEM_HONDEW_BERRY, TYPE_GROUND},
+    {ITEM_GREPA_BERRY, TYPE_FLYING},
+    {ITEM_TAMATO_BERRY, TYPE_PSYCHIC},
+    {ITEM_CORNN_BERRY, TYPE_BUG},
+    {ITEM_MAGOST_BERRY, TYPE_ROCK},
+    {ITEM_RABUTA_BERRY, TYPE_GHOST},
+    {ITEM_NOMEL_BERRY, TYPE_DRAGON},
+    {ITEM_SPELON_BERRY, TYPE_DARK},
+    {ITEM_PAMTRE_BERRY, TYPE_STEEL},
+    {ITEM_WATMEL_BERRY, TYPE_FIRE},
+    {ITEM_DURIN_BERRY, TYPE_WATER},
+    {ITEM_BELUE_BERRY, TYPE_ELECTRIC},
+    {ITEM_LIECHI_BERRY, TYPE_GRASS},
+    {ITEM_GANLON_BERRY, TYPE_ICE},
+    {ITEM_SALAC_BERRY, TYPE_FIGHTING},
+    {ITEM_PETAYA_BERRY, TYPE_POISON},
+    {ITEM_APICOT_BERRY, TYPE_GROUND},
+    {ITEM_LANSAT_BERRY, TYPE_FLYING},
+    {ITEM_STARF_BERRY, TYPE_PSYCHIC},
+    {ITEM_ENIGMA_BERRY, TYPE_BUG},
+    {ITEM_NONE, TYPE_MYSTERY},
+};
+
 static const u8 sTerrainToType[] =
 {
     [BATTLE_TERRAIN_GRASS]      = TYPE_GRASS,
@@ -10646,5 +10700,20 @@ void BS_setMagnetRise(void)
 {
     gBattleMons[gBattlerTarget].status3 |= STATUS3_MAGNET_RISE;
 
+    gBattlescriptCurrInstr += 5;
+}
+
+void BS_determineNaturalGift(void)
+{
+    u8 i;
+    for (i = 0; sNaturalGiftItems[i].item != ITEM_NONE; i++)
+    {
+        if (sNaturalGiftItems[i].item == gBattleMons[gBattlerAttacker].item)
+        {
+            gBattleScripting.dmgMultiplier = 2;
+            gBattleStruct->dynamicMoveType = sNaturalGiftItems[i].type;
+            break;
+        }
+    }
     gBattlescriptCurrInstr += 5;
 }
