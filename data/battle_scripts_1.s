@@ -300,6 +300,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectSynchronoise           @ EFFECT_SYNCHRONOISE
 	.4byte BattleScript_EffectFinalGambit            @ EFFECT_FINAL_GAMBIT
 	.4byte BattleScript_EffectHeartSwap              @ EFFECT_HEART_SWAP
+	.4byte BattleScript_EffectPowerSwap              @ EFFECT_POWER_SWAP
+	.4byte BattleScript_EffectGuardSwap              @ EFFECT_GUARD_SWAP
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5519,7 +5521,31 @@ BattleScript_EffectHeartSwap::
 	attackstring
 	ppreduce
 	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
-	trySwapStatChanges BattleScript_ButItFailed
+	swapStatChanges
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNSWAPPEDSTATCHANGES
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectPowerSwap::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	swapAtkStatChanges
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNSWAPPEDSTATCHANGES
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectGuardSwap::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	swapDefStatChanges
 	attackanimation
 	waitanimation
 	printstring STRINGID_PKMNSWAPPEDSTATCHANGES

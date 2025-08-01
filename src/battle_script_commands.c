@@ -10774,7 +10774,7 @@ void BS_finalGambit(void)
     gBattlescriptCurrInstr += 5;
 }
 
-void BS_trySwapStatChanges(void)
+void BS_swapStatChanges(void)
 {
     u8 i, attackerStat;
 
@@ -10785,5 +10785,39 @@ void BS_trySwapStatChanges(void)
         gBattleMons[gBattlerTarget].statStages[i] = attackerStat;
     }
 
-    gBattlescriptCurrInstr += 9;
+    gBattlescriptCurrInstr += 5;
+}
+
+void BS_swapAtkStatChanges(void)
+{
+    u8 attackerStat;
+
+    // attack
+    attackerStat = gBattleMons[gBattlerAttacker].statStages[STAT_ATK];
+    gBattleMons[gBattlerAttacker].statStages[STAT_ATK] = gBattleMons[gBattlerTarget].statStages[STAT_ATK];
+    gBattleMons[gBattlerTarget].statStages[STAT_ATK] = attackerStat;
+
+    // special attack
+    attackerStat = gBattleMons[gBattlerAttacker].statStages[STAT_SPATK];
+    gBattleMons[gBattlerAttacker].statStages[STAT_SPATK] = gBattleMons[gBattlerTarget].statStages[STAT_SPATK];
+    gBattleMons[gBattlerTarget].statStages[STAT_SPATK] = attackerStat;
+
+    gBattlescriptCurrInstr += 5;
+}
+
+void BS_swapDefStatChanges(void)
+{
+    u8 attackerStat;
+
+    // defence
+    attackerStat = gBattleMons[gBattlerAttacker].statStages[STAT_DEF];
+    gBattleMons[gBattlerAttacker].statStages[STAT_DEF] = gBattleMons[gBattlerTarget].statStages[STAT_DEF];
+    gBattleMons[gBattlerTarget].statStages[STAT_DEF] = attackerStat;
+
+    // special defence
+    attackerStat = gBattleMons[gBattlerAttacker].statStages[STAT_SPDEF];
+    gBattleMons[gBattlerAttacker].statStages[STAT_SPDEF] = gBattleMons[gBattlerTarget].statStages[STAT_SPDEF];
+    gBattleMons[gBattlerTarget].statStages[STAT_SPDEF] = attackerStat;
+
+    gBattlescriptCurrInstr += 5;
 }

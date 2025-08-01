@@ -1510,7 +1510,14 @@
 	callnative BS_finalGambit
 	.endm
 
-	.macro trySwapStatChanges onFail:req
-	callnative BS_trySwapStatChanges
-	.4byte \onFail
+	.macro swapStatChanges
+	callnative BS_swapStatChanges
+	.endm
+
+	.macro swapAtkStatChanges
+	callnative BS_swapAtkStatChanges
+	.endm
+
+	.macro swapDefStatChanges
+	callnative BS_swapDefStatChanges
 	.endm

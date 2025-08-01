@@ -501,6 +501,8 @@ const u8 gMoveDescription_SimpleBeam[] = _("A mysterious\npsychic wave\nchanges 
 const u8 gMoveDescription_Synchronoise[] = _("Power doubles\nagainst a POKéMON\nof the same type\nas the user.");
 const u8 gMoveDescription_FinalGambit[] = _("The user faints\nbut does damage\nequal to its HP.");
 const u8 gMoveDescription_HeartSwap[] = _("The user employs\nits psychic power to\nswitch stat changes\nwith the foe.");
+const u8 gMoveDescription_PowerSwap[] = _("The user switches\nATTACK and SP. ATK\nstat changes with\nthe foe.");
+const u8 gMoveDescription_GuardSwap[] = _("The user switches\nDEFENSE and SP. DEF\nstat changes with\nthe foe.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1019,4 +1021,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_SYNCHRONOISE - 1] = gMoveDescription_Synchronoise,
     [MOVE_FINAL_GAMBIT - 1] = gMoveDescription_FinalGambit,
     [MOVE_HEART_SWAP - 1] = gMoveDescription_HeartSwap,
+    [MOVE_POWER_SWAP - 1] = gMoveDescription_PowerSwap,
+    [MOVE_GUARD_SWAP - 1] = gMoveDescription_GuardSwap,
 };

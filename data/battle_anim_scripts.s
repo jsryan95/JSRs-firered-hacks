@@ -461,9 +461,9 @@ gBattleAnims_Moves::
     .4byte Move_MAGNET_RISE
     .4byte Move_NATURAL_GIFT
     .4byte Move_HEART_SWAP
+    .4byte Move_POWER_SWAP
+    .4byte Move_GUARD_SWAP
     @ space for generation 4 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -4677,6 +4677,8 @@ Move_ERUPTION:
 
 Move_SKILL_SWAP:
 Move_HEART_SWAP:
+Move_POWER_SWAP:
+Move_GUARD_SWAP:
 	loadspritegfx ANIM_TAG_BLUEGREEN_ORB
 	call SetPsychicBackground
 	createvisualtask AnimTask_SkillSwap, 3, ANIM_TARGET
