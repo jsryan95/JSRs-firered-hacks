@@ -464,8 +464,8 @@ gBattleAnims_Moves::
     .4byte Move_POWER_SWAP
     .4byte Move_GUARD_SWAP
     .4byte Move_LUCKY_CHANT
+    .4byte Move_TRUMP_CARD
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -1511,6 +1511,7 @@ Move_TAIL_WHIP:
 	end
 
 Move_CUT:
+Move_TRUMP_CARD:
 	loadspritegfx ANIM_TAG_CUT
 	monbg ANIM_TARGET
 	setalpha 12, 8

@@ -10837,3 +10837,20 @@ void BS_trySetLuckyChant(void)
         gBattlescriptCurrInstr += 9;
     }
 }
+
+void BS_setTrumpCardDamage(void)
+{
+    u8 remainingPP = gBattleMons[gBattlerAttacker].pp[gCurrMovePos];
+    if (remainingPP == 0)
+        gDynamicBasePower = 200;
+    else if (remainingPP == 1)
+        gDynamicBasePower = 80;
+    else if (remainingPP == 2)
+        gDynamicBasePower = 60;
+    else if (remainingPP == 3)
+        gDynamicBasePower = 50;
+    else
+        gDynamicBasePower = 40;
+
+    gBattlescriptCurrInstr += 5;
+}

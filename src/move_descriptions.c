@@ -504,6 +504,7 @@ const u8 gMoveDescription_HeartSwap[] = _("The user employs\nits psychic power t
 const u8 gMoveDescription_PowerSwap[] = _("The user switches\nATTACK and SP. ATK\nstat changes with\nthe foe.");
 const u8 gMoveDescription_GuardSwap[] = _("The user switches\nDEFENSE and SP. DEF\nstat changes with\nthe foe.");
 const u8 gMoveDescription_LuckyChant[] = _("Protects the user's\nteam from critical\nhits for five\nturns.");
+const u8 gMoveDescription_TrumpCard[] = _("This attack inflicts\ngreater damage when\nits PP is low.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1025,4 +1026,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POWER_SWAP - 1] = gMoveDescription_PowerSwap,
     [MOVE_GUARD_SWAP - 1] = gMoveDescription_GuardSwap,
     [MOVE_LUCKY_CHANT - 1] = gMoveDescription_LuckyChant,
+    [MOVE_TRUMP_CARD - 1] = gMoveDescription_TrumpCard,
 };

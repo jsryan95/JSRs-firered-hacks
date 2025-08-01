@@ -519,4 +519,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_POWER_SWAP] = _("POWER SWAP"),
     [MOVE_GUARD_SWAP] = _("GUARD SWAP"),
     [MOVE_LUCKY_CHANT] = _("LUCKY CHANT"),
+    [MOVE_TRUMP_CARD] = _("TRUMP CARD"),
 };

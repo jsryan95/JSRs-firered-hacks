@@ -1526,3 +1526,7 @@
 	callnative BS_trySetLuckyChant
 	.4byte \onFail
 	.endm
+
+	.macro setTrumpCardDamage
+	callnative BS_setTrumpCardDamage
+	.endm

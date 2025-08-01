@@ -303,6 +303,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectPowerSwap              @ EFFECT_POWER_SWAP
 	.4byte BattleScript_EffectGuardSwap              @ EFFECT_GUARD_SWAP
 	.4byte BattleScript_EffectLuckyChant             @ EFFECT_LUCKY_CHANT
+	.4byte BattleScript_EffectTrumpCard              @ EFFECT_TRUMP_CARD
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5569,3 +5570,11 @@ BattleScript_EffectLuckyChant::
 	printstring STRINGID_LUCKYCHANTSTARTED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectTrumpCard::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	setTrumpCardDamage
+	goto BattleScript_HitFromCritCalc
