@@ -10773,3 +10773,17 @@ void BS_finalGambit(void)
     MarkBattlerForControllerExec(gActiveBattler);
     gBattlescriptCurrInstr += 5;
 }
+
+void BS_trySwapStatChanges(void)
+{
+    u8 i, attackerStat;
+
+    for (i = 0; i < NUM_BATTLE_STATS; i++)
+    {
+        attackerStat = gBattleMons[gBattlerAttacker].statStages[i];
+        gBattleMons[gBattlerAttacker].statStages[i] = gBattleMons[gBattlerTarget].statStages[i];
+        gBattleMons[gBattlerTarget].statStages[i] = attackerStat;
+    }
+
+    gBattlescriptCurrInstr += 9;
+}

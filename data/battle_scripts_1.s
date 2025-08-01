@@ -299,6 +299,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectSimpleBeam             @ EFFECT_SIMPLE_BEAM
 	.4byte BattleScript_EffectSynchronoise           @ EFFECT_SYNCHRONOISE
 	.4byte BattleScript_EffectFinalGambit            @ EFFECT_FINAL_GAMBIT
+	.4byte BattleScript_EffectHeartSwap              @ EFFECT_HEART_SWAP
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5512,3 +5513,15 @@ BattleScript_EffectFinalGambit::
 	tryfaintmon BS_TARGET
 	tryfaintmon BS_ATTACKER
 	end
+
+BattleScript_EffectHeartSwap::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	trySwapStatChanges BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNSWAPPEDSTATCHANGES
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

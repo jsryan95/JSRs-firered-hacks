@@ -442,9 +442,9 @@
 #define MOVE_ROOST 436
 #define MOVE_MAGNET_RISE 437
 #define MOVE_NATURAL_GIFT 438
+#define MOVE_HEART_SWAP 439
 
 // generation 4 moves (not implemented)
-#define MOVE_HEART_SWAP 439
 #define MOVE_JUDGMENT 440
 #define MOVE_LAST_RESORT 441
 #define MOVE_LUCKY_CHANT 442
