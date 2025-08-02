@@ -2260,7 +2260,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         && TARGET_TURN_DAMAGED
                         && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
                         && gBattleMons[gBattlerAttacker].pp[gChosenMovePos] != 0
-                        && gDisableStructs[gBattlerTarget].disabledMove == MOVE_NONE)
+                        && gDisableStructs[gBattlerAttacker].disabledMove == MOVE_NONE
+                        && gChosenMove != MOVE_STRUGGLE)
                 {
                     gDisableStructs[gBattlerAttacker].disabledMove = gChosenMove;
                     gDisableStructs[gBattlerAttacker].disableTimer = 4;
