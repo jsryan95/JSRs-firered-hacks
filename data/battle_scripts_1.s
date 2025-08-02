@@ -304,6 +304,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectGuardSwap              @ EFFECT_GUARD_SWAP
 	.4byte BattleScript_EffectLuckyChant             @ EFFECT_LUCKY_CHANT
 	.4byte BattleScript_EffectTrumpCard              @ EFFECT_TRUMP_CARD
+	.4byte BattleScript_EffectProtect                @ EFFECT_QUICK_GUARD
+	.4byte BattleScript_EffectProtect                @ EFFECT_WIDE_GUARD
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5573,7 +5575,7 @@ BattleScript_EffectLuckyChant::
 
 BattleScript_EffectTrumpCard::
 	attackcanceler
-	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	accuracycheck BattleScript_PrintMoveMissed, NO_ACC_CALC_CHECK_LOCK_ON
 	attackstring
 	ppreduce
 	setTrumpCardDamage

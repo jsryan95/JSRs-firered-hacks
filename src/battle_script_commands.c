@@ -257,7 +257,9 @@ static const s32 sExperienceScalingFactors[] =
     159767,
 };
 
-#define DEFENDER_IS_PROTECTED ((gProtectStructs[gBattlerTarget].protected) && (gBattleMoves[gCurrentMove].flags & FLAG_PROTECT_AFFECTED))
+#define QUICK_GUARD_APPLIES ((gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)] & SIDE_STATUS_QUICK_GUARD) && gBattleMoves[gCurrentMove].priority > 0)
+#define WIDE_GUARD_APPLIES ((gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)] & SIDE_STATUS_WIDE_GUARD) && gBattleMoves[gCurrentMove].target & (MOVE_TARGET_BOTH | MOVE_TARGET_FOES_AND_ALLY))
+#define DEFENDER_IS_PROTECTED ((gBattleMoves[gCurrentMove].flags & FLAG_PROTECT_AFFECTED) && (gProtectStructs[gBattlerTarget].protected || QUICK_GUARD_APPLIES || WIDE_GUARD_APPLIES))
 
 #define LEVEL_UP_BANNER_START 416
 #define LEVEL_UP_BANNER_END   512
@@ -1626,7 +1628,7 @@ static void Cmd_typecalc(void)
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
         gLastLandedMoves[gBattlerTarget] = 0;
         gLastHitByType[gBattlerTarget] = 0;
-        gBattleCommunication[MISS_TYPE] = B_MSG_GROUND_MISS;
+        gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
     }
     else
     {
@@ -1694,7 +1696,7 @@ static void CheckWonderGuardAndLevitate(void)
     }
     else if ((gBattleMons[gBattlerTarget].status3 & STATUS3_MAGNET_RISE) && moveType == TYPE_GROUND)
     {
-        gBattleCommunication[MISS_TYPE] = B_MSG_GROUND_MISS;
+        gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
     }
 
     while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
@@ -4793,7 +4795,7 @@ static void Cmd_typecalc2(void)
     {
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
         gLastLandedMoves[gBattlerTarget] = 0;
-        gBattleCommunication[MISS_TYPE] = B_MSG_GROUND_MISS;
+        gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
     }
     else
     {
@@ -6681,6 +6683,16 @@ static void Cmd_setprotectlike(void)
         {
             gProtectStructs[gBattlerAttacker].endured = 1;
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BRACED_ITSELF;
+        }
+        if (gBattleMoves[gCurrentMove].effect == EFFECT_QUICK_GUARD)
+        {
+            gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] |= SIDE_STATUS_QUICK_GUARD;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PROTECTED_ITSELF;
+        }
+        if (gBattleMoves[gCurrentMove].effect == EFFECT_WIDE_GUARD)
+        {
+            gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] |= SIDE_STATUS_WIDE_GUARD;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PROTECTED_ITSELF;
         }
         gDisableStructs[gBattlerAttacker].protectUses++;
     }
@@ -10634,8 +10646,8 @@ void BS_setPunishmentDamage(void)
 
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
-        if (gBattleMons[gBattlerTarget].statStages[i] > 0)
-            gDynamicBasePower += (20 * gBattleMons[gBattlerTarget].statStages[i]);
+        if (gBattleMons[gBattlerTarget].statStages[i] > DEFAULT_STAT_STAGE)
+            gDynamicBasePower += (20 * (gBattleMons[gBattlerTarget].statStages[i] - DEFAULT_STAT_STAGE));
     }
 
     if (gDynamicBasePower > 200)
@@ -10743,8 +10755,8 @@ void BS_setStoredPowerDamage(void)
 
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
-        if (gBattleMons[gBattlerTarget].statStages[i] > 0)
-            gDynamicBasePower += (20 * gBattleMons[gBattlerTarget].statStages[i]);
+        if (gBattleMons[gBattlerAttacker].statStages[i] > DEFAULT_STAT_STAGE)
+            gDynamicBasePower += (20 * (gBattleMons[gBattlerAttacker].statStages[i] - DEFAULT_STAT_STAGE));
     }
 
     gBattlescriptCurrInstr += 5;

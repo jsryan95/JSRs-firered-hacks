@@ -550,9 +550,9 @@ gBattleAnims_Moves::
 	.4byte Move_SIMPLE_BEAM
 	.4byte Move_SYNCHRONOISE
 	.4byte Move_FINAL_GAMBIT
+	.4byte Move_QUICK_GUARD
+	.4byte Move_WIDE_GUARD
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -2190,6 +2190,8 @@ Move_DEFENSE_CURL:
 	end
 
 Move_PROTECT:
+Move_QUICK_GUARD:
+Move_WIDE_GUARD:
 	loadspritegfx ANIM_TAG_PROTECT
 	monbg ANIM_ATK_PARTNER
 	splitbgprio ANIM_ATTACKER

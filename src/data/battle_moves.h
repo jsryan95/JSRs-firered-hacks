@@ -7293,4 +7293,32 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
+
+    [MOVE_QUICK_GUARD] =
+    {
+        .effect = EFFECT_QUICK_GUARD,
+        .power = 0,
+        .type = TYPE_FIGHTING,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 3,
+        .flags = FLAG_SNATCH_AFFECTED,
+    },
+
+    [MOVE_WIDE_GUARD] =
+    {
+        .effect = EFFECT_WIDE_GUARD,
+        .power = 0,
+        .type = TYPE_ROCK,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 3,
+        .flags = FLAG_SNATCH_AFFECTED,
+    },
 };

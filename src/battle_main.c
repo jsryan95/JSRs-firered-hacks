@@ -3674,6 +3674,9 @@ static void TurnValuesCleanUp(bool8 var0)
     }
     gSideTimers[0].followmeTimer = 0;
     gSideTimers[1].followmeTimer = 0;
+
+    gSideStatuses[0] &= ~(SIDE_STATUS_QUICK_GUARD | SIDE_STATUS_WIDE_GUARD);
+    gSideStatuses[1] &= ~(SIDE_STATUS_QUICK_GUARD | SIDE_STATUS_WIDE_GUARD);
 }
 
 static void SpecialStatusesClear(void)
