@@ -10642,7 +10642,7 @@ void BS_doubleDamageDealtIfTargetPoisoned(void)
 void BS_setPunishmentDamage(void)
 {
     u8 i;
-    gDynamicBasePower = 60;
+    gDynamicBasePower = 70;
 
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
@@ -10650,8 +10650,8 @@ void BS_setPunishmentDamage(void)
             gDynamicBasePower += (20 * (gBattleMons[gBattlerTarget].statStages[i] - DEFAULT_STAT_STAGE));
     }
 
-    if (gDynamicBasePower > 200)
-        gDynamicBasePower = 200;
+    if (gDynamicBasePower > 150)
+        gDynamicBasePower = 150;
 
     gBattlescriptCurrInstr += 5;
 }
