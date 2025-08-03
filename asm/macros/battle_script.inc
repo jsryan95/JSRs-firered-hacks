@@ -1493,8 +1493,9 @@
 	callnative BS_determineNaturalGift
 	.endm
 
-	.macro setStoredPowerDamage
-	callnative BS_setStoredPowerDamage
+	.macro checkStoredPower onFail:req
+	callnative BS_checkStoredPower
+	.4byte \onFail
 	.endm
 
 	.macro tryGiveSimple onFail:req

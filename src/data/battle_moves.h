@@ -7157,7 +7157,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_STORED_POWER] =
     {
         .effect = EFFECT_STORED_POWER,
-        .power = 20,
+        .power = 120,
         .type = TYPE_PSYCHIC,
         .category = CATEGORY_SPECIAL,
         .accuracy = 100,

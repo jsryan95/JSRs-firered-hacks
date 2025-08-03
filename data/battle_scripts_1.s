@@ -5472,8 +5472,12 @@ BattleScript_EffectNaturalGift::
 	goto BattleScript_HitFromAccCheck
 
 BattleScript_EffectStoredPower::
-	setStoredPowerDamage
-	goto BattleScript_EffectHit
+	attackcanceler
+	attackstring
+	ppreduce
+	checkStoredPower BattleScript_ButItFailed
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
 
 BattleScript_EffectSimpleBeam::
 	attackcanceler

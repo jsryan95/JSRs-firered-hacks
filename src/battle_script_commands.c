@@ -10748,18 +10748,18 @@ void BS_determineNaturalGift(void)
     gBattlescriptCurrInstr += 5;
 }
 
-void BS_setStoredPowerDamage(void)
+void BS_checkStoredPower(void)
 {
     u8 i;
-    gDynamicBasePower = 20;
 
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
         if (gBattleMons[gBattlerAttacker].statStages[i] > DEFAULT_STAT_STAGE)
-            gDynamicBasePower += (20 * (gBattleMons[gBattlerAttacker].statStages[i] - DEFAULT_STAT_STAGE));
+            gBattlescriptCurrInstr += 9;
+            return;
     }
 
-    gBattlescriptCurrInstr += 5;
+    gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
 }
 
 void BS_tryGiveSimple(void)
