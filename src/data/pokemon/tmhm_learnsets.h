@@ -14,13 +14,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -32,13 +34,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -52,16 +56,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -73,9 +77,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -85,7 +89,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -97,9 +101,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -109,7 +113,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -123,10 +127,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -136,7 +140,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)
@@ -153,16 +157,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -178,16 +182,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -205,17 +209,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -234,9 +238,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -244,7 +248,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
@@ -259,9 +263,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -269,7 +273,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -279,14 +283,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -296,14 +300,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -314,14 +318,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -334,11 +338,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -346,7 +350,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -361,11 +365,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -373,7 +377,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -384,14 +388,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -402,14 +406,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -420,10 +424,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -431,7 +435,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)),
@@ -443,10 +447,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -454,7 +458,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)),
@@ -465,11 +469,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -477,7 +481,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -489,11 +493,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -501,7 +505,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -512,10 +516,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -525,7 +529,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -537,10 +541,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -550,7 +554,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -564,11 +568,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -577,7 +581,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -591,11 +595,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -604,7 +608,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -622,12 +626,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -643,7 +647,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -658,11 +662,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -670,7 +674,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -684,11 +688,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -696,7 +700,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -714,12 +718,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -734,7 +738,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -753,12 +757,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -771,7 +775,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
@@ -789,12 +793,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -807,7 +811,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
@@ -818,9 +822,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -828,7 +832,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)),
 
     [SPECIES_NINETALES]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
@@ -838,9 +842,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -848,7 +852,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)),
 
     [SPECIES_JIGGLYPUFF]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -862,11 +866,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -879,7 +883,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
@@ -896,11 +900,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -913,7 +917,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
@@ -925,8 +929,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -935,7 +939,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM49_SNATCH)),
@@ -948,8 +952,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -958,7 +962,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM49_SNATCH)),
@@ -969,15 +973,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
@@ -987,15 +991,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
@@ -1006,15 +1010,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
@@ -1024,9 +1028,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -1034,7 +1038,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)
@@ -1047,9 +1051,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -1057,7 +1061,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)
@@ -1068,16 +1072,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
@@ -1088,9 +1092,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -1098,7 +1102,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
@@ -1107,9 +1111,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -1118,7 +1122,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -1128,9 +1132,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -1139,7 +1143,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -1151,11 +1155,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1165,7 +1169,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
@@ -1180,11 +1184,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1194,7 +1198,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
@@ -1210,9 +1214,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1220,7 +1224,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -1239,9 +1243,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1249,7 +1253,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -1265,12 +1269,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1279,7 +1283,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
@@ -1294,12 +1298,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1308,7 +1312,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
@@ -1319,9 +1323,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -1330,7 +1334,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
@@ -1342,9 +1346,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -1353,7 +1357,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
@@ -1367,15 +1371,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
@@ -1390,9 +1394,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -1400,7 +1404,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -1419,9 +1423,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -1430,7 +1434,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -1448,9 +1452,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1460,7 +1464,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -1476,9 +1480,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1488,7 +1492,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -1505,9 +1509,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1517,7 +1521,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -1530,9 +1534,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1542,7 +1546,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -1554,9 +1558,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1566,7 +1570,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -1579,9 +1583,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1591,7 +1595,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -1602,15 +1606,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
@@ -1621,15 +1625,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
@@ -1641,15 +1645,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
@@ -1663,14 +1667,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -1687,14 +1691,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -1706,9 +1710,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1719,7 +1723,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -1728,9 +1732,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1741,7 +1745,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -1752,9 +1756,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -1765,7 +1769,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -1773,17 +1777,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)),
 
@@ -1792,17 +1796,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)),
 
@@ -1817,10 +1821,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -1830,7 +1834,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -1850,10 +1854,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -1864,7 +1868,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -1877,10 +1881,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -1895,10 +1899,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -1911,15 +1915,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
@@ -1929,14 +1933,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -1947,15 +1951,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -1969,13 +1973,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
@@ -1991,13 +1995,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
@@ -2010,10 +2014,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -2025,7 +2029,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)),
 
     [SPECIES_MUK]         = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -2037,10 +2041,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -2053,7 +2057,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -2066,13 +2070,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM08_DIVE)),
 
@@ -2085,14 +2089,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM08_DIVE)),
 
@@ -2103,9 +2107,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -2114,7 +2118,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)),
@@ -2126,9 +2130,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -2137,7 +2141,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)),
@@ -2151,10 +2155,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -2164,7 +2168,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -2177,10 +2181,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
@@ -2189,7 +2193,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -2203,8 +2207,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -2214,7 +2218,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -2231,8 +2235,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -2242,7 +2246,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -2256,15 +2260,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -2281,15 +2285,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -2303,10 +2307,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
@@ -2323,10 +2327,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM41_TORMENT)
@@ -2343,9 +2347,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -2353,7 +2357,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM04_STRENGTH)
@@ -2367,9 +2371,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -2377,7 +2381,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM04_STRENGTH)
@@ -2390,10 +2394,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -2405,7 +2409,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -2418,10 +2422,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -2433,7 +2437,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -2445,16 +2449,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -2466,16 +2470,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -2490,13 +2494,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -2509,7 +2513,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -2522,10 +2526,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -2536,7 +2540,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -2547,10 +2551,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -2561,7 +2565,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -2573,12 +2577,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -2589,7 +2593,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -2604,12 +2608,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -2621,7 +2625,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -2642,13 +2646,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -2661,7 +2665,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
@@ -2675,15 +2679,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)
@@ -2701,13 +2705,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -2721,7 +2725,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -2736,13 +2740,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -2756,13 +2760,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -2775,13 +2779,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -2795,13 +2799,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -2815,10 +2819,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -2840,10 +2844,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -2867,11 +2871,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -2882,7 +2886,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -2894,14 +2898,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
@@ -2920,8 +2924,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -2931,7 +2935,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
@@ -2943,11 +2947,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -2955,7 +2959,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -2967,9 +2971,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -2978,7 +2982,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -2991,9 +2995,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3001,7 +3005,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -3016,13 +3020,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -3032,7 +3036,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -3050,11 +3054,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM37_SANDSTORM)
@@ -3063,7 +3067,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -3081,18 +3085,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -3106,16 +3110,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        ),
+                                        | TMHM(TM45_ATTRACT)),
 
     [SPECIES_VAPOREON]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -3128,16 +3132,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -3149,11 +3153,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3161,7 +3165,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_FLAREON]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
@@ -3171,9 +3175,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3182,7 +3186,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)),
 
     [SPECIES_PORYGON]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
@@ -3193,12 +3197,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3218,15 +3222,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -3242,15 +3246,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -3266,8 +3270,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
@@ -3276,7 +3280,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -3292,8 +3296,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3303,7 +3307,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -3320,10 +3324,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM37_SANDSTORM)
@@ -3334,7 +3338,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
@@ -3351,12 +3355,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -3369,7 +3373,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)),
 
@@ -3384,8 +3388,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM37_SANDSTORM)
@@ -3405,10 +3409,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM37_SANDSTORM)
@@ -3429,8 +3433,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM37_SANDSTORM)
@@ -3455,11 +3459,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -3467,7 +3471,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)),
 
@@ -3482,11 +3486,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -3494,7 +3498,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)),
 
@@ -3512,12 +3516,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -3529,7 +3533,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM02_FLY)
@@ -3555,13 +3559,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -3603,13 +3607,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -3627,7 +3631,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM48_SKILL_SWAP)
@@ -3650,16 +3654,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
@@ -3671,16 +3675,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -3695,17 +3699,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -3715,8 +3719,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -3725,7 +3729,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)),
 
@@ -3735,8 +3739,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3746,7 +3750,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -3759,9 +3763,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3771,7 +3775,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -3786,9 +3790,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3796,7 +3800,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
@@ -3812,9 +3816,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3822,7 +3826,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -3842,10 +3846,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3853,7 +3857,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -3869,11 +3873,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -3883,7 +3887,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)),
@@ -3898,12 +3902,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -3913,7 +3917,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -3925,8 +3929,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3935,7 +3939,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
@@ -3947,8 +3951,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3957,7 +3961,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
@@ -3971,9 +3975,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -3982,7 +3986,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -3995,9 +3999,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4006,7 +4010,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -4015,9 +4019,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4025,7 +4029,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -4035,9 +4039,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4045,7 +4049,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -4057,8 +4061,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -4067,7 +4071,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM49_SNATCH)
@@ -4081,16 +4085,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM07_WATERFALL)
@@ -4105,16 +4109,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM07_WATERFALL)
@@ -4125,17 +4129,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_CLEFFA]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
@@ -4146,10 +4150,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -4161,7 +4165,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_IGGLYBUFF]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
@@ -4172,9 +4176,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -4186,7 +4190,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_TOGEPI]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
@@ -4197,9 +4201,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4210,7 +4214,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -4224,9 +4228,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -4239,7 +4243,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM05_FLASH)
@@ -4253,9 +4257,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4264,7 +4268,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM48_SKILL_SWAP)
@@ -4279,9 +4283,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4290,7 +4294,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM48_SKILL_SWAP)
@@ -4302,17 +4306,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_FLAAFFY]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -4321,18 +4325,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -4344,18 +4348,18 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -4368,15 +4372,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
@@ -4389,16 +4393,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -4415,16 +4419,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -4438,9 +4442,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4449,7 +4453,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -4464,9 +4468,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -4474,7 +4478,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -4488,15 +4492,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_SKIPLOOM]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
@@ -4505,15 +4509,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_JUMPLUFF]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
@@ -4523,15 +4527,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_AIPOM]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -4542,12 +4546,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -4557,7 +4561,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
@@ -4572,15 +4576,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
@@ -4593,15 +4597,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
@@ -4610,9 +4614,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4620,7 +4624,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM05_FLASH)),
@@ -4633,10 +4637,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -4644,7 +4648,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -4661,10 +4665,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4674,7 +4678,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -4690,9 +4694,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -4701,7 +4705,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
@@ -4713,9 +4717,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -4724,7 +4728,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
@@ -4736,8 +4740,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
@@ -4745,7 +4749,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(TM49_SNATCH)
@@ -4764,10 +4768,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -4778,7 +4782,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -4793,10 +4797,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4806,7 +4810,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -4823,12 +4827,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4837,7 +4841,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM04_STRENGTH)
@@ -4850,10 +4854,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -4861,7 +4865,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -4872,10 +4876,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -4883,7 +4887,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -4896,13 +4900,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -4913,7 +4917,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -4923,10 +4927,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -4936,7 +4940,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
@@ -4950,10 +4954,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
@@ -4962,7 +4966,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -4977,12 +4981,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -4995,7 +4999,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
@@ -5012,13 +5016,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -5032,7 +5036,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
@@ -5046,8 +5050,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -5055,7 +5059,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -5066,15 +5070,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
@@ -5086,9 +5090,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -5097,7 +5101,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -5110,9 +5114,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5120,7 +5124,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -5137,9 +5141,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -5149,7 +5153,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
@@ -5166,9 +5170,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5177,7 +5181,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -5193,9 +5197,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5205,7 +5209,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -5216,8 +5220,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -5225,7 +5229,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -5235,9 +5239,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -5247,7 +5251,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -5261,9 +5265,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -5272,7 +5276,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -5286,9 +5290,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -5297,7 +5301,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -5313,9 +5317,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -5326,7 +5330,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -5340,8 +5344,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -5349,7 +5353,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
@@ -5365,8 +5369,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -5375,7 +5379,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
@@ -5390,14 +5394,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM02_FLY)),
 
@@ -5409,15 +5413,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -5428,8 +5432,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM40_AERIAL_ACE)
@@ -5437,7 +5441,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
@@ -5450,10 +5454,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -5463,7 +5467,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(TM50_OVERHEAT)
@@ -5476,10 +5480,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -5489,7 +5493,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(TM50_OVERHEAT)
@@ -5505,13 +5509,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -5521,17 +5525,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -5541,17 +5545,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -5563,12 +5567,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5588,13 +5592,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5603,7 +5607,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
@@ -5616,15 +5620,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -5635,9 +5639,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5645,7 +5649,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -5660,8 +5664,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5669,7 +5673,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
@@ -5680,10 +5684,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5691,7 +5695,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -5701,9 +5705,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5712,7 +5716,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -5726,13 +5730,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5742,7 +5746,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -5761,13 +5765,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -5780,7 +5784,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
@@ -5795,11 +5799,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -5821,10 +5825,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -5851,9 +5855,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM33_REFLECT)
@@ -5874,9 +5878,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5885,7 +5889,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_PUPITAR]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
@@ -5895,9 +5899,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5906,7 +5910,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_TYRANITAR]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -5922,12 +5926,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5941,7 +5945,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -5962,12 +5966,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -5998,12 +6002,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6034,9 +6038,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6109,10 +6113,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6121,7 +6125,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -6135,10 +6139,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6147,7 +6151,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -6164,11 +6168,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6177,7 +6181,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
@@ -6187,8 +6191,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -6198,7 +6202,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -6210,8 +6214,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6222,7 +6226,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -6236,9 +6240,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6249,7 +6253,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -6263,16 +6267,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -6287,17 +6291,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -6315,10 +6319,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6326,7 +6330,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -6340,9 +6344,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6350,7 +6354,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -6363,9 +6367,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6373,7 +6377,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
@@ -6387,11 +6391,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6399,7 +6403,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -6415,11 +6419,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6427,7 +6431,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
@@ -6445,9 +6449,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6455,7 +6459,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -6468,9 +6472,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6479,7 +6483,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -6494,14 +6498,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM05_FLASH)),
@@ -6517,15 +6521,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -6547,15 +6551,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -6570,16 +6574,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -6590,9 +6594,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -6602,7 +6606,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -6616,9 +6620,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -6629,7 +6633,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -6641,9 +6645,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6661,9 +6665,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6672,7 +6676,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
@@ -6683,9 +6687,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6703,14 +6707,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -6721,14 +6725,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -6740,15 +6744,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
 
@@ -6762,17 +6766,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
@@ -6788,8 +6792,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -6800,7 +6804,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -6816,15 +6820,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -6838,15 +6842,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
@@ -6861,15 +6865,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -6883,16 +6887,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -6905,15 +6909,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -6930,15 +6934,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -6955,12 +6959,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6968,7 +6972,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_DELCATTY]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
@@ -6982,12 +6986,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -6995,7 +6999,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -7009,12 +7013,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -7027,7 +7031,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -7043,10 +7047,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -7068,10 +7072,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -7092,11 +7096,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM37_SANDSTORM)
@@ -7105,7 +7109,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -7113,9 +7117,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM36_SLUDGE_BOMB)
@@ -7123,7 +7127,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -7137,8 +7141,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
@@ -7151,7 +7155,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
@@ -7166,16 +7170,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -7189,16 +7193,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -7214,13 +7218,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -7234,8 +7238,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -7245,7 +7249,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -7262,8 +7266,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -7273,7 +7277,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -7289,13 +7293,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -7310,14 +7314,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -7331,14 +7335,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
@@ -7355,16 +7359,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -7378,10 +7382,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
@@ -7389,7 +7393,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -7399,10 +7403,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
@@ -7410,7 +7414,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM04_STRENGTH)
@@ -7423,11 +7427,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -7437,7 +7441,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM04_STRENGTH)
@@ -7450,9 +7454,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -7460,7 +7464,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -7473,9 +7477,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -7483,7 +7487,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -7493,17 +7497,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
@@ -7514,17 +7518,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
@@ -7533,9 +7537,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -7545,7 +7549,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -7556,9 +7560,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -7568,7 +7572,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -7581,16 +7585,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -7606,16 +7610,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -7632,16 +7636,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
@@ -7655,15 +7659,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
@@ -7675,15 +7679,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
@@ -7698,14 +7702,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_GLALIE]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
@@ -7720,16 +7724,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM41_TORMENT)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_LUNATONE]    = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
@@ -7741,9 +7745,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -7764,10 +7768,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -7791,14 +7795,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)),
 
@@ -7810,9 +7814,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -7822,7 +7826,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -7838,9 +7842,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -7850,7 +7854,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -7861,17 +7865,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_MINUN]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
@@ -7879,17 +7883,17 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_MAWILE]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
@@ -7901,9 +7905,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -7915,7 +7919,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -7928,8 +7932,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -7939,7 +7943,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -7954,8 +7958,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -7965,7 +7969,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -7977,15 +7981,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)),
@@ -8000,11 +8004,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
                                         | TMHM(TM38_FIRE_BLAST)
@@ -8012,7 +8016,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM02_FLY)
@@ -8029,8 +8033,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8038,7 +8042,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -8055,9 +8059,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8066,7 +8070,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -8080,16 +8084,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
@@ -8103,11 +8107,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8118,7 +8122,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8135,12 +8139,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8151,7 +8155,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8169,12 +8173,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8185,7 +8189,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8199,9 +8203,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -8209,7 +8213,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8224,9 +8228,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -8234,7 +8238,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8248,16 +8252,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM40_AERIAL_ACE)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM02_FLY)
@@ -8274,9 +8278,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -8285,7 +8289,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        ),
+                                        | TMHM(TM45_ATTRACT)),
 
     [SPECIES_LOUDRED]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -8297,10 +8301,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8311,7 +8315,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8327,10 +8331,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8341,7 +8345,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8354,13 +8358,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -8374,14 +8378,14 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
@@ -8397,15 +8401,15 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
@@ -8422,11 +8426,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -8438,7 +8442,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM01_CUT)
@@ -8453,10 +8457,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8465,7 +8469,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -8479,10 +8483,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8491,7 +8495,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -8504,10 +8508,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -8515,7 +8519,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)
@@ -8533,12 +8537,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -8550,7 +8554,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8566,16 +8570,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM39_ROCK_TOMB)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
@@ -8588,10 +8592,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -8601,7 +8605,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8613,10 +8617,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -8626,7 +8630,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8644,13 +8648,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8663,7 +8667,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
@@ -8678,11 +8682,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -8692,7 +8696,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -8705,11 +8709,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8718,7 +8722,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -8731,11 +8735,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8744,7 +8748,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
@@ -8754,16 +8758,16 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM37_SANDSTORM)
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        ),
+                                        | TMHM(TM45_ATTRACT)),
 
     [SPECIES_CRADILY]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
@@ -8772,10 +8776,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM36_SLUDGE_BOMB)
                                         | TMHM(TM37_SANDSTORM)
@@ -8783,7 +8787,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -8792,8 +8796,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8803,7 +8807,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -8813,10 +8817,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8826,7 +8830,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8840,9 +8844,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8852,7 +8856,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -8867,9 +8871,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8879,7 +8883,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -8895,9 +8899,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -8907,7 +8911,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
@@ -8920,8 +8924,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -8931,7 +8935,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8943,8 +8947,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -8954,7 +8958,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
@@ -8967,10 +8971,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM35_FLAMETHROWER)
@@ -8980,7 +8984,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM02_FLY)
@@ -8996,9 +9000,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -9023,9 +9027,9 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -9050,11 +9054,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -9077,11 +9081,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -9099,11 +9103,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -9128,11 +9132,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -9155,13 +9159,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM28_DIG)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -9191,13 +9195,13 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM23_IRON_TAIL)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM31_BRICK_BREAK)
                                         | TMHM(TM32_DOUBLE_TEAM)
                                         | TMHM(TM34_SHOCK_WAVE)
@@ -9229,12 +9233,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -9245,7 +9249,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM02_FLY)
@@ -9267,12 +9271,12 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
                                         | TMHM(TM26_EARTHQUAKE)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -9283,7 +9287,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM47_STEEL_WING)
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM02_FLY)
@@ -9302,10 +9306,10 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -9332,11 +9336,11 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
                                         | TMHM(TM22_SOLAR_BEAM)
                                         | TMHM(TM24_THUNDERBOLT)
                                         | TMHM(TM25_THUNDER)
-                                        
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM31_BRICK_BREAK)
@@ -9365,8 +9369,8 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM20_SAFEGUARD)
-                                        
-                                        
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM27_RETURN)
                                         | TMHM(TM29_PSYCHIC)
                                         | TMHM(TM30_SHADOW_BALL)
                                         | TMHM(TM32_DOUBLE_TEAM)
@@ -9376,7 +9380,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM42_FACADE)
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
-                                        
+                                        | TMHM(TM45_ATTRACT)
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
