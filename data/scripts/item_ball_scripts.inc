@@ -18,16 +18,16 @@ ViridianForest_EventScript_ItemOranBerry::
 	finditem ITEM_ORAN_BERRY
 	end
 
-MtMoon_1F_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
+MtMoon_1F_EventScript_ItemCheriBerry::
+	finditem ITEM_CHERI_BERRY
 	end
 
 MtMoon_1F_EventScript_ItemTM09::
 	finditem ITEM_TM09
 	end
 
-MtMoon_1F_EventScript_ItemPotion::
-	finditem ITEM_POTION
+MtMoon_1F_EventScript_ItemOranBerry::
+	finditem ITEM_ORAN_BERRY
 	end
 
 MtMoon_1F_EventScript_ItemRareCandy::

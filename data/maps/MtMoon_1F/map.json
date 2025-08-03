@@ -73,7 +73,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
       "x": 7,
       "y": 26,
       "elevation": 3,
@@ -124,8 +124,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtMoon_1F_EventScript_ItemParalyzeHeal",
-      "flag": "FLAG_HIDE_MT_MOON_1F_PARALYZE_HEAL"
+      "script": "MtMoon_1F_EventScript_ItemCheriBerry",
+      "flag": "FLAG_HIDE_MT_MOON_1F_CHERI_BERRY"
     },
     {
       "type": "object",
@@ -152,8 +152,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtMoon_1F_EventScript_ItemPotion",
-      "flag": "FLAG_HIDE_MT_MOON_1F_POTION"
+      "script": "MtMoon_1F_EventScript_ItemOranBerry",
+      "flag": "FLAG_HIDE_MT_MOON_1F_ORAN_BERRY"
     },
     {
       "type": "object",

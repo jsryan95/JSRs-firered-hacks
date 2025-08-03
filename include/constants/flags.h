@@ -362,9 +362,9 @@
 #define FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL                     0x156
 #define FLAG_HIDE_VIRIDIAN_FOREST_PECHA_BERRY                      0x157
 #define FLAG_HIDE_VIRIDIAN_FOREST_ORAN_BERRY                        0x158
-#define FLAG_HIDE_MT_MOON_1F_PARALYZE_HEAL                      0x159
+#define FLAG_HIDE_MT_MOON_1F_CHERI_BERRY                      0x159
 #define FLAG_HIDE_MT_MOON_1F_TM09                               0x15A
-#define FLAG_HIDE_MT_MOON_1F_POTION                             0x15B
+#define FLAG_HIDE_MT_MOON_1F_ORAN_BERRY                             0x15B
 #define FLAG_HIDE_MT_MOON_1F_RARE_CANDY                         0x15C
 #define FLAG_HIDE_MT_MOON_1F_ESCAPE_ROPE                        0x15D
 #define FLAG_HIDE_MT_MOON_1F_MOON_STONE                         0x15E

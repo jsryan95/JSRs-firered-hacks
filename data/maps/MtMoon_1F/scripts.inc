@@ -36,7 +36,7 @@ MtMoon_1F_EventScript_Jovan::
 	end
 
 MtMoon_1F_EventScript_Kent::
-	trainerbattle_single TRAINER_BUG_CATCHER_KENT, MtMoon_1F_Text_KentIntro, MtMoon_1F_Text_KentDefeat
+	trainerbattle_single TRAINER_GENTLEMAN_KENT, MtMoon_1F_Text_KentIntro, MtMoon_1F_Text_KentDefeat
 	msgbox MtMoon_1F_Text_KentPostBattle, MSGBOX_AUTOCLOSE
 	end
 

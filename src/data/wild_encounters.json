@@ -1220,16 +1220,6 @@
                 "species": "SPECIES_ZUBAT"
               },
               {
-                "min_level": 7,
-                "max_level": 7,
-                "species": "SPECIES_ZUBAT"
-              },
-              {
-                "min_level": 7,
-                "max_level": 7,
-                "species": "SPECIES_ZUBAT"
-              },
-              {
                 "min_level": 8,
                 "max_level": 8,
                 "species": "SPECIES_CLEFAIRY"

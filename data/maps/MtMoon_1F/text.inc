@@ -59,27 +59,26 @@ MtMoon_1F_Text_IrisPostBattle::
     .string "some very rare fossils here.$"
 
 MtMoon_1F_Text_KentIntro::
+    .string "This tunnel is a natural marvel.\n"
+    .string "What a delightful place for a battle.$"
+
+MtMoon_1F_Text_KentDefeat::
+    .string "My, my....$"
+
+MtMoon_1F_Text_KentPostBattle::
+    .string "I wonder, was this cave made by erosion,\n"
+    .string "or by POKéMON?$"
+
+MtMoon_1F_Text_RobbyIntro::
     .string "Suspicious men are in the cave.\n"
     .string "What about you?$"
 
-MtMoon_1F_Text_KentDefeat::
+MtMoon_1F_Text_RobbyDefeat::
     .string "Yes, you are also in the cave.$"
 
-MtMoon_1F_Text_KentPostBattle::
+MtMoon_1F_Text_RobbyPostBattle::
     .string "I saw them!\n"
     .string "I'm sure they're from TEAM ROCKET!$"
-
-MtMoon_1F_Text_RobbyIntro::
-    .string "You need to go through this cave\n"
-    .string "to get to CERULEAN CITY.$"
-
-MtMoon_1F_Text_RobbyDefeat::
-    .string "I lost.$"
-
-MtMoon_1F_Text_RobbyPostBattle::
-    .string "ZUBAT is tough!\n"
-    .string "But if you can catch one, you'll\l"
-    .string "be able to count on it.$"
 
 MtMoon_1F_Text_ZubatIsABloodsucker::
     .string "Beware!\n"
