@@ -7321,4 +7321,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 3,
         .flags = FLAG_SNATCH_AFFECTED,
     },
+
+    [MOVE_HEAL_BLOCK] =
+    {
+        .effect = EFFECT_HEAL_BLOCK,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_OPPONENTS_FIELD,
+        .priority = 0,
+        .flags = 0,
+    },
 };

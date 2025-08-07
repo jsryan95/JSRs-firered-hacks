@@ -522,4 +522,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_TRUMP_CARD] = _("TRUMP CARD"),
     [MOVE_QUICK_GUARD] = _("QUICK GUARD"),
     [MOVE_WIDE_GUARD] = _("WIDE GUARD"),
+    [MOVE_HEAL_BLOCK] = _("HEAL BLOCK"),
 };

@@ -306,6 +306,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectTrumpCard              @ EFFECT_TRUMP_CARD
 	.4byte BattleScript_EffectProtect                @ EFFECT_QUICK_GUARD
 	.4byte BattleScript_EffectProtect                @ EFFECT_WIDE_GUARD
+	.4byte BattleScript_EffectHealBlock              @ EFFECT_HEAL_BLOCK
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -3759,6 +3760,18 @@ BattleScript_LuckyChantEnds::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
+BattleScript_HealBlockEnds::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_HEALBLOCKENDED
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
+BattleScript_HealBlockPrevents::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_HEALBLOCKPREVENTED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_LeechSeedTurnDrain::
 	playanimation BS_ATTACKER, B_ANIM_LEECH_SEED_DRAIN, sB_ANIM_ARG1
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
@@ -4064,8 +4077,17 @@ BattleScript_SelectingNotAllowedMoveTaunt::
 	printselectionstring STRINGID_PKMNCANTUSEMOVETAUNT
 	endselectionscript
 
+BattleScript_SelectingNotAllowedMoveHealBlock::
+	printselectionstring STRINGID_PKMNCANTUSEMOVEHEALBLOCK
+	endselectionscript
+
 BattleScript_MoveUsedIsTaunted::
 	printstring STRINGID_PKMNCANTUSEMOVETAUNT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_MoveUsedIsHealBlocked::
+	printstring STRINGID_PKMNCANTUSEMOVEHEALBLOCK
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
@@ -5617,3 +5639,14 @@ BattleScript_EffectTrumpCard::
 	ppreduce
 	setTrumpCardDamage
 	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectHealBlock::
+	attackcanceler
+	trySetHealBlock BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring STRINGID_HEALBLOCKSTARTED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

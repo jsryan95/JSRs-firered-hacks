@@ -10867,3 +10867,20 @@ void BS_setTrumpCardDamage(void)
 
     gBattlescriptCurrInstr += 5;
 }
+
+void BS_trySetHealBlock(void)
+{
+    u8 targetSide = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
+    if (gSideStatuses[targetSide] & SIDE_STATUS_HEAL_BLOCK)
+    {
+        gSpecialStatuses[gBattlerAttacker].ppNotAffectedByPressure = 1;
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gSideStatuses[targetSide] |= SIDE_STATUS_HEAL_BLOCK;
+        gSideTimers[targetSide].healBlockTimer = 5;
+        gSideTimers[targetSide].healBlockBattlerId = gBattlerAttacker;
+        gBattlescriptCurrInstr += 9;
+    }
+}

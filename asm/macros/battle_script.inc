@@ -1531,3 +1531,8 @@
 	.macro setTrumpCardDamage
 	callnative BS_setTrumpCardDamage
 	.endm
+
+	.macro trySetHealBlock onFail:req
+	callnative BS_trySetHealBlock
+	.4byte \onFail
+	.endm

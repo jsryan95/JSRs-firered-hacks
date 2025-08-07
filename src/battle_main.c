@@ -2481,6 +2481,7 @@ void FaintClearSetData(void)
     gProtectStructs[gActiveBattler].flag2Unknown = FALSE;
     gProtectStructs[gActiveBattler].flinchImmobility = FALSE;
     gProtectStructs[gActiveBattler].notFirstStrike = FALSE;
+    gProtectStructs[gActiveBattler].usedHealBlockedMove = FALSE;
 
     gDisableStructs[gActiveBattler].isFirstTurn = 2;
 

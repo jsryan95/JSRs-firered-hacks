@@ -132,6 +132,9 @@ static const u8 sText_PkmnTailwindStarted[] = _("A tailwind blows from\nbehind {
 static const u8 sText_PkmnTailwindExpired[] = _("{B_ATK_PREFIX3}'s party's\ntailwind died down!");
 static const u8 sText_LuckyChantStarted[] = _("{B_ATK_NAME_WITH_PREFIX}'s party is protected\nfrom critical hits!");
 static const u8 sText_LuckyChantEnded[] = _("{B_ATK_PREFIX3}'s party's\nLUCKY CHANT ended!");
+static const u8 sText_HealBlockStarted[] = _("{B_ATK_NAME_WITH_PREFIX} is preventing\nits opponent from healing!");
+static const u8 sText_HealBlockEnded[] = _("{B_ATK_NAME_WITH_PREFIX}'s\nHEAL BLOCK ended!");
+static const u8 sText_HealBlockPrevented[] = _("HEAL BLOCK prevents\n{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE}!");
 static const u8 sText_PkmnUsedSafeguard[] = _("{B_DEF_NAME_WITH_PREFIX}'s party is protected\nby SAFEGUARD!");
 static const u8 sText_PkmnSafeguardExpired[] = _("{B_ATK_PREFIX3}'s party is no longer\nprotected by SAFEGUARD!");
 static const u8 sText_PkmnWentToSleep[] = _("{B_ATK_NAME_WITH_PREFIX} went\nto sleep!");
@@ -274,6 +277,7 @@ static const u8 sText_PkmnHasNoMovesLeft[] = _("{B_ACTIVE_NAME_WITH_PREFIX} has 
 static const u8 sText_PkmnMoveIsDisabled[] = _("{B_ACTIVE_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE}\nis disabled!\p");
 static const u8 sText_PkmnCantUseMoveTorment[] = _("{B_ACTIVE_NAME_WITH_PREFIX} can't use the same\nmove in a row due to the TORMENT!\p");
 static const u8 sText_PkmnCantUseMoveTaunt[] = _("{B_ACTIVE_NAME_WITH_PREFIX} can't use\n{B_CURRENT_MOVE} after the TAUNT!\p");
+static const u8 sText_PkmnCantUseMoveHealBlock[] = _("{B_ACTIVE_NAME_WITH_PREFIX} can't use\n{B_CURRENT_MOVE} due to HEAL BLOCK!\p");
 static const u8 sText_PkmnCantUseMoveSealed[] = _("{B_ACTIVE_NAME_WITH_PREFIX} can't use the\nsealed {B_CURRENT_MOVE}!\p");
 static const u8 sText_PkmnMadeItRain[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade it rain!");
 static const u8 sText_PkmnRaisedSpeed[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its SPEED!");
@@ -951,6 +955,10 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNSWAPPEDSTATCHANGES - BATTLESTRINGS_TABLE_START]         = sText_PkmnSwappedStatChanges,
     [STRINGID_LUCKYCHANTSTARTED - BATTLESTRINGS_TABLE_START]              = sText_LuckyChantStarted,
     [STRINGID_LUCKYCHANTENDED - BATTLESTRINGS_TABLE_START]                = sText_LuckyChantEnded,
+    [STRINGID_HEALBLOCKSTARTED - BATTLESTRINGS_TABLE_START]               = sText_HealBlockStarted,
+    [STRINGID_HEALBLOCKENDED - BATTLESTRINGS_TABLE_START]                 = sText_HealBlockEnded,
+    [STRINGID_HEALBLOCKPREVENTED - BATTLESTRINGS_TABLE_START]             = sText_HealBlockPrevented,
+    [STRINGID_PKMNCANTUSEMOVEHEALBLOCK - BATTLESTRINGS_TABLE_START]       = sText_PkmnCantUseMoveHealBlock,
 };
 
 const u16 gMissStringIds[] =

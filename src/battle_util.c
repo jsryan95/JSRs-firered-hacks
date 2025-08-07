@@ -233,7 +233,8 @@ bool8 WasUnableToUseMove(u8 battler)
         || gProtectStructs[battler].usedTauntedMove
         || gProtectStructs[battler].flag2Unknown
         || gProtectStructs[battler].flinchImmobility
-        || gProtectStructs[battler].confusionSelfDmg)
+        || gProtectStructs[battler].confusionSelfDmg
+        || gProtectStructs[battler].usedHealBlockedMove)
         return TRUE;
     else
         return FALSE;
@@ -369,6 +370,22 @@ u8 TrySetCantSelectMoveBattleScript(void)
         gSelectionBattleScripts[gActiveBattler] = BattleScript_SelectingMoveWithNoPP;
         limitations++;
     }
+
+    if ((gSideStatuses[GET_BATTLER_SIDE(gActiveBattler)] & SIDE_STATUS_HEAL_BLOCK)
+            && (gBattleMoves[move].effect == EFFECT_RESTORE_HP
+                    || gBattleMoves[move].effect == EFFECT_MOONLIGHT
+                    || gBattleMoves[move].effect == EFFECT_SOFTBOILED
+                    || gBattleMoves[move].effect == EFFECT_ROOST
+                    || gBattleMoves[move].effect == EFFECT_REST
+                    || gBattleMoves[move].effect == EFFECT_FLASH_FREEZE
+                    || gBattleMoves[move].effect == EFFECT_WISH
+                    || gBattleMoves[move].effect == EFFECT_HEAL_PULSE))
+    {
+        gCurrentMove = move;
+        gSelectionBattleScripts[gActiveBattler] = BattleScript_SelectingNotAllowedMoveHealBlock;
+        limitations++;
+    }
+
     return limitations;
 }
 
@@ -414,6 +431,18 @@ u8 CheckMoveLimitations(u8 battlerId, u8 unusableMoves, u8 check)
                 && *choicedMove != MOVE_NONE
                 && *choicedMove != MOVE_UNAVAILABLE
                 && *choicedMove != gBattleMons[battlerId].moves[i])
+            unusableMoves |= gBitTable[i];
+        // Heal Block
+        if ((gSideStatuses[GET_BATTLER_SIDE(gActiveBattler)] & SIDE_STATUS_HEAL_BLOCK)
+                && (check & MOVE_LIMITATION_TAUNT)
+                && (gBattleMoves[gBattleMons[battlerId].moves[i]].effect == EFFECT_RESTORE_HP
+                        || gBattleMoves[gBattleMons[battlerId].moves[i]].effect == EFFECT_MOONLIGHT
+                        || gBattleMoves[gBattleMons[battlerId].moves[i]].effect == EFFECT_SOFTBOILED
+                        || gBattleMoves[gBattleMons[battlerId].moves[i]].effect == EFFECT_ROOST
+                        || gBattleMoves[gBattleMons[battlerId].moves[i]].effect == EFFECT_REST
+                        || gBattleMoves[gBattleMons[battlerId].moves[i]].effect == EFFECT_FLASH_FREEZE
+                        || gBattleMoves[gBattleMons[battlerId].moves[i]].effect == EFFECT_WISH
+                        || gBattleMoves[gBattleMons[battlerId].moves[i]].effect == EFFECT_HEAL_PULSE))
             unusableMoves |= gBitTable[i];
     }
     return unusableMoves;
@@ -475,6 +504,7 @@ enum
     ENDTURN_SAFEGUARD,
     ENDTURN_TAILWIND,
     ENDTURN_LUCKY_CHANT,
+    ENDTURN_HEAL_BLOCK,
     ENDTURN_WISH,
     ENDTURN_RAIN,
     ENDTURN_SANDSTORM,
@@ -655,6 +685,30 @@ u8 DoFieldEndTurnEffects(void)
                     {
                         gSideStatuses[side] &= ~SIDE_STATUS_LUCKY_CHANT;
                         BattleScriptExecute(BattleScript_LuckyChantEnds);
+                        effect++;
+                    }
+                }
+                gBattleStruct->turnSideTracker++;
+                if (effect != 0)
+                    break;
+            }
+            if (effect == 0)
+            {
+                gBattleStruct->turnCountersTracker++;
+                gBattleStruct->turnSideTracker = 0;
+            }
+            break;
+        case ENDTURN_HEAL_BLOCK:
+            while (gBattleStruct->turnSideTracker < 2)
+            {
+                side = gBattleStruct->turnSideTracker;
+                gActiveBattler = gBattlerAttacker = gSideTimers[side].healBlockBattlerId;
+                if (gSideStatuses[side] & SIDE_STATUS_HEAL_BLOCK)
+                {
+                    if (--gSideTimers[side].healBlockTimer == 0)
+                    {
+                        gSideStatuses[side] &= ~SIDE_STATUS_HEAL_BLOCK;
+                        BattleScriptExecute(BattleScript_HealBlockEnds);
                         effect++;
                     }
                 }
@@ -1349,6 +1403,7 @@ enum
     CANCELLER_IN_LOVE,
     CANCELLER_BIDE,
     CANCELLER_THAW,
+    CANCELLER_HEAL_BLOCK,
     CANCELLER_END,
 };
 
@@ -1623,6 +1678,25 @@ u8 AtkCanceller_UnableToUseMove(void)
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DEFROSTED_BY_MOVE;
                 }
                 effect = 2;
+            }
+            gBattleStruct->atkCancellerTracker++;
+            break;
+        case CANCELLER_HEAL_BLOCK: // heal block
+            if ((gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] & SIDE_STATUS_HEAL_BLOCK)
+                           && (gBattleMoves[gCurrentMove].effect == EFFECT_RESTORE_HP
+                                   || gBattleMoves[gCurrentMove].effect == EFFECT_MOONLIGHT
+                                   || gBattleMoves[gCurrentMove].effect == EFFECT_SOFTBOILED
+                                   || gBattleMoves[gCurrentMove].effect == EFFECT_ROOST
+                                   || gBattleMoves[gCurrentMove].effect == EFFECT_REST
+                                   || gBattleMoves[gCurrentMove].effect == EFFECT_FLASH_FREEZE
+                                   || gBattleMoves[gCurrentMove].effect == EFFECT_WISH
+                                   || gBattleMoves[gCurrentMove].effect == EFFECT_HEAL_PULSE))
+            {
+                gProtectStructs[gBattlerAttacker].usedHealBlockedMove = 1;
+                CancelMultiTurnMoves(gBattlerAttacker);
+                gBattlescriptCurrInstr = BattleScript_MoveUsedIsHealBlocked;
+                gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
+                effect = 1;
             }
             gBattleStruct->atkCancellerTracker++;
             break;

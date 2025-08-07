@@ -465,8 +465,8 @@ gBattleAnims_Moves::
     .4byte Move_GUARD_SWAP
     .4byte Move_LUCKY_CHANT
     .4byte Move_TRUMP_CARD
+    .4byte Move_HEAL_BLOCK
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -7169,6 +7169,7 @@ Move_BONE_RUSH:
 	end
 
 Move_SPIKES:
+Move_HEAL_BLOCK:
 	loadspritegfx ANIM_TAG_SPIKES
 	monbg ANIM_DEF_PARTNER
 	playsewithpan SE_M_JUMP_KICK, SOUND_PAN_ATTACKER
