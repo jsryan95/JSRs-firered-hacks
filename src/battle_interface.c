@@ -1584,7 +1584,8 @@ enum
     PAL_STATUS_PAR,
     PAL_STATUS_SLP,
     PAL_STATUS_FRZ,
-    PAL_STATUS_BRN
+    PAL_STATUS_BRN,
+    PAL_STATUS_BAD_PSN
 };
 
 static const u16 sStatusIconColors[] = {
@@ -1592,7 +1593,8 @@ static const u16 sStatusIconColors[] = {
     [PAL_STATUS_PAR] = RGB(23, 23, 3),
     [PAL_STATUS_SLP] = RGB(20, 20, 17),
     [PAL_STATUS_FRZ] = RGB(17, 22, 28),
-    [PAL_STATUS_BRN] = RGB(28, 14, 10)
+    [PAL_STATUS_BRN] = RGB(28, 14, 10),
+    [PAL_STATUS_BAD_PSN] = RGB(15, 3, 15)
 };
 
 static void UpdateStatusIconInHealthbox(u8 healthboxSpriteId)
@@ -1625,7 +1627,7 @@ static void UpdateStatusIconInHealthbox(u8 healthboxSpriteId)
         statusGfxPtr = GetBattleInterfaceGfxPtr(GetStatusIconForBattlerId(B_INTERFACE_GFX_STATUS_SLP_BATTLER0, battlerId));
         statusPalId = PAL_STATUS_SLP;
     }
-    else if (status & STATUS1_PSN_ANY)
+    else if (status & STATUS1_POISON)
     {
         statusGfxPtr = GetBattleInterfaceGfxPtr(GetStatusIconForBattlerId(B_INTERFACE_GFX_STATUS_PSN_BATTLER0, battlerId));
         statusPalId = PAL_STATUS_PSN;
@@ -1644,6 +1646,11 @@ static void UpdateStatusIconInHealthbox(u8 healthboxSpriteId)
     {
         statusGfxPtr = GetBattleInterfaceGfxPtr(GetStatusIconForBattlerId(B_INTERFACE_GFX_STATUS_PAR_BATTLER0, battlerId));
         statusPalId = PAL_STATUS_PAR;
+    }
+    else if (status & STATUS1_TOXIC_POISON)
+    {
+        statusGfxPtr = GetBattleInterfaceGfxPtr(GetStatusIconForBattlerId(B_INTERFACE_GFX_STATUS_PSN_BATTLER0, battlerId));
+        statusPalId = PAL_STATUS_BAD_PSN;
     }
     else
     {
