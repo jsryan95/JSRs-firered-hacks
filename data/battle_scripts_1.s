@@ -311,6 +311,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectLunarDance             @ EFFECT_LUNAR_DANCE
 	.4byte BattleScript_EffectFeint                  @ EFFECT_FEINT
 	.4byte BattleScript_EffectStealthRock            @ EFFECT_STEALTH_ROCK
+	.4byte BattleScript_EffectDefenseUp3             @ EFFECT_DEFENSE_UP_3
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5770,3 +5771,7 @@ BattleScript_EffectStealthRock::
 	printstring STRINGID_STEALTHROCKSET
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectDefenseUp3::
+	setstatchanger STAT_DEF, 3, FALSE
+	goto BattleScript_EffectStatUp

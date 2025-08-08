@@ -536,9 +536,9 @@
 #define MOVE_FINAL_GAMBIT 526
 #define MOVE_QUICK_GUARD 527
 #define MOVE_WIDE_GUARD 528
+#define MOVE_COTTON_GUARD 529
 
 // generation 5 moves (not implemented)
-#define MOVE_RELIC_SONG 529
 #define MOVE_RETALIATE 530
 #define MOVE_ROUND 531
 #define MOVE_MAGIC_ROOM 532
@@ -568,7 +568,7 @@
 #define MOVE_BESTOW 556
 #define MOVE_FREEZE_SHOCK 557
 #define MOVE_WONDER_ROOM 558
-#define MOVE_COTTON_GUARD 559
+#define MOVE_RELIC_SONG 559
 
 // new moves
 #define MOVE_MAGNET_SHOCK 560

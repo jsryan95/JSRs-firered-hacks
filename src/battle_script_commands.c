@@ -4373,12 +4373,14 @@ static void Cmd_setgraphicalstatchangevalues(void)
         value = STAT_ANIM_PLUS1;
         break;
     case SET_STAT_BUFF_VALUE(2): // +2
+    case SET_STAT_BUFF_VALUE(3):
         value = STAT_ANIM_PLUS2;
         break;
     case SET_STAT_BUFF_VALUE(1) | STAT_BUFF_NEGATIVE: // -1
         value = STAT_ANIM_MINUS1;
         break;
     case SET_STAT_BUFF_VALUE(2) | STAT_BUFF_NEGATIVE: // -2
+    case SET_STAT_BUFF_VALUE(3) | STAT_BUFF_NEGATIVE:
         value = STAT_ANIM_MINUS2;
         break;
     }

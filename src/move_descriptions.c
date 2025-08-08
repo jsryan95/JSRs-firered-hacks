@@ -511,6 +511,7 @@ const u8 gMoveDescription_HealBlock[] = _("Prevents the foe\nfrom using any HP-\
 const u8 gMoveDescription_HealingWish[] = _("The user faints.\nThe next POKéMON\nwill be fully\nhealed.");
 const u8 gMoveDescription_Feint[] = _("An attack that\nignores protection\nmoves, and lifts\ntheir effects.");
 const u8 gMoveDescription_StealthRock[] = _("Lays a trap of\nlevitating stones\nto hurt foes that\nswitch into battle.");
+const u8 gMoveDescription_CottonGuard[] = _("The user wraps\nitself in soft\ncotton, drastically\nraising its DEFENSE.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1040,4 +1041,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_LUNAR_DANCE - 1] = gMoveDescription_HealingWish,
     [MOVE_FEINT - 1] = gMoveDescription_Feint,
     [MOVE_STEALTH_ROCK - 1] = gMoveDescription_StealthRock,
+    [MOVE_COTTON_GUARD - 1] = gMoveDescription_CottonGuard,
 };

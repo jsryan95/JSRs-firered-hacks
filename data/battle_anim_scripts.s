@@ -552,8 +552,8 @@ gBattleAnims_Moves::
 	.4byte Move_FINAL_GAMBIT
 	.4byte Move_QUICK_GUARD
 	.4byte Move_WIDE_GUARD
+	.4byte Move_COTTON_GUARD
 	@ space for generation 5 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -7855,6 +7855,7 @@ SunnyDayLightRay:
 	return
 
 Move_COTTON_SPORE:
+Move_COTTON_GUARD:
 	loadspritegfx ANIM_TAG_SPORE
 	monbg ANIM_DEF_PARTNER
 	splitbgprio ANIM_TARGET
