@@ -469,8 +469,8 @@ gBattleAnims_Moves::
     .4byte Move_HEALING_WISH
     .4byte Move_LUNAR_DANCE
     .4byte Move_FEINT
+    .4byte Move_STEALTH_ROCK
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -7171,6 +7171,7 @@ Move_BONE_RUSH:
 
 Move_SPIKES:
 Move_HEAL_BLOCK:
+Move_STEALTH_ROCK:
 	loadspritegfx ANIM_TAG_SPIKES
 	monbg ANIM_DEF_PARTNER
 	playsewithpan SE_M_JUMP_KICK, SOUND_PAN_ATTACKER

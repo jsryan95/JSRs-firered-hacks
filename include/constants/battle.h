@@ -202,6 +202,8 @@
 #define SIDE_STATUS_QUICK_GUARD      (1 << 12)
 #define SIDE_STATUS_WIDE_GUARD       (1 << 13)
 #define SIDE_STATUS_HEAL_BLOCK       (1 << 14)
+#define SIDE_STATUS_STEALTH_ROCK     (1 << 15)
+#define SIDE_STATUS_STEALTH_ROCK_DAMAGED   (1 << 16)
 
 // Flags describing move's result
 #define MOVE_RESULT_MISSED             (1 << 0)

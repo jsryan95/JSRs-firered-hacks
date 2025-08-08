@@ -210,7 +210,9 @@ static const u8 sText_PkmnBadDreams[] = _("{B_ATK_NAME_WITH_PREFIX} is suffering
 static const u8 sText_PkmnLaidCurse[] = _("{B_ATK_NAME_WITH_PREFIX} cut its own HP and\nlaid a CURSE on {B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnAfflictedByCurse[] = _("{B_ATK_NAME_WITH_PREFIX} is afflicted\nby the CURSE!");
 static const u8 sText_SpikesScattered[] = _("SPIKES were scattered all around\nthe opponent's side!");
+static const u8 sText_StealthRockSet[] = _("It scattered pointed stones\naround its opponent's team!");
 static const u8 sText_PkmnHurtBySpikes[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} is hurt\nby SPIKES!");
+static const u8 sText_PkmnHurtByStealthRock[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} is hurt\nby STEALTH ROCK!");
 static const u8 sText_HealingWishCameTrue[] = _("The HEALING WISH\ncame true for {B_SCR_ACTIVE_NAME_WITH_PREFIX}!");
 static const u8 sText_LunarDanceActivates[] = _("The moonlight\nhealed {B_SCR_ACTIVE_NAME_WITH_PREFIX}!");
 static const u8 sText_ProtectRemoved[] = _("{B_DEF_NAME_WITH_PREFIX} fell\nfor the FEINT!");
@@ -224,6 +226,7 @@ static const u8 sText_PkmnCopiedStatChanges[] = _("{B_ATK_NAME_WITH_PREFIX} copi
 static const u8 sText_PkmnGotFree[] = _("{B_ATK_NAME_WITH_PREFIX} got free of\n{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}!");
 static const u8 sText_PkmnShedLeechSeed[] = _("{B_ATK_NAME_WITH_PREFIX} shed\nLEECH SEED!");
 static const u8 sText_PkmnBlewAwaySpikes[] = _("{B_ATK_NAME_WITH_PREFIX} blew away\nSPIKES!");
+static const u8 sText_PkmnBlewAwayStealthRock[] = _("{B_ATK_NAME_WITH_PREFIX} blew away\nSTEALTH ROCK!");
 static const u8 sText_PkmnFledFromBattle[] = _("{B_ATK_NAME_WITH_PREFIX} fled from\nbattle!");
 static const u8 sText_PkmnForesawAttack[] = _("{B_ATK_NAME_WITH_PREFIX} foresaw\nan attack!");
 static const u8 sText_PkmnTookAttack[] = _("{B_DEF_NAME_WITH_PREFIX} took the\n{B_BUFF1} attack!");
@@ -965,6 +968,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_HEALINGWISHCAMETRUE - BATTLESTRINGS_TABLE_START]            = sText_HealingWishCameTrue,
     [STRINGID_LUNARDANCEACTIVATES - BATTLESTRINGS_TABLE_START]            = sText_LunarDanceActivates,
     [STRINGID_PROTECTREMOVED - BATTLESTRINGS_TABLE_START]                 = sText_ProtectRemoved,
+    [STRINGID_STEALTHROCKSET - BATTLESTRINGS_TABLE_START]                 = sText_StealthRockSet,
+    [STRINGID_PKMNBLEWAWAYSTEALTHROCK - BATTLESTRINGS_TABLE_START]        = sText_PkmnBlewAwayStealthRock,
+    [STRINGID_PKMNHURTBYSTEALTHROCK - BATTLESTRINGS_TABLE_START]          = sText_PkmnHurtByStealthRock,
 };
 
 const u16 gMissStringIds[] =

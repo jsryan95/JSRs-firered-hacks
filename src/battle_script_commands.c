@@ -3263,6 +3263,7 @@ static void Cmd_tryfaintmon(void)
             BattleScriptPop();
             gBattlescriptCurrInstr = BS_ptr;
             gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~SIDE_STATUS_SPIKES_DAMAGED;
+            gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~SIDE_STATUS_STEALTH_ROCK_DAMAGED;
         }
         else
         {
@@ -5467,6 +5468,42 @@ static void Cmd_switchineffects(void)
         else
             gBattlescriptCurrInstr = BattleScript_SpikesOnFaintedBattler;
     }
+
+    else if (!(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_STEALTH_ROCK_DAMAGED)
+        && (gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_STEALTH_ROCK))
+    {
+        gSideStatuses[GetBattlerSide(gActiveBattler)] |= SIDE_STATUS_STEALTH_ROCK_DAMAGED;
+
+        gBattleMoveDamage = 4;
+        while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
+        {
+            if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_ROCK)
+            {
+                // check type1
+                if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[gActiveBattler].type1)
+                    ModulateDmgByType(TYPE_EFFECT_MULTIPLIER(i));
+                // check type2
+                else if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[gActiveBattler].type2)
+                    ModulateDmgByType(TYPE_EFFECT_MULTIPLIER(i));
+            }
+            i += 3;
+        }
+
+        gBattleMoveDamage *= gBattleMons[gActiveBattler].maxHP;
+        gBattleMoveDamage /= 32;
+        if (gBattleMoveDamage == 0)
+            gBattleMoveDamage = 1;
+
+        gBattleScripting.battler = gActiveBattler;
+        BattleScriptPushCursor();
+
+        if (gBattlescriptCurrInstr[1] == BS_TARGET)
+            gBattlescriptCurrInstr = BattleScript_StealthRockOnTarget;
+        else if (gBattlescriptCurrInstr[1] == BS_ATTACKER)
+            gBattlescriptCurrInstr = BattleScript_StealthRockOnAttacker;
+        else
+            gBattlescriptCurrInstr = BattleScript_StealthRockOnFaintedBattler;
+    }
     else
     {
         // There is a hack here in pokeemerald to ensure the truant counter will be 0 when the battler's next turn starts.
@@ -5481,6 +5518,7 @@ static void Cmd_switchineffects(void)
             && !ItemBattleEffects(ITEMEFFECT_ON_SWITCH_IN, gActiveBattler, FALSE))
         {
             gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~SIDE_STATUS_SPIKES_DAMAGED;
+            gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~SIDE_STATUS_STEALTH_ROCK_DAMAGED;
 
             for (i = 0; i < gBattlersCount; i++)
             {
@@ -9041,6 +9079,12 @@ static void Cmd_rapidspinfree(void)
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_SpikesFree;
     }
+    else if (gSideStatuses[GetBattlerSide(gBattlerAttacker)] & SIDE_STATUS_STEALTH_ROCK)
+    {
+        gSideStatuses[GetBattlerSide(gBattlerAttacker)] &= ~SIDE_STATUS_STEALTH_ROCK;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_StealthRockFree;
+    }
     else
     {
         gBattlescriptCurrInstr++;
@@ -10960,4 +11004,20 @@ void BS_removeProtection(void)
         gBattlescriptCurrInstr += 9;
     else
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+}
+
+void BS_trySetStealthRock(void)
+{
+    u8 targetSide = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
+
+    if (gSideStatuses[targetSide] & SIDE_STATUS_STEALTH_ROCK)
+    {
+        gSpecialStatuses[gBattlerAttacker].ppNotAffectedByPressure = 1;
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gSideStatuses[targetSide] |= SIDE_STATUS_STEALTH_ROCK;
+        gBattlescriptCurrInstr += 9;
+    }
 }

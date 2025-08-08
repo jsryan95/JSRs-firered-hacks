@@ -706,7 +706,7 @@ extern const u8 *gSelectionBattleScripts[MAX_BATTLERS_COUNT];
 extern u16 gLastMoves[MAX_BATTLERS_COUNT];
 extern u8 gBattlerByTurnOrder[MAX_BATTLERS_COUNT];
 extern u8 gBattleCommunication[BATTLE_COMMUNICATION_ENTRIES_COUNT];
-extern u16 gSideStatuses[2];
+extern u32 gSideStatuses[2];
 extern u32 gHitMarker;
 extern u16 gChosenMoveByBattler[MAX_BATTLERS_COUNT];
 extern u16 gMoveResultFlags;

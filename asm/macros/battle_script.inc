@@ -1551,3 +1551,8 @@
 	callnative BS_removeProtection
 	.4byte \onFail
 	.endm
+
+	.macro trySetStealthRock onFail:req
+	callnative BS_trySetStealthRock
+	.4byte \onFail
+	.endm

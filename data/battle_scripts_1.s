@@ -310,6 +310,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHealingWish            @ EFFECT_HEALING_WISH
 	.4byte BattleScript_EffectLunarDance             @ EFFECT_LUNAR_DANCE
 	.4byte BattleScript_EffectFeint                  @ EFFECT_FEINT
+	.4byte BattleScript_EffectStealthRock            @ EFFECT_STEALTH_ROCK
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -3943,6 +3944,38 @@ BattleScript_PrintHurtBySpikes::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_StealthRockOnAttacker::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	call BattleScript_PrintHurtByStealthRock
+	tryfaintmon BS_ATTACKER
+	tryfaintmon_spikes BS_ATTACKER, BattleScript_SpikesOnAttackerFainted
+	return
+
+BattleScript_StealthRockOnTarget::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	call BattleScript_PrintHurtByStealthRock
+	tryfaintmon BS_TARGET
+	tryfaintmon_spikes BS_TARGET, BattleScript_SpikesOnTargetFainted
+	return
+
+BattleScript_StealthRockOnFaintedBattler::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_FAINTED
+	datahpupdate BS_FAINTED
+	call BattleScript_PrintHurtByStealthRock
+	tryfaintmon BS_FAINTED
+	tryfaintmon_spikes BS_FAINTED, BattleScript_SpikesOnFaintedBattlerFainted
+	return
+
+BattleScript_PrintHurtByStealthRock::
+	printstring STRINGID_PKMNHURTBYSTEALTHROCK
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_HealingWishComesTrue::
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
 	healthbarupdate BS_TARGET
@@ -4028,6 +4061,11 @@ BattleScript_LeechSeedFree::
 
 BattleScript_SpikesFree::
 	printstring STRINGID_PKMNBLEWAWAYSPIKES
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_StealthRockFree::
+	printstring STRINGID_PKMNBLEWAWAYSTEALTHROCK
 	waitmessage B_WAIT_TIME_LONG
 	return
 
@@ -5721,3 +5759,14 @@ BattleScript_FeintTryFaint::
 	tryfaintmon BS_TARGET
 	moveendall
 	end
+
+BattleScript_EffectStealthRock::
+	attackcanceler
+	trySetStealthRock BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring STRINGID_STEALTHROCKSET
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

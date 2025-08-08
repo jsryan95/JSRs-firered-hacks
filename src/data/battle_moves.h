@@ -2685,7 +2685,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_OPPONENTS_FIELD,
         .priority = 0,
-        .flags = 0,
+        .flags = FLAG_MAGIC_COAT_AFFECTED,
     },
 
     [MOVE_ZAP_CANNON] =
@@ -7376,5 +7376,19 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 2,
         .flags = FLAG_MAKES_CONTACT | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_STEALTH_ROCK] =
+    {
+        .effect = EFFECT_STEALTH_ROCK,
+        .power = 0,
+        .type = TYPE_ROCK,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_OPPONENTS_FIELD,
+        .priority = 0,
+        .flags = FLAG_MAGIC_COAT_AFFECTED,
     },
 };
