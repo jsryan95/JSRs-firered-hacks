@@ -212,6 +212,7 @@ static const u8 sText_PkmnAfflictedByCurse[] = _("{B_ATK_NAME_WITH_PREFIX} is af
 static const u8 sText_SpikesScattered[] = _("SPIKES were scattered all around\nthe opponent's side!");
 static const u8 sText_PkmnHurtBySpikes[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} is hurt\nby SPIKES!");
 static const u8 sText_HealingWishCameTrue[] = _("The HEALING WISH\ncame true for {B_SCR_ACTIVE_NAME_WITH_PREFIX}!");
+static const u8 sText_LunarDanceActivates[] = _("The moonlight\nhealed {B_SCR_ACTIVE_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnIdentified[] = _("{B_ATK_NAME_WITH_PREFIX} identified\n{B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnPerishCountFell[] = _("{B_ATK_NAME_WITH_PREFIX}'s PERISH count\nfell to {B_BUFF1}!");
 static const u8 sText_PkmnBracedItself[] = _("{B_ATK_NAME_WITH_PREFIX} braced\nitself!");
@@ -961,6 +962,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_HEALBLOCKPREVENTED - BATTLESTRINGS_TABLE_START]             = sText_HealBlockPrevented,
     [STRINGID_PKMNCANTUSEMOVEHEALBLOCK - BATTLESTRINGS_TABLE_START]       = sText_PkmnCantUseMoveHealBlock,
     [STRINGID_HEALINGWISHCAMETRUE - BATTLESTRINGS_TABLE_START]            = sText_HealingWishCameTrue,
+    [STRINGID_LUNARDANCEACTIVATES - BATTLESTRINGS_TABLE_START]            = sText_LunarDanceActivates,
 };
 
 const u16 gMissStringIds[] =

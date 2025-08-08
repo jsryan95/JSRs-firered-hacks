@@ -5409,6 +5409,35 @@ static void Cmd_switchineffects(void)
         gBattlescriptCurrInstr = BattleScript_HealingWishComesTrue;
     }
 
+    else if(gWishFutureKnock.lunarDanceCounter[gActiveBattler])
+    {
+        struct Pokemon *mon;
+        u8 ppBonuses;
+        u16 move;
+
+        gWishFutureKnock.lunarDanceCounter[gActiveBattler] = 0;
+        gBattleMoveDamage = (-1) * gBattleMons[gActiveBattler].maxHP;
+        gBattleMons[gActiveBattler].status1 = 0;
+        BtlController_EmitSetMonData(BUFFER_A, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[gActiveBattler].status1), &gBattleMons[gActiveBattler].status1);
+        MarkBattlerForControllerExec(gActiveBattler);
+
+        // restore PP
+        if (GetBattlerSide(gActiveBattler) == B_SIDE_PLAYER)
+            mon = &gPlayerParty[gBattlerPartyIndexes[gActiveBattler]];
+        else
+            mon = &gEnemyParty[gBattlerPartyIndexes[gActiveBattler]];
+        for (i = 0; i < MAX_MON_MOVES; i++)
+        {
+            move = GetMonData(mon, MON_DATA_MOVE1 + i);
+            ppBonuses = GetMonData(mon, MON_DATA_PP_BONUSES);
+            gBattleMons[gActiveBattler].pp[i] = CalculatePPWithBonus(move, ppBonuses, i);
+        }
+
+        gBattleScripting.battler = gActiveBattler;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_LunarDanceActivates;
+    }
+
     else if (!(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES_DAMAGED)
         && (gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES)
         && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
@@ -10900,6 +10929,17 @@ void BS_trySetHealBlock(void)
 void BS_tryHealingWish(void)
 {
     gWishFutureKnock.healingWishCounter[gBattlerAttacker] = 1;
+    // Success, drop user's HP bar to 0
+    gActiveBattler = gBattlerAttacker;
+    gBattleMoveDamage = gBattleMons[gActiveBattler].hp;
+    BtlController_EmitHealthBarUpdate(BUFFER_A, INSTANT_HP_BAR_DROP);
+    MarkBattlerForControllerExec(gActiveBattler);
+    gBattlescriptCurrInstr += 9;
+}
+
+void BS_tryLunarDance(void)
+{
+    gWishFutureKnock.lunarDanceCounter[gBattlerAttacker] = 1;
     // Success, drop user's HP bar to 0
     gActiveBattler = gBattlerAttacker;
     gBattleMoveDamage = gBattleMons[gActiveBattler].hp;

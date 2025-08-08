@@ -449,9 +449,9 @@
 #define MOVE_TRUMP_CARD 443
 #define MOVE_HEAL_BLOCK 444
 #define MOVE_HEALING_WISH 445
+#define MOVE_LUNAR_DANCE 446
 
 // generation 4 moves (not implemented)
-#define MOVE_METAL_BURST 446
 #define MOVE_BUG_BITE 447
 #define MOVE_DEFOG 448
 #define MOVE_ME_FIRST 449
@@ -468,7 +468,7 @@
 #define MOVE_FEINT 460
 #define MOVE_TOXIC_SPIKES 461
 #define MOVE_TRICK_ROOM 462
-#define MOVE_LUNAR_DANCE 463
+#define MOVE_METAL_BURST 463
 #define MOVE_LAST_RESORT 464
 #define MOVE_EMBARGO 465
 #define MOVE_CHATTER 466

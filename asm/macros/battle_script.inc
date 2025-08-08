@@ -1541,3 +1541,8 @@
 	callnative BS_tryHealingWish
 	.4byte \onFail
 	.endm
+
+	.macro tryLunarDance onFail:req
+	callnative BS_tryLunarDance
+	.4byte \onFail
+	.endm

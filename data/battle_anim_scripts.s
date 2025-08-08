@@ -467,8 +467,8 @@ gBattleAnims_Moves::
     .4byte Move_TRUMP_CARD
     .4byte Move_HEAL_BLOCK
     .4byte Move_HEALING_WISH
+    .4byte Move_LUNAR_DANCE
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -9375,6 +9375,7 @@ Move_SWITCHEROO:
 
 Move_WISH:
 Move_HEALING_WISH:
+Move_LUNAR_DANCE:
 	loadspritegfx ANIM_TAG_GOLD_STARS
 	loadspritegfx ANIM_TAG_SPARKLE_2
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 3, 0, 10, RGB_BLACK

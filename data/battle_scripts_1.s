@@ -308,6 +308,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectProtect                @ EFFECT_WIDE_GUARD
 	.4byte BattleScript_EffectHealBlock              @ EFFECT_HEAL_BLOCK
 	.4byte BattleScript_EffectHealingWish            @ EFFECT_HEALING_WISH
+	.4byte BattleScript_EffectLunarDance             @ EFFECT_LUNAR_DANCE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -3950,6 +3951,15 @@ BattleScript_HealingWishComesTrue::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_LunarDanceActivates::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	updatestatusicon BS_TARGET
+	printstring STRINGID_LUNARDANCEACTIVATES
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_PerishSongTakesLife::
 	printstring STRINGID_PKMNPERISHCOUNTFELL
 	waitmessage B_WAIT_TIME_LONG
@@ -5666,6 +5676,17 @@ BattleScript_EffectHealingWish::
 	attackstring
 	ppreduce
 	tryHealingWish BattleScript_ButItFailed
+	setatkhptozero
+	attackanimation
+	waitanimation
+	tryfaintmon BS_ATTACKER
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectLunarDance::
+	attackcanceler
+	attackstring
+	ppreduce
+	tryLunarDance BattleScript_ButItFailed
 	setatkhptozero
 	attackanimation
 	waitanimation

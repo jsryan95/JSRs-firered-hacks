@@ -1035,4 +1035,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_WIDE_GUARD - 1] = gMoveDescription_WideGuard,
     [MOVE_HEAL_BLOCK - 1] = gMoveDescription_HealBlock,
     [MOVE_HEALING_WISH - 1] = gMoveDescription_HealingWish,
+    [MOVE_LUNAR_DANCE - 1] = gMoveDescription_HealingWish,
 };

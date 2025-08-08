@@ -71,6 +71,7 @@ extern const u8 BattleScript_SpikesOnAttacker[];
 extern const u8 BattleScript_SpikesOnTarget[];
 extern const u8 BattleScript_SpikesOngBank1[];
 extern const u8 BattleScript_HealingWishComesTrue[];
+extern const u8 BattleScript_LunarDanceActivates[];
 extern const u8 BattleScript_PerishSongTakesLife[];
 extern const u8 BattleScript_PerishSongCountGoesDown[];
 extern const u8 BattleScript_AllStatsUp[];
