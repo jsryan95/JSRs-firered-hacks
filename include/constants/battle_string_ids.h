@@ -419,8 +419,9 @@
 #define STRINGID_HEALBLOCKENDED 418
 #define STRINGID_HEALBLOCKPREVENTED 419
 #define STRINGID_PKMNCANTUSEMOVEHEALBLOCK 420
+#define STRINGID_HEALINGWISHCAMETRUE 421
 
-#define BATTLESTRINGS_COUNT     421
+#define BATTLESTRINGS_COUNT     422
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

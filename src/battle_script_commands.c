@@ -5397,7 +5397,19 @@ static void Cmd_switchineffects(void)
     gHitMarker &= ~HITMARKER_FAINTED(gActiveBattler);
     gSpecialStatuses[gActiveBattler].faintedHasReplacement = FALSE;
 
-    if (!(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES_DAMAGED)
+    if(gWishFutureKnock.healingWishCounter[gActiveBattler])
+    {
+        gWishFutureKnock.healingWishCounter[gActiveBattler] = 0;
+        gBattleMoveDamage = (-1) * gBattleMons[gActiveBattler].maxHP;
+        gBattleMons[gActiveBattler].status1 = 0;
+        BtlController_EmitSetMonData(BUFFER_A, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[gActiveBattler].status1), &gBattleMons[gActiveBattler].status1);
+        MarkBattlerForControllerExec(gActiveBattler);
+        gBattleScripting.battler = gActiveBattler;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_HealingWishComesTrue;
+    }
+
+    else if (!(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES_DAMAGED)
         && (gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES)
         && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
         && !hasActiveAbility(gActiveBattler, ABILITY_LEVITATE)
@@ -10883,4 +10895,15 @@ void BS_trySetHealBlock(void)
         gSideTimers[targetSide].healBlockBattlerId = gBattlerAttacker;
         gBattlescriptCurrInstr += 9;
     }
+}
+
+void BS_tryHealingWish(void)
+{
+    gWishFutureKnock.healingWishCounter[gBattlerAttacker] = 1;
+    // Success, drop user's HP bar to 0
+    gActiveBattler = gBattlerAttacker;
+    gBattleMoveDamage = gBattleMons[gActiveBattler].hp;
+    BtlController_EmitHealthBarUpdate(BUFFER_A, INSTANT_HP_BAR_DROP);
+    MarkBattlerForControllerExec(gActiveBattler);
+    gBattlescriptCurrInstr += 9;
 }

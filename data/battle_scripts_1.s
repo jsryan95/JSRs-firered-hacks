@@ -307,6 +307,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectProtect                @ EFFECT_QUICK_GUARD
 	.4byte BattleScript_EffectProtect                @ EFFECT_WIDE_GUARD
 	.4byte BattleScript_EffectHealBlock              @ EFFECT_HEAL_BLOCK
+	.4byte BattleScript_EffectHealingWish            @ EFFECT_HEALING_WISH
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -3940,6 +3941,15 @@ BattleScript_PrintHurtBySpikes::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_HealingWishComesTrue::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	updatestatusicon BS_TARGET
+	printstring STRINGID_HEALINGWISHCAMETRUE
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_PerishSongTakesLife::
 	printstring STRINGID_PKMNPERISHCOUNTFELL
 	waitmessage B_WAIT_TIME_LONG
@@ -5649,4 +5659,15 @@ BattleScript_EffectHealBlock::
 	waitanimation
 	printstring STRINGID_HEALBLOCKSTARTED
 	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectHealingWish::
+	attackcanceler
+	attackstring
+	ppreduce
+	tryHealingWish BattleScript_ButItFailed
+	setatkhptozero
+	attackanimation
+	waitanimation
+	tryfaintmon BS_ATTACKER
 	goto BattleScript_MoveEnd

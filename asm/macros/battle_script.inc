@@ -1536,3 +1536,8 @@
 	callnative BS_trySetHealBlock
 	.4byte \onFail
 	.endm
+
+	.macro tryHealingWish onFail:req
+	callnative BS_tryHealingWish
+	.4byte \onFail
+	.endm

@@ -273,6 +273,7 @@ struct WishFutureKnock
     u8 wishMonId[MAX_BATTLERS_COUNT];
     u8 weatherDuration;
     u8 knockedOffMons[2];
+    u8 healingWishCounter[MAX_BATTLERS_COUNT];
 };
 
 extern struct WishFutureKnock gWishFutureKnock;

@@ -448,13 +448,13 @@
 #define MOVE_LUCKY_CHANT 442
 #define MOVE_TRUMP_CARD 443
 #define MOVE_HEAL_BLOCK 444
+#define MOVE_HEALING_WISH 445
 
 // generation 4 moves (not implemented)
-#define MOVE_ME_FIRST 445
 #define MOVE_METAL_BURST 446
 #define MOVE_BUG_BITE 447
 #define MOVE_DEFOG 448
-#define MOVE_HEALING_WISH 449
+#define MOVE_ME_FIRST 449
 #define MOVE_PLUCK 450
 #define MOVE_JUDGMENT 451
 #define MOVE_POWER_TRICK 452

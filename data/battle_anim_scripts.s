@@ -466,8 +466,8 @@ gBattleAnims_Moves::
     .4byte Move_LUCKY_CHANT
     .4byte Move_TRUMP_CARD
     .4byte Move_HEAL_BLOCK
+    .4byte Move_HEALING_WISH
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -9374,6 +9374,7 @@ Move_SWITCHEROO:
 	end
 
 Move_WISH:
+Move_HEALING_WISH:
 	loadspritegfx ANIM_TAG_GOLD_STARS
 	loadspritegfx ANIM_TAG_SPARKLE_2
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 3, 0, 10, RGB_BLACK
