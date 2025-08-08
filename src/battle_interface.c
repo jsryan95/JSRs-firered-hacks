@@ -1594,7 +1594,7 @@ static const u16 sStatusIconColors[] = {
     [PAL_STATUS_SLP] = RGB(20, 20, 17),
     [PAL_STATUS_FRZ] = RGB(17, 22, 28),
     [PAL_STATUS_BRN] = RGB(28, 14, 10),
-    [PAL_STATUS_BAD_PSN] = RGB(15, 3, 15)
+    [PAL_STATUS_BAD_PSN] = RGB(12, 6, 12)
 };
 
 static void UpdateStatusIconInHealthbox(u8 healthboxSpriteId)

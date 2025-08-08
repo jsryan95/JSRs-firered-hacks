@@ -1742,7 +1742,7 @@ static void ResetHPTaskData(u8 taskId, u8 caseId, u32 hp)
 
 u8 GetAilmentFromStatus(u32 status)
 {
-    if (status & STATUS1_PSN_ANY)
+    if (status & STATUS1_POISON)
         return AILMENT_PSN;
     if (status & STATUS1_PARALYSIS)
         return AILMENT_PRZ;
@@ -1752,6 +1752,8 @@ u8 GetAilmentFromStatus(u32 status)
         return AILMENT_FRZ;
     if (status & STATUS1_BURN)
         return AILMENT_BRN;
+    if (status & STATUS1_TOXIC_POISON)
+        return AILMENT_BAD_PSN;
     return AILMENT_NONE;
 }
 

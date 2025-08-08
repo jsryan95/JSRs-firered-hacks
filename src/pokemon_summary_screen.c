@@ -3472,7 +3472,7 @@ static u8 StatusToAilment(u32 status)
     if (GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP) == 0)
         return AILMENT_FNT;
 
-    if ((status & STATUS1_PSN_ANY) != 0)
+    if ((status & STATUS1_POISON) != 0)
         return AILMENT_PSN;
 
     if ((status & STATUS1_PARALYSIS) != 0)
@@ -3486,6 +3486,9 @@ static u8 StatusToAilment(u32 status)
 
     if ((status & STATUS1_BURN) != 0)
         return AILMENT_BRN;
+
+    if (status & STATUS1_TOXIC_POISON)
+        return AILMENT_BAD_PSN;
 
     if (CheckPartyPokerus(&sMonSummaryScreen->currentMon, 0))
         return AILMENT_PKRS;
