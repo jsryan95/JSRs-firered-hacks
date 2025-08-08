@@ -525,4 +525,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_HEAL_BLOCK] = _("HEAL BLOCK"),
     [MOVE_HEALING_WISH] = _("HEALING WISH"),
     [MOVE_LUNAR_DANCE] = _("LUNAR DANCE"),
+    [MOVE_FEINT] = _("FEINT"),
 };

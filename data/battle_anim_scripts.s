@@ -468,8 +468,8 @@ gBattleAnims_Moves::
     .4byte Move_HEAL_BLOCK
     .4byte Move_HEALING_WISH
     .4byte Move_LUNAR_DANCE
+    .4byte Move_FEINT
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -3383,6 +3383,7 @@ Move_ROCK_POLISH:
 
 Move_QUICK_ATTACK:
 Move_U_TURN:
+Move_FEINT:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_ATK_PARTNER
 	setalpha 12, 8

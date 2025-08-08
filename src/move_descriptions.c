@@ -509,6 +509,7 @@ const u8 gMoveDescription_QuickGuard[] = _("Protects the user\nand its allies\nf
 const u8 gMoveDescription_WideGuard[] = _("Protects the user's\nteam from attacks\nthat hit multiple\nPOKéMON.");
 const u8 gMoveDescription_HealBlock[] = _("Prevents the foe\nfrom using any HP-\nrecovery moves for\nfive turns.");
 const u8 gMoveDescription_HealingWish[] = _("The user faints.\nThe next POKéMON\nwill be fully\nhealed.");
+const u8 gMoveDescription_Feint[] = _("An attack that\nignores protection\nmoves, and lifts\ntheir effects.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1036,4 +1037,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_HEAL_BLOCK - 1] = gMoveDescription_HealBlock,
     [MOVE_HEALING_WISH - 1] = gMoveDescription_HealingWish,
     [MOVE_LUNAR_DANCE - 1] = gMoveDescription_HealingWish,
+    [MOVE_FEINT - 1] = gMoveDescription_Feint,
 };

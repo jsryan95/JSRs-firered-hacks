@@ -309,6 +309,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHealBlock              @ EFFECT_HEAL_BLOCK
 	.4byte BattleScript_EffectHealingWish            @ EFFECT_HEALING_WISH
 	.4byte BattleScript_EffectLunarDance             @ EFFECT_LUNAR_DANCE
+	.4byte BattleScript_EffectFeint                  @ EFFECT_FEINT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5692,3 +5693,31 @@ BattleScript_EffectLunarDance::
 	waitanimation
 	tryfaintmon BS_ATTACKER
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectFeint::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	removeProtection BattleScript_FeintTryFaint
+	printstring STRINGID_PROTECTREMOVED
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_FeintTryFaint::
+	tryfaintmon BS_TARGET
+	moveendall
+	end

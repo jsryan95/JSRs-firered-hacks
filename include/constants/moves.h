@@ -450,9 +450,9 @@
 #define MOVE_HEAL_BLOCK 444
 #define MOVE_HEALING_WISH 445
 #define MOVE_LUNAR_DANCE 446
+#define MOVE_FEINT 447
 
 // generation 4 moves (not implemented)
-#define MOVE_BUG_BITE 447
 #define MOVE_DEFOG 448
 #define MOVE_ME_FIRST 449
 #define MOVE_PLUCK 450
@@ -465,7 +465,7 @@
 #define MOVE_SHADOW_FORCE 457
 #define MOVE_STEALTH_ROCK 458
 #define MOVE_SUCKER_PUNCH 459
-#define MOVE_FEINT 460
+#define MOVE_BUG_BITE 460
 #define MOVE_TOXIC_SPIKES 461
 #define MOVE_TRICK_ROOM 462
 #define MOVE_METAL_BURST 463

@@ -7363,4 +7363,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_SNATCH_AFFECTED,
     },
+
+    [MOVE_FEINT] =
+    {
+        .effect = EFFECT_FEINT,
+        .power = 30,
+        .type = TYPE_NORMAL,
+        .category = CATEGORY_PHYSICAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 2,
+        .flags = FLAG_MAKES_CONTACT | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
 };

@@ -1546,3 +1546,8 @@
 	callnative BS_tryLunarDance
 	.4byte \onFail
 	.endm
+
+	.macro removeProtection onFail:req
+	callnative BS_removeProtection
+	.4byte \onFail
+	.endm

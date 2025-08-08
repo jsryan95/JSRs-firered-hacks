@@ -10947,3 +10947,17 @@ void BS_tryLunarDance(void)
     MarkBattlerForControllerExec(gActiveBattler);
     gBattlescriptCurrInstr += 9;
 }
+
+void BS_removeProtection(void)
+{
+    u8 protectLifted = gProtectStructs[gBattlerTarget].protected
+            || (gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)] & (SIDE_STATUS_QUICK_GUARD | SIDE_STATUS_WIDE_GUARD));
+
+    gProtectStructs[gBattlerTarget].protected = 0;
+    gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)] &= ~(SIDE_STATUS_QUICK_GUARD | SIDE_STATUS_WIDE_GUARD);
+
+    if (protectLifted)
+        gBattlescriptCurrInstr += 9;
+    else
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+}
