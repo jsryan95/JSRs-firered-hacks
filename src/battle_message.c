@@ -293,6 +293,7 @@ static const u8 sText_PkmnProtectedBy[] = _("{B_DEF_NAME_WITH_PREFIX} was protec
 static const u8 sText_PkmnPreventsUsage[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents {B_ATK_NAME_WITH_PREFIX}\lfrom using {B_CURRENT_MOVE}!");
 static const u8 sText_PkmnRestoredHPUsing[] = _("{B_DEF_NAME_WITH_PREFIX} restored HP\nusing its {B_DEF_ABILITY}!");
 static const u8 sText_PkmnRaisedSpeedUsing[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nraised its SPEED!");
+static const u8 sText_PkmnRaisedSpAtkUsing[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nraised its SP. ATK!");
 static const u8 sText_PkmnRaisedAtkUsing[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nraised its ATTACK!");
 static const u8 sText_PkmnDefFellBecauseOf[] = _("{B_DEF_NAME_WITH_PREFIX}'s DEFENSE\nfell due to its {B_DEF_ABILITY}!");
 static const u8 sText_PkmnXLowersAttack[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nlowered {B_ATK_NAME_WITH_PREFIX}'s ATTACK!");
@@ -975,6 +976,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNHURTBYSTEALTHROCK - BATTLESTRINGS_TABLE_START]          = sText_PkmnHurtByStealthRock,
     [STRINGID_EMBARGOSTARTED - BATTLESTRINGS_TABLE_START]                 = sText_EmbargoStarted,
     [STRINGID_EMBARGOENDED - BATTLESTRINGS_TABLE_START]                   = sText_EmbargoEnded,
+    [STRINGID_PKMNRAISEDSPATKUSING - BATTLESTRINGS_TABLE_START]           = sText_PkmnRaisedSpAtkUsing,
 };
 
 const u16 gMissStringIds[] =

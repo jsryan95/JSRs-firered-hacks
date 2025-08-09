@@ -176,6 +176,8 @@ extern const u8 BattleScript_MoveHPDrain_PPLoss[];
 extern const u8 BattleScript_MoveHPDrain[];
 extern const u8 BattleScript_MotorDriveBoost_PPLoss[];
 extern const u8 BattleScript_MotorDriveBoost[];
+extern const u8 BattleScript_LightningRodBoost_PPLoss[];
+extern const u8 BattleScript_LightningRodBoost[];
 extern const u8 BattleScript_SapSipperBoost_PPLoss[];
 extern const u8 BattleScript_SapSipperBoost[];
 extern const u8 BattleScript_MonMadeMoveUseless_PPLoss[];

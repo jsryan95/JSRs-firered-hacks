@@ -4809,6 +4809,22 @@ BattleScript_MotorDriveBoost::
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd
 
+BattleScript_LightningRodBoost_PPLoss::
+	ppreduce
+BattleScript_LightningRodBoost::
+    jumpifstat BS_TARGET, CMP_EQUAL, STAT_SPATK, MAX_STAT_STAGE, BattleScript_MonMadeMoveUseless
+	attackstring
+	pause B_WAIT_TIME_SHORT
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	playstatchangeanimation BS_TARGET, BIT_SPATK, 0
+	setstatchanger STAT_SPATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printstring STRINGID_PKMNRAISEDSPATKUSING
+	waitmessage B_WAIT_TIME_LONG
+	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
+	goto BattleScript_MoveEnd
+
 BattleScript_SapSipperBoost_PPLoss::
 	ppreduce
 BattleScript_SapSipperBoost::

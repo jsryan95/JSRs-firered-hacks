@@ -2208,6 +2208,17 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect = 2;
                     }
                     break;
+                case ABILITY_LIGHTNING_ROD:
+                    if (moveType == TYPE_ELECTRIC)
+                    {
+                        if (gProtectStructs[gBattlerAttacker].notFirstStrike)
+                            gBattlescriptCurrInstr = BattleScript_LightningRodBoost;
+                        else
+                            gBattlescriptCurrInstr = BattleScript_LightningRodBoost_PPLoss;
+
+                        effect = 2;
+                    }
+                    break;
                 case ABILITY_SAP_SIPPER:
                     if (moveType == TYPE_GRASS)
                     {
@@ -2228,6 +2239,17 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                             gBattlescriptCurrInstr = BattleScript_MoveHPDrain_PPLoss;
 
                         effect = 1;
+                    }
+                    break;
+                case ABILITY_STORM_DRAIN:
+                    if (moveType == TYPE_WATER)
+                    {
+                        if (gProtectStructs[gBattlerAttacker].notFirstStrike)
+                            gBattlescriptCurrInstr = BattleScript_LightningRodBoost;
+                        else
+                            gBattlescriptCurrInstr = BattleScript_LightningRodBoost_PPLoss;
+
+                        effect = 2;
                     }
                     break;
                 case ABILITY_FLASH_FIRE:
