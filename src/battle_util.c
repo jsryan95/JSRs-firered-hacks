@@ -3694,5 +3694,7 @@ u16 getItem(u8 battler)
 {
     if (gSideStatuses[GET_BATTLER_SIDE(battler)] & SIDE_STATUS_EMBARGO)
         return ITEM_NONE;
+    if (hasActiveAbility(battler, ABILITY_KLUTZ))
+        return ITEM_NONE;
     return gBattleMons[battler].item;
 }
