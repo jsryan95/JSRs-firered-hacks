@@ -528,4 +528,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_FEINT] = _("FEINT"),
     [MOVE_STEALTH_ROCK] = _("STEALTH ROCK"),
     [MOVE_COTTON_GUARD] = _("COTTON GUARD"),
+    [MOVE_EMBARGO] = _("EMBARGO"),
 };

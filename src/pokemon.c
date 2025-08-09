@@ -2416,27 +2416,27 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     spDefense = defender->spDefense;
 
     // Get attacker hold item info
-    if (attacker->item == ITEM_ENIGMA_BERRY)
+    if (getItem(battlerIdAtk) == ITEM_ENIGMA_BERRY)
     {
         attackerHoldEffect = gEnigmaBerries[battlerIdAtk].holdEffect;
         attackerHoldEffectParam = gEnigmaBerries[battlerIdAtk].holdEffectParam;
     }
     else
     {
-        attackerHoldEffect = ItemId_GetHoldEffect(attacker->item);
-        attackerHoldEffectParam = ItemId_GetHoldEffectParam(attacker->item);
+        attackerHoldEffect = ItemId_GetHoldEffect(getItem(battlerIdAtk));
+        attackerHoldEffectParam = ItemId_GetHoldEffectParam(getItem(battlerIdAtk));
     }
 
     // Get defender hold item info
-    if (defender->item == ITEM_ENIGMA_BERRY)
+    if (getItem(battlerIdDef) == ITEM_ENIGMA_BERRY)
     {
         defenderHoldEffect = gEnigmaBerries[battlerIdDef].holdEffect;
         defenderHoldEffectParam = gEnigmaBerries[battlerIdDef].holdEffectParam;
     }
     else
     {
-        defenderHoldEffect = ItemId_GetHoldEffect(defender->item);
-        defenderHoldEffectParam = ItemId_GetHoldEffectParam(defender->item);
+        defenderHoldEffect = ItemId_GetHoldEffect(getItem(battlerIdDef));
+        defenderHoldEffectParam = ItemId_GetHoldEffectParam(getItem(battlerIdDef));
     }
 
     if (hasActiveAbility2(attacker, ABILITY_HUGE_POWER) || hasActiveAbility2(attacker, ABILITY_PURE_POWER))
@@ -4099,6 +4099,8 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
     if (!IS_POKEMON_ITEM(item))
         return TRUE;
     if (gItemEffectTable[item - ITEM_POTION] == NULL && item != ITEM_ENIGMA_BERRY)
+        return TRUE;
+    if (gMain.inBattle && (gSideStatuses[GET_BATTLER_SIDE(battleMonId)] & SIDE_STATUS_EMBARGO))
         return TRUE;
 
     // Get item effect

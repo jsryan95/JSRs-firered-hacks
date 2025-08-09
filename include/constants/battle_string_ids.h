@@ -425,8 +425,10 @@
 #define STRINGID_STEALTHROCKSET 424
 #define STRINGID_PKMNBLEWAWAYSTEALTHROCK 425
 #define STRINGID_PKMNHURTBYSTEALTHROCK 426
+#define STRINGID_EMBARGOSTARTED 427
+#define STRINGID_EMBARGOENDED 428
 
-#define BATTLESTRINGS_COUNT     427
+#define BATTLESTRINGS_COUNT     429
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

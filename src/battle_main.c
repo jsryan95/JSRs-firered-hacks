@@ -3012,10 +3012,10 @@ u8 IsRunningFromBattleImpossible(void)
     u8 side;
     s32 i;
 
-    if (gBattleMons[gActiveBattler].item == ITEM_ENIGMA_BERRY)
+    if (getItem(gActiveBattler) == ITEM_ENIGMA_BERRY)
         holdEffect = gEnigmaBerries[gActiveBattler].holdEffect;
     else
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[gActiveBattler].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(gActiveBattler));
     gPotentialItemEffectBattler = gActiveBattler;
     if (holdEffect == HOLD_EFFECT_CAN_ALWAYS_RUN
      || (gBattleTypeFlags & BATTLE_TYPE_LINK)
@@ -3440,15 +3440,15 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
                 * (gStatStageRatios[gBattleMons[battler1].statStages[STAT_SPEED]][0])
                 / (gStatStageRatios[gBattleMons[battler1].statStages[STAT_SPEED]][1]);
 
-    if (gBattleMons[battler1].item == ITEM_ENIGMA_BERRY)
+    if (getItem(battler1) == ITEM_ENIGMA_BERRY)
     {
         holdEffect = gEnigmaBerries[battler1].holdEffect;
         holdEffectParam = gEnigmaBerries[battler1].holdEffectParam;
     }
     else
     {
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[battler1].item);
-        holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler1].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(battler1));
+        holdEffectParam = ItemId_GetHoldEffectParam(getItem(battler1));
     }
     // badge boost
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK)
@@ -3467,15 +3467,15 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
     speedBattler2 = (gBattleMons[battler2].speed * speedMultiplierBattler2)
                     * (gStatStageRatios[gBattleMons[battler2].statStages[STAT_SPEED]][0])
                     / (gStatStageRatios[gBattleMons[battler2].statStages[STAT_SPEED]][1]);
-    if (gBattleMons[battler2].item == ITEM_ENIGMA_BERRY)
+    if (getItem(battler2) == ITEM_ENIGMA_BERRY)
     {
         holdEffect = gEnigmaBerries[battler2].holdEffect;
         holdEffectParam = gEnigmaBerries[battler2].holdEffectParam;
     }
     else
     {
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[battler2].item);
-        holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler2].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(battler2));
+        holdEffectParam = ItemId_GetHoldEffectParam(getItem(battler2));
     }
     // badge boost
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK)
@@ -4259,10 +4259,10 @@ bool8 TryRunFromBattle(u8 battler)
     u8 holdEffect;
     u8 speedVar;
 
-    if (gBattleMons[battler].item == ITEM_ENIGMA_BERRY)
+    if (getItem(battler) == ITEM_ENIGMA_BERRY)
         holdEffect = gEnigmaBerries[battler].holdEffect;
     else
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[battler].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(battler));
     gPotentialItemEffectBattler = battler;
     if (holdEffect == HOLD_EFFECT_CAN_ALWAYS_RUN)
     {

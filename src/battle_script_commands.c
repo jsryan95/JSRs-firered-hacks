@@ -1372,15 +1372,15 @@ static void Cmd_accuracycheck(void)
         if (hasActiveAbility(gBattlerTarget, ABILITY_TANGLED_FEET) && (gBattleMons[gBattlerTarget].status2 & STATUS2_CONFUSION))
             calc /= 2;
 
-        if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)
+        if (getItem(gBattlerTarget) == ITEM_ENIGMA_BERRY)
         {
             holdEffect = gEnigmaBerries[gBattlerTarget].holdEffect;
             param = gEnigmaBerries[gBattlerTarget].holdEffectParam;
         }
         else
         {
-            holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
-            param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
+            holdEffect = ItemId_GetHoldEffect(getItem(gBattlerTarget));
+            param = ItemId_GetHoldEffectParam(getItem(gBattlerTarget));
         }
 
         gPotentialItemEffectBattler = gBattlerTarget;
@@ -1471,7 +1471,7 @@ static void Cmd_critcalc(void)
     u8 holdEffect;
     u16 item, critChance;
 
-    item = gBattleMons[gBattlerAttacker].item;
+    item = getItem(gBattlerAttacker);
 
     if (item == ITEM_ENIGMA_BERRY)
         holdEffect = gEnigmaBerries[gBattlerAttacker].holdEffect;
@@ -1900,15 +1900,15 @@ static void Cmd_adjustnormaldamage(void)
 
     ApplyRandomDmgMultiplier();
 
-    if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)
+    if (getItem(gBattlerTarget) == ITEM_ENIGMA_BERRY)
     {
         holdEffect = gEnigmaBerries[gBattlerTarget].holdEffect;
         param = gEnigmaBerries[gBattlerTarget].holdEffectParam;
     }
     else
     {
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
-        param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(gBattlerTarget));
+        param = ItemId_GetHoldEffectParam(getItem(gBattlerTarget));
     }
 
     gPotentialItemEffectBattler = gBattlerTarget;
@@ -1957,15 +1957,15 @@ static void Cmd_adjustnormaldamage2(void)
 
     ApplyRandomDmgMultiplier();
 
-    if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)
+    if (getItem(gBattlerTarget) == ITEM_ENIGMA_BERRY)
     {
         holdEffect = gEnigmaBerries[gBattlerTarget].holdEffect;
         param = gEnigmaBerries[gBattlerTarget].holdEffectParam;
     }
     else
     {
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
-        param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(gBattlerTarget));
+        param = ItemId_GetHoldEffectParam(getItem(gBattlerTarget));
     }
 
     gPotentialItemEffectBattler = gBattlerTarget;
@@ -4507,10 +4507,10 @@ static void Cmd_moveend(void)
     endMode = gBattlescriptCurrInstr[1];
     endState = gBattlescriptCurrInstr[2];
 
-    if (gBattleMons[gBattlerAttacker].item == ITEM_ENIGMA_BERRY)
+    if (getItem(gBattlerAttacker) == ITEM_ENIGMA_BERRY)
         holdEffectAtk = gEnigmaBerries[gBattlerAttacker].holdEffect;
     else
-        holdEffectAtk = ItemId_GetHoldEffect(gBattleMons[gBattlerAttacker].item);
+        holdEffectAtk = ItemId_GetHoldEffect(getItem(gBattlerAttacker));
 
     choicedMoveAtk = &gBattleStruct->choicedMove[gBattlerAttacker];
     GET_MOVE_TYPE(gCurrentMove, moveType);
@@ -6114,15 +6114,15 @@ static void Cmd_adjustsetdamage(void)
 {
     u8 holdEffect, param;
 
-    if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)
+    if (getItem(gBattlerTarget) == ITEM_ENIGMA_BERRY)
     {
         holdEffect = gEnigmaBerries[gBattlerTarget].holdEffect;
         param = gEnigmaBerries[gBattlerTarget].holdEffectParam;
     }
     else
     {
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
-        param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(gBattlerTarget));
+        param = ItemId_GetHoldEffectParam(getItem(gBattlerTarget));
     }
 
     gPotentialItemEffectBattler = gBattlerTarget;
@@ -7675,15 +7675,15 @@ static void Cmd_tryKO(void)
 {
     u8 holdEffect, param;
 
-    if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)
+    if (getItem(gBattlerTarget) == ITEM_ENIGMA_BERRY)
     {
        holdEffect = gEnigmaBerries[gBattlerTarget].holdEffect;
        param = gEnigmaBerries[gBattlerTarget].holdEffectParam;
     }
     else
     {
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
-        param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(gBattlerTarget));
+        param = ItemId_GetHoldEffectParam(getItem(gBattlerTarget));
     }
 
     gPotentialItemEffectBattler = gBattlerTarget;
@@ -9700,15 +9700,15 @@ static u32 getEffectiveSpeed(u8 battler)
             * (gStatStageRatios[gBattleMons[battler].statStages[STAT_SPEED]][0])
             / (gStatStageRatios[gBattleMons[battler].statStages[STAT_SPEED]][1]);
 
-    if (gBattleMons[battler].item == ITEM_ENIGMA_BERRY)
+    if (getItem(battler) == ITEM_ENIGMA_BERRY)
     {
         holdEffect = gEnigmaBerries[battler].holdEffect;
         holdEffectParam = gEnigmaBerries[battler].holdEffectParam;
     }
     else
     {
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[battler].item);
-        holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(battler));
+        holdEffectParam = ItemId_GetHoldEffectParam(getItem(battler));
     }
     // badge boost
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK)
@@ -10826,7 +10826,7 @@ void BS_determineNaturalGift(void)
     u8 i;
     for (i = 0; sNaturalGiftItems[i].item != ITEM_NONE; i++)
     {
-        if (sNaturalGiftItems[i].item == gBattleMons[gBattlerAttacker].item)
+        if (sNaturalGiftItems[i].item == getItem(gBattlerAttacker))
         {
             gBattleScripting.dmgMultiplier = 2;
             gBattleStruct->dynamicMoveType = sNaturalGiftItems[i].type;
@@ -11020,6 +11020,23 @@ void BS_trySetStealthRock(void)
     else
     {
         gSideStatuses[targetSide] |= SIDE_STATUS_STEALTH_ROCK;
+        gBattlescriptCurrInstr += 9;
+    }
+}
+
+void BS_trySetEmbargo(void)
+{
+    u8 targetSide = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
+    if (gSideStatuses[targetSide] & SIDE_STATUS_EMBARGO)
+    {
+        gSpecialStatuses[gBattlerAttacker].ppNotAffectedByPressure = 1;
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gSideStatuses[targetSide] |= SIDE_STATUS_EMBARGO;
+        gSideTimers[targetSide].embargoTimer = 5;
+        gSideTimers[targetSide].embargoBattlerId = gBattlerAttacker;
         gBattlescriptCurrInstr += 9;
     }
 }

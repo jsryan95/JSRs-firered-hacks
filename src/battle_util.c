@@ -346,10 +346,10 @@ u8 TrySetCantSelectMoveBattleScript(void)
         limitations++;
     }
 
-    if (gBattleMons[gActiveBattler].item == ITEM_ENIGMA_BERRY)
+    if (getItem(gActiveBattler) == ITEM_ENIGMA_BERRY)
         holdEffect = gEnigmaBerries[gActiveBattler].holdEffect;
     else
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[gActiveBattler].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(gActiveBattler));
 
     gPotentialItemEffectBattler = gActiveBattler;
 
@@ -395,10 +395,10 @@ u8 CheckMoveLimitations(u8 battlerId, u8 unusableMoves, u8 check)
     u16 *choicedMove = &gBattleStruct->choicedMove[battlerId];
     s32 i;
 
-    if (gBattleMons[battlerId].item == ITEM_ENIGMA_BERRY)
+    if (getItem(battlerId) == ITEM_ENIGMA_BERRY)
         holdEffect = gEnigmaBerries[battlerId].holdEffect;
     else
-        holdEffect = ItemId_GetHoldEffect(gBattleMons[battlerId].item);
+        holdEffect = ItemId_GetHoldEffect(getItem(battlerId));
 
     gPotentialItemEffectBattler = battlerId;
 
@@ -505,6 +505,7 @@ enum
     ENDTURN_TAILWIND,
     ENDTURN_LUCKY_CHANT,
     ENDTURN_HEAL_BLOCK,
+    ENDTURN_EMBARGO,
     ENDTURN_WISH,
     ENDTURN_RAIN,
     ENDTURN_SANDSTORM,
@@ -709,6 +710,30 @@ u8 DoFieldEndTurnEffects(void)
                     {
                         gSideStatuses[side] &= ~SIDE_STATUS_HEAL_BLOCK;
                         BattleScriptExecute(BattleScript_HealBlockEnds);
+                        effect++;
+                    }
+                }
+                gBattleStruct->turnSideTracker++;
+                if (effect != 0)
+                    break;
+            }
+            if (effect == 0)
+            {
+                gBattleStruct->turnCountersTracker++;
+                gBattleStruct->turnSideTracker = 0;
+            }
+            break;
+        case ENDTURN_EMBARGO:
+            while (gBattleStruct->turnSideTracker < 2)
+            {
+                side = gBattleStruct->turnSideTracker;
+                gActiveBattler = gBattlerAttacker = gSideTimers[side].embargoBattlerId;
+                if (gSideStatuses[side] & SIDE_STATUS_EMBARGO)
+                {
+                    if (--gSideTimers[side].embargoTimer == 0)
+                    {
+                        gSideStatuses[side] &= ~SIDE_STATUS_EMBARGO;
+                        BattleScriptExecute(BattleScript_EmbargoEnds);
                         effect++;
                     }
                 }
@@ -2886,7 +2911,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
     u8 battlerHoldEffectParam, atkHoldEffectParam, defHoldEffectParam;
     u16 atkItem, defItem;
 
-    gLastUsedItem = gBattleMons[battlerId].item;
+    gLastUsedItem = getItem(battlerId);
     if (gLastUsedItem == ITEM_ENIGMA_BERRY)
     {
         battlerHoldEffect = gEnigmaBerries[battlerId].holdEffect;
@@ -2898,7 +2923,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
         battlerHoldEffectParam = ItemId_GetHoldEffectParam(gLastUsedItem);
     }
 
-    atkItem = gBattleMons[gBattlerAttacker].item;
+    atkItem = getItem(gBattlerAttacker);
     if (atkItem == ITEM_ENIGMA_BERRY)
     {
         atkHoldEffect = gEnigmaBerries[gBattlerAttacker].holdEffect;
@@ -2911,7 +2936,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
     }
 
     // def variables are unused
-    defItem = gBattleMons[gBattlerTarget].item;
+    defItem = getItem(gBattlerTarget);
     if (defItem == ITEM_ENIGMA_BERRY)
     {
         defHoldEffect = gEnigmaBerries[gBattlerTarget].holdEffect;
@@ -3247,8 +3272,8 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
     case ITEMEFFECT_MOVE_END:
         for (battlerId = 0; battlerId < gBattlersCount; battlerId++)
         {
-            gLastUsedItem = gBattleMons[battlerId].item;
-            if (gBattleMons[battlerId].item == ITEM_ENIGMA_BERRY)
+            gLastUsedItem = getItem(battlerId);
+            if (getItem(battlerId) == ITEM_ENIGMA_BERRY)
             {
                 battlerHoldEffect = gEnigmaBerries[battlerId].holdEffect;
                 battlerHoldEffectParam = gEnigmaBerries[battlerId].holdEffectParam;
@@ -3663,4 +3688,11 @@ u8 isPunchingMove(u16 move)
             return 1;
     }
     return 0;
+}
+
+u16 getItem(u8 battler)
+{
+    if (gSideStatuses[GET_BATTLER_SIDE(battler)] & SIDE_STATUS_EMBARGO)
+        return ITEM_NONE;
+    return gBattleMons[battler].item;
 }

@@ -133,8 +133,10 @@ static const u8 sText_PkmnTailwindExpired[] = _("{B_ATK_PREFIX3}'s party's\ntail
 static const u8 sText_LuckyChantStarted[] = _("{B_ATK_NAME_WITH_PREFIX}'s party is protected\nfrom critical hits!");
 static const u8 sText_LuckyChantEnded[] = _("{B_ATK_PREFIX3}'s party's\nLUCKY CHANT ended!");
 static const u8 sText_HealBlockStarted[] = _("{B_ATK_NAME_WITH_PREFIX} is preventing\nits opponent from healing!");
-static const u8 sText_HealBlockEnded[] = _("{B_ATK_NAME_WITH_PREFIX}'s\nHEAL BLOCK ended!");
+static const u8 sText_HealBlockEnded[] = _("{B_ATK_PREFIX3}'s\nHEAL BLOCK ended!");
 static const u8 sText_HealBlockPrevented[] = _("HEAL BLOCK prevents\n{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE}!");
+static const u8 sText_EmbargoStarted[] = _("{B_ATK_NAME_WITH_PREFIX} is preventing\nits opponent from using items!");
+static const u8 sText_EmbargoEnded[] = _("{B_ATK_PREFIX3}'s\nEMBARGO ended!");
 static const u8 sText_PkmnUsedSafeguard[] = _("{B_DEF_NAME_WITH_PREFIX}'s party is protected\nby SAFEGUARD!");
 static const u8 sText_PkmnSafeguardExpired[] = _("{B_ATK_PREFIX3}'s party is no longer\nprotected by SAFEGUARD!");
 static const u8 sText_PkmnWentToSleep[] = _("{B_ATK_NAME_WITH_PREFIX} went\nto sleep!");
@@ -971,6 +973,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_STEALTHROCKSET - BATTLESTRINGS_TABLE_START]                 = sText_StealthRockSet,
     [STRINGID_PKMNBLEWAWAYSTEALTHROCK - BATTLESTRINGS_TABLE_START]        = sText_PkmnBlewAwayStealthRock,
     [STRINGID_PKMNHURTBYSTEALTHROCK - BATTLESTRINGS_TABLE_START]          = sText_PkmnHurtByStealthRock,
+    [STRINGID_EMBARGOSTARTED - BATTLESTRINGS_TABLE_START]                 = sText_EmbargoStarted,
+    [STRINGID_EMBARGOENDED - BATTLESTRINGS_TABLE_START]                   = sText_EmbargoEnded,
 };
 
 const u16 gMissStringIds[] =

@@ -312,6 +312,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFeint                  @ EFFECT_FEINT
 	.4byte BattleScript_EffectStealthRock            @ EFFECT_STEALTH_ROCK
 	.4byte BattleScript_EffectDefenseUp3             @ EFFECT_DEFENSE_UP_3
+	.4byte BattleScript_EffectEmbargo                @ EFFECT_EMBARGO
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -3777,6 +3778,12 @@ BattleScript_HealBlockPrevents::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_EmbargoEnds::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_EMBARGOENDED
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
 BattleScript_LeechSeedTurnDrain::
 	playanimation BS_ATTACKER, B_ANIM_LEECH_SEED_DRAIN, sB_ANIM_ARG1
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
@@ -5775,3 +5782,14 @@ BattleScript_EffectStealthRock::
 BattleScript_EffectDefenseUp3::
 	setstatchanger STAT_DEF, 3, FALSE
 	goto BattleScript_EffectStatUp
+
+BattleScript_EffectEmbargo::
+	attackcanceler
+	trySetEmbargo BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring STRINGID_EMBARGOSTARTED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

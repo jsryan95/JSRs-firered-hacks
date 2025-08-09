@@ -204,6 +204,7 @@
 #define SIDE_STATUS_HEAL_BLOCK       (1 << 14)
 #define SIDE_STATUS_STEALTH_ROCK     (1 << 15)
 #define SIDE_STATUS_STEALTH_ROCK_DAMAGED   (1 << 16)
+#define SIDE_STATUS_EMBARGO          (1 << 17)
 
 // Flags describing move's result
 #define MOVE_RESULT_MISSED             (1 << 0)

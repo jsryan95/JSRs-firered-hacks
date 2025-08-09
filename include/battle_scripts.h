@@ -53,6 +53,7 @@ extern const u8 BattleScript_SafeguardEnds[];
 extern const u8 BattleScript_TailwindEnds[];
 extern const u8 BattleScript_LuckyChantEnds[];
 extern const u8 BattleScript_HealBlockEnds[];
+extern const u8 BattleScript_EmbargoEnds[];
 extern const u8 BattleScript_LeechSeedTurnDrain[];
 extern const u8 BattleScript_BideStoringEnergy[];
 extern const u8 BattleScript_BideAttack[];

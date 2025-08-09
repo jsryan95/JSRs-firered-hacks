@@ -1556,3 +1556,8 @@
 	callnative BS_trySetStealthRock
 	.4byte \onFail
 	.endm
+
+	.macro trySetEmbargo onFail:req
+	callnative BS_trySetEmbargo
+	.4byte \onFail
+	.endm

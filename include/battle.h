@@ -259,6 +259,8 @@ struct SideTimer
     u8 luckyChantBattlerId;
     u8 healBlockTimer;
     u8 healBlockBattlerId;
+    u8 embargoTimer;
+    u8 embargoBattlerId;
 };
 
 extern struct SideTimer gSideTimers[];

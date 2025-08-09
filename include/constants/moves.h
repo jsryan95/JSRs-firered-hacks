@@ -452,9 +452,9 @@
 #define MOVE_LUNAR_DANCE 446
 #define MOVE_FEINT 447
 #define MOVE_STEALTH_ROCK 448
+#define MOVE_EMBARGO 449
 
 // generation 4 moves (not implemented)
-#define MOVE_ME_FIRST 449
 #define MOVE_PLUCK 450
 #define MOVE_JUDGMENT 451
 #define MOVE_POWER_TRICK 452
@@ -470,7 +470,7 @@
 #define MOVE_TRICK_ROOM 462
 #define MOVE_METAL_BURST 463
 #define MOVE_LAST_RESORT 464
-#define MOVE_EMBARGO 465
+#define MOVE_ME_FIRST 465
 #define MOVE_CHATTER 466
 #define MOVE_COPYCAT 467
 
