@@ -418,8 +418,8 @@ MtMoon_B2F_EventScript_ItemRevive::
 	finditem ITEM_REVIVE
 	end
 
-MtMoon_B2F_EventScript_ItemAntidote::
-	finditem ITEM_ANTIDOTE
+MtMoon_B2F_EventScript_ItemPechaBerry::
+	finditem ITEM_PECHA_BERRY
 	end
 
 Route11_EventScript_ItemXDefend::
