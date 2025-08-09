@@ -3540,7 +3540,7 @@ u8 GetMoveTarget(u16 move, u8 setTarget)
         else
             targetBattler = GetBattlerAtPosition((GetBattlerPosition(gBattlerAttacker) & BIT_SIDE) ^ BIT_SIDE);
         break;
-    case MOVE_TARGET_USER_OR_SELECTED:
+    case MOVE_TARGET_USER_OR_ALLY:
     case MOVE_TARGET_USER:
         targetBattler = gBattlerAttacker;
         break;
