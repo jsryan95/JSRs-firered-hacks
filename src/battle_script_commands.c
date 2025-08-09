@@ -3289,6 +3289,7 @@ static void Cmd_tryfaintmon(void)
         if (!(gAbsentBattlerFlags & gBitTable[gActiveBattler])
          && gBattleMons[gActiveBattler].hp == 0)
         {
+            gSideTimers[GET_BATTLER_SIDE(gActiveBattler)].retaliateTimer = 2;
             gHitMarker |= HITMARKER_FAINTED(gActiveBattler);
             BattleScriptPush(gBattlescriptCurrInstr + 7);
             gBattlescriptCurrInstr = BS_ptr;
@@ -11055,4 +11056,12 @@ void BS_trySetEmbargo(void)
         gSideTimers[targetSide].embargoBattlerId = gBattlerAttacker;
         gBattlescriptCurrInstr += 9;
     }
+}
+
+void BS_modifyRetaliateDamage(void)
+{
+    if (gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].retaliateTimer == 1)
+        gBattleScripting.dmgMultiplier = 2;
+
+    gBattlescriptCurrInstr += 5;
 }

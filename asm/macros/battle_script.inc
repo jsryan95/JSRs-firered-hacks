@@ -1561,3 +1561,7 @@
 	callnative BS_trySetEmbargo
 	.4byte \onFail
 	.endm
+
+	.macro modifyRetaliateDamage
+	callnative BS_modifyRetaliateDamage
+	.endm

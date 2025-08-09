@@ -313,6 +313,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectStealthRock            @ EFFECT_STEALTH_ROCK
 	.4byte BattleScript_EffectDefenseUp3             @ EFFECT_DEFENSE_UP_3
 	.4byte BattleScript_EffectEmbargo                @ EFFECT_EMBARGO
+	.4byte BattleScript_EffectRetaliate              @ EFFECT_RETALIATE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5820,3 +5821,7 @@ BattleScript_EffectEmbargo::
 	printstring STRINGID_EMBARGOSTARTED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectRetaliate::
+	modifyRetaliateDamage
+	goto BattleScript_EffectHit

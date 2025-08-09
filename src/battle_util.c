@@ -506,6 +506,7 @@ enum
     ENDTURN_LUCKY_CHANT,
     ENDTURN_HEAL_BLOCK,
     ENDTURN_EMBARGO,
+    ENDTURN_RETALIATE,
     ENDTURN_WISH,
     ENDTURN_RAIN,
     ENDTURN_SANDSTORM,
@@ -740,6 +741,20 @@ u8 DoFieldEndTurnEffects(void)
                 gBattleStruct->turnSideTracker++;
                 if (effect != 0)
                     break;
+            }
+            if (effect == 0)
+            {
+                gBattleStruct->turnCountersTracker++;
+                gBattleStruct->turnSideTracker = 0;
+            }
+            break;
+        case ENDTURN_RETALIATE:
+            while (gBattleStruct->turnSideTracker < 2)
+            {
+                side = gBattleStruct->turnSideTracker;
+                if (gSideTimers[side].retaliateTimer)
+                    gSideTimers[side].retaliateTimer--;
+                gBattleStruct->turnSideTracker++;
             }
             if (effect == 0)
             {

@@ -553,8 +553,8 @@ gBattleAnims_Moves::
 	.4byte Move_QUICK_GUARD
 	.4byte Move_WIDE_GUARD
 	.4byte Move_COTTON_GUARD
+	.4byte Move_RETALIATE
 	@ space for generation 5 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -2233,6 +2233,9 @@ Frustration_Continue:
 	blendoff
 	end
 
+Move_RETALIATE:
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_ANGER
 Frustration_Strongest:
 	playsewithpan SE_M_DRAGON_RAGE, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_ShakeMon2, 5, ANIM_ATTACKER, 1, 0, 15, 1

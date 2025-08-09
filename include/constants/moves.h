@@ -537,9 +537,9 @@
 #define MOVE_QUICK_GUARD 527
 #define MOVE_WIDE_GUARD 528
 #define MOVE_COTTON_GUARD 529
+#define MOVE_RETALIATE 530
 
 // generation 5 moves (not implemented)
-#define MOVE_RETALIATE 530
 #define MOVE_ROUND 531
 #define MOVE_MAGIC_ROOM 532
 #define MOVE_GRASS_PLEDGE 533
