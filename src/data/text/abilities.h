@@ -121,6 +121,7 @@ static const u8 sAftermathDescription[] = _("Damages the foe landing the finishi
 static const u8 sSolarPowerDescription[] = _("Boosts SP. ATK, but lowers HP in sunshine.");
 static const u8 sCursedBodyDescription[] = _("Disables a move that makes contact.");
 static const u8 sKlutzDescription[] = _("Can't use held items.");
+static const u8 sStormDrainDescription[] = _("Draws WATER moves.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -249,6 +250,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_SOLAR_POWER] = sSolarPowerDescription,
     [ABILITY_CURSED_BODY] = sCursedBodyDescription,
     [ABILITY_KLUTZ] = sKlutzDescription,
+    [ABILITY_STORM_DRAIN] = sStormDrainDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -378,4 +380,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SOLAR_POWER] = _("SOLAR POWER"),
     [ABILITY_CURSED_BODY] = _("CURSED BODY"),
     [ABILITY_KLUTZ] = _("KLUTZ"),
+    [ABILITY_STORM_DRAIN] = _("STORM DRAIN"),
 };
