@@ -123,6 +123,8 @@ static const u8 sCursedBodyDescription[] = _("Disables a move that makes contact
 static const u8 sKlutzDescription[] = _("Can't use held items.");
 static const u8 sStormDrainDescription[] = _("Draws WATER moves.");
 static const u8 sRegeneratorDescription[] = _("Restores HP upon switching out.");
+static const u8 sPoisonTouchDescription[] = _("May poison when making contact.");
+static const u8 sMoxieDescription[] = _("Boosts ATTACK upon defeating a foe.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -253,6 +255,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_KLUTZ] = sKlutzDescription,
     [ABILITY_STORM_DRAIN] = sStormDrainDescription,
     [ABILITY_REGENERATOR] = sRegeneratorDescription,
+    [ABILITY_POISON_TOUCH] = sPoisonTouchDescription,
+    [ABILITY_MOXIE] = sMoxieDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -384,4 +388,6 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_KLUTZ] = _("KLUTZ"),
     [ABILITY_STORM_DRAIN] = _("STORM DRAIN"),
     [ABILITY_REGENERATOR] = _("REGENERATOR"),
+    [ABILITY_POISON_TOUCH] = _("POISON TOUCH"),
+    [ABILITY_MOXIE] = _("MOXIE"),
 };

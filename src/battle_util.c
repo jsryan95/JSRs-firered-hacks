@@ -2498,6 +2498,38 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 break;
             }
             break;
+        case ABILITYEFFECT_ON_DAMAGE_ATTACKER: // Think contact abilities.
+            switch (gLastUsedAbility)
+            {
+            case ABILITY_POISON_TOUCH:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && gBattleMons[gBattlerTarget].hp != 0
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && TARGET_TURN_DAMAGED
+                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                 && (Random() % 3) == 0)
+                {
+                    gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_POISON;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_ApplySecondaryEffect;
+                    gHitMarker |= HITMARKER_STATUS_ABILITY_EFFECT;
+                    effect++;
+                }
+                break;
+            case ABILITY_MOXIE:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && gBattleMons[gBattlerAttacker].hp != 0
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && TARGET_TURN_DAMAGED
+                 && gBattleMons[gBattlerTarget].hp == 0)
+                {
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_MoxieActivates;
+                    effect++;
+                }
+                break;
+            }
+            break;
         case ABILITYEFFECT_IMMUNITY: // 5
             for (battler = 0; battler < gBattlersCount; battler++)
             {

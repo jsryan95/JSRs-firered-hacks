@@ -4971,6 +4971,17 @@ BattleScript_JustifiedActivates::
 BattleScript_JustifiedEnd::
     return
 
+BattleScript_MoxieActivates::
+    jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_ATK, MAX_STAT_STAGE, BattleScript_MoxieEnd
+    playstatchangeanimation BS_ATTACKER, BIT_ATK, 0
+    setstatchanger STAT_ATK, 1, FALSE
+    statbuffchange MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_MoxieEnd
+    jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoxieEnd
+	printstring STRINGID_MOXIEACTIVATED
+	waitmessage B_WAIT_TIME_SHORT
+BattleScript_MoxieEnd::
+    return
+
 BattleScript_RoughSkinActivates::
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
 	healthbarupdate BS_ATTACKER

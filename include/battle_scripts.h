@@ -199,6 +199,7 @@ extern const u8 BattleScript_ColorChangeActivates[];
 extern const u8 BattleScript_WeakArmorActivates[];
 extern const u8 BattleScript_RattledActivates[];
 extern const u8 BattleScript_JustifiedActivates[];
+extern const u8 BattleScript_MoxieActivates[];
 extern const u8 BattleScript_RoughSkinActivates[];
 extern const u8 BattleScript_MummyActivates[];
 extern const u8 BattleScript_CursedBodyActivates[];
