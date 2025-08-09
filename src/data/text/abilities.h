@@ -28,7 +28,7 @@ static const u8 sLevitateDescription[] = _("Not hit by GROUND attacks.");
 static const u8 sEffectSporeDescription[] = _("Leaves spores on contact.");
 static const u8 sSynchronizeDescription[] = _("Passes on status problems.");
 static const u8 sClearBodyDescription[] = _("Prevents ability reduction.");
-static const u8 sNaturalCureDescription[] = _("Heals upon switching out.");
+static const u8 sNaturalCureDescription[] = _("Heals status upon switching out.");
 static const u8 sLightningRodDescription[] = _("Draws electrical moves.");
 static const u8 sSereneGraceDescription[] = _("Promotes added effects.");
 static const u8 sSwiftSwimDescription[] = _("Raises SPEED in rain.");
@@ -122,6 +122,7 @@ static const u8 sSolarPowerDescription[] = _("Boosts SP. ATK, but lowers HP in s
 static const u8 sCursedBodyDescription[] = _("Disables a move that makes contact.");
 static const u8 sKlutzDescription[] = _("Can't use held items.");
 static const u8 sStormDrainDescription[] = _("Draws WATER moves.");
+static const u8 sRegeneratorDescription[] = _("Restores HP upon switching out.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -251,6 +252,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_CURSED_BODY] = sCursedBodyDescription,
     [ABILITY_KLUTZ] = sKlutzDescription,
     [ABILITY_STORM_DRAIN] = sStormDrainDescription,
+    [ABILITY_REGENERATOR] = sRegeneratorDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -381,4 +383,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_CURSED_BODY] = _("CURSED BODY"),
     [ABILITY_KLUTZ] = _("KLUTZ"),
     [ABILITY_STORM_DRAIN] = _("STORM DRAIN"),
+    [ABILITY_REGENERATOR] = _("REGENERATOR"),
 };

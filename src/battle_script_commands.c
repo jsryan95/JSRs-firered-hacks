@@ -9938,6 +9938,17 @@ static void Cmd_switchoutabilities(void)
                                      &gBattleMons[gActiveBattler].status1);
         MarkBattlerForControllerExec(gActiveBattler);
         break;
+    case ABILITY_REGENERATOR:
+        {
+            u16 hpToHeal = gBattleMons[gActiveBattler].maxHP / 3;
+            if (gBattleMons[gActiveBattler].hp + hpToHeal > gBattleMons[gActiveBattler].maxHP)
+                gBattleMons[gActiveBattler].hp = gBattleMons[gActiveBattler].maxHP;
+            else
+                gBattleMons[gActiveBattler].hp += hpToHeal;
+        }
+        BtlController_EmitSetMonData(BUFFER_A, REQUEST_HP_BATTLE, 0, sizeof(gBattleMons[gActiveBattler].hp), &gBattleMons[gActiveBattler].hp);
+        MarkBattlerForControllerExec(gActiveBattler);
+        break;
     }
 
     gBattlescriptCurrInstr += 2;
