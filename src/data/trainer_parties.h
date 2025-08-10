@@ -335,12 +335,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherGreg[] = {
     {
         .iv = 16,
-        .lvl = 12,
+        .lvl = 11,
         .species = SPECIES_BEEDRILL,
     },
     {
         .iv = 16,
-        .lvl = 12,
+        .lvl = 11,
         .species = SPECIES_BUTTERFREE,
     },
 };
