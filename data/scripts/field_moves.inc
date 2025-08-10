@@ -1,6 +1,7 @@
 EventScript_CutTree::
 	goto_if_questlog EventScript_ReleaseEnd
 	lockall
+	goto_if_unset FLAG_BADGE02_GET, EventScript_CantCutTree
 	checkpartymove MOVE_CUT
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantCutTree
 	setfieldeffectargument 0, VAR_RESULT
