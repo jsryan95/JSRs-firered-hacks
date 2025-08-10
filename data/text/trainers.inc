@@ -50,6 +50,10 @@ Route4_Text_CrissyRematchIntro::
 	.string "I always catch mushroom POKéMON\n"
 	.string "on MT. MOON.$"
 
+Route4_Text_StuartRematchIntro::
+	.string "I'm still all about FLYING-type\n"
+	.string "POKéMON.$"
+
 Route6_Text_RickyRematchIntro::
 	.string "Oh! You're that nosy kid who\n"
 	.string "eavesdropped on us!$"

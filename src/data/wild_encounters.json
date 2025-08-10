@@ -22407,6 +22407,61 @@
         {
           "map": "MAP_CERULEAN_CITY",
           "base_label": "sCeruleanCity_FireRed",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 12,
+                "species": "SPECIES_VULPIX"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_VULPIX"
+              },
+              {
+                "min_level": 1,
+                "max_level": 10,
+                "species": "SPECIES_PICHU"
+              },
+              {
+                "min_level": 1,
+                "max_level": 10,
+                "species": "SPECIES_PICHU"
+              },
+              {
+                "min_level": 1,
+                "max_level": 10,
+                "species": "SPECIES_IGGLYBUFF"
+              },
+              {
+                "min_level": 1,
+                "max_level": 10,
+                "species": "SPECIES_IGGLYBUFF"
+              },
+              {
+                "min_level": 6,
+                "max_level": 12,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 6,
+                "max_level": 12,
+                "species": "SPECIES_VULPIX"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CHANSEY"
+              }
+            ]
+          },
           "water_mons": {
             "encounter_rate": 1,
             "mons": [
@@ -22489,61 +22544,6 @@
                 "min_level": 25,
                 "max_level": 35,
                 "species": "SPECIES_PSYDUCK"
-              }
-            ]
-          },
-          "land_mons": {
-            "encounter_rate": 7,
-            "mons": [
-              {
-                "min_level": 6,
-                "max_level": 12,
-                "species": "SPECIES_VULPIX"
-              },
-              {
-                "min_level": 7,
-                "max_level": 10,
-                "species": "SPECIES_VULPIX"
-              },
-              {
-                "min_level": 1,
-                "max_level": 10,
-                "species": "SPECIES_PICHU"
-              },
-              {
-                "min_level": 1,
-                "max_level": 10,
-                "species": "SPECIES_PICHU"
-              },
-              {
-                "min_level": 1,
-                "max_level": 10,
-                "species": "SPECIES_IGGLYBUFF"
-              },
-              {
-                "min_level": 1,
-                "max_level": 10,
-                "species": "SPECIES_IGGLYBUFF"
-              },
-              {
-                "min_level": 6,
-                "max_level": 12,
-                "species": "SPECIES_ABRA"
-              },
-              {
-                "min_level": 7,
-                "max_level": 10,
-                "species": "SPECIES_ABRA"
-              },
-              {
-                "min_level": 6,
-                "max_level": 12,
-                "species": "SPECIES_VULPIX"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_CHANSEY"
               }
             ]
           }

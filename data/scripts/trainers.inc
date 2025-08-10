@@ -94,6 +94,18 @@ Route3_EventScript_RobinRematch::
 	msgbox Route3_Text_RobinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route4_EventScript_Stuart::
+	trainerbattle_single TRAINER_BIRD_KEEPER_STUART, Route4_Text_StuartIntro, Route4_Text_StuartDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route4_EventScript_StuartRematch
+	msgbox Route4_Text_StuartPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route4_EventScript_StuartRematch::
+	trainerbattle_rematch TRAINER_BIRD_KEEPER_STUART, Route4_Text_StuartRematchIntro, Route4_Text_StuartDefeat
+	msgbox Route4_Text_StuartPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route4_EventScript_Crissy::
 	trainerbattle_single TRAINER_LASS_CRISSY, Route4_Text_CrissyIntro, Route4_Text_CrissyDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle

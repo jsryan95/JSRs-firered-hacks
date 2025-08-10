@@ -77,3 +77,14 @@ Route4_Text_PeopleLikeAndRespectBrock::
     .string "People like and respect him.\p"
     .string "I want to become a GYM LEADER\n"
     .string "like him.$"
+
+Route4_Text_StuartIntro::
+    .string "I'm a big fan of BIRD-type POKéMON.\n"
+    .string "How about you?.$"
+
+Route4_Text_StuartDefeat::
+    .string "What do mean it's FLYING-type?!$"
+
+Route4_Text_StuartPostBattle::
+    .string "Maybe I shouldn't just focus on one\n"
+    .string "type of POKéMON after all.$"

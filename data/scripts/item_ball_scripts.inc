@@ -54,6 +54,10 @@ Route4_EventScript_ItemTM05::
 	finditem ITEM_TM05
 	end
 
+Route4_EventScript_ItemSharpBeak::
+	finditem ITEM_SHARP_BEAK
+	end
+
 Route24_EventScript_ItemTM45::
 	finditem ITEM_TM45
 	end
