@@ -22,21 +22,21 @@
         {
           "type": "water_mons",
           "encounter_rates": [
-            60,
-            30,
-            5,
-            4,
-            1
+            40,
+            20,
+            20,
+            10,
+            10
           ]
         },
         {
           "type": "rock_smash_mons",
           "encounter_rates": [
-            60,
-            30,
-            5,
-            4,
-            1
+            40,
+            20,
+            20,
+            10,
+            10
           ]
         },
         {
@@ -48,10 +48,10 @@
             20,
             20,
             40,
-            40,
-            15,
-            4,
-            1
+            20,
+            20,
+            10,
+            10
           ],
           "groups": {
             "old_rod": [
@@ -20919,13 +20919,13 @@
             "mons": [
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 15,
                 "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_MAGIKARP"
+                "max_level": 10,
+                "species": "SPECIES_POLIWAG"
               },
               {
                 "min_level": 5,
@@ -22066,13 +22066,13 @@
             "mons": [
               {
                 "min_level": 5,
-                "max_level": 10,
+                "max_level": 15,
                 "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_TENTACOOL"
               },
               {
                 "min_level": 5,
@@ -22244,13 +22244,13 @@
             "mons": [
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 15,
                 "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_MAGIKARP"
+                "max_level": 10,
+                "species": "SPECIES_POLIWAG"
               },
               {
                 "min_level": 5,
