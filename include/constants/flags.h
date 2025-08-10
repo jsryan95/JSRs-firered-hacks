@@ -140,7 +140,7 @@
 #define FLAG_HIDE_TWO_ISLAND_BEAUTY                        0x07C
 #define FLAG_HIDE_TWO_ISLAND_SUPER_NERD                    0x07D
 #define FLAG_HIDE_THREE_ISLAND_ANTIBIKERS                  0x07E
-#define FLAG_0x07F                                         0x07F
+#define FLAG_HIDE_SEA_COTTAGE_VOLTORB                      0x07F
 #define FLAG_HIDE_ROUTE_16_SNORLAX                         0x080
 #define FLAG_HIDE_MEWTWO                                   0x081
 #define FLAG_HIDE_ARTICUNO                                 0x082
@@ -765,7 +765,7 @@
 #define FLAG_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL            0x2E2
 #define FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE             0x2E3
 #define FLAG_FOUGHT_DEOXYS                               0x2E4
-#define FLAG_0x2E5                                       0x2E5
+#define FLAG_FOUGHT_SEA_COTTAGE_VOLTORB                  0x2E5
 #define FLAG_0x2E6                                       0x2E6
 #define FLAG_0x2E7                                       0x2E7
 #define FLAG_0x2E8                                       0x2E8

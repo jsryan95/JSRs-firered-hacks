@@ -8,6 +8,7 @@ Route25_SeaCottage_MapScripts::
 Route25_SeaCottage_OnTransition::
 	call_if_unset FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_HideClefairyBill
 	call_if_set FLAG_GOT_SS_TICKET, Route25_SeaCottage_EventScript_SetReturnedAfterSSTicket
+	call_if_unset FLAG_FOUGHT_SEA_COTTAGE_VOLTORB, Route25_SeaCottage_EventScript_ShowVoltorb
 	end
 
 Route25_SeaCottage_EventScript_HideClefairyBill::
@@ -18,6 +19,10 @@ Route25_SeaCottage_EventScript_HideClefairyBill::
 Route25_SeaCottage_EventScript_SetReturnedAfterSSTicket::
 	setflag RETURN_AFTER_SS_TICKET
 	return
+
+Route25_SeaCottage_EventScript_ShowVoltorb::
+    clearflag FLAG_HIDE_SEA_COTTAGE_VOLTORB
+    return
 
 Route25_SeaCottage_EventScript_Bill::
 	lock
@@ -294,3 +299,30 @@ Route25_SeaCottage_Movement_BillWalkToMiddleOfRoom::
 Route25_SeaCottage_Movement_BillExitTeleporter::
 	walk_down
 	step_end
+
+Route25_SeaCottage_EventScript_Voltorb::
+	goto_if_questlog EventScript_ReleaseEnd
+	lock
+	faceplayer
+	setwildbattle SPECIES_VOLTORB, 10
+	waitse
+	playmoncry SPECIES_VOLTORB, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	dowildbattle
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special QuestLog_CutRecording
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route25_SeaCottage_EventScript_FoughtVoltorb
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route25_SeaCottage_EventScript_FoughtVoltorb
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route25_SeaCottage_EventScript_FoughtVoltorb
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, Route25_SeaCottage_EventScript_FoughtVoltorb
+	setflag FLAG_FOUGHT_SEA_COTTAGE_VOLTORB
+	release
+	end
+
+Route25_SeaCottage_EventScript_FoughtVoltorb::
+	setflag FLAG_FOUGHT_SEA_COTTAGE_VOLTORB
+	goto EventScript_RemoveStaticMon
+	end
