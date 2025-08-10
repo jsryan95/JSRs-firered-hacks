@@ -66,6 +66,10 @@ Route25_EventScript_ItemTM43::
 	finditem ITEM_TM43
 	end
 
+Route25_EventScript_SilkScarf::
+	finditem ITEM_SILK_SCARF
+	end
+
 SSAnne_1F_Room2_EventScript_ItemTM31::
 	finditem ITEM_TM31
 	end
