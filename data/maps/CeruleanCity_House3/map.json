@@ -3,7 +3,7 @@
   "name": "CeruleanCity_House3",
   "layout": "LAYOUT_HOUSE1",
   "music": "MUS_FUCHSIA",
-  "region_map_section": "MAPSEC_CERULEAN_CITY",
+  "region_map_section": "MAPSEC_VERMILION_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -56,8 +56,8 @@
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": "3"
     },
     {
       "x": 5,
