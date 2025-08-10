@@ -327,7 +327,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_YoungsterSammy[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton[] = {
     {
         .iv = 16,
-        .lvl = 12,
+        .lvl = 10,
         .species = SPECIES_PINSIR,
     },
 };
@@ -10478,7 +10478,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_CoolCoupleLexNya2[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton2[] = {
     {
         .iv = 32,
-        .lvl = 19,
+        .lvl = 17,
         .species = SPECIES_PINSIR,
     },
 };
@@ -10486,12 +10486,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton2[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton3[] = {
     {
         .iv = 48,
-        .lvl = 27,
+        .lvl = 25,
         .species = SPECIES_PINSIR,
     },
     {
         .iv = 48,
-        .lvl = 27,
+        .lvl = 25,
         .species = SPECIES_PINSIR,
     },
 };
@@ -10499,12 +10499,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton3[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton4[] = {
     {
         .iv = 64,
-        .lvl = 51,
+        .lvl = 49,
         .species = SPECIES_PINSIR,
     },
     {
         .iv = 64,
-        .lvl = 51,
+        .lvl = 49,
         .species = SPECIES_PINSIR,
     },
 };
