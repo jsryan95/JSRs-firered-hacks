@@ -591,8 +591,9 @@
 #define MOVE_KO_PUNCH 577
 #define MOVE_POISON_GALE 578
 #define MOVE_DESPAIR 579
+#define MOVE_POWER_FANG 580
 
-#define MOVES_COUNT 580
+#define MOVES_COUNT 581
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

@@ -605,6 +605,7 @@ gBattleAnims_Moves::
     .4byte Move_KO_PUNCH
     .4byte Move_POISON_GALE
     .4byte Move_DESPAIR
+    .4byte Move_POWER_FANG
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -6292,6 +6293,7 @@ Move_RAIN_DANCE:
 	end
 
 Move_BITE:
+Move_POWER_FANG:
 	loadspritegfx ANIM_TAG_SHARP_TEETH
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
