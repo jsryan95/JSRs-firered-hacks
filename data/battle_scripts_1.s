@@ -315,6 +315,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectEmbargo                @ EFFECT_EMBARGO
 	.4byte BattleScript_EffectRetaliate              @ EFFECT_RETALIATE
 	.4byte BattleScript_EffectDespair                @ EFFECT_DESPAIR
+	.4byte BattleScript_EffectPluck                  @ EFFECT_PLUCK
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5874,3 +5875,8 @@ BattleScript_DespairTargetProtectEnd:
 	waitmessage B_WAIT_TIME_LONG
 	tryfaintmon BS_ATTACKER
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectPluck::
+    checkPluck BattleScript_EffectHit
+	setmoveeffect MOVE_EFFECT_KNOCK_OFF
+	goto BattleScript_EffectHit

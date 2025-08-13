@@ -1570,3 +1570,8 @@
 	callnative BS_tryDespair
 	.4byte \onFail
 	.endm
+
+	.macro checkPluck onFail:req
+	callnative BS_checkPluck
+	.4byte \onFail
+	.endm

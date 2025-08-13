@@ -533,4 +533,6 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_POISON_GALE] = _("POISON GALE"),
     [MOVE_DESPAIR] = _("DESPAIR"),
     [MOVE_POWER_FANG] = _("POWER FANG"),
+    [MOVE_PLUCK] = _("PLUCK"),
+    [MOVE_BUG_BITE] = _("BUG BITE"),
 };

@@ -11085,3 +11085,16 @@ void BS_tryDespair(void)
         gBattlescriptCurrInstr += 9;
     }
 }
+
+void BS_checkPluck(void) {
+    if (gBattleMons[gBattlerTarget].item < FIRST_BERRY_INDEX
+            || gBattleMons[gBattlerTarget].item > LAST_BERRY_INDEX)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gBattleScripting.dmgMultiplier = 2;
+        gBattlescriptCurrInstr += 9;
+    }
+}

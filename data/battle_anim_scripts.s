@@ -471,9 +471,9 @@ gBattleAnims_Moves::
     .4byte Move_FEINT
     .4byte Move_STEALTH_ROCK
     .4byte Move_EMBARGO
+    .4byte Move_PLUCK
+    .4byte Move_BUG_BITE
     @ space for generation 4 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -1903,6 +1903,8 @@ Move_POWER_WHIP:
 	end
 
 Move_DRILL_PECK:
+Move_PLUCK:
+Move_BUG_BITE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_WHIRLWIND_LINES
 	createsprite gBowMonSpriteTemplate, ANIM_ATTACKER, 2, 0

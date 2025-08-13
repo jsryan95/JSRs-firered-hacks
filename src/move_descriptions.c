@@ -517,6 +517,7 @@ const u8 gMoveDescription_Retaliate[] = _("Power doubles if\nan ally fainted\non
 const u8 gMoveDescription_PoisonGale[] = _("Creates polluted\nwind to attack.\nPoisons the foe.");
 const u8 gMoveDescription_Despair[] = _("The user faints,\nbut sharply lowers\nthe foe's DEFENSE\nand SP. DEF.");
 const u8 gMoveDescription_PowerFang[] = _("A bite infused\nwith psychic power.\nIt may paralyze\nthe foe.");
+const u8 gMoveDescription_Pluck[] = _("If the foe has a\nberry, this attack\nremoves it and has\nincreased power.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1052,4 +1053,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POISON_GALE - 1] = gMoveDescription_PoisonGale,
     [MOVE_DESPAIR - 1] = gMoveDescription_Despair,
     [MOVE_POWER_FANG - 1] = gMoveDescription_PowerFang,
+    [MOVE_PLUCK - 1] = gMoveDescription_Pluck,
+    [MOVE_BUG_BITE - 1] = gMoveDescription_Pluck,
 };
