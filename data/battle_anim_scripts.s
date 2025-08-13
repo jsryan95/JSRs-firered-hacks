@@ -603,6 +603,7 @@ gBattleAnims_Moves::
     .4byte Move_DRAGON_SHOUT
     .4byte Move_STAR_SHOOTER
     .4byte Move_KO_PUNCH
+    .4byte Move_POISON_GALE
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -4241,6 +4242,7 @@ Move_UPROAR:
 Move_HEAT_WAVE:
 Move_LAVA_PLUME:
 Move_SEARING_SHOT:
+Move_POISON_GALE:
 	loadspritegfx ANIM_TAG_FLYING_DIRT
 	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_FLYING_DIRT, 0, 6, 6, RGB_RED
 	createvisualtask AnimTask_LoadSandstormBackground, 5, TRUE
