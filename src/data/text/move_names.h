@@ -531,4 +531,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_EMBARGO] = _("EMBARGO"),
     [MOVE_RETALIATE] = _("RETALIATE"),
     [MOVE_POISON_GALE] = _("POISON GALE"),
+    [MOVE_DESPAIR] = _("DESPAIR"),
 };

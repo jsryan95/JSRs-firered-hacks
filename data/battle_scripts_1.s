@@ -314,6 +314,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectDefenseUp3             @ EFFECT_DEFENSE_UP_3
 	.4byte BattleScript_EffectEmbargo                @ EFFECT_EMBARGO
 	.4byte BattleScript_EffectRetaliate              @ EFFECT_RETALIATE
+	.4byte BattleScript_EffectDespair                @ EFFECT_DESPAIR
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5825,3 +5826,51 @@ BattleScript_EffectEmbargo::
 BattleScript_EffectRetaliate::
 	modifyRetaliateDamage
 	goto BattleScript_EffectHit
+
+BattleScript_EffectDespair::
+	attackcanceler
+	jumpifbyte CMP_EQUAL, cMISS_TYPE, B_MSG_PROTECTED, BattleScript_DespairTargetProtect
+	attackstring
+	ppreduce
+	tryDespair BattleScript_ButItFailed
+	setatkhptozero
+	attackanimation
+	waitanimation
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_EffectDespairPrintNoEffect
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_TARGET, BIT_DEF | BIT_SPDEF, STAT_CHANGE_NEGATIVE | STAT_CHANGE_BY_TWO | STAT_CHANGE_MULTIPLE_STATS
+	playstatchangeanimation BS_TARGET, BIT_DEF, STAT_CHANGE_NEGATIVE | STAT_CHANGE_BY_TWO
+	setstatchanger STAT_DEF, 2, TRUE
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_EffectDespairTrySpDef
+@ Greater than B_MSG_DEFENDER_STAT_FELL is checking if the stat cannot decrease
+	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, B_MSG_DEFENDER_STAT_FELL, BattleScript_EffectDespairTrySpDef
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_EffectDespairTrySpDef:
+	playstatchangeanimation BS_TARGET, BIT_SPDEF, STAT_CHANGE_NEGATIVE | STAT_CHANGE_BY_TWO
+	setstatchanger STAT_SPDEF, 2, TRUE
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_EffectDespairTryFaint
+@ Greater than B_MSG_DEFENDER_STAT_FELL is checking if the stat cannot decrease
+	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, B_MSG_DEFENDER_STAT_FELL, BattleScript_EffectDespairTryFaint
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_EffectDespairTryFaint:
+	tryfaintmon BS_ATTACKER
+	goto BattleScript_MoveEnd
+BattleScript_EffectDespairPrintNoEffect:
+	printstring STRINGID_BUTNOEFFECT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_EffectDespairTryFaint
+@ If the target is protected there's no need to check the target's stats or animate, the user will just faint
+BattleScript_DespairTargetProtect:
+	attackstring
+	ppreduce
+	tryDespair BattleScript_DespairTargetProtectEnd
+BattleScript_DespairTargetProtectEnd:
+	setatkhptozero
+	pause B_WAIT_TIME_LONG
+	effectivenesssound
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_ATTACKER
+	goto BattleScript_MoveEnd

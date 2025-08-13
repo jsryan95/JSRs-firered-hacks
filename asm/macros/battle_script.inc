@@ -1565,3 +1565,8 @@
 	.macro modifyRetaliateDamage
 	callnative BS_modifyRetaliateDamage
 	.endm
+
+	.macro tryDespair onFail:req
+	callnative BS_tryDespair
+	.4byte \onFail
+	.endm

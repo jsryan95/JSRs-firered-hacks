@@ -604,6 +604,7 @@ gBattleAnims_Moves::
     .4byte Move_STAR_SHOOTER
     .4byte Move_KO_PUNCH
     .4byte Move_POISON_GALE
+    .4byte Move_DESPAIR
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -4292,6 +4293,7 @@ Move_TORMENT:
 	end
 
 Move_MEMENTO:
+Move_DESPAIR:
 	setalpha 0, 16
 	delay 1
 	createvisualtask AnimTask_InitMementoShadow, 2

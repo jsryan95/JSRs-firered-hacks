@@ -11065,3 +11065,23 @@ void BS_modifyRetaliateDamage(void)
 
     gBattlescriptCurrInstr += 5;
 }
+
+void BS_tryDespair(void)
+{
+    if (gBattleMons[gBattlerTarget].statStages[STAT_DEF] == MIN_STAT_STAGE
+        && gBattleMons[gBattlerTarget].statStages[STAT_SPDEF] == MIN_STAT_STAGE
+        && gBattleCommunication[MISS_TYPE] != B_MSG_PROTECTED)
+    {
+        // Failed, unprotected target already has minimum Defence and Special Defence.
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        // Success, drop user's HP bar to 0
+        gActiveBattler = gBattlerAttacker;
+        gBattleMoveDamage = gBattleMons[gActiveBattler].hp;
+        BtlController_EmitHealthBarUpdate(BUFFER_A, INSTANT_HP_BAR_DROP);
+        MarkBattlerForControllerExec(gActiveBattler);
+        gBattlescriptCurrInstr += 9;
+    }
+}
