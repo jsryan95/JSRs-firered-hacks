@@ -455,9 +455,9 @@
 #define MOVE_EMBARGO 449
 #define MOVE_PLUCK 450
 #define MOVE_BUG_BITE 451
+#define MOVE_POWER_TRICK 452
 
 // generation 4 moves (not implemented)
-#define MOVE_POWER_TRICK 452
 #define MOVE_PSYCHO_SHIFT 453
 #define MOVE_ACUPRESSURE 454
 #define MOVE_CHATTER 455

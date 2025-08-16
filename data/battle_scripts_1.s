@@ -319,6 +319,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectParalyzeHit            @ EFFECT_NEUROTOXIN
 	.4byte BattleScript_EffectIonTransfer            @ EFFECT_ION_TRANSFER
 	.4byte BattleScript_EffectCircleThrow            @ EFFECT_CIRCLE_THROW
+	.4byte BattleScript_EffectPowerTrick             @ EFFECT_POWER_TRICK
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5929,3 +5930,14 @@ BattleScript_AttackForceOut::
 	jumpifability BS_TARGET, ABILITY_SUCTION_CUPS, BattleScript_AbilityPreventsPhasingOut
 	jumpifstatus4 BS_TARGET, STATUS4_ROOTED, BattleScript_PrintMonIsRooted
 	forcerandomswitch BattleScript_ButItFailed
+
+BattleScript_EffectPowerTrick::
+	attackcanceler
+	attackstring
+	ppreduce
+	powerTrick
+	attackanimation
+	waitanimation
+	printstring STRINGID_USERSWAPPEDATKANDDEF
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

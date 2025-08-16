@@ -473,8 +473,8 @@ gBattleAnims_Moves::
     .4byte Move_EMBARGO
     .4byte Move_PLUCK
     .4byte Move_BUG_BITE
+    .4byte Move_POWER_TRICK
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -1677,6 +1677,7 @@ Move_SWORDS_DANCE:
 
 Move_PSYCH_UP:
 Move_WORK_UP:
+Move_POWER_TRICK:
 	loadspritegfx ANIM_TAG_SPIRAL
 	monbg ANIM_ATK_PARTNER
 	createvisualtask AnimTask_BlendColorCycleExclude, 2, 1, 2, 6, 1, 11, RGB_BLACK

@@ -11105,7 +11105,8 @@ void BS_tryDespair(void)
     }
 }
 
-void BS_checkPluck(void) {
+void BS_checkPluck(void)
+{
     if (gBattleMons[gBattlerTarget].item < FIRST_BERRY_INDEX
             || gBattleMons[gBattlerTarget].item > LAST_BERRY_INDEX)
     {
@@ -11116,4 +11117,12 @@ void BS_checkPluck(void) {
         gBattleScripting.dmgMultiplier = 2;
         gBattlescriptCurrInstr += 9;
     }
+}
+
+void BS_powerTrick(void)
+{
+    u8 oldAttack = gBattleMons[gBattlerAttacker].attack;
+    gBattleMons[gBattlerAttacker].attack = gBattleMons[gBattlerAttacker].defense;
+    gBattleMons[gBattlerAttacker].defense = oldAttack;
+    gBattlescriptCurrInstr += 5;
 }

@@ -1575,3 +1575,7 @@
 	callnative BS_checkPluck
 	.4byte \onFail
 	.endm
+
+	.macro powerTrick
+	callnative BS_powerTrick
+	.endm
