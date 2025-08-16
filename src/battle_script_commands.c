@@ -1579,6 +1579,9 @@ static void ModulateDmgForType(s32 typeMatchupRow)
     if (gBattleMoves[gCurrentMove].effect == EFFECT_MAGNET_SHOCK
             && TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_STEEL)
         ModulateDmgByType(TYPE_MUL_SUPER_EFFECTIVE);
+    else if (gBattleMoves[gCurrentMove].effect == EFFECT_NEUROTOXIN
+            && TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_PSYCHIC)
+        ModulateDmgByType(TYPE_MUL_SUPER_EFFECTIVE);
     else if (TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_GHOST
             && TYPE_EFFECT_MULTIPLIER(typeMatchupRow) == 0
             && (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT

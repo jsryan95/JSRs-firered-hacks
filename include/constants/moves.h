@@ -592,8 +592,9 @@
 #define MOVE_POISON_GALE 578
 #define MOVE_DESPAIR 579
 #define MOVE_POWER_FANG 580
+#define MOVE_NEUROTOXIN 581
 
-#define MOVES_COUNT 581
+#define MOVES_COUNT 582
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

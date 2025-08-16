@@ -518,6 +518,7 @@ const u8 gMoveDescription_PoisonGale[] = _("Creates polluted\nwind to attack.\nP
 const u8 gMoveDescription_Despair[] = _("The user faints,\nbut sharply lowers\nthe foe's DEFENSE\nand SP. DEF.");
 const u8 gMoveDescription_PowerFang[] = _("A bite infused\nwith psychic power.\nIt may paralyze\nthe foe.");
 const u8 gMoveDescription_Pluck[] = _("If the foe has a\nberry, this attack\nremoves it and has\nincreased power.");
+const u8 gMoveDescription_Neurotoxin[] = _("Injects venom that\ndeals great damage\nto PSYCHC-types.\nMay paralyze.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1055,4 +1056,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POWER_FANG - 1] = gMoveDescription_PowerFang,
     [MOVE_PLUCK - 1] = gMoveDescription_Pluck,
     [MOVE_BUG_BITE - 1] = gMoveDescription_Pluck,
+    [MOVE_NEUROTOXIN - 1] = gMoveDescription_Neurotoxin,
 };

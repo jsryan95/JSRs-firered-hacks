@@ -316,6 +316,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectRetaliate              @ EFFECT_RETALIATE
 	.4byte BattleScript_EffectDespair                @ EFFECT_DESPAIR
 	.4byte BattleScript_EffectPluck                  @ EFFECT_PLUCK
+	.4byte BattleScript_EffectParalyzeHit            @ EFFECT_NEUROTOXIN
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler

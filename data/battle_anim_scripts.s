@@ -606,6 +606,7 @@ gBattleAnims_Moves::
     .4byte Move_POISON_GALE
     .4byte Move_DESPAIR
     .4byte Move_POWER_FANG
+    .4byte Move_NEUROTOXIN
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -1077,6 +1078,7 @@ Move_HEAD_SMASH:
 	end
 
 Move_POISON_STING:
+Move_NEUROTOXIN:
 	loadspritegfx ANIM_TAG_NEEDLE
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_POISON_BUBBLE

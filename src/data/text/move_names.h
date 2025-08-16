@@ -535,4 +535,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_POWER_FANG] = _("POWER FANG"),
     [MOVE_PLUCK] = _("PLUCK"),
     [MOVE_BUG_BITE] = _("BUG BITE"),
+    [MOVE_NEUROTOXIN] = _("NEUROTOXIN"),
 };
