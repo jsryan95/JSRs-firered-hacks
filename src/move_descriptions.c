@@ -520,6 +520,8 @@ const u8 gMoveDescription_PowerFang[] = _("A bite infused\nwith psychic power.\n
 const u8 gMoveDescription_Pluck[] = _("If the foe has a\nberry, this attack\nremoves it and has\nincreased power.");
 const u8 gMoveDescription_Neurotoxin[] = _("Injects venom that\ndeals great damage\nto PSYCHC-types.\nMay paralyze.");
 const u8 gMoveDescription_IonTransfer[] = _("Harshly lowers the\nfoe's SP. DEF and\nsharply raises the\nuser's.");
+const u8 gMoveDescription_CircleThrow[] = _("Throws the foe and\ndrags out another\nPOKéMON in its\nparty.");
+const u8 gMoveDescription_DragonTail[] = _("Knocks away the foe\nand drags out\nanother POKéMON in\nits party.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1059,4 +1061,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_BUG_BITE - 1] = gMoveDescription_Pluck,
     [MOVE_NEUROTOXIN - 1] = gMoveDescription_Neurotoxin,
     [MOVE_ION_TRANSFER - 1] = gMoveDescription_IonTransfer,
+    [MOVE_CIRCLE_THROW - 1] = gMoveDescription_CircleThrow,
+    [MOVE_DRAGON_TAIL - 1] = gMoveDescription_DragonTail,
 };

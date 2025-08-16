@@ -291,7 +291,7 @@
 #define MOVE_EFFECT_THRASH              53
 #define MOVE_EFFECT_KNOCK_OFF           54
 #define MOVE_EFFECT_REMOVE_SLEEP        55
-#define MOVE_EFFECT_NOTHING_38          56
+#define MOVE_EFFECT_FORCE_OUT           56
 #define MOVE_EFFECT_NOTHING_39          57
 #define MOVE_EFFECT_NOTHING_3A          58
 #define MOVE_EFFECT_SP_ATK_TWO_DOWN     59

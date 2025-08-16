@@ -554,9 +554,9 @@ gBattleAnims_Moves::
 	.4byte Move_WIDE_GUARD
 	.4byte Move_COTTON_GUARD
 	.4byte Move_RETALIATE
+	.4byte Move_CIRCLE_THROW
+	.4byte Move_DRAGON_TAIL
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -7877,6 +7877,8 @@ Move_COUNTER:
 
 Move_VITAL_THROW:
 Move_STORM_THROW:
+Move_CIRCLE_THROW:
+Move_DRAGON_TAIL:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
 	setalpha 12, 8

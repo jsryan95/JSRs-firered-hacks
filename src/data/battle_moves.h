@@ -7531,4 +7531,32 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAGIC_COAT_AFFECTED,
     },
+
+    [MOVE_CIRCLE_THROW] =
+    {
+        .effect = EFFECT_CIRCLE_THROW,
+        .power = 60,
+        .type = TYPE_FIGHTING,
+        .category = CATEGORY_PHYSICAL,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = -6,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_DRAGON_TAIL] =
+    {
+        .effect = EFFECT_CIRCLE_THROW,
+        .power = 60,
+        .type = TYPE_DRAGON,
+        .category = CATEGORY_PHYSICAL,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = -6,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
 };

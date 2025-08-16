@@ -3189,6 +3189,19 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_SpdDown;
                 break;
+            case MOVE_EFFECT_FORCE_OUT: // Circle Throw, Dragon Tail
+                if (gBattleMons[gBattlerTarget].hp > 0
+                        && gBattleMons[gBattlerAttacker].hp > 0
+                        && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                        && TARGET_TURN_DAMAGED)
+                {
+                    BattleScriptPush(gBattlescriptCurrInstr + 1);
+                    gBattlescriptCurrInstr = BattleScript_AttackForceOut;
+                }
+                else
+                {
+                    gBattlescriptCurrInstr++;
+                }
 
             }
         }
@@ -7475,7 +7488,10 @@ static bool8 TryDoForceSwitchOut(void)
         *(gBattleStruct->battlerPartyIndexes + gBattlerTarget) = gBattlerPartyIndexes[gBattlerTarget];
     }
 
-    gBattlescriptCurrInstr = BattleScript_SuccessForceOut;
+    if (gBattleMoves[gCurrentMove].category == CATEGORY_STATUS)
+        gBattlescriptCurrInstr = BattleScript_SuccessForceOutAnim;
+    else
+        gBattlescriptCurrInstr = BattleScript_SuccessForceOut;
     return TRUE;
 }
 
