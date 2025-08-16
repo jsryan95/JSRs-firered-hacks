@@ -607,6 +607,7 @@ gBattleAnims_Moves::
     .4byte Move_DESPAIR
     .4byte Move_POWER_FANG
     .4byte Move_NEUROTOXIN
+    .4byte Move_ION_TRANSFER
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -4789,6 +4790,7 @@ Move_SKILL_SWAP:
 Move_HEART_SWAP:
 Move_POWER_SWAP:
 Move_GUARD_SWAP:
+Move_ION_TRANSFER:
 	loadspritegfx ANIM_TAG_BLUEGREEN_ORB
 	call SetPsychicBackground
 	createvisualtask AnimTask_SkillSwap, 3, ANIM_TARGET

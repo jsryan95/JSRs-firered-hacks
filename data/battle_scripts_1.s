@@ -317,6 +317,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectDespair                @ EFFECT_DESPAIR
 	.4byte BattleScript_EffectPluck                  @ EFFECT_PLUCK
 	.4byte BattleScript_EffectParalyzeHit            @ EFFECT_NEUROTOXIN
+	.4byte BattleScript_EffectIonTransfer            @ EFFECT_ION_TRANSFER
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5881,3 +5882,39 @@ BattleScript_EffectPluck::
     checkPluck BattleScript_EffectHit
 	setmoveeffect MOVE_EFFECT_KNOCK_OFF
 	goto BattleScript_EffectHit
+
+BattleScript_EffectIonTransfer::
+	setstatchanger STAT_SPDEF, 2, TRUE
+	attackcanceler
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailedAtkStringPpReduce
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_LESS_THAN, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_IonTransferDoAnim
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_FELL_EMPTY, BattleScript_MoveEnd
+	pause B_WAIT_TIME_SHORT
+	goto BattleScript_IonTransferCantLowerStat
+BattleScript_IonTransferDoAnim::
+	attackanimation
+	waitanimation
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
+	setstatchanger STAT_SPDEF, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_IonTransferStatUpAnim
+	pause B_WAIT_TIME_SHORT
+	goto BattleScript_MoveEnd
+BattleScript_IonTransferStatUpAnim::
+	setgraphicalstatchangevalues
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_IonTransferCantLowerStat::
+	printfromtable gStatDownStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
