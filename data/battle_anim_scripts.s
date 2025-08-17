@@ -610,6 +610,7 @@ gBattleAnims_Moves::
     .4byte Move_ION_TRANSFER
     .4byte Move_EXPUNGE
     .4byte Move_UPROOT
+    .4byte Move_DONKEY_KICK
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -1286,6 +1287,7 @@ SetImpactContestsBG:
 	goto SetImpactBackgroundRet
 
 Move_MEGA_KICK:
+Move_DONKEY_KICK:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	monbg ANIM_TARGET

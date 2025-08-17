@@ -544,4 +544,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_GUARD_SPLIT] = _("GUARD SPLIT"),
     [MOVE_POWER_SPLIT] = _("POWER SPLIT"),
     [MOVE_UPROOT] = _("UPROOT"),
+    [MOVE_DONKEY_KICK] = _("DONKEY KICK")
 };
