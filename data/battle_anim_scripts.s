@@ -608,6 +608,7 @@ gBattleAnims_Moves::
     .4byte Move_POWER_FANG
     .4byte Move_NEUROTOXIN
     .4byte Move_ION_TRANSFER
+    .4byte Move_EXPUNGE
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -5449,6 +5450,7 @@ General_AquaRingHeal:
 
 Move_CALM_MIND:
 Move_QUIVER_DANCE:
+Move_EXPUNGE:
 	loadspritegfx ANIM_TAG_THIN_RING
 	monbg ANIM_ATK_PARTNER
 	createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, ANIM_ATTACKER, 0, 0, 16, RGB_BLACK

@@ -523,6 +523,7 @@ const u8 gMoveDescription_IonTransfer[] = _("Harshly lowers the\nfoe's SP. DEF a
 const u8 gMoveDescription_CircleThrow[] = _("Throws the foe and\ndrags out another\nPOKéMON in its\nparty.");
 const u8 gMoveDescription_DragonTail[] = _("Knocks away the foe\nand drags out\nanother POKéMON in\nits party.");
 const u8 gMoveDescription_PowerTrick[] = _("The user switches\nits ATTACK stat\nwith its DEFENSE\nstat.");
+const u8 gMoveDescription_Expunge[] = _("Cures the foe's\nstatus and sharply\nraises the user's\nSP. ATK and SP. DEF.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1065,4 +1066,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_CIRCLE_THROW - 1] = gMoveDescription_CircleThrow,
     [MOVE_DRAGON_TAIL - 1] = gMoveDescription_DragonTail,
     [MOVE_POWER_TRICK - 1] = gMoveDescription_PowerTrick,
+    [MOVE_EXPUNGE - 1] = gMoveDescription_Expunge,
 };

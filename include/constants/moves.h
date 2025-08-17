@@ -594,8 +594,9 @@
 #define MOVE_POWER_FANG 580
 #define MOVE_NEUROTOXIN 581
 #define MOVE_ION_TRANSFER 582
+#define MOVE_EXPUNGE 583
 
-#define MOVES_COUNT 583
+#define MOVES_COUNT 584
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
