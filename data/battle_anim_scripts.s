@@ -556,9 +556,9 @@ gBattleAnims_Moves::
 	.4byte Move_RETALIATE
 	.4byte Move_CIRCLE_THROW
 	.4byte Move_DRAGON_TAIL
+	.4byte Move_GUARD_SPLIT
+	.4byte Move_POWER_SPLIT
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -4793,6 +4793,8 @@ Move_HEART_SWAP:
 Move_POWER_SWAP:
 Move_GUARD_SWAP:
 Move_ION_TRANSFER:
+Move_GUARD_SPLIT:
+Move_POWER_SPLIT:
 	loadspritegfx ANIM_TAG_BLUEGREEN_ORB
 	call SetPsychicBackground
 	createvisualtask AnimTask_SkillSwap, 3, ANIM_TARGET

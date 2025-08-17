@@ -430,8 +430,10 @@
 #define STRINGID_PKMNRAISEDSPATKUSING 429
 #define STRINGID_MOXIEACTIVATED 430
 #define STRINGID_USERSWAPPEDATKANDDEF 431
+#define STRINGID_GUARDSPLIT 432
+#define STRINGID_POWERSPLIT 433
 
-#define BATTLESTRINGS_COUNT     432
+#define BATTLESTRINGS_COUNT     434
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

@@ -1579,3 +1579,11 @@
 	.macro powerTrick
 	callnative BS_powerTrick
 	.endm
+
+	.macro shareDefStats
+	callnative BS_shareDefStats
+	.endm
+
+	.macro shareAtkStats
+	callnative BS_shareAtkStats
+	.endm

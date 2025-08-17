@@ -11126,3 +11126,25 @@ void BS_powerTrick(void)
     gBattleMons[gBattlerAttacker].defense = oldAttack;
     gBattlescriptCurrInstr += 5;
 }
+
+void BS_shareDefStats(void)
+{
+    u8 newDef = (gBattleMons[gBattlerAttacker].defense + gBattleMons[gBattlerTarget].defense) / 2;
+    u8 newSpDef = (gBattleMons[gBattlerAttacker].spDefense + gBattleMons[gBattlerTarget].spDefense) / 2;
+
+    gBattleMons[gBattlerAttacker].defense = gBattleMons[gBattlerTarget].defense = newDef;
+    gBattleMons[gBattlerAttacker].spDefense = gBattleMons[gBattlerTarget].spDefense = newSpDef;
+
+    gBattlescriptCurrInstr += 5;
+}
+
+void BS_shareAtkStats(void)
+{
+    u8 newAtk = (gBattleMons[gBattlerAttacker].attack + gBattleMons[gBattlerTarget].attack) / 2;
+    u8 newSpAtk = (gBattleMons[gBattlerAttacker].spAttack + gBattleMons[gBattlerTarget].spAttack) / 2;
+
+    gBattleMons[gBattlerAttacker].attack = gBattleMons[gBattlerTarget].attack = newAtk;
+    gBattleMons[gBattlerAttacker].spAttack = gBattleMons[gBattlerTarget].spAttack = newSpAtk;
+
+    gBattlescriptCurrInstr += 5;
+}

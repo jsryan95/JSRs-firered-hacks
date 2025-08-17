@@ -260,6 +260,8 @@ static const u8 sText_PkmnWasMadeDrowsy[] = _("{B_ATK_NAME_WITH_PREFIX} made\n{B
 static const u8 sText_PkmnKnockedOff[] = _("{B_ATK_NAME_WITH_PREFIX} knocked off\n{B_DEF_NAME_WITH_PREFIX}'s {B_LAST_ITEM}!");
 static const u8 sText_PkmnSwappedAbilities[] = _("{B_ATK_NAME_WITH_PREFIX} swapped abilities\nwith {B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnSwappedStatChanges[] = _("{B_ATK_NAME_WITH_PREFIX} swapped stat\nchanges with {B_DEF_NAME_WITH_PREFIX}!");
+static const u8 sText_GuardSplit[] = _("{B_ATK_NAME_WITH_PREFIX} shared its\nguard with {B_DEF_NAME_WITH_PREFIX}!");
+static const u8 sText_PowerSplit[] = _("{B_ATK_NAME_WITH_PREFIX} shared its\npower with {B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnAbilitySuppressed[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nwas suppressed!");
 static const u8 sText_PkmnGotInsomnia[] = _("{B_DEF_NAME_WITH_PREFIX} got\nINSOMNIA!");
 static const u8 sText_PkmnGotSimple[] = _("{B_DEF_NAME_WITH_PREFIX} got\nSIMPLE!");
@@ -981,6 +983,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNRAISEDSPATKUSING - BATTLESTRINGS_TABLE_START]           = sText_PkmnRaisedSpAtkUsing,
     [STRINGID_MOXIEACTIVATED - BATTLESTRINGS_TABLE_START]                 = sText_MoxieActivated,
     [STRINGID_USERSWAPPEDATKANDDEF - BATTLESTRINGS_TABLE_START]           = sText_UserSwappedAtkAndDef,
+    [STRINGID_GUARDSPLIT - BATTLESTRINGS_TABLE_START]                     = sText_GuardSplit,
+    [STRINGID_POWERSPLIT - BATTLESTRINGS_TABLE_START]                     = sText_PowerSplit,
 };
 
 const u16 gMissStringIds[] =

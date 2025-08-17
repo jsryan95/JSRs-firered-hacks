@@ -321,6 +321,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCircleThrow            @ EFFECT_CIRCLE_THROW
 	.4byte BattleScript_EffectPowerTrick             @ EFFECT_POWER_TRICK
 	.4byte BattleScript_EffectExpunge                @ EFFECT_EXPUNGE
+	.4byte BattleScript_EffectGuardSplit             @ EFFECT_GUARD_SPLIT
+	.4byte BattleScript_EffectPowerSplit             @ EFFECT_POWER_SPLIT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5970,5 +5972,29 @@ BattleScript_ExpungeTrySpDef::
 	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
 	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectGuardSplit::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	shareDefStats
+	attackanimation
+	waitanimation
+	printstring STRINGID_GUARDSPLIT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectPowerSplit::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	shareAtkStats
+	attackanimation
+	waitanimation
+	printstring STRINGID_POWERSPLIT
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
