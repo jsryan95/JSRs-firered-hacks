@@ -323,6 +323,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectExpunge                @ EFFECT_EXPUNGE
 	.4byte BattleScript_EffectGuardSplit             @ EFFECT_GUARD_SPLIT
 	.4byte BattleScript_EffectPowerSplit             @ EFFECT_POWER_SPLIT
+	.4byte BattleScript_EffectHit                    @ EFFECT_UPROOT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler

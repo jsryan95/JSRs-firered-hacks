@@ -525,6 +525,7 @@ const u8 gMoveDescription_PowerTrick[] = _("The user switches\nits ATTACK stat\n
 const u8 gMoveDescription_Expunge[] = _("Cures the foe's\nstatus and sharply\nraises the user's\nSP. ATK and SP. DEF.");
 const u8 gMoveDescription_GuardSplit[] = _("Averages the user's\nDEFENSE and SP. DEF\nstats with those\nof the foe.");
 const u8 gMoveDescription_PowerSplit[] = _("Averages the user's\nATTACK and SP. ATK\nstats with those\nof the foe.");
+const u8 gMoveDescription_Uproot[] = _("An attack made\nwith digging claws.\nDeals great damage\nto GRASS-types.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1070,4 +1071,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_EXPUNGE - 1] = gMoveDescription_Expunge,
     [MOVE_GUARD_SPLIT - 1] = gMoveDescription_GuardSplit,
     [MOVE_POWER_SPLIT - 1] = gMoveDescription_PowerSplit,
+    [MOVE_UPROOT - 1] = gMoveDescription_Uproot,
 };
