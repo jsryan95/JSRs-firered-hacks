@@ -1587,3 +1587,8 @@
 	.macro shareAtkStats
 	callnative BS_shareAtkStats
 	.endm
+
+	.macro trySuckerPunch onFail:req
+	callnative BS_trySuckerPunch
+	.4byte \onFail
+	.endm

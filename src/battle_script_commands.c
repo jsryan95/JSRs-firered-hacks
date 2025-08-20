@@ -11151,3 +11151,28 @@ void BS_shareAtkStats(void)
 
     gBattlescriptCurrInstr += 5;
 }
+
+void BS_trySuckerPunch(void)
+{
+    u16 opponentsMove = gBattleMons[gBattlerTarget].moves[*(gBattleStruct->chosenMovePositions + gBattlerTarget)];
+    s8 i, opponentHasMoved = 0;
+
+    for (i = gCurrentTurnActionNumber - 1; i >= 0; i--)
+    {
+        if (gBattlerByTurnOrder[i] == gBattlerTarget)
+        {
+            opponentHasMoved++;
+            break;
+        }
+    }
+
+    if (gBattleMoves[opponentsMove].category == CATEGORY_STATUS
+            || opponentHasMoved)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gBattlescriptCurrInstr += 9;
+    }
+}

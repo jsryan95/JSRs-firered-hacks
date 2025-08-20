@@ -324,6 +324,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectGuardSplit             @ EFFECT_GUARD_SPLIT
 	.4byte BattleScript_EffectPowerSplit             @ EFFECT_POWER_SPLIT
 	.4byte BattleScript_EffectHit                    @ EFFECT_UPROOT
+	.4byte BattleScript_EffectSuckerPunch            @ EFFECT_SUCKER_PUNCH
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -5999,3 +6000,12 @@ BattleScript_EffectPowerSplit::
 	printstring STRINGID_POWERSPLIT
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectSuckerPunch::
+    attackcanceler
+    attackstring
+    ppreduce
+    trySuckerPunch BattleScript_ButItFailed
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+

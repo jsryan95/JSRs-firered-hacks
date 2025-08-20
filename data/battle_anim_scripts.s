@@ -474,8 +474,8 @@ gBattleAnims_Moves::
     .4byte Move_PLUCK
     .4byte Move_BUG_BITE
     .4byte Move_POWER_TRICK
+    .4byte Move_SUCKER_PUNCH
     @ space for generation 4 moves
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -6226,6 +6226,7 @@ SmogCloud:
 	return
 
 Move_FAINT_ATTACK:
+Move_SUCKER_PUNCH:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_ATTACKER
 	fadetobg BG_DARK
