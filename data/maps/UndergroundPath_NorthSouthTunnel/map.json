@@ -38,8 +38,8 @@
       "x": 5,
       "y": 30,
       "elevation": 3,
-      "item": "ITEM_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_POTION",
+      "item": "ITEM_SITRUS_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_SITRUS_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -48,8 +48,8 @@
       "x": 5,
       "y": 6,
       "elevation": 3,
-      "item": "ITEM_ANTIDOTE",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ANTIDOTE",
+      "item": "ITEM_PECHA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_PECHA_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -58,8 +58,8 @@
       "x": 2,
       "y": 57,
       "elevation": 3,
-      "item": "ITEM_BURN_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_BURN_HEAL",
+      "item": "ITEM_RAWST_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_RAWST_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -68,8 +68,8 @@
       "x": 1,
       "y": 24,
       "elevation": 3,
-      "item": "ITEM_AWAKENING",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_AWAKENING",
+      "item": "ITEM_CHESTO_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_CHESTO_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -78,8 +78,8 @@
       "x": 6,
       "y": 53,
       "elevation": 3,
-      "item": "ITEM_ICE_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ICE_HEAL",
+      "item": "ITEM_ASPEAR_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ASPEAR_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -88,8 +88,8 @@
       "x": 3,
       "y": 15,
       "elevation": 3,
-      "item": "ITEM_PARALYZE_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_PARALYZE_HEAL",
+      "item": "ITEM_CHERI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_CHERI_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -98,8 +98,8 @@
       "x": 3,
       "y": 39,
       "elevation": 3,
-      "item": "ITEM_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ETHER",
+      "item": "ITEM_LEPPA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_LEPPA_BERRY",
       "quantity": 1,
       "underfoot": false
     }
