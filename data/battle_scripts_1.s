@@ -326,6 +326,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHit                    @ EFFECT_UPROOT
 	.4byte BattleScript_EffectSuckerPunch            @ EFFECT_SUCKER_PUNCH
 	.4byte BattleScript_EffectBubbleGuard            @ EFFECT_BUBBLE_GUARD
+	.4byte BattleScript_EffectSweetScent             @ EFFECT_SWEET_SCENT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -6015,7 +6016,7 @@ BattleScript_EffectBubbleGuard::
 	attackcanceler
 	attackstring
 	ppreduce
-	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
 	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_BubbleGuardDoAnim
 	pause B_WAIT_TIME_SHORT
 	goto BattleScript_BubbleGuardCantRaiseStat
@@ -6034,4 +6035,42 @@ BattleScript_BubbleGuardCantRaiseStat::
 	printfromtable gStatUpStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectSweetScent::
+	attackcanceler
+	attackstring
+	ppreduce
+	setbyte gBattlerTarget, 0
+BattleScript_SweetScentLoop::
+	movevaluescleanup
+	setmoveeffect MOVE_EFFECT_ATK_MINUS_1
+	jumpifbyteequal gBattlerAttacker, gBattlerTarget, BattleScript_SweetScentLoopIncrement
+	jumpifability BS_TARGET, ABILITY_HYPER_CUTTER, BattleScript_SweetScentDidntAffect
+	jumpifability BS_TARGET, ABILITY_CLEAR_BODY, BattleScript_SweetScentDidntAffect
+	jumpifability BS_TARGET, ABILITY_WHITE_SMOKE, BattleScript_SweetScentDidntAffect
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_SweetScentDidntAffect
+	jumpifstat BS_TARGET, CMP_EQUAL, STAT_ATK, MIN_STAT_STAGE, BattleScript_SweetScentDidntAffect
+	accuracycheck BattleScript_SweetScentMissed, ACC_CURR_MOVE
+	jumpifsideaffecting BS_TARGET, SIDE_STATUS_MIST, BattleScript_SweetScentDidntAffect
+	attackanimation
+	waitanimation
+	seteffectprimary
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_SweetScentLoopIncrement::
+	moveendto MOVEEND_NEXT_TARGET
+	addbyte gBattlerTarget, 1
+	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_SweetScentLoop
+	end
+
+BattleScript_SweetScentDidntAffect::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNAVOIDEDATTACK
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_SweetScentLoopIncrement
+
+BattleScript_SweetScentMissed::
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_SweetScentLoopIncrement
 

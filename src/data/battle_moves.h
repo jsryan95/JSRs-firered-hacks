@@ -3222,7 +3222,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_SWEET_SCENT] =
     {
-        .effect = EFFECT_ATTACK_DOWN,
+        .effect = EFFECT_SWEET_SCENT,
         .power = 0,
         .type = TYPE_NORMAL,
         .category = CATEGORY_STATUS,
