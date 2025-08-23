@@ -83,6 +83,10 @@ Route3_Text_JamieIntro::
 Route3_Text_JamieDefeat::
     .string "Oh dear...$"
 
+Route3_Text_JamieNotEnoughPokemon::
+    .string "I would like to battle you\n"
+    .string "with two POKéMON at once.$"
+
 Route3_Text_JamiePostBattle::
     .string "Trained POKéMON are stronger than\n"
     .string "the wild ones.$"

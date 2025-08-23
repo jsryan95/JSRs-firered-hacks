@@ -47,14 +47,14 @@ Route3_EventScript_GregRematch::
 	end
 
 Route3_EventScript_Jamie::
-	trainerbattle_single TRAINER_BEAUTY_JAMIE, Route3_Text_JamieIntro, Route3_Text_JamieDefeat
+	trainerbattle_double TRAINER_BEAUTY_JAMIE, Route3_Text_JamieIntro, Route3_Text_JamieDefeat, Route3_Text_JamieNotEnoughPokemon
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route3_EventScript_JamieRematch
 	msgbox Route3_Text_JamiePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route3_EventScript_JamieRematch::
-	trainerbattle_rematch TRAINER_BEAUTY_JAMIE, Route3_Text_JamieRematchIntro, Route3_Text_JamieDefeat
+	trainerbattle_rematch_double TRAINER_BEAUTY_JAMIE, Route3_Text_JamieRematchIntro, Route3_Text_JamieDefeat, Route3_Text_JamieNotEnoughPokemon
 	msgbox Route3_Text_JamiePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -227,14 +227,14 @@ Route25_EventScript_ChadRematch::
 	end
 
 Route25_EventScript_Kelsey::
-	trainerbattle_single TRAINER_PICNICKER_KELSEY, Route25_Text_KelseyIntro, Route25_Text_KelseyDefeat
+	trainerbattle_double TRAINER_PICNICKER_KELSEY, Route25_Text_KelseyIntro, Route25_Text_KelseyDefeat, Route25_Text_KelseyNotEnoughPokemon
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route25_EventScript_KelseyRematch
 	msgbox Route25_Text_KelseyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route25_EventScript_KelseyRematch::
-	trainerbattle_rematch TRAINER_PICNICKER_KELSEY, Route25_Text_KelseyRematchIntro, Route25_Text_KelseyDefeat
+	trainerbattle_rematch_double TRAINER_PICNICKER_KELSEY, Route25_Text_KelseyRematchIntro, Route25_Text_KelseyDefeat, Route25_Text_KelseyNotEnoughPokemon
 	msgbox Route25_Text_KelseyPostBattle, MSGBOX_AUTOCLOSE
 	end
 

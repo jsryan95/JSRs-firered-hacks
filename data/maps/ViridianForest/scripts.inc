@@ -49,7 +49,7 @@ ViridianForest_EventScript_Donna::
 	end
 
 ViridianForest_EventScript_Sammy::
-	trainerbattle_single TRAINER_YOUNGSTER_SAMMY, ViridianForest_Text_SammyIntro, ViridianForest_Text_SammyDefeat
+	trainerbattle_double TRAINER_YOUNGSTER_SAMMY, ViridianForest_Text_SammyIntro, ViridianForest_Text_SammyDefeat, ViridianForest_Text_SammyNotEnoughPokemon
 	msgbox ViridianForest_Text_SammyPostBattle, MSGBOX_AUTOCLOSE
 	end
 

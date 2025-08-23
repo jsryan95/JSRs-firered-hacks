@@ -36,6 +36,12 @@ ViridianForest_Text_SammyDefeat::
     .string "I give!\n"
     .string "You're good at this!$"
 
+ViridianForest_Text_SammyNotEnoughPokemon::
+    .string "Hey, do you know about\n"
+    .string "double battles?\p"
+    .string "We should have one together when\n"
+    .string "you get another POKéMON.$"
+
 ViridianForest_Text_SammyPostBattle::
     .string "Sometimes, you can find stuff on\n"
     .string "the ground.\p"

@@ -29,6 +29,11 @@ SSAnne_Deck_Text_TrevorIntro::
 SSAnne_Deck_Text_TrevorDefeat::
     .string "I was just careless!$"
 
+SSAnne_Deck_Text_TrevorNotEnoughPokemon::
+    .string "Ahoy, there!\n"
+    .string "You'll need more POKéMON if\l"
+    .string "you want to battle me!$"
+
 SSAnne_Deck_Text_TrevorPostBattle::
     .string "My pa said there are 100 kinds of\n"
     .string "POKéMON. I think there are more.$"

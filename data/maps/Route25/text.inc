@@ -35,10 +35,17 @@ Route25_Text_FlintPostBattle::
 
 Route25_Text_KelseyIntro::
     .string "Hi!\n"
-    .string "My boyfriend is cool!$"
+    .string "My boyfriend is lame!\l"
+    .string "He doesn't like double battles!$"
 
 Route25_Text_KelseyDefeat::
     .string "My conditioning isn't the best…$"
+
+Route25_Text_KelseyNotEnoughPokemon::
+    .string "Are you boring like my\n"
+    .string "boyfriend?\p"
+    .string "He doesn't like double battles\n"
+    .string "either.$"
 
 Route25_Text_KelseyPostBattle::
     .string "I wish my boyfriend was as good\n"

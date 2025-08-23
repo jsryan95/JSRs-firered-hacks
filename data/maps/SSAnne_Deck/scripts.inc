@@ -19,6 +19,6 @@ SSAnne_Deck_EventScript_Edmond::
 	end
 
 SSAnne_Deck_EventScript_Trevor::
-	trainerbattle_single TRAINER_SAILOR_TREVOR, SSAnne_Deck_Text_TrevorIntro, SSAnne_Deck_Text_TrevorDefeat
+	trainerbattle_double TRAINER_SAILOR_TREVOR, SSAnne_Deck_Text_TrevorIntro, SSAnne_Deck_Text_TrevorDefeat, SSAnne_Deck_Text_TrevorNotEnoughPokemon
 	msgbox SSAnne_Deck_Text_TrevorPostBattle, MSGBOX_AUTOCLOSE
 	end
