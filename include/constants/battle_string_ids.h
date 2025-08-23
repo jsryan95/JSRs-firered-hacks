@@ -432,8 +432,9 @@
 #define STRINGID_USERSWAPPEDATKANDDEF 431
 #define STRINGID_GUARDSPLIT 432
 #define STRINGID_POWERSPLIT 433
+#define STRINGID_BUBBLEGUARD 434
 
-#define BATTLESTRINGS_COUNT     434
+#define BATTLESTRINGS_COUNT     435
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

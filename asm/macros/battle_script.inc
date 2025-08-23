@@ -1592,3 +1592,8 @@
 	callnative BS_trySuckerPunch
 	.4byte \onFail
 	.endm
+
+	.macro trySetBubbleGuard onFail:req
+	callnative BS_trySetBubbleGuard
+	.4byte \onFail
+	.endm

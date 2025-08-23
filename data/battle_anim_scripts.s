@@ -611,6 +611,7 @@ gBattleAnims_Moves::
     .4byte Move_EXPUNGE
     .4byte Move_UPROOT
     .4byte Move_DONKEY_KICK
+    .4byte Move_BUBBLE_GUARD
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -6162,6 +6163,7 @@ Move_BARRIER:
 	end
 
 Move_BUBBLE:
+Move_BUBBLE_GUARD:
 	loadspritegfx ANIM_TAG_BUBBLE
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
 	monbg ANIM_TARGET

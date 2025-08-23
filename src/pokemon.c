@@ -4009,6 +4009,7 @@ static void CopyPlayerPartyMonToBattleData(u8 battlerId, u8 partyIndex)
         gBattleMons[battlerId].statStages[i] = DEFAULT_STAT_STAGE;
 
     gBattleMons[battlerId].status2 = 0;
+    gBattleMons[battlerId].status3 = 0;
     UpdateSentPokesToOpponentValue(battlerId);
     ClearTemporarySpeciesSpriteData(battlerId, FALSE);
 }

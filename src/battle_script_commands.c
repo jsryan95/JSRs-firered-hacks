@@ -7836,6 +7836,7 @@ static void Cmd_weatherdamage(void)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_SAND_VEIL)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_OVERCOAT)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_SAND_FORCE)
+                && !(gBattleMons[gBattlerAttacker].status3 & STATUS3_BUBBLE_GUARD)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERGROUND)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERWATER))
             {
@@ -7854,6 +7855,7 @@ static void Cmd_weatherdamage(void)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_SNOW_CLOAK)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_ICE_BODY)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_OVERCOAT)
+                && !(gBattleMons[gBattlerAttacker].status3 & STATUS3_BUBBLE_GUARD)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERGROUND)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERWATER))
             {
@@ -11178,6 +11180,19 @@ void BS_trySuckerPunch(void)
     }
     else
     {
+        gBattlescriptCurrInstr += 9;
+    }
+}
+
+void BS_trySetBubbleGuard(void)
+{
+    if (gBattleMons[gBattlerTarget].status3 & STATUS3_BUBBLE_GUARD)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gBattleMons[gBattlerTarget].status3 |= STATUS3_BUBBLE_GUARD;
         gBattlescriptCurrInstr += 9;
     }
 }

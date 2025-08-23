@@ -597,8 +597,9 @@
 #define MOVE_EXPUNGE 583
 #define MOVE_UPROOT 584
 #define MOVE_DONKEY_KICK 585
+#define MOVE_BUBBLE_GUARD 586
 
-#define MOVES_COUNT 586
+#define MOVES_COUNT 587
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

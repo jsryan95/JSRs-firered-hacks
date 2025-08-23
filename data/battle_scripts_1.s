@@ -325,6 +325,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectPowerSplit             @ EFFECT_POWER_SPLIT
 	.4byte BattleScript_EffectHit                    @ EFFECT_UPROOT
 	.4byte BattleScript_EffectSuckerPunch            @ EFFECT_SUCKER_PUNCH
+	.4byte BattleScript_EffectBubbleGuard            @ EFFECT_BUBBLE_GUARD
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -6008,4 +6009,29 @@ BattleScript_EffectSuckerPunch::
     trySuckerPunch BattleScript_ButItFailed
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectBubbleGuard::
+	setstatchanger STAT_SPDEF, 1, FALSE
+	attackcanceler
+	attackstring
+	ppreduce
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_BubbleGuardDoAnim
+	pause B_WAIT_TIME_SHORT
+	goto BattleScript_BubbleGuardCantRaiseStat
+BattleScript_BubbleGuardDoAnim::
+	attackanimation
+	waitanimation
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	trySetBubbleGuard BattleScript_MoveEnd
+	printstring STRINGID_BUBBLEGUARD
+	goto BattleScript_MoveEnd
+
+BattleScript_BubbleGuardCantRaiseStat::
+	printfromtable gStatUpStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
 

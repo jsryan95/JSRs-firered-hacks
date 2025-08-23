@@ -7657,4 +7657,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 1,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
+
+    [MOVE_BUBBLE_GUARD] =
+    {
+        .effect = EFFECT_BUBBLE_GUARD,
+        .power = 0,
+        .type = TYPE_WATER,
+        .category = CATEGORY_STATUS,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER_OR_ALLY,
+        .priority = 0,
+        .flags = FLAG_SNATCH_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+    },
 };

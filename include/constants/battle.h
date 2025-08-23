@@ -134,6 +134,7 @@
 #define STATUS3_GASTRO_ACID           (1 << 1)
 #define STATUS3_ROOSTED               (1 << 2)
 #define STATUS3_MAGNET_RISE           (1 << 3)
+#define STATUS3_BUBBLE_GUARD          (1 << 4)
 
 // Seems like per-battler statuses. Not quite sure how to categorize these
 #define STATUS4_LEECHSEED_BATTLER       (1 << 0 | 1 << 1) // The battler to receive HP from Leech Seed

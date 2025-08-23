@@ -2370,6 +2370,7 @@ void SwitchInClearSetData(void)
     else
     {
         gBattleMons[gActiveBattler].status2 = 0;
+        gBattleMons[gActiveBattler].status3 = 0;
         gstatuses4[gActiveBattler] = 0;
     }
 
@@ -2444,6 +2445,7 @@ void FaintClearSetData(void)
         gBattleMons[gActiveBattler].statStages[i] = DEFAULT_STAT_STAGE;
 
     gBattleMons[gActiveBattler].status2 = 0;
+    gBattleMons[gActiveBattler].status3 = 0;
     gstatuses4[gActiveBattler] = 0;
 
     for (i = 0; i < gBattlersCount; i++)
@@ -2591,6 +2593,7 @@ static void BattleIntroDrawTrainersOrMonsSprites(void)
             for (i = 0; i < NUM_BATTLE_STATS; i++)
                 gBattleMons[gActiveBattler].statStages[i] = DEFAULT_STAT_STAGE;
             gBattleMons[gActiveBattler].status2 = 0;
+            gBattleMons[gActiveBattler].status3 = 0;
         }
 
         if (GetBattlerPosition(gActiveBattler) == B_POSITION_PLAYER_LEFT)
