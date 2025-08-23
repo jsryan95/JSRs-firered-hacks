@@ -7282,12 +7282,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_TRUMP_CARD] =
     {
-        .effect = EFFECT_TRUMP_CARD,
-        .power = 1,
+        .effect = EFFECT_ALWAYS_HIT,
+        .power = 200,
         .type = TYPE_NORMAL,
         .category = CATEGORY_SPECIAL,
         .accuracy = 0,
-        .pp = 5,
+        .pp = 1,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
