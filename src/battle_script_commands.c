@@ -9694,17 +9694,19 @@ static void Cmd_scaleDamageByTargetHealthRatio(void)
 
 static void Cmd_scaleGyroBallDamage(void)
 {
-    u8 power = 0;
-    if (gDynamicBasePower == 0)
-    {
-        u32 attackerSpeed = getEffectiveSpeed(gBattlerAttacker);
-        if (attackerSpeed == 0)
-            attackerSpeed = 1;
-        power = getEffectiveSpeed(gBattlerTarget) * 25 / attackerSpeed;
-        if (++power > 150)
-            power = 150;
-        gDynamicBasePower = power;
-    }
+    u32 attackerSpeed = getEffectiveSpeed(gBattlerAttacker);
+    u32 targetSpeed = getEffectiveSpeed(gBattlerTarget);
+
+    if (attackerSpeed > targetSpeed)
+        gDynamicBasePower = 40;
+    else if (attackerSpeed * 2 > targetSpeed)
+        gDynamicBasePower = 60;
+    else if (attackerSpeed * 3 > targetSpeed)
+        gDynamicBasePower = 80;
+    else if (attackerSpeed * 4 > targetSpeed)
+        gDynamicBasePower = 120;
+    else
+        gDynamicBasePower = 150;
     gBattlescriptCurrInstr++;
 }
 
