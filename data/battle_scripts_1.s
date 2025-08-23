@@ -3015,7 +3015,6 @@ BattleScript_TeeterDanceMissed::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_TeeterDanceLoopIncrement
 
-BattleScript_EffectMudSport::
 BattleScript_EffectWaterSport::
 	attackcanceler
 	attackstring
@@ -6073,4 +6072,42 @@ BattleScript_SweetScentMissed::
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_SweetScentLoopIncrement
+
+BattleScript_EffectMudSport::
+	attackcanceler
+	attackstring
+	ppreduce
+	setbyte gBattlerTarget, 0
+BattleScript_MudSportLoop::
+	movevaluescleanup
+	setmoveeffect MOVE_EFFECT_SPD_MINUS_1
+	jumpifbyteequal gBattlerAttacker, gBattlerTarget, BattleScript_MudSportLoopIncrement
+	jumpifability BS_TARGET, ABILITY_CLEAR_BODY, BattleScript_MudSportDidntAffect
+	jumpifability BS_TARGET, ABILITY_WHITE_SMOKE, BattleScript_MudSportDidntAffect
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_MudSportDidntAffect
+	jumpifstat BS_TARGET, CMP_EQUAL, STAT_SPEED, MIN_STAT_STAGE, BattleScript_MudSportDidntAffect
+	jumpiftype BS_TARGET, TYPE_GROUND, BattleScript_MudSportDidntAffect
+	accuracycheck BattleScript_MudSportMissed, ACC_CURR_MOVE
+	jumpifsideaffecting BS_TARGET, SIDE_STATUS_MIST, BattleScript_MudSportDidntAffect
+	attackanimation
+	waitanimation
+	seteffectprimary
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_MudSportLoopIncrement::
+	moveendto MOVEEND_NEXT_TARGET
+	addbyte gBattlerTarget, 1
+	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_MudSportLoop
+	end
+
+BattleScript_MudSportDidntAffect::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNAVOIDEDATTACK
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MudSportLoopIncrement
+
+BattleScript_MudSportMissed::
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MudSportLoopIncrement
 
