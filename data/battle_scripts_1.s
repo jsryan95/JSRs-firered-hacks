@@ -3015,17 +3015,6 @@ BattleScript_TeeterDanceMissed::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_TeeterDanceLoopIncrement
 
-BattleScript_EffectWaterSport::
-	attackcanceler
-	attackstring
-	ppreduce
-	settypebasedhalvers BattleScript_ButItFailed
-	attackanimation
-	waitanimation
-	printfromtable gSportsUsedStringIds
-	waitmessage B_WAIT_TIME_LONG
-	goto BattleScript_MoveEnd
-
 BattleScript_EffectPoisonFang::
 	setmoveeffect MOVE_EFFECT_TOXIC
 	goto BattleScript_EffectHit
@@ -6110,4 +6099,37 @@ BattleScript_MudSportMissed::
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MudSportLoopIncrement
+
+BattleScript_EffectWaterSport::
+	attackcanceler
+	attackstring
+	ppreduce
+	setbyte gBattlerTarget, 0
+BattleScript_WaterSportLoop::
+	movevaluescleanup
+	jumpifbyteequal gBattlerAttacker, gBattlerTarget, BattleScript_DoWaterSport
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_WaterSportDidntAffect
+	accuracycheck BattleScript_WaterSportMissed, ACC_CURR_MOVE
+BattleScript_DoWaterSport::
+    tryGiveDamp BattleScript_WaterSportDidntAffect
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNGOTINSOMNIA
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_WaterSportLoopIncrement::
+	moveendto MOVEEND_NEXT_TARGET
+	addbyte gBattlerTarget, 1
+	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_WaterSportLoop
+	end
+
+BattleScript_WaterSportDidntAffect::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNAVOIDEDATTACK
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_WaterSportLoopIncrement
+
+BattleScript_WaterSportMissed::
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_WaterSportLoopIncrement
 

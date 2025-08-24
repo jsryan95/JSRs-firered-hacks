@@ -1597,3 +1597,8 @@
 	callnative BS_trySetBubbleGuard
 	.4byte \onFail
 	.endm
+
+	.macro tryGiveDamp onFail:req
+	callnative BS_tryGiveDamp
+	.4byte \onFail
+	.endm

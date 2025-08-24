@@ -2949,9 +2949,12 @@ static void PreviewDeterminativeMoveTargets(void)
             startY = 8;
             break;
         case MOVE_TARGET_FOES_AND_ALLY:
-            bitMask = (gBitTable[GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)]
-                     | gBitTable[GetBattlerAtPosition(GetBattlerPosition(gActiveBattler) ^ BIT_FLANK)]
-                     | gBitTable[GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)]) << 16;
+            if (move == MOVE_WATER_SPORT)
+                bitMask = 0xF0000;
+            else
+                bitMask = (gBitTable[GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)]
+                        | gBitTable[GetBattlerAtPosition(GetBattlerPosition(gActiveBattler) ^ BIT_FLANK)]
+                        | gBitTable[GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)]) << 16;
             startY = 8;
             break;
         }

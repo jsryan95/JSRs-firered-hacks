@@ -11196,3 +11196,8 @@ void BS_trySetBubbleGuard(void)
         gBattlescriptCurrInstr += 9;
     }
 }
+
+void BS_tryGiveDamp(void)
+{
+    BSHelper_tryGiveAbility(ABILITY_DAMP);
+}
