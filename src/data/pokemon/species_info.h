@@ -6678,12 +6678,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     [SPECIES_KINGDRA] =
     {
-        .baseHP = 75,
-        .baseAttack = 95,
-        .baseDefense = 95,
+        .baseHP = 70,
+        .baseAttack = 80,
+        .baseDefense = 100,
         .baseSpeed = 85,
-        .baseSpAttack = 95,
-        .baseSpDefense = 95,
+        .baseSpAttack = 115,
+        .baseSpDefense = 90,
         .types = {TYPE_WATER, TYPE_DRAGON},
         .catchRate = 45,
         .expYield = 207,
