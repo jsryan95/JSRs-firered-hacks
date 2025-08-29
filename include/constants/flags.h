@@ -472,7 +472,7 @@
 #define FLAG_HIDE_ROCK_TUNNEL_1F_PEARL                          0x1C4
 #define FLAG_HIDE_ROCK_TUNNEL_1F_ESCAPE_ROPE                    0x1C5
 #define FLAG_HIDE_ROCK_TUNNEL_B1F_REVIVE                        0x1C6
-#define FLAG_HIDE_ROCK_TUNNEL_B1F_MAX_ETHER                     0x1C7
+#define FLAG_HIDE_ROCK_TUNNEL_B1F_LEPPA_BERRY                     0x1C7
 #define FLAG_HIDE_SILPH_CO_8F_IRON                              0x1C8
 #define FLAG_HIDE_SILPH_CO_11F_ZINC                             0x1C9
 #define FLAG_HIDE_POKEMON_MANSION_1F_PROTEIN                    0x1CA
