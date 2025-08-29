@@ -235,8 +235,8 @@
       "x": 10,
       "y": 19,
       "elevation": 0,
-      "item": "ITEM_SUPER_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION",
+      "item": "ITEM_SITRUS_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE10_SITRUS_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -245,8 +245,8 @@
       "x": 12,
       "y": 40,
       "elevation": 3,
-      "item": "ITEM_MAX_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE10_MAX_ETHER",
+      "item": "ITEM_GANLON_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE10_GANLON_BERRY",
       "quantity": 1,
       "underfoot": false
     },

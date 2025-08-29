@@ -418,16 +418,16 @@ Route11_EventScript_DaveRematch::
 	msgbox Route11_Text_DavePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route11_EventScript_Braxton::
-	trainerbattle_single TRAINER_ENGINEER_BRAXTON, Route11_Text_BraxtonIntro, Route11_Text_BraxtonDefeat
+Route11_EventScript_Sandy::
+	trainerbattle_single TRAINER_COOLTRAINER_SANDY, Route11_Text_SandyIntro, Route11_Text_SandyDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_BraxtonRematch
-	msgbox Route11_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE
+	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_SandyRematch
+	msgbox Route11_Text_SandyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route11_EventScript_BraxtonRematch::
-	trainerbattle_rematch TRAINER_ENGINEER_BRAXTON, Route11_Text_BraxtonRematchIntro, Route11_Text_BraxtonDefeat
-	msgbox Route11_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE
+Route11_EventScript_SandyRematch::
+	trainerbattle_rematch TRAINER_COOLTRAINER_SANDY, Route11_Text_SandyRematchIntro, Route11_Text_SandyDefeat
+	msgbox Route11_Text_SandyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_Bernie::
@@ -455,14 +455,14 @@ Route11_EventScript_HugoRematch::
 	end
 
 Route11_EventScript_Jasper::
-	trainerbattle_single TRAINER_GAMER_JASPER, Route11_Text_JasperIntro, Route11_Text_JasperDefeat
+	trainerbattle_single TRAINER_COOLTRAINER_JASPER, Route11_Text_JasperIntro, Route11_Text_JasperDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route11_EventScript_JasperRematch
 	msgbox Route11_Text_JasperPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route11_EventScript_JasperRematch::
-	trainerbattle_rematch TRAINER_GAMER_JASPER, Route11_Text_JasperRematchIntro, Route11_Text_JasperDefeat
+	trainerbattle_rematch TRAINER_COOLTRAINER_JASPER, Route11_Text_JasperRematchIntro, Route11_Text_JasperDefeat
 	msgbox Route11_Text_JasperPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -503,14 +503,14 @@ Route9_EventScript_BrentRematch::
 	end
 
 Route9_EventScript_Conner::
-	trainerbattle_single TRAINER_BUG_CATCHER_CONNER, Route9_Text_ConnerIntro, Route9_Text_ConnerDefeat
+	trainerbattle_double TRAINER_BUG_CATCHER_CONNER, Route9_Text_ConnerIntro, Route9_Text_ConnerDefeat, Route9_Text_ConnerNotEnoughPokemon
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route9_EventScript_ConnerRematch
 	msgbox Route9_Text_ConnerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route9_EventScript_ConnerRematch::
-	trainerbattle_rematch TRAINER_BUG_CATCHER_CONNER, Route9_Text_ConnerRematchIntro, Route9_Text_ConnerDefeat
+	trainerbattle_rematch_double TRAINER_BUG_CATCHER_CONNER, Route9_Text_ConnerRematchIntro, Route9_Text_ConnerDefeat, Route9_Text_ConnerNotEnoughPokemon
 	msgbox Route9_Text_ConnerPostBattle, MSGBOX_AUTOCLOSE
 	end
 

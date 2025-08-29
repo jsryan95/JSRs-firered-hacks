@@ -31,15 +31,16 @@ Route11_Text_EddiePostBattle::
     .string "I did my best.\n"
     .string "I have no regrets.$"
 
-Route11_Text_BraxtonIntro::
-    .string "Careful!\n"
-    .string "I'm laying down some cables!$"
+Route11_Text_SandyIntro::
+    .string "You're a trainer?\n"
+    .string "Bring it on!$"
 
-Route11_Text_BraxtonDefeat::
-    .string "That was electric!$"
+Route11_Text_SandyDefeat::
+    .string "Damn, you brought it on...$"
 
-Route11_Text_BraxtonPostBattle::
-    .string "Spread the word to save energy!$"
+Route11_Text_SandyPostBattle::
+    .string "That was a great battle!\n"
+    .string "Have you fought my friend Jasper?\n"
 
 Route11_Text_DillonIntro::
     .string "I just became a TRAINER.\n"

@@ -96,6 +96,12 @@ Route9_Text_ConnerIntro::
 Route9_Text_ConnerDefeat::
     .string "My bugs…$"
 
+Route9_Text_ConnerNotEnoughPokemon::
+    .string "Hey, my BUG POKéMON make a\n"
+    .string "great team. Why don't you come\l"
+    .string "back with more POKéMON of your\l"
+    .string "own so I can show you?$"
+
 Route9_Text_ConnerPostBattle::
     .string "If you don't like BUG POKéMON,\n"
     .string "you bug me!$"

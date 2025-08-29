@@ -84,7 +84,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
       "x": 38,
       "y": 15,
       "elevation": 3,
@@ -112,7 +112,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
       "x": 42,
       "y": 8,
       "elevation": 3,
@@ -121,7 +121,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route11_EventScript_Braxton",
+      "script": "Route11_EventScript_Sandy",
       "flag": "0"
     },
     {
@@ -177,8 +177,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route11_EventScript_ItemXDefend",
-      "flag": "FLAG_HIDE_ROUTE11_X_DEFEND"
+      "script": "Route11_EventScript_ItemLumBerry",
+      "flag": "FLAG_HIDE_ROUTE11_LUM_BERRY"
     },
     {
       "type": "object",
@@ -205,8 +205,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route11_EventScript_ItemAwakening",
-      "flag": "FLAG_HIDE_ROUTE11_AWAKENING"
+      "script": "Route11_EventScript_ItemChestoBerry",
+      "flag": "FLAG_HIDE_ROUTE11_CHESTO_BERRY"
     }
   ],
   "warp_events": [

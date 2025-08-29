@@ -224,7 +224,7 @@
 #define TRAINER_BURGLAR_SIMON                    218
 #define TRAINER_BURGLAR_LEWIS                    219
 #define TRAINER_ENGINEER_BAILY                   220
-#define TRAINER_ENGINEER_BRAXTON                 221
+#define TRAINER_COOLTRAINER_SANDY                 221
 #define TRAINER_ENGINEER_BERNIE                  222
 #define TRAINER_FISHERMAN_DALE                   223
 #define TRAINER_FISHERMAN_BARNY                  224
@@ -262,7 +262,7 @@
 #define TRAINER_CUE_BALL_COREY                   256
 #define TRAINER_CUE_BALL_CHASE                   257
 #define TRAINER_GAMER_HUGO                       258
-#define TRAINER_GAMER_JASPER                     259
+#define TRAINER_COOLTRAINER_JASPER                     259
 #define TRAINER_GAMER_DIRK                       260
 #define TRAINER_GAMER_DARIAN                     261
 #define TRAINER_GAMER_STAN                       262

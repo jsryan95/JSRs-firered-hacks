@@ -192,8 +192,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route9_EventScript_ItemBurnHeal",
-      "flag": "FLAG_HIDE_ROUTE9_BURN_HEAL"
+      "script": "Route9_EventScript_ItemRawstBerry",
+      "flag": "FLAG_HIDE_ROUTE9_RAWST_BERRY"
     }
   ],
   "warp_events": [],
@@ -212,8 +212,8 @@
       "x": 15,
       "y": 7,
       "elevation": 0,
-      "item": "ITEM_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE9_ETHER",
+      "item": "ITEM_LEPPA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE9_LEPPA_BERRY",
       "quantity": 1,
       "underfoot": false
     },

@@ -466,8 +466,8 @@
 #define FLAG_HIDE_VIRIDIAN_FOREST_ORAN_BERRY_2                      0x1BE
 #define FLAG_HIDE_MT_MOON_B2F_REVIVE                            0x1BF
 #define FLAG_HIDE_MT_MOON_B2F_PECHA_BERRY                          0x1C0
-#define FLAG_HIDE_ROUTE11_X_DEFEND                              0x1C1
-#define FLAG_HIDE_ROUTE9_BURN_HEAL                              0x1C2
+#define FLAG_HIDE_ROUTE11_LUM_BERRY                              0x1C1
+#define FLAG_HIDE_ROUTE9_RAWST_BERRY                              0x1C2
 #define FLAG_HIDE_ROCK_TUNNEL_1F_REPEL                          0x1C3
 #define FLAG_HIDE_ROCK_TUNNEL_1F_PEARL                          0x1C4
 #define FLAG_HIDE_ROCK_TUNNEL_1F_ESCAPE_ROPE                    0x1C5
@@ -480,7 +480,7 @@
 #define FLAG_HIDE_POKEMON_MANSION_2F_HP_UP                      0x1CC
 #define FLAG_HIDE_VIRIDIAN_CITY_POTION                          0x1CD
 #define FLAG_HIDE_ROUTE11_GREAT_BALL                            0x1CE
-#define FLAG_HIDE_ROUTE11_AWAKENING                             0x1CF
+#define FLAG_HIDE_ROUTE11_CHESTO_BERRY                             0x1CF
 #define FLAG_HIDE_POKEMON_TOWER_5F_CLEANSE_TAG                  0x1D0
 #define FLAG_HIDE_CELADON_CITY_ETHER                            0x1D1
 #define FLAG_HIDE_ROCKET_HIDEOUT_B3F_BLACK_GLASSES              0x1D2
@@ -1035,11 +1035,11 @@
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_LEPPA_BERRY                                 (FLAG_HIDDEN_ITEMS_START +   3)
 #define FLAG_HIDDEN_ITEM_ROUTE25_LEPPA_BERRY                                    (FLAG_HIDDEN_ITEMS_START +   4)
 #define FLAG_HIDDEN_ITEM_ROUTE25_LEPPA_BERRY_2                                     (FLAG_HIDDEN_ITEMS_START +   5)
-#define FLAG_HIDDEN_ITEM_ROUTE9_ETHER                                      (FLAG_HIDDEN_ITEMS_START +   6)
+#define FLAG_HIDDEN_ITEM_ROUTE9_LEPPA_BERRY                                      (FLAG_HIDDEN_ITEMS_START +   6)
 #define FLAG_HIDDEN_ITEM_UNUSED_0x07                                       (FLAG_HIDDEN_ITEMS_START +   7)
 #define FLAG_HIDDEN_ITEM_SSANNE_B1F_CORRIDOR_HYPER_POTION                  (FLAG_HIDDEN_ITEMS_START +   8)
-#define FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION                              (FLAG_HIDDEN_ITEMS_START +   9)
-#define FLAG_HIDDEN_ITEM_ROUTE10_MAX_ETHER                                 (FLAG_HIDDEN_ITEMS_START +  10)
+#define FLAG_HIDDEN_ITEM_ROUTE10_SITRUS_BERRY                              (FLAG_HIDDEN_ITEMS_START +   9)
+#define FLAG_HIDDEN_ITEM_ROUTE10_GANLON_BERRY                                 (FLAG_HIDDEN_ITEMS_START +  10)
 #define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B1F_PP_UP                          (FLAG_HIDDEN_ITEMS_START +  11)
 #define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B3F_NUGGET                         (FLAG_HIDDEN_ITEMS_START +  12)
 #define FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B4F_NEST_BALL                      (FLAG_HIDDEN_ITEMS_START +  13)

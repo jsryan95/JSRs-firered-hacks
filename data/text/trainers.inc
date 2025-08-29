@@ -207,7 +207,7 @@ Route11_Text_EddieRematchIntro::
 	.string "You know, right?\n"
 	.string "Let's go, but don't cheat!$"
 
-Route11_Text_BraxtonRematchIntro::
+Route11_Text_SandyRematchIntro::
 	.string "Hi, there!\p"
 	.string "But be careful!\n"
 	.string "I'm still laying down some cables!$"

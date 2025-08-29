@@ -430,12 +430,12 @@ MtMoon_B2F_EventScript_ItemPechaBerry::
 	finditem ITEM_PECHA_BERRY
 	end
 
-Route11_EventScript_ItemXDefend::
-	finditem ITEM_X_DEFEND
+Route11_EventScript_ItemLumBerry::
+	finditem ITEM_LUM_BERRY
 	end
 
-Route9_EventScript_ItemBurnHeal::
-	finditem ITEM_BURN_HEAL
+Route9_EventScript_ItemRawstBerry::
+	finditem ITEM_RAWST_BERRY
 	end
 
 RockTunnel_1F_EventScript_ItemRepel::
@@ -486,8 +486,8 @@ Route11_EventScript_ItemGreatBall::
 	finditem ITEM_GREAT_BALL
 	end
 
-Route11_EventScript_ItemAwakening::
-	finditem ITEM_AWAKENING
+Route11_EventScript_ItemChestoBerry::
+	finditem ITEM_CHESTO_BERRY
 	end
 
 PokemonTower_5F_EventScript_ItemCleanseTag::
