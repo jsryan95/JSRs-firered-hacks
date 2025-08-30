@@ -4706,14 +4706,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HOWL] =
     {
-        .effect = EFFECT_ATTACK_UP,
+        .effect = EFFECT_HOWL,
         .power = 0,
         .type = TYPE_NORMAL,
         .category = CATEGORY_STATUS,
         .accuracy = 0,
         .pp = 40,
         .secondaryEffectChance = 0,
-        .target = MOVE_TARGET_USER,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
         .priority = 0,
         .flags = FLAG_SNATCH_AFFECTED,
     },

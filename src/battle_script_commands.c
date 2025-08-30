@@ -11201,3 +11201,16 @@ void BS_tryGiveDamp(void)
 {
     BSHelper_tryGiveAbility(ABILITY_DAMP);
 }
+
+void BS_checkHowlTarget(void)
+{
+    if (gBattlerTarget != gBattlerAttacker
+            && gBattlerTarget != GetBattlerAtPosition(GetBattlerPosition(gBattlerAttacker) ^ BIT_FLANK))
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gBattlescriptCurrInstr += 9;
+    }
+}

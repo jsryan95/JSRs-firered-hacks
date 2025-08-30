@@ -1602,3 +1602,8 @@
 	callnative BS_tryGiveDamp
 	.4byte \onFail
 	.endm
+
+	.macro checkHowlTarget onFail:req
+	callnative BS_checkHowlTarget
+	.4byte \onFail
+	.endm

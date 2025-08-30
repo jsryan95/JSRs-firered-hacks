@@ -327,6 +327,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectSuckerPunch            @ EFFECT_SUCKER_PUNCH
 	.4byte BattleScript_EffectBubbleGuard            @ EFFECT_BUBBLE_GUARD
 	.4byte BattleScript_EffectSweetScent             @ EFFECT_SWEET_SCENT
+	.4byte BattleScript_EffectHowl                   @ EFFECT_HOWL
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -6132,4 +6133,31 @@ BattleScript_WaterSportMissed::
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_WaterSportLoopIncrement
+
+BattleScript_EffectHowl::
+	attackcanceler
+	attackstring
+	ppreduce
+	setbyte gBattlerTarget, 0
+BattleScript_HowlLoop::
+	movevaluescleanup
+	setmoveeffect MOVE_EFFECT_ATK_PLUS_1
+	checkHowlTarget BattleScript_HowlLoopIncrement
+	jumpifstat BS_TARGET, CMP_EQUAL, STAT_ATK, MAX_STAT_STAGE, BattleScript_HowlDidntAffect
+	attackanimation
+	waitanimation
+	seteffectprimary
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_HowlLoopIncrement::
+	moveendto MOVEEND_NEXT_TARGET
+	addbyte gBattlerTarget, 1
+	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_HowlLoop
+	end
+
+BattleScript_HowlDidntAffect::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNAVOIDEDATTACK
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_HowlLoopIncrement
 
