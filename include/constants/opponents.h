@@ -455,7 +455,7 @@
 #define TRAINER_CHANNELER_KARINA                 449
 #define TRAINER_CHANNELER_JANAE                  450
 #define TRAINER_CHANNELER_ANGELICA               451
-#define TRAINER_CHANNELER_EMILIA                 452
+#define TRAINER_GENTLEMAN_EMILE                 452
 #define TRAINER_CHANNELER_JENNIFER               453
 #define TRAINER_CHANNELER_1                      454
 #define TRAINER_CHANNELER_2                      455

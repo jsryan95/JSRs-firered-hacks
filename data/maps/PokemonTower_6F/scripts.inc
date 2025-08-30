@@ -37,9 +37,9 @@ PokemonTower_6F_EventScript_Angelica::
 	msgbox PokemonTower_6F_Text_AngelicaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-PokemonTower_6F_EventScript_Emilia::
-	trainerbattle_single TRAINER_CHANNELER_EMILIA, PokemonTower_6F_Text_EmiliaIntro, PokemonTower_6F_Text_EmiliaDefeat
-	msgbox PokemonTower_6F_Text_EmiliaPostBattle, MSGBOX_AUTOCLOSE
+PokemonTower_6F_EventScript_Emile::
+	trainerbattle_double TRAINER_GENTLEMAN_EMILE, PokemonTower_6F_Text_EmileIntro, PokemonTower_6F_Text_EmileDefeat, PokemonTower_6F_Text_EmileNotEnoughPokemon
+	msgbox PokemonTower_6F_Text_EmilePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 PokemonTower_6F_EventScript_Jennifer::

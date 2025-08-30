@@ -150,12 +150,12 @@ PokemonTower_3F_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
 	end
 
-PokemonTower_4F_EventScript_ItemElixir::
-	finditem ITEM_ELIXIR
+PokemonTower_4F_EventScript_ItemLeppaBerry::
+	finditem ITEM_LEPPA_BERRY
 	end
 
-PokemonTower_4F_EventScript_ItemAwakening::
-	finditem ITEM_AWAKENING
+PokemonTower_4F_EventScript_ItemChestoBerry::
+	finditem ITEM_CHESTO_BERRY
 	end
 
 PokemonTower_4F_EventScript_ItemGreatBall::
@@ -170,8 +170,8 @@ PokemonTower_6F_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
 	end
 
-PokemonTower_6F_EventScript_ItemXAccuracy::
-	finditem ITEM_X_ACCURACY
+PokemonTower_6F_EventScript_ItemSpellTag::
+	finditem ITEM_SPELL_TAG
 	end
 
 Route12_EventScript_ItemTM48::

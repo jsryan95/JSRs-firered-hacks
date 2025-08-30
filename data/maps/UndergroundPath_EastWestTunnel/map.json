@@ -38,8 +38,8 @@
       "x": 7,
       "y": 3,
       "elevation": 3,
-      "item": "ITEM_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_POTION",
+      "item": "ITEM_FIGY_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_FIGY_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -48,8 +48,8 @@
       "x": 17,
       "y": 5,
       "elevation": 3,
-      "item": "ITEM_PARALYZE_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_PARALYZE_HEAL",
+      "item": "ITEM_WIKI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_WIKI_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -58,8 +58,8 @@
       "x": 31,
       "y": 4,
       "elevation": 3,
-      "item": "ITEM_AWAKENING",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_AWAKENING",
+      "item": "ITEM_MAGO_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_MAGO_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -68,8 +68,8 @@
       "x": 45,
       "y": 3,
       "elevation": 3,
-      "item": "ITEM_BURN_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_BURN_HEAL",
+      "item": "ITEM_AGUAV_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_AGUAV_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -78,8 +78,8 @@
       "x": 70,
       "y": 3,
       "elevation": 3,
-      "item": "ITEM_ICE_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ICE_HEAL",
+      "item": "ITEM_IAPAPA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_IAPAPA_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -88,8 +88,8 @@
       "x": 55,
       "y": 2,
       "elevation": 3,
-      "item": "ITEM_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ETHER",
+      "item": "ITEM_PERSIM_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_PERSIM_BERRY",
       "quantity": 1,
       "underfoot": false
     },
@@ -98,8 +98,8 @@
       "x": 62,
       "y": 5,
       "elevation": 3,
-      "item": "ITEM_ANTIDOTE",
-      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ANTIDOTE",
+      "item": "ITEM_RAZZ_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_RAZZ_BERRY",
       "quantity": 1,
       "underfoot": false
     }

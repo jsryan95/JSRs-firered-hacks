@@ -1720,7 +1720,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_SuperNerdAidan),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_SuperNerdAidan),
     },
     [TRAINER_SUPER_NERD_GLENN] = {
         .trainerClass = TRAINER_CLASS_SUPER_NERD,
@@ -4522,15 +4522,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_ChannelerAngelica),
     },
-    [TRAINER_CHANNELER_EMILIA] = {
-        .trainerClass = TRAINER_CLASS_CHANNELER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS | F_TRAINER_FEMALE,
-        .trainerPic = TRAINER_PIC_CHANNELER,
-        .trainerName = _("EMILIA"),
+    [TRAINER_GENTLEMAN_EMILE] = {
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("EMILE"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_ChannelerEmilia),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_GentlemanEmile),
     },
     [TRAINER_CHANNELER_JENNIFER] = {
         .trainerClass = TRAINER_CLASS_CHANNELER,

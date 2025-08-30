@@ -8,16 +8,21 @@ PokemonTower_6F_Text_AngelicaDefeat::
 PokemonTower_6F_Text_AngelicaPostBattle::
     .string "I feel anemic and weak…$"
 
-PokemonTower_6F_Text_EmiliaIntro::
-    .string "Urff…\n"
-    .string "Kwaah!$"
+PokemonTower_6F_Text_EmileIntro::
+    .string "I'm here to visit my dear departed\n"
+    .string "friend, but a battle outgh to lift\l"
+    .string "my spirits.$"
 
-PokemonTower_6F_Text_EmiliaDefeat::
-    .string "Something fell out!$"
+PokemonTower_6F_Text_EmileDefeat::
+    .string "Wonderful!$"
 
-PokemonTower_6F_Text_EmiliaPostBattle::
-    .string "My hair didn't fall out!\n"
-    .string "It was a malevolent spirit!$"
+PokemonTower_6F_Text_EmilePostBattle::
+    .string "Really we should keep quiet here.\n"
+    .string "But I won't tell anyone if you don't.$"
+
+PokemonTower_6F_Text_EmileNotEnoughPokemon::
+    .string "I'd happily battle you if you\n"
+    .string "would bring another POKéMON."
 
 PokemonTower_6F_Text_JenniferIntro::
     .string "Ke…ke…ke…\n"
