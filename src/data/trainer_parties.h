@@ -1170,16 +1170,24 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerHannah[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacMark[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_PokemaniacMark[] = {
     {
-        .iv = 30,
-        .lvl = 29,
+        .iv = 96,
+        .lvl = 45,
         .species = SPECIES_RHYHORN,
+        .moves = {MOVE_BULLDOZE, MOVE_STONE_EDGE, MOVE_CHIP_AWAY, MOVE_SCARY_FACE},
     },
     {
-        .iv = 30,
-        .lvl = 29,
-        .species = SPECIES_LICKITUNG,
+        .iv = 96,
+        .lvl = 45,
+        .species = SPECIES_DROWZEE,
+        .moves = {MOVE_PSYCHIC, MOVE_DARK_PULSE, MOVE_HYPNOSIS, MOVE_NONE},
+    },
+    {
+        .iv = 96,
+        .lvl = 45,
+        .species = SPECIES_PORYGON,
+        .moves = {MOVE_RECOVER, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK},
     },
 };
 
@@ -8395,14 +8403,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TamerEvan[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacMark2[] = {
     {
-        .iv = 90,
-        .lvl = 33,
-        .species = SPECIES_RHYHORN,
+        .iv = 112,
+        .lvl = 50,
+        .species = SPECIES_RHYDON,
     },
     {
-        .iv = 90,
-        .lvl = 33,
-        .species = SPECIES_LICKITUNG,
+        .iv = 112,
+        .lvl = 50,
+        .species = SPECIES_HYPNO,
+    },
+    {
+        .iv = 112,
+        .lvl = 50,
+        .species = SPECIES_PORYGON2,
     },
 };
 
@@ -9201,14 +9214,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_HikerJeremy2[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacMark3[] = {
     {
-        .iv = 150,
-        .lvl = 54,
+        .iv = 128,
+        .lvl = 57,
         .species = SPECIES_RHYDON,
     },
     {
-        .iv = 150,
-        .lvl = 54,
-        .species = SPECIES_LICKITUNG,
+        .iv = 128,
+        .lvl = 57,
+        .species = SPECIES_HYPNO,
+    },
+    {
+        .iv = 128,
+        .lvl = 57,
+        .species = SPECIES_PORYGON2,
     },
 };
 

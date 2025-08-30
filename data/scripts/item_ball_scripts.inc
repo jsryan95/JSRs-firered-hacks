@@ -454,8 +454,8 @@ RockTunnel_B1F_EventScript_ItemRevive::
 	finditem ITEM_REVIVE
 	end
 
-RockTunnel_B1F_EventScript_ItemLeppaBerry::
-	finditem ITEM_LEPPA_BERRY
+RockTunnel_B1F_EventScript_ItemSoftSand::
+	finditem ITEM_SOFT_SAND
 	end
 
 SilphCo_8F_EventScript_ItemIron::
