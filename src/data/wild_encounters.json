@@ -25087,7 +25087,7 @@
           "map": "MAP_CELADON_CITY_GAME_CORNER_PRIZE_ROOM",
           "base_label": "gCeladonCity_GameCorner_PrizeRoom",
           "land_mons": {
-            "encounter_rate": 2,
+            "encounter_rate": 3,
             "mons": [
               {
                 "min_level": 15,
@@ -25112,32 +25112,32 @@
               {
                 "min_level": 15,
                 "max_level": 15,
-                "species": "SPECIES_RATTATA"
+                "species": "SPECIES_VOLTORB"
               },
               {
                 "min_level": 20,
                 "max_level": 20,
-                "species": "SPECIES_RATTATA"
+                "species": "SPECIES_VOLTORB"
               },
               {
                 "min_level": 15,
                 "max_level": 15,
-                "species": "SPECIES_PORYGON"
+                "species": "SPECIES_SNORUNT"
               },
               {
                 "min_level": 20,
                 "max_level": 20,
-                "species": "SPECIES_PORYGON"
+                "species": "SPECIES_SNORUNT"
               },
               {
-                "min_level": 12,
-                "max_level": 12,
-                "species": "SPECIES_MR_MIME"
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_GASTLY"
               },
               {
-                "min_level": 18,
-                "max_level": 18,
-                "species": "SPECIES_MR_MIME"
+                "min_level": 20,
+                "max_level": 20,
+                "species": "SPECIES_GASTLY"
               }
             ]
           }

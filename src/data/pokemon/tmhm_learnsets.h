@@ -78,7 +78,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CHARMANDER]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -103,7 +103,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CHARMELEON]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -129,7 +129,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -241,7 +241,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_METAPOD]     = TMHM_LEARNSET(0),
 
     [SPECIES_BUTTERFREE]  = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -269,7 +269,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_KAKUNA]      = TMHM_LEARNSET(0),
 
     [SPECIES_BEEDRILL]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -291,7 +291,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_PIDGEY]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -309,7 +309,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)),
 
     [SPECIES_PIDGEOTTO]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -327,7 +327,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)),
 
     [SPECIES_PIDGEOT]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -346,7 +346,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)),
 
     [SPECIES_RATTATA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
@@ -373,7 +373,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_RATICATE]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
@@ -401,7 +401,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_SPEAROW]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -419,7 +419,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)),
 
     [SPECIES_FEAROW]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -486,7 +486,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_PIKACHU]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -510,7 +510,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_RAICHU]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -536,7 +536,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_SANDSHREW]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -561,7 +561,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_SANDSLASH]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -587,7 +587,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_NIDORAN_F]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -615,7 +615,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_NIDORINA]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -645,7 +645,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
@@ -684,7 +684,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_NIDORAN_M]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -711,7 +711,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_NIDORINO]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -740,7 +740,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
@@ -780,7 +780,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -816,7 +816,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -851,7 +851,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_VULPIX]      = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM20_SAFEGUARD)
@@ -871,7 +871,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_NINETALES]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -893,7 +893,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_JIGGLYPUFF]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -927,7 +927,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_WIGGLYTUFF]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -960,7 +960,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_ZUBAT]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -983,7 +983,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)),
 
     [SPECIES_GOLBAT]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -1067,7 +1067,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_PARAS]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -1090,7 +1090,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_PARASECT]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -1113,7 +1113,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_VENONAT]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -1133,7 +1133,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_VENOMOTH]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -1199,7 +1199,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_MEOWTH]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -1228,7 +1228,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_PERSIAN]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -1260,7 +1260,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -1289,7 +1289,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -1317,7 +1317,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_MANKEY]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -1346,7 +1346,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_PRIMEAPE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -1375,7 +1375,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_GROWLITHE]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -1399,7 +1399,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_ARCANINE]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -1507,7 +1507,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_ABRA]        = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -1536,7 +1536,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_KADABRA]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -1565,7 +1565,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_ALAKAZAM]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -1671,7 +1671,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_BELLSPROUT]  = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -1691,7 +1691,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_WEEPINBELL]  = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -1711,7 +1711,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_VICTREEBEL]  = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -1733,7 +1733,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_TENTACOOL]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -1757,7 +1757,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_TENTACRUEL]  = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -1893,7 +1893,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -1926,7 +1926,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -1958,7 +1958,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM08_DIVE)),
 
     [SPECIES_MAGNEMITE]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -1976,7 +1976,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_MAGNETON]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -1995,7 +1995,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_FARFETCHD]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -2014,7 +2014,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)),
 
     [SPECIES_DODUO]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -2031,7 +2031,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)),
 
     [SPECIES_DODRIO]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -2053,7 +2053,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_SEEL]        = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -2075,7 +2075,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_DEWGONG]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -2157,7 +2157,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_SHELLDER]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -2176,7 +2176,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CLOYSTER]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -2402,7 +2402,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM08_DIVE)),
 
     [SPECIES_VOLTORB]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -2422,7 +2422,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_ELECTRODE]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -2494,7 +2494,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_CUBONE]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -2522,7 +2522,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_MAROWAK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -2596,7 +2596,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_LICKITUNG]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -2751,7 +2751,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -2789,7 +2789,6 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_TANGELA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -2814,7 +2813,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -2893,7 +2892,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_GOLDEEN]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -2913,7 +2912,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_SEAKING]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -2934,7 +2933,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_STARYU]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -2959,7 +2958,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_STARMIE]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -2986,7 +2985,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_MR_MIME]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -3017,7 +3016,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_SCYTHER]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -3041,7 +3040,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -3068,7 +3067,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_ELECTABUZZ]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -3094,7 +3093,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_MAGMAR]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -3118,7 +3117,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_PINSIR]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -3238,7 +3237,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_DITTO]       = TMHM_LEARNSET(0),
 
     [SPECIES_EEVEE]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -3258,7 +3257,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -3282,7 +3281,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_JOLTEON]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -3305,7 +3304,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_FLAREON]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -3326,7 +3325,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)),
 
     [SPECIES_PORYGON]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -3403,7 +3402,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_KABUTO]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -3429,7 +3428,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_KABUTOPS]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -3459,7 +3458,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_AERODACTYL]  = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -3524,7 +3523,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -3547,7 +3546,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_ZAPDOS]      = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -3572,7 +3571,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_MOLTRES]     = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -3597,7 +3596,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_DRATINI]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -3625,7 +3624,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_DRAGONAIR]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -3656,7 +3655,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -3698,7 +3697,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
                                         | TMHM(TM08_BULK_UP)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
@@ -3746,7 +3745,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM07_HAIL)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
@@ -3799,7 +3798,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_CHIKORITA]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -3821,7 +3820,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_BAYLEEF]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -3845,7 +3844,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_MEGANIUM]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -3871,7 +3870,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_CYNDAQUIL]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -3892,7 +3891,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_QUILAVA]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -3916,7 +3915,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_TYPHLOSION]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -4029,7 +4028,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_SENTRET]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -4057,7 +4056,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_FURRET]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -4088,7 +4087,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_HOOTHOOT]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -4110,7 +4109,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_NOCTOWL]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -4134,7 +4133,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_LEDYBA]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -4158,7 +4157,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_LEDIAN]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -4222,7 +4221,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_CROBAT]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -4249,7 +4248,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CHINCHOU]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -4273,7 +4272,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_LANTURN]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -4296,7 +4295,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM08_DIVE)),
 
     [SPECIES_PICHU]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -4316,7 +4315,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_CLEFFA]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -4343,7 +4342,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_IGGLYBUFF]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -4369,7 +4368,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_TOGEPI]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -4396,7 +4395,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_TOGETIC]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -4427,7 +4426,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_NATU]        = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -4453,7 +4452,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_XATU]        = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -4480,7 +4479,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_MAREEP]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -4500,7 +4499,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_FLAAFFY]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -4523,7 +4522,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_AMPHAROS]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -4547,7 +4546,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_BELLOSSOM]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -4730,7 +4729,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_AIPOM]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -4781,7 +4780,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_SUNFLORA]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -4802,7 +4801,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_YANMA]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -4883,7 +4882,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_ESPEON]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -4907,7 +4906,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_UMBREON]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -4932,7 +4931,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_MURKROW]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -4958,7 +4957,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -4991,7 +4990,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_MISDREAVUS]  = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -5021,7 +5020,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_GIRAFARIG]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -5126,7 +5125,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_GLIGAR]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -5274,7 +5273,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM08_DIVE)),
 
     [SPECIES_SCIZOR]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -5346,7 +5345,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
@@ -5378,7 +5377,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -5405,7 +5404,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -5557,7 +5556,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_REMORAID]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -5583,7 +5582,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_OCTILLERY]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -5611,7 +5610,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -5631,7 +5630,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_MANTINE]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -5652,7 +5651,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_SKARMORY]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -5675,7 +5674,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_HOUNDOUR]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -5701,7 +5700,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_HOUNDOOM]    = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -5790,7 +5789,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_PORYGON2]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -5818,7 +5817,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_STANTLER]    = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -5892,7 +5891,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -5915,7 +5914,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_ELEKID]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -5938,7 +5937,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_MAGBY]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -5994,7 +5993,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -6033,7 +6032,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_RAIKOU]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -6061,7 +6060,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_ENTEI]       = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -6091,7 +6090,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -6203,7 +6202,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -6242,7 +6241,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_HO_OH]       = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -6279,7 +6278,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CELEBI]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -6358,7 +6357,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_TREECKO]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -6385,7 +6384,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_GROVYLE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -6414,7 +6413,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -6441,7 +6440,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_TORCHIC]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -6465,7 +6464,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_COMBUSKEN]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -6491,7 +6490,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -6647,7 +6646,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_ZIGZAGOON]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -6675,7 +6674,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_LINOONE]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -6707,7 +6706,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_SILCOON]     = TMHM_LEARNSET(0),
 
     [SPECIES_BEAUTIFLY]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -6731,7 +6730,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CASCOON]     = TMHM_LEARNSET(0),
 
     [SPECIES_DUSTOX]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -6757,7 +6756,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -6781,7 +6780,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -6811,7 +6810,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -6839,7 +6838,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_SEEDOT]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -6859,7 +6858,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_NUZLEAF]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -6886,7 +6885,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_SHIFTRY]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -6913,7 +6912,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_NINCADA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -6933,7 +6932,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_NINJASK]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -6956,7 +6955,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_SHEDINJA]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -6978,7 +6977,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_TAILLOW]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -6996,7 +6995,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)),
 
     [SPECIES_SWELLOW]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -7066,7 +7065,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -7095,7 +7094,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_WINGULL]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -7117,7 +7116,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_PELIPPER]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -7162,7 +7161,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_MASQUERAIN]  = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -7238,7 +7237,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_SKITTY]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -7265,7 +7264,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_DELCATTY]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -7295,7 +7294,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_KECLEON]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -7330,7 +7329,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_BALTOY]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -7355,7 +7354,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_CLAYDOL]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -7429,7 +7428,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -7508,7 +7507,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_LUVDISC]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -7529,7 +7528,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CORPHISH]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -7557,7 +7556,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CRAWDAUNT]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -7587,7 +7586,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_FEEBAS]      = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM17_PROTECT)
@@ -7607,7 +7606,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_MILOTIC]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -7630,7 +7629,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CARVANHA]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -7654,7 +7653,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -7802,7 +7801,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_ELECTRIKE]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
                                         
@@ -7823,7 +7822,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_MANECTRIC]   = TMHM_LEARNSET(TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -7971,7 +7970,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CACNEA]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -7991,7 +7990,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CACTURNE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -8058,7 +8057,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_LUNATONE]    = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -8083,7 +8082,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_SOLROCK]     = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -8131,7 +8130,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_SPOINK]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -8159,7 +8158,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_GRUMPIG]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -8186,7 +8185,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_PLUSLE]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -8205,7 +8204,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_MINUN]       = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM18_RAIN_DANCE)
@@ -8305,7 +8304,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_SWABLU]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -8328,7 +8327,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_ALTARIA]     = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -8413,7 +8412,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_ROSELIA]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         | TMHM(TM19_GIGA_DRAIN)
@@ -8765,7 +8764,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
@@ -8852,7 +8851,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)),
 
     [SPECIES_SEVIPER]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM17_PROTECT)
@@ -8880,7 +8879,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
@@ -9032,7 +9031,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_CASTFORM]    = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -9060,7 +9059,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_VOLBEAT]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -9087,7 +9086,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_ILLUMISE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM16_LIGHT_SCREEN)
                                         | TMHM(TM17_PROTECT)
@@ -9154,7 +9153,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_ANORITH]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
                                         
@@ -9176,7 +9175,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_ARMALDO]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -9202,7 +9201,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_RALTS]       = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -9230,7 +9229,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_KIRLIA]      = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -9258,7 +9257,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_GARDEVOIR]   = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -9336,7 +9335,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_SALAMENCE]   = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -9365,7 +9364,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_BELDUM]      = TMHM_LEARNSET(0),
 
     [SPECIES_METANG]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -9393,7 +9392,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)),
 
     [SPECIES_METAGROSS]   = TMHM_LEARNSET(TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -9501,7 +9500,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -9531,7 +9530,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
@@ -9566,7 +9565,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM14_BLIZZARD)
@@ -9604,7 +9603,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -9643,7 +9642,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM13_ICE_BEAM)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -9680,7 +9679,7 @@ static const u32 sTMHMLearnsets[][2] =
     [SPECIES_JIRACHI]     = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -9709,7 +9708,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM13_ICE_BEAM)
@@ -9745,7 +9744,7 @@ static const u32 sTMHMLearnsets[][2] =
 
     [SPECIES_CHIMECHO]    = TMHM_LEARNSET(TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
-                                        
+                                        | TMHM(TM10_SWIFT)
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM12_TAUNT)
                                         | TMHM(TM16_LIGHT_SCREEN)

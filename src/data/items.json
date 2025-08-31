@@ -4783,7 +4783,7 @@
       "price": 3000,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A variable move that changes type\\nand power depending on the POKéMON\\nusing it.",
+      "description_english": "Fires star-shaped rays that\\nnever miss.",
       "importance": 0,
       "registrability": 0,
       "pocket": "POCKET_TM_CASE",
