@@ -856,7 +856,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_BUBBLE_BEAM] =
     {
-        .effect = EFFECT_SPEED_DOWN_HIT,
+        .effect = EFFECT_ATTACK_DOWN_HIT,
         .power = 65,
         .type = TYPE_WATER,
         .category = CATEGORY_SPECIAL,
@@ -2032,7 +2032,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_BUBBLE] =
     {
-        .effect = EFFECT_SPEED_DOWN_HIT,
+        .effect = EFFECT_ATTACK_DOWN_HIT,
         .power = 40,
         .type = TYPE_WATER,
         .category = CATEGORY_SPECIAL,
@@ -3923,7 +3923,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_BRICK_BREAK] =
     {
         .effect = EFFECT_BRICK_BREAK,
-        .power = 85,
+        .power = 75,
         .type = TYPE_FIGHTING,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 100,
@@ -4189,7 +4189,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_BLAZE_KICK] =
     {
         .effect = EFFECT_BLAZE_KICK,
-        .power = 85,
+        .power = 90,
         .type = TYPE_FIRE,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 90,
