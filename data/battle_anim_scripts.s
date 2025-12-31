@@ -476,7 +476,7 @@ gBattleAnims_Moves::
     .4byte Move_POWER_TRICK
     .4byte Move_SUCKER_PUNCH
     @ space for generation 4 moves
-	.4byte Move_NONE
+	.4byte Move_PSYCHO_SHIFT
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -4799,6 +4799,7 @@ Move_GUARD_SWAP:
 Move_ION_TRANSFER:
 Move_GUARD_SPLIT:
 Move_POWER_SPLIT:
+Move_PSYCHO_SHIFT:
 	loadspritegfx ANIM_TAG_BLUEGREEN_ORB
 	call SetPsychicBackground
 	createvisualtask AnimTask_SkillSwap, 3, ANIM_TARGET

@@ -529,6 +529,7 @@ const u8 gMoveDescription_Uproot[] = _("An attack made\nwith digging claws.\nDea
 const u8 gMoveDescription_BuckingKick[] = _("A powerful kick\nmade with the hind\nlegs.");
 const u8 gMoveDescription_SuckerPunch[] = _("Always strikes\nfirst, but fails if\nthe foe is not\nreadying an attack.");
 const u8 gMoveDescription_BubbleGuard[] = _("Blows a bubble\nthat raises SP.\nDEF and protects\nfrom weather damage.");
+const u8 gMoveDescription_PsychoShift[] = _("Using its psychic\npower, the user\ntransfers its status\nproblems to the foe.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1078,4 +1079,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_DONKEY_KICK - 1] = gMoveDescription_BuckingKick,
     [MOVE_SUCKER_PUNCH - 1] = gMoveDescription_SuckerPunch,
     [MOVE_BUBBLE_GUARD - 1] = gMoveDescription_BubbleGuard,
+    [MOVE_PSYCHO_SHIFT - 1] = gMoveDescription_PsychoShift,
 };

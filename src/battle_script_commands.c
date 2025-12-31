@@ -11214,3 +11214,19 @@ void BS_checkHowlTarget(void)
         gBattlescriptCurrInstr += 9;
     }
 }
+
+void BS_cureStatus(void)
+{
+    if (gBattleMons[gBattlerTarget].status1 & (STATUS1_POISON | STATUS1_BURN | STATUS1_PARALYSIS | STATUS1_TOXIC_POISON | STATUS1_SLEEP | STATUS1_FREEZE))
+    {
+        gBattleMons[gBattlerTarget].status1 = 0;
+        gBattlescriptCurrInstr += 10;
+        gActiveBattler = gBattlerTarget;
+        BtlController_EmitSetMonData(BUFFER_A, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[gActiveBattler].status1), &gBattleMons[gActiveBattler].status1);
+        MarkBattlerForControllerExec(gActiveBattler);
+    }
+    else
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 6);
+    }
+}

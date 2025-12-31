@@ -1607,3 +1607,9 @@
 	callnative BS_checkHowlTarget
 	.4byte \onFail
 	.endm
+
+	.macro cureStatus battler:req, onFail:req
+	callnative BS_cureStatus
+	.byte \battler
+	.4byte \onFail
+	.endm
