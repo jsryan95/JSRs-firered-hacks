@@ -5,12 +5,12 @@ CeladonCity_Text_GotMyKoffingInCinnabar::
 
 CeladonCity_Text_GymIsGreatFullOfWomen::
     .string "Heheh! This GYM is great!\n"
-    .string "It's full of women!$"
+    .string "It's full of flowers!$"
 
 CeladonCity_Text_GameCornerIsBadForCitysImage::
     .string "CELADON takes pride in its efforts\n"
     .string "to keep the city beautiful.\p"
-    .string "That's why the new GAME CORNER is\n"
+    .string "That's why the old GAME CORNER is\n"
     .string "bad for our city's image.$"
 
 CeladonCity_Text_BlewItAllAtSlots::
@@ -83,25 +83,25 @@ CeladonCity_Text_ScaldedTongueOnTea::
     .string "But it was boiling hot!\n"
     .string "Gotta cool it to drink it.$"
 
-Text_SoftboiledTeach::
+Text_RoostTeach::
     .string "Hello, there!\p"
     .string "I've seen you about, but I never\n"
     .string "had a chance to chat.\p"
     .string "It must be good luck that brought\n"
     .string "us together finally.\p"
     .string "I'd like to celebrate by teaching\n"
-    .string "you the move SOFTBOILED.$"
+    .string "you the move ROOST.$"
 
-Text_SoftboiledDeclined::
+Text_RoostDeclined::
     .string "I'll always be keeping an eye out\n"
     .string "for you.\p"
     .string "I hope we can chat again.$"
 
-Text_SoftboiledWhichMon::
+Text_RoostWhichMon::
     .string "So, who's the POKéMON that gets\n"
-    .string "the chance to learn SOFTBOILED?$"
+    .string "the chance to learn ROOST?$"
 
-Text_SoftboiledTaught::
+Text_RoostTaught::
     .string "I wish you the best of luck!$"
 
 CeladonCity_Text_SomeoneStoleSilphScope::

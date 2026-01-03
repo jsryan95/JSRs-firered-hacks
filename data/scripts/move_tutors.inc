@@ -180,29 +180,29 @@ EventScript_DreamEaterTaught::
 	release
 	end
 
-EventScript_SoftboiledTutor::
+EventScript_RoostTutor::
 	lock
 	faceplayer
-	goto_if_set FLAG_TUTOR_SOFT_BOILED, EventScript_SoftboiledTaught
-	msgbox Text_SoftboiledTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, EventScript_SoftboiledDeclined
+	goto_if_set FLAG_TUTOR_ROOST, EventScript_RoostTaught
+	msgbox Text_RoostTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_RoostDeclined
 	call EventScript_CanOnlyBeLearnedOnce
-	goto_if_eq VAR_RESULT, NO, EventScript_SoftboiledDeclined
-	msgbox Text_SoftboiledWhichMon
-	setvar VAR_0x8005, MOVETUTOR_SOFT_BOILED
+	goto_if_eq VAR_RESULT, NO, EventScript_RoostDeclined
+	msgbox Text_RoostWhichMon
+	setvar VAR_0x8005, MOVETUTOR_ROOST
 	call EventScript_ChooseMoveTutorMon
-	goto_if_eq VAR_RESULT, FALSE, EventScript_SoftboiledDeclined
-	setflag FLAG_TUTOR_SOFT_BOILED
-	goto EventScript_SoftboiledTaught
+	goto_if_eq VAR_RESULT, FALSE, EventScript_RoostDeclined
+	setflag FLAG_TUTOR_ROOST
+	goto EventScript_RoostTaught
 	end
 
-EventScript_SoftboiledDeclined::
-	msgbox Text_SoftboiledDeclined
+EventScript_RoostDeclined::
+	msgbox Text_RoostDeclined
 	release
 	end
 
-EventScript_SoftboiledTaught::
-	msgbox Text_SoftboiledTaught
+EventScript_RoostTaught::
+	msgbox Text_RoostTaught
 	release
 	end
 

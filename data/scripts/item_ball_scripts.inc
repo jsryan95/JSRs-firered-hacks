@@ -494,8 +494,8 @@ PokemonTower_5F_EventScript_ItemCleanseTag::
 	finditem ITEM_CLEANSE_TAG
 	end
 
-CeladonCity_EventScript_ItemEther::
-	finditem ITEM_ETHER
+CeladonCity_EventScript_ItemLeppaBerry::
+	finditem ITEM_LEPPA_BERRY
 	end
 
 RocketHideout_B3F_EventScript_ItemBlackGlasses::

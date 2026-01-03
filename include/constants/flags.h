@@ -482,7 +482,7 @@
 #define FLAG_HIDE_ROUTE11_GREAT_BALL                            0x1CE
 #define FLAG_HIDE_ROUTE11_CHESTO_BERRY                             0x1CF
 #define FLAG_HIDE_POKEMON_TOWER_5F_CLEANSE_TAG                  0x1D0
-#define FLAG_HIDE_CELADON_CITY_ETHER                            0x1D1
+#define FLAG_HIDE_CELADON_CITY_LEPPA_BERRY                            0x1D1
 #define FLAG_HIDE_ROCKET_HIDEOUT_B3F_BLACK_GLASSES              0x1D2
 #define FLAG_HIDE_SAFARI_ZONE_NORTH_QUICK_CLAW                  0x1D3
 #define FLAG_HIDE_SEAFOAM_ISLANDS_1F_ICE_HEAL                   0x1D4
@@ -735,7 +735,7 @@
 #define FLAG_TUTOR_MEGA_PUNCH                            0x2C4
 #define FLAG_TUTOR_MEGA_KICK                             0x2C5
 #define FLAG_TUTOR_DREAM_EATER                           0x2C6
-#define FLAG_TUTOR_SOFT_BOILED                           0x2C7
+#define FLAG_TUTOR_ROOST                           0x2C7
 #define FLAG_TUTOR_SUBSTITUTE                            0x2C8
 #define FLAG_TUTOR_SWORDS_DANCE                          0x2C9
 #define FLAG_TUTOR_SEISMIC_TOSS                          0x2CA

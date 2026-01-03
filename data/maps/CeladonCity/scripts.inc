@@ -24,8 +24,8 @@ CeladonCity_EventScript_OldMan2::
 	msgbox CeladonCity_Text_BlewItAllAtSlots, MSGBOX_NPC
 	end
 
-CeladonCity_EventScript_SoftboiledTutor::
-	goto EventScript_SoftboiledTutor
+CeladonCity_EventScript_RoostTutor::
+	goto EventScript_RoostTutor
 	end
 
 CeladonCity_EventScript_FatMan::

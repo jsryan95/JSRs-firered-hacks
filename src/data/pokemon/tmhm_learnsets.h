@@ -1012,6 +1012,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         
                                         | TMHM(TM21_TAKE_DOWN)
@@ -1031,6 +1032,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         
                                         | TMHM(TM21_TAKE_DOWN)
@@ -1051,6 +1053,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         
                                         | TMHM(TM21_TAKE_DOWN)
@@ -4550,6 +4553,7 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM11_SUNNY_DAY)
                                         | TMHM(TM15_HYPER_BEAM)
                                         | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
                                         | TMHM(TM19_GIGA_DRAIN)
                                         | TMHM(TM20_SAFEGUARD)
                                         
