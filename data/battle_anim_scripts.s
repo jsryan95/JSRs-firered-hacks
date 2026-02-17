@@ -612,6 +612,7 @@ gBattleAnims_Moves::
     .4byte Move_UPROOT
     .4byte Move_DONKEY_KICK
     .4byte Move_BUBBLE_GUARD
+    .4byte Move_POWER_TRIP
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -6230,6 +6231,7 @@ SmogCloud:
 
 Move_FAINT_ATTACK:
 Move_SUCKER_PUNCH:
+Move_POWER_TRIP:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_ATTACKER
 	fadetobg BG_DARK

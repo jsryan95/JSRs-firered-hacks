@@ -1080,4 +1080,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_SUCKER_PUNCH - 1] = gMoveDescription_SuckerPunch,
     [MOVE_BUBBLE_GUARD - 1] = gMoveDescription_BubbleGuard,
     [MOVE_PSYCHO_SHIFT - 1] = gMoveDescription_PsychoShift,
+    [MOVE_POWER_TRIP - 1] = gMoveDescription_StoredPower,
 };
