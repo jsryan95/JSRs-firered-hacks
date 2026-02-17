@@ -530,6 +530,7 @@ const u8 gMoveDescription_BuckingKick[] = _("A powerful kick\nmade with the hind
 const u8 gMoveDescription_SuckerPunch[] = _("Always strikes\nfirst, but fails if\nthe foe is not\nreadying an attack.");
 const u8 gMoveDescription_BubbleGuard[] = _("Blows a bubble\nthat raises SP.\nDEF and protects\nfrom weather damage.");
 const u8 gMoveDescription_PsychoShift[] = _("Using its psychic\npower, the user\ntransfers its status\nproblems to the foe.");
+const u8 gMoveDescription_Jousting[] = _("A powerful attack\nthat always hits\nfirst. Usable only\non the first turn.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1081,4 +1082,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_BUBBLE_GUARD - 1] = gMoveDescription_BubbleGuard,
     [MOVE_PSYCHO_SHIFT - 1] = gMoveDescription_PsychoShift,
     [MOVE_POWER_TRIP - 1] = gMoveDescription_StoredPower,
+    [MOVE_JOUSTING - 1] = gMoveDescription_Jousting,
 };

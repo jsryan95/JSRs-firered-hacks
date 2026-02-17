@@ -613,6 +613,7 @@ gBattleAnims_Moves::
     .4byte Move_DONKEY_KICK
     .4byte Move_BUBBLE_GUARD
     .4byte Move_POWER_TRIP
+    .4byte Move_JOUSTING
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -9121,6 +9122,7 @@ HealBellRing:
 	return
 
 Move_FAKE_OUT:
+Move_JOUSTING:
 	playsewithpan SE_M_FLATTER, 0
 	createvisualtask AnimTask_FakeOut, 5
 	waitforvisualfinish

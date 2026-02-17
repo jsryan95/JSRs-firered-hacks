@@ -599,8 +599,9 @@
 #define MOVE_DONKEY_KICK 585
 #define MOVE_BUBBLE_GUARD 586
 #define MOVE_POWER_TRIP 587 // gen 7
+#define MOVE_JOUSTING 588
 
-#define MOVES_COUNT 588
+#define MOVES_COUNT 589
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

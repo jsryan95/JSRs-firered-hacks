@@ -329,6 +329,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectSweetScent             @ EFFECT_SWEET_SCENT
 	.4byte BattleScript_EffectHowl                   @ EFFECT_HOWL
 	.4byte BattleScript_EffectPsychoShift            @ EFFECT_PSYCHO_SHIFT
+	.4byte BattleScript_EffectJousting               @ EFFECT_JOUSTING
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -2329,6 +2330,11 @@ BattleScript_EffectFakeOut::
 	attackcanceler
 	jumpifnotfirstturn BattleScript_ButItFailedAtkStringPpReduce
 	setmoveeffect MOVE_EFFECT_FLINCH | MOVE_EFFECT_CERTAIN
+	goto BattleScript_EffectHit
+
+BattleScript_EffectJousting::
+	attackcanceler
+	jumpifnotfirstturn BattleScript_ButItFailedAtkStringPpReduce
 	goto BattleScript_EffectHit
 
 BattleScript_ButItFailedAtkStringPpReduce::
