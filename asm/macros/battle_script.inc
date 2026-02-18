@@ -1613,3 +1613,19 @@
 	.byte \battler
 	.4byte \onFail
 	.endm
+
+	.macro jumpIfStatus3 battler:req, status3:req, ptr:req
+	callnative BS_jumpIfStatus3
+	.byte \battler
+	.4byte \status3
+	.4byte \ptr
+	.endm
+
+	.macro checkTurnOrderForSandAttack onFail:req
+	callnative BS_checkTurnOrderForSandAttack
+	.4byte \onFail
+	.endm
+
+	.macro setSandAttackStatus
+	callnative BS_setSandAttackStatus
+	.endm

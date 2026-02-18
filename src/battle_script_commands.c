@@ -3207,6 +3207,34 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 {
                     gBattlescriptCurrInstr++;
                 }
+                break;
+            case MOVE_EFFECT_MUD_SLAP:
+                if (hasActiveAbility(gEffectBattler, ABILITY_INNER_FOCUS))
+                {
+                    if (primary == TRUE || certain == MOVE_EFFECT_CERTAIN)
+                    {
+                        gLastUsedAbility = ABILITY_INNER_FOCUS;
+                        RecordAbilityBattle(gEffectBattler, ABILITY_INNER_FOCUS);
+                        gBattlescriptCurrInstr = BattleScript_FlinchPrevention;
+                    }
+                    else
+                    {
+                        gBattlescriptCurrInstr++;
+                    }
+                }
+                else if (gBattleMons[gEffectBattler].status3 & STATUS3_SAND_ATTACK)
+                {
+                    gBattlescriptCurrInstr++;
+                }
+                else
+                {
+                    if (GetBattlerTurnOrderNum(gEffectBattler) > gCurrentTurnActionNumber)
+                    {
+                        gBattleMons[gEffectBattler].status2 |= sStatusFlagsForMoveEffects[gBattleCommunication[MOVE_EFFECT_BYTE]];
+                        gBattleMons[gEffectBattler].status3 |= STATUS3_SAND_ATTACK;
+                    }
+                    gBattlescriptCurrInstr++;
+                }
 
             }
         }
@@ -11229,4 +11257,34 @@ void BS_cureStatus(void)
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 6);
     }
+}
+
+void BS_jumpIfStatus3(void)
+{
+    if (gBattleMons[T1_READ_8(gBattlescriptCurrInstr + 5)].status3 & T1_READ_32(gBattlescriptCurrInstr + 6))
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 10);
+    }
+    else
+    {
+        gBattlescriptCurrInstr += 14;
+    }
+}
+
+void BS_checkTurnOrderForSandAttack(void)
+{
+    if (GetBattlerTurnOrderNum(gBattlerTarget) < gCurrentTurnActionNumber)
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+    }
+    else
+    {
+        gBattlescriptCurrInstr += 9;
+    }
+}
+
+void BS_setSandAttackStatus(void)
+{
+    gBattleMons[gBattlerTarget].status3 |= STATUS3_SAND_ATTACK;
+    gBattlescriptCurrInstr += 5;
 }
