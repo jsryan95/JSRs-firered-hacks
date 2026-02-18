@@ -10,7 +10,7 @@ PokemonTower_6F_Text_AngelicaPostBattle::
 
 PokemonTower_6F_Text_EmileIntro::
     .string "I'm here to visit my dear departed\n"
-    .string "friend, but a battle outgh to lift\l"
+    .string "friend, but a battle ought to lift\l"
     .string "my spirits.$"
 
 PokemonTower_6F_Text_EmileDefeat::

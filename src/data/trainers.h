@@ -3710,7 +3710,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_TeamRocketGrunt20),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_TeamRocketGrunt20),
     },
     [TRAINER_TEAM_ROCKET_GRUNT_21] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
@@ -3720,7 +3720,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_TeamRocketGrunt21),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_TeamRocketGrunt21),
     },
     [TRAINER_TEAM_ROCKET_GRUNT_22] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
@@ -4528,7 +4528,7 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_GENTLEMAN,
         .trainerName = _("EMILE"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_GentlemanEmile),
     },

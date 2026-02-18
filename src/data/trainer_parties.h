@@ -4496,55 +4496,61 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt18[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt19[] = {
     {
-        .iv = 0,
-        .lvl = 25,
+        .iv = 64,
+        .lvl = 28,
         .species = SPECIES_ZUBAT,
     },
     {
-        .iv = 0,
-        .lvl = 25,
+        .iv = 64,
+        .lvl = 28,
         .species = SPECIES_ZUBAT,
     },
     {
-        .iv = 0,
-        .lvl = 25,
-        .species = SPECIES_GOLBAT,
+        .iv = 64,
+        .lvl = 28,
+        .species = SPECIES_GLOOM,
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt20[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_TeamRocketGrunt20[] = {
     {
-        .iv = 0,
-        .lvl = 26,
+        .iv = 64,
+        .lvl = 29,
         .species = SPECIES_KOFFING,
+        .moves = {MOVE_PAYBACK, MOVE_SELF_DESTRUCT, MOVE_OMINOUS_WIND, MOVE_SMOKESCREEN}
     },
     {
-        .iv = 0,
-        .lvl = 26,
+        .iv = 64,
+        .lvl = 29,
         .species = SPECIES_DROWZEE,
+        .moves = {MOVE_CONFUSION, MOVE_DISABLE, MOVE_FAINT_ATTACK, MOVE_MEDITATE}
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt21[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_TeamRocketGrunt21[] = {
     {
-        .iv = 0,
-        .lvl = 23,
-        .species = SPECIES_ZUBAT,
+        .iv = 64,
+        .lvl = 28,
+        .species = SPECIES_GOLBAT,
+        .moves = {MOVE_CONFUSE_RAY, MOVE_BITE, MOVE_HAZE, MOVE_AIR_CUTTER},
     },
     {
-        .iv = 0,
-        .lvl = 23,
-        .species = SPECIES_RATTATA,
+        .iv = 64,
+        .lvl = 28,
+        .species = SPECIES_HOUNDOUR,
+        .moves = {MOVE_EMBARGO, MOVE_FIRE_FANG, MOVE_BITE, MOVE_LEER},
     },
     {
-        .iv = 0,
-        .lvl = 23,
+        .iv = 64,
+        .lvl = 28,
+        .species = SPECIES_GRIMER,
+        .moves = {MOVE_SLUDGE, MOVE_MUD_BOMB, MOVE_DISABLE, MOVE_SCREECH}
+    },
+    {
+        .iv = 64,
+        .lvl = 28,
         .species = SPECIES_RATICATE,
-    },
-    {
-        .iv = 0,
-        .lvl = 23,
-        .species = SPECIES_ZUBAT,
+        .moves = {MOVE_HYPER_FANG, MOVE_QUICK_ATTACK, MOVE_BUG_BITE, MOVE_SUPER_FANG},
     },
 };
 
