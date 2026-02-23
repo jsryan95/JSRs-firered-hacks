@@ -788,7 +788,9 @@ u8 DoFieldEndTurnEffects(void)
             {
                 if (!(gBattleWeather & B_WEATHER_RAIN_PERMANENT))
                 {
-                    if (--gWishFutureKnock.weatherDuration == 0)
+                    if (!isAbilityOnField(ABILITY_DROUGHT))
+                        --gWishFutureKnock.weatherDuration;
+                    if (gWishFutureKnock.weatherDuration == 0)
                     {
                         gBattleWeather &= ~B_WEATHER_RAIN_TEMPORARY;
                         gBattleWeather &= ~B_WEATHER_RAIN_DOWNPOUR;
@@ -816,7 +818,9 @@ u8 DoFieldEndTurnEffects(void)
         case ENDTURN_SANDSTORM:
             if (gBattleWeather & B_WEATHER_SANDSTORM)
             {
-                if (!(gBattleWeather & B_WEATHER_SANDSTORM_PERMANENT) && --gWishFutureKnock.weatherDuration == 0)
+                if (!(gBattleWeather & B_WEATHER_SANDSTORM_PERMANENT)
+                        && !isAbilityOnField(ABILITY_SAND_STREAM)
+                        && --gWishFutureKnock.weatherDuration == 0)
                 {
                     gBattleWeather &= ~B_WEATHER_SANDSTORM_TEMPORARY;
                     gBattlescriptCurrInstr = BattleScript_SandStormHailEnds;
@@ -836,7 +840,9 @@ u8 DoFieldEndTurnEffects(void)
         case ENDTURN_SUN:
             if (gBattleWeather & B_WEATHER_SUN)
             {
-                if (!(gBattleWeather & B_WEATHER_SUN_PERMANENT) && --gWishFutureKnock.weatherDuration == 0)
+                if (!(gBattleWeather & B_WEATHER_SUN_PERMANENT)
+                        && !isAbilityOnField(ABILITY_DROUGHT)
+                        && --gWishFutureKnock.weatherDuration == 0)
                 {
                     gBattleWeather &= ~B_WEATHER_SUN_TEMPORARY;
                     gBattlescriptCurrInstr = BattleScript_SunlightFaded;
@@ -854,7 +860,9 @@ u8 DoFieldEndTurnEffects(void)
         case ENDTURN_HAIL:
             if (gBattleWeather & B_WEATHER_HAIL)
             {
-                if (!(gBattleWeather & B_WEATHER_HAIL_PERMANENT) && --gWishFutureKnock.weatherDuration == 0)
+                if (!(gBattleWeather & B_WEATHER_HAIL_PERMANENT)
+                        && !isAbilityOnField(ABILITY_SNOW_WARNING)
+                        && --gWishFutureKnock.weatherDuration == 0)
                 {
                     gBattleWeather &= ~B_WEATHER_HAIL_TEMPORARY;
                     gBattlescriptCurrInstr = BattleScript_SandStormHailEnds;
@@ -1964,40 +1972,39 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 }
                 break;
             case ABILITY_DRIZZLE:
-                if (!(gBattleWeather & B_WEATHER_RAIN_PERMANENT))
-                {
-                    gBattleWeather = (B_WEATHER_RAIN_PERMANENT | B_WEATHER_RAIN_TEMPORARY);
-                    BattleScriptPushCursorAndCallback(BattleScript_DrizzleActivates);
-                    gBattleScripting.battler = battler;
-                    effect++;
-                }
+                if (!(gBattleWeather & B_WEATHER_RAIN) || gWishFutureKnock.weatherDuration < 3)
+                    gWishFutureKnock.weatherDuration = 3;
+
+                gBattleWeather = (B_WEATHER_RAIN_TEMPORARY);
+                BattleScriptPushCursorAndCallback(BattleScript_DrizzleActivates);
+                gBattleScripting.battler = battler;
+                effect++;
                 break;
             case ABILITY_SAND_STREAM:
-                if (!(gBattleWeather & B_WEATHER_SANDSTORM_PERMANENT))
-                {
-                    gBattleWeather = B_WEATHER_SANDSTORM;
-                    BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
-                    gBattleScripting.battler = battler;
-                    effect++;
-                }
+                if (!(gBattleWeather & B_WEATHER_SANDSTORM) || gWishFutureKnock.weatherDuration < 3)
+                    gWishFutureKnock.weatherDuration = 3;
+
+                gBattleWeather = B_WEATHER_SANDSTORM;
+                BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
+                gBattleScripting.battler = battler;
+                effect++;
                 break;
             case ABILITY_SNOW_WARNING:
-                if (!(gBattleWeather & B_WEATHER_HAIL_PERMANENT))
-                {
-                    gBattleWeather = B_WEATHER_HAIL;
-                    BattleScriptPushCursorAndCallback(BattleScript_SnowWarningActivates);
-                    gBattleScripting.battler = battler;
-                    effect++;
-                }
+                if (!(gBattleWeather & B_WEATHER_HAIL) || gWishFutureKnock.weatherDuration < 3)
+                    gWishFutureKnock.weatherDuration = 3;
+
+                gBattleWeather = B_WEATHER_HAIL;
+                BattleScriptPushCursorAndCallback(BattleScript_SnowWarningActivates);
+                gBattleScripting.battler = battler;
+                effect++;
                 break;
             case ABILITY_DROUGHT:
-                if (!(gBattleWeather & B_WEATHER_SUN_PERMANENT))
-                {
-                    gBattleWeather = B_WEATHER_SUN;
-                    BattleScriptPushCursorAndCallback(BattleScript_DroughtActivates);
-                    gBattleScripting.battler = battler;
-                    effect++;
-                }
+                if (!(gBattleWeather & B_WEATHER_SUN) || gWishFutureKnock.weatherDuration < 3)
+                    gWishFutureKnock.weatherDuration = 3;
+                gBattleWeather = B_WEATHER_SUN;
+                BattleScriptPushCursorAndCallback(BattleScript_DroughtActivates);
+                gBattleScripting.battler = battler;
+                effect++;
                 break;
             case ABILITY_INTIMIDATE:
                 if (!(gSpecialStatuses[battler].intimidatedMon))
@@ -3754,6 +3761,19 @@ u8 IsMonDisobedient(void)
 u8 hasActiveAbility(u8 battler, u8 ability)
 {
     return gBattleMons[battler].ability == ability && !(gBattleMons[battler].status3 & STATUS3_GASTRO_ACID);
+}
+
+u8 isAbilityOnField(u8 ability)
+{
+    if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+    {
+        return hasActiveAbility(GetBattlerAtPosition(0), ability)
+                || hasActiveAbility(GetBattlerAtPosition(1), ability)
+                || hasActiveAbility(GetBattlerAtPosition(2), ability)
+                || hasActiveAbility(GetBattlerAtPosition(3), ability);
+    }
+    return hasActiveAbility(GetBattlerAtPosition(0), ability)
+            || hasActiveAbility(GetBattlerAtPosition(1), ability);
 }
 
 u8 isPunchingMove(u16 move)
