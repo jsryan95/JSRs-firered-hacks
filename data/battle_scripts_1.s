@@ -330,8 +330,6 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHowl                   @ EFFECT_HOWL
 	.4byte BattleScript_EffectPsychoShift            @ EFFECT_PSYCHO_SHIFT
 	.4byte BattleScript_EffectJousting               @ EFFECT_JOUSTING
-	.4byte BattleScript_EffectSandAttack             @ EFFECT_SAND_ATTACK
-	.4byte BattleScript_EffectMudSlap                @ EFFECT_MUD_SLAP
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -6261,28 +6259,4 @@ BattleScript_PsychoShiftSleep::
 BattleScript_PsychoShiftCureUser::
 	cureStatus BS_ATTACKER, BattleScript_MoveEnd
 	goto BattleScript_MoveEnd
-
-BattleScript_EffectSandAttack::
-	attackcanceler
-	attackstring
-	ppreduce
-	checkTurnOrderForSandAttack BattleScript_ButItFailed
-	jumpifability BS_TARGET, ABILITY_INNER_FOCUS, BattleScript_ButItFailed
-	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
-	jumpifstatus2 BS_TARGET, STATUS2_FLINCHED, BattleScript_ButItFailed
-	jumpifstatus3 BS_TARGET, STATUS3_SAND_ATTACK, BattleScript_ButItFailed
-	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
-	attackanimation
-	waitanimation
-	setSandAttackStatus
-	setmoveeffect MOVE_EFFECT_FLINCH
-	seteffectprimary
-	resultmessage
-	waitmessage B_WAIT_TIME_LONG
-	goto BattleScript_MoveEnd
-
-BattleScript_EffectMudSlap::
-	setmoveeffect MOVE_EFFECT_MUD_SLAP
-	goto BattleScript_EffectHit
-
 

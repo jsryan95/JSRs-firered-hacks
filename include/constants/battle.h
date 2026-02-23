@@ -135,7 +135,6 @@
 #define STATUS3_ROOSTED               (1 << 2)
 #define STATUS3_MAGNET_RISE           (1 << 3)
 #define STATUS3_BUBBLE_GUARD          (1 << 4)
-#define STATUS3_SAND_ATTACK           (1 << 5)
 
 // Seems like per-battler statuses. Not quite sure how to categorize these
 #define STATUS4_LEECHSEED_BATTLER       (1 << 0 | 1 << 1) // The battler to receive HP from Leech Seed
@@ -294,7 +293,7 @@
 #define MOVE_EFFECT_KNOCK_OFF           54
 #define MOVE_EFFECT_REMOVE_SLEEP        55
 #define MOVE_EFFECT_FORCE_OUT           56
-#define MOVE_EFFECT_MUD_SLAP            57
+#define MOVE_EFFECT_NOTHING_39          57
 #define MOVE_EFFECT_NOTHING_3A          58
 #define MOVE_EFFECT_SP_ATK_TWO_DOWN     59
 #define MOVE_EFFECT_SPEED_TWO_DOWN      60
