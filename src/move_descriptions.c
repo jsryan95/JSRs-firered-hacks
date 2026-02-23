@@ -531,6 +531,8 @@ const u8 gMoveDescription_SuckerPunch[] = _("Always strikes\nfirst, but fails if
 const u8 gMoveDescription_BubbleGuard[] = _("Blows a bubble\nthat raises SP.\nDEF and protects\nfrom weather damage.");
 const u8 gMoveDescription_PsychoShift[] = _("Using its psychic\npower, the user\ntransfers its status\nproblems to the foe.");
 const u8 gMoveDescription_Jousting[] = _("A powerful attack\nthat always hits\nfirst. Usable only\non the first turn.");
+const u8 gMoveDescription_ToxicSpikes[] = _("Poisonous spikes are\nlaid around the\nfoe's party to poison\nfoes switching in.");
+const u8 gMoveDescription_Poltergeist[] = _("Possesses the foe's\nitem to attack.\nFails if the foe\nhas no item.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1083,4 +1085,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_PSYCHO_SHIFT - 1] = gMoveDescription_PsychoShift,
     [MOVE_POWER_TRIP - 1] = gMoveDescription_StoredPower,
     [MOVE_JOUSTING - 1] = gMoveDescription_Jousting,
+    [MOVE_TOXIC_SPIKES - 1] = gMoveDescription_ToxicSpikes,
+    [MOVE_POLTERGEIST - 1] = gMoveDescription_Poltergeist,
+    [MOVE_DUST_DEVIL - 1] = gMoveDescription_Hurricane,
 };

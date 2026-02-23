@@ -1618,3 +1618,8 @@
 	callnative BS_trySetToxicSpikes
 	.4byte \onFail
 	.endm
+
+	.macro checkPoltergeist onFail:req
+	callnative BS_checkPoltergeist
+	.4byte \onFail
+	.endm

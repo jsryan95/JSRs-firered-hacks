@@ -331,6 +331,9 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectPsychoShift            @ EFFECT_PSYCHO_SHIFT
 	.4byte BattleScript_EffectJousting               @ EFFECT_JOUSTING
 	.4byte BattleScript_EffectToxicSpikes            @ EFFECT_TOXIC_SPIKES
+	.4byte BattleScript_EffectPoltergeist            @ EFFECT_POLTERGEIST
+	.4byte BattleScript_EffectHurricane              @ EFFECT_DUST_DEVIL
+	.4byte BattleScript_EffectFreezeHit              @ EFFECT_BLIZZARD
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -6288,4 +6291,12 @@ BattleScript_PsychoShiftSleep::
 BattleScript_PsychoShiftCureUser::
 	cureStatus BS_ATTACKER, BattleScript_MoveEnd
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectPoltergeist::
+	attackcanceler
+	attackstring
+	ppreduce
+	checkPoltergeist BattleScript_ButItFailed
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
 

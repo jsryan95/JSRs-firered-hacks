@@ -828,7 +828,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_BLIZZARD] =
     {
-        .effect = EFFECT_FREEZE_HIT,
+        .effect = EFFECT_BLIZZARD,
         .power = 120,
         .type = TYPE_ICE,
         .category = CATEGORY_SPECIAL,
@@ -7726,5 +7726,33 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .target = MOVE_TARGET_OPPONENTS_FIELD,
         .priority = 0,
         .flags = FLAG_MAGIC_COAT_AFFECTED,
+    },
+
+    [MOVE_POLTERGEIST] =
+    {
+        .effect = EFFECT_POLTERGEIST,
+        .power = 110,
+        .type = TYPE_GHOST,
+        .category = CATEGORY_PHYSICAL,
+        .accuracy = 90,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_DUST_DEVIL] =
+    {
+        .effect = EFFECT_DUST_DEVIL,
+        .power = 120,
+        .type = TYPE_GROUND,
+        .category = CATEGORY_SPECIAL,
+        .accuracy = 70,
+        .pp = 10,
+        .secondaryEffectChance = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 };

@@ -614,6 +614,8 @@ gBattleAnims_Moves::
     .4byte Move_BUBBLE_GUARD
     .4byte Move_POWER_TRIP
     .4byte Move_JOUSTING
+    .4byte Move_POLTERGEIST
+    .4byte Move_DUST_DEVIL
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -3572,6 +3574,7 @@ Move_AMNESIA:
 	call UnsetPsychicBackground
 	end
 
+Move_POLTERGEIST:
 Move_KINESIS:
 	loadspritegfx ANIM_TAG_ALERT
 	loadspritegfx ANIM_TAG_BENT_SPOON
@@ -5819,6 +5822,7 @@ UnusedFutureSightHit:
 
 Move_THUNDER:
 Move_HURRICANE:
+Move_DUST_DEVIL:
 	loadspritegfx ANIM_TAG_LIGHTNING
 	fadetobg BG_THUNDER
 	waitbgfadeout

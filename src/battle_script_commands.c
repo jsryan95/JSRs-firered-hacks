@@ -1283,6 +1283,8 @@ static bool8 AccuracyCalcHelper(u16 move)
 
     if ((WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN)
             && (gBattleMoves[move].effect == EFFECT_THUNDER || gBattleMoves[move].effect == EFFECT_HURRICANE))
+        || (WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SANDSTORM) && gBattleMoves[move].effect == EFFECT_DUST_DEVIL)
+        || (WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_HAIL) && gBattleMoves[move].effect == EFFECT_BLIZZARD)
      || (gBattleMoves[move].effect == EFFECT_ALWAYS_HIT || gBattleMoves[move].effect == EFFECT_VITAL_THROW))
     {
         JumpIfMoveFailed(7, move);
@@ -11285,4 +11287,15 @@ void BS_trySetToxicSpikes(void)
         gSideTimers[targetSide].toxicSpikesAmount++;
         gBattlescriptCurrInstr += 9;
     }
+}
+
+void BS_checkPoltergeist(void)
+{
+    if (!gBattleMons[gBattlerTarget].item == ITEM_NONE)
+    {
+        gBattlescriptCurrInstr += 9;
+        return;
+    }
+
+    gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
 }

@@ -600,8 +600,10 @@
 #define MOVE_BUBBLE_GUARD 586
 #define MOVE_POWER_TRIP 587 // gen 7
 #define MOVE_JOUSTING 588
+#define MOVE_POLTERGEIST 589 // gen 8
+#define MOVE_DUST_DEVIL 590
 
-#define MOVES_COUNT 589
+#define MOVES_COUNT 591
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
