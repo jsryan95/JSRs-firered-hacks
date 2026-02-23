@@ -1613,3 +1613,8 @@
 	.byte \battler
 	.4byte \onFail
 	.endm
+
+	.macro trySetToxicSpikes onFail:req
+	callnative BS_trySetToxicSpikes
+	.4byte \onFail
+	.endm

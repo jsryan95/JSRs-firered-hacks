@@ -330,6 +330,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHowl                   @ EFFECT_HOWL
 	.4byte BattleScript_EffectPsychoShift            @ EFFECT_PSYCHO_SHIFT
 	.4byte BattleScript_EffectJousting               @ EFFECT_JOUSTING
+	.4byte BattleScript_EffectToxicSpikes            @ EFFECT_TOXIC_SPIKES
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1749,6 +1750,17 @@ BattleScript_EffectSpikes::
 	attackanimation
 	waitanimation
 	printstring STRINGID_SPIKESSCATTERED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectToxicSpikes::
+	attackcanceler
+	trySetToxicSpikes BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring STRINGID_TOXICSPIKESSCATTERED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
@@ -3995,6 +4007,13 @@ BattleScript_PrintHurtByStealthRock::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_ToxicSpikesOnAttacker::
+BattleScript_ToxicSpikesOnFaintedBattler::
+BattleScript_ToxicSpikesOnTarget::
+	setmoveeffect MOVE_EFFECT_POISON
+	seteffectprimary
+	return
+
 BattleScript_HealingWishComesTrue::
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
 	healthbarupdate BS_TARGET
@@ -4080,6 +4099,16 @@ BattleScript_LeechSeedFree::
 
 BattleScript_SpikesFree::
 	printstring STRINGID_PKMNBLEWAWAYSPIKES
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_ToxicSpikesFree::
+	printstring STRINGID_PKMNBLEWAWAYTOXICSPIKES
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_RemoveToxicSpikes::
+	printstring STRINGID_PKMNABSORBEDTOXICSPIKES
 	waitmessage B_WAIT_TIME_LONG
 	return
 

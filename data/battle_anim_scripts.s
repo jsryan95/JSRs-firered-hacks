@@ -475,9 +475,9 @@ gBattleAnims_Moves::
     .4byte Move_BUG_BITE
     .4byte Move_POWER_TRICK
     .4byte Move_SUCKER_PUNCH
-    @ space for generation 4 moves
 	.4byte Move_PSYCHO_SHIFT
-	.4byte Move_NONE
+	.4byte Move_TOXIC_SPIKES
+    @ space for generation 4 moves
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -7317,6 +7317,7 @@ Move_SPIKES:
 Move_HEAL_BLOCK:
 Move_STEALTH_ROCK:
 Move_EMBARGO:
+Move_TOXIC_SPIKES:
 	loadspritegfx ANIM_TAG_SPIKES
 	monbg ANIM_DEF_PARTNER
 	playsewithpan SE_M_JUMP_KICK, SOUND_PAN_ATTACKER

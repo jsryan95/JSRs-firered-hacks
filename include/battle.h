@@ -262,6 +262,7 @@ struct SideTimer
     u8 embargoTimer;
     u8 embargoBattlerId;
     u8 retaliateTimer;
+    u8 toxicSpikesAmount;
 };
 
 extern struct SideTimer gSideTimers[];
