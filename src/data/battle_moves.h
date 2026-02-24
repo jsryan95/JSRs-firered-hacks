@@ -170,16 +170,16 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_GUILLOTINE] =
     {
-        .effect = EFFECT_OHKO,
-        .power = 1,
-        .type = TYPE_NORMAL,
+        .effect = EFFECT_GUILLOTINE,
+        .power = 80,
+        .type = TYPE_STEEL,
         .category = CATEGORY_PHYSICAL,
-        .accuracy = 30,
-        .pp = 5,
+        .accuracy = 100,
+        .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
     [MOVE_RAZOR_WIND] =
@@ -450,16 +450,16 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_HORN_DRILL] =
     {
-        .effect = EFFECT_OHKO,
-        .power = 1,
+        .effect = EFFECT_GUILLOTINE,
+        .power = 80,
         .type = TYPE_NORMAL,
         .category = CATEGORY_PHYSICAL,
-        .accuracy = 30,
-        .pp = 5,
+        .accuracy = 100,
+        .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+        .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
     [MOVE_TACKLE] =
@@ -4608,11 +4608,11 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_SHEER_COLD] =
     {
-        .effect = EFFECT_OHKO,
-        .power = 1,
+        .effect = EFFECT_SHEER_COLD,
+        .power = 0,
         .type = TYPE_ICE,
-        .category = CATEGORY_SPECIAL,
-        .accuracy = 30,
+        .category = CATEGORY_STATUS,
+        .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,

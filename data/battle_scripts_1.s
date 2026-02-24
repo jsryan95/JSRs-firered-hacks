@@ -334,6 +334,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectPoltergeist            @ EFFECT_POLTERGEIST
 	.4byte BattleScript_EffectHurricane              @ EFFECT_DUST_DEVIL
 	.4byte BattleScript_EffectFreezeHit              @ EFFECT_BLIZZARD
+	.4byte BattleScript_EffectSheerCold              @ EFFECT_SHEER_COLD
+	.4byte BattleScript_EffectHit                    @ EFFECT_GUILLOTINE
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1256,6 +1258,39 @@ BattleScript_EffectAndRechargeHit::
     seteffectwithchance
     moveendall
     end
+
+BattleScript_EffectSheerCold::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifability BS_TARGET, ABILITY_MAGMA_ARMOR, BattleScript_MagmaArmorProtected
+	jumpIfLeafGuardProtected BattleScript_MagmaArmorProtected
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
+	jumpifstatus BS_TARGET, STATUS1_FREEZE, BattleScript_AlreadyFrozen
+	jumpiftype BS_TARGET, TYPE_ICE, BattleScript_NotAffected
+	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected
+	attackanimation
+	waitanimation
+    setmoveeffect MOVE_EFFECT_FREEZE
+    seteffectprimary
+    setmoveeffect MOVE_EFFECT_RECHARGE | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+    seteffectwithchance
+    moveendall
+    end
+
+BattleScript_AlreadyFrozen::
+	pause B_WAIT_TIME_LONG
+	printstring STRINGID_PKMNALREADYFROZEN
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_MagmaArmorProtected::
+	pause B_WAIT_TIME_LONG
+	printstring STRINGID_PKMNPROTECTEDFROMFREEZE
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
 
 BattleScript_EffectIceFang::
     setmoveeffect MOVE_EFFECT_FREEZE
