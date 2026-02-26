@@ -616,6 +616,7 @@ gBattleAnims_Moves::
     .4byte Move_JOUSTING
     .4byte Move_POLTERGEIST
     .4byte Move_DUST_DEVIL
+    .4byte Move_POLLEN_PUFF
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -9234,6 +9235,7 @@ Move_INGRAIN:
 	waitforvisualfinish
 	end
 
+Move_POLLEN_PUFF:
 Move_PRESENT:
 	loadspritegfx ANIM_TAG_ITEM_BAG
 	createvisualtask AnimTask_IsHealingMove, 2

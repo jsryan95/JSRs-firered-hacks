@@ -8923,22 +8923,15 @@ static void Cmd_friendshiptodamagecalculation(void)
 
 static void Cmd_presentdamagecalculation(void)
 {
-    s32 rand = Random() & 0xFF;
-
-    if (rand < 102)
-        gDynamicBasePower = 40;
-    else if (rand < 178)
-        gDynamicBasePower = 80;
-    else if (rand < 204)
-        gDynamicBasePower = 120;
-    else
+    bool8 targetIsAlly = (gBattlerTarget == BATTLE_PARTNER(gBattlerAttacker));
+    if (targetIsAlly)
     {
-        gBattleMoveDamage = gBattleMons[gBattlerTarget].maxHP / 4;
+        gBattleMoveDamage = gBattleMons[gBattlerTarget].maxHP / 2;
         if (gBattleMoveDamage == 0)
             gBattleMoveDamage = 1;
         gBattleMoveDamage *= -1;
     }
-    if (rand < 204)
+    if (!targetIsAlly)
         gBattlescriptCurrInstr = BattleScript_HitFromCritCalc;
     else if (gBattleMons[gBattlerTarget].maxHP == gBattleMons[gBattlerTarget].hp)
         gBattlescriptCurrInstr = BattleScript_AlreadyAtFullHp;

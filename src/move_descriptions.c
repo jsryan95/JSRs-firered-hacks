@@ -216,7 +216,7 @@ const u8 gMoveDescription_Attract[] = _("By acting cutely,\nthe foe is made\ninf
 const u8 gMoveDescription_SleepTalk[] = _("While asleep, the\nuser randomly uses\none of the moves it\nknows.");
 const u8 gMoveDescription_HealBell[] = _("A soothing bell\nchimes to heal the\nstatus problems of\nall allies.");
 const u8 gMoveDescription_Return[] = _("This attack move\ngrows more powerful\nthe more the user\nlikes its TRAINER.");
-const u8 gMoveDescription_Present[] = _("The foe is given a\nbooby-trapped gift.\nIt restores HP\nsometimes, however.");
+const u8 gMoveDescription_Present[] = _("The foe is given a\nbooby-trapped gift.\nIt can restore an\nally's HP instead.");
 const u8 gMoveDescription_Frustration[] = _("This attack move\ngrows more powerful\nthe less the user\nlikes its TRAINER.");
 const u8 gMoveDescription_Safeguard[] = _("It protects the\nuser's party from\nall status problems\nfor five turns.");
 const u8 gMoveDescription_PainSplit[] = _("The user adds its\nHP to the foe's HP,\nthen equally shares\nthe total HP.");
@@ -533,6 +533,7 @@ const u8 gMoveDescription_PsychoShift[] = _("Using its psychic\npower, the user\
 const u8 gMoveDescription_Jousting[] = _("A powerful attack\nthat always hits\nfirst. Usable only\non the first turn.");
 const u8 gMoveDescription_ToxicSpikes[] = _("Poisonous spikes are\nlaid around the\nfoe's party to poison\nfoes switching in.");
 const u8 gMoveDescription_Poltergeist[] = _("Possesses the foe's\nitem to attack.\nFails if the foe\nhas no item.");
+const u8 gMoveDescription_PollenPuff[] = _("Throws a ball of\nexploding pollen.\nIt can restore an\nally's HP instead.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1088,4 +1089,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_TOXIC_SPIKES - 1] = gMoveDescription_ToxicSpikes,
     [MOVE_POLTERGEIST - 1] = gMoveDescription_Poltergeist,
     [MOVE_DUST_DEVIL - 1] = gMoveDescription_Hurricane,
+    [MOVE_POLLEN_PUFF - 1] = gMoveDescription_PollenPuff,
 };

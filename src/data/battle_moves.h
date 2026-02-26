@@ -3041,15 +3041,15 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_PRESENT] =
     {
         .effect = EFFECT_PRESENT,
-        .power = 1,
+        .power = 80,
         .type = TYPE_NORMAL,
         .category = CATEGORY_PHYSICAL,
-        .accuracy = 90,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
 
     [MOVE_FRUSTRATION] =
@@ -7751,6 +7751,20 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .accuracy = 70,
         .pp = 10,
         .secondaryEffectChance = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_POLLEN_PUFF] =
+    {
+        .effect = EFFECT_PRESENT,
+        .power = 80,
+        .type = TYPE_BUG,
+        .category = CATEGORY_SPECIAL,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
