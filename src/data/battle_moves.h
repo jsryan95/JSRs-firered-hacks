@@ -7773,7 +7773,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FLARE_UP] =
     {
         .effect = EFFECT_RAGE,
-        .power = 80,
+        .power = 90,
         .type = TYPE_FIRE,
         .category = CATEGORY_SPECIAL,
         .accuracy = 100,
