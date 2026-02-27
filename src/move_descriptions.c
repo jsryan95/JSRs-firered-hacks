@@ -98,7 +98,7 @@ const u8 gMoveDescription_Hypnosis[] = _("Hypnotic suggestion\nis used to make t
 const u8 gMoveDescription_Meditate[] = _("The user meditates\nto raise its\nATTACK and SP. DEF\nstats.");
 const u8 gMoveDescription_Agility[] = _("The user relaxes\nand lightens its\nbody to sharply\nboost its SPEED.");
 const u8 gMoveDescription_QuickAttack[] = _("An almost invisibly\nfast attack that\nis certain to strike\nfirst.");
-const u8 gMoveDescription_Rage[] = _("An attack that\nbecomes stronger\neach time the user\nis hit in battle.");
+const u8 gMoveDescription_Rage[] = _("Raises the user's\nATTACK if it is\nhit after using\nthis move.");
 const u8 gMoveDescription_Teleport[] = _("Use it to flee from\nany wild POKéMON.\nAlso warps to the\nlast POKé CENTER.");
 const u8 gMoveDescription_NightShade[] = _("An attack with a\nmirage that inflicts\ndamage matching\nthe user's level.");
 const u8 gMoveDescription_Mimic[] = _("The user copies the\nmove last used by\nthe foe for the\nrest of the battle.");
@@ -1090,4 +1090,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POLTERGEIST - 1] = gMoveDescription_Poltergeist,
     [MOVE_DUST_DEVIL - 1] = gMoveDescription_Hurricane,
     [MOVE_POLLEN_PUFF - 1] = gMoveDescription_PollenPuff,
+    [MOVE_FLARE_UP - 1] = gMoveDescription_Rage,
 };

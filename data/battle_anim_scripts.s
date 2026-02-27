@@ -617,6 +617,7 @@ gBattleAnims_Moves::
     .4byte Move_POLTERGEIST
     .4byte Move_DUST_DEVIL
     .4byte Move_POLLEN_PUFF
+    .4byte Move_FLARE_UP
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -3450,6 +3451,7 @@ Move_FEINT:
 	waitforvisualfinish
 	end
 
+Move_FLARE_UP:
 Move_RAGE:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_ANGER
