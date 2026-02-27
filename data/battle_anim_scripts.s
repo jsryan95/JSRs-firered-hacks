@@ -618,6 +618,7 @@ gBattleAnims_Moves::
     .4byte Move_DUST_DEVIL
     .4byte Move_POLLEN_PUFF
     .4byte Move_FLARE_UP
+    .4byte Move_PEPPER_POWDER
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -5375,6 +5376,7 @@ Move_HOWL:
 
 Move_BULK_UP:
 Move_COIL:
+Move_PEPPER_POWDER:
 	loadspritegfx ANIM_TAG_BREATH
 	createvisualtask AnimTask_GrowAndShrink, 2
 	playsewithpan SE_M_SWAGGER, SOUND_PAN_ATTACKER

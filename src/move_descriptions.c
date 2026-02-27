@@ -534,6 +534,7 @@ const u8 gMoveDescription_Jousting[] = _("A powerful attack\nthat always hits\nf
 const u8 gMoveDescription_ToxicSpikes[] = _("Poisonous spikes are\nlaid around the\nfoe's party to poison\nfoes switching in.");
 const u8 gMoveDescription_Poltergeist[] = _("Possesses the foe's\nitem to attack.\nFails if the foe\nhas no item.");
 const u8 gMoveDescription_PollenPuff[] = _("Throws a ball of\nexploding pollen.\nIt can restore an\nally's HP instead.");
+const u8 gMoveDescription_PepperPowder[] = _("An invigorating\npowder raises the\nuser's ATTACK and\nDEFENSE.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1091,4 +1092,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_DUST_DEVIL - 1] = gMoveDescription_Hurricane,
     [MOVE_POLLEN_PUFF - 1] = gMoveDescription_PollenPuff,
     [MOVE_FLARE_UP - 1] = gMoveDescription_Rage,
+    [MOVE_PEPPER_POWDER - 1] = gMoveDescription_PepperPowder,
 };

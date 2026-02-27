@@ -604,8 +604,9 @@
 #define MOVE_DUST_DEVIL 590
 #define MOVE_POLLEN_PUFF 591 // gen 7
 #define MOVE_FLARE_UP 592
+#define MOVE_PEPPER_POWDER 593
 
-#define MOVES_COUNT 593
+#define MOVES_COUNT 594
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
