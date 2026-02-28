@@ -125,6 +125,7 @@ static const u8 sStormDrainDescription[] = _("Draws WATER moves.");
 static const u8 sRegeneratorDescription[] = _("Restores HP upon switching out.");
 static const u8 sPoisonTouchDescription[] = _("May poison when making contact.");
 static const u8 sMoxieDescription[] = _("Boosts ATTACK upon defeating a foe.");
+static const u8 sIceSkaterDescription[] = _("Raises SPEED in hail.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -257,6 +258,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_REGENERATOR] = sRegeneratorDescription,
     [ABILITY_POISON_TOUCH] = sPoisonTouchDescription,
     [ABILITY_MOXIE] = sMoxieDescription,
+    [ABILITY_ICE_SKATER] = sIceSkaterDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -390,4 +392,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_REGENERATOR] = _("REGENERATOR"),
     [ABILITY_POISON_TOUCH] = _("POISON TOUCH"),
     [ABILITY_MOXIE] = _("MOXIE"),
+    [ABILITY_ICE_SKATER] = ("ICE SKATER"),
 };

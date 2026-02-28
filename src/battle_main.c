@@ -3423,13 +3423,15 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
     {
         if ((hasActiveAbility(battler1, ABILITY_SWIFT_SWIM) && gBattleWeather & B_WEATHER_RAIN)
             || (hasActiveAbility(battler1, ABILITY_CHLOROPHYLL) && gBattleWeather & B_WEATHER_SUN)
-            || (hasActiveAbility(battler1, ABILITY_SAND_RUSH) && gBattleWeather & B_WEATHER_SANDSTORM))
+            || (hasActiveAbility(battler1, ABILITY_SAND_RUSH) && gBattleWeather & B_WEATHER_SANDSTORM)
+            || (hasActiveAbility(battler1, ABILITY_ICE_SKATER) && gBattleWeather & B_WEATHER_HAIL))
             speedMultiplierBattler1 = 2;
         else
             speedMultiplierBattler1 = 1;
         if ((hasActiveAbility(battler2, ABILITY_SWIFT_SWIM) && gBattleWeather & B_WEATHER_RAIN)
             || (hasActiveAbility(battler2, ABILITY_CHLOROPHYLL) && gBattleWeather & B_WEATHER_SUN)
-            || (hasActiveAbility(battler2, ABILITY_SAND_RUSH) && gBattleWeather & B_WEATHER_SANDSTORM))
+            || (hasActiveAbility(battler2, ABILITY_SAND_RUSH) && gBattleWeather & B_WEATHER_SANDSTORM)
+            || (hasActiveAbility(battler2, ABILITY_ICE_SKATER) && gBattleWeather & B_WEATHER_HAIL))
             speedMultiplierBattler2 = 2;
         else
             speedMultiplierBattler2 = 1;
