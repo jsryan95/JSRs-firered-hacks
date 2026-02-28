@@ -336,6 +336,10 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFreezeHit              @ EFFECT_BLIZZARD
 	.4byte BattleScript_EffectSheerCold              @ EFFECT_SHEER_COLD
 	.4byte BattleScript_EffectHit                    @ EFFECT_GUILLOTINE
+	.4byte BattleScript_EffectBlastBurn              @ EFFECT_BLAST_BURN
+	.4byte BattleScript_EffectHydroCannon            @ EFFECT_HYDRO_CANNON
+	.4byte BattleScript_EffectFrenzyPlant            @ EFFECT_FRENZY_PLANT
+	.4byte BattleScript_EffectJawLock                @ EFFECT_JAW_LOCK
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -6334,4 +6338,20 @@ BattleScript_EffectPoltergeist::
 	checkPoltergeist BattleScript_ButItFailed
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	goto BattleScript_HitFromCritCalc
+
+BattleScript_EffectBlastBurn::
+    setmoveeffect MOVE_EFFECT_KNOCK_OFF
+    goto BattleScript_EffectAndRechargeHit
+
+BattleScript_EffectHydroCannon::
+	setmoveeffect MOVE_EFFECT_FORCE_OUT
+	goto BattleScript_EffectAndRechargeHit
+
+BattleScript_EffectFrenzyPlant::
+	setmoveeffect MOVE_EFFECT_PREVENT_ESCAPE
+	goto BattleScript_EffectAndRechargeHit
+
+BattleScript_EffectJawLock::
+	setmoveeffect MOVE_EFFECT_JAW_LOCK
+	goto BattleScript_EffectHit
 

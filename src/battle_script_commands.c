@@ -3069,6 +3069,13 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 gDisableStructs[gBattlerTarget].battlerPreventingEscape = gBattlerAttacker;
                 gBattlescriptCurrInstr++;
                 break;
+            case MOVE_EFFECT_JAW_LOCK:
+                gBattleMons[gBattlerTarget].status2 |= STATUS2_ESCAPE_PREVENTION;
+                gDisableStructs[gBattlerTarget].battlerPreventingEscape = gBattlerAttacker;
+                gBattleMons[gBattlerAttacker].status2 |= STATUS2_ESCAPE_PREVENTION;
+                gDisableStructs[gBattlerAttacker].battlerPreventingEscape = gBattlerTarget;
+                gBattlescriptCurrInstr++;
+                break;
             case MOVE_EFFECT_NIGHTMARE:
                 gBattleMons[gBattlerTarget].status2 |= STATUS2_NIGHTMARE;
                 gBattlescriptCurrInstr++;

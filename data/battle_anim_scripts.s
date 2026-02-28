@@ -619,6 +619,7 @@ gBattleAnims_Moves::
     .4byte Move_POLLEN_PUFF
     .4byte Move_FLARE_UP
     .4byte Move_PEPPER_POWDER
+    .4byte Move_JAW_LOCK
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -6455,6 +6456,7 @@ Move_POWER_FANG:
 	end
 
 Move_CRUNCH:
+Move_JAW_LOCK:
 	loadspritegfx ANIM_TAG_SHARP_TEETH
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET

@@ -3237,6 +3237,7 @@ static const struct LevelUpMove sTotodileLevelUpLearnset[] = {
     LEVEL_UP_MOVE(45, MOVE_AQUA_TAIL),
     LEVEL_UP_MOVE(49, MOVE_AGILITY),
     LEVEL_UP_MOVE(53, MOVE_SUPERPOWER),
+    LEVEL_UP_MOVE(57, MOVE_JAW_LOCK),
     LEVEL_UP_END
 };
 
@@ -3256,6 +3257,7 @@ static const struct LevelUpMove sCroconawLevelUpLearnset[] = {
     LEVEL_UP_MOVE(52, MOVE_AQUA_TAIL),
     LEVEL_UP_MOVE(57, MOVE_AGILITY),
     LEVEL_UP_MOVE(62, MOVE_SUPERPOWER),
+    LEVEL_UP_MOVE(67, MOVE_JAW_LOCK),
     LEVEL_UP_END
 };
 
@@ -3275,6 +3277,7 @@ static const struct LevelUpMove sFeraligatrLevelUpLearnset[] = {
     LEVEL_UP_MOVE(57, MOVE_AQUA_TAIL),
     LEVEL_UP_MOVE(63, MOVE_AGILITY),
     LEVEL_UP_MOVE(69, MOVE_SUPERPOWER),
+    LEVEL_UP_MOVE(76, MOVE_JAW_LOCK),
     LEVEL_UP_END
 };
 
