@@ -5022,6 +5022,11 @@ BattleScript_ColorChangeActivates::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_NormalizeActivates::
+	printstring STRINGID_NORMALIZECHANGEDTYPE
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_WeakArmorActivates::
     jumpifstat BS_TARGET, CMP_EQUAL, STAT_DEF, MIN_STAT_STAGE, BattleScript_WeakArmorTrySpeed
     playstatchangeanimation BS_TARGET, BIT_DEF, STAT_CHANGE_NEGATIVE

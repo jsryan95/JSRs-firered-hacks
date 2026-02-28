@@ -311,6 +311,7 @@ static const u8 sText_PkmnXLowersSpeed[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_
 static const u8 sText_PkmnsXDisabledY[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\ndisabled {B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}!");
 static const u8 sText_PkmnsXMadeYUseless[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade {B_CURRENT_MOVE} useless!");
 static const u8 sText_PkmnChangedTypeWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade it the {B_BUFF1} type!");
+static const u8 sText_NormalizeChangedType[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade {B_ATK_NAME_WITH_PREFIX} the {B_BUFF1} type!");
 static const u8 sText_PkmnPreventsParalysisWith[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents paralysis!");
 static const u8 sText_PkmnPreventsRomanceWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents romance!");
 static const u8 sText_PkmnPreventsPoisoningWith[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents poisoning!");
@@ -998,6 +999,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNALREADYFROZEN - BATTLESTRINGS_TABLE_START]              = sText_PkmnAlreadyFrozen,
     [STRINGID_PKMNPROTECTEDFROMFREEZE - BATTLESTRINGS_TABLE_START]        = sText_PkmnProtectedFromFreeze,
     [STRINGID_PKMNXLOWERSSPEED - BATTLESTRINGS_TABLE_START]               = sText_PkmnXLowersSpeed,
+    [STRINGID_NORMALIZECHANGEDTYPE - BATTLESTRINGS_TABLE_START]           = sText_NormalizeChangedType,
 };
 
 const u16 gMissStringIds[] =

@@ -2338,6 +2338,21 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+            case ABILITY_NORMALIZE:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && move != MOVE_STRUGGLE
+                 && gBattleMoves[move].power != 0
+                 && TARGET_TURN_DAMAGED
+                 && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_NORMAL)
+                 && gBattleMons[gBattlerAttacker].hp != 0)
+                {
+                    SET_BATTLER_TYPE(gBattlerAttacker, TYPE_NORMAL);
+                    PREPARE_TYPE_BUFFER(gBattleTextBuff1, TYPE_NORMAL);
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_NormalizeActivates;
+                    effect++;
+                }
+                break;
             case ABILITY_WEAK_ARMOR:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
