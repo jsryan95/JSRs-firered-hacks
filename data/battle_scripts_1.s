@@ -5089,6 +5089,17 @@ BattleScript_CuteCharmActivates::
 BattleScript_CuteCharmEnd::
     return
 
+BattleScript_GooeyActivates::
+    jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_SPEED, MIN_STAT_STAGE, BattleScript_GooeyEnd
+    playstatchangeanimation BS_ATTACKER, BIT_SPEED, STAT_CHANGE_NEGATIVE
+    setstatchanger STAT_SPEED, 1, TRUE
+    statbuffchange MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN | STAT_CHANGE_ALLOW_PTR, BattleScript_GooeyEnd
+    jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_GooeyEnd
+	printstring STRINGID_PKMNXLOWERSSPEED
+	waitmessage B_WAIT_TIME_SHORT
+BattleScript_GooeyEnd::
+    return
+
 BattleScript_ApplySecondaryEffect::
 	waitstate
 	seteffectsecondary

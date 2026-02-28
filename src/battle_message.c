@@ -307,6 +307,7 @@ static const u8 sText_MoxieActivated[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_AB
 static const u8 sText_UserSwappedAtkAndDef[] = _("{B_ATK_NAME_WITH_PREFIX} swapped\nits ATTACK and DEFENSE!");
 static const u8 sText_PkmnDefFellBecauseOf[] = _("{B_DEF_NAME_WITH_PREFIX}'s DEFENSE\nfell due to its {B_DEF_ABILITY}!");
 static const u8 sText_PkmnXLowersAttack[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nlowered {B_ATK_NAME_WITH_PREFIX}'s ATTACK!");
+static const u8 sText_PkmnXLowersSpeed[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nlowered {B_ATK_NAME_WITH_PREFIX}'s SPEED!");
 static const u8 sText_PkmnsXDisabledY[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\ndisabled {B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}!");
 static const u8 sText_PkmnsXMadeYUseless[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade {B_CURRENT_MOVE} useless!");
 static const u8 sText_PkmnChangedTypeWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade it the {B_BUFF1} type!");
@@ -996,6 +997,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_BUBBLEGUARD - BATTLESTRINGS_TABLE_START]                    = sText_BubbleGuard,
     [STRINGID_PKMNALREADYFROZEN - BATTLESTRINGS_TABLE_START]              = sText_PkmnAlreadyFrozen,
     [STRINGID_PKMNPROTECTEDFROMFREEZE - BATTLESTRINGS_TABLE_START]        = sText_PkmnProtectedFromFreeze,
+    [STRINGID_PKMNXLOWERSSPEED - BATTLESTRINGS_TABLE_START]               = sText_PkmnXLowersSpeed,
 };
 
 const u16 gMissStringIds[] =
