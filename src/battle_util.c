@@ -2518,6 +2518,18 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+            case ABILITY_ANGER_POINT:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && TARGET_TURN_DAMAGED
+                 && gBattleMons[battler].hp != 0
+                 && gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 2))
+                {
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_JustifiedActivates;
+                    effect++;
+                }
+                break;
             }
             break;
         case ABILITYEFFECT_ON_DAMAGE_ATTACKER: // Think contact abilities.

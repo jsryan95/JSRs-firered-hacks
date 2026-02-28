@@ -126,6 +126,7 @@ static const u8 sRegeneratorDescription[] = _("Restores HP upon switching out.")
 static const u8 sPoisonTouchDescription[] = _("May poison when making contact.");
 static const u8 sMoxieDescription[] = _("Boosts ATTACK upon defeating a foe.");
 static const u8 sIceSkaterDescription[] = _("Raises SPEED in hail.");
+static const u8 sAngerPointDescription[] = _("Raises ATTACK when HP is low.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -259,6 +260,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_POISON_TOUCH] = sPoisonTouchDescription,
     [ABILITY_MOXIE] = sMoxieDescription,
     [ABILITY_ICE_SKATER] = sIceSkaterDescription,
+    [ABILITY_ANGER_POINT] = sAngerPointDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -351,7 +353,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_BIG_PECKS] = _("BIG PECKS"),
     [ABILITY_IRON_BARBS] = _("IRON BARBS"),
     [ABILITY_MAGIC_BOUNCE] = _("MAGIC BOUNCE"),
-    [ABILITY_MUMMY] = _("MUMMY"),
+    [ABILITY_MUMMY] = _("ZOMBIE SPORE"),
     [ABILITY_SNOW_CLOAK] = _("SNOW CLOAK"),
     [ABILITY_FILTER] = _("FILTER"),
     [ABILITY_SOLID_ROCK] = _("SOLID ROCK"),
@@ -393,4 +395,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_POISON_TOUCH] = _("POISON TOUCH"),
     [ABILITY_MOXIE] = _("MOXIE"),
     [ABILITY_ICE_SKATER] = ("ICE SKATER"),
+    [ABILITY_ANGER_POINT] = ("ANGER POINT"),
 };
