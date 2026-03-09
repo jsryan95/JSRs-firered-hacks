@@ -2066,6 +2066,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+            case ABILITY_FRISK:
+                target1 = battler ^ BIT_SIDE;
+                if (gBattleMons[target1].item != ITEM_NONE)
+                {
+                    PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, target1, gBattlerPartyIndexes[target1])
+                    PREPARE_ITEM_BUFFER(gBattleTextBuff2, gBattleMons[target1].item)
+                    BattleScriptPushCursorAndCallback(BattleScript_FriskActivates);
+                    gBattleScripting.battler = battler;
+                    effect++;
+                }
             }
             break;
         case ABILITYEFFECT_ENDTURN: // 1

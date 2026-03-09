@@ -4842,6 +4842,13 @@ BattleScript_BlackSmokeActivates::
 	waitstate
 	end3
 
+BattleScript_FriskActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNFRISKEDXANDFOUNDY
+	waitstate
+	pause B_WAIT_TIME_LONG
+	end3
+
 BattleScript_TookAttack::
 	attackstring
 	pause B_WAIT_TIME_SHORT

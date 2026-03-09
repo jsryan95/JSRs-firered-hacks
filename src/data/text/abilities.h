@@ -130,6 +130,7 @@ static const u8 sAngerPointDescription[] = _("Raises ATTACK when HP is low.");
 static const u8 sQuickFeetDescription[] = _("Ups SPEED if suffering.");
 static const u8 sGooeyDescription[] = _("Lowers SPEED on contact.");
 static const u8 sNormalizeDescription[] = _("Makes the foe NORMAL on contact.");
+static const u8 sFriskDescription[] = _("Identifies the foe's item.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -267,6 +268,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_QUICK_FEET] = sQuickFeetDescription,
     [ABILITY_GOOEY] = sGooeyDescription,
     [ABILITY_NORMALIZE] = sNormalizeDescription,
+    [ABILITY_FRISK] = sFriskDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -405,4 +407,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_QUICK_FEET] = ("QUICK FEET"),
     [ABILITY_GOOEY] = ("GOOEY"),
     [ABILITY_NORMALIZE] = _("NORMALIZE"),
+    [ABILITY_FRISK] = _("FRISK"),
 };

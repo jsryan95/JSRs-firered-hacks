@@ -5953,10 +5953,10 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SHADOW_BIND] =
     {
         .effect = EFFECT_TRAP,
-        .power = 70,
+        .power = 55,
         .type = TYPE_GHOST,
         .category = CATEGORY_PHYSICAL,
-        .accuracy = 100,
+        .accuracy = 85,
         .pp = 15,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
