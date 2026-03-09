@@ -11295,7 +11295,7 @@ void BS_trySetToxicSpikes(void)
 
 void BS_checkPoltergeist(void)
 {
-    if (!gBattleMons[gBattlerTarget].item == ITEM_NONE)
+    if (gBattleMons[gBattlerTarget].item != ITEM_NONE)
     {
         gBattlescriptCurrInstr += 9;
         return;
