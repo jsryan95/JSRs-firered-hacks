@@ -1544,6 +1544,40 @@ Move_TRUMP_CARD:
 	waitforvisualfinish
 	end
 
+Move_PSYCHO_CUT:
+	loadspritegfx ANIM_TAG_CUT
+	monbg ANIM_DEF_PARTNER
+	call SetPsychicBackground
+	setalpha 12, 8
+	delay 12
+	playsewithpan SE_M_CUT, SOUND_PAN_TARGET
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	delay 1
+	call UnsetPsychicBackground
+	end
+
+Move_NIGHT_SLASH:
+	loadspritegfx ANIM_TAG_CUT
+	monbg ANIM_ATTACKER
+	fadetobg BG_DARK
+	waitbgfadein
+	delay 12
+	playsewithpan SE_M_CUT, SOUND_PAN_TARGET
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
+	delay 5
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 10, 1
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	delay 1
+	restorebg
+	waitbgfadein
+	end
+
 Move_X_SCISSOR:
 	loadspritegfx ANIM_TAG_CUT
 	monbg ANIM_TARGET
@@ -3750,9 +3784,6 @@ Move_SUPER_FANG:
 	end
 
 Move_SLASH:
-Move_NIGHT_SLASH:
-Move_PSYCHO_CUT:
-Move_SHADOW_CLAW:
 	loadspritegfx ANIM_TAG_SLASH
 	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, -8, 0
 	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
@@ -3761,6 +3792,22 @@ Move_SHADOW_CLAW:
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 18, 1
 	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
 	waitforvisualfinish
+	end
+
+Move_SHADOW_CLAW:
+	loadspritegfx ANIM_TAG_SLASH
+	fadetobg BG_GHOST
+	waitbgfadein
+	delay 15
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, -8, 0
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
+	delay 4
+	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, 8, 0
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 18, 1
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
+	waitforvisualfinish
+	restorebg
+	waitbgfadein
 	end
 
 Move_STRUGGLE:
