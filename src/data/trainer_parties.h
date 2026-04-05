@@ -3472,44 +3472,44 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperChester[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperWilton[] = {
     {
-        .iv = 0,
-        .lvl = 29,
-        .species = SPECIES_SPEAROW,
+        .iv = 64,
+        .lvl = 35,
+        .species = SPECIES_XATU,
     },
     {
-        .iv = 0,
-        .lvl = 29,
-        .species = SPECIES_FEAROW,
+        .iv = 64,
+        .lvl = 35,
+        .species = SPECIES_DODRIO,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperRamiro[] = {
     {
-        .iv = 0,
-        .lvl = 34,
-        .species = SPECIES_DODRIO,
+        .iv = 64,
+        .lvl = 35,
+        .species = SPECIES_PIDGEOT,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperJacob[] = {
     {
-        .iv = 0,
-        .lvl = 26,
+        .iv = 64,
+        .lvl = 36,
         .species = SPECIES_SPEAROW,
     },
     {
-        .iv = 0,
-        .lvl = 26,
+        .iv = 64,
+        .lvl = 36,
         .species = SPECIES_SPEAROW,
     },
     {
-        .iv = 0,
-        .lvl = 26,
+        .iv = 64,
+        .lvl = 36,
         .species = SPECIES_FEAROW,
     },
     {
-        .iv = 0,
-        .lvl = 26,
+        .iv = 64,
+        .lvl = 36,
         .species = SPECIES_SPEAROW,
     },
 };
@@ -9794,46 +9794,46 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallCorey2[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperJacob2[] = {
     {
-        .iv = 60,
-        .lvl = 28,
+        .iv = 96,
+        .lvl = 40,
         .species = SPECIES_FEAROW,
     },
     {
-        .iv = 60,
-        .lvl = 28,
+        .iv = 96,
+        .lvl = 40,
         .species = SPECIES_SPEAROW,
     },
     {
-        .iv = 60,
-        .lvl = 28,
+        .iv = 96,
+        .lvl = 40,
         .species = SPECIES_FEAROW,
     },
     {
-        .iv = 60,
-        .lvl = 28,
+        .iv = 96,
+        .lvl = 40,
         .species = SPECIES_SPEAROW,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperJacob3[] = {
     {
-        .iv = 80,
-        .lvl = 47,
+        .iv = 128,
+        .lvl = 55,
         .species = SPECIES_FEAROW,
     },
     {
-        .iv = 80,
-        .lvl = 47,
+        .iv = 128,
+        .lvl = 55,
         .species = SPECIES_FEAROW,
     },
     {
-        .iv = 80,
-        .lvl = 47,
+        .iv = 128,
+        .lvl = 55,
         .species = SPECIES_FEAROW,
     },
     {
-        .iv = 80,
-        .lvl = 47,
+        .iv = 128,
+        .lvl = 55,
         .species = SPECIES_FEAROW,
     },
 };

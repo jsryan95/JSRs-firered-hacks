@@ -1559,7 +1559,7 @@ Route17_EventScript_VirgilRematch::
 	end
 
 Route18_EventScript_Wilton::
-	trainerbattle_single TRAINER_BIRD_KEEPER_WILTON, Route18_Text_WiltonIntro, Route18_Text_WiltonDefeat
+	trainerbattle_double TRAINER_BIRD_KEEPER_WILTON, Route18_Text_WiltonIntro, Route18_Text_WiltonDefeat Route18_Text_Wilton_NotEnoughMons
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route18_EventScript_WiltonRematch
 	msgbox Route18_Text_WiltonPostBattle, MSGBOX_AUTOCLOSE

@@ -5,6 +5,10 @@ Route18_Text_WiltonIntro::
 Route18_Text_WiltonDefeat::
     .string "Tch!$"
 
+Route18_Text_Wilton_NotEnoughMons::
+    .string "I like to fight with two POKéMON\n"
+    .string "come back when you have more.$"
+
 Route18_Text_WiltonPostBattle::
     .string "I wish I had a BIKE!$"
 

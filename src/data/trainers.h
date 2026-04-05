@@ -3078,7 +3078,7 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_BIRD_KEEPER,
         .trainerName = _("WILTON"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_BirdKeeperWilton),
     },
