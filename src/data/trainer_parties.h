@@ -1836,24 +1836,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BikerBilly[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_BikerNikolas[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_BikerNikolas[] = {
     {
         .iv = 64,
-        .lvl = 38,
-        .species = SPECIES_CLEFFA,
-        .moves = {MOVE_CHARM, MOVE_SING, MOVE_SWEET_KISS, MOVE_MAGICAL_LEAF},
+        .lvl = 33,
+        .species = SPECIES_VOLTORB,
     },
     {
         .iv = 64,
-        .lvl = 35,
-        .species = SPECIES_CLEFAIRY,
-        .moves = {MOVE_METRONOME, MOVE_MOONLIGHT, MOVE_STORED_POWER, MOVE_MINIMIZE},
-    },
-    {
-        .iv = 64,
-        .lvl = 32,
-        .species = SPECIES_CLEFABLE,
-        .moves = {MOVE_ENCORE, MOVE_DOUBLE_SLAP, MOVE_METRONOME, MOVE_SHOCK_WAVE},
+        .lvl = 33,
+        .species = SPECIES_ELEKID,
     },
 };
 
@@ -2643,24 +2635,32 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallRaul[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_CueBallIsaiah[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_CueBallIsaiah[] = {
     {
         .iv = 64,
-        .lvl = 33,
-        .species = SPECIES_VOLTORB,
+        .lvl = 36,
+        .species = SPECIES_CLEFFA,
+        .moves = {MOVE_CHARM, MOVE_SING, MOVE_SWEET_KISS, MOVE_MAGICAL_LEAF},
     },
     {
         .iv = 64,
-        .lvl = 31,
-        .species = SPECIES_MACHAMP,
+        .lvl = 33,
+        .species = SPECIES_CLEFAIRY,
+        .moves = {MOVE_METRONOME, MOVE_MOONLIGHT, MOVE_STORED_POWER, MOVE_MINIMIZE},
+    },
+    {
+        .iv = 64,
+        .lvl = 30,
+        .species = SPECIES_CLEFABLE,
+        .moves = {MOVE_ENCORE, MOVE_DOUBLE_SLAP, MOVE_METRONOME, MOVE_SHOCK_WAVE},
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_CueBallZeek[] = {
     {
         .iv = 64,
-        .lvl = 34,
-        .species = SPECIES_HOUNDOOM,
+        .lvl = 33,
+        .species = SPECIES_LICKITUNG,
     },
 };
 

@@ -9,7 +9,7 @@ Route19_EventScript_Lapras::
 	goto_if_questlog EventScript_ReleaseEnd
 	lock
 	faceplayer
-	setwildbattle SPECIES_LAPRAS, 27
+	setwildbattle SPECIES_LAPRAS, 30
 	waitse
 	playmoncry SPECIES_LAPRAS, CRY_MODE_ENCOUNTER
 	delay 40
