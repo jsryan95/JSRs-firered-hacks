@@ -112,59 +112,59 @@ SilphCo_7F_Movement_RivalExitBottom::
 	delay_16
 	step_end
 
-SilphCo_7F_EventScript_LaprasGuy::
+SilphCo_7F_EventScript_PorygonGuy::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_LAPRAS_FROM_SILPH, SilphCo_7F_EventScript_AlreadyGotLapras
+	goto_if_set FLAG_GOT_PORYGON_FROM_SILPH, SilphCo_7F_EventScript_AlreadyGotPorygon
 	msgbox SilphCo_7F_Text_HaveMonForSavingUs
-	setvar VAR_TEMP_1, SPECIES_LAPRAS
-	givemon SPECIES_LAPRAS, 25
-	goto_if_eq VAR_RESULT, 0, SilphCo_7F_EventScript_ReceiveLaprasParty
-	goto_if_eq VAR_RESULT, 1, SilphCo_7F_EventScript_ReceiveLaprasPC
+	setvar VAR_TEMP_1, SPECIES_PORYGON
+	givemon SPECIES_PORYGON, 25
+	goto_if_eq VAR_RESULT, 0, SilphCo_7F_EventScript_ReceivePorygonParty
+	goto_if_eq VAR_RESULT, 1, SilphCo_7F_EventScript_ReceivePorygonPC
 	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
 	release
 	end
 
-SilphCo_7F_EventScript_ReceiveLaprasParty::
+SilphCo_7F_EventScript_ReceivePorygonParty::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	playfanfare MUS_LEVEL_UP
-	message SilphCo_7F_Text_ObtainedLaprasFromEmployee
+	message SilphCo_7F_Text_ObtainedPorygonFromEmployee
 	waitmessage
 	waitfanfare
-	bufferspeciesname STR_VAR_1, SPECIES_LAPRAS
+	bufferspeciesname STR_VAR_1, SPECIES_PORYGON
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, SilphCo_7F_EventScript_EndReceiveLapras
+	goto_if_eq VAR_RESULT, NO, SilphCo_7F_EventScript_EndReceivePorygon
 	call EventScript_GetGiftMonPartySlot
 	call EventScript_ChangePokemonNickname
-	goto SilphCo_7F_EventScript_EndReceiveLapras
+	goto SilphCo_7F_EventScript_EndReceivePorygon
 	end
 
-SilphCo_7F_EventScript_ReceiveLaprasPC::
+SilphCo_7F_EventScript_ReceivePorygonPC::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	playfanfare MUS_LEVEL_UP
-	message SilphCo_7F_Text_ObtainedLaprasFromEmployee
+	message SilphCo_7F_Text_ObtainedPorygonFromEmployee
 	waitmessage
 	waitfanfare
-	bufferspeciesname STR_VAR_1, SPECIES_LAPRAS
+	bufferspeciesname STR_VAR_1, SPECIES_PORYGON
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, SilphCo_7F_EventScript_LaprasTransferredToPC
+	goto_if_eq VAR_RESULT, NO, SilphCo_7F_EventScript_PorygonTransferredToPC
 	call EventScript_NameReceivedBoxMon
-	goto SilphCo_7F_EventScript_LaprasTransferredToPC
+	goto SilphCo_7F_EventScript_PorygonTransferredToPC
 	end
 
-SilphCo_7F_EventScript_LaprasTransferredToPC::
+SilphCo_7F_EventScript_PorygonTransferredToPC::
 	call EventScript_TransferredToPC
-	goto SilphCo_7F_EventScript_EndReceiveLapras
+	goto SilphCo_7F_EventScript_EndReceivePorygon
 	end
 
-SilphCo_7F_EventScript_EndReceiveLapras::
+SilphCo_7F_EventScript_EndReceivePorygon::
 	textcolor NPC_TEXT_COLOR_MALE
-	msgbox SilphCo_7F_Text_ExplainLapras
-	setflag FLAG_GOT_LAPRAS_FROM_SILPH
+	msgbox SilphCo_7F_Text_ExplainPorygon
+	setflag FLAG_GOT_PORYGON_FROM_SILPH
 	release
 	end
 
-SilphCo_7F_EventScript_AlreadyGotLapras::
+SilphCo_7F_EventScript_AlreadyGotPorygon::
 	msgbox SilphCo_7F_Text_RocketBossWentToBoardroom
 	release
 	end

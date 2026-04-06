@@ -5,19 +5,19 @@ SilphCo_7F_Text_HaveMonForSavingUs::
     .string "I want you to have this POKéMON\n"
     .string "for saving us.$"
 
-SilphCo_7F_Text_ObtainedLaprasFromEmployee::
-    .string "{PLAYER} obtained a LAPRAS from\n"
+SilphCo_7F_Text_ObtainedPorygonFromEmployee::
+    .string "{PLAYER} obtained a PORYGON from\n"
     .string "the SILPH employee!$"
 
-SilphCo_7F_Text_ExplainLapras::
-    .string "It's a LAPRAS.\n"
-    .string "It's a very intelligent POKéMON.\p"
-    .string "We kept it in our lab, but it will\n"
+SilphCo_7F_Text_ExplainPorygon::
+    .string "It's a PORYGON.\n"
+    .string "It's a very special POKéMON.\p"
+    .string "We created it in our lab, but it will\n"
     .string "be much better off with you.\p"
     .string "I think you will be a good TRAINER\n"
-    .string "for LAPRAS!\p"
-    .string "It's a good swimmer.\n"
-    .string "It'll give you a lift across water!$"
+    .string "for PORYGON!\p"
+    .string "We still don't know what it's\n"
+    .string "capable of! Good luck!$"
 
 SilphCo_7F_Text_RocketBossWentToBoardroom::
     .string "TEAM ROCKET's BOSS went to the\n"
