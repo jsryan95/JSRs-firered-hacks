@@ -190,8 +190,8 @@ SafariZone_Center_EventScript_ItemNugget::
 	finditem ITEM_NUGGET
 	end
 
-SafariZone_East_EventScript_ItemMaxPotion::
-	finditem ITEM_MAX_POTION
+SafariZone_East_EventScript_ItemLiechiBerry::
+	finditem ITEM_LIECHI_BERRY
 	end
 
 SafariZone_East_EventScript_ItemFullRestore::

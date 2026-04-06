@@ -3165,37 +3165,37 @@ static const struct TrainerMonNoItemDefaultMoves sParty_JugglerNelson[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_JugglerKirk[] = {
     {
-        .iv = 0,
-        .lvl = 31,
-        .species = SPECIES_DROWZEE,
+        .iv = 64,
+        .lvl = 37,
+        .species = SPECIES_VENONAT,
     },
     {
-        .iv = 0,
-        .lvl = 31,
-        .species = SPECIES_DROWZEE,
+        .iv = 64,
+        .lvl = 37,
+        .species = SPECIES_VENONAT,
     },
     {
-        .iv = 0,
-        .lvl = 31,
-        .species = SPECIES_KADABRA,
+        .iv = 64,
+        .lvl = 37,
+        .species = SPECIES_VENOMOTH,
     },
     {
-        .iv = 0,
-        .lvl = 31,
-        .species = SPECIES_DROWZEE,
+        .iv = 64,
+        .lvl = 37,
+        .species = SPECIES_VENOMOTH,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_JugglerShawn[] = {
     {
-        .iv = 0,
-        .lvl = 34,
+        .iv = 64,
+        .lvl = 38,
         .species = SPECIES_DROWZEE,
     },
     {
-        .iv = 0,
-        .lvl = 34,
-        .species = SPECIES_HYPNO,
+        .iv = 64,
+        .lvl = 38,
+        .species = SPECIES_GIRAFARIG,
     },
 };
 
@@ -3235,55 +3235,59 @@ static const struct TrainerMonNoItemCustomMoves sParty_JugglerEdward[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_JugglerKayden[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_JugglerKayden[] = {
     {
-        .iv = 0,
-        .lvl = 38,
+        .iv = 64,
+        .lvl = 39,
         .species = SPECIES_HYPNO,
+        .moves = {MOVE_POISON_GAS, MOVE_FUTURE_SIGHT, MOVE_DISABLE, MOVE_SUCKER_PUNCH}
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_JugglerNate[] = {
     {
-        .iv = 0,
-        .lvl = 34,
-        .species = SPECIES_DROWZEE,
+        .iv = 64,
+        .lvl = 40,
+        .species = SPECIES_BEEDRILL,
     },
     {
-        .iv = 0,
-        .lvl = 34,
-        .species = SPECIES_KADABRA,
+        .iv = 64,
+        .lvl = 40,
+        .species = SPECIES_BUTTERFREE,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TamerPhil[] = {
     {
-        .iv = 40,
-        .lvl = 34,
-        .species = SPECIES_SANDSLASH,
+        .iv = 80,
+        .lvl = 35,
+        .species = SPECIES_NIDOKING,
     },
     {
-        .iv = 40,
-        .lvl = 34,
-        .species = SPECIES_ARBOK,
+        .iv = 80,
+        .lvl = 35,
+        .species = SPECIES_NIDOQUEEN,
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TamerEdgar[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_TamerEdgar[] = {
     {
-        .iv = 40,
-        .lvl = 33,
+        .iv = 80,
+        .lvl = 37,
         .species = SPECIES_ARBOK,
+        .moves = {MOVE_ICE_FANG, MOVE_THUNDER_FANG, MOVE_FIRE_FANG, MOVE_NONE}
     },
     {
-        .iv = 40,
-        .lvl = 33,
+        .iv = 80,
+        .lvl = 37,
         .species = SPECIES_SANDSLASH,
+        .moves = {MOVE_SPIKES, MOVE_FURY_CUTTER, MOVE_HONE_CLAWS, MOVE_DIG}
     },
     {
-        .iv = 40,
-        .lvl = 33,
+        .iv = 80,
+        .lvl = 37,
         .species = SPECIES_ARBOK,
+        .moves = {MOVE_GLARE, MOVE_STOCKPILE, MOVE_SWALLOW, MOVE_ACID_SPRAY}
     },
 };
 
@@ -5721,30 +5725,34 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderErika[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_LeaderKoga[] = {
+static const struct TrainerMonItemCustomMoves sParty_LeaderKoga[] = {
     {
-        .iv = 0,
-        .lvl = 37,
-        .species = SPECIES_KOFFING,
-        .moves = {MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
-    },
-    {
-        .iv = 0,
+        .iv = 96,
         .lvl = 39,
+        .species = SPECIES_VENOMOTH,
+        .moves = {MOVE_TOXIC, MOVE_SUBSTITUTE, MOVE_GIGA_DRAIN, MOVE_BUG_BUZZ},
+        .heldItem = ITEM_MIRACLE_SEED,
+    },
+    {
+        .iv = 96,
+        .lvl = 41,
         .species = SPECIES_MUK,
-        .moves = {MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_ACID_ARMOR, MOVE_TOXIC},
+        .moves = {MOVE_MINIMIZE, MOVE_SLUDGE_BOMB, MOVE_ACID_ARMOR, MOVE_TOXIC},
+        .heldItem = ITEM_SITRUS_BERRY,
     },
     {
-        .iv = 0,
-        .lvl = 37,
-        .species = SPECIES_KOFFING,
-        .moves = {MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
-    },
-    {
-        .iv = 0,
-        .lvl = 43,
+        .iv = 96,
+        .lvl = 41,
         .species = SPECIES_WEEZING,
-        .moves = {MOVE_TACKLE, MOVE_SLUDGE, MOVE_SMOKESCREEN, MOVE_TOXIC},
+        .moves = {MOVE_SELF_DESTRUCT, MOVE_HAZE, MOVE_OVERHEAT, MOVE_TOXIC},
+        .heldItem = ITEM_WHITE_HERB,
+    },
+    {
+        .iv = 96,
+        .lvl = 43,
+        .species = SPECIES_CROBAT,
+        .moves = {MOVE_TOXIC, MOVE_CONFUSE_RAY, MOVE_AIR_SLASH, MOVE_REST},
+        .heldItem = ITEM_CHESTO_BERRY,
     },
 };
 

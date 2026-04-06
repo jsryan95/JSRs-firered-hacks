@@ -403,7 +403,7 @@
 #define FLAG_HIDE_ROUTE12_IRON                                  0x17F
 #define FLAG_HIDE_ROUTE15_TM18                                  0x180
 #define FLAG_HIDE_SAFARI_ZONE_CENTER_NUGGET                     0x181
-#define FLAG_HIDE_SAFARI_ZONE_EAST_MAX_POTION                   0x182
+#define FLAG_HIDE_SAFARI_ZONE_EAST_LIECHI_BERRY                   0x182
 #define FLAG_HIDE_SAFARI_ZONE_EAST_FULL_RESTORE                 0x183
 #define FLAG_HIDE_SAFARI_ZONE_EAST_TM11                         0x184
 #define FLAG_HIDE_SAFARI_ZONE_EAST_LEAF_STONE                   0x185
