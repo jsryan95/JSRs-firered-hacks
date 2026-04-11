@@ -3618,7 +3618,7 @@ static void Cmd_getexp(void)
                     viaExpShare++;
             }
 
-            calculatedExp = gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 5;
+            calculatedExp = gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 6;
 
             if (viaExpShare) // at least one mon is getting exp via exp share
             {
@@ -7015,7 +7015,7 @@ static void Cmd_setrain(void)
         if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_DAMP_ROCK)
             gWishFutureKnock.weatherDuration = 8;
         else
-        gWishFutureKnock.weatherDuration = 5;
+            gWishFutureKnock.weatherDuration = 5;
     }
     gBattlescriptCurrInstr++;
 }
@@ -7860,7 +7860,7 @@ static void Cmd_setsandstorm(void)
         if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_SMOOTH_ROCK)
             gWishFutureKnock.weatherDuration = 8;
         else
-        gWishFutureKnock.weatherDuration = 5;
+            gWishFutureKnock.weatherDuration = 5;
     }
     gBattlescriptCurrInstr++;
 }
@@ -9089,7 +9089,7 @@ static void Cmd_setsunny(void)
         if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_HEAT_ROCK)
             gWishFutureKnock.weatherDuration = 8;
         else
-        gWishFutureKnock.weatherDuration = 5;
+            gWishFutureKnock.weatherDuration = 5;
     }
 
     gBattlescriptCurrInstr++;
@@ -9388,7 +9388,7 @@ static void Cmd_sethail(void)
         if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_ICY_ROCK)
             gWishFutureKnock.weatherDuration = 8;
         else
-        gWishFutureKnock.weatherDuration = 5;
+            gWishFutureKnock.weatherDuration = 5;
     }
 
     gBattlescriptCurrInstr++;
