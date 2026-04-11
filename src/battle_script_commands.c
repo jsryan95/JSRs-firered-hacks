@@ -1655,6 +1655,9 @@ static void Cmd_typecalc(void)
             }
             i += 3;
         }
+        if ((ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_EXPERT_BELT
+                && (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE)))
+            gBattleMoveDamage = (gBattleMoveDamage * 120) / 100;
     }
 
     if (hasActiveAbility(gBattlerTarget, ABILITY_WONDER_GUARD) && AttacksThisTurn(gBattlerAttacker, gCurrentMove) == 2

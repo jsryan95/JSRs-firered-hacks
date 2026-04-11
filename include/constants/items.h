@@ -244,7 +244,7 @@
 #define ITEM_HEAT_ROCK 233
 #define ITEM_SMOOTH_ROCK 234
 #define ITEM_ICY_ROCK 235
-#define ITEM_0EC 236
+#define ITEM_EXPERT_BELT 236
 #define ITEM_0ED 237
 #define ITEM_0EE 238
 #define ITEM_0EF 239
