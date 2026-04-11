@@ -305,7 +305,7 @@
 #define TRAINER_TAMER_JOHN                       299
 #define TRAINER_BIRD_KEEPER_SEBASTIAN            300
 #define TRAINER_BIRD_KEEPER_PERRY                301
-#define TRAINER_BIRD_KEEPER_ROBERT               302
+#define TRAINER_GENTLEMAN_ROBERT               302
 #define TRAINER_BIRD_KEEPER_DONALD               303
 #define TRAINER_BIRD_KEEPER_BENNY                304
 #define TRAINER_BIRD_KEEPER_EDWIN                305
@@ -659,8 +659,8 @@
 #define TRAINER_FISHERMAN_ELLIOT_2               653
 #define TRAINER_ROCKER_LUCA_2                    654
 #define TRAINER_BEAUTY_SHEILA_2                  655
-#define TRAINER_BIRD_KEEPER_ROBERT_2             656
-#define TRAINER_BIRD_KEEPER_ROBERT_3             657
+#define TRAINER_GENTLEMAN_ROBERT_2             656
+#define TRAINER_GENTLEMAN_ROBERT_3             657
 #define TRAINER_PICNICKER_SUSIE_2                658
 #define TRAINER_PICNICKER_SUSIE_3                659
 #define TRAINER_PICNICKER_SUSIE_4                660

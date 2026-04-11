@@ -995,14 +995,14 @@ Route13_EventScript_PerryRematch::
 	end
 
 Route13_EventScript_Robert::
-	trainerbattle_single TRAINER_BIRD_KEEPER_ROBERT, Route13_Text_RobertIntro, Route13_Text_RobertDefeat
+	trainerbattle_double TRAINER_GENTLEMAN_ROBERT, Route13_Text_RobertIntro, Route13_Text_RobertDefeat, Route13_Text_RobertNotEnoughPokemon
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_RobertRematch
 	msgbox Route13_Text_RobertPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route13_EventScript_RobertRematch::
-	trainerbattle_rematch TRAINER_BIRD_KEEPER_ROBERT, Route13_Text_RobertRematchIntro, Route13_Text_RobertDefeat
+	trainerbattle_rematch_double TRAINER_GENTLEMAN_ROBERT, Route13_Text_RobertRematchIntro, Route13_Text_RobertDefeat, Route13_Text_RobertNotEnoughPokemon
 	msgbox Route13_Text_RobertPostBattle, MSGBOX_AUTOCLOSE
 	end
 

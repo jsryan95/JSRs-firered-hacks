@@ -102,15 +102,20 @@ Route13_Text_JaredPostBattle::
     .string "Get lost!$"
 
 Route13_Text_RobertIntro::
-    .string "I always go with bird POKéMON.\n"
+    .string "I always go with EEVEE.\n"
     .string "I've dedicated myself to them.$"
 
 Route13_Text_RobertDefeat::
     .string "Out of power!$"
 
 Route13_Text_RobertPostBattle::
-    .string "I wish I could fly like PIDGEY and\n"
-    .string "PIDGEOTTO…$"
+    .string "I wish I could find more EEVEE…$"
+
+Route13_Text_RobertNotEnoughPokemon::
+    .string "I would like to show you how\n"
+    .string "my POKéMON work together...\p"
+    .string "Why don't you come back when\n"
+    .string "you have more POKéMON of your own?$"
 
 Route13_Text_LookToLeftOfThatPost::
     .string "TRAINER TIPS\p"
