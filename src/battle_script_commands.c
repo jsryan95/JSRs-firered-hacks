@@ -7012,6 +7012,9 @@ static void Cmd_setrain(void)
     {
         gBattleWeather = B_WEATHER_RAIN_TEMPORARY;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STARTED_RAIN;
+        if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_DAMP_ROCK)
+            gWishFutureKnock.weatherDuration = 8;
+        else
         gWishFutureKnock.weatherDuration = 5;
     }
     gBattlescriptCurrInstr++;
@@ -7247,11 +7250,14 @@ static void Cmd_stockpiletohpheal(void)
     }
 }
 
+// calculates the HP that will be recorved by ABSORB-like moves
 static void Cmd_negativedamage(void)
 {
     gBattleMoveDamage = -(gHpDealt / 2);
     if (gBattleMoveDamage == 0)
         gBattleMoveDamage = -1;
+    if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_BIG_ROOT)
+        gBattleMoveDamage = (gBattleMoveDamage * 130) / 100;
 
     gBattlescriptCurrInstr++;
 }
@@ -7851,6 +7857,9 @@ static void Cmd_setsandstorm(void)
     {
         gBattleWeather = B_WEATHER_SANDSTORM_TEMPORARY;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STARTED_SANDSTORM;
+        if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_SMOOTH_ROCK)
+            gWishFutureKnock.weatherDuration = 8;
+        else
         gWishFutureKnock.weatherDuration = 5;
     }
     gBattlescriptCurrInstr++;
@@ -9077,6 +9086,9 @@ static void Cmd_setsunny(void)
     {
         gBattleWeather = B_WEATHER_SUN_TEMPORARY;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STARTED_SUNLIGHT;
+        if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_HEAT_ROCK)
+            gWishFutureKnock.weatherDuration = 8;
+        else
         gWishFutureKnock.weatherDuration = 5;
     }
 
@@ -9373,6 +9385,9 @@ static void Cmd_sethail(void)
     {
         gBattleWeather = B_WEATHER_HAIL_TEMPORARY;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STARTED_HAIL;
+        if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_ICY_ROCK)
+            gWishFutureKnock.weatherDuration = 8;
+        else
         gWishFutureKnock.weatherDuration = 5;
     }
 
@@ -9797,6 +9812,8 @@ static u32 getEffectiveSpeed(u8 battler)
         speed = (speed * 110) / 100;
     if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
         speed /= 2;
+    if (holdEffect == HOLD_EFFECT_CHOICE_SCARF)
+        speed = (speed * 150) / 100;
     if (gBattleMons[battler].status1 & STATUS1_PARALYSIS)
         speed /= 4;
     if (gSideStatuses[GET_BATTLER_SIDE(battler)] & SIDE_STATUS_TAILWIND)

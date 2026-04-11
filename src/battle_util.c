@@ -938,6 +938,8 @@ u8 DoBattlerEndTurnEffects(void)
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     gBattleMoveDamage *= -1;
+                    if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_BIG_ROOT)
+                        gBattleMoveDamage = (gBattleMoveDamage * 130) / 100;
                     BattleScriptExecute(BattleScript_IngrainTurnHeal);
                     effect++;
                 }
@@ -1972,8 +1974,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 }
                 break;
             case ABILITY_DRIZZLE:
-                if (!(gBattleWeather & B_WEATHER_RAIN) || gWishFutureKnock.weatherDuration < 3)
-                    gWishFutureKnock.weatherDuration = 3;
+                if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_DAMP_ROCK)
+                    i = 5;
+                else
+                    i = 3;
+
+                if (!(gBattleWeather & B_WEATHER_RAIN) || gWishFutureKnock.weatherDuration < i)
+                    gWishFutureKnock.weatherDuration = i;
 
                 gBattleWeather = (B_WEATHER_RAIN_TEMPORARY);
                 BattleScriptPushCursorAndCallback(BattleScript_DrizzleActivates);
@@ -1981,27 +1988,42 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 effect++;
                 break;
             case ABILITY_SAND_STREAM:
-                if (!(gBattleWeather & B_WEATHER_SANDSTORM) || gWishFutureKnock.weatherDuration < 3)
-                    gWishFutureKnock.weatherDuration = 3;
+                if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_SMOOTH_ROCK)
+                    i = 5;
+                else
+                    i = 3;
 
-                gBattleWeather = B_WEATHER_SANDSTORM;
+                if (!(gBattleWeather & B_WEATHER_SANDSTORM) || gWishFutureKnock.weatherDuration < i)
+                    gWishFutureKnock.weatherDuration = i;
+
+                gBattleWeather = B_WEATHER_SANDSTORM_TEMPORARY;
                 BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
                 gBattleScripting.battler = battler;
                 effect++;
                 break;
             case ABILITY_SNOW_WARNING:
-                if (!(gBattleWeather & B_WEATHER_HAIL) || gWishFutureKnock.weatherDuration < 3)
-                    gWishFutureKnock.weatherDuration = 3;
+                if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_ICY_ROCK)
+                    i = 5;
+                else
+                    i = 3;
 
-                gBattleWeather = B_WEATHER_HAIL;
+                if (!(gBattleWeather & B_WEATHER_HAIL) || gWishFutureKnock.weatherDuration < i)
+                    gWishFutureKnock.weatherDuration = i;
+
+                gBattleWeather = B_WEATHER_HAIL_TEMPORARY;
                 BattleScriptPushCursorAndCallback(BattleScript_SnowWarningActivates);
                 gBattleScripting.battler = battler;
                 effect++;
                 break;
             case ABILITY_DROUGHT:
-                if (!(gBattleWeather & B_WEATHER_SUN) || gWishFutureKnock.weatherDuration < 3)
-                    gWishFutureKnock.weatherDuration = 3;
-                gBattleWeather = B_WEATHER_SUN;
+                if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_HEAT_ROCK)
+                    i = 5;
+                else
+                    i = 3;
+
+                if (!(gBattleWeather & B_WEATHER_SUN) || gWishFutureKnock.weatherDuration < i)
+                    gWishFutureKnock.weatherDuration = i;
+                gBattleWeather = B_WEATHER_SUN_TEMPORARY;
                 BattleScriptPushCursorAndCallback(BattleScript_DroughtActivates);
                 gBattleScripting.battler = battler;
                 effect++;
@@ -3179,6 +3201,28 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                         gBattleMoveDamage = gBattleMons[battlerId].maxHP - gBattleMons[battlerId].hp;
                     gBattleMoveDamage *= -1;
                     BattleScriptExecute(BattleScript_ItemHealHP_End2);
+                    effect = ITEM_HP_CHANGE;
+                    RecordItemEffectBattle(battlerId, battlerHoldEffect);
+                }
+                break;
+            case HOLD_EFFECT_BLACK_SLUDGE:
+                if (gBattleMons[battlerId].hp < gBattleMons[battlerId].maxHP && !moveTurn)
+                {
+                    gBattleMoveDamage = gBattleMons[battlerId].maxHP / 16;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    if (gBattleMons[battlerId].hp + gBattleMoveDamage > gBattleMons[battlerId].maxHP)
+                        gBattleMoveDamage = gBattleMons[battlerId].maxHP - gBattleMons[battlerId].hp;
+                    if (IS_BATTLER_OF_TYPE(battlerId, TYPE_POISON))
+                    {
+                        gBattleMoveDamage *= -1;
+                        BattleScriptExecute(BattleScript_ItemHealHP_End2);
+                    }
+                    else
+                    {
+                        gBattleMoveDamage *= 2;
+                        BattleScriptExecute(BattleScript_ItemHurt);
+                    }
                     effect = ITEM_HP_CHANGE;
                     RecordItemEffectBattle(battlerId, battlerHoldEffect);
                 }
