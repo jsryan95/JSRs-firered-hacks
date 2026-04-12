@@ -251,7 +251,7 @@
 #define ITEM_GRIP_CLAW 240
 #define ITEM_IRON_BALL 241
 #define ITEM_LIFE_ORB 242
-#define ITEM_0F3 243
+#define ITEM_LIGHT_CLAY 243
 #define ITEM_0F4 244
 #define ITEM_0F5 245
 #define ITEM_0F6 246
