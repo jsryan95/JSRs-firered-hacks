@@ -3041,9 +3041,7 @@ u8 IsRunningFromBattleImpossible(void)
             return BATTLE_RUN_FAILURE;
         }
         if (side != GetBattlerSide(i)
-         && !hasActiveAbility(gActiveBattler, ABILITY_LEVITATE)
-         && !(gBattleMons[gActiveBattler].status3 & STATUS3_MAGNET_RISE)
-         && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
+         && !isAirborne(gActiveBattler)
          && hasActiveAbility(i, ABILITY_ARENA_TRAP))
         {
             gBattleScripting.battler = i;
@@ -3217,9 +3215,7 @@ static void HandleTurnActionSelectionState(void)
                     }
                     else if ((i = ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_SHADOW_TAG))
                           || ((i = ABILITY_ON_OPPOSING_FIELD(gActiveBattler, ABILITY_ARENA_TRAP))
-                              && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
-                              && !hasActiveAbility(gActiveBattler, ABILITY_LEVITATE)
-                              && !(gBattleMons[gActiveBattler].status3 & STATUS3_MAGNET_RISE))
+                              && !isAirborne(gActiveBattler))
                           || ((i = AbilityBattleEffects(ABILITYEFFECT_CHECK_FIELD_EXCEPT_BATTLER, gActiveBattler, ABILITY_MAGNET_PULL, 0, 0))
                               && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL)))
                     {
@@ -3465,7 +3461,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
      && FlagGet(FLAG_BADGE03_GET)
      && GetBattlerSide(battler1) == B_SIDE_PLAYER)
         speedBattler1 = (speedBattler1 * 110) / 100;
-    if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
+    if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_IRON_BALL)
         speedBattler1 /= 2;
     if (holdEffect == HOLD_EFFECT_CHOICE_SCARF)
         speedBattler1 = (speedBattler1 * 150) / 100;
@@ -3499,7 +3495,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
      && FlagGet(FLAG_BADGE03_GET)
      && GetBattlerSide(battler2) == B_SIDE_PLAYER)
         speedBattler2 = (speedBattler2 * 110) / 100;
-    if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
+    if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_IRON_BALL)
         speedBattler2 /= 2;
     if (holdEffect == HOLD_EFFECT_CHOICE_SCARF)
         speedBattler2 = (speedBattler2 * 150) / 100;

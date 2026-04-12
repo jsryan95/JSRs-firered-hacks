@@ -3913,3 +3913,15 @@ u16 getItem(u8 battler)
         return ITEM_NONE;
     return gBattleMons[battler].item;
 }
+
+u8 isAirborne(u8 battler)
+{
+    if (ItemId_GetHoldEffectParam(getItem(battler)) == HOLD_EFFECT_IRON_BALL
+            || (gstatuses4[battler] & STATUS4_ROOTED))
+        return FALSE;
+    if (IS_BATTLER_OF_TYPE(battler, TYPE_FLYING)
+            || hasActiveAbility(battler, ABILITY_LEVITATE)
+            || (gBattleMons[battler].status3 & STATUS3_MAGNET_RISE))
+        return TRUE;
+    return FALSE;
+}

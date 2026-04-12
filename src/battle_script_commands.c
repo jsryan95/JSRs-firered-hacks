@@ -1600,6 +1600,10 @@ static void ModulateDmgForType(s32 typeMatchupRow)
     else if (TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_FLYING
             && gBattleMons[gBattlerTarget].status3 & STATUS3_ROOSTED)
         ModulateDmgByType(TYPE_MUL_NORMAL);
+    else if (TYPE_EFFECT_DEF_TYPE(typeMatchupRow) == TYPE_FLYING
+            && TYPE_EFFECT_MULTIPLIER(typeMatchupRow) == 0
+            && !isAirborne(gBattlerTarget))
+        ModulateDmgByType(TYPE_MUL_NORMAL);
     else
         ModulateDmgByType(TYPE_EFFECT_MULTIPLIER(typeMatchupRow));
 }
@@ -1623,7 +1627,7 @@ static void Cmd_typecalc(void)
     else if (IS_BATTLER_OF_TYPE(gBattlerAttacker, moveType))
         gBattleMoveDamage = (150 * gBattleMoveDamage) / 100;
 
-    if (hasActiveAbility(gBattlerTarget, ABILITY_LEVITATE) && moveType == TYPE_GROUND)
+    if (moveType == TYPE_GROUND && hasActiveAbility(gBattlerTarget, ABILITY_LEVITATE) && isAirborne(gBattlerTarget))
     {
         gLastUsedAbility = gBattleMons[gBattlerTarget].ability;
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
@@ -1632,7 +1636,7 @@ static void Cmd_typecalc(void)
         gBattleCommunication[MISS_TYPE] = B_MSG_GROUND_MISS;
         RecordAbilityBattle(gBattlerTarget, gLastUsedAbility);
     }
-    else if ((gBattleMons[gBattlerTarget].status3 & STATUS3_MAGNET_RISE) && moveType == TYPE_GROUND)
+    else if (moveType == TYPE_GROUND && (gBattleMons[gBattlerTarget].status3 & STATUS3_MAGNET_RISE) && isAirborne(gBattlerTarget))
     {
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
         gLastLandedMoves[gBattlerTarget] = 0;
@@ -1699,16 +1703,17 @@ static void CheckWonderGuardAndLevitate(void)
 
     GET_MOVE_TYPE(gCurrentMove, moveType);
 
-    if (hasActiveAbility(gBattlerTarget, ABILITY_LEVITATE) && moveType == TYPE_GROUND)
+    if (moveType == TYPE_GROUND && hasActiveAbility(gBattlerTarget, ABILITY_LEVITATE) && isAirborne(gBattlerTarget))
     {
         gLastUsedAbility = ABILITY_LEVITATE;
         gBattleCommunication[MISS_TYPE] = B_MSG_GROUND_MISS;
         RecordAbilityBattle(gBattlerTarget, ABILITY_LEVITATE);
         return;
     }
-    else if ((gBattleMons[gBattlerTarget].status3 & STATUS3_MAGNET_RISE) && moveType == TYPE_GROUND)
+    else if (moveType == TYPE_GROUND && (gBattleMons[gBattlerTarget].status3 & STATUS3_MAGNET_RISE) && isAirborne(gBattlerTarget))
     {
         gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
+        return;
     }
 
     while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
@@ -1815,7 +1820,8 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
 
     if (moveType == TYPE_GROUND
             && (hasActiveAbility(defender, ABILITY_LEVITATE)
-                    || gBattleMons[defender].status3 & STATUS3_MAGNET_RISE))
+                    || gBattleMons[defender].status3 & STATUS3_MAGNET_RISE)
+            && isAirborne(defender))
     {
         flags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
     }
@@ -4837,7 +4843,7 @@ static void Cmd_typecalc2(void)
     s32 i = 0;
     u8 moveType = gBattleMoves[gCurrentMove].type;
 
-    if (hasActiveAbility(gBattlerTarget, ABILITY_LEVITATE) && moveType == TYPE_GROUND)
+    if (hasActiveAbility(gBattlerTarget, ABILITY_LEVITATE) && moveType == TYPE_GROUND && isAirborne(gBattlerTarget))
     {
         gLastUsedAbility = gBattleMons[gBattlerTarget].ability;
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
@@ -4845,7 +4851,7 @@ static void Cmd_typecalc2(void)
         gBattleCommunication[MISS_TYPE] = B_MSG_GROUND_MISS;
         RecordAbilityBattle(gBattlerTarget, gLastUsedAbility);
     }
-    else if ((gBattleMons[gBattlerTarget].status3 & STATUS3_MAGNET_RISE) && moveType == TYPE_GROUND)
+    else if ((gBattleMons[gBattlerTarget].status3 & STATUS3_MAGNET_RISE) && moveType == TYPE_GROUND && isAirborne(gBattlerTarget))
     {
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
         gLastLandedMoves[gBattlerTarget] = 0;
@@ -5493,9 +5499,7 @@ static void Cmd_switchineffects(void)
 
     else if (!(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES_DAMAGED)
         && (gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES)
-        && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
-        && !hasActiveAbility(gActiveBattler, ABILITY_LEVITATE)
-        && !(gBattleMons[gActiveBattler].status3 & STATUS3_MAGNET_RISE))
+        && !isAirborne(gActiveBattler))
     {
         u8 spikesDmg;
 
@@ -5523,9 +5527,7 @@ static void Cmd_switchineffects(void)
 
     else if (!(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_TOXIC_SPIKES_POISONED)
         && (gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_TOXIC_SPIKES)
-        && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
-        && !hasActiveAbility(gActiveBattler, ABILITY_LEVITATE)
-        && !(gBattleMons[gActiveBattler].status3 & STATUS3_MAGNET_RISE))
+        && !isAirborne(gActiveBattler))
     {
         gSideStatuses[GetBattlerSide(gActiveBattler)] |= SIDE_STATUS_TOXIC_SPIKES_POISONED;
 
@@ -9828,7 +9830,7 @@ static u32 getEffectiveSpeed(u8 battler)
      && FlagGet(FLAG_BADGE03_GET)
      && GetBattlerSide(battler) == B_SIDE_PLAYER)
         speed = (speed * 110) / 100;
-    if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
+    if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_IRON_BALL)
         speed /= 2;
     if (holdEffect == HOLD_EFFECT_CHOICE_SCARF)
         speed = (speed * 150) / 100;

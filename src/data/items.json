@@ -3857,12 +3857,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "IRON BALL",
+      "itemId": "ITEM_IRON_BALL",
+      "price": 100,
+      "holdEffect": "HOLD_EFFECT_IRON_BALL",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "When held, reduces the bearer's\\nSPEED and makes it susceptible\\nto GROUND-type attacks.",
       "importance": 0,
       "registrability": 0,
       "pocket": "POCKET_ITEMS",
