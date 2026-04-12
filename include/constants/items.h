@@ -248,7 +248,7 @@
 #define ITEM_FLAME_ORB 237
 #define ITEM_TOXIC_ORB 238
 #define ITEM_FOCUS_SASH 239
-#define ITEM_0F0 240
+#define ITEM_GRIP_CLAW 240
 #define ITEM_0F1 241
 #define ITEM_0F2 242
 #define ITEM_0F3 243
