@@ -85,5 +85,6 @@
 #define HOLD_EFFECT_FOCUS_SASH     81
 #define HOLD_EFFECT_GRIP_CLAW      82
 #define HOLD_EFFECT_IRON_BALL      83
+#define HOLD_EFFECT_LIFE_ORB       84
 
 #endif // GUARD_HOLD_EFFECTS_H

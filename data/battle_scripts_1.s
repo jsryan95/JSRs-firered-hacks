@@ -5298,7 +5298,11 @@ BattleScript_ItemHealHP_Ret::
 	datahpupdate BS_ATTACKER
 	return
 
-BattleScript_ItemHurt::
+BattleScript_ItemHurt_End2::
+	call BattleScript_ItemHurt_Ret
+	end2
+
+BattleScript_ItemHurt_Ret::
 	printstring STRINGID_PKMNSITEMHURTIT
 	waitmessage B_WAIT_TIME_LONG
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
