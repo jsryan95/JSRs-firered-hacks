@@ -5245,6 +5245,18 @@ BattleScript_BerryCureChosenStatusRet::
 	removeitem BS_SCRIPTING
 	return
 
+BattleScript_ItemCausedBurn::
+	printstring STRINGID_PKMNSITEMCAUSEDBURN
+	waitmessage B_WAIT_TIME_LONG
+	updatestatusicon BS_SCRIPTING
+	end2
+
+BattleScript_ItemCausedToxic::
+	printstring STRINGID_PKMNSITEMCAUSEDTOXIC
+	waitmessage B_WAIT_TIME_LONG
+	updatestatusicon BS_SCRIPTING
+	end2
+
 BattleScript_WhiteHerbEnd2::
 	call BattleScript_WhiteHerbRet
 	end2

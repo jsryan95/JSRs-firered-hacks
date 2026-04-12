@@ -245,8 +245,8 @@
 #define ITEM_SMOOTH_ROCK 234
 #define ITEM_ICY_ROCK 235
 #define ITEM_EXPERT_BELT 236
-#define ITEM_0ED 237
-#define ITEM_0EE 238
+#define ITEM_FLAME_ORB 237
+#define ITEM_TOXIC_ORB 238
 #define ITEM_0EF 239
 #define ITEM_0F0 240
 #define ITEM_0F1 241

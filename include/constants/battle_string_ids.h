@@ -443,8 +443,10 @@
 #define STRINGID_NORMALIZECHANGEDTYPE 442
 #define STRINGID_PKMNFRISKEDXANDFOUNDY 443
 #define STRINGID_PKMNSITEMHURTIT 444
+#define STRINGID_PKMNSITEMCAUSEDBURN 445
+#define STRINGID_PKMNSITEMCAUSEDTOXIC 446
 
-#define BATTLESTRINGS_COUNT     445
+#define BATTLESTRINGS_COUNT     447
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

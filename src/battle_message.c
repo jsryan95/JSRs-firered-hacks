@@ -548,6 +548,8 @@ static const u8 sText_PkmnsItemDefrostedIt[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX
 static const u8 sText_PkmnsItemWokeIt[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nwoke it from its sleep!");
 static const u8 sText_PkmnsItemSnappedOut[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nsnapped it out of confusion!");
 static const u8 sText_PkmnsItemCuredProblem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\ncured its {B_BUFF1} problem!");
+static const u8 sText_PkmnsItemCausedBurn[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s was burned\nby it's {B_LAST_ITEM}!");
+static const u8 sText_PkmnsItemCausedToxic[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s was badly poisoned\nby it's {B_LAST_ITEM}!");
 static const u8 sText_PkmnsItemNormalizedStatus[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nnormalized its status!");
 static const u8 sText_PkmnsItemRestoredHealth[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nrestored health!");
 static const u8 sText_PkmnsItemRestoredPP[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nrestored {B_BUFF1}'s PP!");
@@ -1004,6 +1006,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_NORMALIZECHANGEDTYPE - BATTLESTRINGS_TABLE_START]           = sText_NormalizeChangedType,
     [STRINGID_PKMNFRISKEDXANDFOUNDY - BATTLESTRINGS_TABLE_START]          = sText_PkmnFriskedXAndFoundY,
     [STRINGID_PKMNSITEMHURTIT - BATTLESTRINGS_TABLE_START]                = sText_PkmnsItemHurtIt,
+    [STRINGID_PKMNSITEMCAUSEDBURN - BATTLESTRINGS_TABLE_START]            = sText_PkmnsItemCausedBurn,
+    [STRINGID_PKMNSITEMCAUSEDTOXIC - BATTLESTRINGS_TABLE_START]           = sText_PkmnsItemCausedToxic,
 };
 
 const u16 gMissStringIds[] =

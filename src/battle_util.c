@@ -3416,6 +3416,31 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     effect = ITEM_EFFECT_OTHER;
                 }
                 break;
+            case HOLD_EFFECT_BURN_SELF:
+                if (!(gBattleMons[battlerId].status1 & STATUS1_ANY
+                        || IS_BATTLER_OF_TYPE(battlerId, TYPE_FIRE)
+                        || hasActiveAbility(battlerId, ABILITY_WATER_VEIL
+                        || (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                               && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN)))))
+                {
+                    gBattleMons[battlerId].status1 |= STATUS1_BURN;
+                    BattleScriptExecute(BattleScript_ItemCausedBurn);
+                    effect = ITEM_STATUS_CHANGE;
+                }
+                break;
+            case HOLD_EFFECT_POISON_SELF:
+                if (!(gBattleMons[battlerId].status1 & STATUS1_ANY
+                        || IS_BATTLER_OF_TYPE(battlerId, TYPE_POISON)
+                        || IS_BATTLER_OF_TYPE(battlerId, TYPE_STEEL)
+                        || hasActiveAbility(battlerId, ABILITY_IMMUNITY
+                        || (hasActiveAbility(gEffectBattler, ABILITY_LEAF_GUARD)
+                               && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN)))))
+                {
+                    gBattleMons[battlerId].status1 |= STATUS1_TOXIC_POISON;
+                    BattleScriptExecute(BattleScript_ItemCausedToxic);
+                    effect = ITEM_STATUS_CHANGE;
+                }
+                break;
             }
             if (effect != 0)
             {
