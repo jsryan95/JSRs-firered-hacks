@@ -1925,7 +1925,8 @@ static void Cmd_adjustnormaldamage(void)
 
     gPotentialItemEffectBattler = gBattlerTarget;
 
-    if (holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
+    if ((holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
+            || holdEffect == HOLD_EFFECT_FOCUS_SASH)
     {
         RecordItemEffectBattle(gBattlerTarget, holdEffect);
         gSpecialStatuses[gBattlerTarget].focusBanded = 1;
@@ -1952,6 +1953,8 @@ static void Cmd_adjustnormaldamage(void)
         {
             gMoveResultFlags |= MOVE_RESULT_FOE_HUNG_ON;
             gLastUsedItem = gBattleMons[gBattlerTarget].item;
+            if (gLastUsedItem == ITEM_FOCUS_SASH)
+                gBattleMons[gBattlerTarget].item = ITEM_NONE;
         }
         else if (gSpecialStatuses[gBattlerTarget].sturdied)
         {
@@ -1982,7 +1985,8 @@ static void Cmd_adjustnormaldamage2(void)
 
     gPotentialItemEffectBattler = gBattlerTarget;
 
-    if (holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
+    if ((holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
+            || holdEffect == HOLD_EFFECT_FOCUS_SASH)
     {
         RecordItemEffectBattle(gBattlerTarget, holdEffect);
         gSpecialStatuses[gBattlerTarget].focusBanded = 1;
@@ -2008,6 +2012,8 @@ static void Cmd_adjustnormaldamage2(void)
         {
             gMoveResultFlags |= MOVE_RESULT_FOE_HUNG_ON;
             gLastUsedItem = gBattleMons[gBattlerTarget].item;
+            if (gLastUsedItem == ITEM_FOCUS_SASH)
+                gBattleMons[gBattlerTarget].item = ITEM_NONE;
         }
         else if (gSpecialStatuses[gBattlerTarget].sturdied)
         {
@@ -6199,7 +6205,8 @@ static void Cmd_adjustsetdamage(void)
 
     gPotentialItemEffectBattler = gBattlerTarget;
 
-    if (holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
+    if ((holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
+            || holdEffect == HOLD_EFFECT_FOCUS_SASH)
     {
         RecordItemEffectBattle(gBattlerTarget, holdEffect);
         gSpecialStatuses[gBattlerTarget].focusBanded = 1;
@@ -6226,6 +6233,8 @@ static void Cmd_adjustsetdamage(void)
         {
             gMoveResultFlags |= MOVE_RESULT_FOE_HUNG_ON;
             gLastUsedItem = gBattleMons[gBattlerTarget].item;
+            if (gLastUsedItem == ITEM_FOCUS_SASH)
+                gBattleMons[gBattlerTarget].item = ITEM_NONE;
         }
         else if (gSpecialStatuses[gBattlerTarget].sturdied)
         {
@@ -7770,7 +7779,8 @@ static void Cmd_tryKO(void)
 
     gPotentialItemEffectBattler = gBattlerTarget;
 
-    if (holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
+    if ((holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
+            || holdEffect == HOLD_EFFECT_FOCUS_SASH)
     {
         RecordItemEffectBattle(gBattlerTarget, HOLD_EFFECT_FOCUS_BAND);
         gSpecialStatuses[gBattlerTarget].focusBanded = 1;
@@ -7819,6 +7829,8 @@ static void Cmd_tryKO(void)
                 gBattleMoveDamage = gBattleMons[gBattlerTarget].hp - 1;
                 gMoveResultFlags |= MOVE_RESULT_FOE_HUNG_ON;
                 gLastUsedItem = gBattleMons[gBattlerTarget].item;
+                if (gLastUsedItem == ITEM_FOCUS_SASH)
+                    gBattleMons[gBattlerTarget].item = ITEM_NONE;
             }
             else
             {
