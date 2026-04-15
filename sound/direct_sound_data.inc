@@ -1532,6 +1532,10 @@ Cry_Nosepass::
 	.incbin "sound/direct_sound_samples/cries/nosepass.bin"
 
 	.align 2
+Cry_Probopass::
+	.incbin "sound/direct_sound_samples/cries/probopass.bin"
+
+	.align 2
 Cry_Glalie::
 	.incbin "sound/direct_sound_samples/cries/glalie.bin"
 

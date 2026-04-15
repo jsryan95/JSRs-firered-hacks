@@ -2110,6 +2110,11 @@ const u8 gNosepassPokedexText[] = _(
 
 const u8 gNosepassPokedexTextUnused[] = _("");
 
+const u8 gProbopassPokedexText[] = _(
+    "It freely controls three small units\n"
+    "called Mini-Noses using magnetic\n"
+    "force.");
+
 const u8 gSkittyPokedexText[] = _(
     "It is said to be difficult to earn its\n"
     "trust. However, it is extremely popular\n"

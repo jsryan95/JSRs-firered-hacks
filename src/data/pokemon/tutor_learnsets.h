@@ -2165,6 +2165,14 @@ static const u16 sTutorLearnsets[] =
                        | TUTOR(MOVE_ROCK_SLIDE)
                        | TUTOR(MOVE_SUBSTITUTE),
 
+    [SPECIES_PROBOPASS] = TUTOR(MOVE_BODY_SLAM)
+                       | TUTOR(MOVE_DOUBLE_EDGE)
+                       | TUTOR(MOVE_MIMIC)
+                       | TUTOR(MOVE_THUNDER_WAVE)
+                       | TUTOR(MOVE_EXPLOSION)
+                       | TUTOR(MOVE_ROCK_SLIDE)
+                       | TUTOR(MOVE_SUBSTITUTE),
+
     [SPECIES_TORKOAL] = TUTOR(MOVE_BODY_SLAM)
                       | TUTOR(MOVE_DOUBLE_EDGE)
                       | TUTOR(MOVE_MIMIC)

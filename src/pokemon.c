@@ -422,6 +422,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(BALTOY),
     SPECIES_TO_HOENN(CLAYDOL),
     SPECIES_TO_HOENN(NOSEPASS),
+    SPECIES_TO_HOENN(PROBOPASS),
     SPECIES_TO_HOENN(TORKOAL),
     SPECIES_TO_HOENN(SABLEYE),
     SPECIES_TO_HOENN(BARBOACH),
@@ -838,6 +839,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(BALTOY),
     SPECIES_TO_NATIONAL(CLAYDOL),
     SPECIES_TO_NATIONAL(NOSEPASS),
+    SPECIES_TO_NATIONAL(PROBOPASS),
     SPECIES_TO_NATIONAL(TORKOAL),
     SPECIES_TO_NATIONAL(SABLEYE),
     SPECIES_TO_NATIONAL(BARBOACH),
@@ -994,6 +996,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(GRAVELER),
     HOENN_TO_NATIONAL(GOLEM),
     HOENN_TO_NATIONAL(NOSEPASS),
+    HOENN_TO_NATIONAL(PROBOPASS),
     HOENN_TO_NATIONAL(SKITTY),
     HOENN_TO_NATIONAL(DELCATTY),
     HOENN_TO_NATIONAL(ZUBAT),
@@ -5893,7 +5896,7 @@ u16 SpeciesToPokedexNum(u16 species)
 {
     species = SpeciesToNationalPokedexNum(species);
 
-    if (!IsNationalPokedexEnabled() && species > KANTO_SPECIES_END)
+    if (!IsNationalPokedexEnabled() && species > NATIONAL_DEX_MEW)
         return 0xFFFF;
     return species;
 }

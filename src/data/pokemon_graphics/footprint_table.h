@@ -321,6 +321,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_BALTOY] = gMonFootprint_Baltoy,
     [SPECIES_CLAYDOL] = gMonFootprint_Claydol,
     [SPECIES_NOSEPASS] = gMonFootprint_Nosepass,
+    [SPECIES_PROBOPASS] = gMonFootprint_Probopass,
     [SPECIES_TORKOAL] = gMonFootprint_Torkoal,
     [SPECIES_SABLEYE] = gMonFootprint_Sableye,
     [SPECIES_BARBOACH] = gMonFootprint_Barboach,

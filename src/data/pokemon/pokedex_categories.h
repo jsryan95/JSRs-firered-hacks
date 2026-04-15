@@ -521,6 +521,7 @@ static const u16 sDexCategory_CavePkmn_Page5[] = {
     SPECIES_MISDREAVUS,
     SPECIES_DUNSPARCE,
     SPECIES_NOSEPASS,
+    SPECIES_PROBOPASS,
 };
 
 static const u16 sDexCategory_CavePkmn_Page6[] = {

@@ -3900,6 +3900,19 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 1,
     },
 
+    [NATIONAL_DEX_PROBOPASS] =
+    {
+        .categoryName = _("COMPASS"),
+        .height = 14,
+        .weight = 3400,
+        .description = gProbopassPokedexText,
+        .unusedDescription = gNosepassPokedexTextUnused,
+        .pokemonScale = 301,
+        .pokemonOffset = 1,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+
     [NATIONAL_DEX_SKITTY] =
     {
         .categoryName = _("KITTEN"),

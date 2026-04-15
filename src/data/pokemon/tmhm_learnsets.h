@@ -7408,6 +7408,29 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
+    [SPECIES_PROBOPASS]    = TMHM_LEARNSET(TMHM(TM06_TOXIC)
+                                        
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM17_PROTECT)
+                                        
+                                        | TMHM(TM21_TAKE_DOWN)
+                                        | TMHM(TM24_THUNDERBOLT)
+                                        | TMHM(TM25_THUNDER)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM34_SHOCK_WAVE)
+                                        | TMHM(TM37_SANDSTORM)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        
+                                        | TMHM(TM44_REST)
+                                        
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH)),
+
     [SPECIES_TORKOAL]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
                                         
                                         | TMHM(TM11_SUNNY_DAY)
