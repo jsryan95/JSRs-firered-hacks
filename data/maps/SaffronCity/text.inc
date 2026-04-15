@@ -54,8 +54,9 @@ SaffronCity_Text_SawRocketBossEscaping::
     .string "SILPH's building.$"
 
 SaffronCity_Text_ImASecurityGuard::
-    .string "I'm a security guard.\p"
-    .string "Suspicious kids I don't allow in!$"
+    .string "I'm dead if the boss finds out\n"
+    .string "that I was sleeping on the job...\p"
+    .string "Maybe I should do a runner...$"
 
 SaffronCity_Text_HesTakingASnooze::
     .string "…\n"
