@@ -2080,7 +2080,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_BikerLukas),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_BikerLukas),
     },
     [TRAINER_BIKER_ISAAC] = {
         .trainerClass = TRAINER_CLASS_BIKER,
@@ -2090,7 +2090,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_BikerIsaac),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_BikerIsaac),
     },
     [TRAINER_BIKER_GERALD] = {
         .trainerClass = TRAINER_CLASS_BIKER,
@@ -3032,15 +3032,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_GentlemanRobert),
     },
-    [TRAINER_BIRD_KEEPER_DONALD] = {
-        .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_BIRD_KEEPER,
+    [TRAINER_EXPERT_DONALD] = {
+        .trainerClass = TRAINER_CLASS_EXPERT,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_EXPERT_M,
         .trainerName = _("DONALD"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BirdKeeperDonald),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_ExpertDonald),
     },
     [TRAINER_BIRD_KEEPER_BENNY] = {
         .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
@@ -3052,15 +3052,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_BirdKeeperBenny),
     },
-    [TRAINER_BIRD_KEEPER_EDWIN] = {
-        .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_BIRD_KEEPER,
-        .trainerName = _("EDWIN"),
+    [TRAINER_EXPERT_ESME] = {
+        .trainerClass = TRAINER_CLASS_EXPERT,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_EXPERT_F,
+        .trainerName = _("ESME"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BirdKeeperEdwin),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_ExpertEsme),
     },
     [TRAINER_BIRD_KEEPER_CHESTER] = {
         .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
@@ -3132,15 +3132,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_BirdKeeperKeith),
     },
-    [TRAINER_BIRD_KEEPER_CARTER] = {
-        .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_BIRD_KEEPER,
+    [TRAINER_CAMPER_CARTER] = {
+        .trainerClass = TRAINER_CLASS_CAMPER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CAMPER,
         .trainerName = _("CARTER"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BirdKeeperCarter),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_CamperCarter),
     },
     [TRAINER_BIRD_KEEPER_MITCH] = {
         .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
@@ -3152,15 +3152,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_BirdKeeperMitch),
     },
-    [TRAINER_BIRD_KEEPER_BECK] = {
-        .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
+    [TRAINER_COOLTRAINER_LIZZY] = {
+        .trainerClass = TRAINER_CLASS_COOLTRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_BIRD_KEEPER,
-        .trainerName = _("BECK"),
+        .trainerPic = TRAINER_PIC_COOLTRAINER_F,
+        .trainerName = _("LIZZY"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_BirdKeeperBeck),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_CoolTrainerLizzy),
     },
     [TRAINER_BIRD_KEEPER_MARLON] = {
         .trainerClass = TRAINER_CLASS_BIRD_KEEPER,

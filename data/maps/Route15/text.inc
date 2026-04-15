@@ -23,15 +23,15 @@ Route15_Text_BeckyPostBattle::
     .string "I'm afraid of BIKERS. They look so\n"
     .string "ugly and mean!$"
 
-Route15_Text_EdwinIntro::
+Route15_Text_EsmeIntro::
     .string "When I whistle, I can summon bird\n"
     .string "POKéMON.$"
 
-Route15_Text_EdwinDefeat::
+Route15_Text_EsmeDefeat::
     .string "Ow!\n"
     .string "That's tragic!$"
 
-Route15_Text_EdwinPostBattle::
+Route15_Text_EsmePostBattle::
     .string "Maybe I'm not cut out for battles.\n"
     .string "I'm not the right type, I guess.$"
 

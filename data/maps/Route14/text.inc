@@ -20,16 +20,16 @@ Route14_Text_MitchPostBattle::
     .string "My bird POKéMON need to learn\n"
     .string "better moves.$"
 
-Route14_Text_BeckIntro::
+Route14_Text_LizzyIntro::
     .string "They have TMs on sale at the\n"
     .string "CELADON DEPT. STORE.\p"
     .string "TMs aren't really rare, but not\n"
     .string "many people have HMs.$"
 
-Route14_Text_BeckDefeat::
+Route14_Text_LizzyDefeat::
     .string "Aww, bummer!$"
 
-Route14_Text_BeckPostBattle::
+Route14_Text_LizzyPostBattle::
     .string "Try teaching POKéMON a move that's\n"
     .string "the same type as it.\p"
     .string "That apparently boosts the power\n"

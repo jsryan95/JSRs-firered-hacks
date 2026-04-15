@@ -306,9 +306,9 @@
 #define TRAINER_BIRD_KEEPER_SEBASTIAN            300
 #define TRAINER_BIRD_KEEPER_PERRY                301
 #define TRAINER_GENTLEMAN_ROBERT               302
-#define TRAINER_BIRD_KEEPER_DONALD               303
+#define TRAINER_EXPERT_DONALD               303
 #define TRAINER_BIRD_KEEPER_BENNY                304
-#define TRAINER_BIRD_KEEPER_EDWIN                305
+#define TRAINER_EXPERT_ESME                305
 #define TRAINER_BIRD_KEEPER_CHESTER              306
 #define TRAINER_BIRD_KEEPER_WILTON               307
 #define TRAINER_BIRD_KEEPER_RAMIRO               308
@@ -316,9 +316,9 @@
 #define TRAINER_BIRD_KEEPER_ROGER                310
 #define TRAINER_BIRD_KEEPER_REED                 311
 #define TRAINER_BIRD_KEEPER_KEITH                312
-#define TRAINER_BIRD_KEEPER_CARTER               313
+#define TRAINER_CAMPER_CARTER               313
 #define TRAINER_BIRD_KEEPER_MITCH                314
-#define TRAINER_BIRD_KEEPER_BECK                 315
+#define TRAINER_COOLTRAINER_LIZZY                 315
 #define TRAINER_BIRD_KEEPER_MARLON               316
 #define TRAINER_BLACK_BELT_KOICHI                317
 #define TRAINER_BLACK_BELT_MIKE                  318

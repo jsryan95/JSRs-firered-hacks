@@ -328,7 +328,7 @@ Route14_Text_MitchRematchIntro::
 	.string "My bird POKéMON should be ready\n"
 	.string "for battle this time.$"
 
-Route14_Text_BeckRematchIntro::
+Route14_Text_LizzyRematchIntro::
 	.string "Are you using TMs on POKéMON?\n"
 	.string "Just holding them is useless.$"
 
@@ -380,7 +380,7 @@ Route15_Text_BeckyRematchIntro::
 	.string "beat you.\p"
 	.string "I'll give it one more go!$"
 
-Route15_Text_EdwinRematchIntro::
+Route15_Text_EsmeRematchIntro::
 	.string "When I whistle, bird POKéMON\n"
 	.string "gather around.\p"
 	.string "They're amazingly cute!$"
