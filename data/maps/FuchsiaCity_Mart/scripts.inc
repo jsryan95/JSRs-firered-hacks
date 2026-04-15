@@ -31,3 +31,30 @@ FuchsiaCity_Mart_Items::
 	.2byte ITEM_NONE
 	release
 	end
+
+FuchsiaCity_Mart_EventScript_TmClerk::
+	goto_if_questlog EventScript_ReleaseEnd
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_Mart_EventScript_TmClerkNotReady
+	message Text_MayIHelpYou
+	waitmessage
+	pokemart FuchsiaCity_Mart_TMs
+	msgbox Text_PleaseComeAgain
+	release
+	end
+
+FuchsiaCity_Mart_EventScript_TmClerkNotReady::
+	msgbox PewterCity_Mart_Text_NotReadyComeBackLater, MSGBOX_NPC
+	end
+
+	.align 2
+FuchsiaCity_Mart_TMs::
+	.2byte ITEM_TM06
+	.2byte ITEM_TM07
+	.2byte ITEM_TM11
+	.2byte ITEM_TM18
+	.2byte ITEM_TM37
+	.2byte ITEM_NONE
+	release
+	end
