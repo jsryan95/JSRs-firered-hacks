@@ -49,16 +49,16 @@ Route14_Text_MarlonPostBattle::
     .string "I don't want to raise anything else.$"
 
 Route14_Text_DonaldIntro::
-    .string "Have you heard the legend of the\n"
-    .string "winged mirages?$"
+    .string "I may be old, but I'll have no\n"
+    .string "trouble keeping up with you!$"
 
 Route14_Text_DonaldDefeat::
     .string "Why?\n"
     .string "Why'd I lose?$"
 
 Route14_Text_DonaldPostBattle::
-    .string "Well, the winged mirages are the\n"
-    .string "legendary bird POKéMON.\p"
+    .string "Have you heard of the legendary\n"
+    .string "bird POKéMON?\p"
     .string "There are three of them: ARTICUNO,\n"
     .string "ZAPDOS, and MOLTRES.$"
 

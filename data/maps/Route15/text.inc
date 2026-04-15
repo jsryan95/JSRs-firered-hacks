@@ -24,16 +24,16 @@ Route15_Text_BeckyPostBattle::
     .string "ugly and mean!$"
 
 Route15_Text_EsmeIntro::
-    .string "When I whistle, I can summon bird\n"
-    .string "POKéMON.$"
+    .string "Do you know how to raise a POKéMON?$"
 
 Route15_Text_EsmeDefeat::
     .string "Ow!\n"
     .string "That's tragic!$"
 
 Route15_Text_EsmePostBattle::
-    .string "Maybe I'm not cut out for battles.\n"
-    .string "I'm not the right type, I guess.$"
+    .string "You made me look silly.\p"
+    .string "You should try yourself against young\n"
+    .string "Master KOGA in FUCHSIA CITY.$"
 
 Route15_Text_ChesterIntro::
     .string "Hmm? My birds are shivering!\n"

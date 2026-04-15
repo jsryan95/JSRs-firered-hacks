@@ -32,7 +32,7 @@
       "x": 18,
       "y": 42,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 8,
       "trainer_type": "TRAINER_TYPE_NORMAL",
