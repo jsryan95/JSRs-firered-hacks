@@ -53,6 +53,18 @@ SilphCo_5F_Text_Grunt2PostBattle::
     .string "Which reminds me.\p"
     .string "KOFFING evolves into WEEZING!$"
 
+SilphCo_5F_Text_Grunt3Intro::
+    .string "What are you doing here?$"
+
+SilphCo_5F_Text_Grunt3Defeat::
+    .string "I wish you hadn't come...$"
+
+SilphCo_5F_Text_Grunt3PostBattle::
+    .string "Make a nuisance of yourself, I\n"
+    .string "guess.\p"
+    .string "Why should I care? I'm just a\n"
+    .string "GRUNT.$"
+
 SilphCo_5F_Text_PorygonFirstVRMon::
     .string "It's a POKéMON REPORT!\p"
     .string "POKéMON LAB created PORYGON,\n"
@@ -60,13 +72,13 @@ SilphCo_5F_Text_PorygonFirstVRMon::
 
 SilphCo_5F_Text_Over350TechniquesConfirmed::
     .string "It's a POKéMON REPORT!\p"
-    .string "Over 350 POKéMON techniques have\n"
+    .string "Over 550 POKéMON techniques have\n"
     .string "been confirmed.$"
 
 SilphCo_5F_Text_SomeMonsEvolveWhenTraded::
     .string "It's a POKéMON REPORT!\p"
     .string "Some POKéMON have been confirmed\n"
-    .string "to evolve when they are traded.$"
+    .string "to not evolve when they are traded.$"
 
 SilphCo_5F_Text_FloorSign::
     .string "SILPH CO. HEAD OFFICE\n"

@@ -52,6 +52,11 @@ SilphCo_5F_EventScript_Grunt2::
 	msgbox SilphCo_5F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+SilphCo_5F_EventScript_Grunt3::
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_EXTRA_1, SilphCo_5F_Text_Grunt3Intro, SilphCo_5F_Text_Grunt3Defeat
+	msgbox SilphCo_5F_Text_Grunt3PostBattle, MSGBOX_AUTOCLOSE
+	end
+
 SilphCo_5F_EventScript_Dalton::
 	trainerbattle_single TRAINER_JUGGLER_DALTON, SilphCo_5F_Text_DaltonIntro, SilphCo_5F_Text_DaltonDefeat
 	msgbox SilphCo_5F_Text_DaltonPostBattle, MSGBOX_AUTOCLOSE

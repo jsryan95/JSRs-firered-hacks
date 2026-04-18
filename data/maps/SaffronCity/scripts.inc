@@ -43,7 +43,6 @@ SaffronCity_EventScript_RocketGrunt7::
 SaffronCity_EventScript_DoorGuardGrunt::
 	lock
 	goto_if_unset FLAG_BADGE05_GET, SaffronCity_EventScript_DoorGuardAsleep
-	waitmovement 0
 	msgbox SaffronCity_Text_ImASecurityGuard
 	release
 	end

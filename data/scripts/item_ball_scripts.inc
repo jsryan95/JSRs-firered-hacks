@@ -278,8 +278,8 @@ SilphCo_10F_EventScript_ItemCarbos::
 	finditem ITEM_CARBOS
 	end
 
-SilphCo_10F_EventScript_ItemUltraBall::
-	finditem ITEM_ULTRA_BALL
+SilphCo_10F_EventScript_ItemMetalCoat::
+	finditem ITEM_METAL_COAT
 	end
 
 SilphCo_10F_EventScript_ItemRareCandy::

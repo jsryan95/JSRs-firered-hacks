@@ -118,7 +118,7 @@ SilphCo_7F_EventScript_PorygonGuy::
 	goto_if_set FLAG_GOT_PORYGON_FROM_SILPH, SilphCo_7F_EventScript_AlreadyGotPorygon
 	msgbox SilphCo_7F_Text_HaveMonForSavingUs
 	setvar VAR_TEMP_1, SPECIES_PORYGON
-	givemon SPECIES_PORYGON, 25
+	givemon SPECIES_PORYGON, 33
 	goto_if_eq VAR_RESULT, 0, SilphCo_7F_EventScript_ReceivePorygonParty
 	goto_if_eq VAR_RESULT, 1, SilphCo_7F_EventScript_ReceivePorygonPC
 	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
