@@ -9058,11 +9058,21 @@ Move_CONSTRICT:
 	waitforvisualfinish
 	end
 
+Move_HEX:
+	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
+	monbg ANIM_DEF_PARTNER
+	playsewithpan SE_M_NIGHTMARE, SOUND_PAN_TARGET
+	createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 14, 1
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_TARGET, 2, 9, 0, RGB(12, 5, 20)
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	end
+
 Move_CURSE:
 	choosetwoturnanim CurseGhost, CurseStats
 
 CurseGhost:
-Move_HEX:
 	loadspritegfx ANIM_TAG_NAIL
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
 	monbg ANIM_ATK_PARTNER
