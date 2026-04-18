@@ -5235,7 +5235,6 @@ Move_FAKE_TEARS:
 	end
 
 Move_AIR_CUTTER:
-Move_AIR_SLASH:
 	loadspritegfx ANIM_TAG_AIR_WAVE
 	loadspritegfx ANIM_TAG_CUT
 	loadspritegfx ANIM_TAG_IMPACT
@@ -6874,6 +6873,50 @@ HydroPumpHitSplats	:
 	createsprite gWaterHitSplatSpriteTemplate, ANIM_ATTACKER, 4, 0, -15, ANIM_TARGET, 1
 	return
 
+Move_SCALD:
+	loadspritegfx ANIM_TAG_WATER_ORB
+	loadspritegfx ANIM_TAG_WATER_IMPACT
+	monbg ANIM_DEF_PARTNER
+	splitbgprio ANIM_TARGET
+	setalpha 12, 8
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_ATTACKER, 0, 2, 40, 1
+	delay 6
+	panse SE_M_HYDRO_PUMP, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
+	createvisualtask AnimTask_StartSinAnimTimer, 5, 100
+	call ScaldBeams
+	call ScaldBeams
+	call ScaldBeams
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 3, 0, 37, 1
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_TARGET, 2, 0, 13, RGB(28, 0, 0)
+	call HydroPumpHitSplats
+	call ScaldBeams
+	call ScaldBeams
+	call HydroPumpHitSplats
+	call ScaldBeams
+	call ScaldBeams
+	call HydroPumpHitSplats
+	call ScaldBeams
+	call ScaldBeams
+	call HydroPumpHitSplats
+	call ScaldBeams
+	call ScaldBeams
+	call HydroPumpHitSplats
+	delay 2
+	call HydroPumpHitSplats
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_TARGET, 4, 4, 0, RGB(28, 0, 0)
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+
+ScaldBeams:
+	createsprite gHydroPumpOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
+	delay 1
+	createsprite gHydroPumpOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
+	delay 1
+	return
+
 Move_SIGNAL_BEAM:
 Move_POWER_GEM:
 	loadspritegfx ANIM_TAG_GLOWY_RED_ORB
@@ -7536,6 +7579,22 @@ AeroblastBeam:
 	delay 3
 	return
 
+Move_AIR_SLASH:
+	loadspritegfx ANIM_TAG_AIR_WAVE_2
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	playsewithpan SE_M_JUMP_KICK, SOUND_PAN_ATTACKER
+	createsprite gAirWaveCrescentSpriteTemplate, ANIM_ATTACKER, 2, 14, -12, 0, -12, 15, 0, 0
+	createsprite gAirWaveCrescentSpriteTemplate, ANIM_ATTACKER, 2, 26, 8, 12, 8, 15, 0, 0
+	delay 12
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 5, 0, 5, 1
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	delay 0
+	end
+
 Move_TAILWIND:
 	monbg ANIM_DEF_PARTNER
 	call SetSkyBg
@@ -7550,7 +7609,6 @@ Move_TAILWIND:
 	end
 
 Move_WATER_GUN:
-Move_SCALD:
 Move_SOAK:
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
 	loadspritegfx ANIM_TAG_WATER_IMPACT
