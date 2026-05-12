@@ -1932,7 +1932,7 @@ static void Cmd_adjustnormaldamage(void)
     gPotentialItemEffectBattler = gBattlerTarget;
 
     if ((holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
-            || holdEffect == HOLD_EFFECT_FOCUS_SASH)
+            || (holdEffect == HOLD_EFFECT_FOCUS_SASH && gBattleMons[gBattlerTarget].hp == gBattleMons[gBattlerTarget].maxHP))
     {
         RecordItemEffectBattle(gBattlerTarget, holdEffect);
         gSpecialStatuses[gBattlerTarget].focusBanded = 1;
@@ -1992,7 +1992,7 @@ static void Cmd_adjustnormaldamage2(void)
     gPotentialItemEffectBattler = gBattlerTarget;
 
     if ((holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
-            || holdEffect == HOLD_EFFECT_FOCUS_SASH)
+            || (holdEffect == HOLD_EFFECT_FOCUS_SASH && gBattleMons[gBattlerTarget].hp == gBattleMons[gBattlerTarget].maxHP))
     {
         RecordItemEffectBattle(gBattlerTarget, holdEffect);
         gSpecialStatuses[gBattlerTarget].focusBanded = 1;
@@ -6211,7 +6211,7 @@ static void Cmd_adjustsetdamage(void)
     gPotentialItemEffectBattler = gBattlerTarget;
 
     if ((holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
-            || holdEffect == HOLD_EFFECT_FOCUS_SASH)
+            || (holdEffect == HOLD_EFFECT_FOCUS_SASH && gBattleMons[gBattlerTarget].hp == gBattleMons[gBattlerTarget].maxHP))
     {
         RecordItemEffectBattle(gBattlerTarget, holdEffect);
         gSpecialStatuses[gBattlerTarget].focusBanded = 1;
@@ -7791,9 +7791,9 @@ static void Cmd_tryKO(void)
     gPotentialItemEffectBattler = gBattlerTarget;
 
     if ((holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
-            || holdEffect == HOLD_EFFECT_FOCUS_SASH)
+            || (holdEffect == HOLD_EFFECT_FOCUS_SASH && gBattleMons[gBattlerTarget].hp == gBattleMons[gBattlerTarget].maxHP))
     {
-        RecordItemEffectBattle(gBattlerTarget, HOLD_EFFECT_FOCUS_BAND);
+        RecordItemEffectBattle(gBattlerTarget, holdEffect);
         gSpecialStatuses[gBattlerTarget].focusBanded = 1;
     }
 

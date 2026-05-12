@@ -61,12 +61,12 @@ SaffronCity_Gym_EventScript_Amanda::
 	end
 
 SaffronCity_Gym_EventScript_Stacy::
-	trainerbattle_single TRAINER_CHANNELER_STACY, SaffronCity_Gym_Text_StacyIntro, SaffronCity_Gym_Text_StacyDefeat
+	trainerbattle_single TRAINER_PSYCHIC_STACY, SaffronCity_Gym_Text_StacyIntro, SaffronCity_Gym_Text_StacyDefeat
 	msgbox SaffronCity_Gym_Text_StacyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 SaffronCity_Gym_EventScript_Tasha::
-	trainerbattle_single TRAINER_CHANNELER_TASHA, SaffronCity_Gym_Text_TashaIntro, SaffronCity_Gym_Text_TashaDefeat
+	trainerbattle_single TRAINER_BEAUTY_TASHA, SaffronCity_Gym_Text_TashaIntro, SaffronCity_Gym_Text_TashaDefeat
 	msgbox SaffronCity_Gym_Text_TashaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

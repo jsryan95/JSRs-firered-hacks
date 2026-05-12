@@ -466,8 +466,8 @@
 #define TRAINER_CHANNELER_7                      460
 #define TRAINER_CHANNELER_8                      461
 #define TRAINER_CHANNELER_AMANDA                 462
-#define TRAINER_CHANNELER_STACY                  463
-#define TRAINER_CHANNELER_TASHA                  464
+#define TRAINER_PSYCHIC_STACY                  463
+#define TRAINER_BEAUTY_TASHA                  464
 #define TRAINER_HIKER_JEREMY                     465
 #define TRAINER_PICNICKER_ALMA                   466
 #define TRAINER_PICNICKER_SUSIE                  467

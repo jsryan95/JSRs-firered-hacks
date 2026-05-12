@@ -3014,63 +3014,63 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SwimmerFemaleShirley[] =
 
 static const struct TrainerMonNoItemDefaultMoves sParty_PsychicJohan[] = {
     {
-        .iv = 50,
-        .lvl = 31,
+        .iv = 80,
+        .lvl = 40,
         .species = SPECIES_KADABRA,
     },
     {
-        .iv = 50,
-        .lvl = 31,
+        .iv = 80,
+        .lvl = 40,
         .species = SPECIES_SLOWPOKE,
     },
     {
-        .iv = 50,
-        .lvl = 31,
+        .iv = 80,
+        .lvl = 40,
         .species = SPECIES_MR_MIME,
     },
     {
-        .iv = 50,
-        .lvl = 31,
+        .iv = 80,
+        .lvl = 40,
         .species = SPECIES_KADABRA,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_PsychicTyron[] = {
     {
-        .iv = 50,
-        .lvl = 34,
+        .iv = 80,
+        .lvl = 42,
         .species = SPECIES_MR_MIME,
     },
     {
-        .iv = 50,
-        .lvl = 34,
+        .iv = 80,
+        .lvl = 42,
         .species = SPECIES_KADABRA,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_PsychicCameron[] = {
     {
-        .iv = 50,
-        .lvl = 33,
+        .iv = 80,
+        .lvl = 41,
         .species = SPECIES_SLOWPOKE,
     },
     {
-        .iv = 50,
-        .lvl = 33,
-        .species = SPECIES_SLOWPOKE,
+        .iv = 80,
+        .lvl = 41,
+        .species = SPECIES_SLOWBRO,
     },
     {
-        .iv = 50,
-        .lvl = 33,
+        .iv = 80,
+        .lvl = 41,
         .species = SPECIES_SLOWBRO,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_PsychicPreston[] = {
     {
-        .iv = 50,
-        .lvl = 38,
-        .species = SPECIES_SLOWBRO,
+        .iv = 80,
+        .lvl = 44,
+        .species = SPECIES_JYNX,
     },
 };
 
@@ -5650,30 +5650,35 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_LeaderSabrina[] = {
+static const struct TrainerMonItemCustomMoves sParty_LeaderSabrina[] = {
     {
-        .iv = 0,
-        .lvl = 38,
-        .species = SPECIES_KADABRA,
-        .moves = {MOVE_PSYBEAM, MOVE_REFLECT, MOVE_FUTURE_SIGHT, MOVE_CALM_MIND},
+        .iv = 112,
+        .lvl = 45,
+        .species = SPECIES_ESPEON,
+        .moves = {MOVE_PSYCHIC, MOVE_REFLECT, MOVE_BATON_PASS, MOVE_CALM_MIND},
+        .heldItem = ITEM_LIGHT_CLAY,
+        .ability = 1,
     },
     {
-        .iv = 0,
-        .lvl = 37,
-        .species = SPECIES_MR_MIME,
-        .moves = {MOVE_BARRIER, MOVE_PSYBEAM, MOVE_BATON_PASS, MOVE_CALM_MIND},
+        .iv = 112,
+        .lvl = 47,
+        .species = SPECIES_SLOWKING,
+        .moves = {MOVE_TRUMP_CARD, MOVE_SLACK_OFF, MOVE_SURF, MOVE_PSYSHOCK},
+        .heldItem = ITEM_LUM_BERRY
     },
     {
-        .iv = 0,
-        .lvl = 38,
-        .species = SPECIES_VENOMOTH,
-        .moves = {MOVE_PSYBEAM, MOVE_GUST, MOVE_LEECH_LIFE, MOVE_SUPERSONIC},
+        .iv = 112,
+        .lvl = 47,
+        .species = SPECIES_XATU,
+        .moves = {MOVE_TAILWIND, MOVE_STAR_SHOOTER, MOVE_SKY_BURST, MOVE_CALM_MIND},
+        .heldItem = ITEM_FOCUS_SASH
     },
     {
-        .iv = 0,
-        .lvl = 43,
+        .iv = 112,
+        .lvl = 49,
         .species = SPECIES_ALAKAZAM,
-        .moves = {MOVE_PSYCHIC, MOVE_RECOVER, MOVE_FUTURE_SIGHT, MOVE_CALM_MIND},
+        .moves = {MOVE_PSYCHIC, MOVE_RECOVER, MOVE_FOCUS_BLAST, MOVE_CALM_MIND},
+        .heldItem = ITEM_PETAYA_BERRY
     },
 };
 
@@ -6442,40 +6447,42 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Channeler8[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerAmanda[] = {
     {
-        .iv = 0,
-        .lvl = 34,
-        .species = SPECIES_GASTLY,
+        .iv = 80,
+        .lvl = 42,
+        .species = SPECIES_HAUNTER,
     },
     {
-        .iv = 0,
-        .lvl = 34,
+        .iv = 80,
+        .lvl = 42,
         .species = SPECIES_HAUNTER,
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerStacy[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_PsychicStacy[] = {
     {
-        .iv = 0,
-        .lvl = 38,
-        .species = SPECIES_HAUNTER,
+        .iv = 80,
+        .lvl = 43,
+        .species = SPECIES_XATU,
+    },
+    {
+        .iv = 80,
+        .lvl = 43,
+        .species = SPECIES_ESPEON,
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerTasha[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_BeautyTasha[] = {
     {
-        .iv = 0,
-        .lvl = 33,
-        .species = SPECIES_GASTLY,
+        .iv = 80,
+        .lvl = 44,
+        .species = SPECIES_STARMIE,
+        .moves = {MOVE_REFLECT, MOVE_LIGHT_SCREEN, MOVE_HYDRO_PUMP, MOVE_PSYCHIC}
     },
     {
-        .iv = 0,
-        .lvl = 33,
-        .species = SPECIES_GASTLY,
-    },
-    {
-        .iv = 0,
-        .lvl = 33,
-        .species = SPECIES_HAUNTER,
+        .iv = 80,
+        .lvl = 44,
+        .species = SPECIES_BUTTERFREE,
+        .moves = {MOVE_SAFEGUARD, MOVE_QUIVER_DANCE, MOVE_GIGA_DRAIN, MOVE_PSYCHIC}
     },
 };
 

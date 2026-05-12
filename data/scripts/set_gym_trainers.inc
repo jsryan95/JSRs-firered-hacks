@@ -50,8 +50,8 @@ EventScript_SetSaffronGymTrainers::
 	settrainerflag TRAINER_PSYCHIC_CAMERON
 	settrainerflag TRAINER_PSYCHIC_PRESTON
 	settrainerflag TRAINER_CHANNELER_AMANDA
-	settrainerflag TRAINER_CHANNELER_STACY
-	settrainerflag TRAINER_CHANNELER_TASHA
+	settrainerflag TRAINER_PSYCHIC_STACY
+	settrainerflag TRAINER_BEAUTY_TASHA
 	return
 
 EventScript_SetCinnabarGymTrainers::
