@@ -506,8 +506,8 @@ SafariZone_North_EventScript_ItemQuickClaw::
 	finditem ITEM_QUICK_CLAW
 	end
 
-SeafoamIslands_1F_EventScript_ItemIceHeal::
-	finditem ITEM_ICE_HEAL
+SeafoamIslands_1F_EventScript_ItemAspearBerry::
+	finditem ITEM_ASPEAR_BERRY
 	end
 
 SeafoamIslands_B1F_EventScript_ItemWaterStone::
