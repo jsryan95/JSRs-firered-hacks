@@ -9836,7 +9836,7 @@ static u32 getEffectiveSpeed(u8 battler)
      && FlagGet(FLAG_BADGE03_GET)
      && GetBattlerSide(battler) == B_SIDE_PLAYER)
         speed = (speed * 110) / 100;
-    if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_IRON_BALL)
+    if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_IRON_BALL || holdEffect == HOLD_EFFECT_HEAVY_BAND || holdEffect == ITEM_HEAVY_SPECS)
         speed /= 2;
     if (holdEffect == HOLD_EFFECT_CHOICE_SCARF)
         speed = (speed * 150) / 100;

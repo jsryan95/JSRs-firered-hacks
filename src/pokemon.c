@@ -2466,9 +2466,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     }
 
     // Apply boosts from hold items
-    if (attackerHoldEffect == HOLD_EFFECT_CHOICE_BAND)
+    if (attackerHoldEffect == HOLD_EFFECT_CHOICE_BAND || attackerHoldEffect == HOLD_EFFECT_HEAVY_BAND)
         attack = (150 * attack) / 100;
-    if (attackerHoldEffect == HOLD_EFFECT_CHOICE_SPECS)
+    if (attackerHoldEffect == HOLD_EFFECT_CHOICE_SPECS || attackerHoldEffect == HOLD_EFFECT_HEAVY_SPECS)
         spAttack = (150 * spAttack) / 100;
     if (attackerHoldEffect == HOLD_EFFECT_MUSCLE_BAND)
         attack = (110 * attack) / 100;

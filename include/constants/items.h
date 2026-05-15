@@ -252,8 +252,8 @@
 #define ITEM_IRON_BALL 241
 #define ITEM_LIFE_ORB 242
 #define ITEM_LIGHT_CLAY 243
-#define ITEM_0F4 244
-#define ITEM_0F5 245
+#define ITEM_HEAVY_BAND 244
+#define ITEM_HEAVY_SPECS 245
 #define ITEM_0F6 246
 #define ITEM_0F7 247
 #define ITEM_0F8 248

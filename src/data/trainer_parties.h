@@ -4877,6 +4877,28 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SwimmerMaleJerome[] = {
     },
 };
 
+// route 10 (power plant)
+static const struct TrainerMonNoItemCustomMoves sParty_PokemaniacMark[] = {
+    {
+        .iv = 96,
+        .lvl = 45,
+        .species = SPECIES_RHYHORN,
+        .moves = {MOVE_BULLDOZE, MOVE_STONE_EDGE, MOVE_CHIP_AWAY, MOVE_SCARY_FACE},
+    },
+    {
+        .iv = 96,
+        .lvl = 45,
+        .species = SPECIES_DROWZEE,
+        .moves = {MOVE_PSYCHIC, MOVE_DARK_PULSE, MOVE_HYPNOSIS, MOVE_NONE},
+    },
+    {
+        .iv = 96,
+        .lvl = 45,
+        .species = SPECIES_PORYGON,
+        .moves = {MOVE_RECOVER, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK},
+    },
+};
+
 // cinnabar gym
 static const struct TrainerMonNoItemDefaultMoves sParty_CamperQuinn[] = {
     {
@@ -5101,27 +5123,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerHannah[] = {
         .iv = 0,
         .lvl = 24,
         .species = SPECIES_MEOWTH,
-    },
-};
-
-static const struct TrainerMonNoItemCustomMoves sParty_PokemaniacMark[] = {
-    {
-        .iv = 96,
-        .lvl = 45,
-        .species = SPECIES_RHYHORN,
-        .moves = {MOVE_BULLDOZE, MOVE_STONE_EDGE, MOVE_CHIP_AWAY, MOVE_SCARY_FACE},
-    },
-    {
-        .iv = 96,
-        .lvl = 45,
-        .species = SPECIES_DROWZEE,
-        .moves = {MOVE_PSYCHIC, MOVE_DARK_PULSE, MOVE_HYPNOSIS, MOVE_NONE},
-    },
-    {
-        .iv = 96,
-        .lvl = 45,
-        .species = SPECIES_PORYGON,
-        .moves = {MOVE_RECOVER, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK},
     },
 };
 
