@@ -55,13 +55,13 @@ EventScript_SetSaffronGymTrainers::
 	return
 
 EventScript_SetCinnabarGymTrainers::
-	settrainerflag TRAINER_SUPER_NERD_ERIK
+	settrainerflag TRAINER_PICNICKER_CECILY
 	settrainerflag TRAINER_SUPER_NERD_AVERY
 	settrainerflag TRAINER_SUPER_NERD_DEREK
-	settrainerflag TRAINER_SUPER_NERD_ZAC
-	settrainerflag TRAINER_BURGLAR_QUINN
-	settrainerflag TRAINER_BURGLAR_RAMON
-	settrainerflag TRAINER_BURGLAR_DUSTY
+	settrainerflag TRAINER_GENTLEMAN_ZAC
+	settrainerflag TRAINER_CAMPER_QUINN
+	settrainerflag TRAINER_BEAUTY_CHARLOTTE
+	settrainerflag TRAINER_POKEMANIAC_DUSTY
 	return
 
 EventScript_SetViridianGymTrainers::

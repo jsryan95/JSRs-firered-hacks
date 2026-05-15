@@ -37,30 +37,30 @@ CinnabarIsland_Gym_Text_BlainePostBattle::
 CinnabarIsland_Gym_Text_MakeSpaceForThis::
     .string "Make space for this, child!$"
 
-CinnabarIsland_Gym_Text_ErikIntro::
-    .string "Do you know how hot POKéMON fire\n"
-    .string "breath can get?$"
+CinnabarIsland_Gym_Text_CecilyIntro::
+    .string "Check out my cute FIRE-type\n"
+    .string "POKéMON!$"
 
-CinnabarIsland_Gym_Text_ErikDefeat::
+CinnabarIsland_Gym_Text_CecilyDefeat::
     .string "Yow!\n"
     .string "Hot, hot, hot!$"
 
-CinnabarIsland_Gym_Text_ErikPostBattle::
-    .string "Fire, or to be more precise,\n"
-    .string "combustion…\p"
-    .string "…Oxygen in the air…\n"
-    .string "Blah, blah, blah, blah…$"
+CinnabarIsland_Gym_Text_CecilyPostBattle::
+    .string "I lost, but you must admit...\p"
+    .string "HOUNDOOM is adorable, right?$"
 
 CinnabarIsland_Gym_Text_QuinnIntro::
-    .string "I was a thief, but I went straight\n"
-    .string "as a TRAINER.$"
+    .string "A FIRE-type POKéMON is a very handy\n"
+    .string "partner to have in the wilderness.$"
 
 CinnabarIsland_Gym_Text_QuinnDefeat::
-    .string "I surrender!$"
+    .string "Ouch!$"
 
 CinnabarIsland_Gym_Text_QuinnPostBattle::
-    .string "I get this uncontrollable urge to\n"
-    .string "steal other people's POKéMON.$"
+    .string "A FIRE-type POKéMON is a very handy\n"
+    .string "partner to have in the wilderness.\p"
+    .string "But be careful not to start a\n"
+    .string "wildfire!$"
 
 CinnabarIsland_Gym_Text_AveryIntro::
     .string "I've studied POKéMON thoroughly.\n"
@@ -74,15 +74,15 @@ CinnabarIsland_Gym_Text_AveryPostBattle::
     .string "My theories are too complicated\n"
     .string "for you to understand.$"
 
-CinnabarIsland_Gym_Text_RamonIntro::
+CinnabarIsland_Gym_Text_CharlotteIntro::
     .string "I like using FIRE-type POKéMON.\n"
     .string "I just do.$"
 
-CinnabarIsland_Gym_Text_RamonDefeat::
+CinnabarIsland_Gym_Text_CharlotteDefeat::
     .string "Too hot to handle!$"
 
-CinnabarIsland_Gym_Text_RamonPostBattle::
-    .string "I wish there were a thief POKéMON.\n"
+CinnabarIsland_Gym_Text_CharlottePostBattle::
+    .string "I wish there were a magician POKéMON.\n"
     .string "I'd use that!$"
 
 CinnabarIsland_Gym_Text_DerekIntro::
@@ -113,16 +113,38 @@ CinnabarIsland_Gym_Text_DustyPostBattle::
     .string "Those are popular FIRE POKéMON.$"
 
 CinnabarIsland_Gym_Text_ZacIntro::
-    .string "Fire is weak against H2O.$"
+    .string "Welcome to the CINNABAR GYM,\n"
+    .string "challenger! Entertain me, won't you?$"
 
 CinnabarIsland_Gym_Text_ZacDefeat::
     .string "Oh!\n"
     .string "Snuffed out!$"
 
 CinnabarIsland_Gym_Text_ZacPostBattle::
-    .string "Water beats fire, of course.\p"
-    .string "But fire melts ice, so the FIRE\n"
-    .string "type beats ICE-type POKéMON.$"
+    .string "If you are unwilling to wait for\n"
+    .string "BLAINE's return, seek him on\l"
+    .string "ONE ISLAND.\p"
+    .string "Best of luck to you!$"
+
+CinnabarIsland_Gym_Text_ZacGiveChoiceSpecs::
+    .string "Unfortunately our LEADER, BLAINE,\n"
+    .string "isn't here...\p"
+    .string "He showed up here one morning with a\n"
+    .string "packed suitcase, said he was off to\l"
+    .string "ONE ISLAND, and off he went...\p"
+    .string "I can see your disappointment.\p"
+    .string "I can't give you a VOLCANOBADGE, but\n"
+    .string "I can give you this as a consolation\l"
+    .string "prize.$"
+
+CinnabarIsland_Gym_Text_ZacExplainChoiceSpecs::
+    .string "BLAINE loves all sorts of items\n"
+    .string "that have strange effects when held\l"
+    .string "by a POKéMON.\p"
+    .string "Those CHOICE SPECS are an example.\n"
+    .string "They increase SP. ATK., but force\l"
+    .string "the bearer to repeat a single move.\p"
+    .string "Use them wisely!$"
 
 CinnabarIsland_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"

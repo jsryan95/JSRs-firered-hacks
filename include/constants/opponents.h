@@ -180,10 +180,10 @@
 #define TRAINER_SUPER_NERD_1                     174
 #define TRAINER_SUPER_NERD_2                     175
 #define TRAINER_SUPER_NERD_3                     176
-#define TRAINER_SUPER_NERD_ERIK                  177
+#define TRAINER_PICNICKER_CECILY                  177
 #define TRAINER_SUPER_NERD_AVERY                 178
 #define TRAINER_SUPER_NERD_DEREK                 179
-#define TRAINER_SUPER_NERD_ZAC                   180
+#define TRAINER_GENTLEMAN_ZAC                   180
 #define TRAINER_HIKER_MARCOS                     181
 #define TRAINER_HIKER_FRANKLIN                   182
 #define TRAINER_HIKER_NOB                        183
@@ -216,9 +216,9 @@
 #define TRAINER_BURGLAR_1                        210
 #define TRAINER_BURGLAR_2                        211
 #define TRAINER_BURGLAR_3                        212
-#define TRAINER_BURGLAR_QUINN                    213
-#define TRAINER_BURGLAR_RAMON                    214
-#define TRAINER_BURGLAR_DUSTY                    215
+#define TRAINER_CAMPER_QUINN                    213
+#define TRAINER_BEAUTY_CHARLOTTE                    214
+#define TRAINER_POKEMANIAC_DUSTY                    215
 #define TRAINER_BURGLAR_ARNIE                    216
 #define TRAINER_BURGLAR_4                        217
 #define TRAINER_BURGLAR_SIMON                    218

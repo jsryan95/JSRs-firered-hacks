@@ -441,7 +441,7 @@
 #define FLAG_HIDE_POKEMON_MANSION_B1F_FULL_RESTORE              0x1A5
 #define FLAG_HIDE_ROUTE4_SHARP_BEAK                             0x1A6
 #define FLAG_HIDE_POKEMON_MANSION_B1F_TM22                      0x1A7
-#define FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY                0x1A8
+#define FLAG_HIDE_POKEMON_MANSION_B1F_UP_GRADE                0x1A8
 #define FLAG_HIDE_VICTORY_ROAD_1F_RARE_CANDY                    0x1A9
 #define FLAG_HIDE_VICTORY_ROAD_1F_TM02                          0x1AA
 #define FLAG_HIDE_VICTORY_ROAD_2F_GUARD_SPEC                    0x1AB
@@ -604,13 +604,13 @@
 #define FLAG_GOT_COIN_CASE                               0x243
 #define FLAG_GOT_GOOD_ROD                                0x244
 #define FLAG_GOT_TM29_FROM_MR_PSYCHIC                    0x245
-#define FLAG_GOT_PORYGON_FROM_SILPH                       0x246
+#define FLAG_GOT_PORYGON_FROM_SILPH                      0x246
 #define FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL       0x247
 #define FLAG_DID_MIMIEN_TRADE                            0x248
 #define FLAG_BOUGHT_MAGIKARP                             0x249
 #define FLAG_DID_ZYNX_TRADE                              0x24A
 #define FLAG_DID_MS_NIDO_TRADE                           0x24B
-#define FLAG_0x24C                                       0x24C
+#define FLAG_GOT_CHOICE_SPECS_FROM_ZAC                   0x24C
 #define FLAG_DID_CH_DING_TRADE                           0x24D
 #define FLAG_GOT_TM38_FROM_BLAINE                        0x24E
 #define FLAG_OAK_SKIP_22_RIVAL_CHECK                     0x24F
