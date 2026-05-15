@@ -3461,9 +3461,9 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
      && FlagGet(FLAG_BADGE03_GET)
      && GetBattlerSide(battler1) == B_SIDE_PLAYER)
         speedBattler1 = (speedBattler1 * 110) / 100;
-    if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_IRON_BALL || holdEffect == HOLD_EFFECT_HEAVY_BAND || holdEffect == ITEM_HEAVY_SPECS)
+    if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_IRON_BALL || holdEffect == HOLD_EFFECT_HEAVY_BAND || holdEffect == HOLD_EFFECT_HEAVY_SPECS)
         speedBattler1 /= 2;
-    if (holdEffect == HOLD_EFFECT_CHOICE_SCARF)
+    if (holdEffect == HOLD_EFFECT_CHOICE_SCARF || holdEffect == HOLD_EFFECT_LIGHT_SCARF)
         speedBattler1 = (speedBattler1 * 150) / 100;
     if ((gBattleMons[battler1].status1 & STATUS1_PARALYSIS) && !hasActiveAbility(battler1, ABILITY_QUICK_FEET))
         speedBattler1 /= 4;
@@ -3495,9 +3495,9 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
      && FlagGet(FLAG_BADGE03_GET)
      && GetBattlerSide(battler2) == B_SIDE_PLAYER)
         speedBattler2 = (speedBattler2 * 110) / 100;
-    if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_IRON_BALL || holdEffect == HOLD_EFFECT_HEAVY_BAND || holdEffect == ITEM_HEAVY_SPECS)
+    if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_IRON_BALL || holdEffect == HOLD_EFFECT_HEAVY_BAND || holdEffect == HOLD_EFFECT_HEAVY_SPECS)
         speedBattler2 /= 2;
-    if (holdEffect == HOLD_EFFECT_CHOICE_SCARF)
+    if (holdEffect == HOLD_EFFECT_CHOICE_SCARF || holdEffect == HOLD_EFFECT_LIGHT_SCARF)
         speedBattler2 = (speedBattler2 * 150) / 100;
     if ((gBattleMons[battler2].status1 & STATUS1_PARALYSIS) && !hasActiveAbility(battler2, ABILITY_QUICK_FEET))
         speedBattler2 /= 4;
