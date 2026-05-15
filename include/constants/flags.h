@@ -462,7 +462,7 @@
 #define FLAG_HIDE_TWO_ISLAND_REVIVE                             0x1BA
 #define FLAG_HIDE_THREE_ISLAND_ZINC                             0x1BB
 #define FLAG_HIDE_ROUTE25_SILK_SCARF                            0x1BC
-#define FLAG_0x1BD                                              0x1BD
+#define FLAG_HIDE_POKEMON_MANSION_B1F_BILL                      0x1BD
 #define FLAG_HIDE_VIRIDIAN_FOREST_ORAN_BERRY_2                      0x1BE
 #define FLAG_HIDE_MT_MOON_B2F_REVIVE                            0x1BF
 #define FLAG_HIDE_MT_MOON_B2F_PECHA_BERRY                          0x1C0

@@ -30,7 +30,7 @@ CinnabarIsland_Text_HeyIfItIsntPlayer::
     .string "Hey, if it isn't {PLAYER}!$"
 
 CinnabarIsland_Text_ComeWithMeToOneIsland::
-    .string "Look, it's me, BILL.\n"
+    .string "It's me, BILL.\n"
     .string "Long time no see!\p"
     .string "I hope you're still using my\n"
     .string "PC system.\p"
@@ -40,12 +40,20 @@ CinnabarIsland_Text_ComeWithMeToOneIsland::
     .string "south called ONE ISLAND.\p"
     .string "A friend invited me, so I'm on my\n"
     .string "way out there.\p"
-    .string "How about it?\n"
-    .string "Do you feel like coming with me?$"
+    .string "Why don't you come too?\n"
+    .string "I'll wait for you outside.$"
+
+CinnabarIsland_Text_ReadyToGo::
+    .string "Alright, {PLAYER}.\n"
+    .string "Are you ready to go to ONE ISLAND?$"
 
 CinnabarIsland_Text_AllRightLetsGo::
-    .string "All right, then.\n"
-    .string "Let's go!$"
+    .string "Let's go, then!$"
+
+CinnabarIsland_Text_LetMeKnowWhenReady::
+    .string "OK. The boat hasn't arrived yet\n"
+    .string "anyway. Let me know when you've\l"
+    .string "finished your business here.$"
 
 CinnabarIsland_Text_IllBeWaitingInPokeCenter::
     .string "What, are you too busy?\p"

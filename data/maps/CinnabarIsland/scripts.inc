@@ -46,8 +46,6 @@ CinnabarIsland_EventScript_UnlockGym::
 	return
 
 CinnabarIsland_OnFrame::
-	map_script_2 VAR_MAP_SCENE_CINNABAR_ISLAND_2, 1, CinnabarIsland_EventScript_ExitPokeCenterForOneIsland
-	map_script_2 VAR_MAP_SCENE_CINNABAR_ISLAND, 1, CinnabarIsland_EventScript_BillScene
 	map_script_2 VAR_MAP_SCENE_CINNABAR_ISLAND, 3, CinnabarIsland_EventScript_ReturnFromSeviiIslands
 	.2byte 0
 
@@ -85,45 +83,14 @@ CinnabarIsland_Movement_BillExit::
 	walk_down
 	step_end
 
-CinnabarIsland_EventScript_BillScene::
+CinnabarIsland_EventScript_Bill::
 	lockall
 	textcolor NPC_TEXT_COLOR_MALE
-	call_if_unset FLAG_TEMP_2, CinnabarIsland_EventScript_BillFacePlayer1
-	call_if_set FLAG_TEMP_2, CinnabarIsland_EventScript_BillFacePlayer2
-	playse SE_PIN
-	applymovement LOCALID_CINNABAR_BILL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_CINNABAR_BILL, Common_Movement_Delay48
-	waitmovement 0
-	call_if_unset FLAG_TEMP_2, CinnabarIsland_EventScript_BillApproachPlayer1
-	call_if_set FLAG_TEMP_2, CinnabarIsland_EventScript_BillApproachPlayer2
-	msgbox CinnabarIsland_Text_HeyIfItIsntPlayer
-	msgbox CinnabarIsland_Text_ComeWithMeToOneIsland, MSGBOX_YESNO
+	faceplayer
+	msgbox CinnabarIsland_Text_ReadyToGo, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, CinnabarIsland_EventScript_AgreeSailToOneIsland
 	goto_if_eq VAR_RESULT, NO, CinnabarIsland_EventScript_DeclineSailToOneIsland
 	end
-
-CinnabarIsland_EventScript_BillFacePlayer1::
-	applymovement LOCALID_CINNABAR_BILL, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	return
-
-CinnabarIsland_EventScript_BillFacePlayer2::
-	applymovement LOCALID_CINNABAR_BILL, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	return
-
-CinnabarIsland_EventScript_BillApproachPlayer1::
-	applymovement LOCALID_CINNABAR_BILL, CinnabarIsland_Movement_BillApproachPlayer1
-	waitmovement 0
-	return
-
-CinnabarIsland_EventScript_BillApproachPlayer2::
-	applymovement LOCALID_CINNABAR_BILL, CinnabarIsland_Movement_BillApproachPlayer2
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	return
 
 CinnabarIsland_EventScript_AgreeSailToOneIsland::
 	msgbox CinnabarIsland_Text_AllRightLetsGo
@@ -133,30 +100,9 @@ CinnabarIsland_EventScript_AgreeSailToOneIsland::
 	end
 
 CinnabarIsland_EventScript_DeclineSailToOneIsland::
-	msgbox CinnabarIsland_Text_IllBeWaitingInPokeCenter
-	closemessage
-	call_if_unset FLAG_TEMP_2, CinnabarIsland_EventScript_BillExitToPokeCenter
-	call_if_set FLAG_TEMP_2, CinnabarIsland_EventScript_BillReturnToPokeCenter
-	removeobject LOCALID_CINNABAR_BILL
-	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 2
-	clearflag FLAG_HIDE_CINNABAR_POKECENTER_BILL
+	msgbox CinnabarIsland_Text_LetMeKnowWhenReady
 	releaseall
 	end
-
-CinnabarIsland_EventScript_BillExitToPokeCenter::
-	applymovement LOCALID_CINNABAR_BILL, CinnabarIsland_Movement_BillExitToPokeCenter
-	waitmovement 0
-	return
-
-CinnabarIsland_Movement_BillExitToPokeCenter::
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
 
 CinnabarIsland_EventScript_BillReturnToPokeCenter::
 	applymovement LOCALID_PLAYER, CinnabarIsland_Movement_PlayerWatchBillExit
@@ -189,15 +135,11 @@ CinnabarIsland_Movement_BillReEnterPokeCenter::
 
 @ Can be triggered outside, or after talking to Bill in the poke center
 CinnabarIsland_EventScript_SailToOneIsland::
-	call_if_set FLAG_TEMP_2, CinnabarIsland_EventScript_ApproachShore
+	setobjectxyperm LOCALID_CINNABAR_SEAGALLOP, 30, 8
 	addobject LOCALID_CINNABAR_SEAGALLOP
-	call_if_unset FLAG_TEMP_2, CinnabarIsland_EventScript_BoatArrive
-	call_if_set FLAG_TEMP_2, CinnabarIsland_EventScript_BoatArriveExitedPokeCenter
+	call CinnabarIsland_EventScript_BoatArrive
 	msgbox CinnabarIsland_Text_MyPalsBoatArrived
 	closemessage
-	call_if_unset FLAG_TEMP_2, CinnabarIsland_EventScript_BoardBoat
-	call_if_set FLAG_TEMP_2, CinnabarIsland_EventScript_BoardBoatExitedPokeCenter
-	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 2
 	removeobject LOCALID_CINNABAR_BILL
 	delay 40
 	setflag FLAG_HIDE_CINNABAR_SEAGALLOP
