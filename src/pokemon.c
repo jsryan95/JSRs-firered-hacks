@@ -5893,7 +5893,7 @@ u16 SpeciesToPokedexNum(u16 species)
 {
     species = SpeciesToNationalPokedexNum(species);
 
-    if (!IsNationalPokedexEnabled() && species > KANTO_SPECIES_END)
+    if (!IsNationalPokedexEnabled() && species > NATIONAL_DEX_MEW)
         return 0xFFFF;
     return species;
 }
