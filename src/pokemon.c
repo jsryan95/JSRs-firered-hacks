@@ -2492,6 +2492,11 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (130 * gBattleMovePower) / 100;
     if (attackerHoldEffect == HOLD_EFFECT_LIGHT_SCARF)
         gBattleMovePower = (2 * gBattleMovePower) / 3;
+    if (defenderHoldEffect == HOLD_EFFECT_EVIOLITE && gEvolutionTable[defender->species][0].targetSpecies != SPECIES_NONE)
+    {
+        defense = (defense * 150) / 100;
+        spDefense = (spDefense * 150) / 100;
+    }
 
     if (hasActiveAbility2(defender, ABILITY_THICK_FAT) && (type == TYPE_FIRE || type == TYPE_ICE))
         gBattleMovePower /= 2;
