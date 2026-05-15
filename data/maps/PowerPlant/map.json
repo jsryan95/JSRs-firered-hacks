@@ -82,8 +82,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PowerPlant_EventScript_ItemElixir",
-      "flag": "FLAG_HIDE_POWER_PLANT_ELIXIR"
+      "script": "PowerPlant_EventScript_ItemMetalCoat",
+      "flag": "FLAG_HIDE_POWER_PLANT_METAL_COAT"
     },
     {
       "type": "object",

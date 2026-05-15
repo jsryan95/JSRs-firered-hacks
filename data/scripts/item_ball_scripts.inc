@@ -302,8 +302,8 @@ PowerPlant_EventScript_ItemThunderStone::
 	finditem ITEM_THUNDER_STONE
 	end
 
-PowerPlant_EventScript_ItemElixir::
-	finditem ITEM_ELIXIR
+PowerPlant_EventScript_ItemMetalCoat::
+	finditem ITEM_METAL_COAT
 	end
 
 PokemonMansion_1F_EventScript_ItemCarbos::
