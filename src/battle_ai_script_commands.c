@@ -866,7 +866,7 @@ static void Cmd_if_in_hwords(void)
 {
     const u16 *ptr = (const u16 *)T1_READ_PTR(sAIScriptPtr + 1);
 
-    while (*ptr != 0xFFFF)
+    while (*ptr < MOVES_COUNT)
     {
         if (AI_THINKING_STRUCT->funcResult == *ptr)
         {
@@ -882,7 +882,7 @@ static void Cmd_if_not_in_hwords(void)
 {
     const u16 *ptr = (const u16 *)T1_READ_PTR(sAIScriptPtr + 1);
 
-    while (*ptr != 0xFFFF)
+    while (*ptr < MOVES_COUNT)
     {
         if (AI_THINKING_STRUCT->funcResult == *ptr)
         {

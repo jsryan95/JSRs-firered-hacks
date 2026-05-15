@@ -3059,7 +3059,6 @@ static const struct TrainerMonNoItemCustomMoves sParty_BikerWilliam[] = {
 };
 
 // route 18
-// TODO The game freezes when this guy sends out his second Pokémon. Why?
 static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperJacob[] = {
     {
         .iv = 64,
