@@ -1126,6 +1126,8 @@ static void Cmd_attackcanceler(void)
         return;
     if (AbilityBattleEffects(ABILITYEFFECT_MOVES_BLOCK, gBattlerTarget, 0, 0, 0))
         return;
+    if (ItemBattleEffects(ITEMEFFECT_MOVES_BLOCK, gBattlerTarget, 0))
+        return;
     if (!gBattleMons[gBattlerAttacker].pp[gCurrMovePos] && gCurrentMove != MOVE_STRUGGLE && !(gHitMarker & (HITMARKER_ALLOW_NO_PP | HITMARKER_NO_ATTACKSTRING))
      && !(gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS))
     {
@@ -2896,7 +2898,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
                 else
                 {
-                    if (ItemId_GetHoldEffectParam(getItem(gBattlerAttacker)) == HOLD_EFFECT_GRIP_CLAW)
+                    if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_GRIP_CLAW)
                         gBattleMons[gEffectBattler].status2 |= STATUS2_WRAPPED_TURN(6);
                     else
                         gBattleMons[gEffectBattler].status2 |= STATUS2_WRAPPED_TURN((Random() & 3) + 3); // 3-6 turns
@@ -7914,6 +7916,7 @@ static void Cmd_weatherdamage(void)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_OVERCOAT)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_SAND_FORCE)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_SAND_RUSH)
+                && !(ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_SAFETY_GOGGLES)
                 && !(gBattleMons[gBattlerAttacker].status3 & STATUS3_BUBBLE_GUARD)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERGROUND)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERWATER))
@@ -7934,6 +7937,7 @@ static void Cmd_weatherdamage(void)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_ICE_BODY)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_OVERCOAT)
                 && !hasActiveAbility(gBattlerAttacker, ABILITY_ICE_SKATER)
+                && !(ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_SAFETY_GOGGLES)
                 && !(gBattleMons[gBattlerAttacker].status3 & STATUS3_BUBBLE_GUARD)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERGROUND)
                 && !(gstatuses4[gBattlerAttacker] & STATUS4_UNDERWATER))

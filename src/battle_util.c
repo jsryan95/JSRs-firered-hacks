@@ -44,6 +44,13 @@ static const u16 sPunchingMoves[] =
     MOVE_SKY_UPPERCUT, MOVE_THUNDER_PUNCH, MOVE_METEOR_MASH, PUNCHING_MOVES_END
 };
 
+#define POWDER_MOVES_END 0xFFFF
+
+static const u16 sPowderMoves[] =
+{
+    MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_STUN_SPORE, MOVE_SPORE, MOVE_COTTON_SPORE, MOVE_RAGE_POWDER, POWDER_MOVES_END
+};
+
 u8 GetBattlerForBattleScript(u8 caseId)
 {
     u8 ret = 0;
@@ -3461,8 +3468,24 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             }
         }
         break;
-    case ITEMEFFECT_DUMMY:
-        break;
+    case ITEMEFFECT_MOVES_BLOCK:
+            if (ItemId_GetHoldEffect(getItem(battlerId)) == HOLD_EFFECT_SAFETY_GOGGLES)
+            {
+                for (i = 0; sPowderMoves[i] != POWDER_MOVES_END; i++)
+                {
+                    if (sSoundMovesTable[i] == gCurrentMove)
+                        break;
+                }
+                if (sSoundMovesTable[i] != POWDER_MOVES_END)
+                {
+                    if (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)
+                        gHitMarker |= HITMARKER_NO_PPDEDUCT;
+                    gLastUsedItem = getItem(battlerId);
+                    gBattlescriptCurrInstr = BattleScript_SafetyGogglesProtected;
+                    effect = 1;
+                }
+            }
+            break;
     case ITEMEFFECT_MOVE_END:
         for (battlerId = 0; battlerId < gBattlersCount; battlerId++)
         {
@@ -3930,7 +3953,7 @@ u16 getItem(u8 battler)
 
 u8 isAirborne(u8 battler)
 {
-    if (ItemId_GetHoldEffectParam(getItem(battler)) == HOLD_EFFECT_IRON_BALL
+    if (ItemId_GetHoldEffect(getItem(battler)) == HOLD_EFFECT_IRON_BALL
             || (gstatuses4[battler] & STATUS4_ROOTED))
         return FALSE;
     if (IS_BATTLER_OF_TYPE(battler, TYPE_FLYING)
@@ -3938,4 +3961,15 @@ u8 isAirborne(u8 battler)
             || (gBattleMons[battler].status3 & STATUS3_MAGNET_RISE))
         return TRUE;
     return FALSE;
+}
+
+u8 isPowderMove(u16 move)
+{
+    u8 i;
+    for (i = 0; sPowderMoves[i] != POWDER_MOVES_END; i++)
+    {
+        if (move == sPowderMoves[i])
+            return 1;
+    }
+    return 0;
 }
