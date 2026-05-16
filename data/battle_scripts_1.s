@@ -5339,6 +5339,10 @@ BattleScript_SelectingNotAllowedMoveChoiceItem::
 	printselectionstring STRINGID_ITEMALLOWSONLYYMOVE
 	endselectionscript
 
+BattleScript_SelectingNotAllowedMoveAssaultVest::
+	printselectionstring STRINGID_CANTSELECTMOVEBECAUSEOFITEM
+	endselectionscript
+
 BattleScript_FocusBandActivates::
 	playanimation BS_TARGET, B_ANIM_FOCUS_BAND
 	printstring STRINGID_PKMNHUNGONWITHX

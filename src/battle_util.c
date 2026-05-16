@@ -346,6 +346,14 @@ u8 TrySetCantSelectMoveBattleScript(void)
         limitations++;
     }
 
+    if (holdEffect == HOLD_EFFECT_ASSAULT_VEST && gBattleMoves[move].power == 0)
+    {
+        gCurrentMove = move;
+        gLastUsedItem = gBattleMons[gActiveBattler].item;
+        gSelectionBattleScripts[gActiveBattler] = BattleScript_SelectingNotAllowedMoveAssaultVest;
+        limitations++;
+    }
+
     if (GetImprisonedMovesCount(gActiveBattler, move))
     {
         gCurrentMove = move;
@@ -438,6 +446,9 @@ u8 CheckMoveLimitations(u8 battlerId, u8 unusableMoves, u8 check)
                 && *choicedMove != MOVE_NONE
                 && *choicedMove != MOVE_UNAVAILABLE
                 && *choicedMove != gBattleMons[battlerId].moves[i])
+            unusableMoves |= gBitTable[i];
+        // assault vest
+        if (holdEffect == HOLD_EFFECT_ASSAULT_VEST && gBattleMoves[gBattleMons[battlerId].moves[i]].power == 0)
             unusableMoves |= gBitTable[i];
         // Heal Block
         if ((gSideStatuses[GET_BATTLER_SIDE(gActiveBattler)] & SIDE_STATUS_HEAL_BLOCK)

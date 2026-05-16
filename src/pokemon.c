@@ -2504,6 +2504,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         defense = (defense * 130) / 100;
         spDefense = (spDefense * 130) / 100;
     }
+    if (defenderHoldEffect == HOLD_EFFECT_ASSAULT_VEST)
+        spDefense = (spDefense * 150) / 100;
 
     // apply boosts from abilities
     if (hasActiveAbility2(defender, ABILITY_THICK_FAT) && (type == TYPE_FIRE || type == TYPE_ICE))
