@@ -273,9 +273,9 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_ASSAULT_VEST]   = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_NIGHTCAP]       = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Contest hold items
-    [ITEM_RED_SCARF]      = {gItemIcon_Scarf, gItemIconPalette_RedScarf},
-    [ITEM_BLUE_SCARF]     = {gItemIcon_Scarf, gItemIconPalette_BlueScarf},
-    [ITEM_PINK_SCARF]     = {gItemIcon_Scarf, gItemIconPalette_PinkScarf},
+    [ITEM_RAZOR_CLAW]      = {gItemIcon_Scarf, gItemIconPalette_RedScarf},
+    [ITEM_PRISM_SCALE]     = {gItemIcon_Scarf, gItemIconPalette_BlueScarf},
+    [ITEM_RAZOR_FANG]     = {gItemIcon_Scarf, gItemIconPalette_PinkScarf},
     [ITEM_GREEN_SCARF]    = {gItemIcon_Scarf, gItemIconPalette_GreenScarf},
     [ITEM_YELLOW_SCARF]   = {gItemIcon_Scarf, gItemIconPalette_YellowScarf},
     // Key items

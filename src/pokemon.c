@@ -2499,6 +2499,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     }
     if (defenderHoldEffect == HOLD_EFFECT_DRAGON_SCALE)
         defense = (defense * (100 + defenderHoldEffectParam)) / 100;
+    if (defenderHoldEffect == HOLD_EFFECT_PRISM_SCALE)
+        spDefense = (spDefense * (100 + defenderHoldEffectParam)) / 100;
     if(WEATHER_HAS_EFFECT && gBattleWeather && defenderHoldEffect == HOLD_EFFECT_STORM_WING)
     {
         defense = (defense * 130) / 100;
