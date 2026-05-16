@@ -3128,6 +3128,10 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             }
             break;
         }
+        case HOLD_EFFECT_AIR_BALLOON:
+            gActiveBattler = battlerId;
+            BattleScriptExecute(BattleScript_PkmnHasAirBalloon);
+            break;
         break;
     case ITEMEFFECT_NORMAL:
         if (gBattleMons[battlerId].hp)
@@ -3618,6 +3622,19 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     return effect;
                 }
                 break;
+            case HOLD_EFFECT_AIR_BALLOON:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                    && TARGET_TURN_DAMAGED
+                    && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                    && gBattleMons[gBattlerTarget].hp)
+                {
+                    gBattleScripting.battler = battlerId;
+                    gPotentialItemEffectBattler = battlerId;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_AirBalloonPops;
+                    return ITEM_EFFECT_OTHER;
+                }
+                break;
             }
             if (effect != 0)
             {
@@ -3958,7 +3975,8 @@ u8 isAirborne(u8 battler)
         return FALSE;
     if (IS_BATTLER_OF_TYPE(battler, TYPE_FLYING)
             || hasActiveAbility(battler, ABILITY_LEVITATE)
-            || (gBattleMons[battler].status3 & STATUS3_MAGNET_RISE))
+            || (gBattleMons[battler].status3 & STATUS3_MAGNET_RISE)
+            || ItemId_GetHoldEffect(getItem(battler)) == HOLD_EFFECT_AIR_BALLOON)
         return TRUE;
     return FALSE;
 }

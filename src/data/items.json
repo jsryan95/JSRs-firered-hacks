@@ -4001,12 +4001,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "AIR BALLOON",
+      "itemId": "ITEM_AIR_BALLOON",
+      "price": 100,
+      "holdEffect": "HOLD_EFFECT_AIR_BALLOON",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "When held by a POKéMON, it\\nprotects the bearer from\\nGROUND-type moves.",
       "importance": 0,
       "registrability": 0,
       "pocket": "POCKET_ITEMS",
