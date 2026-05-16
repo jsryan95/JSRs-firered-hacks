@@ -4049,12 +4049,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "NIGHTCAP",
+      "itemId": "ITEM_NIGHTCAP",
+      "price": 100,
+      "holdEffect": "HOLD_EFFECT_NIGHTCAP",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "A comfy hat for sleeping.\\nThe bearer recovers HP each\\nturn while asleep.",
       "importance": 0,
       "registrability": 0,
       "pocket": "POCKET_ITEMS",

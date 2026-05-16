@@ -3231,6 +3231,22 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     RecordItemEffectBattle(battlerId, battlerHoldEffect);
                 }
                 break;
+            case HOLD_EFFECT_NIGHTCAP:
+                if (gBattleMons[battlerId].hp < gBattleMons[battlerId].maxHP
+                        && !moveTurn
+                        && (gBattleMons[battlerId].status1 & STATUS1_SLEEP))
+                {
+                    gBattleMoveDamage = gBattleMons[battlerId].maxHP / 8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    if (gBattleMons[battlerId].hp + gBattleMoveDamage > gBattleMons[battlerId].maxHP)
+                        gBattleMoveDamage = gBattleMons[battlerId].maxHP - gBattleMons[battlerId].hp;
+                    gBattleMoveDamage *= -1;
+                    BattleScriptExecute(BattleScript_ItemHealHP_End2);
+                    effect = ITEM_HP_CHANGE;
+                    RecordItemEffectBattle(battlerId, battlerHoldEffect);
+                }
+                break;
             case HOLD_EFFECT_BLACK_SLUDGE:
                 if (gBattleMons[battlerId].hp < gBattleMons[battlerId].maxHP && !moveTurn)
                 {
