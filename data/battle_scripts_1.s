@@ -5287,6 +5287,15 @@ BattleScript_AirBalloonPops::
 	removeitem BS_SCRIPTING
 	return
 
+BattleScript_RockyHelmetActivates::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_PKMNHURTSWITHITEM
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_ATTACKER
+	return
+
 BattleScript_PkmnHasMoonPlate::
 	printstring STRINGID_PKMNSITEMGLEAMS
 	waitmessage B_WAIT_TIME_LONG

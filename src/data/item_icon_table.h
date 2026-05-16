@@ -276,7 +276,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_RAZOR_CLAW]      = {gItemIcon_Scarf, gItemIconPalette_RedScarf},
     [ITEM_PRISM_SCALE]     = {gItemIcon_Scarf, gItemIconPalette_BlueScarf},
     [ITEM_RAZOR_FANG]     = {gItemIcon_Scarf, gItemIconPalette_PinkScarf},
-    [ITEM_GREEN_SCARF]    = {gItemIcon_Scarf, gItemIconPalette_GreenScarf},
+    [ITEM_ROCKY_HELMET]    = {gItemIcon_Scarf, gItemIconPalette_GreenScarf},
     [ITEM_YELLOW_SCARF]   = {gItemIcon_Scarf, gItemIconPalette_YellowScarf},
     // Key items
     [ITEM_MACH_BIKE]      = {gItemIcon_MachBike, gItemIconPalette_MachBike},

@@ -322,6 +322,7 @@ static const u8 sText_PkmnCutsAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'
 static const u8 sText_PkmnCutsSpecialAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncuts {B_DEF_NAME_WITH_PREFIX}'s SP. ATK!");
 static const u8 sText_PkmnPreventsStatLossWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nprevents stat loss!");
 static const u8 sText_PkmnHurtsWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nhurt {B_ATK_NAME_WITH_PREFIX}!");
+static const u8 sText_PkmnHurtsWithItem[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nhurt {B_ATK_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnAbilityBecameMummy[] = _("{B_ATK_NAME_WITH_PREFIX}'s ability\nbecame MUMMY!");
 static const u8 sText_PkmnTraced[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} TRACED\n{B_BUFF1}'s {B_BUFF2}!");
 static const u8 sText_PkmnsXPreventsBurns[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_EFF_ABILITY}\nprevents burns!");
@@ -1018,6 +1019,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNFLOATSWITHITEM - BATTLESTRINGS_TABLE_START]             = sText_PkmnFloatsWithItem,
     [STRINGID_PKMNSITEMGLEAMS - BATTLESTRINGS_TABLE_START]                = sText_PkmnsItemGleams,
     [STRINGID_CANTSELECTMOVEBECAUSEOFITEM - BATTLESTRINGS_TABLE_START]    = sText_CantSelectMoveBecauseOfItem,
+    [STRINGID_PKMNHURTSWITHITEM - BATTLESTRINGS_TABLE_START]              = sText_PkmnHurtsWithItem,
 };
 
 const u16 gMissStringIds[] =

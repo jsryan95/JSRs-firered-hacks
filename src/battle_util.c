@@ -3666,6 +3666,21 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     return ITEM_EFFECT_OTHER;
                 }
                 break;
+            case HOLD_EFFECT_ROCKY_HELMET:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                        && gBattleMons[gBattlerAttacker].hp != 0
+                        && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                        && TARGET_TURN_DAMAGED
+                        && (gBattleMoves[gCurrentMove].flags & FLAG_MAKES_CONTACT))
+                {
+                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_RockyHelmetActivates;
+                    return ITEM_HP_CHANGE;
+                }
+                break;
             }
             if (effect != 0)
             {

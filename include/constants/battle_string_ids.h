@@ -450,8 +450,9 @@
 #define STRINGID_PKMNFLOATSWITHITEM 449
 #define STRINGID_PKMNSITEMGLEAMS 450
 #define STRINGID_CANTSELECTMOVEBECAUSEOFITEM 451
+#define STRINGID_PKMNHURTSWITHITEM 452
 
-#define BATTLESTRINGS_COUNT     452
+#define BATTLESTRINGS_COUNT     453
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
