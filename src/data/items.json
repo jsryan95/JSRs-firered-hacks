@@ -3985,12 +3985,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "STORM WING",
+      "itemId": "ITEM_STORM_WING",
+      "price": 100,
+      "holdEffect": "HOLD_EFFECT_STORM_WING",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "When held by a POKéMON, it raises\\nDEFENSE and SP.DEF. during\\ninclement weather.",
       "importance": 0,
       "registrability": 0,
       "pocket": "POCKET_ITEMS",

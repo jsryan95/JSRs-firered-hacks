@@ -2499,7 +2499,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     }
     if (defenderHoldEffect == HOLD_EFFECT_DRAGON_SCALE)
         defense = (defense * (100 + defenderHoldEffectParam)) / 100;
+    if(WEATHER_HAS_EFFECT && gBattleWeather && defenderHoldEffect == HOLD_EFFECT_STORM_WING)
+    {
+        defense = (defense * 130) / 100;
+        spDefense = (spDefense * 130) / 100;
+    }
 
+    // apply boosts from abilities
     if (hasActiveAbility2(defender, ABILITY_THICK_FAT) && (type == TYPE_FIRE || type == TYPE_ICE))
         gBattleMovePower /= 2;
     if (hasActiveAbility2(defender, ABILITY_HEATPROOF) && (type = TYPE_FIRE))
