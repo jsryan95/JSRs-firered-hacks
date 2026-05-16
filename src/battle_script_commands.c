@@ -1645,6 +1645,14 @@ static void Cmd_typecalc(void)
         gLastHitByType[gBattlerTarget] = 0;
         gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
     }
+    else if (moveType == TYPE_DRAGON && ItemId_GetHoldEffect(getItem(gBattlerTarget)) == HOLD_EFFECT_MOON_PLATE)
+    {
+        gLastUsedItem = getItem(gBattlerTarget);
+        gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
+        gLastLandedMoves[gBattlerTarget] = 0;
+        gLastHitByType[gBattlerTarget] = 0;
+        gBattleCommunication[MISS_TYPE] = B_MSG_ITEM_PROTECTED;
+    }
     else
     {
         while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
@@ -1715,6 +1723,12 @@ static void CheckWonderGuardAndLevitate(void)
     else if (moveType == TYPE_GROUND && (gBattleMons[gBattlerTarget].status3 & STATUS3_MAGNET_RISE) && isAirborne(gBattlerTarget))
     {
         gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
+        return;
+    }
+    else if (moveType == TYPE_DRAGON && ItemId_GetHoldEffect(getItem(gBattlerTarget)) == HOLD_EFFECT_MOON_PLATE)
+    {
+        gLastUsedItem = getItem(gBattlerTarget);
+        gBattleCommunication[MISS_TYPE] = B_MSG_ITEM_PROTECTED;
         return;
     }
 
@@ -1824,6 +1838,10 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
             && (hasActiveAbility(defender, ABILITY_LEVITATE)
                     || gBattleMons[defender].status3 & STATUS3_MAGNET_RISE)
             && isAirborne(defender))
+    {
+        flags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
+    }
+    else if (moveType == TYPE_DRAGON && ItemId_GetHoldEffect(getItem(gBattlerTarget)) == HOLD_EFFECT_MOON_PLATE)
     {
         flags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
     }
@@ -4858,6 +4876,14 @@ static void Cmd_typecalc2(void)
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
         gLastLandedMoves[gBattlerTarget] = 0;
         gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
+    }
+    else if (moveType == TYPE_DRAGON && ItemId_GetHoldEffect(getItem(gBattlerTarget)) == HOLD_EFFECT_MOON_PLATE)
+    {
+    
+        gLastUsedItem = getItem(gBattlerTarget);
+        gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
+        gLastLandedMoves[gBattlerTarget] = 0;
+        gBattleCommunication[MISS_TYPE] = B_MSG_ITEM_PROTECTED;
     }
     else
     {

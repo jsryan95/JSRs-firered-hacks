@@ -559,6 +559,7 @@ static const u8 sText_PkmnsItemRestoredHPALittle[] = _("{B_SCR_ACTIVE_NAME_WITH_
 static const u8 sText_PkmnsItemHurtIt[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nhurt it!");
 static const u8 sText_PkmnsItemPopped[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s\n{B_LAST_ITEM} popped!");
 static const u8 sText_PkmnFloatsWithItem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nfloats with its {B_LAST_ITEM}!");
+static const u8 sText_PkmnsItemGleams[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM} gleams!");
 static const u8 sText_ItemAllowsOnlyYMove[] = _("{B_LAST_ITEM}'s effect allows only\n{B_CURRENT_MOVE} to be used!\p");
 static const u8 sText_PkmnHungOnWithX[] = _("{B_DEF_NAME_WITH_PREFIX} hung on\nusing its {B_LAST_ITEM}!");
 static const u8 sText_PkmnHungOnWithXAbility[] = _("{B_DEF_NAME_WITH_PREFIX} hung on\ndue to {B_LAST_ABILITY}!");
@@ -1014,6 +1015,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNSITEMBLOCKSMOVE - BATTLESTRINGS_TABLE_START]            = sText_PkmnsItemBlocksMove,
     [STRINGID_PKMNSITEMPOPPED - BATTLESTRINGS_TABLE_START]                = sText_PkmnsItemPopped,
     [STRINGID_PKMNFLOATSWITHITEM - BATTLESTRINGS_TABLE_START]             = sText_PkmnFloatsWithItem,
+    [STRINGID_PKMNSITEMGLEAMS - BATTLESTRINGS_TABLE_START]                = sText_PkmnsItemGleams,
 };
 
 const u16 gMissStringIds[] =
@@ -1022,7 +1024,8 @@ const u16 gMissStringIds[] =
     [B_MSG_PROTECTED]   = STRINGID_PKMNPROTECTEDITSELF,
     [B_MSG_AVOIDED_ATK] = STRINGID_PKMNAVOIDEDATTACK,
     [B_MSG_AVOIDED_DMG] = STRINGID_AVOIDEDDAMAGE,
-    [B_MSG_GROUND_MISS] = STRINGID_PKMNMAKESGROUNDMISS
+    [B_MSG_GROUND_MISS] = STRINGID_PKMNMAKESGROUNDMISS,
+    [B_MSG_ITEM_PROTECTED] = STRINGID_PKMNSITEMBLOCKSMOVE
 };
 
 const u16 gNoEscapeStringIds[] =

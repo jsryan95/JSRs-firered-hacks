@@ -269,7 +269,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_SAFETY_GOGGLES] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_STORM_WING]     = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_AIR_BALLOON]    = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_0FB]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_MOON_PLATE]     = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0FC]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0FD]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Contest hold items

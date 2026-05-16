@@ -4017,12 +4017,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
+      "english": "MOON PLATE",
+      "itemId": "ITEM_MOON_PLATE",
+      "price": 100,
+      "holdEffect": "HOLD_EFFECT_MOON_PLATE",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "A scale of a strange material\\nthat protects the bearer\\nfrom DRAGON-type moves.",
       "importance": 0,
       "registrability": 0,
       "pocket": "POCKET_ITEMS",

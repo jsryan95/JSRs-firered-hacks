@@ -448,8 +448,9 @@
 #define STRINGID_PKMNSITEMBLOCKSMOVE 447
 #define STRINGID_PKMNSITEMPOPPED 448
 #define STRINGID_PKMNFLOATSWITHITEM 449
+#define STRINGID_PKMNSITEMGLEAMS 450
 
-#define BATTLESTRINGS_COUNT     450
+#define BATTLESTRINGS_COUNT     451
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -481,6 +482,7 @@
 #define B_MSG_AVOIDED_ATK  2
 #define B_MSG_AVOIDED_DMG  3
 #define B_MSG_GROUND_MISS  4
+#define B_MSG_ITEM_PROTECTED 5
 
 // gAbsorbDrainStringIds
 #define B_MSG_ABSORB      0

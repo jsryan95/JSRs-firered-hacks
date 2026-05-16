@@ -5279,7 +5279,6 @@ BattleScript_WhiteHerbRet::
 BattleScript_PkmnHasAirBalloon::
 	printstring STRINGID_PKMNFLOATSWITHITEM
 	waitmessage B_WAIT_TIME_LONG
-	removeitem BS_SCRIPTING
 	end2
 
 BattleScript_AirBalloonPops::
@@ -5287,6 +5286,12 @@ BattleScript_AirBalloonPops::
 	waitmessage B_WAIT_TIME_LONG
 	removeitem BS_SCRIPTING
 	return
+
+BattleScript_PkmnHasMoonPlate::
+	printstring STRINGID_PKMNSITEMGLEAMS
+	waitmessage B_WAIT_TIME_LONG
+	removeitem BS_SCRIPTING
+	end2
 
 BattleScript_ItemHealHP_RemoveItem::
 	playanimation BS_ATTACKER, B_ANIM_HELD_ITEM_EFFECT
