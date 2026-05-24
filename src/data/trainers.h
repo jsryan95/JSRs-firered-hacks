@@ -5500,7 +5500,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_SwimmerFemaleAbigail),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_SwimmerFemaleAbigail),
     },
     [TRAINER_SWIMMER_MALE_FINN] = {
         .trainerClass = TRAINER_CLASS_SWIMMER_M,
@@ -5510,7 +5510,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_SwimmerMaleFinn),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_SwimmerMaleFinn),
     },
     [TRAINER_SWIMMER_MALE_GARRETT] = {
         .trainerClass = TRAINER_CLASS_SWIMMER_M,
@@ -6920,7 +6920,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_SwimmerMaleFinn2),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_SwimmerMaleFinn2),
     },
     [TRAINER_CRUSH_GIRL_SHARON_2] = {
         .trainerClass = TRAINER_CLASS_CRUSH_GIRL,
