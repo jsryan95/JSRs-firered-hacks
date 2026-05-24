@@ -5429,6 +5429,78 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FishermanTommy[] = {
     },
 };
 
+// mt ember exterior
+static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt43[] = {
+    {
+        .iv = 96,
+        .lvl = 44,
+        .species = SPECIES_CUBONE,
+    },
+    {
+        .iv = 96,
+        .lvl = 44,
+        .species = SPECIES_MAROWAK,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt44[] = {
+    {
+        .iv = 96,
+        .lvl = 44,
+        .species = SPECIES_HOUNDOUR,
+    },
+    {
+        .iv = 96,
+        .lvl = 44,
+        .species = SPECIES_HOUNDOOM,
+    },
+};
+
+static const struct TrainerMonItemDefaultMoves sParty_PkmnRangerBeth[] = {
+    {
+        .iv = 112,
+        .lvl = 46,
+        .species = SPECIES_WEEPINBELL,
+        .heldItem = ITEM_EVIOLITE,
+    },
+    {
+        .iv = 112,
+        .lvl = 46,
+        .species = SPECIES_GLOOM,
+        .heldItem = ITEM_EVIOLITE,
+    },
+    {
+        .iv = 112,
+        .lvl = 46,
+        .species = SPECIES_BLISSEY,
+        .heldItem = ITEM_WIKI_BERRY,
+    },
+};
+
+static const struct TrainerMonItemDefaultMoves sParty_PkmnRangerLogan[] = {
+    {
+        .iv = 112,
+        .lvl = 46,
+        .species = SPECIES_TANGELA,
+        .heldItem = ITEM_PETAYA_BERRY,
+    },
+    {
+        .iv = 112,
+        .lvl = 46,
+        .species = SPECIES_KANGASKHAN,
+        .heldItem = ITEM_LUM_BERRY,
+    },
+};
+
+static const struct TrainerMonItemDefaultMoves sParty_CrushGirlJocelyn[] = {
+    {
+        .iv = 96,
+        .lvl = 45,
+        .species = SPECIES_POLIWRATH,
+        .heldItem = ITEM_BLACK_BELT,
+    },
+};
+
 
 
 
@@ -7669,42 +7741,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TwinsEliAnne2[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt43[] = {
-    {
-        .iv = 0,
-        .lvl = 37,
-        .species = SPECIES_CUBONE,
-    },
-    {
-        .iv = 0,
-        .lvl = 37,
-        .species = SPECIES_MAROWAK,
-    },
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt44[] = {
-    {
-        .iv = 0,
-        .lvl = 35,
-        .species = SPECIES_RATTATA,
-    },
-    {
-        .iv = 0,
-        .lvl = 35,
-        .species = SPECIES_RATICATE,
-    },
-    {
-        .iv = 0,
-        .lvl = 35,
-        .species = SPECIES_SANDSHREW,
-    },
-    {
-        .iv = 0,
-        .lvl = 35,
-        .species = SPECIES_SANDSLASH,
-    },
-};
-
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt45[] = {
     {
         .iv = 0,
@@ -8260,21 +8296,6 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlCyndy[] = {
     },
 };
 
-static const struct TrainerMonItemDefaultMoves sParty_CrushGirlJocelyn[] = {
-    {
-        .iv = 50,
-        .lvl = 38,
-        .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
-    },
-    {
-        .iv = 50,
-        .lvl = 38,
-        .species = SPECIES_HITMONCHAN,
-        .heldItem = ITEM_BLACK_BELT,
-    },
-};
-
 static const struct TrainerMonNoItemDefaultMoves sParty_TamerEvan[] = {
     {
         .iv = 40,
@@ -8311,21 +8332,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacMark2[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_PkmnRangerLogan[] = {
-    {
-        .iv = 100,
-        .lvl = 37,
-        .species = SPECIES_EXEGGCUTE,
-        .moves = {MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_STUN_SPORE, MOVE_CONFUSION},
-    },
-    {
-        .iv = 100,
-        .lvl = 40,
-        .species = SPECIES_EXEGGUTOR,
-        .moves = {MOVE_EGG_BOMB, MOVE_STOMP, MOVE_CONFUSION, MOVE_HYPNOSIS},
-    },
-};
-
 static const struct TrainerMonNoItemCustomMoves sParty_PkmnRangerJackson[] = {
     {
         .iv = 100,
@@ -8344,24 +8350,6 @@ static const struct TrainerMonNoItemCustomMoves sParty_PkmnRangerJackson[] = {
         .lvl = 49,
         .species = SPECIES_EXEGGUTOR,
         .moves = {MOVE_CONFUSION, MOVE_EGG_BOMB, MOVE_SLEEP_POWDER, MOVE_STOMP},
-    },
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_PkmnRangerBeth[] = {
-    {
-        .iv = 100,
-        .lvl = 38,
-        .species = SPECIES_BELLSPROUT,
-    },
-    {
-        .iv = 100,
-        .lvl = 38,
-        .species = SPECIES_GLOOM,
-    },
-    {
-        .iv = 100,
-        .lvl = 38,
-        .species = SPECIES_GLOOM,
     },
 };
 

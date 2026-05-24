@@ -5970,7 +5970,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_PkmnRangerLogan),
+        .party = ITEM_DEFAULT_MOVES(sParty_PkmnRangerLogan),
     },
     [TRAINER_PKMN_RANGER_JACKSON] = {
         .trainerClass = TRAINER_CLASS_PKMN_RANGER,
@@ -5990,7 +5990,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_PkmnRangerBeth),
+        .party = ITEM_DEFAULT_MOVES(sParty_PkmnRangerBeth),
     },
     [TRAINER_PKMN_RANGER_KATELYN] = {
         .trainerClass = TRAINER_CLASS_PKMN_RANGER,
