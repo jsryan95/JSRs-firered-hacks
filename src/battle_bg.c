@@ -1059,7 +1059,8 @@ static u8 GetBattleTerrainOverride(void)
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
     {
-        if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_LEADER)
+        if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_LEADER
+                && gTrainerBattleOpponent_A != TRAINER_LEADER_BLAINE)
             return BATTLE_TERRAIN_LEADER;
         else if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION)
             return BATTLE_TERRAIN_CHAMPION;

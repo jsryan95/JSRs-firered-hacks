@@ -5501,6 +5501,31 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushGirlJocelyn[] = {
     },
 };
 
+// mt ember summit
+static const struct TrainerMonItemCustomMoves sParty_LeaderBlaine[] = {
+    {
+        .iv = 128,
+        .lvl = 50,
+        .species = SPECIES_RAPIDASH,
+        .moves = {MOVE_SUNNY_DAY, MOVE_TRAILBLAZER, MOVE_OVERHEAT, MOVE_DONKEY_KICK},
+        .heldItem = ITEM_HEAT_ROCK,
+    },
+    {
+        .iv = 128,
+        .lvl = 50,
+        .species = SPECIES_CHARIZARD,
+        .moves = {MOVE_OVERHEAT, MOVE_SOLAR_BEAM, MOVE_SUNNY_DAY, MOVE_NONE},
+        .heldItem = ITEM_WHITE_HERB,
+    },
+    {
+        .iv = 128,
+        .lvl = 53,
+        .species = SPECIES_ARCANINE,
+        .moves = {MOVE_OVERHEAT, MOVE_FLARE_BLITZ, MOVE_THUNDER_FANG, MOVE_EXTREME_SPEED},
+        .heldItem = ITEM_STORM_WING
+    },
+};
+
 
 
 
@@ -7018,33 +7043,6 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLance[] = {
         .species = SPECIES_DRAGONITE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_HYPER_BEAM, MOVE_SAFEGUARD, MOVE_OUTRAGE, MOVE_WING_ATTACK},
-    },
-};
-
-static const struct TrainerMonNoItemCustomMoves sParty_LeaderBlaine[] = {
-    {
-        .iv = 0,
-        .lvl = 42,
-        .species = SPECIES_GROWLITHE,
-        .moves = {MOVE_BITE, MOVE_ROAR, MOVE_TAKE_DOWN, MOVE_FIRE_BLAST},
-    },
-    {
-        .iv = 0,
-        .lvl = 40,
-        .species = SPECIES_PONYTA,
-        .moves = {MOVE_STOMP, MOVE_BOUNCE, MOVE_FIRE_SPIN, MOVE_FIRE_BLAST},
-    },
-    {
-        .iv = 0,
-        .lvl = 42,
-        .species = SPECIES_RAPIDASH,
-        .moves = {MOVE_STOMP, MOVE_BOUNCE, MOVE_FIRE_SPIN, MOVE_FIRE_BLAST},
-    },
-    {
-        .iv = 0,
-        .lvl = 47,
-        .species = SPECIES_ARCANINE,
-        .moves = {MOVE_BITE, MOVE_ROAR, MOVE_TAKE_DOWN, MOVE_FIRE_BLAST},
     },
 };
 

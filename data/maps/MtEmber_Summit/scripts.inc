@@ -15,10 +15,20 @@ MtEmber_Summit_EventScript_TryRemoveMoltres::
 
 MtEmber_Summit_OnTransition::
 	call_if_unset FLAG_FOUGHT_MOLTRES, MtEmber_Summit_EventScript_ShowMoltres
+	call_if_unset FLAG_SYS_GAME_CLEAR, MtEmber_Summit_EventScript_HideMoltres
+	call_if_set FLAG_SYS_GAME_CLEAR, MtEmber_Summit_EventScript_HideBlaine
 	end
 
 MtEmber_Summit_EventScript_ShowMoltres::
 	clearflag FLAG_HIDE_MOLTRES
+	return
+
+MtEmber_Summit_EventScript_HideMoltres::
+	setflag FLAG_HIDE_MOLTRES
+	return
+
+MtEmber_Summit_EventScript_HideBlaine::
+	setflag FLAG_GOT_TM50_FROM_BLAINE
 	return
 
 MtEmber_Summit_EventScript_Moltres::
