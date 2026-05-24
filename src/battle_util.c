@@ -3138,7 +3138,6 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 BattleScriptExecute(BattleScript_WhiteHerbEnd2);
             }
             break;
-        }
         case HOLD_EFFECT_AIR_BALLOON:
             gActiveBattler = battlerId;
             BattleScriptExecute(BattleScript_PkmnHasAirBalloon);
@@ -3147,6 +3146,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             gActiveBattler = battlerId;
             BattleScriptExecute(BattleScript_PkmnHasMoonPlate);
             break;
+        }
         break;
     case ITEMEFFECT_NORMAL:
         if (gBattleMons[battlerId].hp)
