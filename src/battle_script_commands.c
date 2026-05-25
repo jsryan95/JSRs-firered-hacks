@@ -4693,6 +4693,11 @@ static void Cmd_moveend(void)
             else
                 gBattleScripting.moveendState++;
             break;
+        case MOVEEND_ON_DAMAGE_ITEMS:
+            if (ItemBattleEffects(ITEMEFFECT_ON_DAMAGE, 0, FALSE))
+                effect = TRUE;
+            gBattleScripting.moveendState++;
+            break;
         case MOVEEND_KINGSROCK_SHELLBELL: // king's rock and shell bell
             if (ItemBattleEffects(ITEMEFFECT_KINGSROCK_SHELLBELL, 0, FALSE))
                 effect = TRUE;

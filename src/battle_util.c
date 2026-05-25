@@ -3653,12 +3653,30 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     return effect;
                 }
                 break;
+            }
+            if (effect != 0)
+            {
+                gBattleScripting.battler = battlerId;
+                gPotentialItemEffectBattler = battlerId;
+                gActiveBattler = battlerId;
+                BtlController_EmitSetMonData(BUFFER_A, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+                MarkBattlerForControllerExec(gActiveBattler);
+                break;
+            }
+        }
+        break;
+    case ITEMEFFECT_ON_DAMAGE:
+        if (gBattleMoveDamage)
+        {
+            switch (defHoldEffect)
+            {
             case HOLD_EFFECT_AIR_BALLOON:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                     && TARGET_TURN_DAMAGED
                     && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                     && gBattleMons[gBattlerTarget].hp)
                 {
+                    gLastUsedItem = defItem;
                     gBattleScripting.battler = battlerId;
                     gPotentialItemEffectBattler = battlerId;
                     BattleScriptPushCursor();
@@ -3673,6 +3691,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                         && TARGET_TURN_DAMAGED
                         && (gBattleMoves[gCurrentMove].flags & FLAG_MAKES_CONTACT))
                 {
+                    gLastUsedItem = defItem;
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 8;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
@@ -3680,15 +3699,6 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     gBattlescriptCurrInstr = BattleScript_RockyHelmetActivates;
                     return ITEM_HP_CHANGE;
                 }
-                break;
-            }
-            if (effect != 0)
-            {
-                gBattleScripting.battler = battlerId;
-                gPotentialItemEffectBattler = battlerId;
-                gActiveBattler = battlerId;
-                BtlController_EmitSetMonData(BUFFER_A, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
-                MarkBattlerForControllerExec(gActiveBattler);
                 break;
             }
         }

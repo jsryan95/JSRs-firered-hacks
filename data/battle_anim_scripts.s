@@ -6888,21 +6888,21 @@ Move_SCALD:
 	call ScaldBeams
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 3, 0, 37, 1
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_TARGET, 2, 0, 13, RGB(28, 0, 0)
-	call HydroPumpHitSplats
+	call ScaldHitSplats
 	call ScaldBeams
 	call ScaldBeams
-	call HydroPumpHitSplats
+	call ScaldHitSplats
 	call ScaldBeams
 	call ScaldBeams
-	call HydroPumpHitSplats
+	call ScaldHitSplats
 	call ScaldBeams
 	call ScaldBeams
-	call HydroPumpHitSplats
+	call ScaldHitSplats
 	call ScaldBeams
 	call ScaldBeams
-	call HydroPumpHitSplats
+	call ScaldHitSplats
 	delay 2
-	call HydroPumpHitSplats
+	call ScaldHitSplats
 	waitforvisualfinish
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_TARGET, 4, 4, 0, RGB(28, 0, 0)
 	waitforvisualfinish
@@ -6915,6 +6915,10 @@ ScaldBeams:
 	delay 1
 	createsprite gHydroPumpOrbSpriteTemplate, ANIM_ATTACKER, 3, 10, 10, 0, 16
 	delay 1
+	return
+
+ScaldHitSplats:
+	createsprite gWaterHitSplatSpriteTemplate, ANIM_ATTACKER, 4, 0, 0, ANIM_TARGET, 1
 	return
 
 Move_SIGNAL_BEAM:

@@ -2980,7 +2980,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_TamerCole),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_TamerCole),
     },
     [TRAINER_TAMER_VINCENT] = {
         .trainerClass = TRAINER_CLASS_TAMER,
@@ -3510,7 +3510,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_FULL_HEAL},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_LeaderGiovanni),
+        .party = ITEM_CUSTOM_MOVES(sParty_LeaderGiovanni),
     },
     [TRAINER_TEAM_ROCKET_GRUNT] = {
         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
@@ -3940,7 +3940,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_SUPER_POTION},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_CooltrainerSamuel),
+        .party = ITEM_CUSTOM_MOVES(sParty_CooltrainerSamuel),
     },
     [TRAINER_COOLTRAINER_GEORGE] = {
         .trainerClass = TRAINER_CLASS_COOLTRAINER,
@@ -4020,7 +4020,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_HYPER_POTION},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_CooltrainerYuji),
+        .party = ITEM_CUSTOM_MOVES(sParty_CooltrainerYuji),
     },
     [TRAINER_COOLTRAINER_WARREN] = {
         .trainerClass = TRAINER_CLASS_COOLTRAINER,
@@ -4030,7 +4030,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_HYPER_POTION},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_CooltrainerWarren),
+        .party = ITEM_CUSTOM_MOVES(sParty_CooltrainerWarren),
     },
     [TRAINER_COOLTRAINER_MARY] = {
         .trainerClass = TRAINER_CLASS_COOLTRAINER,
