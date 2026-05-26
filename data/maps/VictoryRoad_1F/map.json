@@ -158,8 +158,8 @@
       "x": 16,
       "y": 1,
       "elevation": 0,
-      "item": "ITEM_FULL_RESTORE",
-      "flag": "FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_FULL_RESTORE",
+      "item": "ITEM_LUM_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_LUM_BERRY",
       "quantity": 1,
       "underfoot": false
     }

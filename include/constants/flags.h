@@ -449,7 +449,7 @@
 #define FLAG_HIDE_VICTORY_ROAD_2F_FULL_HEAL                     0x1AD
 #define FLAG_HIDE_VICTORY_ROAD_2F_TM37                          0x1AE
 #define FLAG_HIDE_VICTORY_ROAD_3F_MAX_REVIVE                    0x1AF
-#define FLAG_HIDE_VICTORY_ROAD_3F_TM50                          0x1B0
+#define FLAG_HIDE_VICTORY_ROAD_3F_TM38                          0x1B0
 #define FLAG_HIDE_CERULEAN_CAVE_1F_MAX_ELIXIR                   0x1B1
 #define FLAG_HIDE_CERULEAN_CAVE_1F_NUGGET                       0x1B2
 #define FLAG_HIDE_CERULEAN_CAVE_1F_FULL_RESTORE                 0x1B3
@@ -1063,11 +1063,11 @@
 #define FLAG_HIDDEN_ITEM_POKEMON_MANSION_1F_MOON_STONE                     (FLAG_HIDDEN_ITEMS_START +  31)
 #define FLAG_HIDDEN_ITEM_POKEMON_MANSION_3F_RARE_CANDY                     (FLAG_HIDDEN_ITEMS_START +  32)
 #define FLAG_HIDDEN_ITEM_POKEMON_MANSION_B1F_ELIXIR                        (FLAG_HIDDEN_ITEMS_START +  33)
-#define FLAG_HIDDEN_ITEM_ROUTE23_FULL_RESTORE                              (FLAG_HIDDEN_ITEMS_START +  34)
+#define FLAG_HIDDEN_ITEM_ROUTE23_LUM_BERRY_2                              (FLAG_HIDDEN_ITEMS_START +  34)
 #define FLAG_HIDDEN_ITEM_ROUTE23_ULTRA_BALL                                (FLAG_HIDDEN_ITEMS_START +  35)
-#define FLAG_HIDDEN_ITEM_ROUTE23_MAX_ETHER                                 (FLAG_HIDDEN_ITEMS_START +  36)
+#define FLAG_HIDDEN_ITEM_ROUTE23_LEPPA_BERRY_2                                 (FLAG_HIDDEN_ITEMS_START +  36)
 #define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_ULTRA_BALL                        (FLAG_HIDDEN_ITEMS_START +  37)
-#define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_FULL_RESTORE                      (FLAG_HIDDEN_ITEMS_START +  38)
+#define FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_LUM_BERRY                      (FLAG_HIDDEN_ITEMS_START +  38)
 #define FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_ULTRA_BALL                       (FLAG_HIDDEN_ITEMS_START +  39)
 #define FLAG_HIDDEN_ITEM_UNUSED_0x28                                       (FLAG_HIDDEN_ITEMS_START +  40)
 #define FLAG_HIDDEN_ITEM_ROUTE11_ESCAPE_ROPE                               (FLAG_HIDDEN_ITEMS_START +  41)
@@ -1184,7 +1184,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE7_WEPEAR_BERRY                               (FLAG_HIDDEN_ITEMS_START + 152)
 #define FLAG_HIDDEN_ITEM_ROUTE20_STARDUST                                  (FLAG_HIDDEN_ITEMS_START + 153)
 #define FLAG_HIDDEN_ITEM_ROUTE21_NORTH_PEARL                               (FLAG_HIDDEN_ITEMS_START + 154)
-#define FLAG_HIDDEN_ITEM_ROUTE23_MAX_ELIXIR                                (FLAG_HIDDEN_ITEMS_START + 155)
+#define FLAG_HIDDEN_ITEM_ROUTE23_LEPPA_BERRY_3                                (FLAG_HIDDEN_ITEMS_START + 155)
 #define FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY                                 (FLAG_HIDDEN_ITEMS_START + 156)
 #define FLAG_HIDDEN_ITEM_ROUTE14_PINAP_BERRY                               (FLAG_HIDDEN_ITEMS_START + 157)
 #define FLAG_HIDDEN_ITEM_MT_EMBER_EXTERIOR_FIRE_STONE                      (FLAG_HIDDEN_ITEMS_START + 158)

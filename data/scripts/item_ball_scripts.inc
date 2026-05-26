@@ -370,8 +370,8 @@ VictoryRoad_3F_EventScript_ItemMaxRevive::
 	finditem ITEM_MAX_REVIVE
 	end
 
-VictoryRoad_3F_EventScript_ItemTM50::
-	finditem ITEM_TM50
+VictoryRoad_3F_EventScript_ItemTM38::
+	finditem ITEM_TM38
 	end
 
 CeruleanCave_1F_EventScript_ItemMaxElixir::
