@@ -666,6 +666,7 @@ gBattleAnims_General::
 	.4byte General_SafariReaction           @ B_ANIM_SAFARI_REACTION
 	.4byte General_AquaRingHeal             @ B_ANIM_AQUA_RING_HEAL
 	.4byte Move_HAZE                        @ B_ANIM_BLACK_SMOKE
+	.4byte Move_BATON_PASS                  @ B_ANIM_U_TURN_SWITCH
 
 	.align 2
 gBattleAnims_Special::

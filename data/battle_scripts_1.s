@@ -2013,6 +2013,7 @@ BattleScript_UTurn::
         resultmessage
         waitmessage B_WAIT_TIME_LONG
         jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_UTurn_End
+		playanimation BS_ATTACKER, B_ANIM_U_TURN_SWITCH
         openpartyscreen BS_ATTACKER, BattleScript_UTurn_End
         switchoutabilities BS_ATTACKER
         waitstate
