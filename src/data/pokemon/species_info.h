@@ -3459,12 +3459,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     [SPECIES_SEAKING] =
     {
-        .baseHP = 80,
-        .baseAttack = 92,
-        .baseDefense = 65,
-        .baseSpeed = 68,
-        .baseSpAttack = 65,
-        .baseSpDefense = 80,
+        .baseHP = 85,
+        .baseAttack = 102,
+        .baseDefense = 70,
+        .baseSpeed = 73,
+        .baseSpAttack = 70,
+        .baseSpDefense = 85,
         .types = {TYPE_WATER, TYPE_WATER},
         .catchRate = 60,
         .expYield = 170,
