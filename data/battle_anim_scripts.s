@@ -3755,7 +3755,6 @@ SkyAttackUnleash:
 	goto SkyAttackEnd
 
 Move_FLASH:
-Move_MIRROR_SHOT:
 	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_Flash, 2
 	waitforvisualfinish
@@ -9732,6 +9731,19 @@ Move_LUNAR_DANCE:
 	call GrantingStarsEffect
 	waitforvisualfinish
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 3, 10, 0, RGB_BLACK
+	waitforvisualfinish
+	end
+
+Move_MIRROR_SHOT:
+	loadspritegfx ANIM_TAG_GRAY_ORB
+	playsewithpan SE_M_MEGA_KICK, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_ATTACKER, 8, 1, 0, 12, RGB_WHITE
+	call StockpileAbsorb
+	call StockpileAbsorb
+	waitforvisualfinish
+	delay 15
+	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_Flash, 2
 	waitforvisualfinish
 	end
 
