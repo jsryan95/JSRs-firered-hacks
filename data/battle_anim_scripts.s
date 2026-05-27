@@ -2798,7 +2798,6 @@ RockSlideRocks:
 	return
 
 Move_THIEF:
-Move_ASSURANCE:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	delay 1
@@ -2816,6 +2815,24 @@ Move_ASSURANCE:
 	blendoff
 	restorebg
 	waitbgfadein
+	end
+
+Move_ASSURANCE:
+	createvisualtask AnimTask_IsPowerOver99, 2
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_PURPLE_HAND_OUTLINE
+	monbg ANIM_TARGET
+	delay 1
+	setalpha 12, 8
+	playsewithpan SE_M_VITAL_THROW, SOUND_PAN_TARGET
+	createsprite gAssuranceHandSpriteTemplate, ANIM_TARGET, 3, 0
+	delay 2
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 1, 0, 8, 1
+	waitforvisualfinish
+	delay 20
+	clearmonbg ANIM_TARGET
+	blendoff
 	end
 
 Move_BUBBLE_BEAM:

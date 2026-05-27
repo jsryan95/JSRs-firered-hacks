@@ -136,6 +136,7 @@ static void AnimTauntFinger(struct Sprite *);
 static void AnimTauntFinger_Step1(struct Sprite *);
 static void AnimTauntFinger_Step2(struct Sprite *);
 static void AnimBellyDrumHand(struct Sprite *);
+static void AnimAssuranceHand(struct Sprite *);
 static void AnimSuperFang(struct Sprite *);
 static void AnimGrantingStars(struct Sprite *);
 static void AnimSparklingStars(struct Sprite *);
@@ -2024,6 +2025,17 @@ const struct SpriteTemplate gBellyDrumHandSpriteTemplate =
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimBellyDrumHand,
+};
+
+const struct SpriteTemplate gAssuranceHandSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_PURPLE_HAND_OUTLINE,
+    .paletteTag = ANIM_TAG_PURPLE_HAND_OUTLINE,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimAssuranceHand,
 };
 
 static const union AffineAnimCmd sSlowFlyingMusicNotesAffineAnimCmds[] =
@@ -5463,6 +5475,26 @@ static void AnimBellyDrumHand(struct Sprite* sprite)
 
     sprite->x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2) + a;
     sprite->y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET) + 8;
+    sprite->data[0] = 8;
+    sprite->callback = WaitAnimForDuration;
+    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
+}
+
+static void AnimAssuranceHand(struct Sprite* sprite)
+{
+    s16 a;
+    
+    if (gBattleAnimArgs[0] == 1)
+    {
+        sprite->oam.matrixNum = ST_OAM_HFLIP;
+        a = 16;
+    }
+    else
+    {
+        a = -16;
+    }
+
+    InitSpritePosToAnimTarget(sprite, TRUE);
     sprite->data[0] = 8;
     sprite->callback = WaitAnimForDuration;
     StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
