@@ -3508,10 +3508,10 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             {
                 for (i = 0; sPowderMoves[i] != POWDER_MOVES_END; i++)
                 {
-                    if (sSoundMovesTable[i] == gCurrentMove)
+                    if (sPowderMoves[i] == gCurrentMove)
                         break;
                 }
-                if (sSoundMovesTable[i] != POWDER_MOVES_END)
+                if (sPowderMoves[i] != POWDER_MOVES_END)
                 {
                     if (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)
                         gHitMarker |= HITMARKER_NO_PPDEDUCT;
