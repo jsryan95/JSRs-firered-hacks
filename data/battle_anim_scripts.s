@@ -6568,6 +6568,35 @@ Move_CLAMP:
 	waitforvisualfinish
 	end
 
+Move_ICE_SHARD:
+	monbg ANIM_TARGET
+	splitbgprio ANIM_TARGET
+	setalpha 12, 8
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 1, 0, 7, RGB_BLACK
+	playsewithpan SE_M_ICY_WIND, SOUND_PAN_TARGET
+	createsprite gIceBeamOuterCrystalSpriteTemplate, ANIM_ATTACKER, 2, 5, 12, 5, 12, 20
+	delay 1
+	createsprite gIceBeamOuterCrystalSpriteTemplate, ANIM_ATTACKER, 2, 15, -6, 15, -6, 20
+	delay 1
+	createsprite gIceBeamInnerCrystalSpriteTemplate, ANIM_ATTACKER, 2, 20, 0, 20, 0, 11
+	delay 1
+	createsprite gIceBeamOuterCrystalSpriteTemplate, ANIM_ATTACKER, 2, 0, -3, 0, -3, 20
+	delay 1
+	playsewithpan SE_M_ICY_WIND, SOUND_PAN_TARGET
+	createsprite gIceBeamOuterCrystalSpriteTemplate, ANIM_ATTACKER, 2, -8, -8, -8, -8, 20
+	delay 1
+	createsprite gIceBeamInnerCrystalSpriteTemplate, ANIM_ATTACKER, 2, -12, 10, -12, 10, 11
+	delay 1
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 4, 7, 1
+	waitforvisualfinish
+	delay 10
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 0, 7, 0, RGB_BLACK
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	end
+
 Move_ICE_BEAM:
 	monbg ANIM_TARGET
 	splitbgprio ANIM_TARGET
@@ -9744,6 +9773,7 @@ Move_MIRROR_SHOT:
 	delay 15
 	playsewithpan SE_M_LEER, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_Flash, 2
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 0, 4, 7, 1
 	waitforvisualfinish
 	end
 
@@ -11508,7 +11538,6 @@ Move_MAGICAL_LEAF:
 	end
 
 Move_ICE_BALL:
-Move_ICE_SHARD:
 Move_AVALANCHE:
 	loadspritegfx ANIM_TAG_ICE_CHUNK
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
