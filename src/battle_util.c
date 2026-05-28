@@ -3139,11 +3139,17 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             }
             break;
         case HOLD_EFFECT_AIR_BALLOON:
-            gActiveBattler = battlerId;
+            effect = ITEM_EFFECT_OTHER;
+            gBattleScripting.battler = battlerId;
+            gPotentialItemEffectBattler = battlerId;
+            gActiveBattler = gBattlerAttacker = battlerId;
             BattleScriptExecute(BattleScript_PkmnHasAirBalloon);
             break;
         case HOLD_EFFECT_MOON_PLATE:
-            gActiveBattler = battlerId;
+            effect = ITEM_EFFECT_OTHER;
+            gBattleScripting.battler = battlerId;
+            gPotentialItemEffectBattler = battlerId;
+            gActiveBattler = gBattlerAttacker = battlerId;
             BattleScriptExecute(BattleScript_PkmnHasMoonPlate);
             break;
         }

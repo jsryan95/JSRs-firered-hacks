@@ -5285,7 +5285,7 @@ BattleScript_PkmnHasAirBalloon::
 BattleScript_AirBalloonPops::
 	printstring STRINGID_PKMNSITEMPOPPED
 	waitmessage B_WAIT_TIME_LONG
-	removeitem BS_SCRIPTING
+	removeitem BS_TARGET
 	return
 
 BattleScript_RockyHelmetActivates::
@@ -5300,7 +5300,6 @@ BattleScript_RockyHelmetActivates::
 BattleScript_PkmnHasMoonPlate::
 	printstring STRINGID_PKMNSITEMGLEAMS
 	waitmessage B_WAIT_TIME_LONG
-	removeitem BS_SCRIPTING
 	end2
 
 BattleScript_ItemHealHP_RemoveItem::

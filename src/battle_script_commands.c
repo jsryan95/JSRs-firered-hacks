@@ -1645,6 +1645,13 @@ static void Cmd_typecalc(void)
         gLastHitByType[gBattlerTarget] = 0;
         gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
     }
+    else if (moveType == TYPE_GROUND && (ItemId_GetHoldEffect(getItem(gBattlerTarget)) == HOLD_EFFECT_AIR_BALLOON) && isAirborne(gBattlerTarget))
+    {
+        gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
+        gLastLandedMoves[gBattlerTarget] = 0;
+        gLastHitByType[gBattlerTarget] = 0;
+        gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
+    }
     else if (moveType == TYPE_DRAGON && ItemId_GetHoldEffect(getItem(gBattlerTarget)) == HOLD_EFFECT_MOON_PLATE)
     {
         gLastUsedItem = getItem(gBattlerTarget);
@@ -1721,6 +1728,11 @@ static void CheckWonderGuardAndLevitate(void)
         return;
     }
     else if (moveType == TYPE_GROUND && (gBattleMons[gBattlerTarget].status3 & STATUS3_MAGNET_RISE) && isAirborne(gBattlerTarget))
+    {
+        gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
+        return;
+    }
+    else if (moveType == TYPE_GROUND && (ItemId_GetHoldEffect(getItem(gBattlerTarget)) == HOLD_EFFECT_AIR_BALLOON) && isAirborne(gBattlerTarget))
     {
         gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
         return;
@@ -4877,6 +4889,12 @@ static void Cmd_typecalc2(void)
         RecordAbilityBattle(gBattlerTarget, gLastUsedAbility);
     }
     else if ((gBattleMons[gBattlerTarget].status3 & STATUS3_MAGNET_RISE) && moveType == TYPE_GROUND && isAirborne(gBattlerTarget))
+    {
+        gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
+        gLastLandedMoves[gBattlerTarget] = 0;
+        gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_ATK;
+    }
+    else if ((ItemId_GetHoldEffect(getItem(gBattlerTarget)) == HOLD_EFFECT_AIR_BALLOON) && moveType == TYPE_GROUND && isAirborne(gBattlerTarget))
     {
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
         gLastLandedMoves[gBattlerTarget] = 0;
