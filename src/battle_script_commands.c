@@ -11030,8 +11030,10 @@ void BS_checkStoredPower(void)
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
         if (gBattleMons[gBattlerAttacker].statStages[i] > DEFAULT_STAT_STAGE)
+        {
             gBattlescriptCurrInstr += 9;
             return;
+        }
     }
 
     gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);

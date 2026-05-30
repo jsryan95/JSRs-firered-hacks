@@ -6088,7 +6088,7 @@ BattleScript_EffectCircleThrow::
 BattleScript_AttackForceOut::
 	jumpifability BS_TARGET, ABILITY_SUCTION_CUPS, BattleScript_AbilityPreventsPhasingOut
 	jumpifstatus4 BS_TARGET, STATUS4_ROOTED, BattleScript_PrintMonIsRooted
-	forcerandomswitch BattleScript_ButItFailed
+	forcerandomswitch BattleScript_MoveEnd
 
 BattleScript_EffectPowerTrick::
 	attackcanceler
