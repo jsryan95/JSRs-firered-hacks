@@ -913,7 +913,6 @@ SupersonicRing:
 	return
 
 Move_SCREECH:
-Move_BUG_BUZZ:
 	loadspritegfx ANIM_TAG_PURPLE_RING
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 3, 0, 2, 1
 	call ScreechRing
@@ -928,6 +927,31 @@ ScreechRing:
 	createsprite gScreechRingSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 0, 30, 0
 	delay 2
 	return
+
+Move_BUG_BUZZ:
+	loadspritegfx ANIM_TAG_PURPLE_RING
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 3, 0, 2, 1
+	playsewithpan SE_M_SCREECH, SOUND_PAN_ATTACKER
+	createsprite gScreechRingSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 0, 30, 0
+	delay 2
+	playsewithpan SE_M_SCREECH, SOUND_PAN_ATTACKER
+	createsprite gScreechRingSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 10, 30, 0
+	delay 2
+	playsewithpan SE_M_SCREECH, SOUND_PAN_ATTACKER
+	createsprite gScreechRingSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, -20, 30, 0
+	delay 2
+	playsewithpan SE_M_SCREECH, SOUND_PAN_ATTACKER
+	createsprite gScreechRingSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, -10, 30, 0
+	delay 2
+	playsewithpan SE_M_SCREECH, SOUND_PAN_ATTACKER
+	createsprite gScreechRingSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 20, 30, 0
+	delay 2
+	playsewithpan SE_M_SCREECH, SOUND_PAN_ATTACKER
+	createsprite gScreechRingSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 0, 30, 0
+	delay 2
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 5, 0, 16, 1
+	waitforvisualfinish
+	end
 
 Move_FLAME_WHEEL:
 Move_FLARE_BLITZ:
