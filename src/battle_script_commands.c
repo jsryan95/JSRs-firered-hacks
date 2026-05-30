@@ -10813,7 +10813,7 @@ void BS_tryApplyGastroAcid(void)
 {
     if (gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
      {
-         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
      }
     else
     {

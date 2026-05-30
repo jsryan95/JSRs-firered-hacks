@@ -768,6 +768,7 @@ Move_RAGE_POWDER:
 	end
 
 Move_SLEEP_POWDER:
+Move_PEPPER_POWDER:
 	loadspritegfx ANIM_TAG_SLEEP_POWDER
 	loopsewithpan SE_M_POISON_POWDER, SOUND_PAN_TARGET, 10, 6
 	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -30, -22, 117, 80, 5, 1
@@ -5444,7 +5445,6 @@ Move_HOWL:
 
 Move_BULK_UP:
 Move_COIL:
-Move_PEPPER_POWDER:
 	loadspritegfx ANIM_TAG_BREATH
 	createvisualtask AnimTask_GrowAndShrink, 2
 	playsewithpan SE_M_SWAGGER, SOUND_PAN_ATTACKER
