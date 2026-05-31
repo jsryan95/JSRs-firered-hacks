@@ -1007,7 +1007,7 @@ BattleScript_EffectConfuse::
 	attackcanceler
 	attackstring
 	ppreduce
-	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_OwnTempoPrevents
+	jumpifability BS_TARGET, ABILITY_INNER_FOCUS, BattleScript_OwnTempoPrevents
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifstatus2 BS_TARGET, STATUS2_CONFUSION, BattleScript_AlreadyConfused
 	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
@@ -1888,7 +1888,7 @@ BattleScript_EffectSwagger::
 	printfromtable gStatUpStringIds
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_SwaggerTryConfuse::
-	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_OwnTempoPrevents
+	jumpifability BS_TARGET, ABILITY_INNER_FOCUS, BattleScript_OwnTempoPrevents
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected
 	setmoveeffect MOVE_EFFECT_CONFUSION
 	seteffectprimary
@@ -2523,7 +2523,7 @@ BattleScript_EffectFlatter::
 	printfromtable gStatUpStringIds
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_FlatterTryConfuse::
-	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_OwnTempoPrevents
+	jumpifability BS_TARGET, ABILITY_INNER_FOCUS, BattleScript_OwnTempoPrevents
 	jumpifsideaffecting BS_TARGET, SIDE_STATUS_SAFEGUARD, BattleScript_SafeguardProtected
 	setmoveeffect MOVE_EFFECT_CONFUSION
 	seteffectprimary
@@ -3033,7 +3033,7 @@ BattleScript_TeeterDanceLoop::
 	movevaluescleanup
 	setmoveeffect MOVE_EFFECT_CONFUSION
 	jumpifbyteequal gBattlerAttacker, gBattlerTarget, BattleScript_TeeterDanceLoopIncrement
-	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_TeeterDanceOwnTempoPrevents
+	jumpifability BS_TARGET, ABILITY_INNER_FOCUS, BattleScript_TeeterDanceOwnTempoPrevents
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_TeeterDanceSubstitutePrevents
 	jumpifstatus2 BS_TARGET, STATUS2_CONFUSION, BattleScript_TeeterDanceAlreadyConfused
 	accuracycheck BattleScript_TeeterDanceMissed, ACC_CURR_MOVE

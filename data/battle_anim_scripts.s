@@ -817,7 +817,7 @@ Move_SLEEP_POWDER:
 
 Move_PEPPER_POWDER:
 	loadspritegfx ANIM_TAG_SLEEP_POWDER
-	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_SLEEP_POWDER, 0, 6, 6, RGB_RED
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_SLEEP_POWDER, 0, 6, 6, RGB_YELLOW
 	loopsewithpan SE_M_POISON_POWDER, SOUND_PAN_TARGET, 10, 6
 	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -30, -22, 117, 80, 5, 1
 	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, 10, -22, 117, 80, -5, 1

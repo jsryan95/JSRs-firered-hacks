@@ -2844,7 +2844,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
             switch (gBattleCommunication[MOVE_EFFECT_BYTE])
             {
             case MOVE_EFFECT_CONFUSION:
-                if (hasActiveAbility(gEffectBattler, ABILITY_OWN_TEMPO)
+                if (hasActiveAbility(gEffectBattler, ABILITY_INNER_FOCUS)
                     || gBattleMons[gEffectBattler].status2 & STATUS2_CONFUSION)
                 {
                     gBattlescriptCurrInstr++;

@@ -390,7 +390,7 @@ AI_CBM_FocusEnergy::
 AI_CBM_Confuse::
 	if_status2 AI_TARGET, STATUS2_CONFUSION, Score_Minus5
 	get_ability AI_TARGET
-	if_equal ABILITY_OWN_TEMPO, Score_Minus10
+	if_equal ABILITY_INNER_FOCUS, Score_Minus10
  	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10  @ Improvement in Emerald
 	end
 

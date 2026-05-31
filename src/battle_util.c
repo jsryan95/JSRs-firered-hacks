@@ -2653,7 +2653,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect = 1;
                     }
                     break;
-                case ABILITY_OWN_TEMPO:
+                case ABILITY_INNER_FOCUS:
                     if (gBattleMons[battler].status2 & STATUS2_CONFUSION)
                     {
                         StringCopy(gBattleTextBuff1, gStatusConditionString_ConfusionJpn);
