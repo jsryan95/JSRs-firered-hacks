@@ -535,6 +535,7 @@ const u8 gMoveDescription_Poltergeist[] = _("Possesses the foe's\nitem to attack
 const u8 gMoveDescription_PollenPuff[] = _("Throws a ball of\nexploding pollen.\nIt can restore an\nally's HP instead.");
 const u8 gMoveDescription_PepperPowder[] = _("Emits an\ninvigorating powder\nthat raises ATTACK\nand DEFENSE.");
 const u8 gMoveDescription_JawLock[] = _("The user grabs\nthe foe with its\nteeth to stop either\none switching out.");
+const u8 gMoveDescription_PhoenixWing[] = _("A flying attack\nwreathed in flame\nthat may heal the\nuser.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1094,4 +1095,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_FLARE_UP - 1] = gMoveDescription_Rage,
     [MOVE_PEPPER_POWDER - 1] = gMoveDescription_PepperPowder,
     [MOVE_JAW_LOCK - 1] = gMoveDescription_JawLock,
+    [MOVE_PHOENIX_WING - 1] = gMoveDescription_PhoenixWing,
 };

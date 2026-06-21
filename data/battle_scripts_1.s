@@ -340,6 +340,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHydroCannon            @ EFFECT_HYDRO_CANNON
 	.4byte BattleScript_EffectFrenzyPlant            @ EFFECT_FRENZY_PLANT
 	.4byte BattleScript_EffectJawLock                @ EFFECT_JAW_LOCK
+	.4byte BattleScript_EffectPhoenixWing            @ EFFECT_PHOENIX_WING
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -6439,4 +6440,35 @@ BattleScript_EffectFrenzyPlant::
 BattleScript_EffectJawLock::
 	setmoveeffect MOVE_EFFECT_JAW_LOCK
 	goto BattleScript_EffectHit
+
+BattleScript_EffectPhoenixWing::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	setPhoenixWingHeal BattleScript_PhoenixWingTryFainting
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	playanimation BS_ATTACKER, B_ANIM_PHOENIX_WING_HEAL
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_PhoenixWingTryFainting::
+	tryfaintmon BS_TARGET
+	goto BattleScript_MoveEnd
 

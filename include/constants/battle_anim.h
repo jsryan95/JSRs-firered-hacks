@@ -378,6 +378,7 @@
 #define B_ANIM_AQUA_RING_HEAL           28
 #define B_ANIM_BLACK_SMOKE              29
 #define B_ANIM_U_TURN_SWITCH            30
+#define B_ANIM_PHOENIX_WING_HEAL        31
 
 // special animations table (gBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0

@@ -1623,3 +1623,8 @@
 	callnative BS_checkPoltergeist
 	.4byte \onFail
 	.endm
+
+	.macro setPhoenixWingHeal ifNoHeal:req
+	callnative BS_setPhoenixWingHeal
+	.4byte \ifNoHeal
+	.endm

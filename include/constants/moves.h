@@ -606,8 +606,9 @@
 #define MOVE_FLARE_UP 592
 #define MOVE_PEPPER_POWDER 593
 #define MOVE_JAW_LOCK 594 // gen 8
+#define MOVE_PHOENIX_WING 595
 
-#define MOVES_COUNT 595
+#define MOVES_COUNT 596
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

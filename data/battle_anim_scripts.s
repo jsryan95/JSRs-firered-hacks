@@ -620,6 +620,7 @@ gBattleAnims_Moves::
     .4byte Move_FLARE_UP
     .4byte Move_PEPPER_POWDER
     .4byte Move_JAW_LOCK
+	.4byte Move_PHOENIX_WING
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -667,6 +668,7 @@ gBattleAnims_General::
 	.4byte General_AquaRingHeal             @ B_ANIM_AQUA_RING_HEAL
 	.4byte Move_HAZE                        @ B_ANIM_BLACK_SMOKE
 	.4byte Move_BATON_PASS                  @ B_ANIM_U_TURN_SWITCH
+	.4byte General_HealingEffect            @ B_ANIM_PHOENIX_WING_HEAL
 
 	.align 2
 gBattleAnims_Special::
@@ -7627,6 +7629,7 @@ Move_DRAGON_SHOUT:
 	end
 
 Move_WING_ATTACK:
+Move_PHOENIX_WING:
 	loadspritegfx ANIM_TAG_GUST
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_DEF_PARTNER
@@ -12769,4 +12772,10 @@ Special_SubstituteToMon:
 
 Special_MonToSubstitute:
 	createvisualtask AnimTask_SwapMonSpriteToFromSubstitute, 2, FALSE
+	end
+
+General_HealingEffect:
+	loadspritegfx ANIM_TAG_BLUE_STAR
+	call HealingEffect
+	waitforvisualfinish
 	end

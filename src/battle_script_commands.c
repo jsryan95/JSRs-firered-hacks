@@ -11401,3 +11401,15 @@ void BS_checkPoltergeist(void)
 
     gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
 }
+
+void BS_setPhoenixWingHeal(void)
+{
+    if (gBattleMons[gBattlerAttacker].hp <= (gBattleMons[gBattlerAttacker].maxHP / 2))
+    {
+        gBattleMoveDamage = -(gBattleMons[gBattlerAttacker].maxHP / 3);
+        gBattlescriptCurrInstr += 9;
+        return;
+    }
+
+    gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
+}

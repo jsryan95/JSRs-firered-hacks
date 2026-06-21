@@ -557,4 +557,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] = {
     [MOVE_FLARE_UP] = _("FLARE UP"),
     [MOVE_PEPPER_POWDER] = _("PEPPERPOWDER"),
     [MOVE_JAW_LOCK] = _("JAW LOCK"),
+    [MOVE_PHOENIX_WING] = _("PHOENIX WING"),
 };
