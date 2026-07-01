@@ -214,6 +214,17 @@ const struct SpriteTemplate gElectricitySpriteTemplate =
     .callback = AnimElectricity,
 };
 
+const struct SpriteTemplate gNeurotoxinElectricitySpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SPARK_2,
+    .paletteTag = ANIM_TAG_POISON_BUBBLE,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimElectricity,
+};
+
 static const struct SpriteTemplate sElectricBoltSegmentSpriteTemplate =
 {
     .tileTag = ANIM_TAG_SPARK,
