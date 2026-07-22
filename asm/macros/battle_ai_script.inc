@@ -84,6 +84,13 @@
 	.4byte \ptr
 	.endm
 
+	.macro if_status3 battler:req, status:req, ptr:req
+	.byte 0x5e
+	.byte \battler
+	.4byte \status
+	.4byte \ptr
+	.endm
+
 	.macro if_status4 battler:req, status:req, ptr:req
 	.byte 0x0d
 	.byte \battler
@@ -479,14 +486,14 @@
 	.byte \battler
 	.endm
 
-	@ nullsub
-	.macro ai_52
+	.macro get_move_category_from_result
 	.byte 0x52
 	.endm
 
-	@ nullsub
-	.macro ai_53
+	.macro get_threat_level battler:req category:req
 	.byte 0x53
+	.byte \battler
+	.byte \category
 	.endm
 
 	@ nullsub
@@ -550,6 +557,11 @@
 
 	.macro if_target_not_taunted ptr:req
 	.byte 0x5d
+	.4byte \ptr
+	.endm
+
+	.macro if_ally ptr:req
+	.byte 0x5f
 	.4byte \ptr
 	.endm
 

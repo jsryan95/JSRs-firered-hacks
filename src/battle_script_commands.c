@@ -1865,11 +1865,11 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
             {
                 // check type1
                 if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[defender].type1)
-                    ModulateDmgByType2(TYPE_EFFECT_MULTIPLIER(i), move, &flags);
+                    ModulateDmgForType(i);
                 // check type2
                 if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[defender].type2 &&
                     gBattleMons[defender].type1 != gBattleMons[defender].type2)
-                    ModulateDmgByType2(TYPE_EFFECT_MULTIPLIER(i), move, &flags);
+                    ModulateDmgForType(i);
             }
             i += 3;
         }

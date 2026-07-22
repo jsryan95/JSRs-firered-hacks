@@ -55,6 +55,7 @@ static void Cmd_if_status(void);
 static void Cmd_if_not_status(void);
 static void Cmd_if_status2(void);
 static void Cmd_if_not_status2(void);
+static void Cmd_if_status3(void);
 static void Cmd_if_status4(void);
 static void Cmd_if_not_status4(void);
 static void Cmd_if_side_affecting(void);
@@ -124,8 +125,8 @@ static void Cmd_get_move_type_from_result(void);
 static void Cmd_get_move_power_from_result(void);
 static void Cmd_get_move_effect_from_result(void);
 static void Cmd_get_protect_count(void);
-static void Cmd_nullsub_52(void);
-static void Cmd_nullsub_53(void);
+static void Cmd_get_move_category_from_result(void);
+static void Cmd_get_threat_level(void);
 static void Cmd_nullsub_54(void);
 static void Cmd_nullsub_55(void);
 static void Cmd_nullsub_56(void);
@@ -136,6 +137,7 @@ static void Cmd_end(void);
 static void Cmd_if_level_compare(void);
 static void Cmd_if_target_taunted(void);
 static void Cmd_if_target_not_taunted(void);
+static void Cmd_if_ally(void);
 
 static void RecordLastUsedMoveByTarget(void);
 static void BattleAI_DoAIProcessing(void);
@@ -228,8 +230,8 @@ static const BattleAICmdFunc sBattleAICmdTable[] =
     Cmd_get_move_power_from_result,       // 0x4F
     Cmd_get_move_effect_from_result,      // 0x50
     Cmd_get_protect_count,                // 0x51
-    Cmd_nullsub_52,                       // 0x52
-    Cmd_nullsub_53,                       // 0x53
+    Cmd_get_move_category_from_result,    // 0x52
+    Cmd_get_threat_level,                 // 0x53
     Cmd_nullsub_54,                       // 0x54
     Cmd_nullsub_55,                       // 0x55
     Cmd_nullsub_56,                       // 0x56
@@ -240,6 +242,8 @@ static const BattleAICmdFunc sBattleAICmdTable[] =
     Cmd_if_level_compare,                 // 0x5B
     Cmd_if_target_taunted,                // 0x5C
     Cmd_if_target_not_taunted,            // 0x5D
+    Cmd_if_status3,                       // 0x5E
+    Cmd_if_ally,                          // 0x5F
 };
 
 static const u16 sDiscouragedPowerfulMoveEffects[] =
@@ -659,6 +663,24 @@ static void Cmd_if_not_status2(void)
     status = T1_READ_32(sAIScriptPtr + 2);
 
     if (!(gBattleMons[battlerId].status2 & status))
+        sAIScriptPtr = T1_READ_PTR(sAIScriptPtr + 6);
+    else
+        sAIScriptPtr += 10;
+}
+
+static void Cmd_if_status3(void)
+{
+    u16 battlerId;
+    u32 status;
+
+    if (sAIScriptPtr[1] == AI_USER)
+        battlerId = gBattlerAttacker;
+    else
+        battlerId = gBattlerTarget;
+
+    status = T1_READ_32(sAIScriptPtr + 2);
+
+    if ((gBattleMons[battlerId].status3 & status))
         sAIScriptPtr = T1_READ_PTR(sAIScriptPtr + 6);
     else
         sAIScriptPtr += 10;
@@ -1858,12 +1880,62 @@ static void Cmd_get_protect_count(void)
     sAIScriptPtr += 2;
 }
 
-static void Cmd_nullsub_52(void)
+static void Cmd_get_move_category_from_result(void)
 {
+    AI_THINKING_STRUCT->funcResult = gBattleMoves[AI_THINKING_STRUCT->funcResult].category;
+
+    sAIScriptPtr += 1;
 }
 
-static void Cmd_nullsub_53(void)
+static void Cmd_get_threat_level(void)
 {
+    u8 battlerId;
+    u8 category;
+    u8 i;
+    u8 movesOfCategory;
+
+    if (sAIScriptPtr[1] == AI_USER)
+        battlerId = gBattlerAttacker;
+    else
+        battlerId = gBattlerTarget;
+
+    category = sAIScriptPtr[2];
+
+    movesOfCategory = 0;
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        if (gBattleMons[battlerId].moves[i] != MOVE_NONE
+                && gBattleMoves[gBattleMons[battlerId].moves[i]].category == category)
+            movesOfCategory++;
+    }
+
+    if (movesOfCategory == 0)
+    {
+        AI_THINKING_STRUCT->funcResult = AI_THREAT_NONE;
+        return;
+    }
+
+    switch(category)
+    {
+        case CATEGORY_PHYSICAL:
+            if (gBattleMons[battlerId].attack * 4 < gBattleMons[battlerId].spAttack * 3)
+                AI_THINKING_STRUCT->funcResult =  AI_THREAT_LOW;
+            else if (gBattleMons[battlerId].attack * 4 > gBattleMons[battlerId].spAttack * 5)
+                AI_THINKING_STRUCT->funcResult =  AI_THREAT_HIGH;
+            else
+                AI_THINKING_STRUCT->funcResult =  AI_THREAT_MEDIUM;
+            return;
+        case CATEGORY_SPECIAL:
+            if (gBattleMons[battlerId].spAttack * 4 < gBattleMons[battlerId].attack * 3)
+                AI_THINKING_STRUCT->funcResult =  AI_THREAT_LOW;
+            else if (gBattleMons[battlerId].spAttack * 4 > gBattleMons[battlerId].attack * 5)
+                AI_THINKING_STRUCT->funcResult =  AI_THREAT_HIGH;
+            else
+                AI_THINKING_STRUCT->funcResult =  AI_THREAT_MEDIUM;
+            return;
+        default:
+            AI_THINKING_STRUCT->funcResult =  AI_THREAT_MEDIUM;
+    }
 }
 
 static void Cmd_nullsub_54(void)
@@ -1941,6 +2013,14 @@ static void Cmd_if_target_taunted(void)
 static void Cmd_if_target_not_taunted(void)
 {
     if (gDisableStructs[gBattlerTarget].tauntTimer == 0)
+        sAIScriptPtr = T1_READ_PTR(sAIScriptPtr + 1);
+    else
+        sAIScriptPtr += 5;
+}
+
+static void Cmd_if_ally(void)
+{
+    if (GET_BATTLER_SIDE(gBattlerAttacker) == GET_BATTLER_SIDE(gBattlerTarget))
         sAIScriptPtr = T1_READ_PTR(sAIScriptPtr + 1);
     else
         sAIScriptPtr += 5;
