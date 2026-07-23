@@ -1628,3 +1628,7 @@
 	callnative BS_setPhoenixWingHeal
 	.4byte \ifNoHeal
 	.endm
+
+	.macro setTrickRoom
+	callnative BS_setTrickRoom
+	.endm

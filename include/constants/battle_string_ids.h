@@ -451,8 +451,11 @@
 #define STRINGID_PKMNSITEMGLEAMS 450
 #define STRINGID_CANTSELECTMOVEBECAUSEOFITEM 451
 #define STRINGID_PKMNHURTSWITHITEM 452
+#define STRINGID_TRICKROOMSTARTED 453
+#define STRINGID_TRICKROOMCONTINUES 454
+#define STRINGID_TRICKROOMENDS 455
 
-#define BATTLESTRINGS_COUNT     453
+#define BATTLESTRINGS_COUNT     456
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -523,6 +526,10 @@
 // gSandStormHailContinuesStringIds / gSandStormHailDmgStringIds/ gSandStormHailEndStringIds
 #define B_MSG_SANDSTORM  0
 #define B_MSG_HAIL       1
+
+// gDistortionChangeStringIds
+#define B_MSG_TRICK_ROOM 0
+#define B_MSG_DISTORTION_FAILED  1
 
 // gReflectLightScreenSafeguardStringIds
 #define B_MSG_SIDE_STATUS_FAILED     0

@@ -530,6 +530,7 @@ enum
     ENDTURN_SANDSTORM,
     ENDTURN_SUN,
     ENDTURN_HAIL,
+    ENDTURN_TRICK_ROOM,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -896,6 +897,26 @@ u8 DoFieldEndTurnEffects(void)
                 effect++;
             }
             gBattleStruct->turnCountersTracker++;
+            break;
+        case ENDTURN_TRICK_ROOM:
+            if (gBattleDistortion & B_DISTORTION_TRICK_ROOM)
+            {
+                if (gWishFutureKnock.distortionDuration == 0
+                    || --gWishFutureKnock.distortionDuration > 0)
+                {
+                    gBattlescriptCurrInstr = BattleScript_DistortionContinues;
+                }
+                else
+                {
+                    gBattleDistortion &= ~B_DISTORTION_TRICK_ROOM;
+                    gBattlescriptCurrInstr = BattleScript_DistortionEnds;
+                }
+                // TODO animation?
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TRICK_ROOM;
+                BattleScriptExecute(gBattlescriptCurrInstr);
+                effect++;
+            }
+            gBattleStruct ->turnCountersTracker++;
             break;
         case ENDTURN_FIELD_COUNT:
             effect++;

@@ -7825,4 +7825,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
+
+    [MOVE_TRICK_ROOM] =
+    {
+        .effect = EFFECT_TRICK_ROOM,
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .category = CATEGORY_STATUS,
+        .accuracy = 0,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = -7,
+        .flags = 0,
+    },
 };

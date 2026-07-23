@@ -11413,3 +11413,21 @@ void BS_setPhoenixWingHeal(void)
 
     gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
 }
+
+void BS_setTrickRoom(void)
+{
+
+    if (gBattleDistortion & B_DISTORTION_TRICK_ROOM)
+    {
+        gMoveResultFlags |= MOVE_RESULT_MISSED;
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DISTORTION_FAILED;
+    }
+    else
+    {
+        gBattleDistortion = B_DISTORTION_TRICK_ROOM;
+        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TRICK_ROOM;
+        gWishFutureKnock.distortionDuration = 5;
+    }
+
+    gBattlescriptCurrInstr += 5;
+}

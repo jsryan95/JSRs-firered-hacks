@@ -478,7 +478,7 @@ gBattleAnims_Moves::
 	.4byte Move_PSYCHO_SHIFT
 	.4byte Move_TOXIC_SPIKES
     @ space for generation 4 moves
-	.4byte Move_NONE
+	.4byte Move_TRICK_ROOM
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -6680,6 +6680,7 @@ Move_DRAGON_RAGE:
 	waitforvisualfinish
 	end
 
+Move_TRICK_ROOM:
 Move_RAIN_DANCE:
 	loadspritegfx ANIM_TAG_RAIN_DROPS
 	playsewithpan SE_M_RAIN_DANCE, SOUND_PAN_ATTACKER

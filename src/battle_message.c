@@ -408,6 +408,9 @@ static const u8 sText_StartedHail[] = _("It started to hail!");
 static const u8 sText_HailContinues[] = _("Hail continues to fall.");
 static const u8 sText_HailStopped[] = _("The hail stopped.");
 static const u8 sText_WeatherCleared[] = _("The weather cleared up!");
+static const u8 sText_TrickRoomStarted[] = _("{B_ATK_NAME_WITH_PREFIX} twisted\nthe dimensions!");
+static const u8 sText_TrickRoomContinues[] = _("The TRICK ROOM effect continues.");
+static const u8 sText_TrickRoomEnds[] = _("The twisted dimensions\nreturned to normal.");
 static const u8 sText_FailedToSpitUp[] = _("But it failed to SPIT UP\na thing!");
 static const u8 sText_FailedToSwallow[] = _("But it failed to SWALLOW\na thing!");
 static const u8 sText_WindBecameHeatWave[] = _("The wind turned into a\nHEAT WAVE!");
@@ -1020,6 +1023,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNSITEMGLEAMS - BATTLESTRINGS_TABLE_START]                = sText_PkmnsItemGleams,
     [STRINGID_CANTSELECTMOVEBECAUSEOFITEM - BATTLESTRINGS_TABLE_START]    = sText_CantSelectMoveBecauseOfItem,
     [STRINGID_PKMNHURTSWITHITEM - BATTLESTRINGS_TABLE_START]              = sText_PkmnHurtsWithItem,
+    [STRINGID_TRICKROOMSTARTED - BATTLESTRINGS_TABLE_START]               = sText_TrickRoomStarted,
+    [STRINGID_TRICKROOMCONTINUES - BATTLESTRINGS_TABLE_START]             = sText_TrickRoomContinues,
+    [STRINGID_TRICKROOMENDS - BATTLESTRINGS_TABLE_START]                  = sText_TrickRoomEnds,
 };
 
 const u16 gMissStringIds[] =
@@ -1074,6 +1080,22 @@ const u16 gRainContinuesStringIds[] =
     [B_MSG_RAIN_CONTINUES]     = STRINGID_RAINCONTINUES,
     [B_MSG_DOWNPOUR_CONTINUES] = STRINGID_DOWNPOURCONTINUES,
     [B_MSG_RAIN_STOPPED]       = STRINGID_RAINSTOPPED
+};
+
+const u16 gMoveDistortionChangeStringIds[] =
+{
+    [B_MSG_TRICK_ROOM] = STRINGID_TRICKROOMSTARTED,
+    [B_MSG_DISTORTION_FAILED]  = STRINGID_BUTITFAILED
+};
+
+const u16 gDistortionContinuesStringIds[] =
+{
+    [B_MSG_TRICK_ROOM] = STRINGID_TRICKROOMCONTINUES
+};
+
+const u16 gDistortionEndsStringIds[] =
+{
+    [B_MSG_TRICK_ROOM] = STRINGID_TRICKROOMENDS
 };
 
 const u16 gProtectLikeUsedStringIds[] =

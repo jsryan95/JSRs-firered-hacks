@@ -197,6 +197,7 @@ EWRAM_DATA u8 gBattleOutcome = 0;
 EWRAM_DATA struct ProtectStruct gProtectStructs[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA struct SpecialStatus gSpecialStatuses[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA u16 gBattleWeather = 0;
+EWRAM_DATA u8 gBattleDistortion = 0;
 EWRAM_DATA struct WishFutureKnock gWishFutureKnock = {0};
 EWRAM_DATA u16 gIntroSlideFlags = 0;
 EWRAM_DATA u8 gSentPokesToOpponent[2] = {0};
@@ -2258,6 +2259,7 @@ static void BattleStartClearSetData(void)
     gBattlerAttacker = 0;
     gBattlerTarget = 0;
     gBattleWeather = 0;
+    gBattleDistortion = 0;
 
     dataPtr = (u8 *)&gWishFutureKnock;
     for (i = 0; i < sizeof(struct WishFutureKnock); i++)
@@ -3510,6 +3512,12 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         speedBattler2 *= 2;
     if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
         speedBattler2 = UINT_MAX;
+
+    if (gBattleDistortion & B_DISTORTION_TRICK_ROOM)
+    {
+        speedBattler1 = USHRT_MAX - speedBattler1;
+        speedBattler2 = USHRT_MAX - speedBattler2;
+    }
 
     if (hasActiveAbility(battler1, ABILITY_STALL) && !hasActiveAbility(battler2, ABILITY_STALL))
         speedBattler1 = 0;

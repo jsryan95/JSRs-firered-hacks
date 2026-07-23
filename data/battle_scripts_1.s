@@ -341,6 +341,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectFrenzyPlant            @ EFFECT_FRENZY_PLANT
 	.4byte BattleScript_EffectJawLock                @ EFFECT_JAW_LOCK
 	.4byte BattleScript_EffectPhoenixWing            @ EFFECT_PHOENIX_WING
+	.4byte BattleScript_EffectTrickRoom              @ EFFECT_TRICK_ROOM
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -3803,6 +3804,16 @@ BattleScript_OverworldWeatherStarts::
 	playanimation_var BS_ATTACKER, sB_ANIM_ARG1
 	end3
 
+BattleScript_DistortionContinues::
+	printfromtable gDistortionContinuesStringIds
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
+BattleScript_DistortionEnds::
+	printfromtable gDistortionEndsStringIds
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
 BattleScript_SideStatusWoreOff::
 	printstring STRINGID_PKMNSXWOREOFF
 	waitmessage B_WAIT_TIME_LONG
@@ -6470,5 +6481,16 @@ BattleScript_EffectPhoenixWing::
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_PhoenixWingTryFainting::
 	tryfaintmon BS_TARGET
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectTrickRoom::
+	attackcanceler
+	attackstring
+	ppreduce
+	setTrickRoom
+	attackanimation
+	waitanimation
+	printfromtable gMoveDistortionChangeStringIds
+	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 

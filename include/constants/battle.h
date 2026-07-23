@@ -237,6 +237,10 @@
 #define B_WEATHER_HAIL                (B_WEATHER_HAIL_TEMPORARY | B_WEATHER_HAIL_PERMANENT)
 #define B_WEATHER_ANY                 (B_WEATHER_RAIN | B_WEATHER_SANDSTORM | B_WEATHER_SUN | B_WEATHER_HAIL)
 
+// Battle distortion flags
+#define B_DISTORTION_TRICK_ROOM (1 << 0)
+#define B_DISTORTION_ANY        (B_DISTORTION_TRICK_ROOM)
+
 // Move Effects
 #define MOVE_EFFECT_SLEEP               1
 #define MOVE_EFFECT_POISON              2
