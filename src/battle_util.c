@@ -1972,7 +1972,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             gLastUsedAbility = special;
         else if (gBattleMons[battler].status3 & STATUS3_GASTRO_ACID)
             gLastUsedAbility = ABILITY_NONE;
-        else if (gBattleWeather & B_WEATHER_ASH)
+        else if (gBattleWeather & B_WEATHER_ASH && !isCloudNineOrAirLockOnField())
             gLastUsedAbility = ABILITY_NONE;
         else
             gLastUsedAbility = gBattleMons[battler].ability;
@@ -4044,16 +4044,32 @@ u8 IsMonDisobedient(void)
     }
 }
 
+bool8 isCloudNineOrAirLockOnField(void)
+{
+    u8 i;
+
+    for (i = 0; i < gBattlersCount; i++)
+    {
+        if (gBattleMons[i].hp == 0)
+            continue;
+
+        if ((gBattleMons[i].ability == ABILITY_CLOUD_NINE || gBattleMons[i].ability == ABILITY_AIR_LOCK)
+            && !(gBattleMons[i].status3 & STATUS3_GASTRO_ACID))
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
 u8 hasActiveAbility(u8 battler, u8 ability)
 {
-        
     if (gBattleMons[battler].ability != ability)
         return FALSE;
 
     if (gBattleMons[battler].status3 & STATUS3_GASTRO_ACID)
         return FALSE;
 
-    if (gBattleWeather & B_WEATHER_ASH) // TODO don't suppress Cloud Nine or Air Lock
+    if ((gBattleWeather & B_WEATHER_ASH) && !isCloudNineOrAirLockOnField())
         return FALSE;
 
     return TRUE;
