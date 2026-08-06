@@ -127,8 +127,8 @@ static void Cmd_get_move_effect_from_result(void);
 static void Cmd_get_protect_count(void);
 static void Cmd_get_move_category_from_result(void);
 static void Cmd_get_threat_level(void);
-static void Cmd_nullsub_54(void);
-static void Cmd_nullsub_55(void);
+static void Cmd_has_priority_move(void);
+static void Cmd_has_multi_target_move(void);
 static void Cmd_nullsub_56(void);
 static void Cmd_nullsub_57(void);
 static void Cmd_call(void);
@@ -232,8 +232,8 @@ static const BattleAICmdFunc sBattleAICmdTable[] =
     Cmd_get_protect_count,                // 0x51
     Cmd_get_move_category_from_result,    // 0x52
     Cmd_get_threat_level,                 // 0x53
-    Cmd_nullsub_54,                       // 0x54
-    Cmd_nullsub_55,                       // 0x55
+    Cmd_has_priority_move,                // 0x54
+    Cmd_has_multi_target_move,            // 0x55
     Cmd_nullsub_56,                       // 0x56
     Cmd_nullsub_57,                       // 0x57
     Cmd_call,                             // 0x58
@@ -1912,6 +1912,7 @@ static void Cmd_get_threat_level(void)
     if (movesOfCategory == 0)
     {
         AI_THINKING_STRUCT->funcResult = AI_THREAT_NONE;
+        sAIScriptPtr += 3;
         return;
     }
 
@@ -1924,6 +1925,7 @@ static void Cmd_get_threat_level(void)
                 AI_THINKING_STRUCT->funcResult =  AI_THREAT_HIGH;
             else
                 AI_THINKING_STRUCT->funcResult =  AI_THREAT_MEDIUM;
+            sAIScriptPtr += 3;
             return;
         case CATEGORY_SPECIAL:
             if (gBattleMons[battlerId].spAttack * 4 < gBattleMons[battlerId].attack * 3)
@@ -1932,18 +1934,62 @@ static void Cmd_get_threat_level(void)
                 AI_THINKING_STRUCT->funcResult =  AI_THREAT_HIGH;
             else
                 AI_THINKING_STRUCT->funcResult =  AI_THREAT_MEDIUM;
+            sAIScriptPtr += 3;
             return;
         default:
             AI_THINKING_STRUCT->funcResult =  AI_THREAT_MEDIUM;
+            sAIScriptPtr += 3;
     }
 }
 
-static void Cmd_nullsub_54(void)
+static void Cmd_has_priority_move(void)
 {
+    u8 battlerId;
+    u8 i;
+
+    if (sAIScriptPtr[1] == AI_USER)
+        battlerId = gBattlerAttacker;
+    else
+        battlerId = BATTLE_OPPOSITE(gBattlerAttacker);
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        if (gBattleMons[battlerId].moves[i] != MOVE_NONE
+            && gBattleMoves[gBattleMons[battlerId].moves[i]].priority > 0)
+        {
+            AI_THINKING_STRUCT->funcResult = TRUE;
+            sAIScriptPtr += 2;
+            break;
+        }
+    }
+
+    AI_THINKING_STRUCT->funcResult = FALSE;
+    sAIScriptPtr += 2;
 }
 
-static void Cmd_nullsub_55(void)
+static void Cmd_has_multi_target_move(void)
 {
+    u8 battlerId;
+    u8 i;
+
+    if (sAIScriptPtr[1] == AI_USER)
+        battlerId = gBattlerAttacker;
+    else
+        battlerId = BATTLE_OPPOSITE(gBattlerAttacker);
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        if (gBattleMons[battlerId].moves[i] != MOVE_NONE
+            && gBattleMoves[gBattleMons[battlerId].moves[i]].target & (MOVE_TARGET_BOTH | MOVE_TARGET_FOES_AND_ALLY))
+        {
+            AI_THINKING_STRUCT->funcResult = TRUE;
+            sAIScriptPtr += 2;
+            break;
+        }
+    }
+
+    AI_THINKING_STRUCT->funcResult = FALSE;
+    sAIScriptPtr += 2;
 }
 
 static void Cmd_nullsub_56(void)

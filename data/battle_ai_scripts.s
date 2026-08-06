@@ -105,7 +105,7 @@ CheckIfMoonPlateCancelsDragonMove::
 
 AI_CheckBadMove_CheckSoundproof::
 	get_ability AI_TARGET
-	if_not_equal ABILITY_SOUNDPROOF, AI_CheckBadMove_CheckEffect
+	if_not_equal ABILITY_SOUNDPROOF, AI_CheckBadMove_CheckSafetyGoggles
 	if_move MOVE_GROWL, Score_Minus10
 	if_move MOVE_ROAR, Score_Minus10
 	if_move MOVE_SING, Score_Minus10
@@ -118,6 +118,15 @@ AI_CheckBadMove_CheckSoundproof::
 	if_move MOVE_HYPER_VOICE, Score_Minus10
 	if_move MOVE_BUG_BUZZ, Score_Minus10
 	if_move MOVE_SNARL, Score_Minus10
+
+AI_CheckBadMove_CheckSafetyGoggles::
+	get_hold_effect AI_TARGET
+	if_not_equal HOLD_EFFECT_SAFETY_GOGGLES, AI_CheckBadMove_CheckEffect
+	if_move MOVE_POISON_POWDER, Score_Minus10
+	if_move MOVE_SLEEP_POWDER, Score_Minus10
+	if_move MOVE_STUN_SPORE, Score_Minus10
+	if_move MOVE_SPORE, Score_Minus10
+	if_move MOVE_COTTON_SPORE, Score_Minus10
 
 AI_CheckBadMove_CheckEffect::
 	if_effect EFFECT_SLEEP, AI_CBM_Sleep
@@ -783,8 +792,23 @@ AI_CBM_LuckyChant::
 	end
 
 AI_CBM_QuickGuard::
+	has_priority_move AI_TARGET
+	if_equal 0, Score_Minus10
+	end
+
 AI_CBM_WideGuard::
+	has_multi_target_move AI_TARGET
+	if_equal 0, Score_Minus10
+	end
+
 AI_CBM_SuckerPunch::
+	get_threat_level AI_TARGET, CATEGORY_PHYSICAL
+	if_more_than AI_THREAT_NONE, AI_CBM_SuckerPunchEnd
+	get_threat_level AI_TARGET, CATEGORY_SPECIAL
+	if_more_than AI_THREAT_NONE, AI_CBM_SuckerPunchEnd
+	goto Score_Minus10
+
+AI_CBM_SuckerPunchEnd::
 	end
 
 AI_CBM_HealBlock::

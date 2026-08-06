@@ -496,14 +496,14 @@
 	.byte \category
 	.endm
 
-	@ nullsub
-	.macro ai_54
+	.macro has_priority_move battler:req
 	.byte 0x54
+	.byte \battler
 	.endm
 
-	@ nullsub
-	.macro ai_55
+	.macro has_multi_target_move battler:req
 	.byte 0x55
+	.byte \battler
 	.endm
 
 	@ nullsub
