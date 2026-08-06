@@ -454,8 +454,11 @@
 #define STRINGID_TRICKROOMSTARTED 453
 #define STRINGID_TRICKROOMCONTINUES 454
 #define STRINGID_TRICKROOMENDS 455
+#define STRINGID_ASHCONTINUESTOFALL 456
+#define STRINGID_ASHSTOPPEDFALLING 457
+#define STRINGID_ASHISFALLING 458
 
-#define BATTLESTRINGS_COUNT     456
+#define BATTLESTRINGS_COUNT     459
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

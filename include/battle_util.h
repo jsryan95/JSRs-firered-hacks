@@ -101,7 +101,6 @@ u8 IsMonDisobedient(void);
 u8 hasActiveAbility(u8 battler, u8 ability);
 u8 isPunchingMove(u16 move);
 u16 getItem(u8 battler);
-u8 isAbilityOnField(u8 ability);
 u8 isAirborne(u8 battler);
 
 #endif // GUARD_BATTLE_UTIL_H

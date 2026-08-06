@@ -669,6 +669,7 @@ gBattleAnims_General::
 	.4byte Move_HAZE                        @ B_ANIM_BLACK_SMOKE
 	.4byte Move_BATON_PASS                  @ B_ANIM_U_TURN_SWITCH
 	.4byte General_HealingEffect            @ B_ANIM_PHOENIX_WING_HEAL
+	.4byte General_Sandstorm                @ B_ANIM_ASH_CONTINUES
 
 	.align 2
 gBattleAnims_Special::

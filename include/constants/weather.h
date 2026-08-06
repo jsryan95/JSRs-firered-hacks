@@ -8,7 +8,7 @@
 #define WEATHER_SNOW               4   // unused
 #define WEATHER_RAIN_THUNDERSTORM  5   // unused
 #define WEATHER_FOG_HORIZONTAL     6
-#define WEATHER_VOLCANIC_ASH       7   // unused
+#define WEATHER_VOLCANIC_ASH       7
 #define WEATHER_SANDSTORM          8   // unused
 #define WEATHER_FOG_DIAGONAL       9   // unused
 #define WEATHER_UNDERWATER         10  // unused

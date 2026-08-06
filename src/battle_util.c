@@ -530,6 +530,7 @@ enum
     ENDTURN_SANDSTORM,
     ENDTURN_SUN,
     ENDTURN_HAIL,
+    ENDTURN_ASH,
     ENDTURN_TRICK_ROOM,
     ENDTURN_FIELD_COUNT,
 };
@@ -807,7 +808,7 @@ u8 DoFieldEndTurnEffects(void)
             {
                 if (!(gBattleWeather & B_WEATHER_RAIN_PERMANENT))
                 {
-                    if (!isAbilityOnField(ABILITY_DROUGHT))
+                    if (!AbilityBattleEffects(ABILITYEFFECT_CHECK_ON_FIELD, 0, ABILITY_DRIZZLE, 0, 0))
                         --gWishFutureKnock.weatherDuration;
                     if (gWishFutureKnock.weatherDuration == 0)
                     {
@@ -838,7 +839,7 @@ u8 DoFieldEndTurnEffects(void)
             if (gBattleWeather & B_WEATHER_SANDSTORM)
             {
                 if (!(gBattleWeather & B_WEATHER_SANDSTORM_PERMANENT)
-                        && !isAbilityOnField(ABILITY_SAND_STREAM)
+                        && !AbilityBattleEffects(ABILITYEFFECT_CHECK_ON_FIELD, 0, ABILITY_SAND_STREAM, 0, 0)
                         && --gWishFutureKnock.weatherDuration == 0)
                 {
                     gBattleWeather &= ~B_WEATHER_SANDSTORM_TEMPORARY;
@@ -860,7 +861,7 @@ u8 DoFieldEndTurnEffects(void)
             if (gBattleWeather & B_WEATHER_SUN)
             {
                 if (!(gBattleWeather & B_WEATHER_SUN_PERMANENT)
-                        && !isAbilityOnField(ABILITY_DROUGHT)
+                        && AbilityBattleEffects(ABILITYEFFECT_CHECK_ON_FIELD, 0, ABILITY_DROUGHT, 0, 0)
                         && --gWishFutureKnock.weatherDuration == 0)
                 {
                     gBattleWeather &= ~B_WEATHER_SUN_TEMPORARY;
@@ -880,7 +881,7 @@ u8 DoFieldEndTurnEffects(void)
             if (gBattleWeather & B_WEATHER_HAIL)
             {
                 if (!(gBattleWeather & B_WEATHER_HAIL_PERMANENT)
-                        && !isAbilityOnField(ABILITY_SNOW_WARNING)
+                        && !AbilityBattleEffects(ABILITYEFFECT_CHECK_ON_FIELD, 0, ABILITY_SNOW_WARNING, 0, 0)
                         && --gWishFutureKnock.weatherDuration == 0)
                 {
                     gBattleWeather &= ~B_WEATHER_HAIL_TEMPORARY;
@@ -893,6 +894,25 @@ u8 DoFieldEndTurnEffects(void)
 
                 gBattleScripting.animArg1 = B_ANIM_HAIL_CONTINUES;
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_HAIL;
+                BattleScriptExecute(gBattlescriptCurrInstr);
+                effect++;
+            }
+            gBattleStruct->turnCountersTracker++;
+            break;
+        case ENDTURN_ASH:
+            if (gBattleWeather & B_WEATHER_ASH)
+            {
+                if (!(gBattleWeather & B_WEATHER_ASH_PERMANENT)
+                        && --gWishFutureKnock.weatherDuration == 0)
+                {
+                    gBattleWeather &= ~B_WEATHER_ASH_TEMPORARY;
+                    gBattlescriptCurrInstr = BattleScript_AshStopsFalling;
+                }
+                else
+                {
+                    gBattlescriptCurrInstr = BattleScript_AshContinues;
+                }
+
                 BattleScriptExecute(gBattlescriptCurrInstr);
                 effect++;
             }
@@ -1952,6 +1972,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             gLastUsedAbility = special;
         else if (gBattleMons[battler].status3 & STATUS3_GASTRO_ACID)
             gLastUsedAbility = ABILITY_NONE;
+        else if (gBattleWeather & B_WEATHER_ASH)
+            gLastUsedAbility = ABILITY_NONE;
         else
             gLastUsedAbility = gBattleMons[battler].ability;
 
@@ -2001,6 +2023,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     {
                         gBattleWeather = B_WEATHER_SUN;
                         gBattleScripting.animArg1 = B_ANIM_SUN_CONTINUES;
+                        gBattleScripting.battler = battler;
+                        effect++;
+                    }
+                    break;
+                case WEATHER_VOLCANIC_ASH:
+                    if (!(gBattleWeather & B_WEATHER_ASH))
+                    {
+                        gBattleWeather = B_WEATHER_ASH;
+                        gBattleScripting.animArg1 = B_ANIM_ASH_CONTINUES;
                         gBattleScripting.battler = battler;
                         effect++;
                     }
@@ -4015,20 +4046,17 @@ u8 IsMonDisobedient(void)
 
 u8 hasActiveAbility(u8 battler, u8 ability)
 {
-    return gBattleMons[battler].ability == ability && !(gBattleMons[battler].status3 & STATUS3_GASTRO_ACID);
-}
+        
+    if (gBattleMons[battler].ability != ability)
+        return FALSE;
 
-u8 isAbilityOnField(u8 ability)
-{
-    if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
-    {
-        return hasActiveAbility(GetBattlerAtPosition(0), ability)
-                || hasActiveAbility(GetBattlerAtPosition(1), ability)
-                || hasActiveAbility(GetBattlerAtPosition(2), ability)
-                || hasActiveAbility(GetBattlerAtPosition(3), ability);
-    }
-    return hasActiveAbility(GetBattlerAtPosition(0), ability)
-            || hasActiveAbility(GetBattlerAtPosition(1), ability);
+    if (gBattleMons[battler].status3 & STATUS3_GASTRO_ACID)
+        return FALSE;
+
+    if (gBattleWeather & B_WEATHER_ASH) // TODO don't suppress Cloud Nine or Air Lock
+        return FALSE;
+
+    return TRUE;
 }
 
 u8 isPunchingMove(u16 move)

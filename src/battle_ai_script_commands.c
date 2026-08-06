@@ -1396,10 +1396,12 @@ static void Cmd_if_status_not_in_party(void)
 
 enum
 {
+    WEATHER_TYPE_NONE,
     WEATHER_TYPE_SUNNY,
     WEATHER_TYPE_RAIN,
     WEATHER_TYPE_SANDSTORM,
     WEATHER_TYPE_HAIL,
+    WEATHER_TYPE_ASH,
 };
 
 extern u16 gBattleWeather;
@@ -1408,13 +1410,16 @@ static void Cmd_get_weather(void)
 {
     if (gBattleWeather & B_WEATHER_RAIN)
         AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_RAIN;
-    if (gBattleWeather & B_WEATHER_SANDSTORM)
+    else if (gBattleWeather & B_WEATHER_SANDSTORM)
         AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_SANDSTORM;
-    if (gBattleWeather & B_WEATHER_SUN)
+    else if (gBattleWeather & B_WEATHER_SUN)
         AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_SUNNY;
-    if (gBattleWeather & B_WEATHER_HAIL_TEMPORARY)
+    else if (gBattleWeather & B_WEATHER_HAIL)
         AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_HAIL;
-
+    else if (gBattleWeather & B_WEATHER_ASH)
+        AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_ASH;
+    else
+        AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_NONE;
     sAIScriptPtr += 1;
 }
 

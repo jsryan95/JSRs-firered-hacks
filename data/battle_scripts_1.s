@@ -3798,6 +3798,17 @@ BattleScript_SunlightFaded::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
+BattleScript_AshContinues::
+	printstring STRINGID_ASHCONTINUESTOFALL
+	waitmessage B_WAIT_TIME_LONG
+	playanimation BS_ATTACKER, B_ANIM_ASH_CONTINUES
+	end2
+
+BattleScript_AshStopsFalling::
+	printstring STRINGID_ASHSTOPPEDFALLING
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
 BattleScript_OverworldWeatherStarts::
 	printfromtable gWeatherStartsStringIds
 	waitmessage B_WAIT_TIME_LONG

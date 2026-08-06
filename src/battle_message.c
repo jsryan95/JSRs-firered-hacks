@@ -404,6 +404,9 @@ static const u8 sText_SandstormSubsided[] = _("The sandstorm subsided.");
 static const u8 sText_SunlightGotBright[] = _("The sunlight got bright!");
 static const u8 sText_SunlightStrong[] = _("The sunlight is strong.");
 static const u8 sText_SunlightFaded[] = _("The sunlight faded.");
+static const u8 sText_AshContinuesToFall[] = _("The ash continues to fall.");
+static const u8 sText_AshStopsFalling[] = _("The ash stopped falling.");
+static const u8 sText_AshIsFalling[] = _("Volcanic ash is falling.");
 static const u8 sText_StartedHail[] = _("It started to hail!");
 static const u8 sText_HailContinues[] = _("Hail continues to fall.");
 static const u8 sText_HailStopped[] = _("The hail stopped.");
@@ -1026,6 +1029,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_TRICKROOMSTARTED - BATTLESTRINGS_TABLE_START]               = sText_TrickRoomStarted,
     [STRINGID_TRICKROOMCONTINUES - BATTLESTRINGS_TABLE_START]             = sText_TrickRoomContinues,
     [STRINGID_TRICKROOMENDS - BATTLESTRINGS_TABLE_START]                  = sText_TrickRoomEnds,
+    [STRINGID_ASHCONTINUESTOFALL - BATTLESTRINGS_TABLE_START]             = sText_AshContinuesToFall,
+    [STRINGID_ASHSTOPPEDFALLING - BATTLESTRINGS_TABLE_START]               = sText_AshStopsFalling,
+    [STRINGID_ASHISFALLING - BATTLESTRINGS_TABLE_START]                    = sText_AshIsFalling,
 };
 
 const u16 gMissStringIds[] =
@@ -1322,7 +1328,7 @@ const u16 gWeatherStartsStringIds[] =
     [WEATHER_SNOW]               = STRINGID_ITISRAINING,
     [WEATHER_RAIN_THUNDERSTORM]  = STRINGID_ITISRAINING,
     [WEATHER_FOG_HORIZONTAL]     = STRINGID_ITISRAINING,
-    [WEATHER_VOLCANIC_ASH]       = STRINGID_ITISRAINING,
+    [WEATHER_VOLCANIC_ASH]       = STRINGID_ASHISFALLING,
     [WEATHER_SANDSTORM]          = STRINGID_SANDSTORMISRAGING,
     [WEATHER_FOG_DIAGONAL]       = STRINGID_ITISRAINING,
     [WEATHER_UNDERWATER]         = STRINGID_ITISRAINING,
