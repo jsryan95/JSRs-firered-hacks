@@ -159,6 +159,7 @@
 #define STATUS4_TRACE                   (1 << 20)
 #define STATUS4_AQUA_RING               (1 << 21)
 #define STATUS4_INTERFERENCE_POKES      (1 << 22)
+#define STATUS4_KNOCKED_DOWN            (1 << 23)
 #define STATUS4_SEMI_INVULNERABLE       (STATUS4_UNDERGROUND | STATUS4_ON_AIR | STATUS4_UNDERWATER)
 
 // Not really sure what a "hitmarker" is.
@@ -303,10 +304,10 @@
 #define MOVE_EFFECT_REMOVE_SLEEP        55
 #define MOVE_EFFECT_FORCE_OUT           56
 #define MOVE_EFFECT_JAW_LOCK            57
-#define MOVE_EFFECT_NOTHING_3A          58
+#define MOVE_EFFECT_SMACK_DOWN          58
 #define MOVE_EFFECT_SP_ATK_TWO_DOWN     59
 #define MOVE_EFFECT_SPEED_TWO_DOWN      60
-#define MOVE_EFFECT_DEF_SP_DEF_DOWN     61
+#define MOVE_EFFECT_CLEAR_SMOG          61
 #define MOVE_EFFECT_SPEED_DOWN          62
 #define MOVE_EFFECT_RECOIL_50           63
 #define NUM_MOVE_EFFECTS                64

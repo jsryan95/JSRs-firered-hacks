@@ -7839,4 +7839,32 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .priority = -7,
         .flags = 0,
     },
+
+    [MOVE_SMACK_DOWN] =
+    {
+        .effect = EFFECT_SMACK_DOWN,
+        .power = 50,
+        .type = TYPE_ROCK,
+        .category = CATEGORY_PHYSICAL,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+
+    [MOVE_CLEAR_SMOG] =
+    {
+        .effect = EFFECT_CLEAR_SMOG,
+        .power = 50,
+        .type = TYPE_POISON,
+        .category = CATEGORY_SPECIAL,
+        .accuracy = 0,
+        .pp = 15,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
 };

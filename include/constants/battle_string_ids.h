@@ -457,8 +457,10 @@
 #define STRINGID_ASHCONTINUESTOFALL 456
 #define STRINGID_ASHSTOPPEDFALLING 457
 #define STRINGID_ASHISFALLING 458
+#define STRINGID_KNOCKEDDOWN 459
+#define STRINGID_STATCHANGESCLEARED 460
 
-#define BATTLESTRINGS_COUNT     459
+#define BATTLESTRINGS_COUNT     461
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

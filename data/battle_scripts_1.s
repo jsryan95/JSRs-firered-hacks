@@ -342,6 +342,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectJawLock                @ EFFECT_JAW_LOCK
 	.4byte BattleScript_EffectPhoenixWing            @ EFFECT_PHOENIX_WING
 	.4byte BattleScript_EffectTrickRoom              @ EFFECT_TRICK_ROOM
+	.4byte BattleScript_EffectSmackDown              @ EFFECT_SMACK_DOWN
+	.4byte BattleScript_EffectClearSmog              @ EFFECT_CLEAR_SMOG
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -6504,4 +6506,22 @@ BattleScript_EffectTrickRoom::
 	printfromtable gMoveDistortionChangeStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectSmackDown::
+	setmoveeffect MOVE_EFFECT_SMACK_DOWN
+	goto BattleScript_EffectHit
+
+BattleScript_KnockedDown::
+	printstring STRINGID_KNOCKEDDOWN
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_EffectClearSmog::
+	setmoveeffect MOVE_EFFECT_CLEAR_SMOG
+	goto BattleScript_EffectHit
+
+BattleScript_StatChangesCleared::
+	printstring STRINGID_STATCHANGESCLEARED
+	waitmessage B_WAIT_TIME_LONG
+	return
 

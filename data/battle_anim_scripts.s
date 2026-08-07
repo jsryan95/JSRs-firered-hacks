@@ -558,9 +558,9 @@ gBattleAnims_Moves::
 	.4byte Move_DRAGON_TAIL
 	.4byte Move_GUARD_SPLIT
 	.4byte Move_POWER_SPLIT
+	.4byte Move_SMACK_DOWN
+	.4byte Move_CLEAR_SMOG
 	@ space for generation 5 moves
-	.4byte Move_NONE
-	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
 	.4byte Move_NONE
@@ -7539,6 +7539,7 @@ ToxicBubbles:
 	return
 
 Move_SLUDGE:
+Move_CLEAR_SMOG:
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	playsewithpan SE_M_BUBBLE3, SOUND_PAN_ATTACKER
 	createsprite gSludgeProjectileSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 0
@@ -11342,6 +11343,7 @@ DiveAttackWaterDroplets:
 
 Move_ROCK_BLAST:
 Move_ROCK_WRECKER:
+Move_SMACK_DOWN:
 	loadspritegfx ANIM_TAG_ROCKS
 	loadspritegfx ANIM_TAG_IMPACT
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 6

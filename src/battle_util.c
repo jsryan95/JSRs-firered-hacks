@@ -4098,7 +4098,8 @@ u16 getItem(u8 battler)
 u8 isAirborne(u8 battler)
 {
     if (ItemId_GetHoldEffect(getItem(battler)) == HOLD_EFFECT_IRON_BALL
-            || (gstatuses4[battler] & STATUS4_ROOTED))
+            || (gstatuses4[battler] & STATUS4_ROOTED)
+            || (gstatuses4[battler] & STATUS4_KNOCKED_DOWN))
         return FALSE;
     if (IS_BATTLER_OF_TYPE(battler, TYPE_FLYING)
             || hasActiveAbility(battler, ABILITY_LEVITATE)

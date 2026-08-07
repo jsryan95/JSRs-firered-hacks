@@ -488,6 +488,8 @@ static const u8 sText_ExclamationMark2[] = _("!");
 static const u8 sText_ExclamationMark3[] = _("!");
 static const u8 sText_ExclamationMark4[] = _("!");
 static const u8 sText_ExclamationMark5[] = _("!");
+static const u8 sText_KnockedDown[] = _("{B_EFF_NAME_WITH_PREFIX}\nwas knocked down!");
+static const u8 sText_StatChangesCleared[] = _("{B_EFF_NAME_WITH_PREFIX}'s stats\nreturned to normal!");
 
 static const u8 sText_HP2[] = _("HP");
 static const u8 sText_Attack2[] = _("ATTACK");
@@ -1030,8 +1032,10 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_TRICKROOMCONTINUES - BATTLESTRINGS_TABLE_START]             = sText_TrickRoomContinues,
     [STRINGID_TRICKROOMENDS - BATTLESTRINGS_TABLE_START]                  = sText_TrickRoomEnds,
     [STRINGID_ASHCONTINUESTOFALL - BATTLESTRINGS_TABLE_START]             = sText_AshContinuesToFall,
-    [STRINGID_ASHSTOPPEDFALLING - BATTLESTRINGS_TABLE_START]               = sText_AshStopsFalling,
-    [STRINGID_ASHISFALLING - BATTLESTRINGS_TABLE_START]                    = sText_AshIsFalling,
+    [STRINGID_ASHSTOPPEDFALLING - BATTLESTRINGS_TABLE_START]              = sText_AshStopsFalling,
+    [STRINGID_ASHISFALLING - BATTLESTRINGS_TABLE_START]                   = sText_AshIsFalling,
+    [STRINGID_KNOCKEDDOWN - BATTLESTRINGS_TABLE_START]                    = sText_KnockedDown,
+    [STRINGID_STATCHANGESCLEARED - BATTLESTRINGS_TABLE_START]             = sText_StatChangesCleared,
 };
 
 const u16 gMissStringIds[] =

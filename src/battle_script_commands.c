@@ -2522,7 +2522,7 @@ u8 GetBattlerTurnOrderNum(u8 battlerId)
 void SetMoveEffect(bool8 primary, u8 certain)
 {
     bool32 statusChanged = FALSE;
-    u8 affectsUser = 0; // 0x40 otherwise
+    u8 affectsUser, i = 0; // 0x40 otherwise
     bool32 noSunCanFreeze = TRUE;
 
     if (gBattleCommunication[MOVE_EFFECT_BYTE] & MOVE_EFFECT_AFFECTS_USER)
@@ -2949,6 +2949,26 @@ void SetMoveEffect(bool8 primary, u8 certain)
                     }
                 }
                 break;
+            case MOVE_EFFECT_SMACK_DOWN:
+                if (gstatuses4[gEffectBattler] & STATUS4_KNOCKED_DOWN)
+                {
+                    gBattlescriptCurrInstr++;
+                }
+                else
+                {
+                    gstatuses4[gEffectBattler] |= STATUS4_KNOCKED_DOWN;
+                    BattleScriptPush(gBattlescriptCurrInstr + 1);
+                    gBattlescriptCurrInstr = BattleScript_KnockedDown;
+                }
+                break;
+            case MOVE_EFFECT_CLEAR_SMOG:
+                for (i = 0; i < NUM_BATTLE_STATS; i++)
+                {
+                    gBattleMons[gEffectBattler].statStages[i] = DEFAULT_STAT_STAGE;
+                }
+                BattleScriptPush(gBattlescriptCurrInstr + 1);
+                gBattlescriptCurrInstr = BattleScript_StatChangesCleared;
+                break;
             case MOVE_EFFECT_RECOIL_25: // 25% recoil
                 gBattleMoveDamage = (gHpDealt) / 4;
                 if (gBattleMoveDamage == 0)
@@ -3175,10 +3195,6 @@ void SetMoveEffect(bool8 primary, u8 certain)
             case MOVE_EFFECT_ATK_DEF_DOWN: // SuperPower
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_AtkDefDown;
-                break;
-            case MOVE_EFFECT_DEF_SP_DEF_DOWN: // Close Combat
-                BattleScriptPush(gBattlescriptCurrInstr + 1);
-                gBattlescriptCurrInstr = BattleScript_DefSpDefDown;
                 break;
             case MOVE_EFFECT_RECOIL_33: // Double Edge
                 gBattleMoveDamage = gHpDealt / 3;
@@ -8998,7 +9014,7 @@ static void Cmd_furycuttercalc(void)
     {
         s32 i;
 
-        if (gDisableStructs[gBattlerAttacker].furyCutterCounter != 5)
+        if (gDisableStructs[gBattlerAttacker].furyCutterCounter != 4)
             gDisableStructs[gBattlerAttacker].furyCutterCounter++;
 
         gDynamicBasePower = gBattleMoves[gCurrentMove].power;

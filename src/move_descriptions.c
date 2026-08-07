@@ -537,6 +537,8 @@ const u8 gMoveDescription_PepperPowder[] = _("Emits an\ninvigorating powder\ntha
 const u8 gMoveDescription_JawLock[] = _("The user grabs\nthe foe with its\nteeth to stop either\none switching out.");
 const u8 gMoveDescription_PhoenixWing[] = _("A flying attack\nwreathed in flame\nthat may heal the\nuser.");
 const u8 gMoveDescription_TrickRoom[] = _("Twists space to\nmake slower POKéMON\ngo first for up\nto five turns.");
+const u8 gMoveDescription_SmackDown[] = _("Throws a stone to\ndamage the foe\nand knock it to\nthe ground.");
+const u8 gMoveDescription_ClearSmog[] = _("Throws a clump of\nspecial mud that\nresets the foe's\nstat changes.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
@@ -1098,4 +1100,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_JAW_LOCK - 1] = gMoveDescription_JawLock,
     [MOVE_PHOENIX_WING - 1] = gMoveDescription_PhoenixWing,
     [MOVE_TRICK_ROOM - 1] = gMoveDescription_TrickRoom,
+    [MOVE_SMACK_DOWN - 1] = gMoveDescription_SmackDown,
+    [MOVE_CLEAR_SMOG - 1] = gMoveDescription_ClearSmog,
 };
