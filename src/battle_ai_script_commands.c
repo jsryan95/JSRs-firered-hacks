@@ -42,6 +42,9 @@ AI scripts.
 static EWRAM_DATA const u8 *sAIScriptPtr = NULL;
 extern u8 *gBattleAI_ScriptsTable[];
 
+static u8 ChooseMoveOrAction_Singles(void);
+static u8 ChooseMoveOrAction_Doubles(void);
+
 static void Cmd_if_random_less_than(void);
 static void Cmd_if_random_greater_than(void);
 static void Cmd_if_random_equal(void);
@@ -334,37 +337,31 @@ void BattleAI_SetupAIData(void)
     // Choose proper trainer ai scripts.
     // Fire Red, why all the returns?!?
     if (gBattleTypeFlags & BATTLE_TYPE_SAFARI)
-    {
         AI_THINKING_STRUCT->aiFlags = AI_SCRIPT_SAFARI;
-        return;
-    }
     else if (gBattleTypeFlags & BATTLE_TYPE_ROAMER)
-    {
         AI_THINKING_STRUCT->aiFlags = AI_SCRIPT_ROAMING;
-        return;
-    }
-    else if (!(gBattleTypeFlags & (BATTLE_TYPE_TRAINER_TOWER | BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_BATTLE_TOWER)) && (gTrainerBattleOpponent_A != TRAINER_SECRET_BASE))
-    {
-        if (gBattleTypeFlags & BATTLE_TYPE_WILD_SCRIPTED)
-        {
-            AI_THINKING_STRUCT->aiFlags = AI_SCRIPT_CHECK_BAD_MOVE;
-            return;
-        }
-        else if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY_FRLG)
-        {
-            AI_THINKING_STRUCT->aiFlags = (AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY);
-            return;
-        }
-    }
     else
-    {
         AI_THINKING_STRUCT->aiFlags = (AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY);
-        return;
-    }
-    AI_THINKING_STRUCT->aiFlags = gTrainers[gTrainerBattleOpponent_A].aiFlags;
+        
+    if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+        AI_THINKING_STRUCT->aiFlags |= AI_SCRIPT_DOUBLE_BATTLE;
 }
 
 u8 BattleAI_ChooseMoveOrAction(void)
+{
+    u16 savedCurrentMove = gCurrentMove;
+    u8 ret;
+
+    if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+        ret = ChooseMoveOrAction_Singles();
+    else
+        ret = ChooseMoveOrAction_Doubles();
+
+    gCurrentMove = savedCurrentMove;
+    return ret;
+}
+
+static u8 ChooseMoveOrAction_Singles(void)
 {
     u8 currentMoveArray[MAX_MON_MOVES];
     u8 consideredMoveArray[MAX_MON_MOVES];
@@ -410,6 +407,127 @@ u8 BattleAI_ChooseMoveOrAction(void)
     }
 
     return consideredMoveArray[Random() % numOfBestMoves]; // break any ties that exist.
+}
+
+static u8 ChooseMoveOrAction_Doubles(void)
+{
+    s32 i;
+    s32 j;
+#ifndef BUGFIX
+    s32 scriptsToRun;
+#else
+    // the value assigned to this is a u32 (aiFlags)
+    // this becomes relevant because aiFlags can have bit 31 set
+    // and scriptsToRun is shifted
+    // this never happens in the vanilla game because bit 31 is
+    // only set when it's the first battle
+    u32 scriptsToRun;
+#endif
+    s16 bestMovePointsForTarget[MAX_BATTLERS_COUNT];
+    s8 mostViableTargetsArray[MAX_BATTLERS_COUNT];
+    u8 actionOrMoveIndex[MAX_BATTLERS_COUNT];
+    u8 mostViableMovesScores[MAX_MON_MOVES];
+    u8 mostViableMovesIndices[MAX_MON_MOVES];
+    s32 mostViableTargetsNo;
+    s32 mostViableMovesNo;
+    s16 mostMovePoints;
+
+    for (i = 0; i < MAX_BATTLERS_COUNT; i++)
+    {
+        if (i == gBattlerAttacker || gBattleMons[i].hp == 0)
+        {
+            actionOrMoveIndex[i] = 0xFF;
+            bestMovePointsForTarget[i] = -1;
+        }
+        else
+        {
+            BattleAI_SetupAIData();
+
+            gBattlerTarget = i;
+
+            if ((i & BIT_SIDE) != (gBattlerAttacker & BIT_SIDE))
+                RecordLastUsedMoveByTarget();
+
+            AI_THINKING_STRUCT->aiLogicId = 0;
+            AI_THINKING_STRUCT->movesetIndex = 0;
+            scriptsToRun = AI_THINKING_STRUCT->aiFlags;
+            while (scriptsToRun != 0)
+            {
+                if (scriptsToRun & 1)
+                {
+                    AI_THINKING_STRUCT->aiState = AIState_SettingUp;
+                    BattleAI_DoAIProcessing();
+                }
+                scriptsToRun >>= 1;
+                AI_THINKING_STRUCT->aiLogicId++;
+                AI_THINKING_STRUCT->movesetIndex = 0;
+            }
+
+            if (AI_THINKING_STRUCT->aiAction & AI_ACTION_FLEE)
+            {
+                actionOrMoveIndex[i] = AI_CHOICE_FLEE;
+            }
+            else if (AI_THINKING_STRUCT->aiAction & AI_ACTION_WATCH)
+            {
+                actionOrMoveIndex[i] = AI_CHOICE_WATCH;
+            }
+            else
+            {
+                mostViableMovesScores[0] = AI_THINKING_STRUCT->score[0];
+                mostViableMovesIndices[0] = 0;
+                mostViableMovesNo = 1;
+                for (j = 1; j < MAX_MON_MOVES; j++)
+                {
+                    if (gBattleMons[gBattlerAttacker].moves[j] != 0)
+                    {
+                        if (mostViableMovesScores[0] == AI_THINKING_STRUCT->score[j])
+                        {
+                            mostViableMovesScores[mostViableMovesNo] = AI_THINKING_STRUCT->score[j];
+                            mostViableMovesIndices[mostViableMovesNo] = j;
+                            mostViableMovesNo++;
+                        }
+                        if (mostViableMovesScores[0] < AI_THINKING_STRUCT->score[j])
+                        {
+                            mostViableMovesScores[0] = AI_THINKING_STRUCT->score[j];
+                            mostViableMovesIndices[0] = j;
+                            mostViableMovesNo = 1;
+                        }
+                    }
+                }
+                actionOrMoveIndex[i] = mostViableMovesIndices[Random() % mostViableMovesNo];
+                bestMovePointsForTarget[i] = mostViableMovesScores[0];
+
+                // Don't use a move against ally if it has less than 100 points.
+                if (i == BATTLE_PARTNER(gBattlerAttacker) && bestMovePointsForTarget[i] < 100)
+                {
+                    bestMovePointsForTarget[i] = -1;
+                    mostViableMovesScores[0] = mostViableMovesScores[0]; // Needed to match.
+                }
+            }
+        }
+    }
+
+    mostMovePoints = bestMovePointsForTarget[0];
+    mostViableTargetsArray[0] = 0;
+    mostViableTargetsNo = 1;
+
+    for (i = 1; i < MAX_BATTLERS_COUNT; i++)
+    {
+        if (mostMovePoints == bestMovePointsForTarget[i])
+        {
+            mostViableTargetsArray[mostViableTargetsNo] = i;
+            mostViableTargetsNo++;
+        }
+        if (mostMovePoints < bestMovePointsForTarget[i])
+        {
+            mostMovePoints = bestMovePointsForTarget[i];
+            mostViableTargetsArray[0] = i;
+            mostViableTargetsNo = 1;
+        }
+    }
+
+    gBattlerTarget = mostViableTargetsArray[Random() % mostViableTargetsNo];
+    return actionOrMoveIndex[gBattlerTarget];
 }
 
 static void BattleAI_DoAIProcessing(void)
