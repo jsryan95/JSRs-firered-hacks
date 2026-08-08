@@ -323,17 +323,19 @@ static const u8 sText_PkmnCutsSpecialAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_P
 static const u8 sText_PkmnPreventsStatLossWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nprevents stat loss!");
 static const u8 sText_PkmnHurtsWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nhurt {B_ATK_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnHurtsWithItem[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nhurt {B_ATK_NAME_WITH_PREFIX}!");
-static const u8 sText_PkmnAbilityBecameMummy[] = _("{B_ATK_NAME_WITH_PREFIX}'s ability\nbecame MUMMY!");
+static const u8 sText_PkmnAbilityBecameMummy[] = _("{B_ATK_NAME_WITH_PREFIX} got {B_DEF_NAME_WITH_PREFIX}'s\n{B_DEF_ABILITY}!");
 static const u8 sText_PkmnTraced[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} TRACED\n{B_BUFF1}'s {B_BUFF2}!");
 static const u8 sText_PkmnsXPreventsBurns[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_EFF_ABILITY}\nprevents burns!");
 static const u8 sText_PkmnsXBlocksY[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nblocks {B_CURRENT_MOVE}!");
 static const u8 sText_PkmnsXBlocksY2[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nblocks {B_CURRENT_MOVE}!");
 static const u8 sText_PkmnsItemBlocksMove[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nblocks {B_CURRENT_MOVE}!");
 static const u8 sText_PkmnsXRestoredHPALittle2[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\nrestored its HP a little!");
+static const u8 sText_ItemHarvested[] = _("{B_ATK_NAME_WITH_PREFIX} got another {B_LAST_ITEM}\nusing it's {B_ATK_ABILITY}!");
 static const u8 sText_PkmnsXHurtIt[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\nhurt it!");
 static const u8 sText_PkmnsXWhippedUpSandstorm[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nwhipped up a sandstorm!");
 static const u8 sText_PkmnsXCausedHail[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade it hail!");
 static const u8 sText_PkmnsXIntensifiedSun[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nintensified the sun's rays!");
+static const u8 sText_PkmnsXCausedAsh[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} created\na cloud of volcanic ash!");
 static const u8 sText_PkmnsXClearedStatChanges[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\neliminated all stat changes!");
 static const u8 sText_PkmnsXPreventsYLoss[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nprevents {B_BUFF1} loss!");
 static const u8 sText_PkmnsXInfatuatedY[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\ninfatuated {B_ATK_NAME_WITH_PREFIX}!");
@@ -1036,6 +1038,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_ASHISFALLING - BATTLESTRINGS_TABLE_START]                   = sText_AshIsFalling,
     [STRINGID_KNOCKEDDOWN - BATTLESTRINGS_TABLE_START]                    = sText_KnockedDown,
     [STRINGID_STATCHANGESCLEARED - BATTLESTRINGS_TABLE_START]             = sText_StatChangesCleared,
+    [STRINGID_ITEMHARVESTED - BATTLESTRINGS_TABLE_START]                  = sText_ItemHarvested,
+    [STRINGID_PKMNSXCAUSEDASH - BATTLESTRINGS_TABLE_START]                = sText_PkmnsXCausedAsh,
 };
 
 const u16 gMissStringIds[] =

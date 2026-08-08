@@ -2383,7 +2383,16 @@ static void DeleteFirstMoveAndGiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 mo
 
 u8 hasActiveAbility2(struct BattlePokemon *battler, u8 ability)
 {
-    return battler->ability == ability && !(battler->status3 & STATUS3_GASTRO_ACID);
+    if (battler->ability != ability)
+        return FALSE;
+
+    if (battler->status3 & STATUS3_GASTRO_ACID)
+        return FALSE;
+
+    if ((gBattleWeather & B_WEATHER_ASH) && !isCloudNineOrAirLockOnField())
+        return FALSE;
+
+    return TRUE;
 }
 
 

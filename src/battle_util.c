@@ -903,6 +903,7 @@ u8 DoFieldEndTurnEffects(void)
             if (gBattleWeather & B_WEATHER_ASH)
             {
                 if (!(gBattleWeather & B_WEATHER_ASH_PERMANENT)
+                        && !isAshVentOnField()
                         && --gWishFutureKnock.weatherDuration == 0)
                 {
                     gBattleWeather &= ~B_WEATHER_ASH_TEMPORARY;
@@ -2098,6 +2099,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 gBattleScripting.battler = battler;
                 effect++;
                 break;
+            case ABILITY_ASH_VENT:
+                // if (ItemId_GetHoldEffect(getItem(gBattlerAttacker)) == HOLD_EFFECT_HEAT_ROCK)
+                //     i = 5;
+                // else
+                    i = 3;
+
+                if (!(gBattleWeather & B_WEATHER_ASH) || gWishFutureKnock.weatherDuration < i)
+                    gWishFutureKnock.weatherDuration = i;
+                gBattleWeather = B_WEATHER_ASH_TEMPORARY;
+                BattleScriptPushCursorAndCallback(BattleScript_AshVentActivates);
+                gBattleScripting.battler = battler;
+                effect++;
+                break;
             case ABILITY_INTIMIDATE:
                 if (!(gSpecialStatuses[battler].intimidatedMon))
                 {
@@ -2225,6 +2239,22 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                             gBattleMoveDamage = 1;
                         gBattleMoveDamage *= -1;
                         effect++;
+                    }
+                    break;
+                case ABILITY_HARVEST:
+                    if (gBattleMons[battler].item == ITEM_NONE
+                            && gBattleStruct->usedHeldItems[gActiveBattler] >= FIRST_BERRY_INDEX
+                            && gBattleStruct->usedHeldItems[gActiveBattler] <= LAST_BERRY_INDEX)
+                    {
+                        if ((Random() % 2) == 0
+                                || (WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN)))
+                        {
+                            gLastUsedAbility = ABILITY_HARVEST;
+                            BattleScriptPushCursorAndCallback(BattleScript_HarvestActivates);
+                            gBattleMons[battler].item = gBattleStruct->usedHeldItems[gActiveBattler];
+                            gLastUsedItem = gBattleMons[battler].item;
+                            effect++;
+                        }
                     }
                     break;
                 case ABILITY_SHED_SKIN:
@@ -4054,6 +4084,23 @@ bool8 isCloudNineOrAirLockOnField(void)
             continue;
 
         if ((gBattleMons[i].ability == ABILITY_CLOUD_NINE || gBattleMons[i].ability == ABILITY_AIR_LOCK)
+            && !(gBattleMons[i].status3 & STATUS3_GASTRO_ACID))
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+bool8 isAshVentOnField(void)
+{
+    u8 i;
+
+    for (i = 0; i < gBattlersCount; i++)
+    {
+        if (gBattleMons[i].hp == 0)
+            continue;
+
+        if ((gBattleMons[i].ability == ABILITY_ASH_VENT)
             && !(gBattleMons[i].status3 & STATUS3_GASTRO_ACID))
             return TRUE;
     }

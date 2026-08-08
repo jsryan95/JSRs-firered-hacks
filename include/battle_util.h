@@ -99,6 +99,7 @@ void HandleAction_RunBattleScript(void);
 u8 GetMoveTarget(u16 move, u8 setTarget);
 u8 IsMonDisobedient(void);
 bool8 isCloudNineOrAirLockOnField(void);
+bool8 isAshVentOnField(void);
 u8 hasActiveAbility(u8 battler, u8 ability);
 u8 isPunchingMove(u16 move);
 u16 getItem(u8 battler);
