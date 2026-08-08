@@ -27,6 +27,11 @@
 #define AI_WEATHER_RAIN      1
 #define AI_WEATHER_SANDSTORM 2
 #define AI_WEATHER_HAIL      3
+#define AI_WEATHER_ASH       4
+#define AI_WEATHER_NONE      5
+
+#define AI_DISTORTION_NONE 0
+#define AI_DISTORTION_TRICK_ROOM 1
 
 // get_how_powerful_move_is
 #define MOVE_POWER_DISCOURAGED  0

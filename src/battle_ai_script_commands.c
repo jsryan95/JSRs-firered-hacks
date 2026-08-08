@@ -85,7 +85,7 @@ static void Cmd_if_equal_(void);
 static void Cmd_if_not_equal_(void);
 static void Cmd_if_would_go_first(void);
 static void Cmd_if_would_not_go_first(void);
-static void Cmd_nullsub_2A(void);
+static void Cmd_if_has_type(void);
 static void Cmd_nullsub_2B(void);
 static void Cmd_count_alive_pokemon(void);
 static void Cmd_get_considered_move(void);
@@ -93,8 +93,8 @@ static void Cmd_get_considered_move_effect(void);
 static void Cmd_get_ability(void);
 static void Cmd_get_highest_type_effectiveness(void);
 static void Cmd_if_type_effectiveness(void);
-static void Cmd_nullsub_32(void);
-static void Cmd_nullsub_33(void);
+static void Cmd_get_distortion(void);
+static void Cmd_if_target_is_ally(void);
 static void Cmd_if_status_in_party(void);
 static void Cmd_if_status_not_in_party(void);
 static void Cmd_get_weather(void);
@@ -190,7 +190,7 @@ static const BattleAICmdFunc sBattleAICmdTable[] =
     Cmd_if_not_equal_,                    // 0x27
     Cmd_if_would_go_first,                // 0x28
     Cmd_if_would_not_go_first,            // 0x29
-    Cmd_nullsub_2A,                       // 0x2A
+    Cmd_if_has_type,                      // 0x2A
     Cmd_nullsub_2B,                       // 0x2B
     Cmd_count_alive_pokemon,              // 0x2C
     Cmd_get_considered_move,              // 0x2D
@@ -198,8 +198,8 @@ static const BattleAICmdFunc sBattleAICmdTable[] =
     Cmd_get_ability,                      // 0x2F
     Cmd_get_highest_type_effectiveness,   // 0x30
     Cmd_if_type_effectiveness,            // 0x31
-    Cmd_nullsub_32,                       // 0x32
-    Cmd_nullsub_33,                       // 0x33
+    Cmd_get_distortion,                   // 0x32
+    Cmd_if_target_is_ally,                // 0x33
     Cmd_if_status_in_party,               // 0x34
     Cmd_if_status_not_in_party,           // 0x35
     Cmd_get_weather,                      // 0x36
@@ -1091,8 +1091,19 @@ static void Cmd_if_would_not_go_first(void)
         sAIScriptPtr += 6;
 }
 
-static void Cmd_nullsub_2A(void)
+static void Cmd_if_has_type(void)
 {
+    u8 battlerId;
+
+    if (sAIScriptPtr[1] == AI_USER)
+        battlerId = gBattlerAttacker;
+    else
+        battlerId = gBattlerTarget;
+
+    if (sAIScriptPtr[2] == gBattleMons[battlerId].type1 || sAIScriptPtr[2] == gBattleMons[battlerId].type2)
+        sAIScriptPtr = T1_READ_PTR(sAIScriptPtr + 3);
+    else
+        sAIScriptPtr += 7;
 }
 
 static void Cmd_nullsub_2B(void)
@@ -1295,12 +1306,23 @@ static void Cmd_if_type_effectiveness(void)
         sAIScriptPtr += 6;
 }
 
-static void Cmd_nullsub_32(void)
+extern u8 gBattleDistortion;
+
+static void Cmd_get_distortion(void)
 {
+    if (gBattleDistortion & B_DISTORTION_TRICK_ROOM)
+        AI_THINKING_STRUCT->funcResult = AI_DISTORTION_TRICK_ROOM;
+    else
+        AI_THINKING_STRUCT->funcResult = AI_DISTORTION_NONE;
+    sAIScriptPtr += 1;
 }
 
-static void Cmd_nullsub_33(void)
+static void Cmd_if_target_is_ally(void)
 {
+    if ((gBattlerAttacker & BIT_SIDE) == (gBattlerTarget & BIT_SIDE))
+        sAIScriptPtr = T1_READ_PTR(sAIScriptPtr + 1);
+    else
+        sAIScriptPtr += 5;
 }
 
 static void Cmd_if_status_in_party(void)
@@ -1394,32 +1416,22 @@ static void Cmd_if_status_not_in_party(void)
     sAIScriptPtr = T1_READ_PTR(sAIScriptPtr + 6);
 }
 
-enum
-{
-    WEATHER_TYPE_NONE,
-    WEATHER_TYPE_SUNNY,
-    WEATHER_TYPE_RAIN,
-    WEATHER_TYPE_SANDSTORM,
-    WEATHER_TYPE_HAIL,
-    WEATHER_TYPE_ASH,
-};
-
 extern u16 gBattleWeather;
 
 static void Cmd_get_weather(void)
 {
     if (gBattleWeather & B_WEATHER_RAIN)
-        AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_RAIN;
+        AI_THINKING_STRUCT->funcResult = AI_WEATHER_RAIN;
     else if (gBattleWeather & B_WEATHER_SANDSTORM)
-        AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_SANDSTORM;
+        AI_THINKING_STRUCT->funcResult = AI_WEATHER_SANDSTORM;
     else if (gBattleWeather & B_WEATHER_SUN)
-        AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_SUNNY;
+        AI_THINKING_STRUCT->funcResult = AI_WEATHER_SUN;
     else if (gBattleWeather & B_WEATHER_HAIL)
-        AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_HAIL;
+        AI_THINKING_STRUCT->funcResult = AI_WEATHER_HAIL;
     else if (gBattleWeather & B_WEATHER_ASH)
-        AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_ASH;
+        AI_THINKING_STRUCT->funcResult = AI_WEATHER_ASH;
     else
-        AI_THINKING_STRUCT->funcResult = WEATHER_TYPE_NONE;
+        AI_THINKING_STRUCT->funcResult = AI_WEATHER_NONE;
     sAIScriptPtr += 1;
 }
 

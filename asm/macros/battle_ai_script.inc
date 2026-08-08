@@ -261,9 +261,11 @@
 	.4byte \ptr
 	.endm
 
-	@ nullsub
-	.macro ai_2a
+	.macro if_has_type battler:req, type:req, ptr:req
 	.byte 0x2a
+	.byte \battler
+	.byte \type
+	.4byte \ptr
 	.endm
 
 	@ nullsub
@@ -301,14 +303,13 @@
 	.4byte \ptr
 	.endm
 
-	@ nullsub
-	.macro ai_32
+	.macro get_distortion
 	.byte 0x32
 	.endm
 
-	@ nullsub
-	.macro ai_33
+	.macro if_target_is_ally ptr:req
 	.byte 0x33
+	.4byte \ptr
 	.endm
 
 	.macro if_status_in_party battler:req, status:req, ptr:req
@@ -568,22 +569,6 @@
 @ useful script macros
 	.macro get_curr_move_type
 	get_type AI_TYPE_MOVE
-	.endm
-	
-	.macro get_user_type1
-	get_type AI_TYPE1_USER
-	.endm
-	
-	.macro get_user_type2
-	get_type AI_TYPE2_USER
-	.endm
-	
-	.macro get_target_type1
-	get_type AI_TYPE1_TARGET
-	.endm
-	
-	.macro get_target_type2
-	get_type AI_TYPE2_TARGET
 	.endm
 
 	.macro if_target_faster ptr:req
