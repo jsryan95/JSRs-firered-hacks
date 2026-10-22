@@ -2340,6 +2340,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect = 1;
                 }
             }
+            else if (gLastUsedAbility == ABILITY_OVERCOAT && isPowderMove(move))
+            {
+                if (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)
+                    gHitMarker |= HITMARKER_NO_PPDEDUCT;
+                gBattlescriptCurrInstr = BattleScript_SoundproofProtected;
+                effect = 1;
+            }
+            else if (gBattleMons[battler].status3 & STATUS3_BUBBLE_GUARD && isPowderMove(move))
+            {
+                if (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)
+                    gHitMarker |= HITMARKER_NO_PPDEDUCT;
+                gBattlescriptCurrInstr = BattleScript_BubbleGuardProtected;
+                effect = 1;
+            }
             break;
         case ABILITYEFFECT_ABSORBING: // 3
             if (move)
@@ -3614,21 +3628,13 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
         }
         break;
     case ITEMEFFECT_MOVES_BLOCK:
-            if (ItemId_GetHoldEffect(getItem(battlerId)) == HOLD_EFFECT_SAFETY_GOGGLES)
+            if (ItemId_GetHoldEffect(getItem(battlerId)) == HOLD_EFFECT_SAFETY_GOGGLES && isPowderMove(gCurrentMove))
             {
-                for (i = 0; sPowderMoves[i] != POWDER_MOVES_END; i++)
-                {
-                    if (sPowderMoves[i] == gCurrentMove)
-                        break;
-                }
-                if (sPowderMoves[i] != POWDER_MOVES_END)
-                {
-                    if (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)
-                        gHitMarker |= HITMARKER_NO_PPDEDUCT;
-                    gLastUsedItem = getItem(battlerId);
-                    gBattlescriptCurrInstr = BattleScript_SafetyGogglesProtected;
-                    effect = 1;
-                }
+                if (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)
+                    gHitMarker |= HITMARKER_NO_PPDEDUCT;
+                gLastUsedItem = getItem(battlerId);
+                gBattlescriptCurrInstr = BattleScript_SafetyGogglesProtected;
+                effect = 1;
             }
             break;
     case ITEMEFFECT_MOVE_END:

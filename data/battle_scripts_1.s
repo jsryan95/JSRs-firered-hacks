@@ -5058,6 +5058,14 @@ BattleScript_SafetyGogglesProtected::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_BubbleGuardProtected::
+	attackstring
+	ppreduce
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_BUBBLEGUARDBLOCKSMOVE
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_AbilityNoSpecificStatLoss::
 	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNSXPREVENTSYLOSS
@@ -6229,6 +6237,7 @@ BattleScript_BubbleGuardDoAnim::
 	waitmessage B_WAIT_TIME_LONG
 	trySetBubbleGuard BattleScript_MoveEnd
 	printstring STRINGID_BUBBLEGUARD
+	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
 BattleScript_BubbleGuardCantRaiseStat::
