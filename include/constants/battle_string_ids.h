@@ -464,8 +464,9 @@
 #define STRINGID_PKMNSITEMBLAZES 463
 #define STRINGID_PKMNSITEMCRACKLES 464
 #define STRINGID_BUBBLEGUARDBLOCKSMOVE 465
+#define STRINGID_PROTEANCHANGEDTYPE 466
 
-#define BATTLESTRINGS_COUNT     466
+#define BATTLESTRINGS_COUNT     467
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

@@ -2741,6 +2741,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+            case ABILITY_PROTEAN:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && !gProtectStructs[battler].confusionSelfDmg
+                 && gBattleMons[battler].hp != 0
+                 && move != MOVE_STRUGGLE
+                 && (gBattleMons[battler].type1 != moveType || gBattleMons[battler].type2 != moveType))
+                {
+                    SET_BATTLER_TYPE(battler, moveType);
+                    PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_ProteanActivates;
+                    effect++;
+                }
+                break;
             }
             break;
         case ABILITYEFFECT_IMMUNITY: // 5

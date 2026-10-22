@@ -5084,6 +5084,11 @@ BattleScript_ColorChangeActivates::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_ProteanActivates::
+	printstring STRINGID_PROTEANCHANGEDTYPE
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_NormalizeActivates::
 	printstring STRINGID_NORMALIZECHANGEDTYPE
 	waitmessage B_WAIT_TIME_LONG

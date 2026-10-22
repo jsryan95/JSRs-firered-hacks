@@ -312,6 +312,7 @@ static const u8 sText_PkmnsXDisabledY[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_A
 static const u8 sText_PkmnsXMadeYUseless[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade {B_CURRENT_MOVE} useless!");
 static const u8 sText_PkmnChangedTypeWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade it the {B_BUFF1} type!");
 static const u8 sText_NormalizeChangedType[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade {B_ATK_NAME_WITH_PREFIX} the {B_BUFF1} type!");
+static const u8 sText_ProteanChangedType[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\nmade it the {B_BUFF1} type!");
 static const u8 sText_PkmnPreventsParalysisWith[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents paralysis!");
 static const u8 sText_PkmnPreventsRomanceWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents romance!");
 static const u8 sText_PkmnPreventsPoisoningWith[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents poisoning!");
@@ -1046,6 +1047,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNSITEMBLAZES - BATTLESTRINGS_TABLE_START]                = sText_PkmnsItemBlazes,
     [STRINGID_PKMNSITEMCRACKLES - BATTLESTRINGS_TABLE_START]              = sText_PkmnsItemCrackles,
     [STRINGID_BUBBLEGUARDBLOCKSMOVE - BATTLESTRINGS_TABLE_START]        = sText_BubbleGuardBlocksMove,
+    [STRINGID_PROTEANCHANGEDTYPE - BATTLESTRINGS_TABLE_START]             = sText_ProteanChangedType,
 };
 
 const u16 gMissStringIds[] =

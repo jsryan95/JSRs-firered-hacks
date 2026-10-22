@@ -214,6 +214,7 @@ extern const u8 BattleScript_AbilityNoSpecificStatLoss[];
 extern const u8 BattleScript_StickyHoldActivates[];
 extern const u8 BattleScript_ColorChangeActivates[];
 extern const u8 BattleScript_NormalizeActivates[];
+extern const u8 BattleScript_ProteanActivates[];
 extern const u8 BattleScript_WeakArmorActivates[];
 extern const u8 BattleScript_RattledActivates[];
 extern const u8 BattleScript_JustifiedActivates[];
