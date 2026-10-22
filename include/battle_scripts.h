@@ -252,6 +252,8 @@ extern const u8 BattleScript_PkmnHasAirBalloon[];
 extern const u8 BattleScript_AirBalloonPops[];
 extern const u8 BattleScript_RockyHelmetActivates[];
 extern const u8 BattleScript_PkmnHasMoonPlate[];
+extern const u8 BattleScript_PkmnHasMagmarizer[];
+extern const u8 BattleScript_PkmnHasElectirizer[];
 extern const u8 BattleScript_ItemHealHP_RemoveItem[];
 extern const u8 BattleScript_BerryPPHealEnd2[];
 extern const u8 BattleScript_ItemHealHP_End2[];

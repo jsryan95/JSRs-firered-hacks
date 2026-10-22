@@ -5340,6 +5340,16 @@ BattleScript_PkmnHasMoonPlate::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
+BattleScript_PkmnHasMagmarizer::
+	printstring STRINGID_PKMNSITEMBLAZES
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
+BattleScript_PkmnHasElectirizer::
+	printstring STRINGID_PKMNSITEMCRACKLES
+	waitmessage B_WAIT_TIME_LONG
+	end2
+
 BattleScript_ItemHealHP_RemoveItem::
 	playanimation BS_ATTACKER, B_ANIM_HELD_ITEM_EFFECT
 	printstring STRINGID_PKMNSITEMRESTOREDHEALTH
@@ -6537,4 +6547,3 @@ BattleScript_StatChangesCleared::
 	printstring STRINGID_STATCHANGESCLEARED
 	waitmessage B_WAIT_TIME_LONG
 	return
-

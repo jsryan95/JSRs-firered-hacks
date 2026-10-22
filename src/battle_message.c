@@ -571,6 +571,8 @@ static const u8 sText_PkmnsItemHurtIt[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {
 static const u8 sText_PkmnsItemPopped[] = _("{B_DEF_NAME_WITH_PREFIX}'s\n{B_LAST_ITEM} popped!");
 static const u8 sText_PkmnFloatsWithItem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nfloats with its {B_LAST_ITEM}!");
 static const u8 sText_PkmnsItemGleams[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM} gleams!");
+static const u8 sText_PkmnsItemBlazes[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM} blazes!");
+static const u8 sText_PkmnsItemCrackles[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM} crackles!");
 static const u8 sText_ItemAllowsOnlyYMove[] = _("{B_LAST_ITEM}'s effect allows only\n{B_CURRENT_MOVE} to be used!\p");
 static const u8 sText_CantSelectMoveBecauseOfItem[] = _("{B_ACTIVE_NAME_WITH_PREFIX} can't use {B_CURRENT_MOVE}\nbecause of its {B_LAST_ITEM}!\p");
 static const u8 sText_PkmnHungOnWithX[] = _("{B_DEF_NAME_WITH_PREFIX} hung on\nusing its {B_LAST_ITEM}!");
@@ -1040,6 +1042,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_STATCHANGESCLEARED - BATTLESTRINGS_TABLE_START]             = sText_StatChangesCleared,
     [STRINGID_ITEMHARVESTED - BATTLESTRINGS_TABLE_START]                  = sText_ItemHarvested,
     [STRINGID_PKMNSXCAUSEDASH - BATTLESTRINGS_TABLE_START]                = sText_PkmnsXCausedAsh,
+    [STRINGID_PKMNSITEMBLAZES - BATTLESTRINGS_TABLE_START]                = sText_PkmnsItemBlazes,
+    [STRINGID_PKMNSITEMCRACKLES - BATTLESTRINGS_TABLE_START]              = sText_PkmnsItemCrackles,
 };
 
 const u16 gMissStringIds[] =

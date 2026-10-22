@@ -3240,6 +3240,22 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             gActiveBattler = gBattlerAttacker = battlerId;
             BattleScriptExecute(BattleScript_PkmnHasMoonPlate);
             break;
+        case HOLD_EFFECT_MAGMARIZER:
+            gBattleMons[battlerId].type2 = TYPE_FIRE;
+            effect = ITEM_EFFECT_OTHER;
+            gBattleScripting.battler = battlerId;
+            gPotentialItemEffectBattler = battlerId;
+            gActiveBattler = gBattlerAttacker = battlerId;
+            BattleScriptExecute(BattleScript_PkmnHasMagmarizer);
+            break;
+        case HOLD_EFFECT_ELECTIRIZER:
+            gBattleMons[battlerId].type2 = TYPE_ELECTRIC;
+            effect = ITEM_EFFECT_OTHER;
+            gBattleScripting.battler = battlerId;
+            gPotentialItemEffectBattler = battlerId;
+            gActiveBattler = gBattlerAttacker = battlerId;
+            BattleScriptExecute(BattleScript_PkmnHasElectirizer);
+            break;
         }
         break;
     case ITEMEFFECT_NORMAL:
@@ -3250,7 +3266,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             case HOLD_EFFECT_RESTORE_HP:
                 if (gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / 2 && !moveTurn)
                 {
-                    gBattleMoveDamage = battlerHoldEffectParam;
+                    gBattleMoveDamage = battlerHoldEffectParam; 
                     if (gBattleMons[battlerId].hp + battlerHoldEffectParam > gBattleMons[battlerId].maxHP)
                         gBattleMoveDamage = gBattleMons[battlerId].maxHP - gBattleMons[battlerId].hp;
                     gBattleMoveDamage *= -1;

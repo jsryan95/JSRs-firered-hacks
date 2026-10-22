@@ -6057,6 +6057,38 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0
+    },
+    {
+      "english": "MAGMARIZER",
+      "itemId": "ITEM_MAGMARIZER",
+      "price": 200,
+      "holdEffect": "HOLD_EFFECT_MAGMARIZER",
+      "holdEffectParam": 0,
+      "description_english": "A box overflowing with\\nfiery power. It can change the\\nbearer's type to FIRE.",
+      "importance": 0,
+      "registrability": 0,
+      "pocket": "POCKET_ITEMS",
+      "type": "ITEM_TYPE_BAG_MENU",
+      "fieldUseFunc": "FieldUseFunc_OakStopsYou",
+      "battleUsage": 0,
+      "battleUseFunc": "NULL",
+      "secondaryId": 0
+    },
+    {
+      "english": "ELECTIRIZER",
+      "itemId": "ITEM_ELECTIRIZER",
+      "price": 200,
+      "holdEffect": "HOLD_EFFECT_ELECTIRIZER",
+      "holdEffectParam": 0,
+      "description_english": "A box overflowing with\\nelectrical power. It can change the\\nbearer's type to ELECTRIC.",
+      "importance": 0,
+      "registrability": 0,
+      "pocket": "POCKET_ITEMS",
+      "type": "ITEM_TYPE_BAG_MENU",
+      "fieldUseFunc": "FieldUseFunc_OakStopsYou",
+      "battleUsage": 0,
+      "battleUseFunc": "NULL",
+      "secondaryId": 0
     }
   ]
 }
