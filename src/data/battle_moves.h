@@ -17,7 +17,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_POUND] =
     {
         .effect = EFFECT_HIT,
-        .power = 40,
+        .power = 50,
         .type = TYPE_NORMAL,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 100,
@@ -45,7 +45,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DOUBLE_SLAP] =
     {
         .effect = EFFECT_MULTI_HIT,
-        .power = 15,
+        .power = 20,
         .type = TYPE_NORMAL,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 85,
@@ -143,7 +143,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SCRATCH] =
     {
         .effect = EFFECT_HIT,
-        .power = 40,
+        .power = 50,
         .type = TYPE_NORMAL,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 100,
@@ -311,7 +311,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_VINE_WHIP] =
     {
         .effect = EFFECT_HIT,
-        .power = 35,
+        .power = 50,
         .type = TYPE_GRASS,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 100,
@@ -437,7 +437,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FURY_ATTACK] =
     {
         .effect = EFFECT_MULTI_HIT,
-        .power = 15,
+        .power = 20,
         .type = TYPE_NORMAL,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 85,
@@ -465,7 +465,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_TACKLE] =
     {
         .effect = EFFECT_HIT,
-        .power = 40,
+        .power = 50,
         .type = TYPE_NORMAL,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 100,
@@ -899,7 +899,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_PECK] =
     {
         .effect = EFFECT_HIT,
-        .power = 35,
+        .power = 40,
         .type = TYPE_FLYING,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 100,
@@ -2159,7 +2159,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FURY_SWIPES] =
     {
         .effect = EFFECT_MULTI_HIT,
-        .power = 20,
+        .power = 30,
         .type = TYPE_NORMAL,
         .category = CATEGORY_PHYSICAL,
         .accuracy = 80,

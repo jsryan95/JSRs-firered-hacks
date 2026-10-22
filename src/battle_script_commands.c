@@ -3560,7 +3560,7 @@ static void Cmd_getexp(void)
                     else if (value <= 10)
                         gBattleMoveDamage = (gBattleMoveDamage * sExperienceScalingFactors[value]) / 100;
 
-                    gBattleMoveDamage = (gBattleMoveDamage * 30) / gSpeciesInfo[GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPECIES)].expYield;
+                    gBattleMoveDamage = (gBattleMoveDamage * 20) / gSpeciesInfo[GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPECIES)].expYield;
                     }
 
                     if (IsTradedMon(&gPlayerParty[gBattleStruct->expGetterMonId])

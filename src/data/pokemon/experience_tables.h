@@ -146,7 +146,7 @@ const u32 gExperienceTables[][MAX_LEVEL + 1] =
         EXP_MEDIUM_SLOW(3),
         EXP_MEDIUM_SLOW(4),
         EXP_MEDIUM_SLOW(5),
-        EXP_MEDIUM_SLOW(6),
+        206,
         EXP_MEDIUM_SLOW(7),
         EXP_MEDIUM_SLOW(8),
         EXP_MEDIUM_SLOW(9),
