@@ -5513,6 +5513,14 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaine[] = {
     {
         .iv = 128,
         .lvl = 51,
+        .species = SPECIES_FLAREON,
+        .moves = {MOVE_OVERHEAT, MOVE_THUNDERBOLT, MOVE_ICE_BEAM, MOVE_FLARE_BLITZ},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ability = 1,
+    },
+    {
+        .iv = 128,
+        .lvl = 51,
         .species = SPECIES_CHARIZARD,
         .moves = {MOVE_OVERHEAT, MOVE_SOLAR_BEAM, MOVE_SUNNY_DAY, MOVE_NONE},
         .heldItem = ITEM_WHITE_HERB,
@@ -5520,10 +5528,9 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaine[] = {
     {
         .iv = 128,
         .lvl = 51,
-        .species = SPECIES_FLAREON,
-        .moves = {MOVE_OVERHEAT, MOVE_THUNDERBOLT, MOVE_ICE_BEAM, MOVE_FLARE_BLITZ},
-        .heldItem = ITEM_CHOICE_SPECS,
-        .ability = 1,
+        .species = SPECIES_GYARADOS,
+        .moves = {MOVE_EARTHQUAKE, MOVE_FIRE_FANG, MOVE_THUNDER_FANG, MOVE_DRAGON_DANCE},
+        .heldItem = ITEM_MAGMARIZER,
     },
     {
         .iv = 128,
