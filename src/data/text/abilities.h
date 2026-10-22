@@ -134,6 +134,7 @@ static const u8 sFriskDescription[] = _("Identifies the foe's item.");
 static const u8 sHarvestDescription[] = _("May replace a used berry.");
 static const u8 sAshVentDescription[] = _("Summons a cloud of volcanic ash.");
 static const u8 sPranksterDescription[] = _("Allows status moves to go first.");
+static const u8 sGlovedFistDescription[] = _("Avoids contact effects.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
@@ -275,6 +276,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_HARVEST] = sHarvestDescription,
     [ABILITY_ASH_VENT] = sAshVentDescription,
     [ABILITY_PRANKSTER] = sPranksterDescription,
+    [ABILITY_GLOVED_FIST] = sGlovedFistDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -417,4 +419,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_HARVEST] = _("HARVEST"),
     [ABILITY_ASH_VENT] = _("ASH VENT"),
     [ABILITY_PRANKSTER] = _("PRANKSTER"),
+    [ABILITY_GLOVED_FIST] = _("GLOVED FIST"),
 };

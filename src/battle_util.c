@@ -51,6 +51,12 @@ static const u16 sPowderMoves[] =
     MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_STUN_SPORE, MOVE_SPORE, MOVE_COTTON_SPORE, MOVE_RAGE_POWDER, POWDER_MOVES_END
 };
 
+static bool32 CanContactEffectsActivate(u16 move)
+{
+    return (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+        && !hasActiveAbility(gBattlerAttacker, ABILITY_GLOVED_FIST);
+}
+
 u8 GetBattlerForBattleScript(u8 caseId)
 {
     u8 ret = 0;
@@ -2527,7 +2533,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
-                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT))
+                 && CanContactEffectsActivate(move))
                 {
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 8;
                     if (gBattleMoveDamage == 0)
@@ -2542,7 +2548,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
-                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                 && CanContactEffectsActivate(move)
                  && gBattleMons[gBattlerAttacker].ability != ABILITY_MUMMY)
                 {
                     gBattleMons[gBattlerAttacker].ability = ABILITY_MUMMY;
@@ -2556,7 +2562,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         && gBattleMons[gBattlerAttacker].hp != 0
                         && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                         && TARGET_TURN_DAMAGED
-                        && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                        && CanContactEffectsActivate(move)
                         && gBattleMons[gBattlerAttacker].pp[gChosenMovePos] != 0
                         && gDisableStructs[gBattlerAttacker].disabledMove == MOVE_NONE
                         && gChosenMove != MOVE_STRUGGLE)
@@ -2574,7 +2580,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
-                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                 && CanContactEffectsActivate(move)
                  && (Random() % 10) == 0)
                 {
                     do
@@ -2597,7 +2603,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
-                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                 && CanContactEffectsActivate(move)
                  && (Random() % 3) == 0)
                 {
                     gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_POISON;
@@ -2612,7 +2618,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
-                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                 && CanContactEffectsActivate(move)
                  && (Random() % 3) == 0)
                 {
                     gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_PARALYSIS;
@@ -2626,7 +2632,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
-                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                 && CanContactEffectsActivate(move)
                  && TARGET_TURN_DAMAGED
                  && (Random() % 3) == 0)
                 {
@@ -2641,7 +2647,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
-                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                 && CanContactEffectsActivate(move)
                  && TARGET_TURN_DAMAGED
                  && !hasActiveAbility(gBattlerAttacker, ABILITY_OBLIVIOUS))
                 {
@@ -2654,7 +2660,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
-                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                 && CanContactEffectsActivate(move)
                  && TARGET_TURN_DAMAGED)
                 {
                     BattleScriptPushCursor();
@@ -2699,7 +2705,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && gBattleMons[gBattlerTarget].hp != 0
                  && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                  && TARGET_TURN_DAMAGED
-                 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
+                 && CanContactEffectsActivate(move)
                  && (Random() % 3) == 0)
                 {
                     gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_POISON;
@@ -3777,7 +3783,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                         && gBattleMons[gBattlerAttacker].hp != 0
                         && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
                         && TARGET_TURN_DAMAGED
-                        && (gBattleMoves[gCurrentMove].flags & FLAG_MAKES_CONTACT))
+                        && CanContactEffectsActivate(gCurrentMove))
                 {
                     gLastUsedItem = defItem;
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 8;
